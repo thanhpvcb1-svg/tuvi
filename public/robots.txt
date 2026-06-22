@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tuvi-demo.pages.dev/sitemap.xml
+Sitemap: https://tuvi.pages.dev/sitemap.xml

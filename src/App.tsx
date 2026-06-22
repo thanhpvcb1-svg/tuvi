@@ -3,11 +3,10 @@ import { toBlob, toJpeg } from "html-to-image";
 import { useLocation, useNavigate } from "react-router-dom";
 import BirthForm from "./components/BirthForm";
 import ChartReading from "./components/ChartReading";
-import EducationSection from "./components/EducationSection";
 import ExportActions from "./components/ExportActions";
 import FAQSection from "./components/FAQSection";
 import FloatingContactLinks from "./components/FloatingContactLinks";
-import SocialProofPopup from "./components/SocialProofPopup";
+import FloatingPaymentCard from "./components/FloatingPaymentCard";
 import HomeShowcase from "./components/HomeShowcase";
 import InterpretationCards from "./components/InterpretationCards";
 import { LuuStarOptions } from "./components/LuuStarOptions";
@@ -15,6 +14,7 @@ import PalaceAccordion from "./components/PalaceAccordion";
 import PrivacyNotice from "./components/PrivacyNotice";
 import PremiumPlans from "./components/PremiumPlans";
 import SampleChartsSection, { type SampleChartPreset } from "./components/SampleChartsSection";
+import SEOHead from "./components/SEOHead";
 import SiteFooter from "./components/SiteFooter";
 import SolarNoonCalculator from "./components/SolarNoonCalculator";
 import TrustBadges from "./components/TrustBadges";
@@ -24,7 +24,7 @@ import { buildQuickReadings } from "./lib/chartUi";
 import { createChart } from "./lib/iztroEngine";
 import type { BirthInput, ChartView, LuuDisplayOptions, NormalizedBirthInput, PalaceView, StarView } from "./lib/types";
 
-type MainPageId = "home" | "lap-la-so";
+type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he";
 type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he";
 type FormErrors = Partial<Record<keyof BirthInput, string>> & { form?: string };
 
@@ -39,16 +39,81 @@ const homeSectionRoutes: Record<HomeSectionId, string> = {
   "lien-he": "/lien-he",
 };
 
-const routeToHomeSection: Record<string, HomeSectionId> = {
-  "/la-so-mau": "la-so-mau",
-  "/blog": "kien-thuc",
-  "/kien-thuc": "kien-thuc",
-  "/bang-gia": "premium",
-  "/premium": "premium",
-  "/faq": "faq",
-  "/hop-tuoi": "hop-tuoi",
-  "/lien-he": "lien-he",
-};
+const siteUrl = "https://tuvi.pages.dev";
+
+const homeFaqs = [
+  {
+    question: "Lập lá số tử vi online có miễn phí không?",
+    answer: "Có. Bạn có thể lập lá số cơ bản miễn phí để xem nhanh Mệnh, Thân, 12 cung và tổng quan ban đầu.",
+  },
+  {
+    question: "Có cần giờ sinh chính xác không?",
+    answer: "Có giờ sinh chính xác sẽ giúp hệ thống an cung và đọc lá số sát hơn. Nếu chưa chắc, bạn vẫn có thể xem bản tham khảo.",
+  },
+  {
+    question: "Không nhớ giờ sinh thì có xem được không?",
+    answer: "Có. Bạn có thể chọn chế độ không rõ giờ sinh để xem tổng quan, nhưng mức độ chi tiết sẽ hạn chế hơn.",
+  },
+  {
+    question: "Dữ liệu ngày giờ sinh được dùng để làm gì?",
+    answer: "Dữ liệu được dùng để an lá số, xác định Mệnh, Thân, 12 cung và các thông tin liên quan trong quá trình xem lá số.",
+  },
+  {
+    question: "Gói hỏi 1 câu 50.000đ nhận được gì?",
+    answer: "Bạn gửi một câu hỏi cụ thể theo lá số và nhận phần trả lời tập trung đúng vấn đề đang quan tâm như công việc, tài lộc, tình duyên hoặc vận hạn.",
+  },
+  {
+    question: "Khi nào nên chọn tư vấn trực tiếp với thầy?",
+    answer: "Phù hợp khi bạn cần nhìn toàn diện hơn về lá số hoặc cần định hướng nghiêm túc cho một giai đoạn quan trọng.",
+  },
+];
+
+const pricingFaqs = [
+  {
+    question: "Tôi có thể xem miễn phí trước không?",
+    answer: "Có. Bạn có thể lập lá số cơ bản miễn phí trước khi quyết định chọn gói hỏi 1 câu hoặc tư vấn trực tiếp.",
+  },
+  {
+    question: "Thanh toán xong nhận luận giải như thế nào?",
+    answer: "Sau khi thanh toán, bạn sẽ được hướng dẫn gửi câu hỏi hoặc đặt lịch trao đổi để nhận phần luận giải phù hợp với gói đã chọn.",
+  },
+  {
+    question: "Hỏi 1 câu có giới hạn nội dung không?",
+    answer: "Gói này phù hợp nhất khi bạn tập trung vào một vấn đề rõ ràng, ví dụ công việc, tài lộc, tình duyên hoặc vận hạn trong năm.",
+  },
+  {
+    question: "Gói tư vấn trực tiếp phù hợp với ai?",
+    answer: "Phù hợp với người cần góc nhìn chuyên sâu, cần định hướng rõ ràng hoặc muốn trao đổi trực tiếp về nhiều khía cạnh trong lá số.",
+  },
+];
+
+const blogPosts = [
+  {
+    slug: "/blog/menh-va-than-trong-tu-vi-la-gi",
+    title: "Mệnh và Thân trong tử vi là gì?",
+    description: "Hiểu vai trò của Mệnh và Thân để đọc lá số dễ hơn và biết nên bắt đầu từ đâu.",
+  },
+  {
+    slug: "/blog/dai-van-va-tieu-van-la-gi",
+    title: "Đại vận và tiểu vận là gì?",
+    description: "Phân biệt hai lớp vận trình quan trọng để theo dõi từng giai đoạn cuộc sống rõ ràng hơn.",
+  },
+  {
+    slug: "/blog/cung-quan-loc-noi-gi-ve-su-nghiep",
+    title: "Cung Quan Lộc nói gì về sự nghiệp?",
+    description: "Khám phá cách cung Quan Lộc phản ánh hướng phát triển nghề nghiệp và cơ hội thăng tiến.",
+  },
+  {
+    slug: "/blog/cung-tai-bach-noi-gi-ve-tai-loc",
+    title: "Cung Tài Bạch nói gì về tài lộc?",
+    description: "Tìm hiểu cách xem xu hướng tiền bạc, tích lũy và các điểm cần thận trọng trong tài chính.",
+  },
+  {
+    slug: "/blog/khong-nho-gio-sinh-co-lap-la-so-duoc-khong",
+    title: "Không nhớ giờ sinh có lập lá số tử vi được không?",
+    description: "Xem trường hợp chưa rõ giờ sinh nên hiểu kết quả như thế nào và cách giảm sai lệch khi đọc lá số.",
+  },
+];
 
 const defaultInput: BirthInput = {
   fullName: "",
@@ -367,7 +432,6 @@ export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState<MainPageId>("home");
-  const [pendingSection, setPendingSection] = useState<HomeSectionId | null>(null);
   const [birthInput, setBirthInput] = useState<BirthInput>(defaultInput);
   const [submittedInput, setSubmittedInput] = useState<BirthInput | null>(null);
   const [chart, setChart] = useState<ChartView | null>(null);
@@ -396,22 +460,35 @@ export default function App() {
   const resultRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const section = routeToHomeSection[location.pathname];
-
-    if (section) {
-      setActivePage("home");
-      setPendingSection(section);
-      return;
-    }
-
     if (location.pathname === "/lap-la-so") {
       setActivePage("lap-la-so");
-      setPendingSection(null);
       return;
     }
-
+    if (location.pathname === "/bang-gia" || location.pathname === "/premium") {
+      setActivePage("bang-gia");
+      return;
+    }
+    if (location.pathname === "/la-so-mau") {
+      setActivePage("la-so-mau");
+      return;
+    }
+    if (location.pathname === "/blog" || location.pathname === "/kien-thuc") {
+      setActivePage("blog");
+      return;
+    }
+    if (location.pathname === "/faq") {
+      setActivePage("faq");
+      return;
+    }
+    if (location.pathname === "/hop-tuoi") {
+      setActivePage("hop-tuoi");
+      return;
+    }
+    if (location.pathname === "/lien-he") {
+      setActivePage("lien-he");
+      return;
+    }
     setActivePage("home");
-    setPendingSection(null);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -423,17 +500,6 @@ export default function App() {
     setBirthInput(inputFromSearch);
     navigate(`/lap-la-so${location.search}`, { replace: true });
   }, []);
-
-  useEffect(() => {
-    if (activePage !== "home" || !pendingSection) {
-      return;
-    }
-
-    window.requestAnimationFrame(() => {
-      document.getElementById(pendingSection)?.scrollIntoView({ behavior: "smooth", block: "start" });
-      setPendingSection(null);
-    });
-  }, [activePage, pendingSection]);
 
   useEffect(() => {
     if (!submittedInput) {
@@ -469,14 +535,7 @@ export default function App() {
 
   const navigateHomeSection = (section: HomeSectionId) => {
     const route = homeSectionRoutes[section];
-
-    if (location.pathname !== route) {
-      setPendingSection(section);
-      navigate(route);
-      return;
-    }
-
-    document.getElementById(section)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    navigate(route);
   };
 
   const navigateHome = () => {
@@ -713,21 +772,94 @@ export default function App() {
       )
     : "";
 
+  const faqSchema = (items: typeof homeFaqs) => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  });
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "LaSoTuVi",
+    url: siteUrl,
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "LaSoTuVi",
+    url: siteUrl,
+  };
+
+  const pageSeo = (() => {
+    switch (activePage) {
+      case "lap-la-so":
+        return {
+          title: "Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh",
+          description:
+            "Công cụ lập lá số tử vi online miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
+          canonicalPath: "/lap-la-so",
+        };
+      case "bang-gia":
+        return {
+          title: "Bảng Giá Luận Giải Tử Vi - Hỏi 1 Câu Từ 50.000đ",
+          description:
+            "Xem các gói luận giải tử vi: lập lá số miễn phí, hỏi 1 câu theo lá số 50.000đ và tư vấn trực tiếp với thầy 999.000đ.",
+          canonicalPath: "/bang-gia",
+        };
+      case "la-so-mau":
+        return {
+          title: "Lá Số Tử Vi Mẫu - Xem Cách Luận Giải Lá Số",
+          description:
+            "Xem giao diện lá số tử vi mẫu, cách hiển thị Mệnh, Thân, 12 cung, đại vận và tiểu vận trước khi lập lá số của riêng bạn.",
+          canonicalPath: "/la-so-mau",
+        };
+      case "blog":
+        return {
+          title: "Blog Tử Vi - Kiến Thức Lá Số, Đại Vận, Tiểu Vận",
+          description:
+            "Khám phá các bài viết cơ bản về lá số tử vi, Mệnh, Thân, đại vận, tiểu vận, cung Quan Lộc và cung Tài Bạch.",
+          canonicalPath: "/blog",
+        };
+      default:
+        return {
+          title: "LaSoTuVi - Lập Lá Số Tử Vi Online & Luận Giải Theo Lá Số",
+          description:
+            "Lập lá số tử vi online miễn phí, xem Mệnh, Thân, 12 cung, đại vận, tiểu vận và hỏi thêm theo lá số về sự nghiệp, tài lộc, tình duyên.",
+          canonicalPath: "/",
+        };
+    }
+  })();
+
   const homePage = (
     <div className="home-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath={pageSeo.canonicalPath}
+        schema={[websiteSchema, organizationSchema, faqSchema(homeFaqs)]}
+      />
       <section className="home-hero home-hero--focused">
         <div className="home-hero-copy">
-          <p className="eyebrow">Trung Tâm Luận Giải Tử Vi</p>
-          <h1>Khám Phá Vận Mệnh Qua Lá Số Tử Vi</h1>
+          <p className="eyebrow">LaSoTuVi</p>
+          <h1>Lập lá số tử vi online theo ngày giờ sinh</h1>
           <p>
-            Xem Mệnh, Thân, 12 cung và nhận các luận giải chuyên sâu về tài lộc, sự nghiệp, tình duyên và vận hạn dựa trên ngày giờ sinh.
+            Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và nhận luận giải dễ hiểu về sự nghiệp, tài lộc, tình duyên.
           </p>
           <div className="home-hero-actions">
             <button type="button" className="primary-button" onClick={navigateChartForm}>
-              Lập Lá Số Miễn Phí
+              Lập lá số miễn phí
             </button>
             <button type="button" className="ghost-button" onClick={() => navigateHomeSection("la-so-mau")}>
-              Xem Lá Số Mẫu
+              Xem lá số mẫu
             </button>
           </div>
           <TrustBadges />
@@ -735,32 +867,30 @@ export default function App() {
       </section>
 
       <HomeShowcase />
-      <SampleChartsSection
-        presets={sampleCharts}
-        onSelect={(preset) => {
-          setBirthInput(preset.input);
-          handleGenerateFromInput(preset.input);
-        }}
+      <PremiumPlans
+        eyebrow="Bảng giá trên trang chủ"
+        title="Bắt đầu miễn phí, sau đó chọn đúng mức hỗ trợ bạn cần"
+        description="Mô hình bán hàng được giữ đơn giản: lập lá số miễn phí, hỏi 1 câu theo lá số với 50.000đ hoặc đặt lịch tư vấn trực tiếp khi cần phân tích sâu."
+        compact
       />
-      <section id="hop-tuoi" className="content-section">
-        <div className="placeholder-card">
-          <p className="eyebrow">Hợp Tuổi & Tương Hợp</p>
-          <h2>Luận Giải Hợp Tuổi & Tình Duyên</h2>
-          <p>Đánh giá mức độ hòa hợp giữa hai lá số trong hôn nhân, tình cảm và hợp tác làm ăn. Tính năng sẽ sớm ra mắt.</p>
-          <button type="button" className="ghost-button" onClick={navigateChartForm}>
-            Lập lá số để bắt đầu
-          </button>
-        </div>
-      </section>
-      <EducationSection />
-      <PremiumPlans />
-      <FAQSection />
+      <FAQSection
+        faqs={homeFaqs}
+        eyebrow="FAQ"
+        title="Giải đáp nhanh trước khi bạn bắt đầu"
+        description="Những câu hỏi phổ biến nhất khi lập lá số hoặc chọn gói luận giải."
+      />
       <PrivacyNotice />
     </div>
   );
 
   const workspace = (
     <div className="app workspace-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath={pageSeo.canonicalPath}
+        schema={[organizationSchema]}
+      />
       <section className="top-hero-row">
         <section className="top-left-panel">
           <SolarNoonCalculator />
@@ -851,17 +981,15 @@ export default function App() {
             <section id="hanh-dong" className="result-block">
               <div className="premium-upsell-card">
                 <div>
-                  <p className="eyebrow">Luận Giải Chuyên Sâu</p>
-                  <h2>Mở Khóa Luận Giải Chuyên Sâu, Báo Cáo PDF & Tư Vấn Chuyên Gia</h2>
+                  <p className="eyebrow">Cần xem sâu hơn?</p>
+                  <h2>Hỏi 1 câu theo lá số hoặc đặt lịch tư vấn trực tiếp với thầy</h2>
                   <p className="result-note">
-                    Nhận báo cáo chuyên sâu về tài lộc, sự nghiệp, tình duyên và các giai đoạn quan trọng. Hoặc đặt lịch tư vấn trực tiếp với chuyên gia.
+                    Sau khi đã có lá số cơ bản, bạn có thể hỏi thêm một vấn đề cụ thể với mức 50.000đ hoặc chọn tư vấn trực tiếp khi cần định hướng nghiêm túc.
                   </p>
                 </div>
                 <div className="premium-upsell-actions">
-                  <button type="button" className="primary-button" onClick={() => navigateHomeSection("premium")}>Xem Bảng Giá</button>
-                  <button type="button" className="ghost-button" onClick={handleLuanGiai} disabled={isReadingLoading}>
-                    Luận giải ngay
-                  </button>
+                  <button type="button" className="primary-button" onClick={() => navigate("/bang-gia")}>Hỏi 1 câu về lá số này — 50.000đ</button>
+                  <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Đặt lịch tư vấn trực tiếp với thầy</button>
                 </div>
               </div>
 
@@ -885,6 +1013,165 @@ export default function App() {
           </section>
         )}
       </section>
+
+      <section className="content-section lap-la-so-seo">
+        <div className="section-heading section-heading--compact">
+          <p className="eyebrow">Kiến thức nền</p>
+          <h2>Lập lá số tử vi online miễn phí theo ngày giờ sinh</h2>
+          <p>
+            Nhập ngày sinh, giờ sinh, giới tính và năm muốn xem để hệ thống an lá số, xác định Mệnh, Thân, 12 cung, chính tinh,
+            phụ tinh, đại vận và tiểu vận.
+          </p>
+        </div>
+        <div className="seo-copy-grid">
+          <article className="seo-copy-card">
+            <h3>Lá số tử vi là gì?</h3>
+            <p>
+              Lá số tử vi là bản đồ tổng hợp thông tin theo ngày giờ sinh để giúp người xem có một góc nhìn hệ thống về tính
+              cách, xu hướng phát triển và các giai đoạn vận hành nổi bật trong cuộc sống. Khi lập lá số, người dùng thường
+              quan tâm tới Mệnh, Thân, 12 cung cùng các sao chính và sao phụ đi kèm. Mục tiêu của công cụ trên trang là giúp
+              bạn xem phần nền tảng này một cách dễ tiếp cận hơn, không quá khó hiểu với người mới bắt đầu.
+            </p>
+            <p>
+              Với trải nghiệm online, bạn có thể nhập dữ liệu ngay trên trình duyệt để xem lá số cơ bản miễn phí trước. Đây là
+              bước phù hợp để kiểm tra bố cục lá số, nhận các gợi ý tổng quan và xác định xem mình cần đọc sâu thêm ở mảng nào
+              như sự nghiệp, tài lộc, tình duyên hay vận hạn theo năm.
+            </p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Công cụ lập lá số tính những gì?</h3>
+            <p>
+              Sau khi nhập dữ liệu sinh, hệ thống sẽ an lá số dựa trên thông tin ngày giờ và năm đang xem. Từ đó, bạn có thể
+              thấy Mệnh, Thân, 12 cung, các chính tinh, phụ tinh, đại vận và tiểu vận hiển thị trên cùng một giao diện. Đây là
+              phần cốt lõi để bạn có một cái nhìn trực quan trước khi đi vào luận giải sâu hơn.
+            </p>
+            <p>
+              Ngoài phần biểu đồ, LaSoTuVi còn bổ sung lớp diễn giải ngắn, giúp người dùng mới hiểu nhanh ý nghĩa của từng khu
+              vực trong lá số. Khi cần, bạn có thể chuyển sang gói hỏi 1 câu để nhận câu trả lời tập trung vào đúng vấn đề đang
+              phân vân, thay vì đọc một lượng nội dung quá dài ngay từ đầu.
+            </p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Vì sao giờ sinh quan trọng?</h3>
+            <p>
+              Giờ sinh ảnh hưởng trực tiếp tới cách an cung và vị trí một số sao trong lá số. Vì vậy, nếu có giờ sinh chính xác,
+              kết quả thường rõ hơn và giúp việc đọc Mệnh, Thân cũng như các cung khác sát hơn. Tuy nhiên, trong trường hợp chưa
+              nhớ rõ giờ sinh, bạn vẫn có thể dùng chế độ tham khảo để xem tổng quan ban đầu.
+            </p>
+            <p>
+              Điều quan trọng là hiểu đúng giới hạn của bản xem tham khảo. Khi chưa chắc giờ sinh, bạn nên dùng kết quả để định
+              hướng câu hỏi, sau đó chỉ đi sâu vào các quyết định lớn khi đã có thêm dữ liệu hoặc chọn tư vấn trực tiếp để được
+              hỗ trợ đọc theo bối cảnh thực tế của mình.
+            </p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Lập lá số miễn phí khác gì luận giải chuyên sâu?</h3>
+            <p>
+              Bản miễn phí phù hợp để bạn nhìn tổng quan lá số, xác định các cung nổi bật và hiểu bố cục chính. Trong khi đó,
+              luận giải sâu phù hợp khi bạn cần trả lời một câu hỏi cụ thể hoặc cần một góc nhìn có cấu trúc hơn về một giai
+              đoạn quan trọng như đổi việc, chuyển hướng công việc, tài chính hoặc chuyện tình cảm.
+            </p>
+            <p>
+              Vì vậy, hành trình hợp lý thường là: lập lá số miễn phí trước, xem phần nền, sau đó mới quyết định có cần hỏi thêm
+              một vấn đề theo lá số với mức 50.000đ hay đặt lịch tư vấn trực tiếp nếu tình huống phức tạp hơn.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+  );
+
+  const samplePage = (
+    <div className="home-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath={pageSeo.canonicalPath}
+        schema={[organizationSchema]}
+      />
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Lá số mẫu</p>
+          <h1>Lá số tử vi mẫu</h1>
+          <p>Trang này giúp bạn hình dung cách lá số hiển thị Mệnh, Thân, 12 cung, đại vận và tiểu vận trước khi tạo lá số riêng.</p>
+        </div>
+      </section>
+      <SampleChartsSection
+        presets={sampleCharts}
+        onSelect={(preset) => {
+          setBirthInput(preset.input);
+          handleGenerateFromInput(preset.input);
+        }}
+      />
+      <section className="content-section">
+        <div className="placeholder-card">
+          <h2>Bạn muốn xem lá số của chính mình?</h2>
+          <p>Chỉ cần nhập ngày giờ sinh để tạo lá số miễn phí và xem nhanh các cung quan trọng.</p>
+          <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số của tôi</button>
+        </div>
+      </section>
+    </div>
+  );
+
+  const pricingPage = (
+    <div className="home-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath={pageSeo.canonicalPath}
+        schema={[organizationSchema, faqSchema(pricingFaqs)]}
+      />
+      <PremiumPlans
+        eyebrow="Luận giải & tư vấn"
+        title="Bảng giá dịch vụ theo lá số"
+        description="Rõ ràng, gọn và tập trung vào hành trình thực tế: xem miễn phí trước, hỏi 1 câu khi cần quyết định nhanh, hoặc tư vấn trực tiếp khi cần định hướng sâu."
+      />
+      <FAQSection
+        id="pricing-faq"
+        eyebrow="FAQ bảng giá"
+        title="Những điều người dùng thường hỏi trước khi chọn gói"
+        description="Các câu hỏi thực tế về cách nhận luận giải và phạm vi từng dịch vụ."
+        faqs={pricingFaqs}
+      />
+    </div>
+  );
+
+  const blogPage = (
+    <div className="home-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath={pageSeo.canonicalPath}
+        schema={[organizationSchema]}
+      />
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Blog tử vi</p>
+          <h1>Kiến thức lá số, đại vận và tiểu vận</h1>
+          <p>Các bài viết nền tảng giúp người mới hiểu cách đọc lá số dễ hơn trước khi đi sâu vào phần luận giải.</p>
+        </div>
+        <div className="blog-card-grid">
+          {blogPosts.map((post) => (
+            <article key={post.slug} className="product-card">
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <span className="blog-card-slug">{post.slug}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+
+  const faqPage = (
+    <div className="home-page">
+      <SEOHead title={pageSeo.title} description={pageSeo.description} canonicalPath="/faq" schema={[faqSchema(homeFaqs)]} />
+      <FAQSection
+        faqs={homeFaqs}
+        eyebrow="FAQ"
+        title="Câu hỏi thường gặp khi lập lá số"
+        description="Tập hợp các thắc mắc phổ biến nhất trước khi tạo lá số hoặc chọn gói hỗ trợ."
+      />
     </div>
   );
 
@@ -933,10 +1220,20 @@ export default function App() {
       </header>
 
       <main className="site-main">
-        {activePage === "home" ? homePage : workspace}
+        {activePage === "home"
+          ? homePage
+          : activePage === "lap-la-so"
+            ? workspace
+            : activePage === "bang-gia"
+              ? pricingPage
+              : activePage === "la-so-mau"
+                ? samplePage
+                : activePage === "blog"
+                  ? blogPage
+                  : faqPage}
       </main>
 
-      <SocialProofPopup />
+      <FloatingPaymentCard onClick={() => navigate("/bang-gia")} />
       <FloatingContactLinks />
       <SiteFooter />
     </div>

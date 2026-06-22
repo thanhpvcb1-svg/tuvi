@@ -165,6 +165,43 @@ h4,
   white-space: nowrap;
 }
 
+.floating-payment-card {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 320px;
+  z-index: 45;
+  padding: 22px;
+  border: 1px solid rgba(212, 160, 23, 0.28);
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.96);
+  box-shadow: 0 24px 60px rgba(45, 33, 16, 0.18);
+}
+
+.floating-payment-card h3 {
+  margin: 4px 0 10px;
+  color: var(--navy);
+  font-size: 28px;
+  line-height: 1.06;
+}
+
+.floating-payment-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold-dark);
+  font-size: 24px;
+}
+
+.floating-payment-card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.floating-payment-card .primary-button {
+  width: 100%;
+}
+
 .site-main {
   width: 100%;
 }
@@ -410,6 +447,69 @@ h4,
 .quick-reading-grid {
   display: grid;
   gap: 16px;
+}
+
+.feature-overview-grid,
+.process-grid,
+.seo-copy-grid,
+.blog-card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.feature-overview-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.process-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.seo-copy-grid,
+.blog-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feature-card--landing,
+.process-card,
+.seo-copy-card {
+  min-height: 0;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  background: rgba(255, 253, 245, 0.9);
+  box-shadow: 0 16px 38px rgba(110, 84, 48, 0.08);
+}
+
+.feature-card--landing h3,
+.process-card h3,
+.seo-copy-card h3 {
+  margin: 0 0 10px;
+  color: var(--navy);
+}
+
+.feature-card--landing p,
+.seo-copy-card p,
+.process-card span {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.process-card span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--gold-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.blog-card-slug {
+  margin-top: auto;
+  color: #8c6d3a;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .sample-grid {
@@ -1245,6 +1345,19 @@ h4,
   margin: 8px 0 0;
   color: #5f6f89;
   line-height: 1.6;
+}
+
+.site-footer-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.site-footer-links a {
+  color: #5f6f89;
+  font-size: 13px;
+  text-decoration: none;
 }
 
 .site-disclaimer {
@@ -2383,6 +2496,10 @@ h4,
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.plan-grid--compact {
+  align-items: stretch;
+}
+
 .value-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2681,7 +2798,11 @@ h4,
   .pillar-grid,
   .plan-grid,
   .product-card-grid,
-  .value-grid {
+  .value-grid,
+  .feature-overview-grid,
+  .process-grid,
+  .seo-copy-grid,
+  .blog-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2770,6 +2891,10 @@ h4,
   .plan-grid,
   .product-card-grid,
   .value-grid,
+  .feature-overview-grid,
+  .process-grid,
+  .seo-copy-grid,
+  .blog-card-grid,
   .review-grid {
     grid-template-columns: 1fr;
   }
@@ -2836,6 +2961,10 @@ h4,
     font-size: 13px;
   }
 
+  .floating-payment-card {
+    display: none;
+  }
+
   .wizard-step-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2874,6 +3003,8 @@ h4,
   .education-card,
   .summary-card,
   .quick-reading-card,
+  .seo-copy-card,
+  .process-card,
   .result-empty-card,
   .privacy-notice,
   .faq-item,
@@ -3322,6 +3453,10 @@ h4,
 
 @media (max-width: 1023px) {
   .social-proof-popup {
+    display: none !important;
+  }
+
+  .floating-payment-card {
     display: none !important;
   }
 }

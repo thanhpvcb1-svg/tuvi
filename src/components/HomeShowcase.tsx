@@ -1,74 +1,73 @@
 import React from "react";
 
-const stats = [
-  { value: "100.000+", label: "Lá số được lập" },
-  { value: "20.000+", label: "Người dùng tin tưởng" },
-  { value: "4,9/5", label: "Mức độ hài lòng" },
-];
-
-const valueProps = [
+const featureCards = [
   {
-    eyebrow: "Luận Giải",
-    title: "Luận Giải Chuyên Sâu",
-    description:
-      "Phân tích các phương diện quan trọng trong lá số để giúp bạn hiểu rõ hơn về bản thân và các giai đoạn cuộc đời.",
+    title: "Tổng quan Mệnh - Thân",
+    description: "Nhìn nhanh khí chất, thiên hướng cá nhân và những điểm nổi bật trong lá số.",
   },
   {
-    eyebrow: "Tương Hợp",
-    title: "Hợp Tuổi & Tình Duyên",
-    description:
-      "Đánh giá mức độ hòa hợp trong tình cảm, hôn nhân và hợp tác làm ăn.",
+    title: "Sự nghiệp và Quan Lộc",
+    description: "Tập trung vào con đường công việc, cơ hội phát triển và giai đoạn cần bứt phá.",
   },
   {
-    eyebrow: "Báo Cáo",
-    title: "Báo Cáo Chuyên Nghiệp",
-    description:
-      "Báo cáo trình bày đẹp, dễ lưu trữ và thuận tiện tra cứu lâu dài.",
+    title: "Tài lộc và dòng tiền",
+    description: "Xem xu hướng tài chính, khả năng tích lũy và những điểm cần thận trọng.",
   },
   {
-    eyebrow: "Chuyên Gia",
-    title: "Tư Vấn Chuyên Gia",
-    description:
-      "Nhận góc nhìn và định hướng trực tiếp từ chuyên gia khi cần giải đáp sâu hơn.",
+    title: "Tình duyên và hôn nhân",
+    description: "Đọc xu hướng gắn kết, cách xây dựng mối quan hệ và thời điểm thuận lợi.",
+  },
+  {
+    title: "Vận hạn theo năm",
+    description: "Theo dõi năm đang xem để chủ động hơn với công việc, tài chính và các quyết định lớn.",
   },
 ];
 
-const commonQuestions = [
-  "Bao giờ nên đổi việc hoặc mở rộng kinh doanh?",
-  "Khi nào là thời điểm thuận lợi để kết hôn?",
-  "Có nên đầu tư hay mở rộng tài chính trong năm nay?",
-  "Công việc và hướng phát triển nào phù hợp với mình?",
-  "Thời điểm nào sự nghiệp sẽ có bước đột phá?",
+const processSteps = [
+  "Nhập ngày giờ sinh",
+  "Nhận lá số miễn phí",
+  "Hỏi thêm hoặc mở khóa luận giải sâu",
 ];
 
-const retentionCards = [
-  {
-    title: "Tử Vi Mỗi Ngày",
-    copy: "Cập nhật góc nhìn tham khảo về tài lộc, công việc và tình cảm.",
-  },
-  {
-    title: "Báo Cáo Định Kỳ",
-    copy: "Theo dõi các giai đoạn quan trọng trong năm để chủ động hơn trong cuộc sống.",
-  },
-  {
-    title: "Hồ Sơ Cá Nhân",
-    copy: "Lưu lại các lá số và báo cáo đã thực hiện, tra cứu lại bất cứ lúc nào cần.",
-  },
+const reasons = [
+  "Luận giải dễ hiểu cho người mới.",
+  "Cá nhân hóa theo lá số riêng của bạn.",
+  "Không dùng nội dung chung chung.",
+  "Có thể hỏi đúng vấn đề đang quan tâm.",
+  "Có lựa chọn tư vấn trực tiếp với thầy.",
 ];
 
 export default function HomeShowcase() {
   return (
     <>
       <section className="marketing-section">
-        <div className="section-heading" style={{ textAlign: "center" }}>
-          <p className="eyebrow">Tin Tưởng</p>
-          <h2>Được Nhiều Người Tin Tưởng</h2>
+        <div className="section-heading">
+          <p className="eyebrow">LaSoTuVi giúp bạn xem gì?</p>
+          <h2>Những góc nhìn quan trọng từ lá số của bạn</h2>
+          <p>Công cụ tập trung vào các nhóm nội dung người dùng quan tâm nhiều nhất khi bắt đầu xem lá số.</p>
         </div>
-        <div className="stats-grid">
-          {stats.map((stat) => (
-            <article key={stat.label} className="stat-card">
-              <strong>{stat.value}</strong>
-              <p>{stat.label}</p>
+
+        <div className="feature-overview-grid">
+          {featureCards.map((card) => (
+            <article key={card.title} className="feature-card feature-card--landing">
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="marketing-section">
+        <div className="section-heading">
+          <p className="eyebrow">Quy trình 3 bước</p>
+          <h2>Bắt đầu nhanh, rõ ràng và dễ theo dõi</h2>
+        </div>
+
+        <div className="process-grid">
+          {processSteps.map((step, index) => (
+            <article key={step} className="process-card">
+              <span>{`0${index + 1}`}</span>
+              <h3>{step}</h3>
             </article>
           ))}
         </div>
@@ -76,62 +75,18 @@ export default function HomeShowcase() {
 
       <section className="marketing-section marketing-section--split">
         <div className="section-heading">
-          <p className="eyebrow">Vì Sao Nhiều Người Lựa Chọn</p>
-          <h2>Luận Giải Chuyên Sâu Cho Từng Lá Số</h2>
+          <p className="eyebrow">Vì sao nên dùng LaSoTuVi?</p>
+          <h2>Thiết kế để dễ dùng, dễ hiểu và đủ tin cậy để quay lại</h2>
           <p>
-            Mỗi lá số đều mang những đặc điểm riêng về vận mệnh, tài lộc, sự nghiệp và tình duyên.
-          </p>
-          <p>
-            Các luận giải được trình bày rõ ràng, dễ hiểu và tập trung vào những vấn đề quan trọng trong cuộc sống.
+            LaSoTuVi hướng tới trải nghiệm gọn gàng, dễ đọc và tập trung vào điều người dùng thật sự cần: hiểu lá số của
+            mình và biết khi nào nên hỏi sâu hơn.
           </p>
         </div>
 
         <div className="value-grid">
-          {valueProps.map((item) => (
-            <article key={item.title} className="pillar-card">
-              <p className="eyebrow">{item.eyebrow}</p>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="marketing-section">
-        <div className="section-heading">
-          <p className="eyebrow">Tư Vấn Trực Tiếp</p>
-          <h2>Những Vấn Đề Thường Được Quan Tâm</h2>
-          <p>
-            Gửi câu hỏi của bạn và nhận phần luận giải riêng từ chuyên gia dựa trên lá số cá nhân.
-          </p>
-        </div>
-
-        <div className="ai-questions-card">
-          {commonQuestions.map((question) => (
-            <div key={question} className="ai-question-chip">
-              {question}
-            </div>
-          ))}
-        </div>
-
-        <div style={{ marginTop: "20px", textAlign: "center" }}>
-          <a href="#premium" className="primary-button" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }}>
-            Đặt Câu Hỏi Cho Chuyên Gia — 99.000đ
-          </a>
-        </div>
-      </section>
-
-      <section className="marketing-section">
-        <div className="section-heading">
-          <p className="eyebrow">Đồng Hành</p>
-          <h2>Đồng Hành Cùng Bạn Trong Từng Giai Đoạn</h2>
-        </div>
-
-        <div className="product-card-grid">
-          {retentionCards.map((card) => (
-            <article key={card.title} className="product-card">
-              <h3>{card.title}</h3>
-              <p>{card.copy}</p>
+          {reasons.map((reason) => (
+            <article key={reason} className="pillar-card">
+              <p>{reason}</p>
             </article>
           ))}
         </div>

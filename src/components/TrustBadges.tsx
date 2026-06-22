@@ -2,9 +2,9 @@ import React from "react";
 
 const badges = [
   "Miễn phí tạo lá số",
-  "Luận giải dễ hiểu",
   "Không cần đăng ký",
-  "Bảo mật thông tin cá nhân",
+  "Dữ liệu chỉ dùng để lập lá số",
+  "Có thể hỏi thêm theo lá số",
 ];
 
 export default function TrustBadges() {

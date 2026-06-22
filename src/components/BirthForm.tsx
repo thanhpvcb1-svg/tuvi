@@ -56,10 +56,11 @@ export default function BirthForm({
   return (
     <div className="form-shell">
       <div className="form-hero">
-        <p className="eyebrow">Tử vi AI cao cấp</p>
-        <h1>Lập lá số tử vi online theo ngày giờ sinh</h1>
+        <p className="eyebrow">Trang SEO chính</p>
+        <h1>Lập lá số tử vi online miễn phí theo ngày giờ sinh</h1>
         <p className="hero-copy">
-          Nhập ngày giờ sinh để xem Mệnh, Thân, 12 cung và luận giải tổng quan theo tử vi phương Đông.
+          Nhập ngày sinh, giờ sinh, giới tính và năm muốn xem để hệ thống an lá số, xác định Mệnh, Thân, 12 cung, chính tinh,
+          phụ tinh, đại vận và tiểu vận.
         </p>
       </div>
 
@@ -70,7 +71,7 @@ export default function BirthForm({
         </div>
 
         <div className="field field-half">
-          <label htmlFor="fullName">Tên hiển thị *</label>
+          <label htmlFor="fullName">Họ tên *</label>
           <input
             id="fullName"
             type="text"
@@ -84,11 +85,7 @@ export default function BirthForm({
 
         <div className="field field-quarter">
           <label htmlFor="gender">Giới tính *</label>
-          <select
-            id="gender"
-            value={value.gender}
-            onChange={(event) => update({ gender: event.target.value as Gender })}
-          >
+          <select id="gender" value={value.gender} onChange={(event) => update({ gender: event.target.value as Gender })}>
             <option value="male">Nam</option>
             <option value="female">Nữ</option>
           </select>
@@ -205,7 +202,7 @@ export default function BirthForm({
           </label>
           {value.unknownBirthTime ? (
             <p className="field-warning">
-              Kết quả có thể kém chính xác hơn vì giờ sinh ảnh hưởng đến cung Mệnh và các cung khác.
+              Bạn vẫn có thể xem bản tham khảo, nhưng mức độ chi tiết và độ sát sẽ thấp hơn so với khi có giờ sinh cụ thể.
             </p>
           ) : null}
         </div>
@@ -216,7 +213,7 @@ export default function BirthForm({
         </div>
 
         <div className="field field-quarter">
-          <label htmlFor="horoscopeYear">Năm muốn xem hạn *</label>
+          <label htmlFor="horoscopeYear">Năm xem vận hạn *</label>
           <input
             id="horoscopeYear"
             type="text"
@@ -233,7 +230,7 @@ export default function BirthForm({
 
         <div className="actions field-full">
           <button type="button" className="primary-button" onClick={onSubmit} aria-busy={isSubmitting}>
-            {isSubmitting ? "Đang lập lá số..." : canPrint ? "Lập lại lá số" : "Lập lá số ngay"}
+            {isSubmitting ? "Đang lập lá số..." : canPrint ? "Lập lại lá số" : "Lập lá số miễn phí"}
           </button>
           <button type="button" className="ghost-button" onClick={() => window.print()} disabled={!canPrint}>
             In lá số
@@ -242,7 +239,7 @@ export default function BirthForm({
 
         {hasDirtyChanges ? (
           <p className="form-warning field-full">
-            Bạn đã thay đổi thông tin. Hãy bấm “Lập lại lá số” để cập nhật kết quả.
+            Bạn đã thay đổi thông tin. Hãy bấm “Lập lại lá số” để cập nhật kết quả mới.
           </p>
         ) : null}
         {fieldErrors.form ? <p className="form-error field-full" role="alert">{fieldErrors.form}</p> : null}
