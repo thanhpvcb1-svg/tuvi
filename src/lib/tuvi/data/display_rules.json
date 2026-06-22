@@ -1,0 +1,35 @@
+{
+  "element_colors": {
+    "kim": "#9ca3af",
+    "moc": "#16a34a",
+    "thuy": "#111827",
+    "hoa": "#ef4444",
+    "tho": "#f59e0b"
+  },
+  "nature_colors": {
+    "cat": "#16a34a",
+    "sat": "#ef4444",
+    "loc": "#f59e0b",
+    "hoa_tot": "#16a34a",
+    "hoa_quyen": "#16a34a",
+    "hoa_ky": "#111827",
+    "neutral": "#374151"
+  },
+  "column_order": {
+    "center": 0,
+    "left": 1,
+    "right": 2,
+    "bottom": 3
+  },
+  "category_order": {
+    "main_star": 10,
+    "phu_dieu": 10,
+    "ta_dieu": 15,
+    "hoa_dieu": 20,
+    "vong_sao": 25,
+    "tap_dieu": 30,
+    "sat_dieu": 50,
+    "luu_tinh": 80
+  },
+  "default_column": "left"
+}
