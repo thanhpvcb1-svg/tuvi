@@ -7,7 +7,7 @@ type Props = {
 
 export default function PrivacyNotice({ showClearAction = false, onClear }: Props) {
   return (
-    <section className="privacy-notice" aria-label="Quyền riêng tư">
+    <section className="privacy-notice" id="privacy" aria-label="Quyền riêng tư">
       <div>
         <p className="eyebrow">Quyền riêng tư</p>
         <h2>Thông tin của bạn được dùng như thế nào?</h2>
@@ -26,4 +26,3 @@ export default function PrivacyNotice({ showClearAction = false, onClear }: Prop
     </section>
   );
 }
-

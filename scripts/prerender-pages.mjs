@@ -5,6 +5,59 @@ const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
 const siteUrl = "https://tuvi.pages.dev";
 
+const blogPosts = [
+  {
+    route: "/blog/menh-va-than-trong-tu-vi-la-gi",
+    title: "Mệnh và Thân trong tử vi là gì? | Blog Tử Vi",
+    description: "Hiểu vai trò của Mệnh và Thân để đọc lá số dễ hơn và biết nên bắt đầu từ đâu.",
+  },
+  {
+    route: "/blog/dai-van-va-tieu-van-la-gi",
+    title: "Đại vận và tiểu vận là gì? | Blog Tử Vi",
+    description: "Phân biệt hai lớp vận trình quan trọng để theo dõi từng giai đoạn cuộc sống rõ ràng hơn.",
+  },
+  {
+    route: "/blog/cung-quan-loc-noi-gi-ve-su-nghiep",
+    title: "Cung Quan Lộc nói gì về sự nghiệp? | Blog Tử Vi",
+    description: "Khám phá cách cung Quan Lộc phản ánh hướng phát triển nghề nghiệp và cơ hội thăng tiến.",
+  },
+  {
+    route: "/blog/cung-tai-bach-noi-gi-ve-tai-loc",
+    title: "Cung Tài Bạch nói gì về tài lộc? | Blog Tử Vi",
+    description: "Tìm hiểu cách xem xu hướng tiền bạc, tích lũy và các điểm cần thận trọng trong tài chính.",
+  },
+  {
+    route: "/blog/khong-nho-gio-sinh-co-lap-la-so-duoc-khong",
+    title: "Không nhớ giờ sinh có lập lá số tử vi được không? | Blog Tử Vi",
+    description: "Xem trường hợp chưa rõ giờ sinh nên hiểu kết quả như thế nào và cách giảm sai lệch khi đọc lá số.",
+  },
+  {
+    route: "/blog/cung-phu-the-noi-gi-ve-tinh-duyen",
+    title: "Cung Phu Thê nói gì về tình duyên? | Blog Tử Vi",
+    description: "Hiểu vai trò của cung Phu Thê khi xem xu hướng gắn kết, hôn nhân và cách xây dựng mối quan hệ.",
+  },
+  {
+    route: "/blog/cach-xac-dinh-gio-sinh-trong-tu-vi",
+    title: "Cách xác định giờ sinh trong tử vi | Blog Tử Vi",
+    description: "Một vài gợi ý thực tế để đối chiếu thông tin và giảm sai lệch khi bạn chưa chắc giờ sinh của mình.",
+  },
+  {
+    route: "/blog/la-so-tu-vi-gom-nhung-phan-nao",
+    title: "Lá số tử vi gồm những phần nào? | Blog Tử Vi",
+    description: "Tìm hiểu các phần nền tảng như Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
+  },
+  {
+    route: "/blog/chinh-tinh-va-phu-tinh-la-gi",
+    title: "Chính tinh và phụ tinh là gì? | Blog Tử Vi",
+    description: "Phân biệt hai nhóm sao thường gặp khi bắt đầu đọc lá số tử vi và cách hiểu vai trò của chúng.",
+  },
+  {
+    route: "/blog/xem-van-han-nam-2026-theo-la-so-tu-vi",
+    title: "Xem vận hạn năm 2026 theo lá số tử vi | Blog Tử Vi",
+    description: "Cách tiếp cận năm đang xem trong lá số để nhận diện những giai đoạn cần chủ động hơn về công việc và tài chính.",
+  },
+];
+
 const routes = [
   {
     route: "/",
@@ -22,21 +75,6 @@ const routes = [
             <a href="/la-so-mau" class="secondary">Xem lá số mẫu</a>
           </div>
         </section>
-        <section class="prerender-section">
-          <h2>LaSoTuVi giúp bạn xem gì?</h2>
-          <ul>
-            <li>Tổng quan Mệnh - Thân</li>
-            <li>Sự nghiệp và Quan Lộc</li>
-            <li>Tài lộc và dòng tiền</li>
-            <li>Tình duyên và hôn nhân</li>
-            <li>Vận hạn theo năm</li>
-          </ul>
-        </section>
-        <section class="prerender-section">
-          <h2>Câu hỏi thường gặp</h2>
-          <p>Lập lá số tử vi online có miễn phí không? Có. Bạn có thể xem lá số cơ bản miễn phí trước khi chọn gói hỏi sâu hơn theo nhu cầu.</p>
-          <p>Không nhớ giờ sinh thì có xem được không? Có thể xem bản tham khảo tổng quan, nhưng độ chi tiết sẽ thấp hơn khi có giờ sinh cụ thể.</p>
-        </section>
       </main>
     `,
   },
@@ -50,19 +88,6 @@ const routes = [
         <section class="prerender-hero">
           <h1>Lập lá số tử vi online miễn phí theo ngày giờ sinh</h1>
           <p>Nhập ngày sinh, giờ sinh, giới tính và năm muốn xem để hệ thống an lá số, xác định Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.</p>
-        </section>
-        <section class="prerender-section">
-          <h2>Lá số tử vi là gì?</h2>
-          <p>Lá số tử vi là bố cục thông tin theo ngày giờ sinh giúp người xem có cái nhìn hệ thống về Mệnh, Thân, các cung và những giai đoạn vận hành nổi bật trong cuộc sống.</p>
-          <h2>Vì sao giờ sinh quan trọng?</h2>
-          <p>Giờ sinh ảnh hưởng trực tiếp tới cách an cung và vị trí sao. Khi có dữ liệu chính xác hơn, phần xem lá số và diễn giải thường sát hơn.</p>
-          <h2>Lập lá số miễn phí khác gì luận giải chuyên sâu?</h2>
-          <p>Bản miễn phí phù hợp để xem nền tảng lá số. Khi cần đi sâu vào một quyết định cụ thể, bạn có thể chọn hỏi 1 câu theo lá số hoặc đặt lịch tư vấn trực tiếp.</p>
-        </section>
-        <section class="prerender-section">
-          <h2>Liên kết nội bộ</h2>
-          <p><a href="/bang-gia">Xem bảng giá luận giải tử vi</a></p>
-          <p><a href="/la-so-mau">Xem lá số tử vi mẫu</a></p>
         </section>
       </main>
     `,
@@ -78,19 +103,6 @@ const routes = [
           <h1>Bảng giá luận giải tử vi</h1>
           <p>Bạn có thể lập lá số miễn phí trước, sau đó chọn hỏi 1 câu theo lá số hoặc tư vấn trực tiếp khi cần phân tích sâu hơn.</p>
         </section>
-        <section class="prerender-section">
-          <h2>Các gói chính</h2>
-          <ul>
-            <li>0đ - Lập lá số miễn phí</li>
-            <li>50.000đ - Hỏi 1 câu theo lá số</li>
-            <li>999.000đ - Tư vấn trực tiếp với thầy</li>
-          </ul>
-        </section>
-        <section class="prerender-section">
-          <h2>FAQ bảng giá</h2>
-          <p>Tôi có thể xem miễn phí trước không? Có, đây là bước phù hợp để xem bố cục lá số trước khi chọn dịch vụ trả phí.</p>
-          <p>Có cần lập lá số trước khi hỏi không? Nên có, để phần trả lời bám đúng dữ liệu cá nhân của bạn.</p>
-        </section>
       </main>
     `,
   },
@@ -104,15 +116,6 @@ const routes = [
         <section class="prerender-hero">
           <h1>Lá số tử vi mẫu</h1>
           <p>Xem trước cách LaSoTuVi trình bày Mệnh, Thân, 12 cung, đại vận, tiểu vận và các phần luận giải trước khi lập lá số của riêng bạn.</p>
-        </section>
-        <section class="prerender-section">
-          <h2>Nội dung mẫu</h2>
-          <ul>
-            <li>Mệnh, Thân và Cục</li>
-            <li>Đại vận, tiểu vận</li>
-            <li>Ví dụ luận giải sự nghiệp, tài lộc, tình duyên</li>
-          </ul>
-          <p><a href="/lap-la-so">Lập lá số của tôi</a></p>
         </section>
       </main>
     `,
@@ -128,19 +131,69 @@ const routes = [
           <h1>Blog tử vi</h1>
           <p>Kiến thức dễ hiểu về lá số tử vi, Mệnh, Thân, 12 cung, đại vận, tiểu vận và cách ứng dụng khi xem sự nghiệp, tài lộc, tình duyên.</p>
         </section>
-        <section class="prerender-section">
-          <h2>Bài viết nổi bật</h2>
-          <ul>
-            <li>Mệnh và Thân trong tử vi là gì?</li>
-            <li>Đại vận và tiểu vận là gì?</li>
-            <li>Cung Quan Lộc nói gì về sự nghiệp?</li>
-            <li>Cung Tài Bạch nói gì về tài lộc?</li>
-          </ul>
-          <p><a href="/lap-la-so">Lập lá số miễn phí</a></p>
+      </main>
+    `,
+  },
+  {
+    route: "/faq",
+    title: "FAQ Lập Lá Số Tử Vi - Giải Đáp Câu Hỏi Thường Gặp",
+    description:
+      "Giải đáp nhanh các câu hỏi thường gặp khi lập lá số tử vi online, chọn gói luận giải và sử dụng dữ liệu ngày giờ sinh.",
+    body: `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>FAQ lập lá số tử vi</h1>
+          <p>Câu hỏi thường gặp về cách lập lá số, mức độ chính xác, dữ liệu ngày giờ sinh và các bước tiếp theo sau khi xem miễn phí.</p>
         </section>
       </main>
     `,
   },
+  {
+    route: "/lien-he",
+    title: "Liên Hệ - Nhận Hướng Dẫn Chọn Gói Luận Giải",
+    description:
+      "Liên hệ để được hướng dẫn chọn gói phù hợp, gửi câu hỏi theo lá số hoặc đặt lịch tư vấn trực tiếp.",
+    body: `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>Liên hệ</h1>
+          <p>Trang này giúp bạn chọn bước tiếp theo sau khi đã có lá số: xem bảng giá, gửi câu hỏi hoặc chuẩn bị trước khi tư vấn trực tiếp.</p>
+        </section>
+      </main>
+    `,
+  },
+  {
+    route: "/hop-tuoi",
+    title: "Hợp Tuổi - Nội Dung Đang Hoàn Thiện",
+    description:
+      "Trang hợp tuổi đang được hoàn thiện để cung cấp trải nghiệm rõ ràng và nhất quán với hệ thống lá số hiện tại.",
+    noindex: true,
+    body: `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>Hợp tuổi đang được hoàn thiện</h1>
+          <p>Tính năng này sẽ được mở khi có đủ dữ liệu và luồng giải thích rõ ràng cho người dùng.</p>
+        </section>
+      </main>
+    `,
+  },
+  ...blogPosts.map((post) => ({
+    route: post.route,
+    title: post.title,
+    description: post.description,
+    body: `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>${post.title.replace(" | Blog Tử Vi", "")}</h1>
+          <p>${post.description}</p>
+          <div class="prerender-actions">
+            <a href="/lap-la-so">Lập lá số miễn phí</a>
+            <a href="/blog" class="secondary">Quay lại blog</a>
+          </div>
+        </section>
+      </main>
+    `,
+  })),
 ];
 
 const prerenderStyles = `
@@ -172,6 +225,7 @@ for (const page of routes) {
 
   html = replaceTag(html, /<title>[\s\S]*?<\/title>/, `<title>${page.title}</title>`);
   html = replaceTag(html, /<meta\s+name="description"[\s\S]*?\/>/, `<meta name="description" content="${page.description}" />`);
+  html = replaceTag(html, /<meta\s+name="robots"[\s\S]*?\/>/, `<meta name="robots" content="${page.noindex ? "noindex,nofollow" : "index,follow"}" />`);
   html = replaceTag(html, /<meta\s+property="og:title"[\s\S]*?\/>/, `<meta property="og:title" content="${page.title}" />`);
   html = replaceTag(html, /<meta\s+property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${page.description}" />`);
   html = replaceTag(html, /<meta\s+property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${siteUrl}${page.route}" />`);

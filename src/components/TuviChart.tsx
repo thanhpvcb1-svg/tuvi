@@ -54,6 +54,7 @@ type Props = {
   hasRequestedChart: boolean;
   activePalaceIndexes?: { daiVan?: number; tieuVan?: number };
   showLocKyNhap?: boolean;
+  showTieuVanHighlight?: boolean;
 };
 
 function getCellCenter(slotIndex: number) {
@@ -147,7 +148,13 @@ function getBorderBadgePosition(slotA: number, slotB: number): { x: number; y: n
   return null;
 }
 
-export default function TuviChart({ chart, hasRequestedChart, activePalaceIndexes, showLocKyNhap = false }: Props) {
+export default function TuviChart({
+  chart,
+  hasRequestedChart,
+  activePalaceIndexes,
+  showLocKyNhap = false,
+  showTieuVanHighlight = true,
+}: Props) {
   if (!hasRequestedChart) {
     return (
       <section className="chart chart-empty chart-welcome">
@@ -252,7 +259,7 @@ export default function TuviChart({ chart, hasRequestedChart, activePalaceIndexe
 
               const palace = palacesBySlot.get(index);
               const palaceIdx = palace?.index;
-              const isTieuVan = palaceIdx !== undefined && palaceIdx === activePalaceIndexes?.tieuVan;
+              const isTieuVan = showTieuVanHighlight && palaceIdx !== undefined && palaceIdx === activePalaceIndexes?.tieuVan;
               const cellClass = ["grid-cell", isTieuVan ? "grid-cell--tieu-van" : ""]
                 .filter(Boolean).join(" ");
               return (
@@ -279,26 +286,25 @@ export default function TuviChart({ chart, hasRequestedChart, activePalaceIndexe
             <span className="element hoa">Hỏa</span>
             <span className="element tho">Thổ</span>
           </div>
+          {projectedLines.length ? (
+            <svg className="chart-web-lines" viewBox="0 0 1024 1440" preserveAspectRatio="none">
+              {projectedLines.map((line) => (
+                <line
+                  key={line.name}
+                  x1={line.x1 + 6}
+                  y1={line.y1 + 6}
+                  x2={line.x2 + 6}
+                  y2={line.y2 + 6}
+                  className="focus-line"
+                  stroke="rgba(156, 99, 99, 0.42)"
+                  strokeWidth="1.05"
+                  strokeLinecap="round"
+                />
+              ))}
+            </svg>
+          ) : null}
         </div>
       </div>
-
-      {projectedLines.length ? (
-        <svg className="chart-web-lines" viewBox="0 0 1024 1440" preserveAspectRatio="none">
-          {projectedLines.map((line) => (
-            <line
-              key={line.name}
-              x1={line.x1 + 6}
-              y1={line.y1 + 6}
-              x2={line.x2 + 6}
-              y2={line.y2 + 6}
-              className="focus-line"
-              stroke="rgba(156, 99, 99, 0.42)"
-              strokeWidth="1.05"
-              strokeLinecap="round"
-            />
-          ))}
-        </svg>
-      ) : null}
     </section>
   );
 }

@@ -58,6 +58,7 @@ type Props = {
   title?: string;
   description?: string;
   compact?: boolean;
+  onSelectPlan?: (plan: PricingPlan) => void;
 };
 
 export default function PremiumPlans({
@@ -65,6 +66,7 @@ export default function PremiumPlans({
   title = "Chọn dịch vụ phù hợp với nhu cầu hiện tại",
   description = "Bạn có thể bắt đầu miễn phí, sau đó chọn hỏi 1 câu theo lá số hoặc đặt lịch tư vấn trực tiếp khi cần phân tích sâu hơn.",
   compact = false,
+  onSelectPlan,
 }: Props) {
   return (
     <section className="content-section" id="premium">
@@ -92,7 +94,11 @@ export default function PremiumPlans({
               </ul>
             </div>
 
-            <button type="button" className={plan.featured ? "primary-button plan-button" : "ghost-button plan-button"}>
+            <button
+              type="button"
+              className={plan.featured ? "primary-button plan-button" : "ghost-button plan-button"}
+              onClick={() => onSelectPlan?.(plan)}
+            >
               {plan.cta}
             </button>
           </article>

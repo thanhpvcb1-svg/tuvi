@@ -16,13 +16,13 @@ export default function SiteFooter() {
             <a href="/la-so-mau">Lá số mẫu</a>
             <a href="/blog">Blog</a>
             <a href="#privacy">Chính sách bảo mật</a>
-            <a href="#lien-he">Liên hệ</a>
+            <a href="/lien-he">Liên hệ</a>
           </div>
         </div>
 
         <p className="site-disclaimer">
-          Nội dung tử vi chỉ mang tính tham khảo, chiêm nghiệm và giải trí. Kết quả không thay thế tư vấn chuyên môn về y
-          tế, tài chính, pháp lý hoặc các quyết định quan trọng trong cuộc sống.
+          Nội dung tử vi chỉ mang tính tham khảo, chiêm nghiệm và giải trí. Kết quả không thay thế tư vấn chuyên môn về y tế,
+          tài chính, pháp lý hoặc các quyết định quan trọng trong cuộc sống.
         </p>
       </div>
     </footer>

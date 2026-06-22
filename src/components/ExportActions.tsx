@@ -1,13 +1,24 @@
 import React from "react";
 
 type Props = {
+  onInterpret: () => void;
   onDownloadImage: () => void;
   onCopyLink: () => void;
   onReset: () => void;
+  isInterpreting: boolean;
+  isReadingOpen: boolean;
   isDownloadingImage: boolean;
 };
 
-export default function ExportActions({ onDownloadImage, onCopyLink, onReset, isDownloadingImage }: Props) {
+export default function ExportActions({
+  onInterpret,
+  onDownloadImage,
+  onCopyLink,
+  onReset,
+  isInterpreting,
+  isReadingOpen,
+  isDownloadingImage,
+}: Props) {
   return (
     <section className="result-block">
       <div className="section-heading section-heading--compact">
@@ -16,8 +27,8 @@ export default function ExportActions({ onDownloadImage, onCopyLink, onReset, is
       </div>
 
       <div className="export-actions">
-        <button type="button" className="ghost-button" title="TODO: triển khai export PDF hoàn chỉnh" disabled>
-          Tải PDF
+        <button type="button" className="ghost-button" onClick={onInterpret} disabled={isInterpreting}>
+          {isInterpreting ? "Đang luận giải..." : isReadingOpen ? "Ẩn luận giải" : "Luận giải"}
         </button>
         <button type="button" className="ghost-button" onClick={onDownloadImage}>
           {isDownloadingImage ? "Đang tải ảnh..." : "Tải ảnh lá số"}
@@ -35,4 +46,3 @@ export default function ExportActions({ onDownloadImage, onCopyLink, onReset, is
     </section>
   );
 }
-

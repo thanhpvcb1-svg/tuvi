@@ -6,6 +6,7 @@ type Props = {
   canonicalPath: string;
   ogImage?: string;
   schema?: Record<string, unknown> | Array<Record<string, unknown>>;
+  noindex?: boolean;
 };
 
 const SITE_URL = "https://tuvi.pages.dev";
@@ -22,11 +23,12 @@ const upsertMeta = (selector: string, attributes: Record<string, string>) => {
   });
 };
 
-export default function SEOHead({ title, description, canonicalPath, ogImage = `${SITE_URL}/og-cover.svg`, schema }: Props) {
+export default function SEOHead({ title, description, canonicalPath, ogImage = `${SITE_URL}/og-cover.svg`, schema, noindex = false }: Props) {
   useEffect(() => {
     document.title = title;
 
     upsertMeta('meta[name="description"]', { name: "description", content: description });
+    upsertMeta('meta[name="robots"]', { name: "robots", content: noindex ? "noindex,nofollow" : "index,follow" });
     upsertMeta('meta[property="og:title"]', { property: "og:title", content: title });
     upsertMeta('meta[property="og:description"]', { property: "og:description", content: description });
     upsertMeta('meta[property="og:type"]', { property: "og:type", content: "website" });
@@ -57,7 +59,7 @@ export default function SEOHead({ title, description, canonicalPath, ogImage = `
       script.text = JSON.stringify(schema);
       document.head.appendChild(script);
     }
-  }, [title, description, canonicalPath, ogImage, schema]);
+  }, [title, description, canonicalPath, ogImage, schema, noindex]);
 
   return null;
 }

@@ -6,13 +6,12 @@ import ChartReading from "./components/ChartReading";
 import ExportActions from "./components/ExportActions";
 import FAQSection from "./components/FAQSection";
 import FloatingContactLinks from "./components/FloatingContactLinks";
-import FloatingPaymentCard from "./components/FloatingPaymentCard";
 import HomeShowcase from "./components/HomeShowcase";
 import InterpretationCards from "./components/InterpretationCards";
 import { LuuStarOptions } from "./components/LuuStarOptions";
 import PalaceAccordion from "./components/PalaceAccordion";
 import PrivacyNotice from "./components/PrivacyNotice";
-import PremiumPlans from "./components/PremiumPlans";
+import PremiumPlans, { type PricingPlan } from "./components/PremiumPlans";
 import SampleChartsSection, { type SampleChartPreset } from "./components/SampleChartsSection";
 import SEOHead from "./components/SEOHead";
 import SiteFooter from "./components/SiteFooter";
@@ -20,9 +19,8 @@ import SolarNoonCalculator from "./components/SolarNoonCalculator";
 import TrustBadges from "./components/TrustBadges";
 import TuviChart from "./components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "./components/VanHanhSelector";
-import { buildQuickReadings } from "./lib/chartUi";
-import { createChart } from "./lib/iztroEngine";
 import type { BirthInput, ChartView, LuuDisplayOptions, NormalizedBirthInput, PalaceView, StarView } from "./lib/types";
+import type { QuickReadingCard } from "./lib/chartUi";
 
 type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he";
 type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he";
@@ -40,6 +38,25 @@ const homeSectionRoutes: Record<HomeSectionId, string> = {
 };
 
 const siteUrl = "https://tuvi.pages.dev";
+
+let chartModulesPromise: Promise<{
+  createChart: typeof import("./lib/iztroEngine").createChart;
+  buildQuickReadings: typeof import("./lib/chartUi").buildQuickReadings;
+}> | null = null;
+
+const loadChartModules = async () => {
+  if (!chartModulesPromise) {
+    chartModulesPromise = Promise.all([
+      import("./lib/iztroEngine"),
+      import("./lib/chartUi"),
+    ]).then(([iztroEngine, chartUi]) => ({
+      createChart: iztroEngine.createChart,
+      buildQuickReadings: chartUi.buildQuickReadings,
+    }));
+  }
+
+  return chartModulesPromise;
+};
 
 const homeFaqs = [
   {
@@ -96,51 +113,101 @@ const blogPosts = [
     slug: "/blog/menh-va-than-trong-tu-vi-la-gi",
     title: "Mệnh và Thân trong tử vi là gì?",
     description: "Hiểu vai trò của Mệnh và Thân để đọc lá số dễ hơn và biết nên bắt đầu từ đâu.",
+    content: [
+      "Mệnh và Thân là hai điểm nền rất thường được người mới chú ý đầu tiên khi xem lá số. Mệnh nghiêng về khí chất, cách vận hành và nền tính cách, còn Thân thường được dùng để quan sát nơi năng lượng của người đó dễ dồn nhiều vào hơn theo thời gian.",
+      "Khi đọc thực tế, không nên tách Mệnh và Thân thành hai phần đối lập hoàn toàn. Cách an cung, bố cục sao, đối cung và tam hợp mới là lớp giúp người xem hiểu hai điểm này liên hệ với nhau như thế nào.",
+      "Nếu bạn mới bắt đầu, hãy xem Mệnh, Thân và các cung liên quan trước, sau đó mới mở rộng sang Quan Lộc, Tài Bạch, Phu Thê hay lớp vận hạn của năm đang xem.",
+    ],
   },
   {
     slug: "/blog/dai-van-va-tieu-van-la-gi",
     title: "Đại vận và tiểu vận là gì?",
     description: "Phân biệt hai lớp vận trình quan trọng để theo dõi từng giai đoạn cuộc sống rõ ràng hơn.",
+    content: [
+      "Đại vận giúp người xem nhìn một giai đoạn dài hơn trong hành trình phát triển, còn tiểu vận cho thấy điểm nhấn của từng năm cụ thể trong cùng giai đoạn đó.",
+      "Khi xem lá số online, hai lớp này nên được đọc cùng nhau. Đại vận cho biết bối cảnh dài hơi, còn tiểu vận giúp xác định năm nào cần chủ động hơn về công việc, tài chính hoặc các quyết định cá nhân.",
+      "Việc hiểu đúng đại vận và tiểu vận giúp người dùng tránh kỳ vọng rằng một năm đơn lẻ có thể nói hết mọi thứ. Đây là cách tiếp cận cân bằng và thực tế hơn khi đọc vận trình.",
+    ],
   },
   {
     slug: "/blog/cung-quan-loc-noi-gi-ve-su-nghiep",
     title: "Cung Quan Lộc nói gì về sự nghiệp?",
     description: "Khám phá cách cung Quan Lộc phản ánh hướng phát triển nghề nghiệp và cơ hội thăng tiến.",
+    content: [
+      "Cung Quan Lộc thường được xem như một đầu mối quan trọng khi đọc câu chuyện nghề nghiệp, vị trí công việc, cách phát triển chuyên môn và mức độ phù hợp với môi trường làm việc.",
+      "Tuy vậy, chỉ nhìn riêng Quan Lộc là chưa đủ. Nên đọc cùng Mệnh, Thiên Di và Tài Bạch để thấy vừa năng lực nội tại, vừa hoàn cảnh vận động bên ngoài và khả năng chuyển hóa thành kết quả thực tế.",
+      "Cách dùng phù hợp nhất là xem Quan Lộc như một trục định hướng, sau đó đối chiếu với thời điểm năm xem và các cung liên quan trước khi đưa ra quyết định lớn.",
+    ],
   },
   {
     slug: "/blog/cung-tai-bach-noi-gi-ve-tai-loc",
     title: "Cung Tài Bạch nói gì về tài lộc?",
     description: "Tìm hiểu cách xem xu hướng tiền bạc, tích lũy và các điểm cần thận trọng trong tài chính.",
+    content: [
+      "Cung Tài Bạch giúp người xem có một góc nhìn về cách tiền bạc vận động, khả năng tích lũy, cách tiếp cận nguồn thu và những điểm cần theo dõi kỹ hơn trong tài chính.",
+      "Đây không phải là công cụ để kết luận thu nhập theo kiểu cố định. Thực tế vẫn cần đọc cùng Mệnh, Quan Lộc và vận hạn năm xem để hiểu tiền đến từ đâu, giữ được ra sao và áp lực tài chính nằm ở điểm nào.",
+      "Khi dùng trong môi trường online, Tài Bạch phù hợp nhất để giúp người dùng đặt câu hỏi rõ hơn về dòng tiền, kế hoạch và thời điểm nên thận trọng.",
+    ],
   },
   {
     slug: "/blog/khong-nho-gio-sinh-co-lap-la-so-duoc-khong",
     title: "Không nhớ giờ sinh có lập lá số tử vi được không?",
     description: "Xem trường hợp chưa rõ giờ sinh nên hiểu kết quả như thế nào và cách giảm sai lệch khi đọc lá số.",
+    content: [
+      "Bạn vẫn có thể lập lá số khi chưa chắc giờ sinh, nhưng nên hiểu đây là bản xem tham khảo thay vì bản đọc chi tiết sâu.",
+      "Giờ sinh ảnh hưởng đến cách an cung và vị trí một số sao, vì vậy thiếu dữ liệu này có thể làm thay đổi cách đọc Mệnh, Thân hoặc các cung quan trọng khác.",
+      "Cách tiếp cận hợp lý là dùng bản tham khảo để nhìn tổng quan trước, sau đó thu hẹp câu hỏi và bổ sung dữ liệu nếu bạn cần đi sâu hơn vào quyết định quan trọng.",
+    ],
   },
   {
     slug: "/blog/cung-phu-the-noi-gi-ve-tinh-duyen",
     title: "Cung Phu Thê nói gì về tình duyên?",
     description: "Hiểu vai trò của cung Phu Thê khi xem xu hướng gắn kết, hôn nhân và cách xây dựng mối quan hệ.",
+    content: [
+      "Cung Phu Thê thường được dùng để đọc xu hướng gắn kết, cách bước vào quan hệ và kiểu tương tác dễ lặp lại trong chuyện tình cảm.",
+      "Tuy nhiên, không nên xem đây là nơi đưa ra kết luận cứng về hôn nhân. Cần đối chiếu thêm với Mệnh, Phúc Đức, Thiên Di và các lớp vận hạn theo năm để có góc nhìn cân bằng hơn.",
+      "Trên sản phẩm online, cung Phu Thê phù hợp để giúp người dùng nhận diện chủ đề quan hệ của mình, từ đó hỏi sâu hơn nếu có một vấn đề thực tế đang cần làm rõ.",
+    ],
   },
   {
     slug: "/blog/cach-xac-dinh-gio-sinh-trong-tu-vi",
     title: "Cách xác định giờ sinh trong tử vi",
     description: "Một vài gợi ý thực tế để đối chiếu thông tin và giảm sai lệch khi bạn chưa chắc giờ sinh của mình.",
+    content: [
+      "Khi chưa chắc giờ sinh, bạn có thể đối chiếu từ giấy tờ cũ, hỏi lại người thân hoặc dùng các mốc sự kiện đời sống để thu hẹp khoảng thời gian hợp lý.",
+      "Đây không phải là cách thay thế hoàn toàn dữ liệu gốc, nhưng có thể giúp bạn giảm sai lệch ban đầu trước khi lập lá số hoặc đi vào phần đọc sâu hơn.",
+      "Nếu vẫn chưa xác định được, nên dùng bản xem tổng quan và tránh đặt kỳ vọng quá cao vào các kết luận rất chi tiết theo từng cung hay từng năm.",
+    ],
   },
   {
     slug: "/blog/la-so-tu-vi-gom-nhung-phan-nao",
     title: "Lá số tử vi gồm những phần nào?",
     description: "Tìm hiểu các phần nền tảng như Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
+    content: [
+      "Một lá số tử vi thường gồm phần nền như Mệnh, Thân, 12 cung, các chính tinh, phụ tinh, đại vận và tiểu vận theo năm đang xem.",
+      "Với người mới, không cần đọc tất cả cùng lúc. Cách tiếp cận hiệu quả hơn là nhìn bố cục tổng thể trước, sau đó đi vào từng nhóm nội dung theo mục tiêu như sự nghiệp, tài lộc hay tình duyên.",
+      "Giao diện online nên làm tốt vai trò trực quan hóa phần nền này, để người dùng hiểu mình đang nhìn gì trước khi nhận luận giải sâu hơn.",
+    ],
   },
   {
     slug: "/blog/chinh-tinh-va-phu-tinh-la-gi",
     title: "Chính tinh và phụ tinh là gì?",
     description: "Phân biệt hai nhóm sao thường gặp khi bắt đầu đọc lá số tử vi và cách hiểu vai trò của chúng.",
+    content: [
+      "Chính tinh thường là nhóm sao nền có vai trò lớn trong việc định hình cách đọc một cung, còn phụ tinh giúp bổ sung sắc thái, điều chỉnh hoặc làm rõ cách chủ đề đó biểu hiện ra ngoài.",
+      "Người mới thường bị ngợp vì số lượng sao trên lá số. Cách tốt hơn là nhìn chính tinh trước, sau đó mới dùng phụ tinh như lớp chi tiết để hiểu sâu hơn về cùng một chủ đề.",
+      "Trong sản phẩm số, phần hiển thị sao nên ưu tiên sự rõ ràng, tránh biến lá số thành một khối chữ dày khiến người dùng khó tiếp cận.",
+    ],
   },
   {
     slug: "/blog/xem-van-han-nam-2026-theo-la-so-tu-vi",
     title: "Xem vận hạn năm 2026 theo lá số tử vi",
     description: "Cách tiếp cận năm đang xem trong lá số để nhận diện những giai đoạn cần chủ động hơn về công việc và tài chính.",
+    content: [
+      "Khi xem vận hạn theo năm, điều quan trọng là đặt năm đang xem trong bối cảnh toàn lá số thay vì chỉ nhìn một chỉ báo đơn lẻ.",
+      "Năm 2026 nên được đọc cùng tiểu vận, cung được kích hoạt, các lớp sao lưu và câu hỏi thực tế mà người dùng đang quan tâm, như công việc, tài chính hay mối quan hệ.",
+      "Cách dùng phù hợp là xem năm như một điểm cần chủ động hơn ở một số chủ đề, thay vì coi đó là kết luận cứng cho toàn bộ trải nghiệm của năm.",
+    ],
   },
 ];
 
@@ -389,6 +456,59 @@ const buildLuanGiaiPayload = (chart: ChartView, input: BirthInput, luuOptions: L
   normalized: chart.normalized,
 });
 
+const buildCopyableChartJson = (chart: ChartView, input: BirthInput, luuOptions: LuuDisplayOptions) => {
+  const payload = buildLuanGiaiPayload(chart, input, luuOptions);
+
+  return {
+    profile: {
+      fullName: payload.profile.fullName,
+      gender: payload.profile.gender,
+      yinyangGender: payload.profile.yinyangGender,
+      solarDate: payload.profile.solarDate,
+      lunarDate: payload.profile.lunarDate,
+      birthHour: payload.profile.birthHour,
+      ageSymbol: payload.profile.ageSymbol,
+      ageCycle: payload.profile.ageCycle,
+      menhElement: payload.profile.menhElement,
+      cucElement: payload.profile.cucElement,
+      fiveElementsClass: payload.profile.fiveElementsClass,
+      menhChu: payload.profile.menhChu,
+      thanChu: payload.profile.thanChu,
+      bodyPalace: payload.profile.bodyPalace,
+    },
+    input: payload.input,
+    luuOptions: payload.luuOptions,
+    laiNhanCung: payload.laiNhanCung,
+    luuWarnings: payload.luuWarnings,
+    palaces: payload.palaces.map((palace) => ({
+      name: palace.name,
+      branch: palace.branch,
+      stem: palace.stem,
+      isBodyPalace: palace.isBodyPalace,
+      decadalRange: palace.decadalRange,
+      ages: palace.ages,
+      changsheng12: palace.changsheng12,
+      boshi12: palace.boshi12,
+      suiqian12: palace.suiqian12,
+      jiangqian12: palace.jiangqian12,
+      majorStars: palace.majorStars,
+      visibleStars: palace.visibleStars,
+      goodStars: palace.goodStars,
+      badStars: palace.badStars,
+      specialMarkers: palace.specialMarkers,
+    })),
+    focusPalaces: payload.palaces
+      .filter((palace) => ["Mệnh", "Phúc Đức", "Quan Lộc", "Tài Bạch", "Phu Thê", "Thiên Di", "Tật Ách"].includes(palace.name))
+      .map((palace) => ({
+        name: palace.name,
+        majorStars: palace.majorStars,
+        visibleStars: palace.visibleStars,
+        goodStars: palace.goodStars,
+        badStars: palace.badStars,
+      })),
+  };
+};
+
 const readLuanGiaiResponse = async (response: Response) => {
   const text = await response.text();
 
@@ -436,45 +556,29 @@ const serializeInputToSearch = (input: BirthInput) => {
   return params.toString();
 };
 
-const readInputFromSearch = () => {
-  const params = new URLSearchParams(window.location.search);
-  if (!params.toString()) {
-    return null;
-  }
-
-  return {
-    ...defaultInput,
-    fullName: params.get("fullName") ?? defaultInput.fullName,
-    year: params.get("year") ?? defaultInput.year,
-    month: params.get("month") ?? defaultInput.month,
-    day: params.get("day") ?? defaultInput.day,
-    birthHour: params.get("birthHour") ?? defaultInput.birthHour,
-    birthMinute: params.get("birthMinute") ?? defaultInput.birthMinute,
-    gender: (params.get("gender") as BirthInput["gender"]) ?? defaultInput.gender,
-    calendarType: (params.get("calendarType") as BirthInput["calendarType"]) ?? defaultInput.calendarType,
-    horoscopeYear: params.get("horoscopeYear") ?? defaultInput.horoscopeYear,
-    unknownBirthTime: params.get("unknownBirthTime") === "true",
-  } satisfies BirthInput;
-};
-
 export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
+  const currentBlogPost = blogPosts.find((post) => post.slug === location.pathname) ?? null;
+  const relatedBlogPosts = currentBlogPost
+    ? blogPosts.filter((post) => post.slug !== currentBlogPost.slug).slice(0, 3)
+    : [];
   const [activePage, setActivePage] = useState<MainPageId>("home");
   const [birthInput, setBirthInput] = useState<BirthInput>(defaultInput);
   const [submittedInput, setSubmittedInput] = useState<BirthInput | null>(null);
   const [chart, setChart] = useState<ChartView | null>(null);
   const [hasRequestedChart, setHasRequestedChart] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<FormErrors>({});
-  const [statusMessage, setStatusMessage] = useState("");
   const [shareMessage, setShareMessage] = useState("");
-  const [showChartJson, setShowChartJson] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
   const [showReading, setShowReading] = useState(false);
   const [readingResult, setReadingResult] = useState("");
   const [readingError, setReadingError] = useState("");
   const [isReadingLoading, setIsReadingLoading] = useState(false);
+  const [isCopyingJson, setIsCopyingJson] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isDownloadingImage, setIsDownloadingImage] = useState(false);
+  const [quickReadings, setQuickReadings] = useState<QuickReadingCard[]>([]);
   const [luuOptions, setLuuOptions] = useState<LuuDisplayOptions>({
     showLuuTuHoa: false,
     showLuuTuDuc: false,
@@ -487,6 +591,7 @@ export default function App() {
   const [lastSubmittedSignature, setLastSubmittedSignature] = useState<string | null>(null);
   const chartCaptureRef = useRef<HTMLDivElement | null>(null);
   const resultRef = useRef<HTMLElement | null>(null);
+  const readingRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (location.pathname === "/lap-la-so") {
@@ -501,7 +606,7 @@ export default function App() {
       setActivePage("la-so-mau");
       return;
     }
-    if (location.pathname === "/blog" || location.pathname === "/kien-thuc") {
+    if (location.pathname === "/blog" || location.pathname === "/kien-thuc" || location.pathname.startsWith("/blog/")) {
       setActivePage("blog");
       return;
     }
@@ -521,16 +626,6 @@ export default function App() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const inputFromSearch = readInputFromSearch();
-    if (!inputFromSearch) {
-      return;
-    }
-
-    setBirthInput(inputFromSearch);
-    navigate(`/lap-la-so${location.search}`, { replace: true });
-  }, []);
-
-  useEffect(() => {
     if (!submittedInput) {
       return;
     }
@@ -540,11 +635,51 @@ export default function App() {
       return;
     }
 
-    setChart(createChart(normalizedInput, "tuvichancoCompatible", { luuOptions, horoscopeDate: new Date(horoscopeYear, 5, 15) }));
-    setReadingResult("");
-    setReadingError("");
-    setShowReading(false);
+    let cancelled = false;
+
+    const refreshChart = async () => {
+      const { createChart, buildQuickReadings } = await loadChartModules();
+      if (cancelled) {
+        return;
+      }
+
+      const nextChart = createChart(normalizedInput, "tuvichancoCompatible", { luuOptions, horoscopeDate: new Date(horoscopeYear, 5, 15) });
+      if (cancelled) {
+        return;
+      }
+
+      setChart(nextChart);
+      setQuickReadings(buildQuickReadings(nextChart));
+      setReadingResult("");
+      setReadingError("");
+      setShowReading(false);
+    };
+
+    refreshChart();
+
+    return () => {
+      cancelled = true;
+    };
   }, [submittedInput, luuOptions, horoscopeYear]);
+
+  useEffect(() => {
+    if (!toastMessage) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setToastMessage("");
+    }, 1800);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [toastMessage]);
+
+  const showToast = (message: string) => {
+    setToastMessage("");
+    window.setTimeout(() => {
+      setToastMessage(message);
+    }, 10);
+  };
 
   const hasDirtyChanges = useMemo(() => {
     if (!lastSubmittedSignature) {
@@ -553,14 +688,6 @@ export default function App() {
 
     return buildInputSignature(birthInput) !== lastSubmittedSignature;
   }, [birthInput, lastSubmittedSignature]);
-
-  const quickReadings = useMemo(() => {
-    if (!chart) {
-      return [];
-    }
-
-    return buildQuickReadings(chart);
-  }, [chart]);
 
   const navigateHomeSection = (section: HomeSectionId) => {
     const route = homeSectionRoutes[section];
@@ -571,8 +698,38 @@ export default function App() {
     navigate("/");
   };
 
+  const resetWorkspace = (targetPath = "/lap-la-so") => {
+    setBirthInput(defaultInput);
+    setSubmittedInput(null);
+    setChart(null);
+    setHasRequestedChart(false);
+    setFieldErrors({});
+    setShareMessage("");
+    setToastMessage("");
+    setShowReading(false);
+    setQuickReadings([]);
+    setReadingResult("");
+    setReadingError("");
+    setHoroscopeYear(currentYear);
+    setLastSubmittedSignature(null);
+    navigate(targetPath, { replace: true });
+  };
+
   const navigateChartForm = () => {
-    navigate("/lap-la-so");
+    resetWorkspace("/lap-la-so");
+  };
+
+  const navigateContactPage = () => {
+    navigate("/lien-he");
+  };
+
+  const handleSelectPlan = (plan: PricingPlan) => {
+    if (plan.price === "0đ") {
+      navigateChartForm();
+      return;
+    }
+
+    navigateContactPage();
   };
 
   const getNavLinkClass = (route: string) => `site-nav-link${location.pathname === route ? " is-active" : ""}`;
@@ -581,17 +738,15 @@ export default function App() {
     const errors = validateBirthInput(nextInput);
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
-      setStatusMessage("");
       return;
     }
 
     setFieldErrors({});
     setShareMessage("");
-    setStatusMessage("");
     setIsGenerating(true);
     navigate("/lap-la-so");
 
-    window.setTimeout(() => {
+    window.setTimeout(async () => {
       const normalizedInput = normalizeBirthInput(nextInput);
 
       if (!normalizedInput) {
@@ -600,19 +755,21 @@ export default function App() {
         return;
       }
 
+      const { createChart, buildQuickReadings } = await loadChartModules();
       const nextYear = getHoroscopeYear(nextInput);
+      const nextChart = createChart(normalizedInput, "tuvichancoCompatible", { luuOptions, horoscopeDate: new Date(nextYear, 5, 15) });
       setHoroscopeYear(nextYear);
       setSubmittedInput(nextInput);
-      setChart(createChart(normalizedInput, "tuvichancoCompatible", { luuOptions, horoscopeDate: new Date(nextYear, 5, 15) }));
+      setChart(nextChart);
+      setQuickReadings(buildQuickReadings(nextChart));
       setHasRequestedChart(true);
-      setShowChartJson(false);
       setShowReading(false);
       setReadingResult("");
       setReadingError("");
       setLastSubmittedSignature(buildInputSignature(nextInput));
-      setStatusMessage("Lá số của bạn đã được tạo.");
-      navigate(`/lap-la-so?${serializeInputToSearch(nextInput)}`, { replace: true });
+      navigate("/lap-la-so", { replace: true });
       setIsGenerating(false);
+      showToast("Lập lá số thành công");
 
       window.requestAnimationFrame(() => {
         resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -624,12 +781,23 @@ export default function App() {
     handleGenerateFromInput(birthInput);
   };
 
-  const handleToggleChartJson = () => {
-    if (!chart) {
+  const handleCopyChartJson = async () => {
+    if (!chart || !submittedInput || isCopyingJson) {
       return;
     }
 
-    setShowChartJson((current) => !current);
+    setIsCopyingJson(true);
+
+    try {
+      const payload = buildCopyableChartJson(chart, submittedInput, luuOptions);
+      await navigator.clipboard.writeText(JSON.stringify(payload, null, 2));
+      showToast("Copy thành công");
+    } catch (error) {
+      console.error(error);
+      setShareMessage("Không thể sao chép JSON lá số trên trình duyệt hiện tại.");
+    } finally {
+      setIsCopyingJson(false);
+    }
   };
 
   const handleLuanGiai = async () => {
@@ -637,7 +805,16 @@ export default function App() {
       return;
     }
 
+    if (showReading) {
+      setShowReading(false);
+      return;
+    }
+
     setShowReading(true);
+    if (readingResult || readingError) {
+      return;
+    }
+
     setReadingError("");
     setReadingResult("");
     setIsReadingLoading(true);
@@ -683,6 +860,10 @@ export default function App() {
     setIsDownloadingImage(true);
 
     try {
+      await new Promise<void>((resolve) => {
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+      });
+
       const target = chartCaptureRef.current;
       const chartElement =
         (target.querySelector(".chart-export-frame") as HTMLElement | null) ??
@@ -774,31 +955,11 @@ export default function App() {
   };
 
   const handleResetChart = () => {
-    setBirthInput(defaultInput);
-    setSubmittedInput(null);
-    setChart(null);
-    setHasRequestedChart(false);
-    setFieldErrors({});
-    setStatusMessage("");
-    setShareMessage("");
-    setShowChartJson(false);
-    setShowReading(false);
-    setReadingResult("");
-    setReadingError("");
-    setHoroscopeYear(currentYear);
-    setLastSubmittedSignature(null);
-    navigate("/lap-la-so", { replace: true });
+    resetWorkspace("/lap-la-so");
   };
 
-  const chartJson = chart
-    ? JSON.stringify(
-        {
-          mapped: chart,
-          raw: chart.raw,
-        },
-        null,
-        2,
-      )
+  const readingDataJson = chart && submittedInput
+    ? JSON.stringify(buildCopyableChartJson(chart, submittedInput, luuOptions), null, 2)
     : "";
 
   const faqSchema = (items: typeof homeFaqs) => ({
@@ -852,11 +1013,39 @@ export default function App() {
           canonicalPath: "/la-so-mau",
         };
       case "blog":
+        if (currentBlogPost) {
+          return {
+            title: `${currentBlogPost.title} | Blog Tử Vi`,
+            description: currentBlogPost.description,
+            canonicalPath: currentBlogPost.slug,
+          };
+        }
         return {
           title: "Blog Tử Vi - Kiến Thức Lá Số, Đại Vận, Tiểu Vận",
           description:
             "Khám phá các bài viết cơ bản về lá số tử vi, Mệnh, Thân, đại vận, tiểu vận, cung Quan Lộc và cung Tài Bạch.",
           canonicalPath: "/blog",
+        };
+      case "faq":
+        return {
+          title: "FAQ Lập Lá Số Tử Vi - Giải Đáp Câu Hỏi Thường Gặp",
+          description:
+            "Giải đáp nhanh các câu hỏi thường gặp khi lập lá số tử vi online, chọn gói luận giải và sử dụng dữ liệu ngày giờ sinh.",
+          canonicalPath: "/faq",
+        };
+      case "hop-tuoi":
+        return {
+          title: "Hợp Tuổi - Nội Dung Đang Hoàn Thiện",
+          description:
+            "Trang hợp tuổi đang được hoàn thiện để cung cấp trải nghiệm rõ ràng và nhất quán với hệ thống lá số hiện tại.",
+          canonicalPath: "/hop-tuoi",
+        };
+      case "lien-he":
+        return {
+          title: "Liên Hệ - Nhận Hướng Dẫn Chọn Gói Luận Giải",
+          description:
+            "Liên hệ để được hướng dẫn chọn gói phù hợp, gửi câu hỏi theo lá số hoặc đặt lịch tư vấn trực tiếp.",
+          canonicalPath: "/lien-he",
         };
       default:
         return {
@@ -867,6 +1056,39 @@ export default function App() {
         };
     }
   })();
+
+  const articleSchema = currentBlogPost
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: currentBlogPost.title,
+        description: currentBlogPost.description,
+        mainEntityOfPage: `${siteUrl}${currentBlogPost.slug}`,
+        author: {
+          "@type": "Organization",
+          name: "LaSoTuVi",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "LaSoTuVi",
+          logo: {
+            "@type": "ImageObject",
+            url: `${siteUrl}/favicon.svg`,
+          },
+        },
+      }
+    : null;
+
+  const breadcrumbSchema = (items: Array<{ name: string; path: string }>) => ({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${siteUrl}${item.path}`,
+    })),
+  });
 
   const homePage = (
     <div className="home-page">
@@ -901,6 +1123,7 @@ export default function App() {
         title="Bắt đầu miễn phí, sau đó chọn đúng mức hỗ trợ bạn cần"
         description="Mô hình bán hàng được giữ đơn giản: lập lá số miễn phí, hỏi 1 câu theo lá số với 50.000đ hoặc đặt lịch tư vấn trực tiếp khi cần phân tích sâu."
         compact
+        onSelectPlan={handleSelectPlan}
       />
       <FAQSection
         faqs={homeFaqs}
@@ -939,23 +1162,19 @@ export default function App() {
       </section>
 
       <section ref={resultRef} className="chart-panel result-panel">
-        {statusMessage ? <div className="result-status" role="status">{statusMessage}</div> : null}
         {shareMessage ? <div className="result-status result-status--muted">{shareMessage}</div> : null}
+        {toastMessage ? <div className="copy-toast" role="status">{toastMessage}</div> : null}
 
-        <div className="chart-tools">
-          <LuuStarOptions value={luuOptions} onChange={setLuuOptions} />
-          <div className="chart-tools-actions">
-            <button type="button" className="debug-button" onClick={handleLuanGiai} disabled={!chart || isReadingLoading}>
-              {isReadingLoading ? "Đang luận giải..." : "Luận giải"}
-            </button>
-            <button type="button" className="debug-button" onClick={handleToggleChartJson} disabled={!chart}>
-              {showChartJson ? "Ẩn JSON" : "Xem JSON"}
-            </button>
+        {hasRequestedChart && chart ? (
+          <div className="chart-tools">
+            <LuuStarOptions value={luuOptions} onChange={setLuuOptions} />
+            <div className="chart-tools-actions">
+              <button type="button" className="debug-button" onClick={handleCopyChartJson} disabled={!chart || !submittedInput || isCopyingJson}>
+                {isCopyingJson ? "Đang copy JSON..." : "Copy JSON"}
+              </button>
+            </div>
           </div>
-        </div>
-
-        {showChartJson ? <pre className="debug-json">{chartJson}</pre> : null}
-        {showReading ? <ChartReading result={readingResult} isLoading={isReadingLoading} error={readingError} /> : null}
+        ) : null}
 
         {hasRequestedChart && chart && submittedInput ? (
           <>
@@ -974,6 +1193,7 @@ export default function App() {
                 <TuviChart
                   chart={chart}
                   hasRequestedChart={hasRequestedChart}
+                  showTieuVanHighlight={!isDownloadingImage}
                   showLocKyNhap={luuOptions.showLocKyNhap}
                   activePalaceIndexes={(() => {
                     const age = horoscopeYear - (parseInt(submittedInput.year, 10) || horoscopeYear);
@@ -989,6 +1209,26 @@ export default function App() {
                 />
               </div>
             </section>
+
+            <ExportActions
+              onInterpret={handleLuanGiai}
+              onDownloadImage={handleDownloadImage}
+              onCopyLink={handleCopyLink}
+              onReset={handleResetChart}
+              isInterpreting={isReadingLoading}
+              isReadingOpen={showReading}
+              isDownloadingImage={isDownloadingImage}
+            />
+
+            {showReading ? (
+              <div ref={readingRef}>
+                <ChartReading result={readingResult} isLoading={isReadingLoading} error={readingError} analysisData={readingDataJson} />
+              </div>
+            ) : null}
+
+            <div className="result-disclaimer">
+              Kết quả chỉ mang tính tham khảo, chiêm nghiệm và giải trí. Không thay thế tư vấn chuyên môn về y tế, tài chính, pháp lý hoặc các quyết định quan trọng.
+            </div>
 
             <section id="luan-giai" className="result-block">
               <InterpretationCards items={quickReadings} />
@@ -1021,18 +1261,8 @@ export default function App() {
                   <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Đặt lịch tư vấn trực tiếp với thầy</button>
                 </div>
               </div>
-
-              <ExportActions
-                onDownloadImage={handleDownloadImage}
-                onCopyLink={handleCopyLink}
-                onReset={handleResetChart}
-                isDownloadingImage={isDownloadingImage}
-              />
             </section>
 
-            <div className="result-disclaimer">
-              Kết quả chỉ mang tính tham khảo, chiêm nghiệm và giải trí. Không thay thế tư vấn chuyên môn về y tế, tài chính, pháp lý hoặc các quyết định quan trọng.
-            </div>
           </>
         ) : (
           <section className="result-empty-card">
@@ -1186,6 +1416,7 @@ export default function App() {
         eyebrow="Luận giải & tư vấn"
         title="Bảng giá dịch vụ theo lá số"
         description="Rõ ràng, gọn và tập trung vào hành trình thực tế: xem miễn phí trước, hỏi 1 câu khi cần quyết định nhanh, hoặc tư vấn trực tiếp khi cần định hướng sâu."
+        onSelectPlan={handleSelectPlan}
       />
       <section className="content-section">
         <div className="section-heading">
@@ -1223,7 +1454,7 @@ export default function App() {
         title={pageSeo.title}
         description={pageSeo.description}
         canonicalPath={pageSeo.canonicalPath}
-        schema={[organizationSchema]}
+        schema={[organizationSchema, breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Blog", path: "/blog" }])]}
       />
       <section className="content-section">
         <div className="section-heading">
@@ -1238,8 +1469,8 @@ export default function App() {
               <p>{post.description}</p>
               <span className="blog-card-slug">{post.slug}</span>
               <div className="home-hero-actions">
-                <a href="/blog" className="ghost-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-                  Xem thêm
+                <a href={post.slug} className="ghost-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+                  Đọc bài viết
                 </a>
                 <a href="/lap-la-so" className="primary-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
                   Lập lá số miễn phí
@@ -1248,19 +1479,184 @@ export default function App() {
             </article>
           ))}
         </div>
+        <div className="placeholder-card blog-hub-cta">
+          <h2>Bạn muốn chuyển từ kiến thức sang lá số thực tế?</h2>
+          <p>Đọc bài để hiểu khái niệm trước, sau đó lập lá số cá nhân để đối chiếu trực tiếp với dữ liệu của chính bạn.</p>
+          <div className="home-hero-actions">
+            <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
+            <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Xem bảng giá</button>
+          </div>
+        </div>
       </section>
     </div>
   );
 
+  const blogArticlePage = currentBlogPost ? (
+    <div className="home-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath={pageSeo.canonicalPath}
+        schema={[
+          organizationSchema,
+          articleSchema!,
+          breadcrumbSchema([
+            { name: "Trang chủ", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: currentBlogPost.title, path: currentBlogPost.slug },
+          ]),
+        ]}
+      />
+      <section className="content-section">
+        <div className="section-heading article-hero">
+          <p className="eyebrow">Bài viết kiến thức</p>
+          <h1>{currentBlogPost.title}</h1>
+          <p>{currentBlogPost.description}</p>
+        </div>
+        <div className="article-layout">
+          <article className="article-content-card">
+            {currentBlogPost.content.map((paragraph, index) => (
+              <p key={`${currentBlogPost.slug}-${index}`}>{paragraph}</p>
+            ))}
+
+            <div className="article-inline-links">
+              <a href="/lap-la-so">Lập lá số miễn phí</a>
+              <a href="/bang-gia">Xem bảng giá luận giải</a>
+              <a href="/faq">Đọc câu hỏi thường gặp</a>
+            </div>
+          </article>
+
+          <aside className="article-sidebar">
+            <div className="article-side-card">
+              <p className="eyebrow">Liên kết nhanh</p>
+              <h3>Từ bài viết sang hành động</h3>
+              <a href="/lap-la-so" className="primary-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+                Lập lá số miễn phí
+              </a>
+              <a href="/bang-gia" className="ghost-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+                Xem bảng giá
+              </a>
+            </div>
+
+            <div className="article-side-card">
+              <p className="eyebrow">Bài liên quan</p>
+              <h3>Đọc tiếp</h3>
+              <div className="article-related-list">
+                {relatedBlogPosts.map((post) => (
+                  <a key={post.slug} href={post.slug} className="article-related-link">
+                    <strong>{post.title}</strong>
+                    <span>{post.description}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div className="placeholder-card">
+          <h2>Bạn muốn áp dụng ngay vào lá số của mình?</h2>
+          <p>Lập lá số miễn phí để xem dữ liệu cá nhân trước, sau đó mới đọc sâu hơn theo đúng câu hỏi bạn đang quan tâm.</p>
+          <div className="home-hero-actions">
+            <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
+            <button type="button" className="ghost-button" onClick={() => navigate("/blog")}>Quay lại blog</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  ) : null;
+
   const faqPage = (
     <div className="home-page">
-      <SEOHead title={pageSeo.title} description={pageSeo.description} canonicalPath="/faq" schema={[faqSchema(homeFaqs)]} />
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath="/faq"
+        schema={[
+          faqSchema(homeFaqs),
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "FAQ", path: "/faq" }]),
+        ]}
+      />
       <FAQSection
         faqs={homeFaqs}
         eyebrow="FAQ"
         title="Câu hỏi thường gặp khi lập lá số"
         description="Tập hợp các thắc mắc phổ biến nhất trước khi tạo lá số hoặc chọn gói hỗ trợ."
       />
+    </div>
+  );
+
+  const compatPage = (
+    <div className="home-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath="/hop-tuoi"
+        schema={[organizationSchema, breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Hợp tuổi", path: "/hop-tuoi" }])]}
+        noindex
+      />
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Hợp tuổi</p>
+          <h1>Nội dung hợp tuổi đang được hoàn thiện</h1>
+          <p>Trang này sẽ được mở khi trải nghiệm hợp tuổi có đủ dữ liệu, luồng so khớp và phần giải thích rõ ràng để dùng ổn định.</p>
+        </div>
+        <div className="seo-copy-grid">
+          <article className="seo-copy-card">
+            <h3>Hiện tại bạn có thể làm gì?</h3>
+            <p>Bạn vẫn có thể lập lá số miễn phí để xem Mệnh, Thân, 12 cung và các lớp thông tin nền trước khi dùng thêm các công cụ chuyên biệt.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Vì sao chưa mở sớm?</h3>
+            <p>Nhóm đang ưu tiên giữ trải nghiệm đúng và dễ hiểu trước khi công bố rộng, thay vì đưa lên một tính năng còn thiếu logic hoặc nội dung giải thích.</p>
+          </article>
+        </div>
+        <div className="placeholder-card">
+          <h2>Bạn muốn bắt đầu từ lá số cá nhân?</h2>
+          <p>Hãy lập lá số trước để có nền dữ liệu rõ ràng, sau đó quay lại khi công cụ hợp tuổi hoàn thiện.</p>
+          <div className="home-hero-actions">
+            <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+
+  const contactPage = (
+    <div className="home-page">
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath="/lien-he"
+        schema={[organizationSchema, breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Liên hệ", path: "/lien-he" }])]}
+      />
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Liên hệ</p>
+          <h1>Nhận hướng dẫn chọn gói và gửi câu hỏi theo lá số</h1>
+          <p>Trang này dành cho người đã có lá số và muốn được hướng dẫn bước tiếp theo: hỏi 1 câu, đặt lịch tư vấn hoặc chuẩn bị thông tin trước khi trao đổi.</p>
+        </div>
+        <div className="seo-copy-grid">
+          <article className="seo-copy-card">
+            <h3>Khi nào nên liên hệ?</h3>
+            <p>Khi bạn đã xem lá số cơ bản nhưng cần hỏi sâu hơn về công việc, tài lộc, tình duyên hoặc vận hạn của năm đang xem.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Nên chuẩn bị gì?</h3>
+            <p>Chuẩn bị ngày giờ sinh, năm muốn xem và câu hỏi chính bạn đang quan tâm. Càng cụ thể, phần phản hồi sau đó càng dễ đi đúng trọng tâm.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Bắt đầu nhanh</h3>
+            <p>Nếu chưa có lá số, hãy lập lá số miễn phí trước. Nếu đã có lá số, bạn có thể đi thẳng sang bảng giá để chọn mức hỗ trợ phù hợp.</p>
+          </article>
+        </div>
+        <div className="placeholder-card">
+          <h2>Bạn muốn đi theo hướng nào?</h2>
+          <p>Chọn bước phù hợp với tình huống hiện tại để tiếp tục hành trình một cách rõ ràng hơn.</p>
+          <div className="home-hero-actions">
+            <button type="button" className="primary-button" onClick={() => navigate("/bang-gia")}>Xem bảng giá</button>
+            <button type="button" className="ghost-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 
@@ -1318,11 +1714,14 @@ export default function App() {
               : activePage === "la-so-mau"
                 ? samplePage
                 : activePage === "blog"
-                  ? blogPage
-                  : faqPage}
+                  ? (currentBlogPost ? blogArticlePage : blogPage)
+                  : activePage === "hop-tuoi"
+                    ? compatPage
+                    : activePage === "lien-he"
+                      ? contactPage
+                      : faqPage}
       </main>
 
-      <FloatingPaymentCard onClick={() => navigate("/bang-gia")} />
       <FloatingContactLinks />
       <SiteFooter />
     </div>
