@@ -1,18 +1,28 @@
 :root {
   font-family: "Be Vietnam Pro", "Segoe UI", Tahoma, Arial, sans-serif;
-  color: #1e2a44;
-  background: #f7f1e8;
-  --bg: #f7f1e8;
-  --surface: rgba(255, 250, 243, 0.78);
+  color: #211a13;
+  background: #fff8ed;
+  --bg-main: #fff8ed;
+  --bg-soft: #f7eddd;
+  --surface: #ffffff;
+  --surface-warm: #fffdf8;
+  --text-main: #211a13;
+  --text-muted: #6f6254;
+  --primary: #5b2c83;
+  --primary-dark: #2e1748;
+  --primary-soft: #f1e6fa;
+  --gold: #c9a24a;
+  --gold-soft: #f8e8b8;
+  --border-soft: #e8d9c1;
+  --bg: #fff8ed;
   --surface-strong: rgba(255, 253, 248, 0.92);
-  --gold: #d4a017;
-  --gold-dark: #b8860b;
-  --navy: #1e2a44;
-  --ink: #121212;
-  --accent: #8b0000;
-  --muted: #5f6f89;
-  --border: rgba(180, 145, 88, 0.24);
-  --shadow: 0 24px 60px rgba(45, 33, 16, 0.12);
+  --gold-dark: #9b7330;
+  --navy: #2e1748;
+  --ink: #211a13;
+  --accent: #7a4a22;
+  --muted: #6f6254;
+  --border: rgba(232, 217, 193, 0.9);
+  --shadow: 0 18px 45px rgba(72, 43, 18, 0.08);
 }
 
 * {
@@ -23,9 +33,9 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top right, rgba(212, 160, 23, 0.24), transparent 18%),
-    radial-gradient(circle at top left, rgba(30, 42, 68, 0.1), transparent 20%),
-    linear-gradient(180deg, #fbf6ef 0%, #f2e8db 45%, #eadfce 100%);
+    radial-gradient(circle at top left, rgba(201, 162, 74, 0.1), transparent 28%),
+    radial-gradient(circle at top right, rgba(91, 44, 131, 0.1), transparent 30%),
+    #fff8ed;
 }
 
 button,
@@ -234,9 +244,9 @@ h4,
   padding: 46px 42px 40px;
   text-align: left;
   background:
-    radial-gradient(circle at top right, rgba(255, 194, 84, 0.12), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(212, 160, 23, 0.1), transparent 28%),
-    rgba(255, 250, 242, 0.9);
+    radial-gradient(circle at top left, rgba(201, 162, 74, 0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(91, 44, 131, 0.22), transparent 36%),
+    linear-gradient(135deg, #2e1748 0%, #4a236b 48%, #7a4a22 100%);
 }
 
 .home-hero--focused::after {
@@ -266,6 +276,7 @@ h4,
   font-size: clamp(48px, 6vw, 66px);
   line-height: 0.98;
   letter-spacing: -0.03em;
+  color: #fffdf8;
 }
 
 .home-hero p,
@@ -282,6 +293,7 @@ h4,
   margin: 18px 0 0;
   font-size: 17px;
   line-height: 1.72;
+  color: rgba(255, 253, 248, 0.82);
 }
 
 .home-hero-actions {
@@ -1378,15 +1390,15 @@ h4,
 .primary-button {
   flex: 1;
   color: #fff;
-  background: linear-gradient(180deg, #ff9f0b 0%, #f28b00 100%);
-  box-shadow: 0 14px 28px rgba(242, 139, 0, 0.24);
+  background: linear-gradient(180deg, #5b2c83 0%, #2e1748 100%);
+  box-shadow: 0 14px 28px rgba(46, 23, 72, 0.24);
 }
 
 .ghost-button {
   min-width: 150px;
-  color: #8e6208;
+  color: #5b2c83;
   background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(236, 185, 111, 0.65);
+  border: 1px solid rgba(232, 217, 193, 0.9);
 }
 
 .ghost-button:disabled {
@@ -2544,7 +2556,7 @@ h4,
 .plan-card--featured {
   position: relative;
   background:
-    linear-gradient(180deg, rgba(252, 246, 229, 0.98), rgba(255, 252, 247, 0.88)),
+    linear-gradient(180deg, rgba(248, 232, 184, 0.68), rgba(255, 252, 247, 0.94)),
     rgba(255, 255, 255, 0.9);
   transform: translateY(-6px);
   border-color: rgba(212, 160, 23, 0.5);
@@ -2577,6 +2589,12 @@ h4,
 .plan-badge--featured {
   background: linear-gradient(135deg, rgba(255, 184, 61, 0.18), rgba(212, 160, 23, 0.3));
   color: var(--gold-dark);
+}
+
+.plan-card--featured .primary-button,
+.floating-payment-card .primary-button {
+  background: linear-gradient(180deg, #c9a24a 0%, #9b7330 100%);
+  box-shadow: 0 14px 28px rgba(155, 115, 48, 0.24);
 }
 
 .plan-description {

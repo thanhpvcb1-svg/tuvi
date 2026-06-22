@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender-pages.mjs",
     "typecheck": "tsc -b",
     "build:standalone": "npm run build && node make-standalone.mjs",
     "standalone": "node make-standalone.mjs",

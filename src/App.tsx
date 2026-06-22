@@ -85,6 +85,10 @@ const pricingFaqs = [
     question: "Gói tư vấn trực tiếp phù hợp với ai?",
     answer: "Phù hợp với người cần góc nhìn chuyên sâu, cần định hướng rõ ràng hoặc muốn trao đổi trực tiếp về nhiều khía cạnh trong lá số.",
   },
+  {
+    question: "Có cần lập lá số trước khi hỏi không?",
+    answer: "Nên lập lá số trước để câu hỏi bám đúng dữ liệu cá nhân và giúp phần trả lời tập trung hơn vào trường hợp của bạn.",
+  },
 ];
 
 const blogPosts = [
@@ -112,6 +116,31 @@ const blogPosts = [
     slug: "/blog/khong-nho-gio-sinh-co-lap-la-so-duoc-khong",
     title: "Không nhớ giờ sinh có lập lá số tử vi được không?",
     description: "Xem trường hợp chưa rõ giờ sinh nên hiểu kết quả như thế nào và cách giảm sai lệch khi đọc lá số.",
+  },
+  {
+    slug: "/blog/cung-phu-the-noi-gi-ve-tinh-duyen",
+    title: "Cung Phu Thê nói gì về tình duyên?",
+    description: "Hiểu vai trò của cung Phu Thê khi xem xu hướng gắn kết, hôn nhân và cách xây dựng mối quan hệ.",
+  },
+  {
+    slug: "/blog/cach-xac-dinh-gio-sinh-trong-tu-vi",
+    title: "Cách xác định giờ sinh trong tử vi",
+    description: "Một vài gợi ý thực tế để đối chiếu thông tin và giảm sai lệch khi bạn chưa chắc giờ sinh của mình.",
+  },
+  {
+    slug: "/blog/la-so-tu-vi-gom-nhung-phan-nao",
+    title: "Lá số tử vi gồm những phần nào?",
+    description: "Tìm hiểu các phần nền tảng như Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
+  },
+  {
+    slug: "/blog/chinh-tinh-va-phu-tinh-la-gi",
+    title: "Chính tinh và phụ tinh là gì?",
+    description: "Phân biệt hai nhóm sao thường gặp khi bắt đầu đọc lá số tử vi và cách hiểu vai trò của chúng.",
+  },
+  {
+    slug: "/blog/xem-van-han-nam-2026-theo-la-so-tu-vi",
+    title: "Xem vận hạn năm 2026 theo lá số tử vi",
+    description: "Cách tiếp cận năm đang xem trong lá số để nhận diện những giai đoạn cần chủ động hơn về công việc và tài chính.",
   },
 ];
 
@@ -1104,10 +1133,33 @@ export default function App() {
         }}
       />
       <section className="content-section">
+        <div className="seo-copy-grid">
+          <article className="seo-copy-card">
+            <h3>Mệnh, Thân và Cục</h3>
+            <p>Người dùng có thể xem cách các phần nền tảng của lá số được trình bày trước, từ đó hiểu nhanh mình cần đọc gì sau khi lập lá số thật.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Đại vận và tiểu vận</h3>
+            <p>Bố cục ví dụ giúp hình dung cách theo dõi vận trình theo giai đoạn và cách năm đang xem được đặt trong toàn bộ hành trình lá số.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Ví dụ luận giải sự nghiệp và tài lộc</h3>
+            <p>LaSoTuVi ưu tiên cách diễn giải ngắn gọn, dễ hiểu và tập trung vào điều người dùng cần nhất trước khi quyết định hỏi sâu hơn.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Ví dụ luận giải tình duyên</h3>
+            <p>Trang mẫu giúp tăng niềm tin bằng cách cho người dùng thấy trước phong cách trình bày, thay vì chỉ yêu cầu nhập dữ liệu rồi mới hiển thị kết quả.</p>
+          </article>
+        </div>
+      </section>
+      <section className="content-section">
         <div className="placeholder-card">
           <h2>Bạn muốn xem lá số của chính mình?</h2>
           <p>Chỉ cần nhập ngày giờ sinh để tạo lá số miễn phí và xem nhanh các cung quan trọng.</p>
-          <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số của tôi</button>
+          <div className="home-hero-actions">
+            <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số của tôi</button>
+            <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Hỏi 1 câu về lá số của tôi</button>
+          </div>
         </div>
       </section>
     </div>
@@ -1121,11 +1173,40 @@ export default function App() {
         canonicalPath={pageSeo.canonicalPath}
         schema={[organizationSchema, faqSchema(pricingFaqs)]}
       />
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Bảng giá</p>
+          <h1>Bảng giá luận giải tử vi</h1>
+          <p>
+            Bạn có thể lập lá số miễn phí trước, sau đó chọn hỏi 1 câu theo lá số hoặc tư vấn trực tiếp khi cần phân tích sâu hơn.
+          </p>
+        </div>
+      </section>
       <PremiumPlans
         eyebrow="Luận giải & tư vấn"
         title="Bảng giá dịch vụ theo lá số"
         description="Rõ ràng, gọn và tập trung vào hành trình thực tế: xem miễn phí trước, hỏi 1 câu khi cần quyết định nhanh, hoặc tư vấn trực tiếp khi cần định hướng sâu."
       />
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Chọn đúng gói</p>
+          <h2>Mỗi mức hỗ trợ phù hợp với một nhu cầu khác nhau</h2>
+        </div>
+        <div className="seo-copy-grid">
+          <article className="seo-copy-card">
+            <h3>Miễn phí phù hợp với ai?</h3>
+            <p>Phù hợp với người mới bắt đầu, muốn xem bố cục lá số, Mệnh, Thân và 12 cung trước khi quyết định có cần đọc sâu hơn hay không.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Gói 50.000đ phù hợp với ai?</h3>
+            <p>Phù hợp khi bạn đang phân vân một quyết định rõ ràng, ví dụ đổi việc, tài chính, tình duyên hoặc vận hạn của năm đang xem.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Gói 999.000đ phù hợp với ai?</h3>
+            <p>Phù hợp với người cần một buổi trao đổi nghiêm túc, muốn nhìn toàn diện hơn về lá số và cần định hướng theo từng giai đoạn.</p>
+          </article>
+        </div>
+      </section>
       <FAQSection
         id="pricing-faq"
         eyebrow="FAQ bảng giá"
@@ -1156,6 +1237,14 @@ export default function App() {
               <h3>{post.title}</h3>
               <p>{post.description}</p>
               <span className="blog-card-slug">{post.slug}</span>
+              <div className="home-hero-actions">
+                <a href="/blog" className="ghost-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+                  Xem thêm
+                </a>
+                <a href="/lap-la-so" className="primary-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+                  Lập lá số miễn phí
+                </a>
+              </div>
             </article>
           ))}
         </div>

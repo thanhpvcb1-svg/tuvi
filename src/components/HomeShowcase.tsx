@@ -78,8 +78,8 @@ export default function HomeShowcase() {
           <p className="eyebrow">Vì sao nên dùng LaSoTuVi?</p>
           <h2>Thiết kế để dễ dùng, dễ hiểu và đủ tin cậy để quay lại</h2>
           <p>
-            LaSoTuVi hướng tới trải nghiệm gọn gàng, dễ đọc và tập trung vào điều người dùng thật sự cần: hiểu lá số của
-            mình và biết khi nào nên hỏi sâu hơn.
+            LaSoTuVi hướng tới trải nghiệm gọn gàng, dễ đọc và tập trung vào điều người dùng thật sự cần: hiểu lá số của mình
+            và biết khi nào nên hỏi sâu hơn.
           </p>
         </div>
 

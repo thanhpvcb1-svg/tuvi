@@ -152,7 +152,7 @@ export default function SolarNoonCalculator() {
 
   const helperText = useMemo(() => {
     const messages = [
-      "Kết quả được tính theo tọa độ geocoding trả về. Nếu nhập tên tỉnh/thành, đây là tọa độ đại diện; muốn chính xác hơn hãy chọn địa điểm cụ thể.",
+      "Kết quả được tính theo tọa độ geocoding trả về. Nếu nhập tên tỉnh hoặc thành, đây là tọa độ đại diện; muốn chính xác hơn hãy chọn địa điểm cụ thể.",
       "Tên hành chính có thể thay đổi theo dữ liệu geocoding hiện tại. Với khu vực Vĩnh Phúc cũ, kết quả có thể hiển thị thuộc tỉnh Phú Thọ sau sắp xếp đơn vị hành chính.",
     ];
 
