@@ -14,6 +14,7 @@ import PrivacyNotice from "./components/PrivacyNotice";
 import PremiumPlans, { primaryPlans, type PricingPlan } from "./components/PremiumPlans";
 import SampleChartsSection, { type SampleChartPreset } from "./components/SampleChartsSection";
 import SEOHead from "./components/SEOHead";
+import SocialProofPopup from "./components/SocialProofPopup";
 import SiteFooter from "./components/SiteFooter";
 import SolarNoonCalculator from "./components/SolarNoonCalculator";
 import TrustBadges from "./components/TrustBadges";
@@ -2002,6 +2003,7 @@ export default function App() {
       </main>
 
       <FloatingContactLinks />
+      <SocialProofPopup />
       <SiteFooter />
     </div>
   );

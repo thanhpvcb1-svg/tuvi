@@ -12,7 +12,7 @@ const POPUPS = [
 const SESSION_KEY = "sp_dismissed";
 const INITIAL_DELAY = 2_000;
 const DISPLAY_DURATION = 2_000;
-const CYCLE_INTERVAL = 45_000;
+const CYCLE_INTERVAL = 30_000;
 const MIN_WIDTH = 1024;
 
 const isDesktopWidth = () => window.innerWidth >= MIN_WIDTH;
