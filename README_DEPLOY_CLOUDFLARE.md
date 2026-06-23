@@ -48,7 +48,48 @@ Khi co domain that, hay doi tat ca URL `https://tuvi-demo.pages.dev` thanh domai
 
 - Frontend chi nen dung bien moi truong bat dau bang `VITE_`
 - Khong dua API key bi mat vao frontend
-- Hien tai project co Netlify Function dung `GEMINI_API_KEY`; phan nay khong hoat dong tren Cloudflare Pages static neu chua chuyen sang backend hoac Cloudflare Functions
+- Cloudflare Pages Function `functions/api/ai/luan-giai.ts` doc secret server-side tu `GEMINI_API_KEY`
+- Khong commit `.dev.vars`, `.env` hoac bat ky secret nao vao repository
+
+## AI Pages Function
+
+- Endpoint noi bo: `/api/ai/luan-giai`
+- Method: `POST`
+- Secret can cau hinh tren Cloudflare Pages Production/Preview:
+
+```txt
+GEMINI_API_KEY=your_real_key
+```
+
+- Frontend khong duoc dung `VITE_GEMINI_API_KEY`
+
+## Chay local voi Pages Function
+
+1. Tao file `.dev.vars` o root project:
+
+```txt
+GEMINI_API_KEY=your_local_key_here
+```
+
+2. Build frontend:
+
+```bash
+npm run build
+```
+
+3. Chay local bang Cloudflare Pages:
+
+```bash
+npx wrangler pages dev dist
+```
+
+4. Test endpoint local:
+
+```bash
+curl -X POST http://127.0.0.1:8788/api/ai/luan-giai \
+  -H "content-type: application/json" \
+  -d "{\"gender\":\"Nam\",\"birthDate\":\"1995-08-12\",\"birthTime\":\"23:30\",\"yearToView\":2026,\"menh\":\"Kim\",\"than\":\"Thân cư Mệnh\"}"
+```
 
 ## Kiem tra local
 

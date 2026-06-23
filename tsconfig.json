@@ -16,6 +16,6 @@
     "baseUrl": "./",
     "paths": {}
   },
-  "include": ["src", "vite.config.ts", "index.html"],
+  "include": ["src", "functions", "vite.config.ts", "index.html"],
   "references": []
 }

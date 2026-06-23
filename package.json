@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prerender-pages.mjs",
-    "typecheck": "tsc -b",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
     "build:standalone": "npm run build && node make-standalone.mjs",
     "standalone": "node make-standalone.mjs",
     "preview": "vite preview",

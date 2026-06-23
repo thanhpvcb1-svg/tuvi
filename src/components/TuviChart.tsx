@@ -54,6 +54,7 @@ type Props = {
   hasRequestedChart: boolean;
   activePalaceIndexes?: { daiVan?: number; tieuVan?: number };
   showLocKyNhap?: boolean;
+  showPhiHoaCanCung?: boolean;
   showTieuVanHighlight?: boolean;
 };
 
@@ -153,6 +154,7 @@ export default function TuviChart({
   hasRequestedChart,
   activePalaceIndexes,
   showLocKyNhap = false,
+  showPhiHoaCanCung = true,
   showTieuVanHighlight = true,
 }: Props) {
   if (!hasRequestedChart) {
@@ -268,6 +270,7 @@ export default function TuviChart({
                     palace={palace ?? fallbackPalace(index)}
                     index={palace?.index ?? index}
                     showLocKyNhap={showLocKyNhap}
+                    showPhiHoaCanCung={showPhiHoaCanCung}
                   />
                 </div>
               );

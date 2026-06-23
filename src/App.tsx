@@ -1,8 +1,8 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { toBlob, toJpeg } from "html-to-image";
 import { useLocation, useNavigate } from "react-router-dom";
+import AIAnalysisPanel from "./components/AIAnalysisPanel";
 import BirthForm from "./components/BirthForm";
-import ChartReading from "./components/ChartReading";
 import ExportActions from "./components/ExportActions";
 import FAQSection from "./components/FAQSection";
 import FloatingContactLinks from "./components/FloatingContactLinks";
@@ -11,7 +11,7 @@ import InterpretationCards from "./components/InterpretationCards";
 import { LuuStarOptions } from "./components/LuuStarOptions";
 import PalaceAccordion from "./components/PalaceAccordion";
 import PrivacyNotice from "./components/PrivacyNotice";
-import PremiumPlans, { type PricingPlan } from "./components/PremiumPlans";
+import PremiumPlans, { primaryPlans, type PricingPlan } from "./components/PremiumPlans";
 import SampleChartsSection, { type SampleChartPreset } from "./components/SampleChartsSection";
 import SEOHead from "./components/SEOHead";
 import SiteFooter from "./components/SiteFooter";
@@ -19,6 +19,18 @@ import SolarNoonCalculator from "./components/SolarNoonCalculator";
 import TrustBadges from "./components/TrustBadges";
 import TuviChart from "./components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "./components/VanHanhSelector";
+import {
+  buildAIAnalysisCacheKey,
+  buildAIAnalysisPayload,
+  canGenerateNewAIAnalysisToday,
+  consumeAIAnalysisQuota,
+  generateLuanGiai,
+  getCachedAIAnalysis,
+  getRemainingAIAnalysisQuota,
+  hasLimitedBacPhaiData,
+  setCachedAIAnalysis,
+  type AIAnalysisResult,
+} from "./lib/aiLuanGiai";
 import type { BirthInput, ChartView, LuuDisplayOptions, NormalizedBirthInput, PalaceView, StarView } from "./lib/types";
 import type { QuickReadingCard } from "./lib/chartUi";
 
@@ -38,6 +50,19 @@ const homeSectionRoutes: Record<HomeSectionId, string> = {
 };
 
 const siteUrl = "https://tuvi.pages.dev";
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
+const contactSmsNumber = import.meta.env.VITE_CONTACT_SMS_NUMBER?.trim() || "";
+const contactZaloUrl = import.meta.env.VITE_CONTACT_ZALO_URL?.trim() || "https://zalo.me/";
+const contactFacebookUrl = import.meta.env.VITE_CONTACT_FACEBOOK_URL?.trim() || "https://www.facebook.com/";
+const defaultLuuOptions: LuuDisplayOptions = {
+  showLuuTuHoa: false,
+  showPhiHoaCanCung: true,
+  showLuuTuDuc: false,
+  showLuuDaiVan: false,
+  showLuuOtherStars: false,
+  showLocKyNhap: false,
+  showLuuTuanTriet: false,
+};
 
 let chartModulesPromise: Promise<{
   createChart: typeof import("./lib/iztroEngine").createChart;
@@ -105,6 +130,36 @@ const pricingFaqs = [
   {
     question: "Có cần lập lá số trước khi hỏi không?",
     answer: "Nên lập lá số trước để câu hỏi bám đúng dữ liệu cá nhân và giúp phần trả lời tập trung hơn vào trường hợp của bạn.",
+  },
+];
+
+const compatFaqs = [
+  {
+    question: "Xem hợp tuổi có cần lập lá số trước không?",
+    answer: "Nên có lá số trước để việc đối chiếu đi theo đúng dữ liệu cá nhân thay vì chỉ dừng ở mức xem tuổi cơ bản.",
+  },
+  {
+    question: "Hợp tuổi trên trang này đã mở chính thức chưa?",
+    answer: "Phần engine so khớp đầy đủ vẫn đang được hoàn thiện. Hiện tại trang tập trung vào hướng dẫn, nội dung nền và luồng chuẩn bị dữ liệu.",
+  },
+  {
+    question: "Nếu cần xem sớm thì nên làm gì?",
+    answer: "Bạn nên lập lá số cá nhân trước, ghi rõ câu hỏi và gửi brief liên hệ để được hướng dẫn chọn hướng xem phù hợp.",
+  },
+];
+
+const contactFaqs = [
+  {
+    question: "Tôi nên gửi gì khi muốn hỏi theo lá số?",
+    answer: "Bạn nên gửi ngày giờ sinh, năm muốn xem, câu hỏi chính và bối cảnh ngắn gọn để phần phản hồi đi đúng trọng tâm hơn.",
+  },
+  {
+    question: "Có thể liên hệ khi chưa có lá số không?",
+    answer: "Có, nhưng hiệu quả nhất vẫn là lập lá số miễn phí trước để hai bên nhìn cùng một dữ liệu nền.",
+  },
+  {
+    question: "Nên chọn hỏi 1 câu hay tư vấn trực tiếp?",
+    answer: "Nếu bạn đang cần giải một vấn đề rõ ràng, gói hỏi 1 câu thường phù hợp hơn. Nếu cần góc nhìn toàn diện theo giai đoạn, tư vấn trực tiếp sẽ hợp hơn.",
   },
 ];
 
@@ -445,6 +500,25 @@ const simplifyPalace = (palace: PalaceView) => ({
   specialMarkers: palace.specialMarkers,
 });
 
+type RuntimeChartProfile = {
+  fullName?: string;
+  gender?: string;
+  yinyangGender?: string;
+  solarDate?: string;
+  lunarDate?: string;
+  birthHour?: string;
+  ageSymbol?: string;
+  ageCycle?: string;
+  menhElement?: string;
+  cucElement?: string;
+  fiveElementsClass?: string;
+  menhChu?: string;
+  thanChu?: string;
+  bodyPalace?: string;
+};
+
+const getRuntimeProfile = (chart: ChartView) => chart.profile as unknown as RuntimeChartProfile;
+
 const buildLuanGiaiPayload = (chart: ChartView, input: BirthInput, luuOptions: LuuDisplayOptions) => ({
   profile: chart.profile,
   input,
@@ -458,23 +532,24 @@ const buildLuanGiaiPayload = (chart: ChartView, input: BirthInput, luuOptions: L
 
 const buildCopyableChartJson = (chart: ChartView, input: BirthInput, luuOptions: LuuDisplayOptions) => {
   const payload = buildLuanGiaiPayload(chart, input, luuOptions);
+  const profile = payload.profile as unknown as RuntimeChartProfile;
 
   return {
     profile: {
-      fullName: payload.profile.fullName,
-      gender: payload.profile.gender,
-      yinyangGender: payload.profile.yinyangGender,
-      solarDate: payload.profile.solarDate,
-      lunarDate: payload.profile.lunarDate,
-      birthHour: payload.profile.birthHour,
-      ageSymbol: payload.profile.ageSymbol,
-      ageCycle: payload.profile.ageCycle,
-      menhElement: payload.profile.menhElement,
-      cucElement: payload.profile.cucElement,
-      fiveElementsClass: payload.profile.fiveElementsClass,
-      menhChu: payload.profile.menhChu,
-      thanChu: payload.profile.thanChu,
-      bodyPalace: payload.profile.bodyPalace,
+      fullName: profile.fullName,
+      gender: profile.gender,
+      yinyangGender: profile.yinyangGender,
+      solarDate: profile.solarDate,
+      lunarDate: profile.lunarDate,
+      birthHour: profile.birthHour,
+      ageSymbol: profile.ageSymbol,
+      ageCycle: profile.ageCycle,
+      menhElement: profile.menhElement,
+      cucElement: profile.cucElement,
+      fiveElementsClass: profile.fiveElementsClass,
+      menhChu: profile.menhChu,
+      thanChu: profile.thanChu,
+      bodyPalace: profile.bodyPalace,
     },
     input: payload.input,
     luuOptions: payload.luuOptions,
@@ -509,41 +584,50 @@ const buildCopyableChartJson = (chart: ChartView, input: BirthInput, luuOptions:
   };
 };
 
-const readLuanGiaiResponse = async (response: Response) => {
-  const text = await response.text();
+const getPalaceHeadline = (chart: ChartView, palaceName: string) => {
+  const palace = chart.palaces.find((item) => item.name === palaceName);
 
-  if (!text) {
-    return {};
+  if (!palace) {
+    return "";
   }
 
-  try {
-    return JSON.parse(text);
-  } catch {
-    return {
-      error: text,
-      isNonJsonResponse: true,
-    };
-  }
+  const stars = palace.majorStars.length > 0 ? palace.majorStars : palace.visibleStars.slice(0, 2);
+  const starNames = stars
+    .slice(0, 2)
+    .map((star) => star.display || star.name)
+    .filter(Boolean);
+
+  return starNames.length > 0 ? `${palace.name}: ${starNames.join(", ")}` : palace.name;
 };
 
-const getLuanGiaiErrorMessage = (response: Response, data: any) => {
-  if (typeof data?.error === "string" && data.error.trim()) {
-    return data.error;
-  }
+const buildConsultationBrief = (chart: ChartView, input: BirthInput, horoscopeYear: number) => {
+  const profile = getRuntimeProfile(chart);
+  const highlights = ["Mệnh", "Quan Lộc", "Tài Bạch", "Phu Thê", "Thiên Di"]
+    .map((palaceName) => getPalaceHeadline(chart, palaceName))
+    .filter(Boolean);
 
-  if (response.status === 404) {
-    return "Không tìm thấy Netlify Function luận giải.";
-  }
-
-  if (response.status === 500) {
-    return "Server luận giải chưa sẵn sàng.";
-  }
-
-  if (response.status === 502) {
-    return "Dịch vụ AI đang tạm thời lỗi. Hãy thử lại sau ít phút.";
-  }
-
-  return `Không thể luận giải lá số lúc này. Mã lỗi HTTP ${response.status}.`;
+  return [
+    "BRIEF LIÊN HỆ LUẬN GIẢI LÁ SỐ",
+    `Họ tên: ${profile.fullName || input.fullName || "Chưa cung cấp"}`,
+    `Giới tính: ${profile.gender || (input.gender === "male" ? "Nam" : "Nữ")}`,
+    `Ngày dương lịch: ${profile.solarDate || `${input.day}/${input.month}/${input.year}`}`,
+    `Ngày âm lịch: ${profile.lunarDate || "Đang cập nhật từ lá số"}`,
+    `Giờ sinh: ${profile.birthHour || (input.unknownBirthTime ? "Không rõ giờ sinh" : `${input.birthHour}:${input.birthMinute || "00"}`)}`,
+    `Năm đang xem: ${horoscopeYear}`,
+    `Mệnh chủ: ${profile.menhChu || "Chưa có"}`,
+    `Thân chủ: ${profile.thanChu || "Chưa có"}`,
+    `Thân cư: ${profile.bodyPalace || "Chưa có"}`,
+    `Lai Nhân Cung: ${String(chart.laiNhanCung || "Chưa có")}`,
+    "",
+    "Các điểm nổi bật để bắt đầu trao đổi:",
+    ...highlights.map((item) => `- ${item}`),
+    "",
+    "Câu hỏi tôi muốn được hỗ trợ:",
+    "- Công việc / sự nghiệp:",
+    "- Tài chính / dòng tiền:",
+    "- Tình cảm / quan hệ:",
+    "- Vận hạn năm hiện tại:",
+  ].join("\n");
 };
 
 const serializeInputToSearch = (input: BirthInput) => {
@@ -572,21 +656,15 @@ export default function App() {
   const [shareMessage, setShareMessage] = useState("");
   const [toastMessage, setToastMessage] = useState("");
   const [showReading, setShowReading] = useState(false);
-  const [readingResult, setReadingResult] = useState("");
+  const [readingResult, setReadingResult] = useState<AIAnalysisResult | null>(null);
   const [readingError, setReadingError] = useState("");
   const [isReadingLoading, setIsReadingLoading] = useState(false);
+  const [remainingAiQuota, setRemainingAiQuota] = useState(() => getRemainingAIAnalysisQuota());
   const [isCopyingJson, setIsCopyingJson] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isDownloadingImage, setIsDownloadingImage] = useState(false);
   const [quickReadings, setQuickReadings] = useState<QuickReadingCard[]>([]);
-  const [luuOptions, setLuuOptions] = useState<LuuDisplayOptions>({
-    showLuuTuHoa: false,
-    showLuuTuDuc: false,
-    showLuuDaiVan: false,
-    showLuuOtherStars: false,
-    showLocKyNhap: false,
-    showLuuTuanTriet: false,
-  });
+  const [luuOptions, setLuuOptions] = useState<LuuDisplayOptions>(defaultLuuOptions);
   const [horoscopeYear, setHoroscopeYear] = useState(currentYear);
   const [lastSubmittedSignature, setLastSubmittedSignature] = useState<string | null>(null);
   const chartCaptureRef = useRef<HTMLDivElement | null>(null);
@@ -650,7 +728,7 @@ export default function App() {
 
       setChart(nextChart);
       setQuickReadings(buildQuickReadings(nextChart));
-      setReadingResult("");
+      setReadingResult(null);
       setReadingError("");
       setShowReading(false);
     };
@@ -708,8 +786,10 @@ export default function App() {
     setToastMessage("");
     setShowReading(false);
     setQuickReadings([]);
-    setReadingResult("");
+    setReadingResult(null);
     setReadingError("");
+    setLuuOptions(defaultLuuOptions);
+    setRemainingAiQuota(getRemainingAIAnalysisQuota());
     setHoroscopeYear(currentYear);
     setLastSubmittedSignature(null);
     navigate(targetPath, { replace: true });
@@ -743,6 +823,10 @@ export default function App() {
 
     setFieldErrors({});
     setShareMessage("");
+    setLuuOptions((current) => ({
+      ...current,
+      showPhiHoaCanCung: true,
+    }));
     setIsGenerating(true);
     navigate("/lap-la-so");
 
@@ -764,7 +848,7 @@ export default function App() {
       setQuickReadings(buildQuickReadings(nextChart));
       setHasRequestedChart(true);
       setShowReading(false);
-      setReadingResult("");
+      setReadingResult(null);
       setReadingError("");
       setLastSubmittedSignature(buildInputSignature(nextInput));
       navigate("/lap-la-so", { replace: true });
@@ -800,6 +884,20 @@ export default function App() {
     }
   };
 
+  const handleCopyConsultationBrief = async () => {
+    if (!chart || !submittedInput) {
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(buildConsultationBrief(chart, submittedInput, horoscopeYear));
+      showToast("Đã copy brief liên hệ");
+    } catch (error) {
+      console.error(error);
+      setShareMessage("Không thể sao chép brief liên hệ trên trình duyệt hiện tại.");
+    }
+  };
+
   const handleLuanGiai = async () => {
     if (!chart || !submittedInput || isReadingLoading) {
       return;
@@ -811,42 +909,67 @@ export default function App() {
     }
 
     setShowReading(true);
-    if (readingResult || readingError) {
+    const payload = buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai");
+    const cacheKey = buildAIAnalysisCacheKey(payload);
+    const cachedResult = getCachedAIAnalysis(cacheKey);
+
+    if (cachedResult) {
+      setReadingError("");
+      setReadingResult(cachedResult);
+      return;
+    }
+
+    if (!canGenerateNewAIAnalysisToday()) {
+      setReadingError("Bạn đã dùng hết 3 lượt tạo luận giải mới hôm nay trên trình duyệt này. Bạn vẫn có thể xem lại kết quả đã cache hoặc thử lại vào ngày mai.");
+      setReadingResult(null);
       return;
     }
 
     setReadingError("");
-    setReadingResult("");
+    setReadingResult(null);
     setIsReadingLoading(true);
 
     try {
-      const response = await fetch("/.netlify/functions/luan-giai", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chart: buildLuanGiaiPayload(chart, submittedInput, luuOptions),
-        }),
-      });
-      const data = await readLuanGiaiResponse(response);
-
-      if (!response.ok) {
-        throw new Error(getLuanGiaiErrorMessage(response, data));
-      }
-
-      if (!data?.result) {
-        if (data?.isNonJsonResponse) {
-          throw new Error("Chưa kết nối được Netlify Function luận giải. Nếu đang chạy local, hãy dùng netlify dev thay vì npm run dev.");
-        }
-
-        throw new Error("AI chưa trả về nội dung luận giải. Vui lòng thử lại.");
-      }
-
-      setReadingResult(data.result);
+      const data = await generateLuanGiai(payload);
+      setReadingResult(data);
+      setCachedAIAnalysis(cacheKey, data);
+      consumeAIAnalysisQuota();
+      setRemainingAiQuota(getRemainingAIAnalysisQuota());
     } catch (error) {
       console.error(error);
       setReadingError(error instanceof Error ? error.message : "Không thể luận giải lá số lúc này. Vui lòng thử lại sau.");
+    } finally {
+      setIsReadingLoading(false);
+    }
+  };
+
+  const handleRegenerateLuanGiai = async () => {
+    if (!chart || !submittedInput || isReadingLoading) {
+      return;
+    }
+
+    if (!canGenerateNewAIAnalysisToday()) {
+      setReadingError("Bạn đã dùng hết 3 lượt tạo luận giải mới hôm nay trên trình duyệt này. Vui lòng thử lại vào ngày mai.");
+      setShowReading(true);
+      return;
+    }
+
+    setShowReading(true);
+    setReadingError("");
+    setReadingResult(null);
+    setIsReadingLoading(true);
+
+    try {
+      const payload = buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai");
+      const cacheKey = buildAIAnalysisCacheKey(payload);
+      const data = await generateLuanGiai(payload);
+      setReadingResult(data);
+      setCachedAIAnalysis(cacheKey, data);
+      consumeAIAnalysisQuota();
+      setRemainingAiQuota(getRemainingAIAnalysisQuota());
+    } catch (error) {
+      console.error(error);
+      setReadingError(error instanceof Error ? error.message : "Không thể tạo lại luận giải lúc này. Vui lòng thử lại sau.");
     } finally {
       setIsReadingLoading(false);
     }
@@ -959,8 +1082,11 @@ export default function App() {
   };
 
   const readingDataJson = chart && submittedInput
-    ? JSON.stringify(buildCopyableChartJson(chart, submittedInput, luuOptions), null, 2)
+    ? JSON.stringify(buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai"), null, 2)
     : "";
+  const isReadingDataLimited = chart && submittedInput
+    ? hasLimitedBacPhaiData(buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai"))
+    : false;
 
   const faqSchema = (items: typeof homeFaqs) => ({
     "@context": "https://schema.org",
@@ -980,6 +1106,7 @@ export default function App() {
     "@type": "WebSite",
     name: "LaSoTuVi",
     url: siteUrl,
+    inLanguage: "vi-VN",
   };
 
   const organizationSchema = {
@@ -987,6 +1114,52 @@ export default function App() {
     "@type": "Organization",
     name: "LaSoTuVi",
     url: siteUrl,
+    description: "Nền tảng lập lá số tử vi online và hỗ trợ luận giải theo câu hỏi cụ thể.",
+    ...(contactEmail ? { email: contactEmail } : {}),
+  };
+
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Liên hệ luận giải lá số",
+    url: `${siteUrl}/lien-he`,
+    about: {
+      "@type": "Service",
+      name: "Hỗ trợ luận giải lá số tử vi",
+    },
+  };
+
+  const pricingServiceSchemas = primaryPlans
+    .filter((plan) => plan.price !== "0đ")
+    .map((plan) => ({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: plan.name,
+      description: plan.description,
+      provider: {
+        "@type": "Organization",
+        name: "LaSoTuVi",
+        url: siteUrl,
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "VND",
+        price: plan.price.replace(/[^\d]/g, ""),
+        availability: "https://schema.org/InStock",
+        url: `${siteUrl}/bang-gia`,
+      },
+    }));
+
+  const compatibilityGuideSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Hướng dẫn xem hợp tuổi theo lá số",
+    description: "Trang hướng dẫn chuẩn bị dữ liệu và câu hỏi trước khi dùng công cụ hợp tuổi theo lá số.",
+    provider: {
+      "@type": "Organization",
+      name: "LaSoTuVi",
+      url: siteUrl,
+    },
   };
 
   const pageSeo = (() => {
@@ -1169,6 +1342,9 @@ export default function App() {
           <div className="chart-tools">
             <LuuStarOptions value={luuOptions} onChange={setLuuOptions} />
             <div className="chart-tools-actions">
+              <button type="button" className="debug-button" onClick={handleCopyConsultationBrief} disabled={!chart || !submittedInput}>
+                Copy brief
+              </button>
               <button type="button" className="debug-button" onClick={handleCopyChartJson} disabled={!chart || !submittedInput || isCopyingJson}>
                 {isCopyingJson ? "Đang copy JSON..." : "Copy JSON"}
               </button>
@@ -1195,6 +1371,7 @@ export default function App() {
                   hasRequestedChart={hasRequestedChart}
                   showTieuVanHighlight={!isDownloadingImage}
                   showLocKyNhap={luuOptions.showLocKyNhap}
+                  showPhiHoaCanCung={luuOptions.showPhiHoaCanCung}
                   activePalaceIndexes={(() => {
                     const age = horoscopeYear - (parseInt(submittedInput.year, 10) || horoscopeYear);
                     const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
@@ -1222,7 +1399,15 @@ export default function App() {
 
             {showReading ? (
               <div ref={readingRef}>
-                <ChartReading result={readingResult} isLoading={isReadingLoading} error={readingError} analysisData={readingDataJson} />
+                <AIAnalysisPanel
+                  result={readingResult}
+                  isLoading={isReadingLoading}
+                  error={readingError}
+                  analysisData={readingDataJson}
+                  onRegenerate={handleRegenerateLuanGiai}
+                  remainingQuota={remainingAiQuota}
+                  hasLimitedBacPhaiData={isReadingDataLimited}
+                />
               </div>
             ) : null}
 
@@ -1258,7 +1443,8 @@ export default function App() {
                 </div>
                 <div className="premium-upsell-actions">
                   <button type="button" className="primary-button" onClick={() => navigate("/bang-gia")}>Hỏi 1 câu về lá số này — 50.000đ</button>
-                  <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Đặt lịch tư vấn trực tiếp với thầy</button>
+                  <button type="button" className="ghost-button" onClick={handleCopyConsultationBrief}>Copy brief lá số</button>
+                  <button type="button" className="ghost-button" onClick={() => navigate("/lien-he")}>Đi tới trang liên hệ</button>
                 </div>
               </div>
             </section>
@@ -1401,7 +1587,12 @@ export default function App() {
         title={pageSeo.title}
         description={pageSeo.description}
         canonicalPath={pageSeo.canonicalPath}
-        schema={[organizationSchema, faqSchema(pricingFaqs)]}
+        schema={[
+          organizationSchema,
+          faqSchema(pricingFaqs),
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bảng giá", path: "/bang-gia" }]),
+          ...pricingServiceSchemas,
+        ]}
       />
       <section className="content-section">
         <div className="section-heading">
@@ -1590,32 +1781,47 @@ export default function App() {
         title={pageSeo.title}
         description={pageSeo.description}
         canonicalPath="/hop-tuoi"
-        schema={[organizationSchema, breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Hợp tuổi", path: "/hop-tuoi" }])]}
-        noindex
+        schema={[
+          organizationSchema,
+          compatibilityGuideSchema,
+          faqSchema(compatFaqs),
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Hợp tuổi", path: "/hop-tuoi" }]),
+        ]}
       />
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Hợp tuổi</p>
-          <h1>Nội dung hợp tuổi đang được hoàn thiện</h1>
-          <p>Trang này sẽ được mở khi trải nghiệm hợp tuổi có đủ dữ liệu, luồng so khớp và phần giải thích rõ ràng để dùng ổn định.</p>
+          <h1>Hợp tuổi theo lá số: đang mở dần theo hướng đúng dữ liệu</h1>
+          <p>Trang này hiện đóng vai trò hướng dẫn chuẩn bị dữ liệu, câu hỏi và bối cảnh để khi mở engine hợp tuổi, trải nghiệm sẽ rõ ràng và dùng được ngay cho tình huống thực tế.</p>
         </div>
         <div className="seo-copy-grid">
           <article className="seo-copy-card">
-            <h3>Hiện tại bạn có thể làm gì?</h3>
-            <p>Bạn vẫn có thể lập lá số miễn phí để xem Mệnh, Thân, 12 cung và các lớp thông tin nền trước khi dùng thêm các công cụ chuyên biệt.</p>
+            <h3>Dữ liệu nên có trước</h3>
+            <p>Nên có ngày sinh, giờ sinh và năm muốn xem của từng người. Nếu thiếu giờ sinh, bạn vẫn có thể bắt đầu ở mức tổng quan nhưng phần đối chiếu chi tiết sẽ bị giới hạn.</p>
           </article>
           <article className="seo-copy-card">
-            <h3>Vì sao chưa mở sớm?</h3>
-            <p>Nhóm đang ưu tiên giữ trải nghiệm đúng và dễ hiểu trước khi công bố rộng, thay vì đưa lên một tính năng còn thiếu logic hoặc nội dung giải thích.</p>
+            <h3>Nên dùng cho câu hỏi nào?</h3>
+            <p>Phù hợp khi bạn muốn xem mức độ hòa hợp trong giao tiếp, nhịp sống, công việc, tài chính hoặc định hướng mối quan hệ dựa trên dữ liệu lá số thay vì chỉ xem tuổi nhanh.</p>
+          </article>
+          <article className="seo-copy-card">
+            <h3>Vì sao mở chậm hơn?</h3>
+            <p>Phần hợp tuổi cần logic so khớp nhiều lớp hơn một công cụ xem nhanh. Ưu tiên hiện tại là bảo đảm phần giải thích dễ hiểu và không đẩy người dùng vào kết luận quá cứng.</p>
           </article>
         </div>
         <div className="placeholder-card">
-          <h2>Bạn muốn bắt đầu từ lá số cá nhân?</h2>
-          <p>Hãy lập lá số trước để có nền dữ liệu rõ ràng, sau đó quay lại khi công cụ hợp tuổi hoàn thiện.</p>
+          <h2>Bạn có thể chuẩn bị trước ngay từ bây giờ</h2>
+          <p>Lập lá số của mình trước, sau đó copy brief hoặc liên hệ để mô tả rõ trường hợp bạn muốn xem. Đây là cách tốt nhất để sẵn sàng khi công cụ hợp tuổi được mở đầy đủ.</p>
           <div className="home-hero-actions">
             <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
+            <button type="button" className="ghost-button" onClick={() => navigate("/lien-he")}>Chuẩn bị brief liên hệ</button>
           </div>
         </div>
+        <FAQSection
+          faqs={compatFaqs}
+          eyebrow="FAQ hợp tuổi"
+          title="Câu hỏi thường gặp về hợp tuổi theo lá số"
+          description="Những điều nên biết trước khi dùng công cụ so khớp khi tính năng được mở đầy đủ."
+        />
       </section>
     </div>
   );
@@ -1626,7 +1832,13 @@ export default function App() {
         title={pageSeo.title}
         description={pageSeo.description}
         canonicalPath="/lien-he"
-        schema={[organizationSchema, breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Liên hệ", path: "/lien-he" }])]}
+        schema={[
+          organizationSchema,
+          contactPageSchema,
+          faqSchema(contactFaqs),
+          ...pricingServiceSchemas,
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Liên hệ", path: "/lien-he" }]),
+        ]}
       />
       <section className="content-section">
         <div className="section-heading">
@@ -1648,6 +1860,67 @@ export default function App() {
             <p>Nếu chưa có lá số, hãy lập lá số miễn phí trước. Nếu đã có lá số, bạn có thể đi thẳng sang bảng giá để chọn mức hỗ trợ phù hợp.</p>
           </article>
         </div>
+        {chart && submittedInput ? (
+          <div className="contact-brief-card">
+            <div className="contact-brief-head">
+              <div>
+                <p className="eyebrow">Đã có lá số</p>
+                <h2>Brief liên hệ của bạn đã sẵn sàng</h2>
+                <p className="result-note">Hệ thống có thể gom các thông tin nền quan trọng của lá số hiện tại để bạn gửi nhanh qua Zalo, Facebook hoặc email.</p>
+              </div>
+              <div className="premium-upsell-actions">
+                <button type="button" className="primary-button" onClick={handleCopyConsultationBrief}>Copy brief liên hệ</button>
+                <button type="button" className="ghost-button" onClick={handleCopyChartJson}>Copy JSON lá số</button>
+              </div>
+            </div>
+            <div className="contact-brief-grid">
+              <div className="seo-copy-card">
+                <h3>Thông tin hiện tại</h3>
+                <div className="inline-pills">
+                  <span className="inline-pill">{getRuntimeProfile(chart).fullName || submittedInput.fullName}</span>
+                  <span className="inline-pill">{getRuntimeProfile(chart).gender || (submittedInput.gender === "male" ? "Nam" : "Nữ")}</span>
+                  <span className="inline-pill">Năm xem {horoscopeYear}</span>
+                  <span className="inline-pill">Thân cư {getRuntimeProfile(chart).bodyPalace || "đang cập nhật"}</span>
+                </div>
+              </div>
+              <div className="seo-copy-card">
+                <h3>Gợi ý nội dung nên gửi</h3>
+                <p>Nêu rõ một vấn đề chính, ví dụ đổi việc, mở rộng kinh doanh, quản lý tài chính, mối quan hệ hoặc vận hạn năm đang xem. Một câu hỏi rõ thường cho phản hồi tốt hơn một yêu cầu quá rộng.</p>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        <div className="seo-copy-grid contact-channel-grid">
+          <article className="seo-copy-card contact-channel-card">
+            <h3>Xem bảng giá trước</h3>
+            <p>Phù hợp nếu bạn muốn so sánh nhanh các mức hỗ trợ trước khi gửi câu hỏi.</p>
+            <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Mở bảng giá</button>
+          </article>
+          <article className="seo-copy-card contact-channel-card">
+            <h3>Nhắn Zalo</h3>
+            <p>Kênh nhanh để gửi brief đã copy và nhận hướng dẫn bước tiếp theo.</p>
+            <a className="ghost-button contact-channel-link" href={contactZaloUrl} target="_blank" rel="noreferrer">Mở Zalo</a>
+          </article>
+          <article className="seo-copy-card contact-channel-card">
+            <h3>Nhắn Facebook</h3>
+            <p>Phù hợp nếu bạn đã quen trao đổi qua fanpage hoặc Messenger.</p>
+            <a className="ghost-button contact-channel-link" href={contactFacebookUrl} target="_blank" rel="noreferrer">Mở Facebook</a>
+          </article>
+          {contactEmail ? (
+            <article className="seo-copy-card contact-channel-card">
+              <h3>Gửi email</h3>
+              <p>Dùng khi bạn muốn mô tả kỹ bối cảnh và lưu lại toàn bộ trao đổi bằng văn bản.</p>
+              <a className="ghost-button contact-channel-link" href={`mailto:${contactEmail}`}>Gửi email</a>
+            </article>
+          ) : null}
+          {contactSmsNumber ? (
+            <article className="seo-copy-card contact-channel-card">
+              <h3>Nhắn SMS</h3>
+              <p>Tuỳ chọn tối giản để gửi lời nhắn ngắn hoặc xin hướng dẫn kênh trao đổi phù hợp hơn.</p>
+              <a className="ghost-button contact-channel-link" href={`sms:${contactSmsNumber}`}>Mở SMS</a>
+            </article>
+          ) : null}
+        </div>
         <div className="placeholder-card">
           <h2>Bạn muốn đi theo hướng nào?</h2>
           <p>Chọn bước phù hợp với tình huống hiện tại để tiếp tục hành trình một cách rõ ràng hơn.</p>
@@ -1656,6 +1929,12 @@ export default function App() {
             <button type="button" className="ghost-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
           </div>
         </div>
+        <FAQSection
+          faqs={contactFaqs}
+          eyebrow="FAQ liên hệ"
+          title="Cách liên hệ để nhận hỗ trợ nhanh hơn"
+          description="Các câu hỏi phổ biến khi gửi lá số và chọn hình thức tư vấn."
+        />
       </section>
     </div>
   );

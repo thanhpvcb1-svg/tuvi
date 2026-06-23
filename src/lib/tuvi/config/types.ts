@@ -4,6 +4,7 @@ export type Gender = "male" | "female";
 
 export type LuuDisplayOptions = {
   showLuuTuHoa: boolean;
+  showPhiHoaCanCung: boolean;
   showLuuTuDuc: boolean;
   showLuuDaiVan: boolean;
   showLuuOtherStars: boolean;

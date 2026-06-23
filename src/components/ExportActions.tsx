@@ -28,7 +28,7 @@ export default function ExportActions({
 
       <div className="export-actions">
         <button type="button" className="ghost-button" onClick={onInterpret} disabled={isInterpreting}>
-          {isInterpreting ? "Đang luận giải..." : isReadingOpen ? "Ẩn luận giải" : "Luận giải"}
+          {isInterpreting ? "Đang phân tích..." : isReadingOpen ? "Ẩn luận giải Bắc Phái" : "Luận giải Bắc Phái bằng AI"}
         </button>
         <button type="button" className="ghost-button" onClick={onDownloadImage}>
           {isDownloadingImage ? "Đang tải ảnh..." : "Tải ảnh lá số"}

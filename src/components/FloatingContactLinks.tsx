@@ -4,9 +4,8 @@ const smsNumber = import.meta.env.VITE_CONTACT_SMS_NUMBER?.trim();
 const zaloUrl = import.meta.env.VITE_CONTACT_ZALO_URL?.trim() || "https://zalo.me/";
 const facebookUrl = import.meta.env.VITE_CONTACT_FACEBOOK_URL?.trim() || "https://www.facebook.com/";
 
-const smsHref = smsNumber
-  ? `sms:${smsNumber}?body=${encodeURIComponent("Chào bạn, mình cần hỗ trợ về lá số tử vi.")}`
-  : `sms:?body=${encodeURIComponent("Chào bạn, mình cần hỗ trợ về lá số tử vi.")}`;
+const smsMessage = encodeURIComponent("Chào bạn, mình cần hỗ trợ về lá số tử vi.");
+const smsHref = smsNumber ? `sms:${smsNumber}?body=${smsMessage}` : `sms:?body=${smsMessage}`;
 
 const contactLinks = [
   {

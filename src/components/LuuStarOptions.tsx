@@ -12,9 +12,14 @@ export function LuuStarOptions({
 
   return (
     <div className="luu-star-options">
-      <label>
+      <label title="Bật/tắt hiển thị Lưu Tứ Hóa trên lá số.">
         <input type="checkbox" checked={value.showLuuTuHoa} onChange={(e) => set("showLuuTuHoa", e.target.checked)} />
         Lưu tứ hóa
+      </label>
+
+      <label title="Bật/tắt hiển thị Phi Hóa Can Cung: các dòng Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ phi nhập sang cung nhận.">
+        <input type="checkbox" checked={value.showPhiHoaCanCung} onChange={(e) => set("showPhiHoaCanCung", e.target.checked)} />
+        Phi Hóa Can Cung
       </label>
 
       <label>
