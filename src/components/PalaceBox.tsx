@@ -13,15 +13,15 @@ type PhiFlow = {
 const FLOW_ORDER: Array<PhiFlow["type"]> = ["loc", "quyen", "khoa", "ky"];
 
 const FLOW_LABELS: Record<PhiFlow["type"], string> = {
-  loc: "Hóa Lộc",
-  quyen: "Hóa Quyền",
-  khoa: "Hóa Khoa",
-  ky: "Hóa Kỵ",
+  loc: "Lộc",
+  quyen: "Quyền",
+  khoa: "Khoa",
+  ky: "Kỵ",
 };
 
 const normalizeFlowText = (flow: PhiFlow) => {
   const label = FLOW_LABELS[flow.type];
-  const targetLabel = flow.targetPalaceName || flow.targetPalaceShortName;
+  const targetLabel = flow.targetPalaceShortName || flow.targetPalaceName;
 
   if (targetLabel) {
     return `${label} → ${targetLabel}`;
