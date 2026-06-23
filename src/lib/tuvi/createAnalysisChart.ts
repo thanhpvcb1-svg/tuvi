@@ -24,6 +24,7 @@ import { resolveStarColor } from "./rules/starColorResolver";
 import { resolveLuuStars, shouldShowLuuStar, toNormalizedLuuStars } from "./rules/luuStarResolver";
 import { anTuan, anTriet } from "./rules/generalRuleEngine";
 import { generatePhiTuHoaForChart } from "./rules/phiCungTuHoa";
+import { buildNguHanhBanMenh } from "../nguHanhBanMenh";
 import { dedupeBy, normalizeLookupKey, safeText } from "./utils";
 
 type RawStarLike = {
@@ -605,8 +606,10 @@ function getNatalElement(raw: any): { name?: string; element?: string } {
   if (!Array.isArray(yearly) || yearly.length < 2) {
     return {};
   }
-  const key = `${normalizeLookupKey(yearly[0])} ${normalizeLookupKey(yearly[1])}`;
-  return NAYIN_BY_YEAR[key] ?? {};
+  const yearStem = normalizeStem(yearly[0]);
+  const yearBranch = normalizeBranch(yearly[1]);
+  const nguHanhBanMenh = buildNguHanhBanMenh({ yearStem, yearBranch });
+  return nguHanhBanMenh ? { name: nguHanhBanMenh.napAm, element: nguHanhBanMenh.hanh } : {};
 }
 
 function extractCucElement(value: unknown): string | undefined {
@@ -665,7 +668,13 @@ function buildProfile(raw: any, input: NormalizedBirthInput, config: SchoolConfi
   const rawBody = normalizeStarName(raw?.body ?? raw?.shenZhu, config.starAliases).name || undefined;
   const yinYangAssessment = getYinYangAssessment(raw, input.gender);
   const natalElement = getNatalElement(raw);
+  const fiveElementsClass = safeText(raw?.fiveElementsClass ?? raw?.wuXingJu ?? raw?.wuXing) || undefined;
   const cucElement = extractCucElement(raw?.fiveElementsClass ?? raw?.wuXingJu ?? raw?.wuXing);
+  const nguHanhBanMenh = buildNguHanhBanMenh({
+    yearStem,
+    yearBranch,
+    cuc: fiveElementsClass,
+  });
 
   return {
     fullName: input.fullName,
@@ -684,10 +693,12 @@ function buildProfile(raw: any, input: NormalizedBirthInput, config: SchoolConfi
     yinYangLabel: yinYangAssessment.label,
     yinYangStatus: yinYangAssessment.status,
     natalElementName: natalElement.name,
+    natalElement: natalElement.element,
     elementalStatus: getElementalAssessment(natalElement.element, cucElement),
-    fiveElementsClass: safeText(raw?.fiveElementsClass ?? raw?.wuXingJu ?? raw?.wuXing) || undefined,
+    fiveElementsClass,
     yearStem,
     yearBranch,
+    nguHanhBanMenh,
   };
 }
 

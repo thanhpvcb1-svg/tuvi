@@ -291,10 +291,21 @@ export type ChartProfile = {
   yinYangLabel?: string;
   yinYangStatus?: string;
   natalElementName?: string;
+  natalElement?: string;
   elementalStatus?: string;
   fiveElementsClass?: string;
   yearStem?: string;
   yearBranch?: string;
+  nguHanhBanMenh?: {
+    canChiNam: string;
+    napAm: string;
+    hanh: "Kim" | "Mộc" | "Thủy" | "Hỏa" | "Thổ";
+    cuc?: string;
+    cucElement?: "Kim" | "Mộc" | "Thủy" | "Hỏa" | "Thổ";
+    menhCucRelation?: "dong_hanh" | "menh_sinh_cuc" | "cuc_sinh_menh" | "menh_khac_cuc" | "cuc_khac_menh" | "unknown";
+    menhCucRelationLabel?: string;
+    shortDescription?: string;
+  };
   laiNhanCung?: LaiNhanCung | null;
 };
 

@@ -1,5 +1,4 @@
-import React from "react";
-import type { ChartView } from "../lib/types";
+﻿import type { ChartView } from "../lib/types";
 
 function padDatePart(value: string) {
   return value.padStart(2, "0");
@@ -34,6 +33,9 @@ export default function ChartCenter({ chart }: { chart: ChartView }) {
   const laiNhanDisplay = profile.laiNhanCung?.functionalPalace ?? "";
   const solarDate = formatDisplayDate(profile.solarDate);
   const lunarDate = formatDisplayDate(profile.lunarDate);
+  const nguHanhBanMenh = profile.nguHanhBanMenh;
+  const nguHanhBanMenhDisplay =
+    nguHanhBanMenh?.napAm || nguHanhBanMenh?.hanh || profile.natalElementName || "";
 
   return (
     <div className="center-main">
@@ -68,10 +70,6 @@ export default function ChartCenter({ chart }: { chart: ChartView }) {
               <td>{profile.birthTime}</td>
             </tr>
             <tr>
-              <td>Con giáp</td>
-              <td>{profile.zodiac}</td>
-            </tr>
-            <tr>
               <td>Mệnh</td>
               <td>{profile.natalElementName}</td>
             </tr>
@@ -95,6 +93,12 @@ export default function ChartCenter({ chart }: { chart: ChartView }) {
               <td>Lai Nhân Cung</td>
               <td>{laiNhanDisplay}</td>
             </tr>
+            {nguHanhBanMenhDisplay ? (
+              <tr>
+                <td>Ngũ hành bản mệnh</td>
+                <td>{nguHanhBanMenhDisplay}</td>
+              </tr>
+            ) : null}
           </tbody>
         </table>
 

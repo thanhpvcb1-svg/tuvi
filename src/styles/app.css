@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   font-family: "Be Vietnam Pro", "Segoe UI", Tahoma, Arial, sans-serif;
   color: #211a13;
   background: #fffbf4;
@@ -2663,6 +2663,102 @@ h4,
   text-align: center;
 }
 
+.ngu-hanh-card {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(143, 120, 84, 0.18);
+  border-radius: 16px;
+  background: rgba(255, 251, 245, 0.88);
+  text-align: left;
+}
+
+.ngu-hanh-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ngu-hanh-card-head h3 {
+  margin: 0;
+  color: #5d4a2f;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.ngu-hanh-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ngu-hanh-badge--kim {
+  background: rgba(120, 131, 150, 0.16);
+  color: #516177;
+}
+
+.ngu-hanh-badge--má»™c {
+  background: rgba(47, 123, 75, 0.14);
+  color: #236645;
+}
+
+.ngu-hanh-badge--thá»§y {
+  background: rgba(56, 102, 173, 0.14);
+  color: #2d5d9b;
+}
+
+.ngu-hanh-badge--há»a {
+  background: rgba(214, 88, 65, 0.14);
+  color: #b44632;
+}
+
+.ngu-hanh-badge--thá»• {
+  background: rgba(181, 121, 42, 0.14);
+  color: #9d681f;
+}
+
+.ngu-hanh-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+}
+
+.ngu-hanh-card-grid div {
+  min-width: 0;
+}
+
+.ngu-hanh-card-grid span {
+  display: block;
+  margin-bottom: 3px;
+  color: #7a7168;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.ngu-hanh-card-grid strong {
+  display: block;
+  color: #2b2f36;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.ngu-hanh-card-row {
+  grid-column: 1 / -1;
+}
+
+.ngu-hanh-card p {
+  margin: 12px 0 0;
+  color: #5f6f89;
+  font-size: 13px;
+  line-height: 1.6;
+}
 .blue {
   margin: 6px 0 4px;
   color: #252934;
@@ -3864,7 +3960,7 @@ h4,
   }
 }
 
-/* Social proof popup — desktop only */
+/* Social proof popup â€” desktop only */
 .social-proof-popup {
   position: fixed;
   left: 24px;
@@ -3998,3 +4094,4 @@ h4,
     box-shadow: none;
   }
 }
+
