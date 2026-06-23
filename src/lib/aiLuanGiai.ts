@@ -1,3 +1,4 @@
+import { buildQuickReadings, findPalace, getPalaceMeaning, getTopStars } from "./chartUi";
 import type { BirthInput, ChartView, PalaceView, StarView } from "./types";
 
 export type AIAnalysisMode = "basic" | "bac-phai";
@@ -141,6 +142,8 @@ type AIAnalysisApiResponse = {
   data: AIAnalysisResult;
 };
 
+const GEO_BLOCKED_MESSAGE = "Khu vực máy chủ hiện tại chưa được dịch vụ AI hỗ trợ. Hệ thống sẽ dùng bản luận giải tự động từ dữ liệu lá số.";
+
 const DEFAULT_DISCLAIMER =
   "Nội dung chỉ mang tính tham khảo, không thay thế tư vấn chuyên môn về tài chính, y tế, pháp lý hoặc các quyết định quan trọng.";
 
@@ -185,6 +188,34 @@ const normalizeTransformationKey = (value: string): NatalTransformation["transfo
 };
 
 const getPalace = (chart: ChartView, palaceName: string) => chart.palaces.find((item) => item.name === palaceName);
+
+const normalizeErrorText = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+
+export const isGeoBlockedAIError = (message: string) =>
+  normalizeErrorText(message).includes("user location is not supported for the api use");
+
+const getPalaceSnapshot = (chart: ChartView, palaceName: string) => {
+  const palace = findPalace(chart, palaceName);
+  const stars = getTopStars(palace, 4);
+  return {
+    palace,
+    stars,
+    joinedStars: stars.join(", "),
+  };
+};
+
+const buildPalaceLine = (chart: ChartView, palaceName: string, fallback: string) => {
+  const snapshot = getPalaceSnapshot(chart, palaceName);
+  if (!snapshot.palace) {
+    return fallback;
+  }
+
+  const meaning = getPalaceMeaning(snapshot.palace.name);
+  const starsText = snapshot.joinedStars
+    ? ` Các sao nổi bật gồm ${snapshot.joinedStars}.`
+    : "";
+  return `${meaning}${starsText}`;
+};
 
 const mapPalace = (palace: PalaceView): PalaceSummary => {
   const mainStars = palace.majorStars.map(getStarLabel).filter(Boolean);
@@ -409,6 +440,109 @@ export const buildAIAnalysisPayload = (
         ],
       },
     },
+  };
+};
+
+export const buildOfflineAIAnalysis = (
+  chart: ChartView,
+  payload: AIAnalysisPayload,
+): AIAnalysisResult => {
+  const quickReadings = buildQuickReadings(chart);
+  const menhLine = buildPalaceLine(
+    chart,
+    "Mệnh",
+    "Cần thêm dữ liệu ở cung Mệnh để luận rõ khí chất và cách phản ứng với hoàn cảnh.",
+  );
+  const thanLine = buildPalaceLine(
+    chart,
+    "Thân",
+    "Cần xem thêm vị trí Thân để hiểu rõ điểm dồn lực trong đời sống.",
+  );
+  const quanLocLine = buildPalaceLine(
+    chart,
+    "Quan Lộc",
+    "Phần sự nghiệp hiện chưa đủ dữ liệu nổi bật để kết luận sâu.",
+  );
+  const taiBachLine = buildPalaceLine(
+    chart,
+    "Tài Bạch",
+    "Phần tài lộc nên đọc thêm kết hợp với Quan Lộc và Điền Trạch.",
+  );
+  const phuTheLine = buildPalaceLine(
+    chart,
+    "Phu Thê",
+    "Phần tình duyên hiện nên xem như lớp tham khảo ban đầu.",
+  );
+  const natalFourTransformations = payload.bacPhai?.natalFourTransformations ?? [];
+  const byTransformation = (transformation: NatalTransformation["transformation"]) =>
+    natalFourTransformations.find((item) => item.transformation === transformation);
+  const phiHoaCanCung = chart.palaces
+    .flatMap((palace) => {
+      const flows = ((palace as PalaceView & {
+        phiTuHoa?: {
+          flows?: Array<{
+            label: string;
+            target?: string | null;
+            targetPalaceName?: string | null;
+            targetPalaceShortName?: string | null;
+          }>;
+        };
+      }).phiTuHoa?.flows ?? []);
+
+      return flows.map((flow) => ({
+        fromPalace: palace.name,
+        toPalace: flow.targetPalaceShortName || flow.targetPalaceName || flow.target || "",
+        transformation: flow.label,
+        analysis: `${palace.name} phát động ${flow.label} sang ${flow.targetPalaceName || flow.target || "cung liên quan"}. Đây là điểm nên đọc theo quan hệ cung nguồn và cung nhận.`,
+      }));
+    })
+    .filter((item) => item.toPalace)
+    .slice(0, 6);
+  const year = payload.profile?.yearToView || payload.periods?.luuNien?.year || new Date().getFullYear();
+
+  return {
+    tongQuanMenhCuc:
+      quickReadings[0]?.summary ||
+      "Hệ thống đang dùng bản luận giải tự động từ dữ liệu lá số hiện có do dịch vụ AI tạm thời chưa phản hồi từ khu vực máy chủ này.",
+    luanMenhThan: `${menhLine} ${thanLine}`.trim(),
+    trongTamBacPhai:
+      phiHoaCanCung.length > 0
+        ? `Lá số hiện có ${phiHoaCanCung.length} dòng Phi Hóa Can Cung nổi bật, phù hợp để đọc theo hướng cung nào phát động, cung nào nhận tác động và chủ đề nào đang được kích hoạt mạnh hơn.`
+        : "Dữ liệu Phi Hóa Can Cung hiện còn hạn chế, nên bản luận giải tự động này ưu tiên đọc tổng quan và các cung trọng tâm.",
+    tuHoaNamSinh: {
+      hoaLoc: byTransformation("loc") ? `Sinh niên Hóa Lộc nổi bật ở sao ${byTransformation("loc")?.star || ""}.` : "",
+      hoaQuyen: byTransformation("quyen") ? `Sinh niên Hóa Quyền nổi bật ở sao ${byTransformation("quyen")?.star || ""}.` : "",
+      hoaKhoa: byTransformation("khoa") ? `Sinh niên Hóa Khoa nổi bật ở sao ${byTransformation("khoa")?.star || ""}.` : "",
+      hoaKy: byTransformation("ky") ? `Sinh niên Hóa Kỵ nổi bật ở sao ${byTransformation("ky")?.star || ""}.` : "",
+    },
+    phiHoaCanCung,
+    tuHoa: [],
+    thaiTueNhapQuai:
+      payload.thaiTueNhapQuai?.activatedPalaces?.length
+        ? `Năm ${year} đang kích hoạt các cung ${payload.thaiTueNhapQuai.activatedPalaces.join(", ")} theo dữ liệu Thái Tuế Nhập Quái hiện có.`
+        : "Dữ liệu hiện tại chưa đủ để luận sâu riêng phần Thái Tuế Nhập Quái.",
+    daiVan:
+      payload.periods?.daiVan?.palace
+        ? `Đại vận hiện rơi vào cung ${payload.periods.daiVan.palace}${payload.periods.daiVan.ageRange ? `, giai đoạn tuổi ${payload.periods.daiVan.ageRange}` : ""}. Đây nên được xem như bối cảnh phát triển dài hơi thay vì kết luận tuyệt đối.`
+        : "Dữ liệu hiện tại chưa đủ để xác định rõ bối cảnh Đại Vận.",
+    luuNien:
+      payload.periods?.luuNien?.notes?.length
+        ? payload.periods.luuNien.notes.join(" ")
+        : `Năm ${year} nên được đọc như xu hướng vận động của giai đoạn đang xem.`,
+    suNghiepTaiLoc: `${quanLocLine} ${taiBachLine}`.trim(),
+    tinhDuyenGiaDao: phuTheLine,
+    diemManh: quickReadings.slice(0, 3).map((item) => item.title),
+    diemCanLuuY: [
+      "Bản này được tạo tự động từ dữ liệu lá số, chưa có lớp diễn giải mở rộng từ AI.",
+      phiHoaCanCung.length === 0 ? "Phi Hóa Can Cung hiện còn mỏng nên cần đọc thận trọng hơn ở tầng Bắc Phái." : "Nên ưu tiên đọc kỹ các dòng Phi Hóa giữa cung nguồn và cung nhận.",
+      "Nội dung chỉ mang tính tham khảo, phù hợp để định hướng câu hỏi tiếp theo.",
+    ],
+    goiYHanhDong: [
+      "Ưu tiên quan sát trục Mệnh - Tài Bạch - Quan Lộc trước khi đi vào chi tiết từng cung.",
+      "Nếu cần đọc sâu hơn, hãy đối chiếu thêm các dòng Phi Hóa Can Cung đang hiển thị trên lá số.",
+      "Có thể tạo lại luận giải sau khi dịch vụ AI khả dụng để nhận bản phân tích sâu hơn.",
+    ],
+    disclaimer: `${DEFAULT_DISCLAIMER} ${GEO_BLOCKED_MESSAGE}`,
   };
 };
 

@@ -22,6 +22,7 @@ import TuviChart from "./components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "./components/VanHanhSelector";
 import {
   buildAIAnalysisCacheKey,
+  buildOfflineAIAnalysis,
   buildAIAnalysisPayload,
   canGenerateNewAIAnalysisToday,
   consumeAIAnalysisQuota,
@@ -938,7 +939,15 @@ export default function App() {
       setRemainingAiQuota(getRemainingAIAnalysisQuota());
     } catch (error) {
       console.error(error);
-      setReadingError(error instanceof Error ? error.message : "Không thể luận giải lá số lúc này. Vui lòng thử lại sau.");
+      const message = error instanceof Error ? error.message : "Không thể luận giải lá số lúc này. Vui lòng thử lại sau.";
+      if (message.includes("User location is not supported") || message.includes("Khu vực máy chủ hiện tại chưa được dịch vụ AI hỗ trợ")) {
+        const fallbackResult = buildOfflineAIAnalysis(chart, payload);
+        setReadingError("");
+        setReadingResult(fallbackResult);
+        setCachedAIAnalysis(cacheKey, fallbackResult);
+      } else {
+        setReadingError(message);
+      }
     } finally {
       setIsReadingLoading(false);
     }
@@ -970,7 +979,17 @@ export default function App() {
       setRemainingAiQuota(getRemainingAIAnalysisQuota());
     } catch (error) {
       console.error(error);
-      setReadingError(error instanceof Error ? error.message : "Không thể tạo lại luận giải lúc này. Vui lòng thử lại sau.");
+      const message = error instanceof Error ? error.message : "Không thể tạo lại luận giải lúc này. Vui lòng thử lại sau.";
+      const payload = buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai");
+      const cacheKey = buildAIAnalysisCacheKey(payload);
+      if (message.includes("User location is not supported") || message.includes("Khu vực máy chủ hiện tại chưa được dịch vụ AI hỗ trợ")) {
+        const fallbackResult = buildOfflineAIAnalysis(chart, payload);
+        setReadingError("");
+        setReadingResult(fallbackResult);
+        setCachedAIAnalysis(cacheKey, fallbackResult);
+      } else {
+        setReadingError(message);
+      }
     } finally {
       setIsReadingLoading(false);
     }
