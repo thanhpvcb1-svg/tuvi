@@ -939,15 +939,10 @@ export default function App() {
       setRemainingAiQuota(getRemainingAIAnalysisQuota());
     } catch (error) {
       console.error(error);
-      const message = error instanceof Error ? error.message : "Không thể luận giải lá số lúc này. Vui lòng thử lại sau.";
-      if (message.includes("User location is not supported") || message.includes("Khu vực máy chủ hiện tại chưa được dịch vụ AI hỗ trợ")) {
-        const fallbackResult = buildOfflineAIAnalysis(chart, payload);
-        setReadingError("");
-        setReadingResult(fallbackResult);
-        setCachedAIAnalysis(cacheKey, fallbackResult);
-      } else {
-        setReadingError(message);
-      }
+      const fallbackResult = buildOfflineAIAnalysis(chart, payload);
+      setReadingError("");
+      setReadingResult(fallbackResult);
+      setCachedAIAnalysis(cacheKey, fallbackResult);
     } finally {
       setIsReadingLoading(false);
     }
@@ -979,17 +974,12 @@ export default function App() {
       setRemainingAiQuota(getRemainingAIAnalysisQuota());
     } catch (error) {
       console.error(error);
-      const message = error instanceof Error ? error.message : "Không thể tạo lại luận giải lúc này. Vui lòng thử lại sau.";
       const payload = buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai");
       const cacheKey = buildAIAnalysisCacheKey(payload);
-      if (message.includes("User location is not supported") || message.includes("Khu vực máy chủ hiện tại chưa được dịch vụ AI hỗ trợ")) {
-        const fallbackResult = buildOfflineAIAnalysis(chart, payload);
-        setReadingError("");
-        setReadingResult(fallbackResult);
-        setCachedAIAnalysis(cacheKey, fallbackResult);
-      } else {
-        setReadingError(message);
-      }
+      const fallbackResult = buildOfflineAIAnalysis(chart, payload);
+      setReadingError("");
+      setReadingResult(fallbackResult);
+      setCachedAIAnalysis(cacheKey, fallbackResult);
     } finally {
       setIsReadingLoading(false);
     }
