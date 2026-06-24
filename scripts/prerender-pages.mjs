@@ -135,6 +135,24 @@ const routes = [
     `,
   },
   {
+    route: "/bai-hoc-ngan",
+    title: "Bài học ngắn về Tử Vi",
+    description:
+      "Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
+    body: `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>Bài học ngắn về Tử Vi</h1>
+          <p>Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và các bài giảng ngắn được dẫn nguồn từ kênh YouTube Thiên Ngân Tử.</p>
+          <div class="prerender-actions">
+            <a href="/bai-hoc-ngan">Xem danh sách video</a>
+            <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
+          </div>
+        </section>
+      </main>
+    `,
+  },
+  {
     route: "/faq",
     title: "FAQ Lập Lá Số Tử Vi - Giải Đáp Câu Hỏi Thường Gặp",
     description:

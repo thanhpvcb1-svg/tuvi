@@ -625,6 +625,137 @@ h4,
   margin-top: 22px;
 }
 
+.bai-hoc-ngan-hero {
+  padding: 34px;
+  border: 1px solid rgba(196, 165, 116, 0.2);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(213, 176, 107, 0.2), transparent 34%),
+    linear-gradient(160deg, rgba(255, 251, 243, 0.96), rgba(246, 236, 219, 0.96));
+  box-shadow: 0 20px 42px rgba(110, 84, 48, 0.08);
+}
+
+.youtube-lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.youtube-lesson-card {
+  overflow: hidden;
+  border: 1px solid rgba(186, 160, 118, 0.24);
+  border-radius: 24px;
+  background: rgba(255, 254, 251, 0.98);
+  box-shadow:
+    0 16px 32px rgba(110, 84, 48, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.youtube-lesson-thumb {
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #f2dfbd, #f9f3e8);
+}
+
+.youtube-lesson-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youtube-lesson-body {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.youtube-lesson-date {
+  margin: 0;
+  color: #8c6d3a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.youtube-lesson-body h2 {
+  margin: 0;
+  color: #261a14;
+  font-size: 28px;
+  line-height: 1.05;
+}
+
+.youtube-lesson-body p {
+  margin: 0;
+  color: #4e433b;
+  line-height: 1.7;
+}
+
+.youtube-lesson-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #8f3d2f;
+  color: #fff8f1;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.youtube-lesson-link:hover {
+  background: #783125;
+  transform: translateY(-1px);
+}
+
+.youtube-lessons-feedback {
+  margin-top: 22px;
+  padding: 20px 22px;
+  border: 1px solid rgba(186, 160, 118, 0.22);
+  border-radius: 20px;
+  background: rgba(255, 252, 246, 0.94);
+  color: #53473d;
+  line-height: 1.7;
+  box-shadow: 0 12px 24px rgba(110, 84, 48, 0.06);
+}
+
+.youtube-lessons-feedback p {
+  margin: 0;
+}
+
+.youtube-lessons-feedback--loading {
+  color: #7b5c29;
+  background: rgba(252, 245, 229, 0.96);
+}
+
+.youtube-lessons-feedback--error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-color: rgba(143, 61, 47, 0.2);
+  background: rgba(255, 245, 242, 0.96);
+  color: #6a241b;
+}
+
+.youtube-lessons-retry {
+  min-width: 170px;
+}
+
+.youtube-lessons-note {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px dashed rgba(180, 146, 90, 0.35);
+  border-radius: 18px;
+  background: rgba(255, 249, 238, 0.86);
+  color: #6d6257;
+  line-height: 1.7;
+}
+
 .sample-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -2011,7 +2142,8 @@ h4,
 
   .sample-grid,
   .summary-grid,
-  .education-grid {
+  .education-grid,
+  .youtube-lessons-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -3451,8 +3583,27 @@ h4,
   .seo-copy-grid,
   .blog-card-grid,
   .review-grid,
-  .article-layout {
+  .article-layout,
+  .youtube-lessons-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bai-hoc-ngan-hero {
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+
+  .youtube-lesson-body h2 {
+    font-size: 24px;
+  }
+
+  .youtube-lessons-feedback--error {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .youtube-lessons-retry {
+    width: 100%;
   }
 
   .home-hero h1,

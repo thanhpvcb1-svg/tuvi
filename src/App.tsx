@@ -20,6 +20,7 @@ import SolarNoonCalculator from "./components/SolarNoonCalculator";
 import TrustBadges from "./components/TrustBadges";
 import TuviChart from "./components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "./components/VanHanhSelector";
+import YouTubeLessonsPage from "./components/YouTubeLessonsPage";
 import {
   buildAIAnalysisCacheKey,
   buildOfflineAIAnalysis,
@@ -36,7 +37,7 @@ import {
 import type { BirthInput, ChartView, LuuDisplayOptions, NormalizedBirthInput, PalaceView, StarView } from "./lib/types";
 import type { QuickReadingCard } from "./lib/chartUi";
 
-type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he";
+type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "bai-hoc-ngan";
 type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he";
 type FormErrors = Partial<Record<keyof BirthInput, string>> & { form?: string };
 
@@ -702,6 +703,10 @@ export default function App() {
       setActivePage("lien-he");
       return;
     }
+    if (location.pathname === "/bai-hoc-ngan") {
+      setActivePage("bai-hoc-ngan");
+      return;
+    }
     setActivePage("home");
   }, [location.pathname]);
 
@@ -1229,6 +1234,12 @@ export default function App() {
           description:
             "Liên hệ để được hướng dẫn chọn gói phù hợp, gửi câu hỏi theo lá số hoặc đặt lịch tư vấn trực tiếp.",
           canonicalPath: "/lien-he",
+        };
+      case "bai-hoc-ngan":
+        return {
+          title: "Bài học ngắn về Tử Vi",
+          description: "Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
+          canonicalPath: "/bai-hoc-ngan",
         };
       default:
         return {
@@ -1949,6 +1960,21 @@ export default function App() {
     </div>
   );
 
+  const youtubeLessonsPage = (
+    <>
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath="/bai-hoc-ngan"
+        schema={[
+          organizationSchema,
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bài học ngắn", path: "/bai-hoc-ngan" }]),
+        ]}
+      />
+      <YouTubeLessonsPage />
+    </>
+  );
+
   return (
     <div className="site-shell">
       <header className="site-header">
@@ -1976,6 +2002,9 @@ export default function App() {
             </button>
             <button type="button" className={getNavLinkClass("/blog")} onClick={() => navigateHomeSection("kien-thuc")}>
               Kiến thức
+            </button>
+            <button type="button" className={getNavLinkClass("/bai-hoc-ngan")} onClick={() => navigate("/bai-hoc-ngan")}>
+              Bài học ngắn
             </button>
             <button type="button" className={getNavLinkClass("/bang-gia")} onClick={() => navigateHomeSection("premium")}>
               Bảng giá
@@ -2008,7 +2037,9 @@ export default function App() {
                     ? compatPage
                     : activePage === "lien-he"
                       ? contactPage
-                      : faqPage}
+                      : activePage === "bai-hoc-ngan"
+                        ? youtubeLessonsPage
+                        : faqPage}
       </main>
 
       <FloatingContactLinks />

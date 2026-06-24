@@ -49,6 +49,7 @@ Khi co domain that, hay doi tat ca URL `https://tuvi-demo.pages.dev` thanh domai
 - Frontend chi nen dung bien moi truong bat dau bang `VITE_`
 - Khong dua API key bi mat vao frontend
 - Cloudflare Pages Function `functions/api/ai/luan-giai.ts` doc secret server-side tu `GEMINI_API_KEY`
+- Cloudflare Pages Function `functions/api/youtube-lessons.ts` doc config server-side tu `YOUTUBE_LESSONS_CHANNEL_ID`
 - Khong commit `.dev.vars`, `.env` hoac bat ky secret nao vao repository
 
 ## AI Pages Function
@@ -59,6 +60,7 @@ Khi co domain that, hay doi tat ca URL `https://tuvi-demo.pages.dev` thanh domai
 
 ```txt
 GEMINI_API_KEY=your_real_key
+YOUTUBE_LESSONS_CHANNEL_ID=your_youtube_channel_id
 ```
 
 - Frontend khong duoc dung `VITE_GEMINI_API_KEY`
@@ -69,6 +71,7 @@ GEMINI_API_KEY=your_real_key
 
 ```txt
 GEMINI_API_KEY=your_local_key_here
+YOUTUBE_LESSONS_CHANNEL_ID=your_youtube_channel_id
 ```
 
 2. Build frontend:
