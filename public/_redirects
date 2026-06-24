@@ -1,3 +1,7 @@
 /api/*   /api/:splat   200
+/blog/*   /bai-viet   301
+/blog   /bai-viet   301
+/kien-thuc/*   /bai-viet/:splat   301
+/kien-thuc   /bai-viet   301
 /bai-hoc-ngan   /video   301
 /*    /index.html   200

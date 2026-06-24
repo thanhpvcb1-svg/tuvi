@@ -5,56 +5,36 @@ const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
 const siteUrl = "https://tuvi.pages.dev";
 
-const blogPosts = [
+const articlePosts = [
   {
-    route: "/blog/menh-va-than-trong-tu-vi-la-gi",
-    title: "Mệnh và Thân trong tử vi là gì? | Blog Tử Vi",
-    description: "Hiểu vai trò của Mệnh và Thân để đọc lá số dễ hơn và biết nên bắt đầu từ đâu.",
+    route: "/bai-viet/tu-vi-bac-phai-la-gi",
+    title: "Tử Vi Bắc Phái là gì? | Bài viết",
+    description: "Bài mở cửa để hiểu Bắc Phái, can cung, Tứ Hóa Phi Tinh và lý do vì sao lối đọc này nhấn vào mạch vận động của lá số.",
   },
   {
-    route: "/blog/dai-van-va-tieu-van-la-gi",
-    title: "Đại vận và tiểu vận là gì? | Blog Tử Vi",
-    description: "Phân biệt hai lớp vận trình quan trọng để theo dõi từng giai đoạn cuộc sống rõ ràng hơn.",
+    route: "/bai-viet/tu-hoa-phi-tinh-la-gi",
+    title: "Tứ Hóa Phi Tinh là gì? | Bài viết",
+    description: "Giải thích nền tảng về Lộc, Quyền, Khoa, Kỵ và vì sao Tứ Hóa làm lá số chuyển từ tĩnh sang động.",
   },
   {
-    route: "/blog/cung-quan-loc-noi-gi-ve-su-nghiep",
-    title: "Cung Quan Lộc nói gì về sự nghiệp? | Blog Tử Vi",
-    description: "Khám phá cách cung Quan Lộc phản ánh hướng phát triển nghề nghiệp và cơ hội thăng tiến.",
+    route: "/bai-viet/loc-quyen-khoa-ky-co-y-nghia-gi",
+    title: "Lộc - Quyền - Khoa - Kỵ có ý nghĩa gì? | Bài viết",
+    description: "Đọc bốn Hóa như bốn kiểu vận động khác nhau thay vì tách đơn giản thành tốt hay xấu.",
   },
   {
-    route: "/blog/cung-tai-bach-noi-gi-ve-tai-loc",
-    title: "Cung Tài Bạch nói gì về tài lộc? | Blog Tử Vi",
-    description: "Tìm hiểu cách xem xu hướng tiền bạc, tích lũy và các điểm cần thận trọng trong tài chính.",
+    route: "/bai-viet/phi-nhap-va-phi-xuat-la-gi",
+    title: "Phi nhập và phi xuất là gì? | Bài viết",
+    description: "Hiểu cung phát lực, cung nhận lực và cách lần mạch phi hóa trong Bắc Phái.",
   },
   {
-    route: "/blog/khong-nho-gio-sinh-co-lap-la-so-duoc-khong",
-    title: "Không nhớ giờ sinh có lập lá số tử vi được không? | Blog Tử Vi",
-    description: "Xem trường hợp chưa rõ giờ sinh nên hiểu kết quả như thế nào và cách giảm sai lệch khi đọc lá số.",
+    route: "/bai-viet/tu-hoa-la-gi",
+    title: "Tự hóa là gì? | Bài viết",
+    description: "Một bài nền tảng về tự hóa và những chủ đề có xu hướng tự khởi, tự vướng hoặc tự thúc đẩy.",
   },
   {
-    route: "/blog/cung-phu-the-noi-gi-ve-tinh-duyen",
-    title: "Cung Phu Thê nói gì về tình duyên? | Blog Tử Vi",
-    description: "Hiểu vai trò của cung Phu Thê khi xem xu hướng gắn kết, hôn nhân và cách xây dựng mối quan hệ.",
-  },
-  {
-    route: "/blog/cach-xac-dinh-gio-sinh-trong-tu-vi",
-    title: "Cách xác định giờ sinh trong tử vi | Blog Tử Vi",
-    description: "Một vài gợi ý thực tế để đối chiếu thông tin và giảm sai lệch khi bạn chưa chắc giờ sinh của mình.",
-  },
-  {
-    route: "/blog/la-so-tu-vi-gom-nhung-phan-nao",
-    title: "Lá số tử vi gồm những phần nào? | Blog Tử Vi",
-    description: "Tìm hiểu các phần nền tảng như Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
-  },
-  {
-    route: "/blog/chinh-tinh-va-phu-tinh-la-gi",
-    title: "Chính tinh và phụ tinh là gì? | Blog Tử Vi",
-    description: "Phân biệt hai nhóm sao thường gặp khi bắt đầu đọc lá số tử vi và cách hiểu vai trò của chúng.",
-  },
-  {
-    route: "/blog/xem-van-han-nam-2026-theo-la-so-tu-vi",
-    title: "Xem vận hạn năm 2026 theo lá số tử vi | Blog Tử Vi",
-    description: "Cách tiếp cận năm đang xem trong lá số để nhận diện những giai đoạn cần chủ động hơn về công việc và tài chính.",
+    route: "/bai-viet/dai-van-va-luu-nien-trong-bac-phai",
+    title: "Đại vận và lưu niên trong Bắc Phái | Bài viết",
+    description: "Cách đọc đại vận và lưu niên cùng Tứ Hóa để thấy năm nào thật sự chạm mạch trọng yếu của lá số.",
   },
 ];
 
@@ -121,29 +101,34 @@ const routes = [
     `,
   },
   {
-    route: "/blog",
-    title: "Blog Tử Vi - Kiến Thức Lá Số, Đại Vận, Tiểu Vận",
+    route: "/bai-viet",
+    title: "Bài viết",
     description:
-      "Kiến thức tử vi dễ hiểu về lá số, Mệnh, Thân, 12 cung, đại vận, tiểu vận, sự nghiệp, tài lộc và tình duyên.",
+      "Những bài đọc nền tảng về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, can cung, đại vận và lưu niên.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Blog tử vi</h1>
-          <p>Kiến thức dễ hiểu về lá số tử vi, Mệnh, Thân, 12 cung, đại vận, tiểu vận và cách ứng dụng khi xem sự nghiệp, tài lộc, tình duyên.</p>
+          <p class="prerender-kicker">Bài viết</p>
+          <h1>Bài viết</h1>
+          <p>Những bài đọc nền tảng về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, can cung, đại vận và lưu niên.</p>
+          <div class="prerender-actions">
+            <a href="/bai-viet">Mở danh sách bài viết</a>
+            <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
+          </div>
         </section>
       </main>
     `,
   },
   {
     route: "/video",
-    title: "Video về Tử Vi",
+    title: "video",
     description:
-      "Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
+      "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Video về Tử Vi</h1>
-          <p>Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và các bài giảng ngắn được dẫn nguồn từ kênh YouTube Thiên Ngân Tử.</p>
+          <h1>Video</h1>
+          <p>Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn từ YouTube và TikTok của Thiên Ngân Tử.</p>
           <div class="prerender-actions">
             <a href="/video">Xem danh sách video</a>
             <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
@@ -195,18 +180,18 @@ const routes = [
       </main>
     `,
   },
-  ...blogPosts.map((post) => ({
+  ...articlePosts.map((post) => ({
     route: post.route,
     title: post.title,
     description: post.description,
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>${post.title.replace(" | Blog Tử Vi", "")}</h1>
+          <h1>${post.title.replace(" | Bài viết", "")}</h1>
           <p>${post.description}</p>
           <div class="prerender-actions">
-            <a href="/lap-la-so">Lập lá số miễn phí</a>
-            <a href="/blog" class="secondary">Quay lại blog</a>
+            <a href="/bai-viet">Vào bài viết</a>
+            <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
           </div>
         </section>
       </main>
@@ -218,14 +203,14 @@ const prerenderStyles = `
 <style id="prerender-css">
   .prerender-shell{padding:24px;font-family:"Be Vietnam Pro",sans-serif;color:#211A13;background:#FFF8ED}
   .prerender-hero,.prerender-section{max-width:980px;margin:0 auto 24px}
-  .prerender-kicker{font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6B567A}
+  .prerender-kicker{font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8B672C}
   .prerender-hero h1,.prerender-section h2{font-family:"Cormorant Garamond",serif}
   .prerender-hero h1{font-size:48px;line-height:1.05;margin:0 0 12px}
   .prerender-hero p,.prerender-section p,.prerender-section li{font-size:18px;line-height:1.7;color:#6F6254}
   .prerender-section ul{padding-left:20px}
   .prerender-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
-  .prerender-actions a{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;background:#2E1748;color:#FFFDF8;text-decoration:none;font-weight:600}
-  .prerender-actions a.secondary{background:#FFFDF8;color:#2E1748;border:1px solid #E8D9C1}
+  .prerender-actions a{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;background:#8F3D2F;color:#FFFDF8;text-decoration:none;font-weight:600}
+  .prerender-actions a.secondary{background:#FFFDF8;color:#8F3D2F;border:1px solid #E8D9C1}
 </style>`;
 
 const template = fs.readFileSync(indexPath, "utf8");

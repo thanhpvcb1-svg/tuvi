@@ -2,6 +2,8 @@
 import { toBlob, toJpeg } from "html-to-image";
 import { useLocation, useNavigate } from "react-router-dom";
 import AIAnalysisPanel from "./components/AIAnalysisPanel";
+import BacPhaiArticlePage from "./components/BacPhaiArticlePage";
+import BacPhaiLibraryPage from "./components/BacPhaiLibraryPage";
 import BirthForm from "./components/BirthForm";
 import ExportActions from "./components/ExportActions";
 import FAQSection from "./components/FAQSection";
@@ -20,7 +22,8 @@ import SolarNoonCalculator from "./components/SolarNoonCalculator";
 import TrustBadges from "./components/TrustBadges";
 import TuviChart from "./components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "./components/VanHanhSelector";
-import YouTubeLessonsPage from "./components/YouTubeLessonsPage";
+import VideoLessonsPage from "./components/VideoLessonsPage";
+import { findKnowledgeArticleByPath, knowledgeArticles } from "./content/bacPhaiLibrary";
 import {
   buildAIAnalysisCacheKey,
   buildOfflineAIAnalysis,
@@ -45,7 +48,7 @@ const currentYear = new Date().getFullYear();
 
 const homeSectionRoutes: Record<HomeSectionId, string> = {
   "la-so-mau": "/la-so-mau",
-  "kien-thuc": "/blog",
+  "kien-thuc": "/bai-viet",
   premium: "/bang-gia",
   faq: "/faq",
   "hop-tuoi": "/hop-tuoi",
@@ -163,109 +166,6 @@ const contactFaqs = [
   {
     question: "Nên chọn hỏi 1 câu hay tư vấn trực tiếp?",
     answer: "Nếu bạn đang cần giải một vấn đề rõ ràng, gói hỏi 1 câu thường phù hợp hơn. Nếu cần góc nhìn toàn diện theo giai đoạn, tư vấn trực tiếp sẽ hợp hơn.",
-  },
-];
-
-const blogPosts = [
-  {
-    slug: "/blog/menh-va-than-trong-tu-vi-la-gi",
-    title: "Mệnh và Thân trong tử vi là gì?",
-    description: "Hiểu vai trò của Mệnh và Thân để đọc lá số dễ hơn và biết nên bắt đầu từ đâu.",
-    content: [
-      "Mệnh và Thân là hai điểm nền rất thường được người mới chú ý đầu tiên khi xem lá số. Mệnh nghiêng về khí chất, cách vận hành và nền tính cách, còn Thân thường được dùng để quan sát nơi năng lượng của người đó dễ dồn nhiều vào hơn theo thời gian.",
-      "Khi đọc thực tế, không nên tách Mệnh và Thân thành hai phần đối lập hoàn toàn. Cách an cung, bố cục sao, đối cung và tam hợp mới là lớp giúp người xem hiểu hai điểm này liên hệ với nhau như thế nào.",
-      "Nếu bạn mới bắt đầu, hãy xem Mệnh, Thân và các cung liên quan trước, sau đó mới mở rộng sang Quan Lộc, Tài Bạch, Phu Thê hay lớp vận hạn của năm đang xem.",
-    ],
-  },
-  {
-    slug: "/blog/dai-van-va-tieu-van-la-gi",
-    title: "Đại vận và tiểu vận là gì?",
-    description: "Phân biệt hai lớp vận trình quan trọng để theo dõi từng giai đoạn cuộc sống rõ ràng hơn.",
-    content: [
-      "Đại vận giúp người xem nhìn một giai đoạn dài hơn trong hành trình phát triển, còn tiểu vận cho thấy điểm nhấn của từng năm cụ thể trong cùng giai đoạn đó.",
-      "Khi xem lá số online, hai lớp này nên được đọc cùng nhau. Đại vận cho biết bối cảnh dài hơi, còn tiểu vận giúp xác định năm nào cần chủ động hơn về công việc, tài chính hoặc các quyết định cá nhân.",
-      "Việc hiểu đúng đại vận và tiểu vận giúp người dùng tránh kỳ vọng rằng một năm đơn lẻ có thể nói hết mọi thứ. Đây là cách tiếp cận cân bằng và thực tế hơn khi đọc vận trình.",
-    ],
-  },
-  {
-    slug: "/blog/cung-quan-loc-noi-gi-ve-su-nghiep",
-    title: "Cung Quan Lộc nói gì về sự nghiệp?",
-    description: "Khám phá cách cung Quan Lộc phản ánh hướng phát triển nghề nghiệp và cơ hội thăng tiến.",
-    content: [
-      "Cung Quan Lộc thường được xem như một đầu mối quan trọng khi đọc câu chuyện nghề nghiệp, vị trí công việc, cách phát triển chuyên môn và mức độ phù hợp với môi trường làm việc.",
-      "Tuy vậy, chỉ nhìn riêng Quan Lộc là chưa đủ. Nên đọc cùng Mệnh, Thiên Di và Tài Bạch để thấy vừa năng lực nội tại, vừa hoàn cảnh vận động bên ngoài và khả năng chuyển hóa thành kết quả thực tế.",
-      "Cách dùng phù hợp nhất là xem Quan Lộc như một trục định hướng, sau đó đối chiếu với thời điểm năm xem và các cung liên quan trước khi đưa ra quyết định lớn.",
-    ],
-  },
-  {
-    slug: "/blog/cung-tai-bach-noi-gi-ve-tai-loc",
-    title: "Cung Tài Bạch nói gì về tài lộc?",
-    description: "Tìm hiểu cách xem xu hướng tiền bạc, tích lũy và các điểm cần thận trọng trong tài chính.",
-    content: [
-      "Cung Tài Bạch giúp người xem có một góc nhìn về cách tiền bạc vận động, khả năng tích lũy, cách tiếp cận nguồn thu và những điểm cần theo dõi kỹ hơn trong tài chính.",
-      "Đây không phải là công cụ để kết luận thu nhập theo kiểu cố định. Thực tế vẫn cần đọc cùng Mệnh, Quan Lộc và vận hạn năm xem để hiểu tiền đến từ đâu, giữ được ra sao và áp lực tài chính nằm ở điểm nào.",
-      "Khi dùng trong môi trường online, Tài Bạch phù hợp nhất để giúp người dùng đặt câu hỏi rõ hơn về dòng tiền, kế hoạch và thời điểm nên thận trọng.",
-    ],
-  },
-  {
-    slug: "/blog/khong-nho-gio-sinh-co-lap-la-so-duoc-khong",
-    title: "Không nhớ giờ sinh có lập lá số tử vi được không?",
-    description: "Xem trường hợp chưa rõ giờ sinh nên hiểu kết quả như thế nào và cách giảm sai lệch khi đọc lá số.",
-    content: [
-      "Bạn vẫn có thể lập lá số khi chưa chắc giờ sinh, nhưng nên hiểu đây là bản xem tham khảo thay vì bản đọc chi tiết sâu.",
-      "Giờ sinh ảnh hưởng đến cách an cung và vị trí một số sao, vì vậy thiếu dữ liệu này có thể làm thay đổi cách đọc Mệnh, Thân hoặc các cung quan trọng khác.",
-      "Cách tiếp cận hợp lý là dùng bản tham khảo để nhìn tổng quan trước, sau đó thu hẹp câu hỏi và bổ sung dữ liệu nếu bạn cần đi sâu hơn vào quyết định quan trọng.",
-    ],
-  },
-  {
-    slug: "/blog/cung-phu-the-noi-gi-ve-tinh-duyen",
-    title: "Cung Phu Thê nói gì về tình duyên?",
-    description: "Hiểu vai trò của cung Phu Thê khi xem xu hướng gắn kết, hôn nhân và cách xây dựng mối quan hệ.",
-    content: [
-      "Cung Phu Thê thường được dùng để đọc xu hướng gắn kết, cách bước vào quan hệ và kiểu tương tác dễ lặp lại trong chuyện tình cảm.",
-      "Tuy nhiên, không nên xem đây là nơi đưa ra kết luận cứng về hôn nhân. Cần đối chiếu thêm với Mệnh, Phúc Đức, Thiên Di và các lớp vận hạn theo năm để có góc nhìn cân bằng hơn.",
-      "Trên sản phẩm online, cung Phu Thê phù hợp để giúp người dùng nhận diện chủ đề quan hệ của mình, từ đó hỏi sâu hơn nếu có một vấn đề thực tế đang cần làm rõ.",
-    ],
-  },
-  {
-    slug: "/blog/cach-xac-dinh-gio-sinh-trong-tu-vi",
-    title: "Cách xác định giờ sinh trong tử vi",
-    description: "Một vài gợi ý thực tế để đối chiếu thông tin và giảm sai lệch khi bạn chưa chắc giờ sinh của mình.",
-    content: [
-      "Khi chưa chắc giờ sinh, bạn có thể đối chiếu từ giấy tờ cũ, hỏi lại người thân hoặc dùng các mốc sự kiện đời sống để thu hẹp khoảng thời gian hợp lý.",
-      "Đây không phải là cách thay thế hoàn toàn dữ liệu gốc, nhưng có thể giúp bạn giảm sai lệch ban đầu trước khi lập lá số hoặc đi vào phần đọc sâu hơn.",
-      "Nếu vẫn chưa xác định được, nên dùng bản xem tổng quan và tránh đặt kỳ vọng quá cao vào các kết luận rất chi tiết theo từng cung hay từng năm.",
-    ],
-  },
-  {
-    slug: "/blog/la-so-tu-vi-gom-nhung-phan-nao",
-    title: "Lá số tử vi gồm những phần nào?",
-    description: "Tìm hiểu các phần nền tảng như Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
-    content: [
-      "Một lá số tử vi thường gồm phần nền như Mệnh, Thân, 12 cung, các chính tinh, phụ tinh, đại vận và tiểu vận theo năm đang xem.",
-      "Với người mới, không cần đọc tất cả cùng lúc. Cách tiếp cận hiệu quả hơn là nhìn bố cục tổng thể trước, sau đó đi vào từng nhóm nội dung theo mục tiêu như sự nghiệp, tài lộc hay tình duyên.",
-      "Giao diện online nên làm tốt vai trò trực quan hóa phần nền này, để người dùng hiểu mình đang nhìn gì trước khi nhận luận giải sâu hơn.",
-    ],
-  },
-  {
-    slug: "/blog/chinh-tinh-va-phu-tinh-la-gi",
-    title: "Chính tinh và phụ tinh là gì?",
-    description: "Phân biệt hai nhóm sao thường gặp khi bắt đầu đọc lá số tử vi và cách hiểu vai trò của chúng.",
-    content: [
-      "Chính tinh thường là nhóm sao nền có vai trò lớn trong việc định hình cách đọc một cung, còn phụ tinh giúp bổ sung sắc thái, điều chỉnh hoặc làm rõ cách chủ đề đó biểu hiện ra ngoài.",
-      "Người mới thường bị ngợp vì số lượng sao trên lá số. Cách tốt hơn là nhìn chính tinh trước, sau đó mới dùng phụ tinh như lớp chi tiết để hiểu sâu hơn về cùng một chủ đề.",
-      "Trong sản phẩm số, phần hiển thị sao nên ưu tiên sự rõ ràng, tránh biến lá số thành một khối chữ dày khiến người dùng khó tiếp cận.",
-    ],
-  },
-  {
-    slug: "/blog/xem-van-han-nam-2026-theo-la-so-tu-vi",
-    title: "Xem vận hạn năm 2026 theo lá số tử vi",
-    description: "Cách tiếp cận năm đang xem trong lá số để nhận diện những giai đoạn cần chủ động hơn về công việc và tài chính.",
-    content: [
-      "Khi xem vận hạn theo năm, điều quan trọng là đặt năm đang xem trong bối cảnh toàn lá số thay vì chỉ nhìn một chỉ báo đơn lẻ.",
-      "Năm 2026 nên được đọc cùng tiểu vận, cung được kích hoạt, các lớp sao lưu và câu hỏi thực tế mà người dùng đang quan tâm, như công việc, tài chính hay mối quan hệ.",
-      "Cách dùng phù hợp là xem năm như một điểm cần chủ động hơn ở một số chủ đề, thay vì coi đó là kết luận cứng cho toàn bộ trải nghiệm của năm.",
-    ],
   },
 ];
 
@@ -646,9 +546,9 @@ const serializeInputToSearch = (input: BirthInput) => {
 export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
-  const currentBlogPost = blogPosts.find((post) => post.slug === location.pathname) ?? null;
-  const relatedBlogPosts = currentBlogPost
-    ? blogPosts.filter((post) => post.slug !== currentBlogPost.slug).slice(0, 3)
+  const currentKnowledgeArticle = findKnowledgeArticleByPath(location.pathname);
+  const relatedKnowledgeArticles = currentKnowledgeArticle
+    ? knowledgeArticles.filter((article) => article.id !== currentKnowledgeArticle.id).slice(0, 3)
     : [];
   const [activePage, setActivePage] = useState<MainPageId>("home");
   const [birthInput, setBirthInput] = useState<BirthInput>(defaultInput);
@@ -687,7 +587,14 @@ export default function App() {
       setActivePage("la-so-mau");
       return;
     }
-    if (location.pathname === "/blog" || location.pathname === "/kien-thuc" || location.pathname.startsWith("/blog/")) {
+    if (
+      location.pathname === "/blog" ||
+      location.pathname === "/kien-thuc" ||
+      location.pathname === "/bai-viet" ||
+      location.pathname.startsWith("/blog/") ||
+      location.pathname.startsWith("/kien-thuc/") ||
+      location.pathname.startsWith("/bai-viet/")
+    ) {
       setActivePage("blog");
       return;
     }
@@ -819,7 +726,8 @@ export default function App() {
     navigateContactPage();
   };
 
-  const getNavLinkClass = (route: string) => `site-nav-link${location.pathname === route ? " is-active" : ""}`;
+  const getNavLinkClass = (route: string) =>
+    `site-nav-link${location.pathname === route || (route !== "/" && location.pathname.startsWith(`${route}/`)) ? " is-active" : ""}`;
 
   const handleGenerateFromInput = (nextInput: BirthInput) => {
     const errors = validateBirthInput(nextInput);
@@ -1201,18 +1109,18 @@ export default function App() {
           canonicalPath: "/la-so-mau",
         };
       case "blog":
-        if (currentBlogPost) {
+        if (currentKnowledgeArticle) {
           return {
-            title: `${currentBlogPost.title} | Blog Tử Vi`,
-            description: currentBlogPost.description,
-            canonicalPath: currentBlogPost.slug,
+            title: `${currentKnowledgeArticle.title} | Bài viết`,
+            description: currentKnowledgeArticle.summary,
+            canonicalPath: `/bai-viet/${currentKnowledgeArticle.slug}`,
           };
         }
         return {
-          title: "Blog Tử Vi - Kiến Thức Lá Số, Đại Vận, Tiểu Vận",
+          title: "Bài viết",
           description:
-            "Khám phá các bài viết cơ bản về lá số tử vi, Mệnh, Thân, đại vận, tiểu vận, cung Quan Lộc và cung Tài Bạch.",
-          canonicalPath: "/blog",
+            "Những bài đọc nền tảng về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, can cung, đại vận và lưu niên.",
+          canonicalPath: "/bai-viet",
         };
       case "faq":
         return {
@@ -1237,8 +1145,8 @@ export default function App() {
         };
       case "video":
         return {
-          title: "Video về Tử Vi",
-          description: "Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
+          title: "video",
+          description: "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
           canonicalPath: "/video",
         };
       default:
@@ -1251,13 +1159,13 @@ export default function App() {
     }
   })();
 
-  const articleSchema = currentBlogPost
+  const articleSchema = currentKnowledgeArticle
     ? {
         "@context": "https://schema.org",
         "@type": "Article",
-        headline: currentBlogPost.title,
-        description: currentBlogPost.description,
-        mainEntityOfPage: `${siteUrl}${currentBlogPost.slug}`,
+        headline: currentKnowledgeArticle.title,
+        description: currentKnowledgeArticle.summary,
+        mainEntityOfPage: `${siteUrl}/bai-viet/${currentKnowledgeArticle.slug}`,
         author: {
           "@type": "Organization",
           name: "LaSoTuVi",
@@ -1482,7 +1390,7 @@ export default function App() {
 
       <section className="content-section lap-la-so-seo">
         <div className="section-heading section-heading--compact">
-          <p className="eyebrow">Kiến thức nền</p>
+          <p className="eyebrow">Nền tảng Bắc Phái</p>
           <h2>Lập lá số tử vi online miễn phí theo ngày giờ sinh</h2>
           <p>
             Nhập ngày sinh, giờ sinh, giới tính và năm muốn xem để hệ thống an lá số, xác định Mệnh, Thân, 12 cung, chính tinh,
@@ -1666,44 +1574,16 @@ export default function App() {
         title={pageSeo.title}
         description={pageSeo.description}
         canonicalPath={pageSeo.canonicalPath}
-        schema={[organizationSchema, breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Blog", path: "/blog" }])]}
+        schema={[
+          organizationSchema,
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bài viết", path: "/bai-viet" }]),
+        ]}
       />
-      <section className="content-section">
-        <div className="section-heading">
-          <p className="eyebrow">Blog tử vi</p>
-          <h1>Kiến thức lá số, đại vận và tiểu vận</h1>
-          <p>Các bài viết nền tảng giúp người mới hiểu cách đọc lá số dễ hơn trước khi đi sâu vào phần luận giải.</p>
-        </div>
-        <div className="blog-card-grid">
-          {blogPosts.map((post) => (
-            <article key={post.slug} className="product-card">
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-              <span className="blog-card-slug">{post.slug}</span>
-              <div className="home-hero-actions">
-                <a href={post.slug} className="ghost-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-                  Đọc bài viết
-                </a>
-                <a href="/lap-la-so" className="primary-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-                  Lập lá số miễn phí
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="placeholder-card blog-hub-cta">
-          <h2>Bạn muốn chuyển từ kiến thức sang lá số thực tế?</h2>
-          <p>Đọc bài để hiểu khái niệm trước, sau đó lập lá số cá nhân để đối chiếu trực tiếp với dữ liệu của chính bạn.</p>
-          <div className="home-hero-actions">
-            <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
-            <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Xem bảng giá</button>
-          </div>
-        </div>
-      </section>
+      <BacPhaiLibraryPage articles={knowledgeArticles} />
     </div>
   );
 
-  const blogArticlePage = currentBlogPost ? (
+  const blogArticlePage = currentKnowledgeArticle ? (
     <div className="home-page">
       <SEOHead
         title={pageSeo.title}
@@ -1714,65 +1594,12 @@ export default function App() {
           articleSchema!,
           breadcrumbSchema([
             { name: "Trang chủ", path: "/" },
-            { name: "Blog", path: "/blog" },
-            { name: currentBlogPost.title, path: currentBlogPost.slug },
+            { name: "Bài viết", path: "/bai-viet" },
+            { name: currentKnowledgeArticle.title, path: `/bai-viet/${currentKnowledgeArticle.slug}` },
           ]),
         ]}
       />
-      <section className="content-section">
-        <div className="section-heading article-hero">
-          <p className="eyebrow">Bài viết kiến thức</p>
-          <h1>{currentBlogPost.title}</h1>
-          <p>{currentBlogPost.description}</p>
-        </div>
-        <div className="article-layout">
-          <article className="article-content-card">
-            {currentBlogPost.content.map((paragraph, index) => (
-              <p key={`${currentBlogPost.slug}-${index}`}>{paragraph}</p>
-            ))}
-
-            <div className="article-inline-links">
-              <a href="/lap-la-so">Lập lá số miễn phí</a>
-              <a href="/bang-gia">Xem bảng giá luận giải</a>
-              <a href="/faq">Đọc câu hỏi thường gặp</a>
-            </div>
-          </article>
-
-          <aside className="article-sidebar">
-            <div className="article-side-card">
-              <p className="eyebrow">Liên kết nhanh</p>
-              <h3>Từ bài viết sang hành động</h3>
-              <a href="/lap-la-so" className="primary-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-                Lập lá số miễn phí
-              </a>
-              <a href="/bang-gia" className="ghost-button" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-                Xem bảng giá
-              </a>
-            </div>
-
-            <div className="article-side-card">
-              <p className="eyebrow">Bài liên quan</p>
-              <h3>Đọc tiếp</h3>
-              <div className="article-related-list">
-                {relatedBlogPosts.map((post) => (
-                  <a key={post.slug} href={post.slug} className="article-related-link">
-                    <strong>{post.title}</strong>
-                    <span>{post.description}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </aside>
-        </div>
-        <div className="placeholder-card">
-          <h2>Bạn muốn áp dụng ngay vào lá số của mình?</h2>
-          <p>Lập lá số miễn phí để xem dữ liệu cá nhân trước, sau đó mới đọc sâu hơn theo đúng câu hỏi bạn đang quan tâm.</p>
-          <div className="home-hero-actions">
-            <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
-            <button type="button" className="ghost-button" onClick={() => navigate("/blog")}>Quay lại blog</button>
-          </div>
-        </div>
-      </section>
+      <BacPhaiArticlePage article={currentKnowledgeArticle} relatedArticles={relatedKnowledgeArticles} />
     </div>
   ) : null;
 
@@ -1960,7 +1787,7 @@ export default function App() {
     </div>
   );
 
-  const youtubeLessonsPage = (
+  const videoLessonsPage = (
     <>
       <SEOHead
         title={pageSeo.title}
@@ -1971,7 +1798,7 @@ export default function App() {
           breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Video", path: "/video" }]),
         ]}
       />
-      <YouTubeLessonsPage />
+      <VideoLessonsPage />
     </>
   );
 
@@ -2000,8 +1827,8 @@ export default function App() {
             <button type="button" className={getNavLinkClass("/hop-tuoi")} onClick={() => navigateHomeSection("hop-tuoi")}>
               Hợp tuổi
             </button>
-            <button type="button" className={getNavLinkClass("/blog")} onClick={() => navigateHomeSection("kien-thuc")}>
-              Kiến thức
+            <button type="button" className={getNavLinkClass("/bai-viet")} onClick={() => navigateHomeSection("kien-thuc")}>
+              Bài viết
             </button>
             <button type="button" className={getNavLinkClass("/video")} onClick={() => navigate("/video")}>
               Video
@@ -2032,13 +1859,13 @@ export default function App() {
               : activePage === "la-so-mau"
                 ? samplePage
                 : activePage === "blog"
-                  ? (currentBlogPost ? blogArticlePage : blogPage)
+                  ? (currentKnowledgeArticle ? blogArticlePage : blogPage)
                   : activePage === "hop-tuoi"
                     ? compatPage
                     : activePage === "lien-he"
                       ? contactPage
                       : activePage === "video"
-                        ? youtubeLessonsPage
+                        ? videoLessonsPage
                         : faqPage}
       </main>
 
