@@ -37,7 +37,7 @@ import {
 import type { BirthInput, ChartView, LuuDisplayOptions, NormalizedBirthInput, PalaceView, StarView } from "./lib/types";
 import type { QuickReadingCard } from "./lib/chartUi";
 
-type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "bai-hoc-ngan";
+type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "video";
 type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he";
 type FormErrors = Partial<Record<keyof BirthInput, string>> & { form?: string };
 
@@ -703,8 +703,8 @@ export default function App() {
       setActivePage("lien-he");
       return;
     }
-    if (location.pathname === "/bai-hoc-ngan") {
-      setActivePage("bai-hoc-ngan");
+    if (location.pathname === "/video" || location.pathname === "/bai-hoc-ngan") {
+      setActivePage("video");
       return;
     }
     setActivePage("home");
@@ -1235,11 +1235,11 @@ export default function App() {
             "Liên hệ để được hướng dẫn chọn gói phù hợp, gửi câu hỏi theo lá số hoặc đặt lịch tư vấn trực tiếp.",
           canonicalPath: "/lien-he",
         };
-      case "bai-hoc-ngan":
+      case "video":
         return {
-          title: "Bài học ngắn về Tử Vi",
+          title: "Video về Tử Vi",
           description: "Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
-          canonicalPath: "/bai-hoc-ngan",
+          canonicalPath: "/video",
         };
       default:
         return {
@@ -1965,10 +1965,10 @@ export default function App() {
       <SEOHead
         title={pageSeo.title}
         description={pageSeo.description}
-        canonicalPath="/bai-hoc-ngan"
+        canonicalPath="/video"
         schema={[
           organizationSchema,
-          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bài học ngắn", path: "/bai-hoc-ngan" }]),
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Video", path: "/video" }]),
         ]}
       />
       <YouTubeLessonsPage />
@@ -2003,8 +2003,8 @@ export default function App() {
             <button type="button" className={getNavLinkClass("/blog")} onClick={() => navigateHomeSection("kien-thuc")}>
               Kiến thức
             </button>
-            <button type="button" className={getNavLinkClass("/bai-hoc-ngan")} onClick={() => navigate("/bai-hoc-ngan")}>
-              Bài học ngắn
+            <button type="button" className={getNavLinkClass("/video")} onClick={() => navigate("/video")}>
+              Video
             </button>
             <button type="button" className={getNavLinkClass("/bang-gia")} onClick={() => navigateHomeSection("premium")}>
               Bảng giá
@@ -2037,7 +2037,7 @@ export default function App() {
                     ? compatPage
                     : activePage === "lien-he"
                       ? contactPage
-                      : activePage === "bai-hoc-ngan"
+                      : activePage === "video"
                         ? youtubeLessonsPage
                         : faqPage}
       </main>

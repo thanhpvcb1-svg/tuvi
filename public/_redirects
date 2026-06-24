@@ -1,2 +1,3 @@
 /api/*   /api/:splat   200
+/bai-hoc-ngan   /video   301
 /*    /index.html   200

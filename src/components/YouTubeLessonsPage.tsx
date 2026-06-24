@@ -34,7 +34,7 @@ const trimDescription = (value: string, maxLength = 180) => {
   const normalized = value.replace(/\s+/g, " ").trim();
 
   if (!normalized) {
-    return "Xem video để theo dõi bài học ngắn về Tử Vi, Bắc Phái và Tứ Hóa Phi Tinh.";
+    return "Xem video để theo dõi nội dung Tử Vi, Bắc Phái và Tứ Hóa Phi Tinh.";
   }
 
   if (normalized.length <= maxLength) {
@@ -64,10 +64,10 @@ export default function YouTubeLessonsPage() {
           try {
             payload = JSON.parse(rawText) as LessonsResponse;
           } catch {
-            throw new Error("API bài học ngắn trả về JSON không hợp lệ.");
+            throw new Error("API video trả về JSON không hợp lệ.");
           }
         } else if (rawText.trim().startsWith("<")) {
-          throw new Error("API bài học ngắn chưa hoạt động ở môi trường này hoặc đang bị route SPA ghi đè.");
+          throw new Error("API video chưa hoạt động ở môi trường này hoặc đang bị route SPA ghi đè.");
         } else {
           throw new Error(defaultLoadError);
         }
@@ -106,8 +106,8 @@ export default function YouTubeLessonsPage() {
     <div className="home-page">
       <section className="content-section">
         <div className="section-heading bai-hoc-ngan-hero">
-          <p className="eyebrow">Bài học ngắn</p>
-          <h1>Bài học ngắn về Tử Vi</h1>
+          <p className="eyebrow">Video</p>
+          <h1>Video về Tử Vi</h1>
           <p>Tổng hợp video học Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và các ghi chú thực hành ngắn gọn để bạn xem nhanh theo từng chủ đề.</p>
         </div>
 
