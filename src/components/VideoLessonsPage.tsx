@@ -278,7 +278,23 @@ export default function VideoLessonsPage() {
 
     try {
       const response = await fetch(`/api/tiktok-oembed?url=${encodeURIComponent(lesson.url)}`);
-      const payload = (await response.json()) as TikTokOEmbedResponse;
+      const contentType = response.headers.get("content-type") || "";
+      const rawText = await response.text();
+      let payload: TikTokOEmbedResponse = {};
+
+      if (rawText) {
+        if (contentType.includes("application/json")) {
+          try {
+            payload = JSON.parse(rawText) as TikTokOEmbedResponse;
+          } catch {
+            throw new Error("API TikTok trả về JSON không hợp lệ.");
+          }
+        } else if (rawText.trim().startsWith("<")) {
+          throw new Error("API TikTok chưa hoạt động ở môi trường này hoặc đang bị route SPA ghi đè.");
+        } else {
+          throw new Error(defaultTikTokError);
+        }
+      }
 
       if (!response.ok) {
         throw new Error(payload.error || defaultTikTokError);
