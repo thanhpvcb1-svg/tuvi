@@ -38,6 +38,21 @@ const articlePosts = [
   },
 ];
 
+const buildWebPageSchema = (page) => ({
+  "@context": "https://schema.org",
+  "@type": page.route.startsWith("/bai-viet/") ? "Article" : "WebPage",
+  name: page.title,
+  headline: page.route.startsWith("/bai-viet/") ? page.title.replace(" | Bài viết", "") : undefined,
+  description: page.description,
+  url: `${siteUrl}${page.route}`,
+  inLanguage: "vi-VN",
+  publisher: {
+    "@type": "Organization",
+    name: "LaSoTuVi",
+    url: siteUrl,
+  },
+});
+
 const routes = [
   {
     route: "/",
@@ -49,7 +64,7 @@ const routes = [
         <section class="prerender-hero">
           <p class="prerender-kicker">LaSoTuVi</p>
           <h1>Lập lá số tử vi online theo ngày giờ sinh</h1>
-          <p>Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và nhận luận giải dễ hiểu về sự nghiệp, tài lộc, tình duyên.</p>
+          <p>Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và biết nên đọc tiếp phần nào theo câu hỏi của bạn.</p>
           <div class="prerender-actions">
             <a href="/lap-la-so">Lập lá số miễn phí</a>
             <a href="/la-so-mau" class="secondary">Xem lá số mẫu</a>
@@ -76,12 +91,12 @@ const routes = [
     route: "/bang-gia",
     title: "Bảng Giá Luận Giải Tử Vi - Hỏi 1 Câu Từ 50.000đ",
     description:
-      "Xem các gói luận giải tử vi: lập lá số miễn phí, hỏi 1 câu theo lá số 50.000đ và tư vấn trực tiếp với thầy 999.000đ.",
+      "Xem các gói luận giải tử vi: lập lá số miễn phí, hỏi 1 câu theo lá số 50.000đ và tư vấn trực tiếp 999.000đ.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
           <h1>Bảng giá luận giải tử vi</h1>
-          <p>Bạn có thể lập lá số miễn phí trước, sau đó chọn hỏi 1 câu theo lá số hoặc tư vấn trực tiếp khi cần phân tích sâu hơn.</p>
+          <p>Mỗi gói đi theo một mức nhu cầu khác nhau: xem nền, hỏi một vấn đề cụ thể, hoặc trao đổi sâu theo giai đoạn.</p>
         </section>
       </main>
     `,
@@ -121,14 +136,14 @@ const routes = [
   },
   {
     route: "/video",
-    title: "video",
+    title: "Video Học Tử Vi Bắc Phái",
     description:
-      "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
+      "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và cách đọc lá số theo hướng dễ tiếp cận.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Video</h1>
-          <p>Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn từ YouTube và TikTok của Thiên Ngân Tử.</p>
+          <h1>Video học Tử Vi Bắc Phái</h1>
+          <p>Các video ngắn được gom theo nền tảng để bạn học nhanh một khái niệm, rồi quay lại đối chiếu trên lá số của mình.</p>
           <div class="prerender-actions">
             <a href="/video">Xem danh sách video</a>
             <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
@@ -167,15 +182,14 @@ const routes = [
   },
   {
     route: "/hop-tuoi",
-    title: "Hợp Tuổi - Nội Dung Đang Hoàn Thiện",
+    title: "Hợp Tuổi Theo Lá Số - Chuẩn Bị Dữ Liệu So Khớp Quan Hệ",
     description:
-      "Trang hợp tuổi đang được hoàn thiện để cung cấp trải nghiệm rõ ràng và nhất quán với hệ thống lá số hiện tại.",
-    noindex: true,
+      "Hướng dẫn chuẩn bị dữ liệu hai người, câu hỏi và bối cảnh trước khi so khớp tình cảm, hôn nhân hoặc hợp tác theo lá số.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Hợp tuổi đang được hoàn thiện</h1>
-          <p>Tính năng này sẽ được mở khi có đủ dữ liệu và luồng giải thích rõ ràng cho người dùng.</p>
+          <h1>So khớp quan hệ theo lá số</h1>
+          <p>Chuẩn bị dữ liệu cho hai người và xác định câu hỏi chính trước khi đối chiếu: tình cảm, hôn nhân, hợp tác, tài chính hay nhịp sống.</p>
         </section>
       </main>
     `,
@@ -235,6 +249,10 @@ for (const page of routes) {
   html = replaceTag(html, /<meta\s+name="twitter:title"[\s\S]*?\/>/, `<meta name="twitter:title" content="${page.title}" />`);
   html = replaceTag(html, /<meta\s+name="twitter:description"[\s\S]*?\/>/, `<meta name="twitter:description" content="${page.description}" />`);
   html = replaceTag(html, /<link\s+rel="canonical"[\s\S]*?>/, `<link rel="canonical" href="${siteUrl}${page.route}" />`);
+  html = html.replace(
+    "</head>",
+    `<script id="route-structured-data" type="application/ld+json">${JSON.stringify(buildWebPageSchema(page))}</script></head>`,
+  );
   html = html.replace("</head>", `${prerenderStyles}</head>`);
   html = html.replace('<div id="root"></div>', `<div id="root">${page.body}</div>`);
 

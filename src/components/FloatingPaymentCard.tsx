@@ -6,15 +6,13 @@ type Props = {
 
 export default function FloatingPaymentCard({ onClick }: Props) {
   return (
-    <aside className="floating-payment-card" aria-label="Dịch vụ hỏi 1 câu theo lá số">
-      <p className="eyebrow">Gói nổi bật</p>
-      <h3>Luận giải 1 câu hỏi bất kỳ</h3>
+    <aside className="floating-payment-card" aria-label="Gói hỏi 1 câu theo lá số">
+      <p className="eyebrow">Gói phổ biến</p>
+      <h3>Hỏi 1 câu theo lá số</h3>
       <strong>50.000đ / câu</strong>
-      <p>
-        Hỏi trực tiếp về công việc, tình duyên, tài lộc hoặc vận hạn dựa trên lá số của bạn.
-      </p>
+      <p>Phù hợp khi bạn cần làm rõ một vấn đề cụ thể về công việc, tài chính, tình cảm hoặc vận năm.</p>
       <button type="button" className="primary-button" onClick={onClick}>
-        Hỏi ngay
+        Xem chi tiết
       </button>
     </aside>
   );

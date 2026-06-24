@@ -138,6 +138,14 @@ const trimDescription = (value?: string, maxLength = 180) => {
 
 const getYouTubeVideoFormatLabel = (url: string) => (url.includes("/shorts/") ? "Shorts" : "YouTube");
 
+const prettifyTikTokError = (message: string) => {
+  if (message.includes("Unexpected token") || message.includes("API TikTok") || message.includes("oEmbed") || message.includes("JSON")) {
+    return "Chưa tải được khung xem trước TikTok trong môi trường này. Bạn vẫn có thể mở video trực tiếp trên TikTok.";
+  }
+
+  return message;
+};
+
 export default function VideoLessonsPage() {
   const [youtubeItems, setYoutubeItems] = useState<UnifiedVideoLesson[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -309,7 +317,8 @@ export default function VideoLessonsPage() {
         resolvedUrl: payload.resolved_url || lesson.url,
       });
     } catch (caughtError) {
-      const message = caughtError instanceof Error ? caughtError.message : defaultTikTokError;
+      const rawMessage = caughtError instanceof Error ? caughtError.message : defaultTikTokError;
+      const message = prettifyTikTokError(rawMessage);
       setTikTokEmbedCache((current) => ({ ...current, [lesson.url]: { error: message } }));
       setModalState({
         lesson,
@@ -336,8 +345,8 @@ export default function VideoLessonsPage() {
       <section className="content-section">
         <div className="section-heading bai-hoc-ngan-hero">
           <p className="eyebrow">Video</p>
-          <h1>Video</h1>
-          <p>Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.</p>
+          <h1>Video học Tử Vi Bắc Phái</h1>
+          <p>Các video ngắn được gom theo nền tảng để bạn học nhanh một khái niệm, rồi quay lại đối chiếu trên lá số của mình.</p>
         </div>
 
         <div className="video-platform-filters" aria-label="Lọc theo nền tảng">
@@ -441,8 +450,7 @@ export default function VideoLessonsPage() {
         ) : null}
 
         <div className="youtube-lessons-note">
-          <p>Video được dẫn nguồn từ kênh YouTube Thiên Ngân Tử. Nội dung thuộc về chủ sở hữu kênh.</p>
-          <p>Video được dẫn nguồn từ TikTok. Nội dung thuộc về chủ sở hữu kênh.</p>
+          <p>Video được dẫn nguồn từ kênh YouTube và TikTok của Thiên Ngân Tử. Quyền nội dung thuộc về chủ sở hữu kênh.</p>
         </div>
       </section>
 
@@ -451,7 +459,7 @@ export default function VideoLessonsPage() {
           <div className="video-embed-backdrop" onClick={closeModal} />
           <div className="video-embed-panel">
             <button type="button" className="video-embed-close" onClick={closeModal} aria-label="Đóng cửa sổ video">
-              ×
+              x
             </button>
             <div className="video-embed-header">
               <span className="youtube-lesson-platform-badge youtube-lesson-platform-badge--tiktok">TikTok</span>
@@ -472,11 +480,13 @@ export default function VideoLessonsPage() {
 
             {!modalState.isLoading && !modalState.error && modalState.embedHtml ? (
               <div className="video-embed-body">
-                <div
-                  className="video-embed-html"
-                  dangerouslySetInnerHTML={{ __html: modalState.embedHtml }}
-                />
-                <a className="youtube-lesson-link youtube-lesson-link--secondary" href={modalState.resolvedUrl || modalState.lesson.url} target="_blank" rel="noreferrer">
+                <div className="video-embed-html" dangerouslySetInnerHTML={{ __html: modalState.embedHtml }} />
+                <a
+                  className="youtube-lesson-link youtube-lesson-link--secondary"
+                  href={modalState.resolvedUrl || modalState.lesson.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Mở trên TikTok
                 </a>
               </div>

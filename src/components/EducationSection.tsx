@@ -1,18 +1,18 @@
 import React from "react";
 
 const palaceDescriptions = [
-  ["Mệnh", "Cho biết khí chất, cách bạn phản ứng với cuộc sống và nền tảng tính cách."],
-  ["Phụ Mẫu", "Liên quan đến gia đình gốc, mối liên hệ với cha mẹ và sự nâng đỡ ban đầu."],
-  ["Phúc Đức", "Phản ánh phúc khí, đời sống tinh thần và hậu thuẫn dài hạn."],
+  ["Mệnh", "Cho biết khí chất, cách bạn phản ứng với cuộc sống và phần nền của tính cách."],
+  ["Phụ Mẫu", "Liên quan đến gia đình gốc, sự nâng đỡ ban đầu và mối liên hệ với cha mẹ."],
+  ["Phúc Đức", "Phản ánh phúc khí, đời sống tinh thần và hậu thuẫn tích lũy theo thời gian."],
   ["Điền Trạch", "Gợi mở về nhà cửa, tài sản tích lũy và môi trường sống."],
-  ["Quan Lộc", "Thể hiện hướng nghề nghiệp, vị thế xã hội và nhịp phát triển công việc."],
+  ["Quan Lộc", "Thể hiện hướng nghề nghiệp, vị thế công việc và nhịp phát triển sự nghiệp."],
   ["Nô Bộc", "Cho thấy mạng lưới cộng sự, bạn bè và người hỗ trợ."],
-  ["Thiên Di", "Liên quan đến cơ hội bên ngoài, việc đi xa và cách hòa nhập môi trường xã hội."],
-  ["Tật Ách", "Gợi ý về sức khỏe, áp lực tinh thần và điều cần chủ động chăm sóc."],
+  ["Thiên Di", "Liên quan đến môi trường bên ngoài, việc đi xa và khả năng hòa nhập xã hội."],
+  ["Tật Ách", "Gợi ý về sức khỏe, áp lực tinh thần và các điểm cần chủ động chăm sóc."],
   ["Tài Bạch", "Nhắc đến dòng tiền, cách kiếm tiền và thói quen quản lý tài chính."],
-  ["Tử Tức", "Liên quan đến con cái, thành quả cá nhân và các kế hoạch dài hạn."],
+  ["Tử Tức", "Liên quan đến con cái, thành quả cá nhân và kế hoạch dài hạn."],
   ["Phu Thê", "Phản ánh xu hướng tình cảm, hôn nhân và cách gắn bó với bạn đời."],
-  ["Huynh Đệ", "Cho biết quan hệ anh chị em và những người ngang vai đồng hành cùng bạn."],
+  ["Huynh Đệ", "Cho biết quan hệ anh chị em và những người đồng hành ngang vai."],
 ];
 
 export default function EducationSection() {
@@ -22,16 +22,18 @@ export default function EducationSection() {
         <p className="eyebrow">Kiến thức cơ bản</p>
         <h2>Lá số tử vi là gì?</h2>
         <p>
-          Lá số tử vi là bản đồ tham khảo dựa trên ngày, giờ, tháng, năm sinh để xem tổng quan các cung và xu hướng cuộc đời theo quan niệm tử vi phương Đông.
+          Lá số tử vi là một bản đồ tham khảo dựa trên ngày, giờ, tháng, năm sinh để nhìn tổng quan các cung và xu hướng vận
+          hành theo hệ quy chiếu của tử vi phương Đông.
         </p>
-        <p className="muted-note">Nội dung chỉ mang tính tham khảo, chiêm nghiệm và giải trí.</p>
+        <p className="muted-note">Nội dung trên trang mang tính tham khảo và chiêm nghiệm.</p>
       </div>
 
       <div className="education-card">
         <p className="eyebrow">Lưu ý quan trọng</p>
         <h2>Vì sao giờ sinh quan trọng?</h2>
         <p>
-          Giờ sinh ảnh hưởng đến cách an cung, vị trí Mệnh, Thân và nhiều yếu tố khác trong lá số. Nếu bạn không chắc giờ sinh, hãy xem kết quả như một bản tham khảo gần đúng.
+          Giờ sinh ảnh hưởng đến cách an cung, vị trí Mệnh, Thân và nhiều lớp dữ liệu khác. Nếu chưa chắc giờ sinh, bạn vẫn có
+          thể xem bản tham khảo, nhưng nên hiểu rõ giới hạn của kết quả đó.
         </p>
       </div>
 
@@ -50,4 +52,3 @@ export default function EducationSection() {
     </section>
   );
 }
-

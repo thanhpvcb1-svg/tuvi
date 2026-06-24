@@ -13,10 +13,10 @@ export default function PrivacyNotice({ showClearAction = false, onClear }: Prop
         <h2>Thông tin của bạn được dùng như thế nào?</h2>
       </div>
       <ul className="privacy-list">
-        <li>Thông tin bạn nhập chỉ dùng để lập lá số trên trình duyệt.</li>
-        <li>Không công khai thông tin cá nhân cho người khác.</li>
-        <li>Không nên nhập thông tin nhạy cảm nếu bạn không muốn lưu lại trên thiết bị.</li>
-        <li>Hiện tại hệ thống không lưu lá số sau khi bạn đóng trình duyệt.</li>
+        <li>Thông tin bạn nhập được dùng để an lá số và hiển thị kết quả trên trình duyệt.</li>
+        <li>Trang không hiển thị công khai dữ liệu cá nhân của bạn cho người khác.</li>
+        <li>Nếu dùng máy chung, bạn không nên nhập thêm các thông tin nhạy cảm ngoài dữ liệu cần cho lá số.</li>
+        <li>Bạn có thể xóa dữ liệu đã lưu trên trình duyệt nếu không muốn giữ lại cho lần xem sau.</li>
       </ul>
       {showClearAction ? (
         <button type="button" className="ghost-button privacy-clear-button" onClick={onClear}>

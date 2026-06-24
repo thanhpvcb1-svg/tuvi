@@ -66,8 +66,8 @@ export default function BacPhaiArticlePage({ article, relatedArticles }: Props) 
           </div>
 
           <div className="library-cta-box">
-            <h3>Muốn đem lý thuyết trở về lá số thật?</h3>
-            <p>Mở lá số của bạn để đối chiếu can cung, Tứ Hóa và vận trình theo đúng dữ liệu sinh cá nhân.</p>
+            <h3>Muốn đối chiếu lý thuyết với lá số thật?</h3>
+            <p>Mở lá số của bạn để xem các điểm trong bài viết xuất hiện như thế nào trên đúng dữ liệu sinh cá nhân.</p>
             <a href={article.cta.href} className="primary-button">
               {article.cta.label}
             </a>
@@ -77,7 +77,7 @@ export default function BacPhaiArticlePage({ article, relatedArticles }: Props) 
         <aside className="article-sidebar">
           <div className="article-side-card">
             <p className="eyebrow">Liên kết nhanh</p>
-            <h3>Đi tiếp trong mục bài viết</h3>
+            <h3>Tiếp tục trong thư viện</h3>
             <a
               href="/bai-viet"
               className="ghost-button"

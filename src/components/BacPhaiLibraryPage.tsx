@@ -12,6 +12,21 @@ type Props = {
 
 const normalizeSearch = (value: string) => value.trim().toLowerCase();
 
+const learningPaths = [
+  {
+    title: "Người mới bắt đầu",
+    description: "Đọc các bài nhập môn để hiểu Mệnh, Thân, 12 cung và cách đặt câu hỏi khi xem lá số.",
+  },
+  {
+    title: "Muốn đọc vận hạn",
+    description: "Ưu tiên các bài về đại vận, lưu niên, Tứ Hóa và cách đặt năm đang xem vào bối cảnh toàn cục.",
+  },
+  {
+    title: "Tìm hiểu Bắc Phái",
+    description: "Đi sâu vào can cung, Phi Hóa, Lai Nhân Cung và các quy tắc cần đọc cùng nhau.",
+  },
+];
+
 export default function BacPhaiLibraryPage({ articles }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Tất cả");
@@ -46,8 +61,17 @@ export default function BacPhaiLibraryPage({ articles }: Props) {
     <section className="content-section">
       <div className="library-hero">
         <p className="eyebrow">Bài viết</p>
-        <h1>Bài viết</h1>
+        <h1>Thư viện bài viết</h1>
         <p>Những bài đọc nền tảng về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, can cung, đại vận và lưu niên.</p>
+      </div>
+
+      <div className="seo-copy-grid library-path-grid">
+        {learningPaths.map((path) => (
+          <article key={path.title} className="seo-copy-card">
+            <h2>{path.title}</h2>
+            <p>{path.description}</p>
+          </article>
+        ))}
       </div>
 
       <div className="library-toolbar">
@@ -86,8 +110,8 @@ export default function BacPhaiLibraryPage({ articles }: Props) {
 
       <div className="library-results-bar">
         <strong>{filteredArticles.length}</strong>
-        <span>bài đọc đang hiển thị</span>
-        <p>Thư viện đi theo lối viết cổ học dễ đọc, nhấn vào quy tắc và cách ứng dụng vào lá số thay vì phán quyết tuyệt đối.</p>
+        <span>bài đang hiển thị</span>
+        <p>Thư viện đi theo lối viết dễ đọc, nhấn vào quy tắc và cách áp dụng vào lá số thay vì đưa ra kết luận tuyệt đối.</p>
       </div>
 
       {filteredArticles.length === 0 ? (

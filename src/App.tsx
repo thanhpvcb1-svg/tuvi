@@ -111,7 +111,7 @@ const homeFaqs = [
     answer: "Bạn gửi một câu hỏi cụ thể theo lá số và nhận phần trả lời tập trung đúng vấn đề đang quan tâm như công việc, tài lộc, tình duyên hoặc vận hạn.",
   },
   {
-    question: "Khi nào nên chọn tư vấn trực tiếp với thầy?",
+    question: "Khi nào nên chọn tư vấn trực tiếp?",
     answer: "Phù hợp khi bạn cần nhìn toàn diện hơn về lá số hoặc cần định hướng nghiêm túc cho một giai đoạn quan trọng.",
   },
 ];
@@ -145,8 +145,8 @@ const compatFaqs = [
     answer: "Nên có lá số trước để việc đối chiếu đi theo đúng dữ liệu cá nhân thay vì chỉ dừng ở mức xem tuổi cơ bản.",
   },
   {
-    question: "Hợp tuổi trên trang này đã mở chính thức chưa?",
-    answer: "Phần engine so khớp đầy đủ vẫn đang được hoàn thiện. Hiện tại trang tập trung vào hướng dẫn, nội dung nền và luồng chuẩn bị dữ liệu.",
+    question: "Trang hợp tuổi hiện hỗ trợ phần nào?",
+    answer: "Trang hỗ trợ chuẩn bị dữ liệu, xác định câu hỏi và hướng đọc quan hệ theo lá số. Khi cần xem sâu, bạn có thể gửi brief để được hướng dẫn theo trường hợp cụ thể.",
   },
   {
     question: "Nếu cần xem sớm thì nên làm gì?",
@@ -167,6 +167,55 @@ const contactFaqs = [
     question: "Nên chọn hỏi 1 câu hay tư vấn trực tiếp?",
     answer: "Nếu bạn đang cần giải một vấn đề rõ ràng, gói hỏi 1 câu thường phù hợp hơn. Nếu cần góc nhìn toàn diện theo giai đoạn, tư vấn trực tiếp sẽ hợp hơn.",
   },
+];
+
+const chartReadingSteps = [
+  {
+    title: "1. Kiểm tra dữ liệu nền",
+    description: "Xem lại ngày sinh, loại lịch, giờ sinh và năm đang xem trước khi đọc kết quả.",
+  },
+  {
+    title: "2. Đọc Mệnh, Thân và các cung trọng tâm",
+    description: "Bắt đầu từ Mệnh - Thân, sau đó đi vào Quan Lộc, Tài Bạch, Phu Thê hoặc cung đúng với câu hỏi của bạn.",
+  },
+  {
+    title: "3. Đặt vận năm vào toàn cục",
+    description: "Dùng thanh chọn năm để xem tiểu vận, rồi đối chiếu với đại vận và các cung liên quan.",
+  },
+];
+
+const pricingGuides = [
+  {
+    title: "Chọn gói miễn phí khi",
+    description: "Bạn mới muốn xem bố cục lá số, kiểm tra giờ sinh hoặc hiểu các cung cơ bản trước khi hỏi sâu.",
+  },
+  {
+    title: "Chọn gói 1 câu khi",
+    description: "Bạn đang phân vân một vấn đề rõ như đổi việc, tài chính, tình cảm, hợp tác hoặc vận hạn của một năm cụ thể.",
+  },
+  {
+    title: "Chọn tư vấn trực tiếp khi",
+    description: "Bạn cần nhìn toàn diện nhiều mảng cùng lúc, hoặc muốn trao đổi theo bối cảnh thực tế trong một giai đoạn quan trọng.",
+  },
+];
+
+const goodQuestionExamples = [
+  "Năm 2026 tôi có nên đổi việc hay nên giữ hướng hiện tại?",
+  "Giai đoạn này nên ưu tiên tích lũy hay mở rộng kinh doanh?",
+  "Mối quan hệ hiện tại cần lưu ý điều gì để bớt lệch nhịp?",
+];
+
+const weakQuestionExamples = [
+  "Lá số này tốt hay xấu?",
+  "Bao giờ tôi giàu?",
+  "Nói hết tương lai của tôi.",
+];
+
+const compatibilityBriefItems = [
+  "Ngày giờ sinh và giới tính của từng người.",
+  "Mối quan hệ muốn xem: yêu đương, hôn nhân, hợp tác hay gia đình.",
+  "Câu hỏi chính: giao tiếp, tài chính, nhịp sống, mục tiêu dài hạn hoặc thời điểm quyết định.",
+  "Bối cảnh ngắn 2-3 dòng để phần đối chiếu không bị quá chung.",
 ];
 
 const defaultInput: BirthInput = {
@@ -1098,7 +1147,7 @@ export default function App() {
         return {
           title: "Bảng Giá Luận Giải Tử Vi - Hỏi 1 Câu Từ 50.000đ",
           description:
-            "Xem các gói luận giải tử vi: lập lá số miễn phí, hỏi 1 câu theo lá số 50.000đ và tư vấn trực tiếp với thầy 999.000đ.",
+            "Xem các gói luận giải tử vi: lập lá số miễn phí, hỏi 1 câu theo lá số 50.000đ và tư vấn trực tiếp 999.000đ.",
           canonicalPath: "/bang-gia",
         };
       case "la-so-mau":
@@ -1131,9 +1180,9 @@ export default function App() {
         };
       case "hop-tuoi":
         return {
-          title: "Hợp Tuổi - Nội Dung Đang Hoàn Thiện",
+          title: "Hợp Tuổi Theo Lá Số - Chuẩn Bị Dữ Liệu So Khớp Quan Hệ",
           description:
-            "Trang hợp tuổi đang được hoàn thiện để cung cấp trải nghiệm rõ ràng và nhất quán với hệ thống lá số hiện tại.",
+            "Hướng dẫn chuẩn bị dữ liệu hai người, câu hỏi và bối cảnh trước khi so khớp tình cảm, hôn nhân hoặc hợp tác theo lá số.",
           canonicalPath: "/hop-tuoi",
         };
       case "lien-he":
@@ -1145,8 +1194,8 @@ export default function App() {
         };
       case "video":
         return {
-          title: "video",
-          description: "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và luận giải mệnh bàn.",
+          title: "Video Học Tử Vi Bắc Phái",
+          description: "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và cách đọc lá số theo hướng dễ tiếp cận.",
           canonicalPath: "/video",
         };
       default:
@@ -1205,7 +1254,7 @@ export default function App() {
           <p className="eyebrow">LaSoTuVi</p>
           <h1>Lập lá số tử vi online theo ngày giờ sinh</h1>
           <p>
-            Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và nhận luận giải dễ hiểu về sự nghiệp, tài lộc, tình duyên.
+            Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và biết nên đọc tiếp phần nào theo câu hỏi của bạn.
           </p>
           <div className="home-hero-actions">
             <button type="button" className="primary-button" onClick={navigateChartForm}>
@@ -1221,9 +1270,9 @@ export default function App() {
 
       <HomeShowcase />
       <PremiumPlans
-        eyebrow="Bảng giá trên trang chủ"
+        eyebrow="Luận giải theo nhu cầu"
         title="Bắt đầu miễn phí, sau đó chọn đúng mức hỗ trợ bạn cần"
-        description="Mô hình bán hàng được giữ đơn giản: lập lá số miễn phí, hỏi 1 câu theo lá số với 50.000đ hoặc đặt lịch tư vấn trực tiếp khi cần phân tích sâu."
+        description="Bạn có thể xem phần nền trước, rồi chỉ chọn hỏi sâu khi đã có một vấn đề đủ rõ để đối chiếu với lá số."
         compact
         onSelectPlan={handleSelectPlan}
       />
@@ -1356,7 +1405,7 @@ export default function App() {
               </div>
               <div className="placeholder-card placeholder-card--inline">
                 <p>
-                  Phần luận vận hạn chi tiết sẽ được bổ sung trong phiên bản tiếp theo. Hiện tại bạn đã có thanh chọn năm và highlight tiểu vận trực tiếp trên lá số.
+                  Khu vực này đang ưu tiên phần theo dõi dữ liệu vận năm trên lá số. Bạn đã có thanh chọn năm và điểm nhấn tiểu vận để tự đối chiếu theo từng giai đoạn.
                 </p>
               </div>
             </section>
@@ -1365,7 +1414,7 @@ export default function App() {
               <div className="premium-upsell-card">
                 <div>
                   <p className="eyebrow">Cần xem sâu hơn?</p>
-                  <h2>Hỏi 1 câu theo lá số hoặc đặt lịch tư vấn trực tiếp với thầy</h2>
+                  <h2>Hỏi 1 câu theo lá số hoặc đặt lịch tư vấn trực tiếp</h2>
                   <p className="result-note">
                     Sau khi đã có lá số cơ bản, bạn có thể hỏi thêm một vấn đề cụ thể với mức 50.000đ hoặc chọn tư vấn trực tiếp khi cần định hướng nghiêm túc.
                   </p>
@@ -1386,6 +1435,22 @@ export default function App() {
             <p>Hệ thống sẽ hiển thị biểu đồ 12 cung, luận giải nhanh và phần chi tiết từng cung ngay bên dưới.</p>
           </section>
         )}
+      </section>
+
+      <section className="content-section">
+        <div className="section-heading section-heading--compact">
+          <p className="eyebrow">Cách đọc kết quả</p>
+          <h2>Sau khi lập lá số, nên đọc theo 3 bước</h2>
+          <p>Đi theo thứ tự này sẽ giúp bạn tránh bị ngợp bởi quá nhiều sao và cung cùng lúc.</p>
+        </div>
+        <div className="seo-copy-grid">
+          {chartReadingSteps.map((step) => (
+            <article key={step.title} className="seo-copy-card">
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="content-section lap-la-so-seo">
@@ -1480,20 +1545,20 @@ export default function App() {
       <section className="content-section">
         <div className="seo-copy-grid">
           <article className="seo-copy-card">
-            <h3>Mệnh, Thân và Cục</h3>
-            <p>Người dùng có thể xem cách các phần nền tảng của lá số được trình bày trước, từ đó hiểu nhanh mình cần đọc gì sau khi lập lá số thật.</p>
+            <h3>Mẫu đọc phần nền</h3>
+            <p>Dùng để xem cách Mệnh, Thân, Cục và 12 cung được trình bày trước khi bạn nhập dữ liệu thật của mình.</p>
           </article>
           <article className="seo-copy-card">
-            <h3>Đại vận và tiểu vận</h3>
-            <p>Bố cục ví dụ giúp hình dung cách theo dõi vận trình theo giai đoạn và cách năm đang xem được đặt trong toàn bộ hành trình lá số.</p>
+            <h3>Mẫu theo dõi vận năm</h3>
+            <p>Phù hợp nếu bạn muốn hiểu cách năm đang xem được đặt trong đại vận, tiểu vận và các cung liên quan.</p>
           </article>
           <article className="seo-copy-card">
-            <h3>Ví dụ luận giải sự nghiệp và tài lộc</h3>
-            <p>LaSoTuVi ưu tiên cách diễn giải ngắn gọn, dễ hiểu và tập trung vào điều người dùng cần nhất trước khi quyết định hỏi sâu hơn.</p>
+            <h3>Mẫu chưa rõ giờ sinh</h3>
+            <p>Giúp bạn thấy phần nào vẫn có thể tham khảo và phần nào nên đọc dè dặt khi chưa có giờ sinh chính xác.</p>
           </article>
           <article className="seo-copy-card">
-            <h3>Ví dụ luận giải tình duyên</h3>
-            <p>Trang mẫu giúp tăng niềm tin bằng cách cho người dùng thấy trước phong cách trình bày, thay vì chỉ yêu cầu nhập dữ liệu rồi mới hiển thị kết quả.</p>
+            <h3>Mẫu đặt câu hỏi sâu</h3>
+            <p>Sau khi xem mẫu, bạn có thể hình dung nên hỏi theo một vấn đề cụ thể thay vì yêu cầu luận toàn bộ lá số cùng lúc.</p>
           </article>
         </div>
       </section>
@@ -1535,26 +1600,49 @@ export default function App() {
       <PremiumPlans
         eyebrow="Luận giải & tư vấn"
         title="Bảng giá dịch vụ theo lá số"
-        description="Rõ ràng, gọn và tập trung vào hành trình thực tế: xem miễn phí trước, hỏi 1 câu khi cần quyết định nhanh, hoặc tư vấn trực tiếp khi cần định hướng sâu."
+        description="Mỗi gói đi theo một mức nhu cầu khác nhau: xem nền, hỏi một vấn đề cụ thể, hoặc trao đổi sâu theo giai đoạn."
         onSelectPlan={handleSelectPlan}
       />
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Chọn đúng gói</p>
-          <h2>Mỗi mức hỗ trợ phù hợp với một nhu cầu khác nhau</h2>
+          <h2>Chọn theo tình huống hiện tại của bạn</h2>
+        </div>
+        <div className="seo-copy-grid">
+          {pricingGuides.map((guide) => (
+            <article key={guide.title} className="seo-copy-card">
+              <h3>{guide.title}</h3>
+              <p>{guide.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Đặt câu hỏi</p>
+          <h2>Một câu hỏi rõ giúp phần luận giải đi đúng trọng tâm</h2>
+          <p>Gói 1 câu hiệu quả nhất khi bạn mô tả vấn đề cụ thể, có thời gian hoặc bối cảnh đi kèm.</p>
         </div>
         <div className="seo-copy-grid">
           <article className="seo-copy-card">
-            <h3>Miễn phí phù hợp với ai?</h3>
-            <p>Phù hợp với người mới bắt đầu, muốn xem bố cục lá số, Mệnh, Thân và 12 cung trước khi quyết định có cần đọc sâu hơn hay không.</p>
+            <h3>Câu hỏi nên gửi</h3>
+            <ul className="plan-feature-list">
+              {goodQuestionExamples.map((question) => (
+                <li key={question}>{question}</li>
+              ))}
+            </ul>
           </article>
           <article className="seo-copy-card">
-            <h3>Gói 50.000đ phù hợp với ai?</h3>
-            <p>Phù hợp khi bạn đang phân vân một quyết định rõ ràng, ví dụ đổi việc, tài chính, tình duyên hoặc vận hạn của năm đang xem.</p>
+            <h3>Câu hỏi nên tránh</h3>
+            <ul className="plan-feature-list">
+              {weakQuestionExamples.map((question) => (
+                <li key={question}>{question}</li>
+              ))}
+            </ul>
           </article>
           <article className="seo-copy-card">
-            <h3>Gói 999.000đ phù hợp với ai?</h3>
-            <p>Phù hợp với người cần một buổi trao đổi nghiêm túc, muốn nhìn toàn diện hơn về lá số và cần định hướng theo từng giai đoạn.</p>
+            <h3>Sau khi thanh toán</h3>
+            <p>Bạn gửi lá số hoặc brief liên hệ, nêu câu hỏi chính và nhận hướng dẫn theo đúng gói đã chọn. Nếu thiếu giờ sinh, phần phản hồi sẽ nói rõ giới hạn cần đọc dè dặt.</p>
           </article>
         </div>
       </section>
@@ -1639,8 +1727,8 @@ export default function App() {
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Hợp tuổi</p>
-          <h1>Hợp tuổi theo lá số: đang mở dần theo hướng đúng dữ liệu</h1>
-          <p>Trang này hiện đóng vai trò hướng dẫn chuẩn bị dữ liệu, câu hỏi và bối cảnh để khi mở engine hợp tuổi, trải nghiệm sẽ rõ ràng và dùng được ngay cho tình huống thực tế.</p>
+          <h1>So khớp quan hệ theo lá số</h1>
+          <p>Chuẩn bị dữ liệu cho hai người và xác định câu hỏi chính trước khi đối chiếu: tình cảm, hôn nhân, hợp tác, tài chính hay nhịp sống.</p>
         </div>
         <div className="seo-copy-grid">
           <article className="seo-copy-card">
@@ -1652,13 +1740,29 @@ export default function App() {
             <p>Phù hợp khi bạn muốn xem mức độ hòa hợp trong giao tiếp, nhịp sống, công việc, tài chính hoặc định hướng mối quan hệ dựa trên dữ liệu lá số thay vì chỉ xem tuổi nhanh.</p>
           </article>
           <article className="seo-copy-card">
-            <h3>Vì sao mở chậm hơn?</h3>
-            <p>Phần hợp tuổi cần logic so khớp nhiều lớp hơn một công cụ xem nhanh. Ưu tiên hiện tại là bảo đảm phần giải thích dễ hiểu và không đẩy người dùng vào kết luận quá cứng.</p>
+            <h3>Nên đọc theo hướng nào?</h3>
+            <p>Đọc hợp tuổi như một bản đối chiếu xu hướng và điểm cần trao đổi, không nên dùng như một kết luận tuyệt đối về việc nên hay không nên gắn bó.</p>
           </article>
         </div>
+        <div className="contact-brief-card">
+          <div className="contact-brief-head">
+            <div>
+              <p className="eyebrow">Brief hợp tuổi</p>
+              <h2>Thông tin nên chuẩn bị trước khi so khớp</h2>
+              <p className="result-note">Một brief rõ giúp phần đối chiếu bám đúng mối quan hệ thật, thay vì chỉ dừng ở tuổi năm sinh.</p>
+            </div>
+          </div>
+          <div className="seo-copy-card">
+            <ul className="plan-feature-list">
+              {compatibilityBriefItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <div className="placeholder-card">
-          <h2>Bạn có thể chuẩn bị trước ngay từ bây giờ</h2>
-          <p>Lập lá số của mình trước, sau đó copy brief hoặc liên hệ để mô tả rõ trường hợp bạn muốn xem. Đây là cách tốt nhất để sẵn sàng khi công cụ hợp tuổi được mở đầy đủ.</p>
+          <h2>Bạn có thể chuẩn bị dữ liệu từ bây giờ</h2>
+          <p>Lập lá số của mình trước, sau đó ghi rõ trường hợp muốn đối chiếu hoặc copy brief liên hệ. Cách này giúp việc so khớp sau đó đi nhanh hơn và ít mơ hồ hơn.</p>
           <div className="home-hero-actions">
             <button type="button" className="primary-button" onClick={navigateChartForm}>Lập lá số miễn phí</button>
             <button type="button" className="ghost-button" onClick={() => navigate("/lien-he")}>Chuẩn bị brief liên hệ</button>
@@ -1707,6 +1811,25 @@ export default function App() {
             <h3>Bắt đầu nhanh</h3>
             <p>Nếu chưa có lá số, hãy lập lá số miễn phí trước. Nếu đã có lá số, bạn có thể đi thẳng sang bảng giá để chọn mức hỗ trợ phù hợp.</p>
           </article>
+        </div>
+        <div className="contact-brief-card">
+          <div className="contact-brief-head">
+            <div>
+              <p className="eyebrow">Mẫu nội dung</p>
+              <h2>Gửi đủ thông tin để được hỗ trợ nhanh hơn</h2>
+              <p className="result-note">Bạn có thể dùng cấu trúc này khi nhắn Zalo, Facebook hoặc email.</p>
+            </div>
+          </div>
+          <div className="seo-copy-card">
+            <p>
+              Họ tên hoặc biệt danh: ...<br />
+              Ngày giờ sinh: ...<br />
+              Giới tính: ...<br />
+              Năm muốn xem: ...<br />
+              Câu hỏi chính: ...<br />
+              Bối cảnh ngắn: ...
+            </p>
+          </div>
         </div>
         {chart && submittedInput ? (
           <div className="contact-brief-card">

@@ -75,6 +75,7 @@ export default function BirthForm({
                 aria-invalid={fieldErrors.fullName ? "true" : "false"}
                 aria-describedby={fieldErrors.fullName ? getErrorId("fullName") : undefined}
               />
+              <p className="field-help">Có thể dùng tên ngắn hoặc biệt danh nếu bạn không muốn nhập tên thật.</p>
               {fieldErrors.fullName ? <p id={getErrorId("fullName")} className="field-error">{fieldErrors.fullName}</p> : null}
             </div>
 
@@ -96,6 +97,7 @@ export default function BirthForm({
                 <option value="solar">Dương lịch</option>
                 <option value="lunar">Âm lịch</option>
               </select>
+              <p className="field-help">Nếu giấy tờ ghi ngày dương lịch, giữ mặc định Dương lịch.</p>
             </div>
 
             <div className="field field-third">
@@ -160,6 +162,7 @@ export default function BirthForm({
                 aria-invalid={fieldErrors.birthHour ? "true" : "false"}
                 aria-describedby={fieldErrors.birthHour ? getErrorId("birthHour") : undefined}
               />
+              <p className="field-help">Giờ sinh ảnh hưởng đến cách an Mệnh, Thân và nhiều lớp sao trong lá số.</p>
               {fieldErrors.birthHour ? <p id={getErrorId("birthHour")} className="field-error">{fieldErrors.birthHour}</p> : null}
             </div>
 
@@ -177,6 +180,7 @@ export default function BirthForm({
                 aria-invalid={fieldErrors.birthMinute ? "true" : "false"}
                 aria-describedby={fieldErrors.birthMinute ? getErrorId("birthMinute") : undefined}
               />
+              <p className="field-help">Không nhớ phút sinh có thể để trống, hệ thống sẽ hiểu là 00 phút.</p>
               {fieldErrors.birthMinute ? <p id={getErrorId("birthMinute")} className="field-error">{fieldErrors.birthMinute}</p> : null}
             </div>
 
@@ -229,6 +233,7 @@ export default function BirthForm({
                 aria-invalid={fieldErrors.horoscopeYear ? "true" : "false"}
                 aria-describedby={fieldErrors.horoscopeYear ? getErrorId("horoscopeYear") : undefined}
               />
+              <p className="field-help">Nên chọn năm bạn đang cần xem công việc, tài chính, tình cảm hoặc vận hạn.</p>
               {fieldErrors.horoscopeYear ? <p id={getErrorId("horoscopeYear")} className="field-error">{fieldErrors.horoscopeYear}</p> : null}
             </div>
           </div>

@@ -17,11 +17,9 @@ export default function SampleChartsSection({ presets, onSelect }: Props) {
   return (
     <section className="content-section" id="la-so-mau">
       <div className="section-heading">
-        <p className="eyebrow">Lá Số Mẫu</p>
-        <h2>Xem Trước Một Số Lá Số Mẫu</h2>
-        <p>
-          Tham khảo cách hiển thị lá số và nội dung luận giải trước khi tạo lá số của riêng bạn.
-        </p>
+        <p className="eyebrow">Lá số mẫu</p>
+        <h2>Xem trước một vài trường hợp mẫu</h2>
+        <p>Tham khảo bố cục lá số và cách phần diễn giải được trình bày trước khi tạo lá số của riêng bạn.</p>
       </div>
 
       <div className="sample-grid">
@@ -40,4 +38,3 @@ export default function SampleChartsSection({ presets, onSelect }: Props) {
     </section>
   );
 }
-

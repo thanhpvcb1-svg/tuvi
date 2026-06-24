@@ -13,7 +13,7 @@ export const manualVideoLessons: ManualVideoLesson[] = [
   {
     id: "tiktok-thien-ngan-tu-01",
     platform: "tiktok",
-    title: "Bài học TikTok 01",
+    title: "Bài học ngắn về cách đọc lá số",
     url: "https://vt.tiktok.com/ZSCN6Q3G6/",
     category: "Bài học ngắn",
     source: "TikTok",
@@ -23,9 +23,9 @@ export const manualVideoLessons: ManualVideoLesson[] = [
   {
     id: "tiktok-thien-ngan-tu-02",
     platform: "tiktok",
-    title: "Bài học TikTok 02",
+    title: "Gợi ý đọc Tử Vi Bắc Phái cho người mới",
     url: "https://vt.tiktok.com/ZSCN6PnLM/",
-    category: "Video",
+    category: "Bài học ngắn",
     source: "TikTok",
     author: "Thiên Ngân Tử",
     isFeatured: true,

@@ -7,8 +7,8 @@ export default function SiteFooter() {
         <div>
           <strong>LaSoTuVi</strong>
           <p>
-            Nền tảng lập lá số tử vi online giúp bạn xem nhanh Mệnh, Thân, 12 cung và chọn thêm các gói luận giải phù hợp
-            khi cần đi sâu vào công việc, tài lộc, tình duyên và vận hạn.
+            Nền tảng lập lá số tử vi online giúp bạn xem phần nền của lá số trước, rồi mới quyết định có cần hỏi sâu hơn về
+            công việc, tài chính, tình cảm hay vận năm hay không.
           </p>
           <div className="site-footer-links">
             <a href="/lap-la-so">Lập lá số</a>
@@ -21,8 +21,8 @@ export default function SiteFooter() {
         </div>
 
         <p className="site-disclaimer">
-          Nội dung tử vi chỉ mang tính tham khảo, chiêm nghiệm và giải trí. Kết quả không thay thế tư vấn chuyên môn về y tế,
-          tài chính, pháp lý hoặc các quyết định quan trọng trong cuộc sống.
+          Nội dung tử vi trên trang mang tính tham khảo và chiêm nghiệm. Kết quả không thay thế tư vấn chuyên môn về y tế,
+          tài chính, pháp lý hoặc các quyết định quan trọng trong đời sống.
         </p>
       </div>
     </footer>

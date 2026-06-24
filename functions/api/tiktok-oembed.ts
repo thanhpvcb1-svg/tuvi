@@ -93,7 +93,21 @@ export const onRequestGet = async ({ request, waitUntil }: PagesContext) => {
       return buildJsonResponse(502, { error: "Không thể lấy TikTok oEmbed." });
     }
 
-    const payload = (await upstreamResponse.json()) as Record<string, unknown>;
+    const contentType = upstreamResponse.headers.get("content-type") || "";
+    const rawText = await upstreamResponse.text();
+
+    if (!contentType.includes("application/json")) {
+      return buildJsonResponse(502, { error: "TikTok oEmbed không khả dụng trong môi trường này." });
+    }
+
+    let payload: Record<string, unknown>;
+
+    try {
+      payload = JSON.parse(rawText) as Record<string, unknown>;
+    } catch {
+      return buildJsonResponse(502, { error: "TikTok oEmbed trả về dữ liệu không hợp lệ." });
+    }
+
     const response = buildJsonResponse(
       200,
       {

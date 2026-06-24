@@ -1992,6 +1992,13 @@ h4,
   font-weight: 700;
 }
 
+.field-help {
+  margin: -2px 0 0;
+  color: rgba(53, 58, 70, 0.62);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .form-group-heading {
   margin-top: 2px;
 }
