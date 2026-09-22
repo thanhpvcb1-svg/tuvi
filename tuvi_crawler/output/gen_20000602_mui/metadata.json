@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20000602_mui",
+  "birth": {
+    "year": 2000,
+    "month": 6,
+    "day": 2,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:11:00.845Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

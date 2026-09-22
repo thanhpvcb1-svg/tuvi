@@ -12,7 +12,6 @@ import InterpretationCards from "./components/InterpretationCards";
 import LeadCaptureForm from "./components/LeadCaptureForm";
 import { LuuStarOptions } from "./components/LuuStarOptions";
 import MobileStickyCTA from "./components/MobileStickyCTA";
-import PalaceAccordion from "./components/PalaceAccordion";
 import PrivacyNotice from "./components/PrivacyNotice";
 import PrivacyPolicyPage from "./components/PrivacyPolicyPage";
 import PremiumPlans, { primaryPlans, type PricingPlan } from "./components/PremiumPlans";
@@ -25,6 +24,7 @@ import SolarNoonCalculator from "./components/SolarNoonCalculator";
 import StreamingAnalysis from "./components/StreamingAnalysis";
 import TermsPage from "./components/TermsPage";
 import Testimonials from "./components/Testimonials";
+import ThemeToggle from "./components/ThemeToggle";
 import TrustBadges from "./components/TrustBadges";
 import TuviChart from "./components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "./components/VanHanhSelector";
@@ -1196,17 +1196,17 @@ export default function App() {
       />
       <section className="home-hero home-hero--focused">
         <div className="home-hero-copy">
-          <p className="eyebrow">LaSoTuVi</p>
+          <p className="eyebrow">☆ LaSoTuVi</p>
           <h1>Lập lá số tử vi online theo ngày giờ sinh</h1>
           <p>
             Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và biết nên đọc tiếp phần nào theo câu hỏi của bạn.
           </p>
           <div className="home-hero-actions">
             <button type="button" className="primary-button" onClick={navigateChartForm}>
-              Lập lá số miễn phí
+              <span className="btn-icon">✨</span> Lập lá số miễn phí
             </button>
             <button type="button" className="ghost-button" onClick={() => navigateHomeSection("la-so-mau")}>
-              Xem lá số mẫu
+              <span className="btn-icon">🔍</span> Xem lá số mẫu
             </button>
           </div>
           <TrustBadges />
@@ -1347,7 +1347,6 @@ export default function App() {
             <section id="luan-giai" className="result-block">
               <InterpretationCards items={quickReadings} />
             </section>
-            <PalaceAccordion chart={chart} />
 
             <section id="van-han" className="result-block">
               <div className="section-heading section-heading--compact">
@@ -1406,6 +1405,7 @@ export default function App() {
           </section>
         ) : (
           <section className="result-empty-card">
+            <div className="result-empty-icon" aria-hidden="true">✨</div>
             <p className="eyebrow">Sẵn sàng</p>
             <h2>Lá số sẽ xuất hiện sau khi bạn bấm “Lập lá số ngay”</h2>
             <p>Hệ thống sẽ hiển thị biểu đồ 12 cung, luận giải nhanh và phần chi tiết từng cung ngay bên dưới.</p>
@@ -1978,6 +1978,7 @@ export default function App() {
           </nav>
 
           <div className="site-auth site-auth--desktop">
+            <ThemeToggle />
             <button type="button" className="primary-button site-login-button" onClick={navigateChartForm}>
               Lập Lá Số Miễn Phí
             </button>
@@ -2005,14 +2006,17 @@ export default function App() {
             >
               <div className="mobile-menu-header">
                 <span className="mobile-menu-title">Menu</span>
-                <button
-                  type="button"
-                  className="mobile-menu-close"
-                  onClick={closeMobileMenu}
-                  aria-label="Đóng menu"
-                >
-                  ×
-                </button>
+                <div className="mobile-menu-header-actions">
+                  <ThemeToggle />
+                  <button
+                    type="button"
+                    className="mobile-menu-close"
+                    onClick={closeMobileMenu}
+                    aria-label="Đóng menu"
+                  >
+                    ×
+                  </button>
+                </div>
               </div>
               <div className="mobile-menu-links">
                 <button type="button" className={getNavLinkClass("/")} onClick={navigateHome}>

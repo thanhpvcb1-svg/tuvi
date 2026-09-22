@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19860224_mao",
+  "birth": {
+    "year": 1986,
+    "month": 2,
+    "day": 24,
+    "hour": "mao",
+    "hourName": "Mão",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:08:03.715Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

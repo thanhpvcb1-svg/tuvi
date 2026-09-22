@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20031006_ti",
+  "birth": {
+    "year": 2003,
+    "month": 10,
+    "day": 6,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:10:49.561Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

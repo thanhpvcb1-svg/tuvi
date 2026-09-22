@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19630112_tuat",
+  "birth": {
+    "year": 1963,
+    "month": 1,
+    "day": 12,
+    "hour": "tuat",
+    "hourName": "Tuất",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:18:23.359Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19710401_ty",
+  "birth": {
+    "year": 1971,
+    "month": 4,
+    "day": 1,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:08:48.100Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

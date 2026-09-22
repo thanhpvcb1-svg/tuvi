@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19570302_ty",
+  "birth": {
+    "year": 1957,
+    "month": 3,
+    "day": 2,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:11:54.536Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

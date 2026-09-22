@@ -1,0 +1,13 @@
+
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWorkSeries",
+        "name": "Lá số chi tiết bắc phái",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "bestRating": "5",
+            "ratingCount": "169"
+        }
+    }
+    

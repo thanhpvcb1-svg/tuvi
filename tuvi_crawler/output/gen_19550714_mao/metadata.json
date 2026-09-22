@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19550714_mao",
+  "birth": {
+    "year": 1955,
+    "month": 7,
+    "day": 14,
+    "hour": "mao",
+    "hourName": "Mão",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:12:13.900Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

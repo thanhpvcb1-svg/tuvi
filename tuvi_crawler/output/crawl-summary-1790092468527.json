@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-09-22T15:54:28.527Z",
+  "total": 20,
+  "success": 1,
+  "failed": 19,
+  "results": [
+    {
+      "lid": "39388",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "85200",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "88911",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "296328",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "99054",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "142446",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "372057",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "51359",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "245213",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "206781",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "362115",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "373552",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "355753",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "286671",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "103964",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "95704",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "397908",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "282695",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    },
+    {
+      "lid": "84812",
+      "status": "success",
+      "info": {
+        "title": "Lá số tử vi ÂM NỮ sinh năm ĐINH SỬU giờ TUẤT ngày 20 tháng 3 Âm Lịch",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0
+      }
+    },
+    {
+      "lid": "142175",
+      "status": "failed",
+      "error": "Page not found or blocked"
+    }
+  ]
+}

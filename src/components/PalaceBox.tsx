@@ -110,7 +110,11 @@ export default function PalaceBox({
       {showPhiHoaCanCung && phiHoaFlows.length > 0 ? (
         <div className="palace-phi-hoa" aria-label="Phi Hóa Can Cung">
           {phiHoaFlows.map((flow) => (
-            <div key={flow.type} className="palace-phi-hoa-line">
+            <div 
+              key={flow.type} 
+              className="palace-phi-hoa-line"
+              title={`${FLOW_LABELS[flow.type]}: ${flow.displayText}`}
+            >
               {normalizeFlowText(flow)}
             </div>
           ))}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19990526_tuat",
+  "birth": {
+    "year": 1999,
+    "month": 5,
+    "day": 26,
+    "hour": "tuat",
+    "hourName": "Tuất",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:08:35.273Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

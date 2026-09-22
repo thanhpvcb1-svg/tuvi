@@ -122,6 +122,19 @@ function sortKnowledgeByPriority(matches: KnowledgeMatch[]): KnowledgeMatch[] {
   });
 }
 
+function KnowledgeItem({ match }: { match: KnowledgeMatch }) {
+  return (
+    <div className="analysis-knowledge-item">
+      <p className="analysis-knowledge-text">{match.interpretation.text}</p>
+      <div className="analysis-knowledge-meta">
+        <span className="analysis-knowledge-reasons">
+          {match.matchReasons.join(" · ")}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function PalaceCard({ analysis, isExpanded, onToggle }: { 
   analysis: PalaceAnalysis; 
   isExpanded: boolean;
@@ -129,8 +142,9 @@ function PalaceCard({ analysis, isExpanded, onToggle }: {
 }) {
   const [showAll, setShowAll] = useState(false);
   const sortedMatches = useMemo(() => sortKnowledgeByPriority(analysis.knowledgeMatches), [analysis.knowledgeMatches]);
-  const displayCount = showAll ? 5 : 3;
-  const hasMore = sortedMatches.length > 3 && !showAll;
+  const displayCount = showAll ? sortedMatches.length : 3;
+  const hasMore = sortedMatches.length > 3;
+  const knowledgeCount = analysis.knowledgeMatches.length;
 
   return (
     <div className={`analysis-palace-card ${isExpanded ? "is-expanded" : ""}`}>
@@ -138,7 +152,14 @@ function PalaceCard({ analysis, isExpanded, onToggle }: {
         <div className="analysis-palace-title">
           <span className="analysis-palace-icon">{analysis.icon}</span>
           <div className="analysis-palace-name">
-            <strong>{analysis.name}</strong>
+            <strong>
+              {analysis.name}
+              {knowledgeCount > 0 && (
+                <span className="analysis-knowledge-badge" title={`${knowledgeCount} luận giải`}>
+                  {knowledgeCount}
+                </span>
+              )}
+            </strong>
             {analysis.isBodyPalace && <span className="analysis-body-badge">Thân</span>}
             <span className="analysis-palace-position">{analysis.branch} · {analysis.stem}</span>
           </div>
@@ -158,21 +179,18 @@ function PalaceCard({ analysis, isExpanded, onToggle }: {
           {sortedMatches.length > 0 && (
             <div className="analysis-knowledge">
               <span className="analysis-star-label">Luận giải:</span>
-              <div className={`analysis-knowledge-list ${showAll ? "analysis-knowledge-list--scrollable" : ""}`}>
+              <div className="analysis-knowledge-list">
                 {sortedMatches.slice(0, displayCount).map((match, i) => (
-                  <div key={match.interpretation.id || i} className="analysis-knowledge-item">
-                    <p className="analysis-knowledge-text">{match.interpretation.text}</p>
-                    <div className="analysis-knowledge-meta">
-                      <span className="analysis-knowledge-reasons">
-                        {match.matchReasons.join(" · ")}
-                      </span>
-                    </div>
-                  </div>
+                  <KnowledgeItem key={match.interpretation.id || i} match={match} />
                 ))}
               </div>
               {hasMore && (
-                <button type="button" className="analysis-show-more" onClick={() => setShowAll(true)}>
-                  Xem thêm ({Math.min(sortedMatches.length, 5) - 3} luận giải)
+                <button
+                  type="button"
+                  className="analysis-show-more"
+                  onClick={() => setShowAll(!showAll)}
+                >
+                  {showAll ? "Thu gọn" : `Xem thêm ${sortedMatches.length - 3} luận giải`}
                 </button>
               )}
             </div>
@@ -195,8 +213,10 @@ function PalaceCard({ analysis, isExpanded, onToggle }: {
 }
 
 export default function StreamingAnalysis({ chart, isActive, onComplete }: Props) {
-  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set(["menh", "quan_loc", "tai_bach"]));
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set(["menh"]));
   const [isLoading, setIsLoading] = useState(true);
+  const [visibleCount, setVisibleCount] = useState(0);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   const analyses = useMemo(() => {
     if (!chart) return [];
@@ -206,15 +226,48 @@ export default function StreamingAnalysis({ chart, isActive, onComplete }: Props
   }, [chart]);
 
   useEffect(() => {
-    if (!isActive) return;
+    if (!isActive) {
+      setIsLoading(true);
+      setVisibleCount(0);
+      setLoadingProgress(0);
+      return;
+    }
     
-    // Simulate brief loading for smooth UX
-    const timer = setTimeout(() => {
+    // Loading progress animation (3 seconds)
+    const progressInterval = setInterval(() => {
+      setLoadingProgress((prev) => {
+        if (prev >= 100) return 100;
+        return prev + 2;
+      });
+    }, 60);
+
+    // After 3s, start showing palaces one by one
+    const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 800);
+      clearInterval(progressInterval);
+      setLoadingProgress(100);
+    }, 3000);
+
+    return () => {
+      clearTimeout(loadingTimer);
+      clearInterval(progressInterval);
+    };
+  }, [isActive]);
+
+  // Stream palaces one by one after loading
+  useEffect(() => {
+    if (isLoading || !isActive) return;
+    if (visibleCount >= analyses.length) {
+      onComplete?.();
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setVisibleCount((prev) => prev + 1);
+    }, 150); // 150ms delay between each palace
 
     return () => clearTimeout(timer);
-  }, [isActive]);
+  }, [isLoading, visibleCount, analyses.length, isActive, onComplete]);
 
   const toggleExpand = (id: string) => {
     setExpandedIds((prev) => {
@@ -243,14 +296,22 @@ export default function StreamingAnalysis({ chart, isActive, onComplete }: Props
       <div className="analysis-panel">
         <div className="analysis-loading">
           <div className="analysis-loading-spinner" />
-          <p>Đang phân tích lá số...</p>
+          <p>Đang phân tích 12 cung trong lá số...</p>
+          <span className="analysis-loading-hint">Tra cứu tri thức từ sách cổ</span>
+          <div className="analysis-progress">
+            <div className="analysis-progress-bar" style={{ width: `${loadingProgress}%` }} />
+          </div>
+          <span className="analysis-progress-text">{loadingProgress}%</span>
         </div>
       </div>
     );
   }
 
-  const keyPalaces = analyses.filter((a) => ["menh", "quan_loc", "tai_bach", "phu_the"].includes(a.id));
-  const otherPalaces = analyses.filter((a) => !["menh", "quan_loc", "tai_bach", "phu_the"].includes(a.id));
+  const visibleAnalyses = analyses.slice(0, visibleCount);
+  const keyPalaceIds = ["menh", "quan_loc", "tai_bach", "phu_the"];
+  const keyPalaces = visibleAnalyses.filter((a) => keyPalaceIds.includes(a.id));
+  const otherPalaces = visibleAnalyses.filter((a) => !keyPalaceIds.includes(a.id));
+  const isStreaming = visibleCount < analyses.length;
 
   return (
     <div className="analysis-panel">
@@ -299,9 +360,18 @@ export default function StreamingAnalysis({ chart, isActive, onComplete }: Props
         </div>
       </div>
 
-      <div className="analysis-footer">
-        <p>💡 Nội dung chỉ mang tính tham khảo. Để được luận giải chuyên sâu, vui lòng liên hệ tư vấn.</p>
-      </div>
+      {isStreaming && (
+        <div className="analysis-streaming-status">
+          <div className="analysis-streaming-spinner" />
+          <span>Đang phân tích cung {visibleCount + 1}/12...</span>
+        </div>
+      )}
+
+      {!isStreaming && (
+        <div className="analysis-footer">
+          <p>💡 Nội dung chỉ mang tính tham khảo. Để được luận giải chuyên sâu, vui lòng liên hệ tư vấn.</p>
+        </div>
+      )}
     </div>
   );
 }

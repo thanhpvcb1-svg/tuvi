@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19800812_mui",
+  "birth": {
+    "year": 1980,
+    "month": 8,
+    "day": 12,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:15:26.815Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

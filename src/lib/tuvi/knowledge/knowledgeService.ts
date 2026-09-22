@@ -11,7 +11,6 @@ import menhChinhTinhData from "./cung/menh-chinh-tinh.json";
 import menhPhiHoaData from "./cung/menh-phi-hoa.json";
 import menhPhuTinhData from "./cung/menh-phu-tinh.json";
 import menhMCodeData from "./cung/menh-m-code.json";
-import menhCohocData from "./cung/menh-cohoc.json";
 import phuTheData from "./cung/phu-the.json";
 import phucDucData from "./cung/phuc-duc.json";
 import dienTrachData from "./cung/dien-trach.json";
@@ -25,19 +24,19 @@ import tuTucData from "./cung/tu-tuc.json";
 // Import star combinations (highest priority)
 import starCombinationsData from "./cung/star-combinations.json";
 
-// Import cohoc-full files (crawled data)
-import menhCohocFullData from "./cung/menh-cohoc-full.json";
-import phuMauCohocFullData from "./cung/phu-mau-cohoc-full.json";
-import phucDucCohocFullData from "./cung/phuc-duc-cohoc-full.json";
-import dienTrachCohocFullData from "./cung/dien-trach-cohoc-full.json";
-import quanLocCohocFullData from "./cung/quan-loc-cohoc-full.json";
-import noBocCohocFullData from "./cung/no-boc-cohoc-full.json";
-import thienDiCohocFullData from "./cung/thien-di-cohoc-full.json";
-import tatAchCohocFullData from "./cung/tat-ach-cohoc-full.json";
-import taiBachCohocFullData from "./cung/tai-bach-cohoc-full.json";
-import tuTucCohocFullData from "./cung/tu-tuc-cohoc-full.json";
-import phuTheCohocFullData from "./cung/phu-the-cohoc-full.json";
-import huynhDeCohocFullData from "./cung/huynh-de-cohoc-full.json";
+// Import consolidated files (deduplicated crawled data)
+import menhConsolidated from "./cung/menh-consolidated.json";
+import phuMauConsolidated from "./cung/phu-mau-consolidated.json";
+import phucDucConsolidated from "./cung/phuc-duc-consolidated.json";
+import dienTrachConsolidated from "./cung/dien-trach-consolidated.json";
+import quanLocConsolidated from "./cung/quan-loc-consolidated.json";
+import noBocConsolidated from "./cung/no-boc-consolidated.json";
+import thienDiConsolidated from "./cung/thien-di-consolidated.json";
+import tatAchConsolidated from "./cung/tat-ach-consolidated.json";
+import taiBachConsolidated from "./cung/tai-bach-consolidated.json";
+import tuTucConsolidated from "./cung/tu-tuc-consolidated.json";
+import phuTheConsolidated from "./cung/phu-the-consolidated.json";
+import huynhDeConsolidated from "./cung/huynh-de-consolidated.json";
 
 // ============ TYPES ============
 
@@ -123,56 +122,67 @@ const STAR_COMBINATIONS = starCombinationsData as unknown as KnowledgeFile;
 
 const PALACE_KNOWLEDGE: Record<string, KnowledgeFile[]> = {
   menh: [
-    STAR_COMBINATIONS, // Ưu tiên tổ hợp sao trước
+    STAR_COMBINATIONS,
+    menhConsolidated as unknown as KnowledgeFile,
     menhData as unknown as KnowledgeFile,
     menhChinhTinhData as unknown as KnowledgeFile,
     menhPhiHoaData as unknown as KnowledgeFile,
     menhPhuTinhData as unknown as KnowledgeFile,
     menhMCodeData as unknown as KnowledgeFile,
-    menhCohocData as unknown as KnowledgeFile,
-    menhCohocFullData as unknown as KnowledgeFile,
   ],
-  phu_mau: [STAR_COMBINATIONS, phuMauCohocFullData as unknown as KnowledgeFile],
+  phu_mau: [
+    STAR_COMBINATIONS,
+    phuMauConsolidated as unknown as KnowledgeFile,
+  ],
   phu_the: [
     STAR_COMBINATIONS,
+    phuTheConsolidated as unknown as KnowledgeFile,
     phuTheData as unknown as KnowledgeFile,
-    phuTheCohocFullData as unknown as KnowledgeFile,
   ],
   phuc_duc: [
     STAR_COMBINATIONS,
+    phucDucConsolidated as unknown as KnowledgeFile,
     phucDucData as unknown as KnowledgeFile,
-    phucDucCohocFullData as unknown as KnowledgeFile,
   ],
   dien_trach: [
     STAR_COMBINATIONS,
+    dienTrachConsolidated as unknown as KnowledgeFile,
     dienTrachData as unknown as KnowledgeFile,
-    dienTrachCohocFullData as unknown as KnowledgeFile,
   ],
   quan_loc: [
     STAR_COMBINATIONS,
+    quanLocConsolidated as unknown as KnowledgeFile,
     quanLocCobanData as unknown as KnowledgeFile,
     quanLocChinhTinhData as unknown as KnowledgeFile,
     quanLocPhiHoaData as unknown as KnowledgeFile,
-    quanLocCohocFullData as unknown as KnowledgeFile,
   ],
-  no_boc: [STAR_COMBINATIONS, noBocCohocFullData as unknown as KnowledgeFile],
+  no_boc: [
+    STAR_COMBINATIONS,
+    noBocConsolidated as unknown as KnowledgeFile,
+  ],
   thien_di: [
     STAR_COMBINATIONS,
+    thienDiConsolidated as unknown as KnowledgeFile,
     thienDiData as unknown as KnowledgeFile,
-    thienDiCohocFullData as unknown as KnowledgeFile,
   ],
-  tat_ach: [STAR_COMBINATIONS, tatAchCohocFullData as unknown as KnowledgeFile],
+  tat_ach: [
+    STAR_COMBINATIONS,
+    tatAchConsolidated as unknown as KnowledgeFile,
+  ],
   tai_bach: [
     STAR_COMBINATIONS,
+    taiBachConsolidated as unknown as KnowledgeFile,
     taiBachData as unknown as KnowledgeFile,
-    taiBachCohocFullData as unknown as KnowledgeFile,
   ],
   tu_tuc: [
     STAR_COMBINATIONS,
+    tuTucConsolidated as unknown as KnowledgeFile,
     tuTucData as unknown as KnowledgeFile,
-    tuTucCohocFullData as unknown as KnowledgeFile,
   ],
-  huynh_de: [STAR_COMBINATIONS, huynhDeCohocFullData as unknown as KnowledgeFile],
+  huynh_de: [
+    STAR_COMBINATIONS,
+    huynhDeConsolidated as unknown as KnowledgeFile,
+  ],
 };
 
 // ============ HELPERS ============
@@ -674,7 +684,8 @@ export function extractPhiHoaFlows(palace: DisplayPalace): PhiHoaFlow[] {
   const flows: PhiHoaFlow[] = [];
   
   for (const flow of phiTuHoa.flows) {
-    if (flow.relation === "phi_nhap" && flow.targetPalaceName) {
+    // Lấy tất cả flows có targetPalaceName (cả phi_nhap và tu_hoa)
+    if (flow.targetPalaceName) {
       flows.push({
         type: flow.type,
         typeLabel: flow.typeLabel,

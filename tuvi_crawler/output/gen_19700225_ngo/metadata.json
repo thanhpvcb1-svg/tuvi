@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19700225_ngo",
+  "birth": {
+    "year": 1970,
+    "month": 2,
+    "day": 25,
+    "hour": "ngo",
+    "hourName": "Ngọ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:20:36.519Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

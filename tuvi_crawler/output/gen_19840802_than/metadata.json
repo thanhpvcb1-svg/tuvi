@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19840802_than",
+  "birth": {
+    "year": 1984,
+    "month": 8,
+    "day": 2,
+    "hour": "than",
+    "hourName": "Thân",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:08:16.773Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

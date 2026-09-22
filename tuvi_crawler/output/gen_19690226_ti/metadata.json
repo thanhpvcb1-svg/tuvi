@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19690226_ti",
+  "birth": {
+    "year": 1969,
+    "month": 2,
+    "day": 26,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:03:41.677Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

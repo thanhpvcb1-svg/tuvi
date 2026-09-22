@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19790807_ti",
+  "birth": {
+    "year": 1979,
+    "month": 8,
+    "day": 7,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:14:10.515Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

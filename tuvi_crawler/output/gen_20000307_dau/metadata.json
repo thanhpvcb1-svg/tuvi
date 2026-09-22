@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20000307_dau",
+  "birth": {
+    "year": 2000,
+    "month": 3,
+    "day": 7,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:11:59.405Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

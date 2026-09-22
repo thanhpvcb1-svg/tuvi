@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
       <div className="legal-hero">
         <p className="eyebrow">Pháp lý</p>
         <h1>Chính sách bảo mật</h1>
-        <p>Cập nhật lần cuối: Tháng 6, 2026</p>
+        <p>Cập nhật lần cuối: Tháng 12, 2024</p>
       </div>
 
       <div className="legal-content">

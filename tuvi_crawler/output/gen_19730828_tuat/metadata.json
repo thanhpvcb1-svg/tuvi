@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19730828_tuat",
+  "birth": {
+    "year": 1973,
+    "month": 8,
+    "day": 28,
+    "hour": "tuat",
+    "hourName": "Tuất",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:17:46.124Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

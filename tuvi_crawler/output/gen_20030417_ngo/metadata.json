@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20030417_ngo",
+  "birth": {
+    "year": 2003,
+    "month": 4,
+    "day": 17,
+    "hour": "ngo",
+    "hourName": "Ngọ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:20:03.815Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

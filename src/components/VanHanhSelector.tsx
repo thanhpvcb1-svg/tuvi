@@ -110,35 +110,56 @@ export default function VanHanhSelector({ year, birthYear, chart, onChange }: Pr
   const tieuVanPalace = palaces.find((p) => p.index === tieuVanIdx);
 
   return (
-    <div className="van-hanh-bar">
+    <div className="van-hanh-bar van-hanh-bar--enhanced">
       <div className="van-hanh-controls">
-        <button className="van-year-btn" onClick={() => onChange(year - 1)}>←</button>
-        <input
-          className="van-year-input"
-          type="number"
-          value={year}
-          min={1900}
-          max={2100}
-          onChange={(e) => {
-            const v = parseInt(e.target.value);
-            if (!isNaN(v) && v >= 1900 && v <= 2100) onChange(v);
-          }}
-        />
-        <button className="van-year-btn" onClick={() => onChange(year + 1)}>→</button>
-        <span className="van-age">Tuổi {age}</span>
+        <button 
+          className="van-year-btn van-year-btn--prev" 
+          onClick={() => onChange(year - 1)}
+          aria-label="Năm trước"
+        >
+          ←
+        </button>
+        <div className="van-year-display">
+          <input
+            className="van-year-input"
+            type="number"
+            value={year}
+            min={1900}
+            max={2100}
+            onChange={(e) => {
+              const v = parseInt(e.target.value);
+              if (!isNaN(v) && v >= 1900 && v <= 2100) onChange(v);
+            }}
+          />
+          <span className="van-age-badge">🎂 Tuổi {age}</span>
+        </div>
+        <button 
+          className="van-year-btn van-year-btn--next" 
+          onClick={() => onChange(year + 1)}
+          aria-label="Năm sau"
+        >
+          →
+        </button>
       </div>
 
       <div className="van-hanh-info">
         {daiVanPalace ? (
           <span className="van-tag van-tag--dai">
-            Đại vận {daiVanLabel} · <strong>{daiVanPalace.name}</strong>
+            <span className="van-tag__icon">📅</span>
+            <span className="van-tag__label">Đại vận {daiVanLabel}</span>
+            <strong className="van-tag__value">{daiVanPalace.name}</strong>
           </span>
         ) : (
-          <span className="van-tag van-tag--none">Ngoài đại vận</span>
+          <span className="van-tag van-tag--none">
+            <span className="van-tag__icon">⚠️</span>
+            Ngoài đại vận
+          </span>
         )}
         {tieuVanPalace ? (
           <span className="van-tag van-tag--tieu">
-            Tiểu vận · <strong>{tieuVanPalace.name}</strong>
+            <span className="van-tag__icon">⭐</span>
+            <span className="van-tag__label">Tiểu vận</span>
+            <strong className="van-tag__value">{tieuVanPalace.name}</strong>
           </span>
         ) : null}
       </div>

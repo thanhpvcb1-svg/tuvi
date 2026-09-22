@@ -1,0 +1,21 @@
+{
+  "lid": "gen_20121209_dan_11",
+  "url": "https://tuvi.cohoc.net/lap-la-so-tu-vi.html",
+  "crawledAt": "2026-09-22T15:58:01.918Z",
+  "birth": {
+    "year": 2012,
+    "month": 12,
+    "day": 9,
+    "hour": "Dần",
+    "gender": "Nam",
+    "calendar": "Dương"
+  },
+  "info": {
+    "title": "Lập Lá Số Tử Vi Việt Nam",
+    "hasCung": true,
+    "hasStars": true,
+    "hasInterpretation": true,
+    "interpretationCount": 0,
+    "cungCount": 6
+  }
+}

@@ -1,0 +1,28 @@
+
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://cohoc.net",
+          "name": "Cổ học"
+        }
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://tuvi.cohoc.net",
+          "name": "Tử vi"
+        }
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://tuvi.cohoc.net/tap-la-so-nghiem-ly.html",
+          "name": "Tập lá số"
+        }
+      }]
+    }
+    

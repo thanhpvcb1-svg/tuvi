@@ -1,30 +1,69 @@
 import React from "react";
 
+const currentYear = new Date().getFullYear();
+
+const footerLinks = [
+  { label: "Lập lá số", href: "/lap-la-so" },
+  { label: "Bảng giá", href: "/bang-gia" },
+  { label: "Lá số mẫu", href: "/la-so-mau" },
+  { label: "Bài viết", href: "/bai-viet" },
+  { label: "Video", href: "/video" },
+  { label: "FAQ", href: "/faq" },
+];
+
+const legalLinks = [
+  { label: "Chính sách bảo mật", href: "/chinh-sach-bao-mat" },
+  { label: "Điều khoản sử dụng", href: "/dieu-khoan-su-dung" },
+  { label: "Liên hệ", href: "/lien-he" },
+];
+
 export default function SiteFooter() {
   return (
     <footer className="site-footer" id="lien-he">
-      <div className="site-footer-inner">
-        <div>
-          <strong>LaSoTuVi</strong>
-          <p>
-            Nền tảng lập lá số tử vi online giúp bạn xem phần nền của lá số trước, rồi mới quyết định có cần hỏi sâu hơn về
-            công việc, tài chính, tình cảm hay vận năm hay không.
+      <div className="site-footer-inner site-footer-inner--enhanced">
+        <div className="site-footer__brand">
+          <div className="site-footer__logo">
+            <span className="site-footer__logo-mark">☆</span>
+            <strong>LaSoTuVi</strong>
+          </div>
+          <p className="site-footer__tagline">
+            Nền tảng lập lá số tử vi online giúp bạn xem phần nền của lá số trước, rồi mới quyết định có cần hỏi sâu hơn.
           </p>
-          <div className="site-footer-links">
-            <a href="/lap-la-so">Lập lá số</a>
-            <a href="/bang-gia">Bảng giá</a>
-            <a href="/la-so-mau">Lá số mẫu</a>
-            <a href="/bai-viet">Bài viết</a>
-            <a href="/chinh-sach-bao-mat">Chính sách bảo mật</a>
-            <a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a>
-            <a href="/lien-he">Liên hệ</a>
+        </div>
+
+        <div className="site-footer__nav">
+          <div className="site-footer__nav-group">
+            <h4>Khám phá</h4>
+            <ul>
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="site-footer__nav-group">
+            <h4>Thông tin</h4>
+            <ul>
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <p className="site-disclaimer">
-          Nội dung tử vi trên trang mang tính tham khảo và chiêm nghiệm. Kết quả không thay thế tư vấn chuyên môn về y tế,
-          tài chính, pháp lý hoặc các quyết định quan trọng trong đời sống.
-        </p>
+        <div className="site-footer__bottom">
+          <p className="site-footer__copyright">
+            © {currentYear} LaSoTuVi. Tất cả quyền được bảo lưu.
+          </p>
+          <p className="site-footer__disclaimer">
+            Nội dung tử vi trên trang mang tính tham khảo và chiêm nghiệm. Kết quả không thay thế tư vấn chuyên môn về y tế,
+            tài chính, pháp lý hoặc các quyết định quan trọng trong đời sống.
+          </p>
+        </div>
       </div>
     </footer>
   );

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20071220_ty",
+  "birth": {
+    "year": 2007,
+    "month": 12,
+    "day": 20,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:20:21.755Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

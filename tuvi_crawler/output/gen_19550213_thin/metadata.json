@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19550213_thin",
+  "birth": {
+    "year": 1955,
+    "month": 2,
+    "day": 13,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:03:25.914Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

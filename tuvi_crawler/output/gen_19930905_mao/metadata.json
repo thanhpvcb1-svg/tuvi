@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19930905_mao",
+  "birth": {
+    "year": 1993,
+    "month": 9,
+    "day": 5,
+    "hour": "mao",
+    "hourName": "Mão",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:20:38.138Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

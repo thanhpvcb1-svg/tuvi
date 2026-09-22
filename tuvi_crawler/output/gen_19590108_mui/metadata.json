@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19590108_mui",
+  "birth": {
+    "year": 1959,
+    "month": 1,
+    "day": 8,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:12:18.718Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

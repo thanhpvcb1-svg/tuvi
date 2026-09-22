@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19900512_than",
+  "birth": {
+    "year": 1990,
+    "month": 5,
+    "day": 12,
+    "hour": "than",
+    "hourName": "Thân",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:20:10.239Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

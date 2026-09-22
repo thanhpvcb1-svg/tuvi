@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19760117_dau",
+  "birth": {
+    "year": 1976,
+    "month": 1,
+    "day": 17,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:13:00.888Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

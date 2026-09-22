@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20190125_hoi",
+  "birth": {
+    "year": 2019,
+    "month": 1,
+    "day": 25,
+    "hour": "hoi",
+    "hourName": "Hợi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:17:42.886Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

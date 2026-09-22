@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20161224_thin",
+  "birth": {
+    "year": 2016,
+    "month": 12,
+    "day": 24,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:09:59.332Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19920725_ti",
+  "birth": {
+    "year": 1992,
+    "month": 7,
+    "day": 25,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:10:44.675Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

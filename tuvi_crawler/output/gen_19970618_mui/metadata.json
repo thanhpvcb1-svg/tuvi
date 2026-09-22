@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19970618_mui",
+  "birth": {
+    "year": 1997,
+    "month": 6,
+    "day": 18,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:10:52.787Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

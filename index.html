@@ -17,6 +17,8 @@
       content="Khám phá vận mệnh qua lá số tử vi cá nhân. Lập lá số miễn phí, luận giải chuyên sâu về tài lộc, sự nghiệp, tình duyên và các giai đoạn quan trọng trong cuộc đời."
     />
     <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#fffbf4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://tuvi.pages.dev/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,6 +44,15 @@
     <meta name="twitter:image" content="https://tuvi.pages.dev/og-cover.svg" />
   </head>
   <body>
+    <script>
+      // Initialize theme before React renders to prevent flash
+      (function() {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored === 'dark' || stored === 'light' ? stored : (stored === 'system' || !stored) ? (prefersDark ? 'dark' : 'light') : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <div id="root"></div>
     <noscript>
       LaSoTuVi là trung tâm luận giải tử vi và tư vấn vận mệnh. Lập lá số tử vi online theo ngày giờ sinh, nhận luận giải

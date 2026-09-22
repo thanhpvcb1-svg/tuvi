@@ -13,9 +13,7 @@ type Props = {
   gender?: "male" | "female";
 };
 
-function KnowledgeCard({ item, index }: { item: KnowledgeItem; index: number }) {
-  const [expanded, setExpanded] = useState(index === 0);
-
+function KnowledgeCard({ item }: { item: KnowledgeItem }) {
   const typeColors: Record<string, string> = {
     position: "#4a90d9",
     main_star: "#d4a84b",
@@ -25,13 +23,8 @@ function KnowledgeCard({ item, index }: { item: KnowledgeItem; index: number }) 
   };
 
   return (
-    <div className={`knowledge-card ${expanded ? "is-expanded" : ""}`}>
-      <button
-        type="button"
-        className="knowledge-card__header"
-        onClick={() => setExpanded(!expanded)}
-        aria-expanded={expanded}
-      >
+    <div className="knowledge-card">
+      <div className="knowledge-card__header">
         <span
           className="knowledge-card__type"
           style={{ backgroundColor: typeColors[item.type] || "#7f8c8d" }}
@@ -39,24 +32,14 @@ function KnowledgeCard({ item, index }: { item: KnowledgeItem; index: number }) 
           {item.typeLabel}
         </span>
         <span className="knowledge-card__title">{item.title}</span>
-        <span className="knowledge-card__toggle">{expanded ? "−" : "+"}</span>
-      </button>
+      </div>
 
-      {expanded && (
-        <div className="knowledge-card__body">
-          <p className="knowledge-card__text">{item.text}</p>
-          <div className="knowledge-card__meta">
-            <span className="knowledge-card__source">{formatSource(item.source)}</span>
-            {item.matchReasons.length > 0 && (
-              <span className="knowledge-card__reasons">
-                {item.matchReasons.map((reason, i) => (
-                  <span key={i} className="knowledge-card__tag">{reason}</span>
-                ))}
-              </span>
-            )}
-          </div>
+      <div className="knowledge-card__body">
+        <p className="knowledge-card__text">{item.text}</p>
+        <div className="knowledge-card__footer">
+          <span className="knowledge-card__source">{formatSource(item.source)}</span>
         </div>
-      )}
+      </div>
     </div>
   );
 }
@@ -99,6 +82,7 @@ function PhiHoaSection({ items }: { items: PhiHoaItem[] }) {
 }
 
 export default function PalaceKnowledge({ palace, gender = "male" }: Props) {
+  const [showAll, setShowAll] = useState(false);
   const result: PalaceKnowledgeResult = queryPalaceKnowledge({ palace, gender });
 
   if (result.topKnowledge.length === 0) {
@@ -108,6 +92,9 @@ export default function PalaceKnowledge({ palace, gender = "male" }: Props) {
       </div>
     );
   }
+
+  const displayCount = showAll ? result.topKnowledge.length : 3;
+  const hasMore = result.topKnowledge.length > 3;
 
   return (
     <div className="palace-knowledge">
@@ -121,18 +108,22 @@ export default function PalaceKnowledge({ palace, gender = "male" }: Props) {
       </div>
 
       <div className="palace-knowledge__cards">
-        {result.topKnowledge.map((item, index) => (
-          <KnowledgeCard key={item.id} item={item} index={index} />
+        {result.topKnowledge.slice(0, displayCount).map((item) => (
+          <KnowledgeCard key={item.id} item={item} />
         ))}
       </div>
 
-      <PhiHoaSection items={result.phiHoaList} />
-
-      {result.totalAvailable > 3 && (
-        <p className="palace-knowledge__more">
-          Còn {result.totalAvailable - 3} luận giải khác
-        </p>
+      {hasMore && (
+        <button
+          type="button"
+          className="palace-knowledge__toggle"
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? "Thu gọn" : `Xem thêm ${result.topKnowledge.length - 3} luận giải`}
+        </button>
       )}
+
+      <PhiHoaSection items={result.phiHoaList} />
     </div>
   );
 }

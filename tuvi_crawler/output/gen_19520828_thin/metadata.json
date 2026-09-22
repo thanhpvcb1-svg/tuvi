@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19520828_thin",
+  "birth": {
+    "year": 1952,
+    "month": 8,
+    "day": 28,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:16:36.666Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

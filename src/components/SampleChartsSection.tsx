@@ -29,7 +29,7 @@ export default function SampleChartsSection({ presets, onSelect }: Props) {
             <h3>{preset.subtitle}</h3>
             <p>Năm sinh: {preset.input.year}</p>
             <p>Giới tính: {preset.input.gender === "male" ? "Nam" : "Nữ"}</p>
-            <button type="button" className="ghost-button" onClick={() => onSelect(preset)}>
+            <button type="button" className="ghost-button" onClick={() => { window.scrollTo(0, 0); onSelect(preset); }}>
               Xem lá số mẫu
             </button>
           </article>

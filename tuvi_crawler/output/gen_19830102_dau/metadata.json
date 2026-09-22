@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19830102_dau",
+  "birth": {
+    "year": 1983,
+    "month": 1,
+    "day": 2,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:08:52.936Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

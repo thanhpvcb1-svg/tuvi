@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19880109_than",
+  "birth": {
+    "year": 1988,
+    "month": 1,
+    "day": 9,
+    "hour": "than",
+    "hourName": "Thân",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:18:21.752Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

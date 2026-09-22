@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19510611_mao",
+  "birth": {
+    "year": 1951,
+    "month": 6,
+    "day": 11,
+    "hour": "mao",
+    "hourName": "Mão",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:10:28.455Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

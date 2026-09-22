@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20180411_mao",
+  "birth": {
+    "year": 2018,
+    "month": 4,
+    "day": 11,
+    "hour": "mao",
+    "hourName": "Mão",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:15:05.806Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,468 @@
+{
+  "timestamp": "2026-09-22T15:58:41.707Z",
+  "total": 20,
+  "success": 20,
+  "failed": 0,
+  "results": [
+    {
+      "lid": "gen_20040326_tuat_10",
+      "status": "success",
+      "birth": {
+        "year": 2004,
+        "month": 3,
+        "day": 26,
+        "hour": "tuat",
+        "hourName": "Tuất",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19800505_dan_01",
+      "status": "success",
+      "birth": {
+        "year": 1980,
+        "month": 5,
+        "day": 5,
+        "hour": "dan",
+        "hourName": "Dần",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20091209_hoi_11",
+      "status": "success",
+      "birth": {
+        "year": 2009,
+        "month": 12,
+        "day": 9,
+        "hour": "hoi",
+        "hourName": "Hợi",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19831024_mao_10",
+      "status": "success",
+      "birth": {
+        "year": 1983,
+        "month": 10,
+        "day": 24,
+        "hour": "mao",
+        "hourName": "Mão",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19851218_ti_01",
+      "status": "success",
+      "birth": {
+        "year": 1985,
+        "month": 12,
+        "day": 18,
+        "hour": "ti",
+        "hourName": "Tý",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19880826_tuat_01",
+      "status": "success",
+      "birth": {
+        "year": 1988,
+        "month": 8,
+        "day": 26,
+        "hour": "tuat",
+        "hourName": "Tuất",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20121209_dan_11",
+      "status": "success",
+      "birth": {
+        "year": 2012,
+        "month": 12,
+        "day": 9,
+        "hour": "dan",
+        "hourName": "Dần",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19850803_mui_10",
+      "status": "success",
+      "birth": {
+        "year": 1985,
+        "month": 8,
+        "day": 3,
+        "hour": "mui",
+        "hourName": "Mùi",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19930805_tuat_00",
+      "status": "success",
+      "birth": {
+        "year": 1993,
+        "month": 8,
+        "day": 5,
+        "hour": "tuat",
+        "hourName": "Tuất",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20180806_ty_11",
+      "status": "success",
+      "birth": {
+        "year": 2018,
+        "month": 8,
+        "day": 6,
+        "hour": "ty",
+        "hourName": "Tỵ",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20170108_thin_00",
+      "status": "success",
+      "birth": {
+        "year": 2017,
+        "month": 1,
+        "day": 8,
+        "hour": "thin",
+        "hourName": "Thìn",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20060203_thin_11",
+      "status": "success",
+      "birth": {
+        "year": 2006,
+        "month": 2,
+        "day": 3,
+        "hour": "thin",
+        "hourName": "Thìn",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20050508_ngo_00",
+      "status": "success",
+      "birth": {
+        "year": 2005,
+        "month": 5,
+        "day": 8,
+        "hour": "ngo",
+        "hourName": "Ngọ",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19600210_mui_10",
+      "status": "success",
+      "birth": {
+        "year": 1960,
+        "month": 2,
+        "day": 10,
+        "hour": "mui",
+        "hourName": "Mùi",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20050524_dan_10",
+      "status": "success",
+      "birth": {
+        "year": 2005,
+        "month": 5,
+        "day": 24,
+        "hour": "dan",
+        "hourName": "Dần",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20181104_than_10",
+      "status": "success",
+      "birth": {
+        "year": 2018,
+        "month": 11,
+        "day": 4,
+        "hour": "than",
+        "hourName": "Thân",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19850602_dau_01",
+      "status": "success",
+      "birth": {
+        "year": 1985,
+        "month": 6,
+        "day": 2,
+        "hour": "dau",
+        "hourName": "Dậu",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_19990713_ngo_11",
+      "status": "success",
+      "birth": {
+        "year": 1999,
+        "month": 7,
+        "day": 13,
+        "hour": "ngo",
+        "hourName": "Ngọ",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20230727_ty_00",
+      "status": "success",
+      "birth": {
+        "year": 2023,
+        "month": 7,
+        "day": 27,
+        "hour": "ty",
+        "hourName": "Tỵ",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    },
+    {
+      "lid": "gen_20171105_tuat_00",
+      "status": "success",
+      "birth": {
+        "year": 2017,
+        "month": 11,
+        "day": 5,
+        "hour": "tuat",
+        "hourName": "Tuất",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "info": {
+        "title": "Lập Lá Số Tử Vi Việt Nam",
+        "hasCung": true,
+        "hasStars": true,
+        "hasInterpretation": true,
+        "interpretationCount": 0,
+        "cungCount": 6
+      }
+    }
+  ]
+}

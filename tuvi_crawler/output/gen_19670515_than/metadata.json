@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19670515_than",
+  "birth": {
+    "year": 1967,
+    "month": 5,
+    "day": 15,
+    "hour": "than",
+    "hourName": "Thân",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:14:28.372Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -13,7 +13,7 @@ const MIN_SCROLL = 300;
 export default function MobileStickyCTA({
   onPrimaryClick,
   onSecondaryClick,
-  primaryLabel = "Lập lá số miễn phí",
+  primaryLabel = "✨ Lập lá số miễn phí",
   secondaryLabel = "Xem bảng giá",
   show = true,
 }: Props) {

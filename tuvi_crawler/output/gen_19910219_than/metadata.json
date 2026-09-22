@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19910219_than",
+  "birth": {
+    "year": 1991,
+    "month": 2,
+    "day": 19,
+    "hour": "than",
+    "hourName": "Thân",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:03:28.522Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

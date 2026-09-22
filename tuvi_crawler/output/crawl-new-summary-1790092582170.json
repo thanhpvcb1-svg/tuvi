@@ -1,0 +1,308 @@
+{
+  "timestamp": "2026-09-22T15:56:22.170Z",
+  "total": 20,
+  "success": 0,
+  "failed": 20,
+  "results": [
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1966,
+        "month": 11,
+        "day": 25,
+        "hour": "dau",
+        "hourName": "Dậu",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "hour": "thin",
+        "hourName": "Thìn",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2003,
+        "month": 12,
+        "day": 26,
+        "hour": "ty",
+        "hourName": "Tỵ",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2002,
+        "month": 6,
+        "day": 21,
+        "hour": "suu",
+        "hourName": "Sửu",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1995,
+        "month": 1,
+        "day": 25,
+        "hour": "dau",
+        "hourName": "Dậu",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2014,
+        "month": 7,
+        "day": 15,
+        "hour": "dan",
+        "hourName": "Dần",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2000,
+        "month": 12,
+        "day": 11,
+        "hour": "ngo",
+        "hourName": "Ngọ",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2010,
+        "month": 12,
+        "day": 23,
+        "hour": "hoi",
+        "hourName": "Hợi",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1972,
+        "month": 5,
+        "day": 18,
+        "hour": "hoi",
+        "hourName": "Hợi",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1977,
+        "month": 3,
+        "day": 15,
+        "hour": "dan",
+        "hourName": "Dần",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1951,
+        "month": 5,
+        "day": 10,
+        "hour": "than",
+        "hourName": "Thân",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1987,
+        "month": 8,
+        "day": 15,
+        "hour": "dan",
+        "hourName": "Dần",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2015,
+        "month": 6,
+        "day": 23,
+        "hour": "ti",
+        "hourName": "Tý",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2012,
+        "month": 2,
+        "day": 20,
+        "hour": "mao",
+        "hourName": "Mão",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1987,
+        "month": 7,
+        "day": 19,
+        "hour": "ty",
+        "hourName": "Tỵ",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1996,
+        "month": 10,
+        "day": 19,
+        "hour": "mui",
+        "hourName": "Mùi",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 2008,
+        "month": 11,
+        "day": 16,
+        "hour": "ti",
+        "hourName": "Tý",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1994,
+        "month": 4,
+        "day": 25,
+        "hour": "thin",
+        "hourName": "Thìn",
+        "gender": "0",
+        "genderName": "Nữ",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1963,
+        "month": 11,
+        "day": 6,
+        "hour": "dan",
+        "hourName": "Dần",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "0",
+        "calendarName": "Âm"
+      },
+      "error": "Could not extract lid from response URL"
+    },
+    {
+      "status": "failed",
+      "birth": {
+        "year": 1960,
+        "month": 4,
+        "day": 1,
+        "hour": "mao",
+        "hourName": "Mão",
+        "gender": "1",
+        "genderName": "Nam",
+        "calendar": "1",
+        "calendarName": "Dương"
+      },
+      "error": "Could not extract lid from response URL"
+    }
+  ]
+}

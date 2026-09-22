@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19540205_ty",
+  "birth": {
+    "year": 1954,
+    "month": 2,
+    "day": 5,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:16:59.444Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

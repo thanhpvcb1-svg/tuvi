@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19780103_dan",
+  "birth": {
+    "year": 1978,
+    "month": 1,
+    "day": 3,
+    "hour": "dan",
+    "hourName": "Dần",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:20:08.632Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

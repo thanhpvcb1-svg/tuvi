@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19500501_ti",
+  "birth": {
+    "year": 1950,
+    "month": 5,
+    "day": 1,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:13:30.179Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19690504_tuat",
+  "birth": {
+    "year": 1969,
+    "month": 5,
+    "day": 4,
+    "hour": "tuat",
+    "hourName": "Tuất",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:20:15.170Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

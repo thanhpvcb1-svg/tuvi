@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19900905_thin",
+  "birth": {
+    "year": 1990,
+    "month": 9,
+    "day": 5,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:19:22.467Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

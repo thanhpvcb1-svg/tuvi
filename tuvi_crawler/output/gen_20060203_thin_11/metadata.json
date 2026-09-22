@@ -1,0 +1,21 @@
+{
+  "lid": "gen_20060203_thin_11",
+  "url": "https://tuvi.cohoc.net/lap-la-so-tu-vi.html",
+  "crawledAt": "2026-09-22T15:58:17.180Z",
+  "birth": {
+    "year": 2006,
+    "month": 2,
+    "day": 3,
+    "hour": "Thìn",
+    "gender": "Nam",
+    "calendar": "Dương"
+  },
+  "info": {
+    "title": "Lập Lá Số Tử Vi Việt Nam",
+    "hasCung": true,
+    "hasStars": true,
+    "hasInterpretation": true,
+    "interpretationCount": 0,
+    "cungCount": 6
+  }
+}

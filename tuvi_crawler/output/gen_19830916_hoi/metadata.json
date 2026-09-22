@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19830916_hoi",
+  "birth": {
+    "year": 1983,
+    "month": 9,
+    "day": 16,
+    "hour": "hoi",
+    "hourName": "Hợi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:19:32.691Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19760312_ty",
+  "birth": {
+    "year": 1976,
+    "month": 3,
+    "day": 12,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:08:15.105Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

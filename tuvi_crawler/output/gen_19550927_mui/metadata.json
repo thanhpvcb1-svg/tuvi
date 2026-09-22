@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19550927_mui",
+  "birth": {
+    "year": 1955,
+    "month": 9,
+    "day": 27,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:16:51.302Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

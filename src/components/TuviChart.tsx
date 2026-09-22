@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import type { ChartView, PalaceView } from "../lib/types";
 import ChartCenter from "./ChartCenter";
 import PalaceBox from "./PalaceBox";
@@ -157,6 +157,36 @@ export default function TuviChart({
   showPhiHoaCanCung = true,
   showTieuVanHighlight = true,
 }: Props) {
+  const chartRef = useRef<HTMLElement>(null);
+  const [showScrollHint, setShowScrollHint] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  // Show scroll hint on mobile when chart is rendered
+  useEffect(() => {
+    if (!chart || !chartRef.current) return;
+    
+    const checkOverflow = () => {
+      const el = chartRef.current;
+      if (el && el.scrollWidth > el.clientWidth && !hasScrolled) {
+        setShowScrollHint(true);
+        // Auto-hide after 4 seconds
+        const timer = setTimeout(() => setShowScrollHint(false), 4000);
+        return () => clearTimeout(timer);
+      }
+    };
+    
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [chart, hasScrolled]);
+
+  // Hide hint when user scrolls
+  const handleScroll = () => {
+    if (!hasScrolled) {
+      setHasScrolled(true);
+      setShowScrollHint(false);
+    }
+  };
   if (!hasRequestedChart) {
     return (
       <section className="chart chart-empty chart-welcome">
@@ -230,7 +260,13 @@ export default function TuviChart({
           });
 
   return (
-    <section className="chart">
+    <section className="chart" ref={chartRef} onScroll={handleScroll}>
+      {showScrollHint && (
+        <div className="chart-scroll-hint" aria-live="polite">
+          <span className="chart-scroll-hint__icon">👆</span>
+          <span>Vuốt ngang để xem đầy đủ lá số</span>
+        </div>
+      )}
       <div className="chart-export-frame">
         <div className="chart-export-content">
           <div className="chart-grid">

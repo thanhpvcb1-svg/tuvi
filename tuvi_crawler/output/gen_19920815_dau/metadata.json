@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19920815_dau",
+  "birth": {
+    "year": 1992,
+    "month": 8,
+    "day": 15,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:20:23.376Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

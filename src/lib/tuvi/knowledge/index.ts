@@ -90,3 +90,35 @@ export {
   type PalaceKnowledgeResult,
   type QueryContext as PalaceQueryCtx,
 } from "./palaceKnowledgeQuery";
+
+// Improved Knowledge Matcher (NEW - Better matching logic)
+export {
+  normalizeStarName,
+  normalizeBranch,
+  normalizeStem,
+  normalizePalace,
+  parseConditionText,
+  matchBlock,
+  queryKnowledge,
+  getTopKnowledge,
+  extractStarsFromPalace,
+  extractMutagensFromPalace,
+  isMainStar,
+  SCORE_WEIGHTS,
+  STAR_ALIASES,
+  type MatchResult,
+  type MatchType,
+  type MatchContext,
+  type RawBlock,
+  type PhiHoaFlow,
+} from "./improvedMatcher";
+
+// Improved Knowledge Service (NEW - Integration layer)
+export {
+  queryPalaceKnowledgeImproved,
+  hasImprovedKnowledge,
+  getAvailablePalacesImproved,
+  buildMatchContext,
+  formatMatchResult,
+  type KnowledgeQueryResult,
+} from "./improvedKnowledgeService";

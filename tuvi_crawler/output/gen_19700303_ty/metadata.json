@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19700303_ty",
+  "birth": {
+    "year": 1970,
+    "month": 3,
+    "day": 3,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:18:03.746Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

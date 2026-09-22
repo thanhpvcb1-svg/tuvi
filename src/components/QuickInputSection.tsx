@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from "react";
-import { parseQuickInput, formatParsedData, type ParseResult, type ParsedBirthData } from "../lib/quickInputParser";
+import React, { useState, useCallback, useEffect, useMemo } from "react";
+import { parseQuickInput, type ParseResult, type ParsedBirthData } from "../lib/quickInputParser";
 import type { BirthInput } from "../lib/types";
 
 type Props = {
@@ -32,15 +32,25 @@ export default function QuickInputSection({ currentValues, onFill, onSubmit }: P
   const [showConflictDialog, setShowConflictDialog] = useState(false);
   const [pendingData, setPendingData] = useState<ParsedBirthData | null>(null);
 
+  // Real-time parsing khi user gõ
+  const realtimeResult = useMemo(() => {
+    if (!inputText.trim()) return null;
+    return parseQuickInput(inputText);
+  }, [inputText]);
+
+  // Kiểm tra có data nào được nhận diện không
+  const hasRealtimeData = useMemo(() => {
+    if (!realtimeResult?.data) return false;
+    return Object.keys(realtimeResult.data).length > 0;
+  }, [realtimeResult]);
+
   const handleParse = useCallback(() => {
     if (!inputText.trim()) {
       setParseResult(null);
       return;
     }
-
-    const result = parseQuickInput(inputText);
-    setParseResult(result);
-  }, [inputText]);
+    setParseResult(realtimeResult);
+  }, [inputText, realtimeResult]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -169,30 +179,32 @@ export default function QuickInputSection({ currentValues, onFill, onSubmit }: P
     }
   };
 
-  const renderPreviewPills = (data: ParsedBirthData) => {
-    const pills: Array<{ label: string; value: string }> = [];
+  const renderPreviewPills = (data: ParsedBirthData, isRealtime = false) => {
+    const pills: Array<{ label: string; value: string; key: string }> = [];
     
     if (data.fullName) {
-      pills.push({ label: "Họ tên", value: data.fullName });
+      pills.push({ key: "name", label: "Họ tên", value: data.fullName });
     }
     if (data.day && data.month && data.year) {
-      pills.push({ label: "Ngày sinh", value: `${data.day}/${data.month}/${data.year}` });
+      pills.push({ key: "date", label: "Ngày sinh", value: `${data.day}/${data.month}/${data.year}` });
     }
     if (data.gender) {
-      pills.push({ label: "Giới tính", value: data.gender === "male" ? "Nam" : "Nữ" });
+      pills.push({ key: "gender", label: "Giới tính", value: data.gender === "male" ? "Nam" : "Nữ" });
     }
     if (data.birthHour) {
       const minute = data.birthMinute || "00";
-      pills.push({ label: "Giờ sinh", value: `${data.birthHour}:${minute.padStart(2, "0")}` });
+      pills.push({ key: "time", label: "Giờ sinh", value: `${data.birthHour}:${minute.padStart(2, "0")}` });
     }
     if (data.calendarType) {
-      pills.push({ label: "Loại lịch", value: data.calendarType === "lunar" ? "Âm lịch" : "Dương lịch" });
+      pills.push({ key: "calendar", label: "Loại lịch", value: data.calendarType === "lunar" ? "Âm lịch" : "Dương lịch" });
     }
 
+    if (pills.length === 0) return null;
+
     return (
-      <div className="quick-input-pills" role="list" aria-label="Thông tin đã nhận diện">
-        {pills.map((pill, index) => (
-          <span key={index} className="quick-input-pill" role="listitem">
+      <div className={`quick-input-pills${isRealtime ? " quick-input-pills--realtime" : ""}`} role="list" aria-label="Thông tin đã nhận diện">
+        {pills.map((pill) => (
+          <span key={pill.key} className="quick-input-pill" role="listitem">
             <span className="quick-input-pill-label">{pill.label}:</span>
             <span className="quick-input-pill-value">{pill.value}</span>
           </span>
@@ -232,6 +244,17 @@ export default function QuickInputSection({ currentValues, onFill, onSubmit }: P
           Tự động điền
         </button>
       </div>
+
+      {/* Real-time preview - hiển thị ngay khi gõ */}
+      {hasRealtimeData && !parseResult && realtimeResult?.data && (
+        <div className="quick-input-realtime" role="status" aria-live="polite">
+          <div className="quick-input-realtime-label">
+            <span className="quick-input-realtime-icon">👁</span>
+            <span>Đang nhận diện:</span>
+          </div>
+          {renderPreviewPills(realtimeResult.data, true)}
+        </div>
+      )}
 
       {/* Parse Result */}
       {parseResult && (
