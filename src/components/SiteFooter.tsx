@@ -15,7 +15,8 @@ export default function SiteFooter() {
             <a href="/bang-gia">Bảng giá</a>
             <a href="/la-so-mau">Lá số mẫu</a>
             <a href="/bai-viet">Bài viết</a>
-            <a href="#privacy">Chính sách bảo mật</a>
+            <a href="/chinh-sach-bao-mat">Chính sách bảo mật</a>
+            <a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a>
             <a href="/lien-he">Liên hệ</a>
           </div>
         </div>

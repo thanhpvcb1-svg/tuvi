@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "description": "Database Cung + Thiên Can cho Tử Vi",
+    "source": "tuvicohoc.net",
+    "lastUpdated": "2024-01-15",
+    "version": "1.0"
+  },
+  "thienCan": {
+    "Giáp": {
+      "nguHanh": "Mộc",
+      "amDuong": "Dương",
+      "combinations": ["Giáp Tý", "Giáp Dần", "Giáp Thìn", "Giáp Ngọ", "Giáp Thân", "Giáp Tuất"],
+      "tuHoa": {
+        "loc": "Liêm Trinh",
+        "quyen": "Phá Quân",
+        "khoa": "Vũ Khúc",
+        "ky": "Thái Dương"
+      },
+      "description": "Giáp - Dương Mộc, tượng cây lớn, có tính cương trực, chính nghĩa, thích lãnh đạo"
+    },
+    "Ất": {
+      "nguHanh": "Mộc",
+      "amDuong": "Âm",
+      "combinations": ["Ất Sửu", "Ất Mão", "Ất Tỵ", "Ất Mùi", "Ất Dậu", "Ất Hợi"],
+      "tuHoa": {
+        "loc": "Thiên Cơ",
+        "quyen": "Thiên Lương",
+        "khoa": "Tử Vi",
+        "ky": "Thái Âm"
+      },
+      "description": "Ất - Âm Mộc, tượng cây nhỏ, có tính mềm dẻo, linh hoạt, khéo léo"
+    },
+    "Bính": {
+      "nguHanh": "Hỏa",
+      "amDuong": "Dương",
+      "combinations": ["Bính Tý", "Bính Dần", "Bính Thìn", "Bính Ngọ", "Bính Thân", "Bính Tuất"],
+      "tuHoa": {
+        "loc": "Thiên Đồng",
+        "quyen": "Thiên Cơ",
+        "khoa": "Văn Xương",
+        "ky": "Liêm Trinh"
+      },
+      "description": "Bính - Dương Hỏa, tượng mặt trời, có tính nhiệt tình, sáng sủa, bộc trực"
+    },
+    "Đinh": {
+      "nguHanh": "Hỏa",
+      "amDuong": "Âm",
+      "combinations": ["Đinh Sửu", "Đinh Mão", "Đinh Tỵ", "Đinh Mùi", "Đinh Dậu", "Đinh Hợi"],
+      "tuHoa": {
+        "loc": "Thái Âm",
+        "quyen": "Thiên Đồng",
+        "khoa": "Thiên Cơ",
+        "ky": "Cự Môn"
+      },
+      "description": "Đinh - Âm Hỏa, tượng ngọn nến, có tính ấm áp, tinh tế, sâu sắc"
+    },
+    "Mậu": {
+      "nguHanh": "Thổ",
+      "amDuong": "Dương",
+      "combinations": ["Mậu Tý", "Mậu Dần", "Mậu Thìn", "Mậu Ngọ", "Mậu Thân", "Mậu Tuất"],
+      "tuHoa": {
+        "loc": "Tham Lang",
+        "quyen": "Thái Âm",
+        "khoa": "Hữu Bật",
+        "ky": "Thiên Cơ"
+      },
+      "description": "Mậu - Dương Thổ, tượng núi cao, có tính ổn trọng, trung hậu, thành thật, giữ chữ Tín"
+    },
+    "Kỷ": {
+      "nguHanh": "Thổ",
+      "amDuong": "Âm",
+      "combinations": ["Kỷ Sửu", "Kỷ Mão", "Kỷ Tỵ", "Kỷ Mùi", "Kỷ Dậu", "Kỷ Hợi"],
+      "tuHoa": {
+        "loc": "Vũ Khúc",
+        "quyen": "Tham Lang",
+        "khoa": "Thiên Lương",
+        "ky": "Văn Khúc"
+      },
+      "description": "Kỷ - Âm Thổ, tượng ruộng đồng, có tính cần cù, chịu khó, thực tế"
+    },
+    "Canh": {
+      "nguHanh": "Kim",
+      "amDuong": "Dương",
+      "combinations": ["Canh Tý", "Canh Dần", "Canh Thìn", "Canh Ngọ", "Canh Thân", "Canh Tuất"],
+      "tuHoa": {
+        "loc": "Thái Dương",
+        "quyen": "Vũ Khúc",
+        "khoa": "Thái Âm",
+        "ky": "Thiên Đồng"
+      },
+      "description": "Canh - Dương Kim, tượng gươm đao, có tính cương quyết, dứt khoát, nghĩa khí"
+    },
+    "Tân": {
+      "nguHanh": "Kim",
+      "amDuong": "Âm",
+      "combinations": ["Tân Sửu", "Tân Mão", "Tân Tỵ", "Tân Mùi", "Tân Dậu", "Tân Hợi"],
+      "tuHoa": {
+        "loc": "Cự Môn",
+        "quyen": "Thái Dương",
+        "khoa": "Văn Khúc",
+        "ky": "Văn Xương"
+      },
+      "description": "Tân - Âm Kim, tượng trang sức, có tính tinh tế, nhạy cảm, thẩm mỹ"
+    },
+    "Nhâm": {
+      "nguHanh": "Thủy",
+      "amDuong": "Dương",
+      "combinations": ["Nhâm Tý", "Nhâm Dần", "Nhâm Thìn", "Nhâm Ngọ", "Nhâm Thân", "Nhâm Tuất"],
+      "tuHoa": {
+        "loc": "Thiên Lương",
+        "quyen": "Tử Vi",
+        "khoa": "Tả Phụ",
+        "ky": "Vũ Khúc"
+      },
+      "description": "Nhâm - Dương Thủy, tượng biển cả, có tính bao dung, trí tuệ, linh hoạt"
+    },
+    "Quý": {
+      "nguHanh": "Thủy",
+      "amDuong": "Âm",
+      "combinations": ["Quý Sửu", "Quý Mão", "Quý Tỵ", "Quý Mùi", "Quý Dậu", "Quý Hợi"],
+      "tuHoa": {
+        "loc": "Phá Quân",
+        "quyen": "Cự Môn",
+        "khoa": "Thái Âm",
+        "ky": "Tham Lang"
+      },
+      "description": "Quý - Âm Thủy, tượng mưa móc, có tính nhu mì, thâm trầm, sâu sắc"
+    }
+  },
+  "diaChi": {
+    "Tý": { "nguHanh": "Thủy", "amDuong": "Dương", "tuChinh": true },
+    "Sửu": { "nguHanh": "Thổ", "amDuong": "Âm", "tuChinh": false },
+    "Dần": { "nguHanh": "Mộc", "amDuong": "Dương", "tuChinh": false },
+    "Mão": { "nguHanh": "Mộc", "amDuong": "Âm", "tuChinh": true },
+    "Thìn": { "nguHanh": "Thổ", "amDuong": "Dương", "tuChinh": false },
+    "Tỵ": { "nguHanh": "Hỏa", "amDuong": "Âm", "tuChinh": false },
+    "Ngọ": { "nguHanh": "Hỏa", "amDuong": "Dương", "tuChinh": true },
+    "Mùi": { "nguHanh": "Thổ", "amDuong": "Âm", "tuChinh": false },
+    "Thân": { "nguHanh": "Kim", "amDuong": "Dương", "tuChinh": false },
+    "Dậu": { "nguHanh": "Kim", "amDuong": "Âm", "tuChinh": true },
+    "Tuất": { "nguHanh": "Thổ", "amDuong": "Dương", "tuChinh": false },
+    "Hợi": { "nguHanh": "Thủy", "amDuong": "Âm", "tuChinh": false }
+  },
+  "cungCanInterpretations": {
+    "Mậu": {
+      "general": "Mậu - Thổ là mẫu người cá tính ổn trọng, trung hậu, thành thật và giữ chữ Tín, hay trọng danh dự, mặt mũi, cho nên thường là người hay tự ái, cố chấp ý kiến của họ, không thích những kẻ ưa thay đổi và sống kiểu phù du. Họ rất hay thích những gì cổ điển và có tính xưa cũ, không thích nghi với những cái thay đổi quá đáng, họ có tính bảo thủ, lại hơi tiêu cực và khó thích ứng với hoàn cảnh mới. Mậu = Giúp đỡ, che chở cho người thì nhiều, mà thọ lãnh sự giúp đỡ của người thì ít, hay nể sợ đàn bà, cá tính ổn trọng thâm trầm, nhiều cao vọng.",
+      "cungMenh": "Vì Mậu ở trung tập lại thuộc thổ, vạn vật không có đất đều không sống được, nên giúp người khác thì nhiều mà nhận sự giúp đỡ từ người khác thì ít. Người ổn trọng thâm trầm.",
+      "cungThienDi": "Can Mậu thuộc Địa chi Địa, chủ ra ngoài được hoàn cảnh, môi trường giúp đỡ.",
+      "cungPhucDuc": "Can Mậu ngũ hành Thổ, vạn vật không có Thổ không thể sinh trưởng, cho nên có lòng hy sinh cống hiến."
+    },
+    "Nhâm": {
+      "general": "Nhâm - Dương Thủy, tượng biển cả, có tính bao dung, trí tuệ, linh hoạt, thích tự do.",
+      "cungThienDi": "Can Nhâm thuộc Nhân chi Nhân, chủ ra ngoài tự phụ, luôn muốn hơn người, tự lập, có thái độ thích làm 'anh cả'."
+    },
+    "Kỷ": {
+      "general": "Kỷ - Âm Thổ, tượng ruộng đồng, có tính cần cù, chịu khó, thực tế, biết lo xa.",
+      "cungDienTrach": "Can Kỷ thuộc Thổ, chủ gia đình ổn định, có tài sản bất động sản."
+    },
+    "Giáp": {
+      "general": "Giáp - Dương Mộc, tượng cây lớn, có tính cương trực, chính nghĩa, thích lãnh đạo, có chí tiến thủ.",
+      "cungMenh": "Can Giáp thuộc Thiên chi Thiên, chủ tự lập, độc lập, nắm được thời cơ thuận lợi ở mức cao nhất."
+    },
+    "Ất": {
+      "general": "Ất - Âm Mộc, tượng cây nhỏ, có tính mềm dẻo, linh hoạt, khéo léo, biết thích nghi.",
+      "cungMenh": "Can Ất thuộc Nhân chi Thiên, chủ tự lập nhưng cần có người hỗ trợ."
+    },
+    "Bính": {
+      "general": "Bính - Dương Hỏa, tượng mặt trời, có tính nhiệt tình, sáng sủa, bộc trực, thích thể hiện.",
+      "cungMenh": "Can Bính thuộc Địa chi Thiên, chủ được hoàn cảnh hỗ trợ để phát triển."
+    },
+    "Đinh": {
+      "general": "Đinh - Âm Hỏa, tượng ngọn nến, có tính ấm áp, tinh tế, sâu sắc, biết quan tâm người khác.",
+      "cungMenh": "Can Đinh thuộc Thiên chi Nhân, chủ có quý nhân phù trợ."
+    },
+    "Canh": {
+      "general": "Canh - Dương Kim, tượng gươm đao, có tính cương quyết, dứt khoát, nghĩa khí, thích công bằng.",
+      "cungMenh": "Can Canh thuộc Nhân chi Thiên, chủ tự lập, có năng lực nhưng cần nỗ lực."
+    },
+    "Tân": {
+      "general": "Tân - Âm Kim, tượng trang sức, có tính tinh tế, nhạy cảm, thẩm mỹ, thích cái đẹp.",
+      "cungMenh": "Can Tân thuộc Địa chi Nhân, chủ được môi trường hỗ trợ nhưng cần chủ động."
+    },
+    "Quý": {
+      "general": "Quý - Âm Thủy, tượng mưa móc, có tính nhu mì, thâm trầm, sâu sắc, biết lắng nghe.",
+      "cungMenh": "Can Quý thuộc Thiên chi Địa, chủ có phúc ấm từ tổ tiên."
+    }
+  },
+  "napAmLucThapHoaGiap": {
+    "Giáp Tý": { "napAm": "Hải Trung Kim", "nguHanh": "Kim" },
+    "Ất Sửu": { "napAm": "Hải Trung Kim", "nguHanh": "Kim" },
+    "Bính Dần": { "napAm": "Lô Trung Hỏa", "nguHanh": "Hỏa" },
+    "Đinh Mão": { "napAm": "Lô Trung Hỏa", "nguHanh": "Hỏa" },
+    "Mậu Thìn": { "napAm": "Đại Lâm Mộc", "nguHanh": "Mộc" },
+    "Kỷ Tỵ": { "napAm": "Đại Lâm Mộc", "nguHanh": "Mộc" },
+    "Canh Ngọ": { "napAm": "Lộ Bàng Thổ", "nguHanh": "Thổ" },
+    "Tân Mùi": { "napAm": "Lộ Bàng Thổ", "nguHanh": "Thổ" },
+    "Nhâm Thân": { "napAm": "Kiếm Phong Kim", "nguHanh": "Kim" },
+    "Quý Dậu": { "napAm": "Kiếm Phong Kim", "nguHanh": "Kim" },
+    "Giáp Tuất": { "napAm": "Sơn Đầu Hỏa", "nguHanh": "Hỏa" },
+    "Ất Hợi": { "napAm": "Sơn Đầu Hỏa", "nguHanh": "Hỏa" },
+    "Bính Tý": { "napAm": "Giản Hạ Thủy", "nguHanh": "Thủy" },
+    "Đinh Sửu": { "napAm": "Giản Hạ Thủy", "nguHanh": "Thủy" },
+    "Mậu Dần": { "napAm": "Thành Đầu Thổ", "nguHanh": "Thổ" },
+    "Kỷ Mão": { "napAm": "Thành Đầu Thổ", "nguHanh": "Thổ" },
+    "Canh Thìn": { "napAm": "Bạch Lạp Kim", "nguHanh": "Kim" },
+    "Tân Tỵ": { "napAm": "Bạch Lạp Kim", "nguHanh": "Kim" },
+    "Nhâm Ngọ": { "napAm": "Dương Liễu Mộc", "nguHanh": "Mộc" },
+    "Quý Mùi": { "napAm": "Dương Liễu Mộc", "nguHanh": "Mộc" },
+    "Giáp Thân": { "napAm": "Tuyền Trung Thủy", "nguHanh": "Thủy" },
+    "Ất Dậu": { "napAm": "Tuyền Trung Thủy", "nguHanh": "Thủy" },
+    "Bính Tuất": { "napAm": "Ốc Thượng Thổ", "nguHanh": "Thổ" },
+    "Đinh Hợi": { "napAm": "Ốc Thượng Thổ", "nguHanh": "Thổ" },
+    "Mậu Tý": { "napAm": "Tích Lịch Hỏa", "nguHanh": "Hỏa" },
+    "Kỷ Sửu": { "napAm": "Tích Lịch Hỏa", "nguHanh": "Hỏa" },
+    "Canh Dần": { "napAm": "Tùng Bách Mộc", "nguHanh": "Mộc" },
+    "Tân Mão": { "napAm": "Tùng Bách Mộc", "nguHanh": "Mộc" },
+    "Nhâm Thìn": { "napAm": "Trường Lưu Thủy", "nguHanh": "Thủy" },
+    "Quý Tỵ": { "napAm": "Trường Lưu Thủy", "nguHanh": "Thủy" },
+    "Giáp Ngọ": { "napAm": "Sa Trung Kim", "nguHanh": "Kim" },
+    "Ất Mùi": { "napAm": "Sa Trung Kim", "nguHanh": "Kim" },
+    "Bính Thân": { "napAm": "Sơn Hạ Hỏa", "nguHanh": "Hỏa" },
+    "Đinh Dậu": { "napAm": "Sơn Hạ Hỏa", "nguHanh": "Hỏa" },
+    "Mậu Tuất": { "napAm": "Bình Địa Mộc", "nguHanh": "Mộc" },
+    "Kỷ Hợi": { "napAm": "Bình Địa Mộc", "nguHanh": "Mộc" },
+    "Canh Tý": { "napAm": "Bích Thượng Thổ", "nguHanh": "Thổ" },
+    "Tân Sửu": { "napAm": "Bích Thượng Thổ", "nguHanh": "Thổ" },
+    "Nhâm Dần": { "napAm": "Kim Bạc Kim", "nguHanh": "Kim" },
+    "Quý Mão": { "napAm": "Kim Bạc Kim", "nguHanh": "Kim" },
+    "Giáp Thìn": { "napAm": "Phú Đăng Hỏa", "nguHanh": "Hỏa" },
+    "Ất Tỵ": { "napAm": "Phú Đăng Hỏa", "nguHanh": "Hỏa" },
+    "Bính Ngọ": { "napAm": "Thiên Hà Thủy", "nguHanh": "Thủy" },
+    "Đinh Mùi": { "napAm": "Thiên Hà Thủy", "nguHanh": "Thủy" },
+    "Mậu Thân": { "napAm": "Đại Trạch Thổ", "nguHanh": "Thổ" },
+    "Kỷ Dậu": { "napAm": "Đại Trạch Thổ", "nguHanh": "Thổ" },
+    "Canh Tuất": { "napAm": "Thoa Xuyến Kim", "nguHanh": "Kim" },
+    "Tân Hợi": { "napAm": "Thoa Xuyến Kim", "nguHanh": "Kim" },
+    "Nhâm Tý": { "napAm": "Tang Đố Mộc", "nguHanh": "Mộc" },
+    "Quý Sửu": { "napAm": "Tang Đố Mộc", "nguHanh": "Mộc" },
+    "Giáp Dần": { "napAm": "Đại Khê Thủy", "nguHanh": "Thủy" },
+    "Ất Mão": { "napAm": "Đại Khê Thủy", "nguHanh": "Thủy" },
+    "Bính Thìn": { "napAm": "Sa Trung Thổ", "nguHanh": "Thổ" },
+    "Đinh Tỵ": { "napAm": "Sa Trung Thổ", "nguHanh": "Thổ" },
+    "Mậu Ngọ": { "napAm": "Thiên Thượng Hỏa", "nguHanh": "Hỏa" },
+    "Kỷ Mùi": { "napAm": "Thiên Thượng Hỏa", "nguHanh": "Hỏa" },
+    "Canh Thân": { "napAm": "Thạch Lựu Mộc", "nguHanh": "Mộc" },
+    "Tân Dậu": { "napAm": "Thạch Lựu Mộc", "nguHanh": "Mộc" },
+    "Nhâm Tuất": { "napAm": "Đại Hải Thủy", "nguHanh": "Thủy" },
+    "Quý Hợi": { "napAm": "Đại Hải Thủy", "nguHanh": "Thủy" }
+  },
+  "cungNames": {
+    "vi": ["Mệnh", "Phụ Mẫu", "Phúc Đức", "Điền Trạch", "Quan Lộc", "Nô Bộc", "Thiên Di", "Tật Ách", "Tài Bạch", "Tử Tức", "Phu Thê", "Huynh Đệ"],
+    "en": ["Life", "Parents", "Fortune", "Property", "Career", "Servants", "Travel", "Health", "Wealth", "Children", "Spouse", "Siblings"]
+  },
+  "sampleData": {
+    "cungMenhMauTy": {
+      "canChi": "Mậu Tý",
+      "can": "Mậu",
+      "chi": "Tý",
+      "napAm": "Tích Lịch Hỏa",
+      "interpretation": "Cung Mệnh là MẬU TÍ - Tích Lịch Hỏa (Lửa sấm sét). Người Tích Lịch Hỏa mệnh nhiều sao tốt sự nghiệp cơ nghiệp thành công hơn người, thích làm việc to tát, càng loạn lạc càng xáo trộn khả năng càng phát triển. Tư duy mẫn tiệp, có đủ thế nhưng cần lực bộc phát để hoàn thành."
+    },
+    "cungMenhMauDan": {
+      "canChi": "Mậu Dần",
+      "can": "Mậu",
+      "chi": "Dần",
+      "napAm": "Thành Đầu Thổ",
+      "interpretation": "Cung Mệnh là MẬU DẦN - Thành Đầu Thổ (Đất trên thành). Người có tính ổn định, vững chắc như thành trì."
+    }
+  }
+}

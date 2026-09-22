@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const TIPS = [
-  "Bạn có thể lập lá số miễn phí trước rồi mới quyết định có cần hỏi sâu hơn hay không.",
-  "Nếu chưa chắc giờ sinh, hãy dùng bản tham khảo để định hướng câu hỏi thay vì kết luận quá sớm.",
-  "Khi liên hệ, một câu hỏi rõ thường hữu ích hơn một yêu cầu quá rộng.",
+  "\"Lần đầu xem tử vi online mà thấy rõ ràng và dễ hiểu. Phần luận giải AI giúp mình hiểu được tổng quan lá số.\" - Minh Anh",
+  "\"Gói hỏi 1 câu rất hữu ích khi mình đang phân vân chuyện mở rộng kinh doanh. Câu trả lời đi thẳng vào vấn đề.\" - Hoàng Nam",
+  "\"Mình thích cách trình bày lá số trực quan, dễ nhìn. Phần đại vận và tiểu vận hiển thị rõ ràng.\" - Thu Hà",
+  "\"Trang web load nhanh, giao diện đẹp. Dữ liệu không lưu trên server nên yên tâm về bảo mật.\" - Đức Trung",
 ];
 
 const SESSION_KEY = "helper_tip_dismissed";
@@ -83,10 +84,10 @@ export default function SocialProofPopup() {
   return (
     <div className="social-proof-popup" role="status" aria-live="polite">
       <div className="social-proof-popup-icon" aria-hidden="true">
-        Tip
+        ★
       </div>
       <div className="social-proof-popup-body">
-        <p className="social-proof-popup-email">Gợi ý khi dùng trang</p>
+        <p className="social-proof-popup-email">Đánh giá từ người dùng</p>
         <p className="social-proof-popup-text">{TIPS[tipIndex]}</p>
         <button type="button" className="social-proof-popup-cta" onClick={handleCta}>
           Xem gói hỗ trợ

@@ -22,25 +22,22 @@ export default function ExportActions({
   return (
     <section className="result-block">
       <div className="section-heading section-heading--compact">
-        <p className="eyebrow">Hành động</p>
-        <h2>Lưu, chia sẻ và tạo lại lá số</h2>
+        <p className="eyebrow">Bước tiếp theo</p>
+        <h2>Luận giải và lưu lá số</h2>
       </div>
 
       <div className="export-actions">
-        <button type="button" className="ghost-button" onClick={onInterpret} disabled={isInterpreting}>
-          {isInterpreting ? "Đang phân tích..." : isReadingOpen ? "Ẩn luận giải Bắc Phái" : "Luận giải Bắc Phái bằng AI"}
+        <button type="button" className="primary-button" onClick={onInterpret} disabled={isInterpreting}>
+          {isInterpreting ? "Đang phân tích..." : isReadingOpen ? "Ẩn luận giải" : "🔮 Luận giải lá số"}
         </button>
-        <button type="button" className="ghost-button" onClick={onDownloadImage}>
-          {isDownloadingImage ? "Đang tải ảnh..." : "Tải ảnh lá số"}
+        <button type="button" className="ghost-button" onClick={onDownloadImage} disabled={isDownloadingImage}>
+          {isDownloadingImage ? "Đang tải..." : "Tải ảnh"}
         </button>
         <button type="button" className="ghost-button" onClick={onCopyLink}>
-          Sao chép liên kết
+          Sao chép link
         </button>
         <button type="button" className="ghost-button" onClick={onReset}>
           Lập lá số mới
-        </button>
-        <button type="button" className="ghost-button" disabled title="Sắp ra mắt">
-          Gửi qua email
         </button>
       </div>
     </section>
