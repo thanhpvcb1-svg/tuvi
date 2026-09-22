@@ -1,9 +1,26 @@
-import type { ChartView, PalaceView, StarView } from "./types";
+import type { ChartView, PalaceView, StarView, Gender } from "./types";
+import {
+  queryKnowledgeBlocks,
+  getAllStarsInPalace,
+  getAllStarsInChart,
+  formatKnowledgeSource,
+  type KnowledgeMatch,
+  type QueryContext,
+} from "./tuvi/interpretations/knowledgeQuery";
 
 export type SummaryCard = {
   label: string;
   value: string;
   hint?: string;
+};
+
+export type KnowledgeItem = {
+  id: string;
+  starName: string;
+  text: string;
+  source: string;
+  matchReasons: string[];
+  matchScore: number;
 };
 
 export type QuickReadingCard = {
@@ -12,6 +29,7 @@ export type QuickReadingCard = {
   icon: string;
   summary: string;
   detail: string;
+  knowledgeItems?: KnowledgeItem[];
 };
 
 export function normalizeVietnameseText(value: string | undefined) {
@@ -77,20 +95,45 @@ export function buildSummaryCards(chart: ChartView, horoscopeYear: number, birth
   ];
 }
 
-export function buildQuickReadings(chart: ChartView): QuickReadingCard[] {
+
+
+export function buildQuickReadings(chart: ChartView, gender: Gender = "male"): QuickReadingCard[] {
   const menhPalace = findPalace(chart, "Mệnh");
   const quanLocPalace = findPalace(chart, "Quan Lộc");
   const taiBachPalace = findPalace(chart, "Tài Bạch");
   const phuThePalace = findPalace(chart, "Phu Thê");
   const tatAchPalace = findPalace(chart, "Tật Ách");
 
-  const buildText = (palace: PalaceView | undefined, fallback: string) => {
-    const stars = getTopStars(palace);
-    if (!palace || stars.length === 0) {
-      return fallback;
-    }
+  const allChartStars = getAllStarsInChart(chart.palaces);
 
-    return `Nổi bật với ${stars.join(", ")} tại cung ${palace.name}. Đây là gợi ý nhanh để bạn đọc tổng quan trước khi xem chi tiết từng cung.`;
+  const queryPalaceKnowledge = (palace: PalaceView | undefined): KnowledgeMatch[] => {
+    if (!palace) return [];
+    const context: QueryContext = {
+      palace: palace as any,
+      gender,
+      allStarsInPalace: getAllStarsInPalace(palace as any),
+      allStarsInChart: allChartStars,
+    };
+    return queryKnowledgeBlocks(context);
+  };
+
+  const phuTheKnowledge = queryPalaceKnowledge(phuThePalace);
+
+  const buildSummary = (palace: PalaceView | undefined, fallback: string) => {
+    const stars = getTopStars(palace);
+    if (!palace || stars.length === 0) return fallback;
+    return `Nổi bật với ${stars.join(", ")} tại cung ${palace.name}. Đây là gợi ý nhanh để bạn đọc tổng quan.`;
+  };
+
+  const buildKnowledgeItems = (matches: KnowledgeMatch[]): KnowledgeItem[] => {
+    return matches.map((match) => ({
+      id: match.block.id,
+      starName: match.block.star_name,
+      text: match.block.text,
+      source: formatKnowledgeSource(match.block.source),
+      matchReasons: match.matchReasons,
+      matchScore: match.matchScore,
+    }));
   };
 
   return [
@@ -98,35 +141,36 @@ export function buildQuickReadings(chart: ChartView): QuickReadingCard[] {
       id: "personality",
       title: "Tổng quan tính cách",
       icon: "◐",
-      summary: buildText(menhPalace, "Lá số cho thấy nền tảng tính cách cần đọc thêm ở cung Mệnh để hiểu rõ hơn."),
+      summary: buildSummary(menhPalace, "Lá số cho thấy nền tảng tính cách cần đọc thêm ở cung Mệnh để hiểu rõ hơn."),
       detail: "Tập trung vào khí chất, cách ra quyết định và xu hướng tự thể hiện.",
     },
     {
       id: "career",
       title: "Sự nghiệp",
       icon: "▣",
-      summary: buildText(quanLocPalace, "Cần xem thêm cung Quan Lộc để có nhận định sự nghiệp rõ hơn."),
+      summary: buildSummary(quanLocPalace, "Cần xem thêm cung Quan Lộc để có nhận định sự nghiệp rõ hơn."),
       detail: "Ưu tiên đọc thêm phần Quan Lộc, Thiên Di và Nô Bộc để hiểu cách phát triển công việc.",
     },
     {
       id: "finance",
       title: "Tài lộc",
       icon: "◈",
-      summary: buildText(taiBachPalace, "Tài lộc nên được đọc kết hợp cung Tài Bạch và Điền Trạch."),
+      summary: buildSummary(taiBachPalace, "Tài lộc nên được đọc kết hợp cung Tài Bạch và Điền Trạch."),
       detail: "Phần này thiên về xu hướng quản lý tiền và khả năng tạo nguồn thu, không thay thế tư vấn tài chính.",
     },
     {
       id: "relationships",
       title: "Tình duyên / gia đạo",
       icon: "♡",
-      summary: buildText(phuThePalace, "Muốn đọc kỹ phần tình duyên, hãy xem thêm cung Phu Thê và Phúc Đức."),
+      summary: buildSummary(phuThePalace, "Muốn đọc kỹ phần tình duyên, hãy xem thêm cung Phu Thê và Phúc Đức."),
       detail: "Nên xem như một lớp tham khảo về xu hướng kết nối, không phải kết luận tuyệt đối.",
+      knowledgeItems: buildKnowledgeItems(phuTheKnowledge),
     },
     {
       id: "wellbeing",
       title: "Sức khỏe / tinh thần",
       icon: "☼",
-      summary: buildText(tatAchPalace, "Phần sức khỏe tinh thần cần được đọc như tín hiệu tham khảo để chủ động chăm sóc bản thân."),
+      summary: buildSummary(tatAchPalace, "Phần sức khỏe tinh thần cần được đọc như tín hiệu tham khảo để chủ động chăm sóc bản thân."),
       detail: "Thông tin tử vi không thay thế chẩn đoán hay tư vấn chuyên môn về y tế.",
     },
   ];

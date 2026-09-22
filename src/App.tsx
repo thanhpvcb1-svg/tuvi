@@ -1,7 +1,6 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { toBlob, toJpeg } from "html-to-image";
 import { useLocation, useNavigate } from "react-router-dom";
-import AIAnalysisPanel from "./components/AIAnalysisPanel";
 import BacPhaiArticlePage from "./components/BacPhaiArticlePage";
 import BacPhaiLibraryPage from "./components/BacPhaiLibraryPage";
 import BirthForm from "./components/BirthForm";
@@ -10,37 +9,31 @@ import FAQSection from "./components/FAQSection";
 import FloatingContactLinks from "./components/FloatingContactLinks";
 import HomeShowcase from "./components/HomeShowcase";
 import InterpretationCards from "./components/InterpretationCards";
+import LeadCaptureForm from "./components/LeadCaptureForm";
 import { LuuStarOptions } from "./components/LuuStarOptions";
+import MobileStickyCTA from "./components/MobileStickyCTA";
 import PalaceAccordion from "./components/PalaceAccordion";
 import PrivacyNotice from "./components/PrivacyNotice";
+import PrivacyPolicyPage from "./components/PrivacyPolicyPage";
 import PremiumPlans, { primaryPlans, type PricingPlan } from "./components/PremiumPlans";
+import QuickInputSection from "./components/QuickInputSection";
 import SampleChartsSection, { type SampleChartPreset } from "./components/SampleChartsSection";
 import SEOHead from "./components/SEOHead";
 import SocialProofPopup from "./components/SocialProofPopup";
 import SiteFooter from "./components/SiteFooter";
 import SolarNoonCalculator from "./components/SolarNoonCalculator";
+import StreamingAnalysis from "./components/StreamingAnalysis";
+import TermsPage from "./components/TermsPage";
+import Testimonials from "./components/Testimonials";
 import TrustBadges from "./components/TrustBadges";
 import TuviChart from "./components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "./components/VanHanhSelector";
 import VideoLessonsPage from "./components/VideoLessonsPage";
 import { findKnowledgeArticleByPath, knowledgeArticles } from "./content/bacPhaiLibrary";
-import {
-  buildAIAnalysisCacheKey,
-  buildOfflineAIAnalysis,
-  buildAIAnalysisPayload,
-  canGenerateNewAIAnalysisToday,
-  consumeAIAnalysisQuota,
-  generateLuanGiai,
-  getCachedAIAnalysis,
-  getRemainingAIAnalysisQuota,
-  hasLimitedBacPhaiData,
-  setCachedAIAnalysis,
-  type AIAnalysisResult,
-} from "./lib/aiLuanGiai";
 import type { BirthInput, ChartView, LuuDisplayOptions, NormalizedBirthInput, PalaceView, StarView } from "./lib/types";
 import type { QuickReadingCard } from "./lib/chartUi";
 
-type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "video";
+type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "video" | "terms" | "privacy";
 type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he";
 type FormErrors = Partial<Record<keyof BirthInput, string>> & { form?: string };
 
@@ -600,6 +593,7 @@ export default function App() {
     ? knowledgeArticles.filter((article) => article.id !== currentKnowledgeArticle.id).slice(0, 3)
     : [];
   const [activePage, setActivePage] = useState<MainPageId>("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [birthInput, setBirthInput] = useState<BirthInput>(defaultInput);
   const [submittedInput, setSubmittedInput] = useState<BirthInput | null>(null);
   const [chart, setChart] = useState<ChartView | null>(null);
@@ -608,10 +602,7 @@ export default function App() {
   const [shareMessage, setShareMessage] = useState("");
   const [toastMessage, setToastMessage] = useState("");
   const [showReading, setShowReading] = useState(false);
-  const [readingResult, setReadingResult] = useState<AIAnalysisResult | null>(null);
-  const [readingError, setReadingError] = useState("");
-  const [isReadingLoading, setIsReadingLoading] = useState(false);
-  const [remainingAiQuota, setRemainingAiQuota] = useState(() => getRemainingAIAnalysisQuota());
+  const [showStreaming, setShowStreaming] = useState(false);
   const [isCopyingJson, setIsCopyingJson] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isDownloadingImage, setIsDownloadingImage] = useState(false);
@@ -621,7 +612,6 @@ export default function App() {
   const [lastSubmittedSignature, setLastSubmittedSignature] = useState<string | null>(null);
   const chartCaptureRef = useRef<HTMLDivElement | null>(null);
   const resultRef = useRef<HTMLElement | null>(null);
-  const readingRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (location.pathname === "/lap-la-so") {
@@ -663,6 +653,14 @@ export default function App() {
       setActivePage("video");
       return;
     }
+    if (location.pathname === "/dieu-khoan-su-dung" || location.pathname === "/terms") {
+      setActivePage("terms");
+      return;
+    }
+    if (location.pathname === "/chinh-sach-bao-mat" || location.pathname === "/privacy") {
+      setActivePage("privacy");
+      return;
+    }
     setActivePage("home");
   }, [location.pathname]);
 
@@ -691,9 +689,8 @@ export default function App() {
 
       setChart(nextChart);
       setQuickReadings(buildQuickReadings(nextChart));
-      setReadingResult(null);
-      setReadingError("");
       setShowReading(false);
+      setShowStreaming(false);
     };
 
     refreshChart();
@@ -732,10 +729,12 @@ export default function App() {
 
   const navigateHomeSection = (section: HomeSectionId) => {
     const route = homeSectionRoutes[section];
+    setIsMobileMenuOpen(false);
     navigate(route);
   };
 
   const navigateHome = () => {
+    setIsMobileMenuOpen(false);
     navigate("/");
   };
 
@@ -748,19 +747,37 @@ export default function App() {
     setShareMessage("");
     setToastMessage("");
     setShowReading(false);
+    setShowStreaming(false);
     setQuickReadings([]);
-    setReadingResult(null);
-    setReadingError("");
     setLuuOptions(defaultLuuOptions);
-    setRemainingAiQuota(getRemainingAIAnalysisQuota());
     setHoroscopeYear(currentYear);
     setLastSubmittedSignature(null);
     navigate(targetPath, { replace: true });
   };
 
   const navigateChartForm = () => {
+    setIsMobileMenuOpen(false);
     resetWorkspace("/lap-la-so");
   };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
 
   const navigateContactPage = () => {
     navigate("/lien-he");
@@ -812,8 +829,6 @@ export default function App() {
       setQuickReadings(buildQuickReadings(nextChart));
       setHasRequestedChart(true);
       setShowReading(false);
-      setReadingResult(null);
-      setReadingError("");
       setLastSubmittedSignature(buildInputSignature(nextInput));
       navigate("/lap-la-so", { replace: true });
       setIsGenerating(false);
@@ -862,89 +877,12 @@ export default function App() {
     }
   };
 
-  const handleLuanGiai = async () => {
-    if (!chart || !submittedInput || isReadingLoading) {
+  const handleLuanGiai = () => {
+    if (!chart || !submittedInput) {
       return;
     }
 
-    if (showReading) {
-      setShowReading(false);
-      return;
-    }
-
-    setShowReading(true);
-    const payload = buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai");
-    const cacheKey = buildAIAnalysisCacheKey(payload);
-    const cachedResult = getCachedAIAnalysis(cacheKey);
-
-    if (cachedResult) {
-      setReadingError("");
-      setReadingResult(cachedResult);
-      return;
-    }
-
-    if (!canGenerateNewAIAnalysisToday()) {
-      setReadingError("Bạn đã dùng hết 3 lượt tạo luận giải mới hôm nay trên trình duyệt này. Bạn vẫn có thể xem lại kết quả đã cache hoặc thử lại vào ngày mai.");
-      setReadingResult(null);
-      return;
-    }
-
-    setReadingError("");
-    setReadingResult(null);
-    setIsReadingLoading(true);
-
-    try {
-      const data = await generateLuanGiai(payload);
-      setReadingResult(data);
-      setCachedAIAnalysis(cacheKey, data);
-      consumeAIAnalysisQuota();
-      setRemainingAiQuota(getRemainingAIAnalysisQuota());
-    } catch (error) {
-      console.error(error);
-      const fallbackResult = buildOfflineAIAnalysis(chart, payload);
-      setReadingError("");
-      setReadingResult(fallbackResult);
-      setCachedAIAnalysis(cacheKey, fallbackResult);
-    } finally {
-      setIsReadingLoading(false);
-    }
-  };
-
-  const handleRegenerateLuanGiai = async () => {
-    if (!chart || !submittedInput || isReadingLoading) {
-      return;
-    }
-
-    if (!canGenerateNewAIAnalysisToday()) {
-      setReadingError("Bạn đã dùng hết 3 lượt tạo luận giải mới hôm nay trên trình duyệt này. Vui lòng thử lại vào ngày mai.");
-      setShowReading(true);
-      return;
-    }
-
-    setShowReading(true);
-    setReadingError("");
-    setReadingResult(null);
-    setIsReadingLoading(true);
-
-    try {
-      const payload = buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai");
-      const cacheKey = buildAIAnalysisCacheKey(payload);
-      const data = await generateLuanGiai(payload);
-      setReadingResult(data);
-      setCachedAIAnalysis(cacheKey, data);
-      consumeAIAnalysisQuota();
-      setRemainingAiQuota(getRemainingAIAnalysisQuota());
-    } catch (error) {
-      console.error(error);
-      const payload = buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai");
-      const cacheKey = buildAIAnalysisCacheKey(payload);
-      const fallbackResult = buildOfflineAIAnalysis(chart, payload);
-      setReadingError("");
-      setReadingResult(fallbackResult);
-      setCachedAIAnalysis(cacheKey, fallbackResult);
-    } finally {
-      setIsReadingLoading(false);
-    }
+    setShowReading((prev) => !prev);
   };
 
   const handleDownloadImage = async () => {
@@ -1053,12 +991,7 @@ export default function App() {
     resetWorkspace("/lap-la-so");
   };
 
-  const readingDataJson = chart && submittedInput
-    ? JSON.stringify(buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai"), null, 2)
-    : "";
-  const isReadingDataLimited = chart && submittedInput
-    ? hasLimitedBacPhaiData(buildAIAnalysisPayload(chart, submittedInput, horoscopeYear, "bac-phai"))
-    : false;
+
 
   const faqSchema = (items: typeof homeFaqs) => ({
     "@context": "https://schema.org",
@@ -1198,6 +1131,18 @@ export default function App() {
           description: "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và cách đọc lá số theo hướng dễ tiếp cận.",
           canonicalPath: "/video",
         };
+      case "terms":
+        return {
+          title: "Điều Khoản Sử Dụng - LaSoTuVi",
+          description: "Điều khoản và điều kiện sử dụng dịch vụ lập lá số tử vi và luận giải trên LaSoTuVi.",
+          canonicalPath: "/dieu-khoan-su-dung",
+        };
+      case "privacy":
+        return {
+          title: "Chính Sách Bảo Mật - LaSoTuVi",
+          description: "Chính sách bảo mật và cách chúng tôi bảo vệ thông tin cá nhân của bạn trên LaSoTuVi.",
+          canonicalPath: "/chinh-sach-bao-mat",
+        };
       default:
         return {
           title: "LaSoTuVi - Lập Lá Số Tử Vi Online & Luận Giải Theo Lá Số",
@@ -1282,6 +1227,14 @@ export default function App() {
         title="Giải đáp nhanh trước khi bạn bắt đầu"
         description="Những câu hỏi phổ biến nhất khi lập lá số hoặc chọn gói luận giải."
       />
+      <Testimonials />
+      <section className="content-section">
+        <LeadCaptureForm
+          eyebrow="Đăng ký tư vấn"
+          title="Nhận hỗ trợ từ chuyên gia"
+          description="Để lại thông tin, chúng tôi sẽ liên hệ tư vấn gói phù hợp với nhu cầu của bạn."
+        />
+      </section>
       <PrivacyNotice />
     </div>
   );
@@ -1299,6 +1252,11 @@ export default function App() {
           <SolarNoonCalculator />
         </section>
         <section className="form-panel">
+          <QuickInputSection
+            currentValues={birthInput}
+            onFill={(values) => setBirthInput((prev) => ({ ...prev, ...values }))}
+            onSubmit={handleGenerateFromInput}
+          />
           <BirthForm
             value={birthInput}
             onChange={setBirthInput}
@@ -1370,23 +1328,16 @@ export default function App() {
               onDownloadImage={handleDownloadImage}
               onCopyLink={handleCopyLink}
               onReset={handleResetChart}
-              isInterpreting={isReadingLoading}
+              isInterpreting={false}
               isReadingOpen={showReading}
               isDownloadingImage={isDownloadingImage}
             />
 
-            {showReading ? (
-              <div ref={readingRef}>
-                <AIAnalysisPanel
-                  result={readingResult}
-                  isLoading={isReadingLoading}
-                  error={readingError}
-                  analysisData={readingDataJson}
-                  onRegenerate={handleRegenerateLuanGiai}
-                  remainingQuota={remainingAiQuota}
-                  hasLimitedBacPhaiData={isReadingDataLimited}
-                />
-              </div>
+            {showReading && chart ? (
+              <StreamingAnalysis
+                chart={chart}
+                isActive={showReading}
+              />
             ) : null}
 
             <div className="result-disclaimer">
@@ -1428,6 +1379,31 @@ export default function App() {
             </section>
 
           </>
+        ) : isGenerating ? (
+          <section className="result-skeleton">
+            <div className="skeleton-header">
+              <div className="skeleton-line skeleton-line--short" />
+              <div className="skeleton-line skeleton-line--medium" />
+            </div>
+            <div className="skeleton-chart">
+              <div className="skeleton-grid">
+                {Array.from({ length: 12 }).map((_, i) => (
+                  <div key={i} className="skeleton-cell">
+                    <div className="skeleton-line skeleton-line--short" />
+                    <div className="skeleton-line" />
+                    <div className="skeleton-line skeleton-line--medium" />
+                  </div>
+                ))}
+              </div>
+              <div className="skeleton-center">
+                <div className="skeleton-line skeleton-line--short" />
+                <div className="skeleton-line" />
+                <div className="skeleton-line skeleton-line--medium" />
+                <div className="skeleton-line skeleton-line--short" />
+              </div>
+            </div>
+            <p className="skeleton-message">Đang lập lá số, vui lòng chờ...</p>
+          </section>
         ) : (
           <section className="result-empty-card">
             <p className="eyebrow">Sẵn sàng</p>
@@ -1925,8 +1901,45 @@ export default function App() {
     </>
   );
 
+  const termsPageContent = (
+    <>
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath="/dieu-khoan-su-dung"
+        schema={[
+          organizationSchema,
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Điều khoản sử dụng", path: "/dieu-khoan-su-dung" }]),
+        ]}
+      />
+      <div className="home-page">
+        <TermsPage />
+      </div>
+    </>
+  );
+
+  const privacyPageContent = (
+    <>
+      <SEOHead
+        title={pageSeo.title}
+        description={pageSeo.description}
+        canonicalPath="/chinh-sach-bao-mat"
+        schema={[
+          organizationSchema,
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Chính sách bảo mật", path: "/chinh-sach-bao-mat" }]),
+        ]}
+      />
+      <div className="home-page">
+        <PrivacyPolicyPage />
+      </div>
+    </>
+  );
+
+  const showMobileStickyCTA = activePage === "home" || activePage === "la-so-mau" || activePage === "bang-gia";
+
   return (
     <div className="site-shell">
+      <a href="#main-content" className="skip-link">Bỏ qua đến nội dung chính</a>
       <header className="site-header">
         <div className="site-header-inner">
           <button type="button" className="site-brand" onClick={navigateHome}>
@@ -1937,7 +1950,7 @@ export default function App() {
             </span>
           </button>
 
-          <nav className="site-nav" aria-label="Điều hướng chính">
+          <nav className="site-nav site-nav--desktop" aria-label="Điều hướng chính">
             <button type="button" className={getNavLinkClass("/")} onClick={navigateHome}>
               Trang chủ
             </button>
@@ -1964,15 +1977,80 @@ export default function App() {
             </button>
           </nav>
 
-          <div className="site-auth">
+          <div className="site-auth site-auth--desktop">
             <button type="button" className="primary-button site-login-button" onClick={navigateChartForm}>
               Lập Lá Số Miễn Phí
             </button>
           </div>
+
+          <button
+            type="button"
+            className={`mobile-menu-toggle ${isMobileMenuOpen ? "is-open" : ""}`}
+            onClick={toggleMobileMenu}
+            aria-label={isMobileMenuOpen ? "Đóng menu" : "Mở menu"}
+            aria-expanded={isMobileMenuOpen}
+          >
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+          </button>
         </div>
+
+        {isMobileMenuOpen ? (
+          <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
+            <nav
+              className="mobile-menu"
+              onClick={(e) => e.stopPropagation()}
+              aria-label="Menu di động"
+            >
+              <div className="mobile-menu-header">
+                <span className="mobile-menu-title">Menu</span>
+                <button
+                  type="button"
+                  className="mobile-menu-close"
+                  onClick={closeMobileMenu}
+                  aria-label="Đóng menu"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="mobile-menu-links">
+                <button type="button" className={getNavLinkClass("/")} onClick={navigateHome}>
+                  Trang chủ
+                </button>
+                <button type="button" className={getNavLinkClass("/lap-la-so")} onClick={navigateChartForm}>
+                  Lập lá số
+                </button>
+                <button type="button" className={getNavLinkClass("/la-so-mau")} onClick={() => navigateHomeSection("la-so-mau")}>
+                  Lá số mẫu
+                </button>
+                <button type="button" className={getNavLinkClass("/hop-tuoi")} onClick={() => navigateHomeSection("hop-tuoi")}>
+                  Hợp tuổi
+                </button>
+                <button type="button" className={getNavLinkClass("/bai-viet")} onClick={() => navigateHomeSection("kien-thuc")}>
+                  Bài viết
+                </button>
+                <button type="button" className={getNavLinkClass("/video")} onClick={() => { closeMobileMenu(); navigate("/video"); }}>
+                  Video
+                </button>
+                <button type="button" className={getNavLinkClass("/bang-gia")} onClick={() => navigateHomeSection("premium")}>
+                  Bảng giá
+                </button>
+                <button type="button" className={getNavLinkClass("/lien-he")} onClick={() => navigateHomeSection("lien-he")}>
+                  Liên hệ
+                </button>
+              </div>
+              <div className="mobile-menu-cta">
+                <button type="button" className="primary-button" onClick={navigateChartForm}>
+                  Lập Lá Số Miễn Phí
+                </button>
+              </div>
+            </nav>
+          </div>
+        ) : null}
       </header>
 
-      <main className="site-main">
+      <main id="main-content" className="site-main">
         {activePage === "home"
           ? homePage
           : activePage === "lap-la-so"
@@ -1989,9 +2067,18 @@ export default function App() {
                       ? contactPage
                       : activePage === "video"
                         ? videoLessonsPage
-                        : faqPage}
+                        : activePage === "terms"
+                          ? termsPageContent
+                          : activePage === "privacy"
+                            ? privacyPageContent
+                            : faqPage}
       </main>
 
+      <MobileStickyCTA
+        show={showMobileStickyCTA}
+        onPrimaryClick={navigateChartForm}
+        onSecondaryClick={() => navigate("/bang-gia")}
+      />
       <FloatingContactLinks />
       <SocialProofPopup />
       <SiteFooter />
