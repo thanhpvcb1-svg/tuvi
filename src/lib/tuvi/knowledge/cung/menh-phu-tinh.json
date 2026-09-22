@@ -1,0 +1,67 @@
+{
+  "palace": "menh",
+  "section_id": "phu_tinh",
+  "title": "Phụ Tinh Thủ Mệnh",
+  "interpretations": [
+    {
+      "id": "menh_van_xuong",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["van_xuong"]
+      },
+      "text": "Mi thanh mục tú, thông minh cơ xảo. Là người học rộng tài cao, cơ biến khác thường, tính tình nho nhã nên thích nhàn hạ, ghét náo nhiệt.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      }
+    },
+    {
+      "id": "menh_am_sat",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["am_sat"]
+      },
+      "text": "Chủ về người tâm thuật bất chính.",
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tam Hợp Phái",
+        "author": "Nguyễn Anh Vũ dịch"
+      }
+    },
+    {
+      "id": "menh_am_sat_2",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["am_sat"]
+      },
+      "text": "Âm sát vào mệnh hay gặp tiểu nhân, bản tính nghi hoặc nên dễ phiền não vô ích, nếu thấy luôn cả Đà la, Hóa Kị, Không Kiếp, chủ về đi đến ảo giác, suy nghĩ vớ vẩn hoặc vì ma túy mà con người đầu óc lơ mơ.",
+      "source": {
+        "book": "Tử vi tinh điển",
+        "author": "Vũ Tài Lục"
+      }
+    },
+    {
+      "id": "menh_van_xuong_pha_quan",
+      "type": "star_combination",
+      "conditions": {
+        "same_palace_stars": ["van_xuong", "pha_quan"]
+      },
+      "text": "Văn Xương Phá Quân đồng cung, chỉ tai nạn đường thủy, ví dụ như chết đuối hoặc bị bệnh về đường tiết niệu, sinh sản hay gan thận.",
+      "source": {
+        "book": "Đẩu số cung vị",
+        "author": "Trần Bỉnh Húc"
+      }
+    },
+    {
+      "id": "menh_van_xuong_van_khuc_hoi",
+      "type": "star_combination",
+      "conditions": {
+        "meeting_stars": ["van_xuong", "van_khuc"]
+      },
+      "text": "Văn quế văn hoa cách: Xương Khúc đồng cung thủ mệnh tại Sửu Mùi, là cách này hoặc từ tam phương, thiên di nhập vào cũng được. Người cách này, thông minh hiếu học, yêu tân trang, từ nhỏ đã có thể triển lộ tài hoa, thích hợp văn học, phương diện nghệ thuật phát triển, đem lại danh tiếng. Nhưng không thể có Kỵ tinh hội nhập, e có văn thư thị phi.",
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích",
+        "author": "Từ Tăng Sinh"
+      }
+    }
+  ]
+}

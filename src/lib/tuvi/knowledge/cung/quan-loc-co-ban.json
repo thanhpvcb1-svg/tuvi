@@ -1,0 +1,107 @@
+{
+  "palace": "quan_loc",
+  "sections": [
+    {
+      "section_id": "dia_chi_cung",
+      "title": "Địa Chi Cung Quan Lộc",
+      "interpretations": [
+        {
+          "id": "quan_dan",
+          "type": "earthly_branch",
+          "conditions": {
+            "position": "dan"
+          },
+          "text": "Cung Quan lộc cư Dần thuộc tài Nhân, chủ sự nghiệp khá nhiều bôn ba.",
+          "source": {
+            "book": "Đẩu số chính nhãn",
+            "author": "Ông Phúc Dụ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "can_cung",
+      "title": "Thiên Can Cung Quan Lộc",
+      "interpretations": [
+        {
+          "id": "quan_can_giap",
+          "type": "heavenly_stem",
+          "conditions": {
+            "heavenly_stem": "giap"
+          },
+          "text": "Can Giáp thuộc Thiên chi Thiên; chủ sự nghiệp dựa vào nỗ lực của chính mình không dựa vào người khác, không che chở cho người khác cũng không cần ai che chở.",
+          "source": {
+            "book": "Đẩu số chính nhãn",
+            "author": "Ông Phúc Dụ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "hoa_toa",
+      "title": "Hóa Tinh Tọa Thủ",
+      "interpretations": [
+        {
+          "id": "quan_toa_hoa_loc",
+          "type": "mutagen_in_palace",
+          "conditions": {
+            "mutagen_in_palace": "loc"
+          },
+          "text": "Hóa Lộc nhập quan lộc, bận rộn, đắc quý nhân, có năng lực lập nghiệp, địa vị, tài phú, lập nghiệp dễ kiếm tiền. Phùng Không Kiếp không nên thường thay đổi công việc. Hóa Lộc phùng Khoa Quyền tương hợp có thể đạt chức vị cao. Phùng Kị sát xung phá, thường ít chuyên tâm cho công việc, thiếu nhẫn nại.",
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+            "author": "Huy Hà Phan"
+          }
+        },
+        {
+          "id": "quan_toa_hoa_loc_2",
+          "type": "mutagen_in_palace",
+          "conditions": {
+            "mutagen_in_palace": "loc"
+          },
+          "text": "Trong nghề nghiệp hoặc môi trường làm việc nhân duyên tương đối tốt, nhờ nhân duyên mà đắc tài. Trong công việc và sự nghiệp bận rộn nhưng nhờ đó mà kiếm được tiền, làm việc vui vẻ, có thể nhận được sự tín nhiệm ở nơi làm việc. Đó là công việc kiếm tiền khả quan và gặp nhiều may mắn trong sự nghiệp. Học lực khá và giỏi.",
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+          }
+        },
+        {
+          "id": "quan_toa_hoa_khoa",
+          "type": "mutagen_in_palace",
+          "conditions": {
+            "mutagen_in_palace": "khoa"
+          },
+          "text": "Hóa Khoa nhập quan lộc, trọng danh tiếng, công việc nhẹ nhàng, dễ gặp quý nhân, vận thi cử tốt, sự nghiệp bình ổn, ít chịu bị động, thích hợp làm công chức, thường làm cho công ty có danh tiếng. Phùng Hóa Kị có thể học trường tư hoặc quá trình học tập, thi cử gặp trắc trở.",
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+            "author": "Huy Hà Phan"
+          }
+        },
+        {
+          "id": "quan_toa_hoa_khoa_2",
+          "type": "mutagen_in_palace",
+          "conditions": {
+            "mutagen_in_palace": "khoa"
+          },
+          "text": "Mệnh chủ hanh thông về công việc và sự nghiệp, công việc suôn sẻ, ổn định, có quý nhân giúp đỡ. Phù hợp với công việc văn hóa, giáo dục, có thể được sếp coi trọng, có địa vị trung bình. Vận trình học hành suôn sẻ, chủ có danh vọng, học được ở các trường danh tiếng.",
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+          }
+        },
+        {
+          "id": "quan_toa_loc_khoa",
+          "type": "mutagen_combination",
+          "conditions": {
+            "mutagen_in_palace": ["loc", "khoa"]
+          },
+          "text": "Lộc Khoa cách cục: Thích hợp với ngành nghề danh tiếng và chủ đạo trong liên kết. Thích hợp ngành nghề ổn định hoặc không có tính mạo hiểm lớn. Thích hợp ngành nghề làm đối tác, cộng tác, liên minh, trung gian, môi giới. Thích hợp làm công, viên chức, quân sư, cố vấn, ủy thác, chế tạo, nghề cá nhân.",
+          "source": {
+            "book": "Đoán vận",
+            "author": "Trịnh Mục Đức"
+          }
+        }
+      ]
+    }
+  ]
+}

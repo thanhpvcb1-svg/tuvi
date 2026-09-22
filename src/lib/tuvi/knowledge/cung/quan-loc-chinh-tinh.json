@@ -1,0 +1,69 @@
+{
+  "palace": "quan_loc",
+  "section_id": "chinh_tinh",
+  "title": "Chính Tinh Tại Quan Lộc",
+  "interpretations": [
+    {
+      "id": "quan_tham_lang",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["tham_lang"]
+      },
+      "text": "Tham Lang nhập cung quan lộc, phấn đấu gian khổ, trước 30 tuổi vận trình không tốt, sau 30 tuổi dần dần chuyển biến theo hướng tốt.",
+      "source": {
+        "book": "Hà lạc phái",
+        "author": "Phương Ngoại Nhân"
+      }
+    },
+    {
+      "id": "quan_tham_lang_hoa_loc",
+      "type": "star_with_mutagen",
+      "conditions": {
+        "required_stars": ["tham_lang"],
+        "star_mutagen": "loc"
+      },
+      "text": "Tham Lang Hóa Lộc nhập cung quan lộc, cung tài bạch, là ý tượng: kiếm được tiền. Thích hợp ngành nghề giải trí. Nữ mệnh thì cẩn thận chọn nghề nghiệp, tuyệt đối đừng đi vào con đường tà môn ngoại đạo.",
+      "source": {
+        "book": "Hà lạc phái",
+        "author": "Phương Ngoại Nhân"
+      }
+    },
+    {
+      "id": "quan_tham_lang_2",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["tham_lang"]
+      },
+      "text": "Sao Tham Lang: Là sao tài nghệ, vừa sẵn có nghị lực kiên nhẫn, cho nên tính thích nghi của nó khá rộng, nhưng không rời xa phạm vi các nghề nghiệp Rượu, sắc, tài, khí, như: Ăn uống, thực phẩm, rượu chè, vui chơi, trang hoàng nội thất, trang trí, thiết kế quần áo trang sức, thương nghiệp.",
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích",
+        "author": "Từ Tăng Sinh"
+      }
+    },
+    {
+      "id": "quan_huu_bat",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["huu_bat"]
+      },
+      "text": "Chủ về tối vượng cho võ nghiệp, không lợi với văn nhân. Cùng bại Thiên Phủ Xương Khúc ở cung tài bạch và cung quan lộc là song mỹ. Hãm địa chủ về khi thành khi bại, bị khiển trách, hạ chức. Thấy Kình Dương Đà La Hỏa Linh Không Kiếp chủ về bị truất giáng.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      }
+    },
+    {
+      "id": "quan_huu_bat_hoa_khoa",
+      "type": "star_with_mutagen",
+      "conditions": {
+        "required_stars": ["huu_bat"],
+        "star_mutagen": "khoa"
+      },
+      "text": "Hữu bật Hóa Khoa nhập quan lộc, đa trợ lực, lợi cho học hành, thi cử, công việc, thăng tiến thuận lợi.",
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+        "author": "Huy Hà Phan"
+      }
+    }
+  ]
+}

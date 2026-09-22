@@ -1,0 +1,264 @@
+{
+  "palace": null,
+  "source": "tuvi.cohoc.net",
+  "chart_id": "472159",
+  "total_blocks": 9,
+  "sections": [
+    {
+      "section_id": "tong-quan",
+      "title": "TỔNG QUAN",
+      "blocks": [
+        {
+          "block_id": "tong-quan_cohoc_1",
+          "condition_text": "Điểm \"xí hoa\" của lá số là: 11.95",
+          "raw_text": "Điểm \"xí hoa lá số\" dương báo hiệu đây là lá số tốt. Bạn nên đọc kỹ lời giải của lá số để tìm ra cho mình cách sống và ứng xử phù hợp với cuộc đời.\n - Các cung tốt: Phúc đức (1.74), Điền trạch (0.07), Quan lộc (0.86), Nô bộc (2.02), Thiên di (2.1), Tật ách (2.69), Phu thê (0.7), Mệnh (1.8), Phụ mẫu (1.5), Tử tức (0.35), Huynh đệ (0.85)\n - Các cung xấu: Tài bạch (-2.87)\n - Truy Lộc Kỵ toàn lá số: cung điền trạch 5 kỵ, cung điền trạch 13 lộc\n - Thất tinh định điểm tháng xem sơ lược xu thế một đời người, ở trường hợp này tại cung Quan lộc (vị trí Thiên). Thất tinh ngày là trung tâm, nhận chuyển Thiên, Nhân (Thiên Nhân hợp nhất, hành vi trung gian) mà dẫn dắt thể, ở trường hợp này tại cung Phu thê (vị trí Địa). Định điểm giờ sinh là điểm kết thúc thất tinh định điểm, là điểm quan hệ trọng yếu nhất cuộc đời (có thể xem như cung Mệnh mượn danh nghĩa), ở trường hợp này tại cung Phu thê (vị trí Nhân). Thiên Nhân hợp nhất: Quan lộc + Phu thê = lấy cung Phu thê làm trung gian.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của một cao thủ Bắc phái",
+            "author": "Kinh nghiệm của một cao thủ Bắc phái",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 9
+        },
+        {
+          "block_id": "tong-quan_cohoc_2",
+          "condition_text": "Phân tích thông tin lá số",
+          "raw_text": "- Sinh ngày 7 ứng với kỳ số Nhị cục. Cục của lá số là Thủy nhị cục, trường hợp này được gọi là chính Cục.\n- Tuổi DẦN khi chính tinh là Bắc Đẩu nhập Mệnh, thì được tăng độ số.\n- Một âm một dương, lưu hành không ngừng, cái đó gọi là Đạo. Hợp nhất không lường được gọi là Thần. Những lời nói này là ở cổ nhân phục khởi, không có gì là thay đổi. Năm MẬU thần (nguyên thức) ở Ngọ Mùi. Hỏa thần ở 7 (Ngọ 9 Mùi 8). Người tuổi Mậu Quý hóa Hỏa, cung Mệnh cần an tại Ngọ Mùi để được hưởng Hỏa cục phù trợ. Ngoài ra khi Thần không nằm trong hội cung Tam phương Mệnh - Tài - Quan, thì vẫn cần phải xác định rõ Thần tụ ở cung nào để làm cơ sở khi luận giải lá số.\n- Tuổi MẬU có 4 tổ hợp số tham hợp: Giáp Dần + Mậu Ngọ + Nhâm Tuất = 55 + 67 + 79 = 201; Ất Mão + Kỷ Mùi + Quý Hợi = 58 + 70 + 82 = 210; Bính Thìn + Canh Thân + Giáp Tý = 61 + 71 + 3 = 135; Đinh Tị + Tân Dậu + Ất Sửu = 64 + 76 + 6 = 146.\n- Mệnh Thổ vận hành theo quy luật: 5 - 6 - 3 - 4 - 7 - 8 , trong đó thì 4 là gốc là chân Thổ, tức là Kỷ Mão Kỷ Dậu, trục Mão Dậu là trục chân Mệnh.\n- Địa bàn sinh trợ cho Thiên bàn thì gọi là \"trợ khí\", có nghĩa là đương số tự hưởng lấy Phúc phận của mình.\n- Khi Mệnh an tại Tứ mộ và Tứ sinh, thì tùy thuộc theo Chủ của Thiên mệnh là Nam đẩu hay Bắc đẩu để xét.\n- Cặp năm và tháng cùng âm dương là thuận lý - độ số tăng.\n- Xét về năm sinh và cung an mệnh là cùng Âm Dương là thuận lý - tăng độ số.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của cụ Hà Uyên",
+            "author": "Kinh nghiệm của cụ Hà Uyên",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tong-quan_cohoc_3",
+          "condition_text": "Mệnh chủ Lộc tồn, chính tinh Phá quân, sinh tháng 9",
+          "raw_text": "Hành Thủy của tháng Chín: Khí của tháng Chín, Thổ lệnh đương quyền, Kim khí vào Suy, Thủy khí Quan Đới, nên Thủy của tháng Chín tuy Quan Đới nhưng, quý Thu Thổ vượng ngăn Thủy, nên Hỉ Mộc tiết Thổ, Kim lại sinh Thủy.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tong-quan_cohoc_4",
+          "condition_text": "Khảo sát vượng suy theo ngũ hành cung",
+          "raw_text": "Cung Mệnh, Thân trùng lặp ở Tuất THỔ vượng, Nhâm Tuất (Đại Hải Thủy: Nước biển lớn) là Thủy Vượng, sinh ở gần biển thì Thủy khí chuyển mạnh, còn sinh ra trong lục địa thì Thủy khí trung bình.\nNgười sinh vào tháng 9, có hậu Thổ đương lệnh, Kim khí chuyển suy, Thủy khí quan đới, Mộc khí nhập dưỡng, Hỏa khí nhập mộ (đương lệnh: rất vượng, suy: suy, quan đới: vượng, dưỡng: trung bình, mộ: rất suy).",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Cao đoạn tử vi đẩu số - Hàn Học Cư Sỹ",
+            "author": "Hàn Học Cư Sỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tong-quan_cohoc_5",
+          "condition_text": "Khảo sát vượng suy theo tinh đẩu",
+          "raw_text": "Sao Phá quân hành THỦY, độ số: 1.\nSao Văn xương hành KIM, độ số: 1.\nKết luận:\n- Hành THỦY là 1.\n- Hành KIM là 1.\n(*) Cần áp dụng: Phù ức, Thông quan, Điều hậu để tìm Hỉ thần, Kị thần, Dụng thần của lá số.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Thiên cơ phái - Hoàng Xuân Lâm",
+            "author": "Hoàng Xuân Lâm",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tong-quan_cohoc_6",
+          "condition_text": "Ngũ hành Hỉ Kị của lá số",
+          "raw_text": "Sau khi tổng hợp các khảo sát vượng suy ở bên phía trên cộng với thuật toán riêng của nhóm Tử Vi Cổ Học cho ra kết quả là Hỉ thần: Thổ, Kim; Kị thần: Mộc, Hỏa; Nhàn thần: Thủy. Dụng thần là  KIM dùng để cải vận và đánh giá lá số.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phù Cừ - Tử Vi Cổ Học",
+            "author": "Tử Vi Cổ Học",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tong-quan_cohoc_7",
+          "condition_text": "Tử vi ở cung Thìn, cung Mệnh ở Tuất",
+          "raw_text": "Cần khảo sát kỹ tinh hệ Phá quân Thìn Tuất: lệch lạc khô kiệt hay điều hòa khi luận giải lá số.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi tinh quyết",
+            "author": "Tử vi tinh quyết",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tong-quan_cohoc_8",
+          "condition_text": "Lai Nhân Cung ở cung Tài Bạch",
+          "raw_text": "Tài phú với bạn mà nói là rất quan trọng, tứ hóa lạc điểm cũng giống như phương thức kiếm tiền của bạn. Kế sách trong đầu cũng là làm sao để tài phú được lớn nhất, nhưng đầu tư không ổn định và kiếm tiền không tương xứng, cho nên duy trì tài phú ổn định lâu dài là rất quan trọng. Nếu điểm quan trọng nhất mà không làm rõ, thì cũng giống như thành quả của một đời nỗ lực bị đánh cắp mất vậy, áp lực tất sẽ cực lớn, sẽ không được vui vẻ thoải mái.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tong-quan_cohoc_9",
+          "condition_text": "Cung Tí, Ngọ, Mão, Dậu có Hóa kỵ [năm sinh]",
+          "raw_text": "Ý tượng: mệnh tạo là người khoa trương, có chút thành tựu thì cả thiên hạ đều biết.",
+          "conditions": {
+            "palace": null,
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ [năm sinh]",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "palace": "menh",
+  "palace_name": "Mệnh",
+  "sections": [
+    {
+      "section_id": "phi_cung_tu_hoa",
+      "title": "Phi Cung Tứ Hóa",
+      "interpretations": [
+        {
+          "id": "menh_ky_nhap_phuc",
+          "type": "phi_ky",
+          "source_palace": "menh",
+          "target_palace": "phuc_duc",
+          "clash_palace": "tai_bach",
+          "text": "Mệnh cung Hóa Kị nhập Phúc Đức, biểu tham ăn nhác làm, đầu óc chỉ nghĩ đến ăn ăn uống uống, lòng dạ độ lượng nhỏ, làm việc hay so đo tính toán, cuộc đời ít phúc khí, lắm vất vả, khó có phát triển, tâm tình bức bí, tương đối bi quan yếm thế; Phúc Đức là Sự Nghiệp của Phu Thê, Kị nhập vào chủ về thị phi, buồn phiền, nhìn thấy phối ngẫu thì lòng dạ không vui vẻ; Mệnh Hóa Kị xung Tài Bạch, có tranh chấp về tài chính, vì tiền tài mà muộn phiền, không hợp với kinh thương, đầu tư gây dựng sự nghiệp, bằng không sẽ phá tài; còn biểu thị là vô duyên với tiền tài, túi tiền trống rỗng, có nhiều tiêu nhiều có ít tiêu ít; Tài Bạch là Phụ Mẫu của Tật Ách, xung thì thân phận bản thân kém, sự đánh giá của mọi người với mình thấp; Tài Bạch là Điền Trạch của Nô Bộc, xung thì biểu thị ta làm tổn hại đến tài khố của bạn bè, cũng biểu thị bạn bè muốn kiếm tiền của ta; Tài Bạch là Quan Lộc của Quan Lộc, xung thì sự nghiệp không ổn định; Tài là Nô Bộc của Điền Trạch, xung thì biểu hiện duyên bạc với gia đình, nếu ở cùng với người thân thì bất hòa; Tài Bạch là Phu Thê của Phu Thê, biểu thị là bất lợi cho nam mà thôi, nữ không lợi cho chồng; Tài là Huynh Đệ của Tử Tức, tuyến Huynh Hữu chủ về thành tựu, xung thì không thể có thành tựu cho con cái, không có phúc ấm lưu lại cho con cái, con cái chỉ có thể tự bản thân mà tay trắng thành gia; Tài Bạch là Phúc Đức của Thiên Di, biểu thị là ra ngoài kiếm sống khó khăn; Tài là Tật Ách của Phụ Mẫu, xung thì biểu thị sức khỏe của cha mẹ không tốt, tuổi nhỏ khắc cha mẹ; Tài là Tử Tức của Huynh Đệ, biểu thị là duyên bạc với thế hệ cháu.",
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "cach_cuc",
+      "title": "Cách Cục",
+      "interpretations": [
+        {
+          "id": "van_que_van_hoa_cach",
+          "type": "cach_cuc",
+          "required_stars": ["van_xuong", "van_khuc"],
+          "same_palace": true,
+          "branches": ["suu", "mui"],
+          "text": "Văn quế văn hoa cách: Xương Khúc đồng cung thủ mệnh tại Sửu Mùi, là cách này hoặc từ tam phương, thiên di nhập vào cũng được. Người cách này, thông minh hiếu học, yêu tân trang, từ nhỏ đã có thể triển lộ tài hoa, thích hợp văn học, phương diện nghệ thuật phát triển, đem lại danh tiếng, bất quá chưa chắc đã có được học vị cao.",
+          "excluded_stars": ["hoa_ky"],
+          "warning": "Không thể có Kỵ tinh hội nhập, e có văn thư thị phi, cố Kỷ, Tân niên sinh nhân bất lợi, sớm có nỗi đau thất học hoặc cầu học nhiều ba đào, người trưởng thành thì phải phòng ký kết, phiếu cứ, giấy vay, thuê mướn các loại văn thư tranh chấp.",
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích",
+            "author": "Từ Tăng Sinh",
+            "translator": null
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "menh_chieu",
+      "title": "Mệnh có sao chiếu từ cung khác",
+      "interpretations": [
+        {
+          "id": "menh_co_m_di",
+          "type": "palace_relation",
+          "relation_palace": "thien_di",
+          "relation_code": "M Di",
+          "text": "Mệnh cách xuất ngoại. Xuất ngoại gặp quý nhân.",
+          "source": {
+            "book": "Đoán vận",
+            "author": "Trịnh Mục Đức",
+            "translator": null
+          }
+        },
+        {
+          "id": "menh_co_m_phuc",
+          "type": "palace_relation",
+          "relation_palace": "phuc_duc",
+          "relation_code": "M Phúc",
+          "text": "Người được phúc báo tổ tiên. Người hứng thú với việc kiếm tiền.",
+          "source": {
+            "book": "Đoán vận",
+            "author": "Trịnh Mục Đức",
+            "translator": null
+          }
+        },
+        {
+          "id": "menh_co_m_tat",
+          "type": "palace_relation",
+          "relation_palace": "tat_ach",
+          "relation_code": "M Tật",
+          "text": "Mệnh cách lao bác. Là người công việc vất vả, làm việc một mình.",
+          "source": {
+            "book": "Đoán vận",
+            "author": "Trịnh Mục Đức",
+            "translator": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "palace": "tai_bach",
+  "sections": [
+    {
+      "section_id": "dia_chi_cung",
+      "title": "Địa Chi Cung Tài Bạch",
+      "interpretations": [
+        {
+          "id": "tai_ngo",
+          "type": "earthly_branch",
+          "conditions": {
+            "position": "ngo"
+          },
+          "text": "Cung Tài Bạch cư Ngọ thuộc Thiên cũng là chỗ tứ bại địa, có đắc tiền tài thì phải xem vào thời cơ và ý trời.",
+          "source": {
+            "book": "Đẩu số chính nhãn",
+            "author": "Ông Phúc Dụ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "phi_tu_hoa",
+      "title": "Phi Tứ Hóa Từ Cung Tài Bạch",
+      "interpretations": [
+        {
+          "id": "tai_loc_nhap_quan",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "loc",
+            "source_palace": "tai_bach",
+            "target_palace": "quan_loc"
+          },
+          "text": "Tài bạch Hóa Lộc nhập quan lộc, tài lộc do quan lộc mà có. Buôn bán tốt, quay vòng vốn rất nhanh, chuyện làm ăn thì càng làm càng thuận lợi. Dễ có lương cao, chức lớn, hợp với công việc ăn chia theo lợi nhuận, hoa hồng. Hợp với buôn bán thu tiền mặt mà có tính chất biến đổi nhanh.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "tai_quyen_nhap_dien",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "quyen",
+            "source_palace": "tai_bach",
+            "target_palace": "dien_trach"
+          },
+          "text": "Tài bạch Hóa Quyền nhập điền trạch: Có sức sống, có lòng mưu đồ. Quản lý tài chính, ứng dụng linh hoạt, có thể có thu nhập cao, tạo dựng được của cải. Có không gian để phát triển trong những ngành chuyên về kỹ thuật và chuyên môn. Dễ trang trí, thiết kế nhà cửa phòng ốc. Tái mua sắm điền sản, thay đổi lớn về nhà cửa.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "tai_khoa_nhap_quan",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "khoa",
+            "source_palace": "tai_bach",
+            "target_palace": "quan_loc"
+          },
+          "text": "Tài bạch Hóa Khoa nhập quan lộc: Bình ổn hài hòa chính là phúc, chớ có tham to, đừng cầu lợi nhuận lớn. Hợp với các công việc văn phòng, kế toán, thiết kế. Hợp với đi làm công ăn lương, an ổn.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "tai_ky_nhap_no",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "ky",
+            "source_palace": "tai_bach",
+            "target_palace": "no_boc"
+          },
+          "text": "Tài bạch Hóa Kị nhập nô bộc: Trọng nghĩa tiêu tài, tiền rò rỉ không tích lũy, không giỏi quản lý tài chính, chi tiêu nhiều. Lợi nhuận mỏng, quý tình ít kiếm, kiếm tiền không đúng cách, việc làm gấp đôi kết quả bằng nửa. Mệnh cách kém, thu không đủ chi, túi rỗng, còn phòng nợ nần mất tín, đời người nhiều thăng trầm. Ít qua lại tiền bạc với người khác, phòng giao hữu vô nghĩa.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "chinh_tinh",
+      "title": "Chính Tinh Tại Tài Bạch",
+      "interpretations": [
+        {
+          "id": "tai_that_sat",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["that_sat"]
+          },
+          "text": "Người Thất sát, luôn coi mình có sứ mệnh về mặt tích lũy quản lý tiền tài, luôn hy vọng đầu tư ít mà có thể thu hoạch nhiều. Cá tính thích đầu tư phân tán, tài vận của họ đến từ sự đa biến động của tâm thái, nặng ham muốn đầu cơ, luôn có thể quan sát tỉ mỉ sau đó mới ngồi lên con thuyền thuận gió.",
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+            "author": "Huy Hà Phan"
+          }
+        },
+        {
+          "id": "tai_that_sat_dan_than_ty_ngo",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["that_sat"],
+            "position": ["dan", "than", "ty", "ngo"]
+          },
+          "text": "Tại Dần Thân Tý Ngọ là chủ về hoạnh phát. Hãm địa là chủ về phải lao lực mới có tiền.",
+          "source": {
+            "book": "Phi tinh Trần Đoàn",
+            "author": "Hồng Khánh"
+          }
+        },
+        {
+          "id": "tai_kinh_duong",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["kinh_duong"]
+          },
+          "text": "Kình Dương là Dao giải phẫu, Vũ khí, cho nên rất có liên quan tới bác sĩ Ngoại khoa, Quân cảnh, các nghề nghiệp khác mang tính chất liên quan tới Kim như Gia công kim loại, Chế tạo kim khí đều phù hợp.",
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích",
+            "author": "Từ Tăng Sinh"
+          }
+        }
+      ]
+    }
+  ]
+}

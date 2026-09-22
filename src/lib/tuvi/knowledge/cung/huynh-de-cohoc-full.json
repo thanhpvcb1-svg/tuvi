@@ -1,0 +1,1069 @@
+{
+  "palace": "HUYNH_DE",
+  "source": "tuvi.cohoc.net",
+  "chart_id": "472159",
+  "total_blocks": 33,
+  "sections": [
+    {
+      "section_id": "huynh-de",
+      "title": "CUNG HUYNH ĐỆ",
+      "blocks": [
+        {
+          "block_id": "huynh-de_cohoc_1",
+          "condition_text": "Điểm \"xí hoa\" cung Huynh đệ là 0.85",
+          "raw_text": "Cung Huynh đệ chủ về: anh chị em, bạn bè quan hệ, quan hệ hợp tác sự nghiệp.\nTọa thủ: Thiên riêu. Xung chiếu: Thiên cơ, Cự môn, Linh tinh, Hóa kỵ, Hàm trì. Tam hợp: Thiên lương, Lộc tồn, Thiên hình - Thái dương, Thái âm, Hỏa tinh, Thiên khôi, Hóa quyền, Hồng loan. Giáp cung: Liêm trinh, Thiên mã, Thiên hư - Phá quân, Âm sát, Văn xương.\nNgũ hành khí của cung Tân Dậu: 20% KIM (hỉ thần), 50% KIM (hỉ thần), 30% MỘC (kị thần). Đây là cung khí đại cát. Thiên riêu hành THỦY là nhàn thần.\nCung Huynh đệ can Tân làm cho:\n- Cự môn Hóa lộc nhập cung Nô bộc (cung Thiên di của cung Huynh đệ). Cung Nô bộc làm can Ất Thiên cơ tự hóa lộc, chuyển Thái âm Hóa kỵ nhập cung Điền trạch.\n- Văn xương Hóa kỵ nhập cung Mệnh (cung Phụ mẫu của cung Huynh đệ). Cung Mệnh can Nhâm chuyển Thiên lương Hóa Lộc nhập cung Tật ách, chuyển Vũ khúc Hóa kỵ nhập cung Phúc đức.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của một cao thủ Bắc phái",
+            "author": "Kinh nghiệm của một cao thủ Bắc phái",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 9
+        },
+        {
+          "block_id": "huynh-de_cohoc_2",
+          "condition_text": "Điệp xuất Lộc (叠出禄): cung Huynh đệ hóa Lộc phi nhập đối cung là cung Nô bộc, mà thiên can cung Nô bộc tự hóa Lộc",
+          "raw_text": "Chủ về Lộc hóa thành hư vô, chẳng có.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_3",
+          "condition_text": "Thuận Thủy Kị (流水忌): cung Huynh đệ phi hóa kỵ tới cung Mệnh",
+          "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Huynh đệ khí tiết sang cung Mệnh.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_4",
+          "condition_text": "Củ Triều Kỵ (纠缠忌): cung Huynh đệ phi hóa kỵ nhập cung Mệnh, mà cung Tử tức phi hóa kỵ nhập cung Thiên di",
+          "raw_text": "Đây là cách Củ triều kỵ: có sự xung đột ở hai cung Mệnh - Thiên di, nguyên nhân do cặp cung Huynh đệ - Tử tức",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_5",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Lộc Nô",
+          "raw_text": "Huynh đệ cung Hóa Lộc nhập nô bộc cung.\nHuynh đệ và mẫu thân rất tốt với bằng hữu của ta, tình cảm gắn bó thân thiết.\nHuynh đệ cung Hóa Lộc nhập nô bộc cung. Mệnh huynh đệ ta Hóa Lộc nhập nô bộc.\nĐối với ta: Huynh đệ và mẫu thân có nhân duyên tốt, có tình cảm tốt, gắn bó thân thiết với bằng hữu của ta. Có trợ giúp cho quan hệ giao tế của ta phát triển.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_6",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Lộc Nô",
+          "raw_text": "Huynh đệ cung Hóa Lộc nhập nô bộc cung.\n1. Thành tựu sự nghiệp Hóa Lộc nhập nô bộc, buôn bán cần nghiên cứu đối tác, nắm bắt cơ hội, thực hiện đa giao dịch.\n2. Thích hợp kinh doanh thời trang, sản phẩm đang lưu hành, buôn bán nơi đông người qua lại.\n3. Kinh doanh bằng thương hiệu của bản thân.\n4. Khố vị Lộc xuất, nên biểu lộ kinh tế khá tốt, chi tiêu nhiều, lớn, không chú tâm quản lý tiền bạc.\n5. Khố vị Lộc xuất, chi tiêu lớn, tín dụng tốt, nên thích hợp bán sỉ, thị trường lớn, buôn bán trực tiếp sản phẩm địa phương.\n6. Thích hợp nghề thời trang, hàng hóa đang thịnh hành. Thành tựu sự nghiệp Lộc xuất.\n7. Kinh doanh bằng thương hiệu của chính mình.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_7",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Lộc Nô",
+          "raw_text": "Từ Huynh Đệ hóa Lộc đến Nô Bộc cung, chiếu Huynh Đệ cung\n1. Huynh đệ với ta là người rất hiếu khách và có nhiều bạn bè.\n2. Là người nhân hậu ấm áp.\n3. Dễ vì bằng hữu thua thiệt nhiều lần, thậm chí bị lôi kéo vì bạn bè.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_8",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Lộc Nô",
+          "raw_text": "Anh chị em ở bên ngoài phần nhiều đều vui vẻ, có quý nhân giúp đỡ, hướng ngoại, thường đi xa, ra ngoài kiếm được tiền; sự nghiệp có không gian để phát triển, bạn bè có thể giúp mệnh tạo kiếm tiền; gia đình chỉ dụng nhiều tiền.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_9",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Lộc Nô",
+          "raw_text": "兄弟禄入交友:\n1. 兄弟有人缘佳者。\n2. 「善攀机缘」, 多「往来交易」。\n3. 「经济好」, 平常「支出多」。\n4. 适合「人潮」生意, 也适合「流行」、「时尚」的生意。\n5. 适合「批发」、「大卖」。\nHuynh đệ Hóa lộc nhập cung giao hữu:\n1. Trong anh em có người nhân duyên tốt.\n2. \"Giỏi nắm cơ hội\", nhiều \"giao dịch qua lại\".\n3. \"Kinh tế tốt\", bình thường \"chi tiêu nhiều\".\n4. Phù hợp với kinh doanh \"đông người\", cũng hợp với kinh doanh \"thời thượng\", \"thời trang\".\n5. Phù hợp với \"bán sỉ\", \"bán lớn\".",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_10",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Lộc Nô",
+          "raw_text": "兄弟禄入交友: \n1. 兄弟有人缘佳者。\n2. 「善攀机缘」, 多「往来交易」。\n3. 「经济好」, 平常「支出多」。\n4. 适合「人潮」生意, 也适合「流行」、「时尚」的生意。\n5. 适合「批发」、「大卖」。\nHuynh đệ Hóa lộc nhập cung giao hữu: \n1. Anh em có người có nhân duyên tốt. \n2. Giỏi kết duyên, phần nhiều vãng lai giao dịch. \n3. Kinh tế tốt, bình thường chi ra nhiều. \n4. Thích hợp buôn bán, cũng thích hợp trào lưu, thời thượng buôn bán. \n5. Thích hợp bán sỉ, bán buôn.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_11",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Lộc Nô",
+          "raw_text": "Huynh đệ cung Hóa Lộc nhập Nô Bộc, anh me và mẹ nhiệt tình đối với bạn bè của ta; Nô Bộc là Thiên Di của Huynh Đệ, biểu thị Huynh Đệ thành gia lập nghiệp ở ngoài, sự nghiệp suông sẻ.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_12",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Quyền Điền",
+          "raw_text": "Huynh đệ Hóa Quyền nhập điền trạch.\nĐối với huynh đệ: Huynh đệ nắm quyền trong gia đình, nên thường là con trưởng. Mệnh tạo và huynh đệ dễ tranh chấp gia sản.\nĐối với mệnh tạo: Thành tựu sự nghiệp của mệnh tạo trợ giúp cho tài sản hưng thịnh, nên mệnh tạo giỏi kinh doanh, tiền bạc ngày càng nhiều, sự nghiệp ngày càng thuận lợi, gia sản tăng tiến.\nThành tựu sự nghiệp của mệnh tạo làm cho tài sản hưng thịnh, kinh tế vững vàng, tài sản nhà đất ngày càng nhiều.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_13",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Quyền Điền",
+          "raw_text": "Từ Huynh Đệ hóa Quyền đến Điền Trạch cung, chiếu Tử Nữ cung\n1. Mệnh chủ và các thành viên trong gia đình anh em có cá tính mạnh mẽ và táo bạo.\n2. Mệnh chủ và các thành viên trong gia đình anh em là người tài năng, có tài lãnh đạo hoặc chuyên môn.\n3. Mệnh chủ cùng huynh đệ rất nghiêm khắc trong việc quản lý gia đình, họ hết lòng vun đắp, rèn luyện và ủng hộ thành viên trong gia đình.\n4. Mệnh chủ cùng huynh đệ coi trọng gia đình, hình thành nhân cách mẫu trong gia đình.\n5. Mệnh chủ cùng huynh đệ thích bảo vệ khuyết điểm, trong công việc thường có hiện tượng kết nhóm.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_14",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Quyền Điền",
+          "raw_text": "Anh chị em nắm quyền trong gia đình, lúc cha mẹ phân chia tài sản sẽ có tranh chấp, chị em dâu ở chung không hòa hợp; mệnh tạo có thể mở tiệm kinh doanh hoặc mua bán bất động sản; tiền kiếm được sẽ chi dụng trong gia đình hoặc mua tậu bất động sản hay dùng cho việc hợp lí khác.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_15",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Quyền Điền",
+          "raw_text": "Huynh Đệ [Quyền nhập] Điền Trạch\n* Giỏi kinh doanh, tiền càng chảy càng nhiều, sự nghiệp càng làm càng thuận lợi.\n* Anh em khuếch trương sản nghiệp, anh em ngang tàng, anh em tranh quyền.\n* Mua nhà sắm của, ngày càng thịnh vượng (tượng của sự tăng tiến).",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_16",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Quyền Điền",
+          "raw_text": "Huynh đệ cung Hóa Quyền nhập Điền Trạch, anh em quan tâm đến gia đình của ta, hoặc thích can thiệp vào công việc của gia đình; anh em có tài năng, kỹ thuật, làm việc tích cực trách nhiệm, sự nghiệp thuận lợi, gia đoạn học tập đọc sách trong trường tương đối sôi nổi.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_17",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Khoa Di",
+          "raw_text": "Huynh đệ Hóa Khoa nhập thiên di. (Khoa xuất).\nĐối với huynh đệ: Huynh đệ có văn hóa nho nhã, lời nói khách khí.\nĐối với mệnh tạo: Kinh tế Khoa xuất, biểu thị tùy nhập mà xuất, biết quản lý sổ sách, thu chi quân bình.\nThành tựu sự nghiệp danh tiếng tại ngoại, nên thường chú trọng hình tượng quảng cáo bao bì.\nThành tựu sự nghiệp khoa danh tại ngoại, về năng lực công việc, giỏi quản lý, kế hoạch.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_18",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Khoa Di",
+          "raw_text": "Từ Huynh Đệ cung hóa Khoa đến Thiên Di cung, chiếu Mệnh cung\n1. Mệnh chủ và huynh đệ dịch mã cách, rời quê hương đi ra ngoài\n2. Mệnh chủ và huynh đệ ra ngoài có rất nhiều người quý nhân, gặp nhiều cơ hội hơn.\n3. Mệnh chủ và huynh đệ có hình ảnh tốt bên ngoài.\n4. Mệnh chủ được anh em, bạn bè bên ngoài chăm sóc, kính trọng.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_19",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Khoa Di",
+          "raw_text": "Anh chị em ra ngoài phần nhiều đều được quý nhân xem trọng, cũng rất quan tâm và có thể trợ giúp mệnh tạo; người phối ngẫu của mệnh tạo quản lí tài chính có kế hoạch, không cố theo đuổi chuyện gì, cũng không lãng phí, cuộc sống gia đình hòa hợp.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_20",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Khoa Di",
+          "raw_text": "兄弟科入迁移:\n1. 理财记账、收支平衡。\n2. 企划管理。\nHuynh đệ Hóa khoa nhập cung thiên di:\n1. Quản lý tài chính ghi sổ, thu chi cân bằng.\n2. Quản lý kế hoạch.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_21",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Khoa Di",
+          "raw_text": "兄弟科入迁移: \n1. 理财记账、收支平衡。\n2. 企划管理。\nHuynh đệ Hóa khoa nhập cung thiên di: \n1. Quản lý tài sản sổ sách. Thu chi thăng bằng. \n2. Quản lý kế hoạch.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_22",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Khoa Di",
+          "raw_text": "Huynh đệ cung Hóa Khoa nhập Thiên Di, ta khi ở ngoài có nhiều quý nhân giúp đỡ, có danh tiếng; anh em chú trọng đến thân thể sức khỏe, một đời ít bệnh, gặp hung hóa cát, hoặc chủ anh em lấy khoa học kỹ thuật quản lý nhà máy, công ty, mang lại danh tiếng hoặc tạo ra các sản phẩm nổi tiếng cho nhà máy, công ty.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_23",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Kỵ Mệnh",
+          "raw_text": "Huynh đệ Hóa Kị nhập mệnh (với người).\n1. Mệnh tạo phải có trách nhiệm chăm lo huynh đệ hoặc bị huynh đệ gây phiền ỷ lại. Thường có tư cách con trưởng.\nHuynh đệ Hóa Kị nhập mệnh (với sự việc).\n1. Huynh đệ là tích trữ kinh tế vị. Mệnh tạo dễ có áp lực về kinh tế hoặc thu nhập thấp.\nCần biết lượng nhập xuất, cẩn thận quản lý tiền tài, khai thông tài nguồn tiết chế lưu tán.\nCần tiết kiệm, chịu khó, chịu khổ khởi gia.\n2. Thích hợp làm công, viên chức công việc ổn định. Hoặc kinh doanh buôn bán nhỏ hoặc nghề nghiệp chuyên môn kỹ thuật, dịch vụ, môi giới, cố vấn, kế toán, thư ký. Không tích trữ hàng hóa, cầm đồ thế chấp.\n3. Nữ mệnh thường làm nội trợ, quản lý gia đình.\n4. Huynh đệ là thể chất vị, thể chất kém, cần chú ý dưỡng sinh.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_24",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Kỵ Mệnh",
+          "raw_text": "Từ Huynh Đệ cung hóa Kị đến Mệnh cung, xung Thiên Di cung\n1. Huynh đệ cùng ta tương đối luận, Kị là quan hệ quen biết.\n2. Mệnh cung tọa Kị có tầm lý lo lắng, nợ món nợ, có tâm thái muốn bù đắp mà sẽ chiếu cố, anh em như thế này đối với mệnh chủ.\n3. Mệnh chủ có sự che chở, chăm sóc của anh em, nhưng dễ có khoảng cách hiểu lầm, thị phi với anh em.\n4. Mệnh chủ cá tính thụ động, phụ thuộc và lên để giành giật.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_25",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Kỵ Mệnh",
+          "raw_text": "Anh chị em thường bôn ba vất vả, làm ăn không được thuận lợi, phải dựa vào mệnh tạo hoặc mệnh tạo không có duyên với anh chị em, ít sum họp; quan hệ giao tế của mệnh tạo không được tốt đẹp; đi xa, ra bên ngoài sẽ gặp nhiều sóng gió, làm nhiều mà hưởng ít, tiền khó tụ, đừng cho ai mượn tiền để kiếm lời, trong cuộc đời rất dễ gặp tai ách, kiếp số; không gian làm việc khó phát huy.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_26",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Kỵ Mệnh",
+          "raw_text": "Bào [Kị nhập] Mệnh:\n* Dễ là con trưởng, là \"chỗ vất vả của anh em\".\n* Đề phòng kinh tế có áp lực (thu nhập ít hoặc chi tiêu nhiều quá).\n* Cần phải tính toán chi li, tăng cường tiết kiệm, tằn tiện, chịu khó.\n* Thích hợp nhất đi làm công ăn lương hoặc kinh doanh nhỏ. Hoặc theo các ngành dịch vụ, kỹ thuật, tư vấn, môi giới, ...\n* Nữ mệnh thường làm những nghề mang tính chất chuyên cho phụ nữ.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_27",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Kỵ Mệnh",
+          "raw_text": "Huynh đệ cung Hóa Kị nhập Mệnh cung, Phối ngẫu đồng sàng dị mộng, dẫn đến thường xuyên cãi nhau. kết hôn muộn; Phối ngẫu ham ăn nhác làm, láng phí lớn, cuộc đời ít phúc khí, làm lụng vất vả nhiều, khó có phát triển, tâm tình không thoải mái, tương đối bi quan, tiền tài xuất nhiều nhập ít, có nhiều phiền toái về văn thư chứng cứ, thân thể dễ có tai nạn bệnh tật, bản thân không hợp làm ở xí nghiệp, xung Thiên Di, Thiên Di là Tài Bạch của Phu Thê, biểu thị phối ngẫu vô duyên với tiền tài, tiền tài xuất nhiều mà nhập ít.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh-de_cohoc_28",
+          "condition_text": "Cung Huynh đệ an tại Dậu có M Di",
+          "raw_text": "Mệnh anh chị em xuất ngoại cách.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Di"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "huynh-de_cohoc_29",
+          "condition_text": "Cung Huynh đệ an tại Dậu có M Điền",
+          "raw_text": "Anh em, chị em có nhà đất. Bất động sản có thể là sự nghiệp.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Điền"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "huynh-de_cohoc_30",
+          "condition_text": "Cung Huynh đệ an tại Dậu có M Mệnh",
+          "raw_text": "Trong mệnh có anh em chị em. Quan hệ giữa anh chị em tốt.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Mệnh"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "huynh-de_cohoc_31",
+          "condition_text": "Cung Huynh đệ an tại Dậu có M Nô",
+          "raw_text": "Anh chị em dựa nhờ bằng hữu. Bằng hữu là quý nhân của họ.",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Nô"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "huynh-de_cohoc_32",
+          "condition_text": "Cung Huynh đệ an tại Dậu có các sao Hỏa tinh,Linh tinh hội hợp",
+          "raw_text": "Đối lập không hòa thuận với anh em, miếu vượng gặp nhiều cát tinh thì chủ có hai người, thêm Tứ sát và Liêm Sát Phá chủ có hình hại, anh em đấu đá lẫn nhau, bản thân anh em có tai họa nặng hoặc tù hình kiện tụng. Gặp thêm Không Kiếp Hao Kỵ không có anh em",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "các sao Hỏa tinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "huynh-de_cohoc_33",
+          "condition_text": "Cung Huynh đệ an tại Dậu có Cung Huynh đệ",
+          "raw_text": "Hàm nghĩa của Huynh Đệ cung, theo nghĩa hẹp có thề biết được huynh đệ phát đạt hay không? Huynh đệ có hình thương? Nghề nghiệp chức vụ của huynh đệ? Số anh em? Nếu chỉ dựa vào ý nghĩa tinh diệu mà nói có thể luận đoán được những điều ấy thì quả thật rất nực cười! Rộng hơn thì đại hạn và lưu niên Huynh Đệ cung, có thể biết được năm nay, đại vận này thích hợp để hợp tác với người khác? Hay có nhiều người đến mượn tiền hay không? Năm nay có kết bạn được nhiều bạn tốt hay không? ..",
+          "conditions": {
+            "palace": "HUYNH_DE",
+            "position": "DAU",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung Huynh đệ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        }
+      ]
+    }
+  ]
+}

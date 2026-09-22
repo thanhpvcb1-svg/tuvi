@@ -1,0 +1,1205 @@
+{
+  "palace": "dien_trach",
+  "palace_name": "Điền Trạch",
+  "source": "tuvi.cohoc.net",
+  "crawl_mode": "streaming",
+  "last_updated": "2026-09-22T03:00:19.283Z",
+  "total_blocks": 63,
+  "blocks": [
+    {
+      "block_id": "dien_trach_stream_1",
+      "condition_text": "Điểm \"xí hoa\" cung Điền trạch là 0.07",
+      "raw_text": "Cung Điền trạch chủ về: gia đình, kho tiền, bất động sản, gia sản.\nTọa thủ: Thái dương, Thái âm, Hỏa tinh, Thiên khôi, Hóa quyền, Hồng loan. Xung chiếu: Thiên việt, Thiên hỉ. Tam hợp: Thiên lương, Lộc tồn, Thiên hình - Thiên riêu. Giáp cung: Vũ khúc, Thiên phủ, Tả phù - Tham lang, Hữu bật, Hóa khoa, Hóa lộc.\nNgũ hành khí của cung Ất Sửu: 20% MỘC (kị thần), 50% THỔ (hỉ thần), 30% KIM (hỉ thần). Đây là cung khí đại cát. Thái dương hành HỎA là kị thần. Thái âm hành THỦY là nhàn thần. Hỏa tinh hành HỎA là kị thần. Thiên khôi hành HỎA là kị thần. Hóa quyền hành HỎA là kị thần. Hồng loan hành THỦY là nhàn thần.\nCung Điền trạch can Ất làm cho:\n- Thiên cơ Hóa lộc nhập cung Nô bộc (cung Phúc đức của cung Điền trạch). Cung Nô bộc làm can Ất Thiên cơ tự hóa lộc, chuyển Thái âm Hóa kỵ nhập cung Điền trạch.\n- Cung Điền trạch làm Thái âm tự hóa kỵ, chuyển Thiên cơ Hóa Lộc nhập cung Nô bộc,",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của một cao thủ Bắc phái",
+        "author": "Kinh nghiệm của một cao thủ Bắc phái"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "dien_trach_stream_2",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Ngôi nhà sang trọng là điểm khởi đầu của sự nghiệp thành công.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_3",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm Hóa quyền",
+      "raw_text": "Cung Điền Trạch tọa Thái Âm hóa Quyền năm sinh: có thể có bất động sản, bận rộn vất vả.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Cửu Thiên Phi Tinh - Huyền Sơn dịch",
+        "author": "Huyền Sơn dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_4",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Điền trạch cung tọa sinh niên quyền:\nĐiền trạch tọa sinh niên quyền, dễ có thành tựu tài sản nhờ quyền lực. Bản thân có ý thức tích cực xây dựng gia sản, xây dựng gia đình và nuôi dạy con cái. Thường là người chủ gia đình hoặc người có tiếng nói trong gia đình.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+        "author": "Alex Alpha"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_5",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Hóa Quyền nhập điền trạch, chủ tranh chấp, thường là con trưởng trong nhà, có tham vọng mua nhà đất to đẹp. Trọng trang trí trang hoàng, có thẩm mỹ, bất động sản đa biến hóa. Nơi ở khá yên định. Trong đời sẽ có giai đoạn chịu áp lực vì bất động sản. Chỉ cần có cơ hội sẽ mua bất động sản. Dễ được thừa hưởng gia sản từ cha mẹ hoặc phối ngẫu.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_6",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Chủ có bất động sản, bất kể có tài sản của tổ tiên để lại hay không, đều thích mua bất động sản, thích khoe khoang trang trí nhà cửa. Nhà rộng, chỗ ở rộng, sang trọng, có cơ hội đắc tổ nghiệp, cũng có thể tạo thêm tầng lầu mới, thuận lợi cho việc khởi nghiệp, thích hợp đầu tư bất động sản. Ở nhà thích nắm quyền và kỷ luật con cái nghiêm khắc, nhưng dễ xảy ra tranh chấp với các thành viên trong gia đình.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_7",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Hóa Quyền năm sinh nhập cung Điền Trạch:\n* Bản thân dễ kiến lập khai sáng về tài sản.\n* Cũng rất dễ sáng lập sự nghiệp.\n* Gia đình có truyền thống nhiệt tâm hăng hái, sức sống dồi dào hoặc gia giáo khá nghiêm.\n* Nhà cửa to lớn, bất động sản có giá trị hoặc ở vị trí đoạn đường rất đẹp (vị trí đắc địa). Có thể tự mở tiệm kinh doanh hoặc cho thuê.\n* Gặp sao Thiên Tài thì giàu có. Cũng có thể theo nghề bất động sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_8",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "生年权入田宅: \n1. 「家世好」或「家族旺」。\n2. 或本身容易「开创财富」。\n3. 也容易「创业」。\n4. 家庭富「积极」、「活力」或家教较严。\n5. 房子大、不动产「值钱」或「地段好」。可自家开店营利或出租。 \n6. 逢「偏财星」, 富有。也可从事「不动产」行业。\nHóa quyền năm sinh nhập điền trạch: \n1. Gia thế tốt hoặc gia thế vượng. \n2. Hoặc bản thân dễ dàng khai sáng tài phú. \n3. Cũng dễ dàng gây dựng sự nghiệp. \n4. Gia đình phong phú \"tích cực, hoạt lực\" hoặc gia giáo nghiêm cẩn. \n5. Phòng ốc rộng bất động sản đáng tiền hoặc khu vực tốt. Có thể tự mình mở tiệm kinh doanh hoặc cho thuê. \n6. Gặp thiên tài tinh giàu có, cũng có thể theo nghề xử lý bất động sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_9",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Hóa Quyền nhập cung Điền trạch: Là người nắm quyền trong gia định, việc to việc nhỏ trong gia đình đều do mình quản lý trông coi, cho nên sẽ có lúc sảy ra tranh chấp với lục thân, thích mua nhiều bất động sản và kinh doanh, cho thuê bất động sản, nơi ở sang trọng.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_10",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Niên Quyền tại Điền Trạch:\n- Chủ có BĐS, bất luận là có tổ nghiệp hay không, yêu thích mua BĐS. Thích khoe khoang đồ đạc trong nhà; biết quan tâm gia đình.\n- Thích năm quyền trong gia đình và thường có tranh chấp với người nhà.\n- Kinh doanh nhiều, thay đổi nhanh chóng, sản phẩm cao cấp, chuyên nghiệp.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tượng số tâm học - Lưu Kim Phủ",
+        "author": "Lưu Kim Phủ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_11",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa Quyền",
+      "raw_text": "Điền trạch cung tọa niên Quyền.\nĐiền trạch cung chủ gia đình, tài sản, hoàn cảnh cuộc sống.\nNiên Quyền là năng lực của tạo hóa mang lại.\nSuy lý tượng nghĩa của Quyền: Tráng thịnh (mạnh mẽ, quyền lực), khống chế quản lý (tính cách), thành tựu.\nThái độ tích cực, đề phòng tính nóng nảy, học cách chế hóa bạo lực thành ôn hòa, dịu dàng.\nĐiền trạch tọa niên Quyền, gia đình có hoạt lực, tích cực. Kinh tế gia đình hoạt lạc. Hoàn cảnh cuộc sống tốt.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa Quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_12",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa Quyền",
+      "raw_text": "Quyền nhập Điền Trạch: Ở nhà anh trưởng nắm quyền, được bạn bè giúp đỡ. Thích sáng nghiệp và hợp làm về mua bán bất động sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa Quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_13",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền,Tự Kỵ",
+      "raw_text": "Hóa Quyền + tự Hóa Kị, tân khổ. Quyền Kị giao tranh, biểu thị thay đổi, cố chấp, mâu thuẫn, vận dụng quyền lực không thích đáng, biểu đạt sai lầm.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_14",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm,Hóa quyền",
+      "raw_text": "Thái âm Hóa Quyền nhập điền trạch, nữ nhân nắm quyền trong nhà, nam mệnh tại gia cũng chủ lắm điều hay cằn nhằn như đàn bà, cai quản công việc nhà.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_15",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái dương,Hóa quyền",
+      "raw_text": "Thái dương Hóa Quyền nhập điền trạch, nữ mệnh nắm quyền xưng bá trong nhà, tranh đoạt quyền với nam nhân, chủ có năng lực lập nghiệp.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái dương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_16",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự hóa li tâm",
+      "raw_text": "Cung Điền Trạch tự hóa cũng chủ cách dùng tiền tài.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự hóa li tâm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Cửu cửu bí nghi - Lý Đạt Uy",
+        "author": "Lý Đạt Uy"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_17",
+      "condition_text": "Cung Điền trạch an tại Sửu có Lộc Nô",
+      "raw_text": "Điền trạch cung Hóa Lộc nhập nô bộc cung.\n1. Điền trạch (gia đình, tài sản, bất động sản, hoàn cảnh cuộc sống, cuộc sống vật chất) trợ giúp nô bộc.\na. Gia đình gia tộc nhân khí vượng, Người thân, bằng hữu, người danh tiếng thường đến thăm. \"Bần cư nao thị vô nhân vấn, phú tại thâm sơn hữu viễn thân\".\n(Điền trạch Lộc nhập nô bộc, cư gia thường ở tại nơi đông người náo nhiệt).\nb. Gia đình ta mang cho bằng hữu khoái lạc, nên bằng hữu thường đến chơi.\n2. Điền trạch tại nơi đông người náo nhiệt.\na. Thường cư trú tại nơi náo nhiệt, đông người qua lại, như gần bến xe, chợ, trường học...\nb. Hoàn cảnh cư gia mang cho bằng hữu khoái lạc, nên thích hợp làm về ẩm thực, nhà hàng, giải khát, phục vụ giải trí.\nc. Láng giềng thân mật hòa mục.\nd. Nếu là người trực tiếp sản xuất và kinh doanh (tự sản tự tiêu), thích hợp làm cùng người trong gia đình (mô hình hộ gia đình).\n3. Huynh đệ cung Lộc xuất, gọi là khố vị Lộc xuất.\na. Kinh tế gia đình có năng lực chi khoản (khố vị Lộc xuất).\nb. Cách cục tốt, gia nghiệp lớn, nhân công nhiều.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_18",
+      "condition_text": "Cung Điền trạch an tại Sửu có Lộc Nô",
+      "raw_text": "Từ Điền Trạch hóa Lộc đến Nô Bộc cung, chiếu Huynh Đệ cung\n1. Thành viên gia đình tính tình đôn hậu, trọng tình nghĩa, có nhiều bạn bè, thích sôi nổi, ăn uống vui vẻ với bạn bè, thường xuyên đãi khách, phòng khách luôn có người ra người vào.\n2. Cha mẹ có thể tham gia kinh doanh và xây dựng cửa hàng.\n3. Thích hợp mua bán trực tiếp, bảo hiểm, quan hệ công chúng, ngoại giao, quán trà, café, nạp cốt tháp.\n4. Các thành viên gia đình là người trọng nghĩa xem nhẹ tiền tài, gặp Lộc khán Kị, như Kị ở lục ngoại dễ mất nguyên tắc, chuyển xu hướng xấu, giúp đỡ người khác mà không đòi hỏi gì được đáp lại, ngây ngốc trả giá.\n5. Như Kị ở lục nội, không mất nguyên tắc đúng mực, trả giá ở bề ngoài, thường còn có mục đích trong lòng, thích cho chút ân huệ nhỏ.\n6. Người nhà là thiện tâm nhân sĩ dâng hiến xây cầu mở đường, làm công ích giúp người.\n7. Người trong nhà có khả năng kiểm soát quản lý tài chính kém.\n8. Cả nhà tuy làm việc thiện nhưng cũng dễ quá lên, có khi trở thành áp lực phiền muộn cả nhà mệt mỏi.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_19",
+      "condition_text": "Cung Điền trạch an tại Sửu có Lộc Nô",
+      "raw_text": "Có duyên với người chung quanh, giao du rộng, bạn bè có trợ lực. Vợ chồng tình thâm ý trọng, người phối ngẫu có thể được dòng họ bà con quan tâm chăm lo, cuộc sống được hưởng thụ nhiều, dễ phát phì, dễ mắc bệnh đường tiêu hóa.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_20",
+      "condition_text": "Cung Điền trạch an tại Sửu có Lộc Nô",
+      "raw_text": "田宅禄入交友:\n1. 家庭经济「支出能力好」。\n2. 家庭〈族〉「人气旺」、「人脉好」, 「亲朋多往来」。\n3. 住家紧临车站、闹区、夜市等「人潮」地方。\n4. 可从事咖啡、茶艺、餐饮、休闲产业。\n5. 「邻里和睦」、往来呼应。\n6. 家业大员工多。\nĐiền trạch Hóa lộc nhập cung giao hữu:\n1. Kinh tế gia đình \"khả năng chi tiêu tốt\".\n2. Gia đình (tộc) \"nhân khí mạnh\", \"nhân mạch tốt\", \"họ hàng qua lại nhiều\".\n3. Nhà ở gần ga xe, khu náo nhiệt, chợ đêm hoặc những nơi \"đông người\".\n4. Có thể kinh doanh cà phê, trà đạo, ẩm thực, ngành giải trí.\n5. \"Hàng xóm hòa thuận\", qua lại hỗ trợ lẫn nhau.\n6. Gia nghiệp lớn, có nhiều nhân viên.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_21",
+      "condition_text": "Cung Điền trạch an tại Sửu có Lộc Nô",
+      "raw_text": "田宅禄入交友: \n1. 家庭经济「支出能力好」。\n2. 家庭〈族〉「人气旺」、「人脉好」, 「亲朋多往来」。\n3. 住家紧临车站、闹区、夜市等「人潮」地方。\n4. 可从事咖啡、茶艺、餐饮、休闲产业。\n5. 「邻里和睦」、往来呼应。\n6. 家业大员工多。\nĐiền trạch Hóa lộc nhập cung giao hữu: \n1. Gia đình kinh tế chi ra năng lực tốt. \n2. Gia đình (tộc) nhân khí vượng, nhân mạch tốt, thân hữu hay lui tới. \n3. Nhà ở gần trạm xe, khu chợ đêm, nơi hoạt náo nhiều người đi lại. \n4. Nên theo nghiệp cà phê, nghệ thuật uống trà, hưu nhàn sản nghiệp. \n5. Láng gieg hòa thuận, lui tới hô ứng. \n6. Gia sản nhiều.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_22",
+      "condition_text": "Cung Điền trạch an tại Sửu có Quyền Tật",
+      "raw_text": "Điền trạch Hóa Quyền nhập tật ách.\n1. Hoạt lực gia đình ta thể hiện tại tật ách vị. Gia đình có hoạt lực.\n2. Tài sản gia đình trợ giúp hoặc tạo thành tựu cho tật ách của ta. Gia đình hưng vượng mang cho ta hoạt lực mạnh mẽ.\n3. Tài sản trợ giúp hoặc tạo thành tựu cho tật ách vị. Tật ách là gia vận vị, nên gia vận phát triển tốt.\n4. Khí thế hào khí của cư gia thể hiện tại tật ách, nhà cửa rộng lớn, hoàn cảnh tốt.\n5. Luận về kinh doanh bất động sản hoặc vận thế tài sản, gia đình làm cho công việc của ta hưng vượng, nên thích hợp sử dụng nhà của mình để kinh doanh.\n6. Cuộc sống vật chất sang trọng thể hiện tại tật ách, tật ách thuộc điền trạch tam phương, liên quan với vật chất cuộc sống, nên dễ có cuộc sống vật chất cao cấp.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_23",
+      "condition_text": "Cung Điền trạch an tại Sửu có Quyền Tật",
+      "raw_text": "Từ Điền Trạch hóa Quyền đến Tật Ách cung, chiếu Phụ Mẫu cung\n1. Mệnh chủ cùng người nhà không muốn trở nên bình thường, theo đuổi cảm giác thành tích và thỏa mãn mong muốn thể hiện bản thân.\n2. Mệnh chủ và các thành viên trong gia đình chủ quan tự ngã, tích cực nỗ lực, để ý những điểm mấu chốt, làm việc hiệu quả.\n3. Mệnh chủ cùng người nhà yêu thích quyền lực, tranh giành quyền lực và thích chỉ huy người khác.\n4. Mệnh chủ cùng người nhà tận dụng tốt tài năng lãnh đạo, chỉ đạo, quản lý hoặc kỹ nắng chuyên môn để mưu cầu của cải và sinh lợi.\n5. Mệnh chủ cùng người nhà có thể được người khác ngưỡng mộ, đánh giá cao, khẳng định và ủy quyền, tuân theo và ủng hộ.\n6. Mệnh chủ cùng người nhà rất vất vả, chuyện gì cũng tự tay làm.\n7. Mệnh chủ cùng người nhà là người năng động, hoạt bát, nắm bắt thời cơ, tích cực đổi mới sự nghiệp, thành công rực rỡ.\n8. Mệnh chủ cùng người nhà dễ mắc bệnh nghề nghiệp, rối loạn dạ dày.\n9. Mệnh chủ được gia đình quan tâm, vun đắp, rèn luyện và kiếm tiền nhờ kinh doanh bất động sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_24",
+      "condition_text": "Cung Điền trạch an tại Sửu có Quyền Tật",
+      "raw_text": "Phần nhiều dựa vào bản thân nỗ lực, nghề nghiệp chuyên môn và tài năng để mưu sinh, vì gia đình mà làm lụng vất vả. Dễ có đào hoa quấn vào người.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_25",
+      "condition_text": "Cung Điền trạch an tại Sửu có Quyền Tật",
+      "raw_text": "Điền Trạch [Quyền nhập] Tật Ách:\n* Hoàn cảnh đời sống tích cực, có lực, gia đình phấn chấn, có sức sống.\n* Đời sống vật chất xa hoa.\n* Thích hợp kiếm lợi từ việc tự mở tiệm mở công ty ở nhà.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_26",
+      "condition_text": "Cung Điền trạch an tại Sửu có Khoa Di",
+      "raw_text": "Điền trạch Hóa Khoa nhập thiên di.\nGia đình có khí chất thư hương, khoa danh, có danh tiếng trong xã hội (khoa danh tại ngoại). Hoàn cảnh gia đình tất nhiên dễ chịu, tao nhã yên tĩnh, vui vẻ thanh tịnh.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_27",
+      "condition_text": "Cung Điền trạch an tại Sửu có Khoa Di",
+      "raw_text": "Từ Điền Trạch hóa Khoa đến Thiên Di cung, chiếu Mệnh cung\n1. Mệnh chủ và gia đình dễ rời quê, di cư, dời chỗ, chuyển ra nước ngoài.\n2. Mệnh chủ cùng gia đình cả nhà chuyển đi mua tài sản ở nơi khác.\n3. Gia đình nề nếp, hình ảnh bên ngoài tốt, nói chung được người ngoài khen ngợi.\n4. Gia đình đi du lịch và sinh sống ở nước ngoài thuận lợi và an toàn.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_28",
+      "condition_text": "Cung Điền trạch an tại Sửu có Khoa Di",
+      "raw_text": "Gia đình có thanh danh ở bên ngoài, mệnh tạo ra ngoài dễ được quý nhân giúp đỡ, ít nạn tai. Sẽ có tình hình xa quê hương để tìm hướng phát triển, không thỏa mãn với tổ nghiệp, ở bên ngoài cũng được gia đình trợ lực.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_29",
+      "condition_text": "Cung Điền trạch an tại Sửu có Khoa Di",
+      "raw_text": "田宅科入迁移:\n1. 门第「名声好」。\n2. 宗门多文士、书香家庭。\nĐiền trạch Hóa khoa nhập cung thiên di:\n1. Danh tiếng gia đình \"tốt\".\n2. Dòng họ có nhiều văn sĩ, gia đình thư hương.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_30",
+      "condition_text": "Cung Điền trạch an tại Sửu có Khoa Di",
+      "raw_text": "田宅科入迁移: \n1. 门第「名声好」。\n2. 宗门多文士、书香家庭。\nĐiền trạch Hóa khoa nhập cung thiên di: \n1 môn đệ thanh danh tốt\n2. Tông môn nhiều văn sĩ. Gia đình thư hương.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_31",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự Kỵ",
+      "raw_text": "Cung Điền Trạch tự hóa Kị, chính là bất luận nhiều ít, đến cuối cùng do không có tiết chế nên cũng đã tiêu gần hết.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự Kỵ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Cửu cửu bí nghi - Lý Đạt Uy",
+        "author": "Lý Đạt Uy"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_32",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự Kỵ",
+      "raw_text": "Điền trạch cung tự hoá Kỵ: gia đạo bất hoà, đồng thời cũng là dấu hiệu di chuyển chỗ ở. Về phương diện tài chính là thất thoát, tiêu hao tài sản, mà lại thường là ngầm tiêu tán.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự Kỵ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+        "author": "Alex Alpha"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_33",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự Kỵ",
+      "raw_text": "Điền trạch Tự Hóa Kị, tiêu pha không tiết chế, nhà cửa bừa bộn, nhỏ, tự bản thân lập nên.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự Kỵ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_34",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự Kỵ",
+      "raw_text": "Điền trạch tự Hóa Kị xuất.\n1. Tự Hóa Kị xuất, trong học lý là sự tiêu tán, xuất mà bất tàng của sự vô nguyên tắc, là do khinh suất, không tự giác, không phân biệt hoàn cảnh môi trường biểu lộ ra, để tiêu tán mất.\nĐối với cung này, tất cả sự tình còn có tính chất hay quên, sự việc trôi qua coi như xong, như thuyền qua nước không để lại dấu tích, nên không chú tâm trong công việc.\n2. Về tài sản, là để tài sản thất tán, thường gọi là biện tài, là do không chú tâm quản lý, cũng không biết nguyên nhân, để tiền bạc dần tiêu tán hết.\n2. Về gia đình, người trong nhà, biểu thị duyên gia đình ngày càng nhạt, Gia đình không được yên ổn, an lạc suy giảm. Vãn niên dễ cô độc, cô đơn. Không chú tâm cho gia đình.\n3. Tự Hóa Kị xuất, cũng là Kị xuất, tham khảo tổng luận Kị xuất.\n4. Thích hợp làm công, viên chức thu nhập ổn định.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự Kỵ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_35",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự Kỵ",
+      "raw_text": "Từ Điền Trạch hóa Kị ngay tại Điền Trạch cung, xung Tử Nữ cung\n1. Mệnh chủ tính tình nửa vời, không ổn định, công việc lên xuống thất thường.\n2. Các thành viên trong gia đình tính tình bướng bỉnh, dễ xảy ra cãi vã, không ai nhường ai, trong gia đình có nhiều tranh chấp, thị phi...\n3. Nhà đất dễ xảy ra tranh chấp, thị phi.\n4. Sợ duyên với con cái mỏng.\n5. Dễ chuyển nhà, mua đi bán lại, mua rồi lại bán, bán rồi lại mua.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự Kỵ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_36",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự Kỵ",
+      "raw_text": "Sinh ra trong gia đình bận rộn lo chuyện sinh kế, lúc còn nhỏ gia giáo không nghiêm, duyên phận bạc với dòng họ bà con. Nhà ở lộn xộn mà nhỏ, thường thay đổi nơi cư trú; tự mua nhà rất khó khăn. Không có quan niệm quản lí tài chính, rất lãng phí, không biết tiết chế, thường tiêu xài hết tiền. Không muốn mấy chuyện lập gia đình, có kết hôn hay không, cũng chẳng quan trọng. Rất có duyên với người khác giới, dễ có đào hoa nhưng không giữ lại. Có thể làm nghề mua bán bất động sản. Lần đầu mua nhà dễ xảy ra vấn đề, trước năm 35 tuổi không nên mua nhà. Không quen ở nhà, thường bôn ba ở bên ngoài, dễ vì tai nạn bất ngờ mà phá tài, cũng phải phòng tù tội. Sau kết hôn vẫn dễ có tình nhân ở bên ngoài, đối tượng là người độc thân đã li hôn. (Xin xem thêm mục liên quan trong chương 6).",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự Kỵ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_37",
+      "condition_text": "Cung Điền trạch an tại Sửu có Tự Kỵ",
+      "raw_text": "Điền Trạch cung Tự hóa Kị:\n* Tiền tài bị rò rỉ, ngầm tiêu hao, kinh tế trống rỗng.\n* Tối kị việc lấy không đủ ánh sáng cho căn nhà, đồ đạc bừa bãi chồng chất, lộn xộn bẩn thỉu, khiến cho gia vận cứ bị liên tục gặp chuyện xấu mãi.\n* Đề phòng gia đình có lực ly tâm, ai cũng có chí hướng khác. Đề phòng họ hàng thân thuộc ly tán lạnh nhạt.\n* Dễ có nhiều phen chuyển nhà, thay đổi nghiệp sản xuất, bán tháo tài sản. Đề phòng gia đình có sự thay đổi khiến thành trống rỗng.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tự Kỵ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "dien_trach_stream_38",
+      "condition_text": "Cung Điền trạch an tại Sửu có M chất",
+      "raw_text": "Đoán mệnh thực tế: trong mệnh là người kiếm tiền từ bất động sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M chất"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_39",
+      "condition_text": "Cung Điền trạch an tại Sửu có M chất",
+      "raw_text": "Cung Điền trạch có M chất đoán mệnh thế nào?\nĐoán mệnh thực tế: điền trạch cung về \"sự\", khi đoán sự bất ngờ phải thế nào?\nĐoán tồn tại: đây là vấn đề của giai đoạn nâng cao, cần phối hợp nhiều công thức mới có thể đoán mệnh chính xác.\nĐoán quý nhân: tại đúng thời điểm + sự kiện, có thể hóa giải sự tổn hại của sự bất ngờ.\nĐoán mắc nợ: bất ngờ lớn là nhân duyên của tiền thế chưa hết.\nĐoán hữu duyên: chủ định trong mệnh là ngowfi sẽ phát sinh sự bất ngờ lớn.\nĐoán hữu vận: đây là vấn đề của giai đoạn nâng cao, cần phối hợp nhiều công thức mới có thể đoán mệnh chính xác.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M chất"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_40",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền",
+      "raw_text": "Gia tư lớn, lớn nhỏ sự tình đều đến tay, có thể phân phòng để kinh doanh tại nhà.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_41",
+      "condition_text": "Cung Điền trạch an tại Sửu có M Chất",
+      "raw_text": "Mệnh cách phúc báo tổ tiên: biểu thị \"phúc, điền\" một cung vị bất kì có M chất.\nPhân tích thực tế: biểu thị mệnh cách theo đuổi ước mơ, đây là những người ít quan tâm tới việc kiếm tiền.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Chất"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_42",
+      "condition_text": "Cung Điền trạch an tại Sửu có M Di",
+      "raw_text": "Sin sống ly hương xa nhà. Đầu tư nhà đất ở bên ngoài.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_43",
+      "condition_text": "Cung Điền trạch an tại Sửu có M Nô",
+      "raw_text": "Chung với bằng hữu mua bất động sản. Nhà ở mua gần bằng hữu.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_44",
+      "condition_text": "Cung Điền trạch an tại Sửu có M Tật",
+      "raw_text": "Dựa chính mình mua nhà đất. Mua nhà đất lưu giữ được tiền bạc.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_45",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái dương,Thái âm",
+      "raw_text": "十四、日月照壁格: （图三十四）\nNhật Nguyệt chiếu bích cách:\n太阳、太阴两星在丑或未同位, 丑未又恰为田宅宫, 都叫日月照壁格, 此种格局之人一生中多不动产, 包括继承、自购、赠兴等皆属之, 并因拥有大批田宅而成为大富翁, 是大地主的格局。\nThái Dương, Thái Âm hai sao đồng cung ở Sửu Mùi, Sửu Mùi nếu là điền trạch cung, gọi là Nhật Nguyệt chiếu bích cách, nắm cách cục này thì một đời tập trung nhiều bất động sản, bao gồm cả thừa kế, tự mua, được tặng, …. , cũng vì sở hữu nhiều nhà đất nên trở thành phú ông, đại địa chủ cách cục.\n庚、辛、丁、戊年生人合格, 其它年生人较次。以丑官优于未宫, 因太阴为田宅主, 在丑宫还是夜晚, 月亮还能散发光芒, 故较未宫为佳, 而同宫之太阳不主田宅之事。\nNgười sinh năm Canh, Tân, Đinh, Mậu là hợp cách; những người sinh năm khác thì xếp sau. Cung Sửu trội hơn cung Mùi, bởi vì Nguyệt làm chủ cung điền trạch, ở cung Sửu vẫn là buổi tối, ánh trăng vẫn tỏa ra ánh sáng, so với cung Mùi thì sáng hơn, mà Thái Dương lại không chủ về điền sản.\n由于命宫坐破军的缘故, 在辰戌位的破军有变动的意味, 此变动有多种意思, 如: 远离家乡在异地发展、事业多变动或家庭多变动等, 因此, 虽然有田宅却不是自己耕作, 大都交给别人管理, 所以要慎选信赖的托管之人, 以免被侵占。\nDo cung mệnh tọa Phá Quân, ở Thìn Tuất thì Phá Quân có ý nghĩa biến động, biến động đó có rất nhiều ý tứ, như: Ly hương lập gia ở nơi đất khách quê người, sự nghiệp hay thay đổi hoặc nhà cửa hay di chuyển, do vậy có điền sản lại không phải do mình canh tác, phần lớn đều giao cho người khác quản lí, cho nên phải thận trọng trong việc chọn người ủy thác, để tránh khỏi bị xâm chiếm.\n因为不动产不易变卖, 假如限运不吉, 钱财都大部分投资在田地上, 如果事业上欠缺周转资金, 很容易一败涂地, 此和命宫坐破军有很大关系, 因为大凡\"杀破狼\"者, 大都有大起大落之运, 尤其破军坐命者。\nBởi vì bất động sản không dễ mà bán thành tiền mặt, giả như vào vận hạn không lành, tiền tài đều đầu tư vào",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái dương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_46",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hóa quyền,Tự Kỵ",
+      "raw_text": "Là Quyền Kị, Quyền có thể giải Kị, muốn làm rồi không muốn làm.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa quyền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_47",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm,Thái dương",
+      "raw_text": "Nhật Nguyệt chiếu bích cách: hai sao Thái Dương với Thái Âm cùng hội ở Sửu Mùi là Điền Trạch cung, gọi là \"Nhật Nguyệt chiếu bích cách\". Chủ phú, trong đời sẽ có không ít bất động sản, có thể có được từ việc được kế thừa, tự mua, đầu cơ đất, buôn bán bất động sản ... đều cực kỳ may mắn, có thể vì thế mà trở thành cự phú.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "dien_trach_stream_48",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái dương",
+      "raw_text": "Thái Dương ở thời kì ấu thơ thì chủ về cha, ở thời kì trung niên thì chủ về bàn thân nếu là phái nam; phái nữ thì chủ về chồng, ở thời kì vãn niên thì chủ về con trai.\nThái Dương Hóa Lộc nhập cung quan lộc, mà Hóa Kị cũng đồng thời nhập cung quan lộc, là ý tượng: tuy có mạng làm ông chủ, nhưng về sự nghiệp gặp nhiều sóng gió không thuận lợi, hơn nữa cũng không muốn làm thuê cho người khác lâu dài, rốt cuộc một việc cũng không thành.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái dương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_49",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thiên khôi,Hỏa tinh",
+      "raw_text": "Thiên Khôi có Hỏa Tinh đồng độ, là quá dương cương; luận về bệnh tật cũng chủ về đến dữ dội như lửa táp.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên khôi"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_50",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hỏa tinh",
+      "raw_text": "Đứng một mình là chủ về bỏ tố nghiệp. Cùng với cát tinh là chủ về trước vất vả, sau mới tạo lập được sản nghiệp. Nếu gặp Không Kiếp là chủ về trắng tay.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hỏa tinh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_51",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm",
+      "raw_text": "Miếu vượng là chủ về có nhiều ruộng.\nHãm địa, thêm Kình Dương Đà La Hỏa linh Không Kiếp Ky là chủ về hoàn toàn không có điền sản. Nếu cùng Tả Hữu Quyền Lộc và Lộc tồn là chủ về có nhiều điền sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_52",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm,Thái dương",
+      "raw_text": "Chủ về thêm cát tinh, đặc biệt là Tam Hóa, là chủ về vườn ruộng cò bay thẳng cánh.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_53",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái dương",
+      "raw_text": "Nhập miếu là chủ về được hưởng tổ nghiệp. Hãm địa mà thêm Kình Dương Đà La Hỏa Linh Không Kiếp là chủ về tay trắng hoàn trắng tay.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái dương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_54",
+      "condition_text": "Cung Điền trạch an tại Sửu có các sao Thiên khôi,Thiên việt hội hợp",
+      "raw_text": "Chủ có tổ nghiệp, hội chiếu nhiều sao tốt thì càng tốt, bản thân có thể được thừa kế, cũng có thể tự gây dựng nhà cửa, hội Tứ sát thì trung niên trở ra có thể đủ năng lực mua dựng nhà cửa, hội Không Kiếp thì không có tổ nghiệp, cũng khó tự mình gây dựng. Cần căn cứ vào sự ít nhiều của cát tinh hung tinh để luận đoán.\nNgười này thường sống ở khu vực có nhiều cơ quan mang tính dịch vụ hoặc nhiều bạn bè, người phú quý lui tới.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "các sao Thiên khôi"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_55",
+      "condition_text": "Cung Điền trạch an tại Sửu có Hỏa tinh",
+      "raw_text": "Hỏa Tinh: độc thủ miếu vượng được nhiều cát tinh củng chiếu, dù có tổ nghiệp cũng chủ thoái bại. Hãm địa thì hoàn toàn không có tổ nghiệp. Hội cát tinh thì khi già có thể gây dựng nhà cửa, hội Không Kiếp thì hoàn toàn không có nhà cửa. Hội Thiên Hình, Đại Hao, có hỏa tai. Hội Âm Sát, gặp cướp.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hỏa tinh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_56",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm",
+      "raw_text": "Nhập miếu có tổ nghiệp, được nhiều cát tinh thủ chiếu có thể được kế thừa, cũng có thể tự xây dựng, hãm địa hội Tứ sát, tổ nghiệp ít ỏi, trung niên trở ra tự mình xây dựng. Người này thường sống gần rừng, công viên cây xanh, gần nơi có nước, hội cát tinh thì nơi ở đẹp đẽ, hạm địa thì ánh sáng không tốt.\nHội Lộc Tồn, Hóa Lộc thủ chiếu, nhiều bất động sản. Hội Không Kiếp, Đại Hao, có phá hao. Hội Tứ sát thủ chiếu, có hỏa tai, gia trạch bất an. Hội Hóa Kỵ, trong nhà lắm khẩu thiệt thị phi. Cung Điền Trạch hạn năm có Thái Âm Hóa Kỵ hội sát tinh, cung phụ mẫu hạn năm có Thiên Hình Bạch Hổ, chủ tổn thất sản nghiệp, mẹ mất.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_57",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái dương",
+      "raw_text": "Tổ nghiệp hay sản nghiệp có xu hướng suy thoái dần, bất luận miếu hãm, khó mà giữ được tổ nghiệp, đều chủ có sự biến đổi. Nhập miếu chủ có tổ nghiệp, hội cát tinh thì sản nghiệp ngày càng nhiều, cũng có thể kinh doanh nhà đất. Hãm địa hội Tứ sát Không Kiếp Hao Kỵ thì hoàn toàn không có, đắc địa hoặc bình hòa, trung niên trở ra có thể tự xây dựng được. Gần nơi người này sống có cơ quan nhà nước, miếu vượng thì nơi ở ánh sáng quá mạnh, hãm địa thì ánh sáng không tốt.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái dương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "dien_trach_stream_58",
+      "condition_text": "Cung Điền trạch an tại Sửu có Cung khí đại cát",
+      "raw_text": "Điền Trạch Cung Khí đạt cát, nếu tinh diệu trong cung cũng cát, thì cuộc đời tất có bất động sản và không phải thuê nhà để ở. Năm tháng có thể mua điền sản xảy ra khi được đại vận sinh phù, nếu đại vận lại tác động hỗ trợ, phù ủng (sách viết là tác dụng lạp hoàn), thì điền sản thực sự rất vượng thịnh. Tài sản bất động sản có thể đến 500 triệu trở lên. Đương nhiên, khi phân tích cần lấy cung Mệnh, Thân, Tài phối hợp mới có thể luận đoán như thế.\nNếu đại vận chỉ là thứ cát, tinh diệu trong cung là hỷ thần, đại vận chỉ là sinh phù thì bất động sản của người này cũng phải từ vài căn trở lên. Tôi có một người bạn thân sinh năm Tân Mão cũng như thế. Anh ấy đã mua 1 căn nhà với giá hơn 2 triệu nhân dân tệ khi chưa đến 30 tuổi. Vài năm gần đây lại mua thêm 2 căn nữa. Hiện tại vẫn còn muốn mua nữa. Đây là ví dụ rõ ràng của Cung Khí. Trong vận này, Điền Trạch chỉ là hữu cát mà bất động sản đã vượng như thế. Huống hồ khi Cung Khí đại cát nữa thì không biết sẽ vượng đến mức độ nào đây?\nTôi còn một người bạn nữa, Điền Trạch Cung Khí cũng thuộc loại hữu cát, nhưng mệnh vận đại hạn có tác dụng lạp hoàn qua Điền Trạch, đến năm 69 sở hữu hơn 10 căn trở lên. Tay trắng làm lên, đất đai thì không tính đến. Hiện cũng mới chỉ hơn 40 tuổi mà thôi. Cũng có người hàng xóm, đã hơn 50 tuổi, mà vẫn chưa có nhà. Phân tích mệnh vận thì thấy Điền Trạch Cung Khí đại hung, nhưng tinh diệu lại cát quá bán, đại vận không những không có tác dụng lạp hoàn Điền Trạch mà còn phá Điền Trạch. 40 tuổi anh đã bán đi c",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung khí đại cát"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "dien_trach_stream_59",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm",
+      "raw_text": "Thái Âm nhập Điền Trạch chủ nhiều điền sản mà cũng được điền sản của tổ nghiệp.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "dien_trach_stream_60",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái âm,Cung khí đại cát",
+      "raw_text": "Thái Âm nhập Điền Trạch, nếu Cung Khí đại cát, ngộ Thái Âm Thủy là hỷ thần tất có Điền sản. Trái lại, Thái Âm Thủy là kỵ thần, nếu đại vận sinh phù thì sẽ có Điền sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái âm"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "dien_trach_stream_61",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái dương",
+      "raw_text": "Thái Dương nhập Điền Trạch chủ điền sản của tổ tiên cũng như tự mua rất vượng.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái dương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "dien_trach_stream_62",
+      "condition_text": "Cung Điền trạch an tại Sửu có Thái dương,Cung khí đại cát",
+      "raw_text": "Thái Dương nhập Điền trạch, nếu Cung Khí đại cát, Thái Dương Hỏa là hỷ thần, chỉ cần đại vận sinh trợ thì tình hình sở hữu bất động sản cũng rất khả quan rồi. Nếu tinh diệu trong cung sinh trợ hoặc đại vận tác động lạp hoàn thì điền sản ắt sẽ rất vượng. Trái lại, Thái Dương hỏa là kỵ thần, thì cũng có điền sản.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thái dương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "dien_trach_stream_63",
+      "condition_text": "Cung Điền trạch an tại Sửu có Cung Điền trạch",
+      "raw_text": "Điền Trạch cung có thể dùng để luận đoán:\n1. Số lượng bất động sản của mệnh tạo?\n2. Khi nào thì sở hữu bất động sản?\n3. Khả năng tinh dục hay khả năng sinh con?\n4. Cát hung của điền trạch hoặc phối hợp với mệnh bàn để khán cát hung của mộ tổ tiên.\nTrong xã hội ngày nay, nhất là tại tỉnh này, người nào sở hữu bất động sản, chỉ cần bán đi 1 mảnh đất là có thể thu về được rất nhiều tiền. Đúng là tấc đất tấc vàng vậy! Do đó, 1 người có Điền Trạch cung vượng, cũng đồng nghĩa với việc tài phú của người ấy rất sung túc. Chúng ta khi luận đoán cung Điền Trạch, cần đặc biệt lưu tâm đến số lượng bất động sản má đương số có thể sở hữu. Nên, trong chương này, tôi xin trình bày ý nghĩa Cung Điền Trạch và mối liên hệ với việc sở hữu bất động sản. Xin nhác lại rằng, đế luận đoán vấn đề này, ngoài việc dựa vào cung Điền Trạch, ta cần phải lấy cung Mệnh, Thân làm gốc, cũng như đại vận chi phối ảnh hưởng.",
+      "conditions": {
+        "palace": "DIEN_TRACH",
+        "position": "SUU",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung Điền trạch"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    }
+  ]
+}

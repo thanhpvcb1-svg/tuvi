@@ -1,0 +1,1046 @@
+{
+  "palace": "tu_tuc",
+  "palace_name": "Tử Tức",
+  "source": "tuvi.cohoc.net",
+  "crawl_mode": "incremental",
+  "last_updated": "2026-09-22T03:02:14.161Z",
+  "total_blocks": 43,
+  "blocks": [
+    {
+      "block_id": "tu_tuc_inc_1",
+      "condition_text": "Điểm \"xí hoa\" cung Tử tức là 0.35",
+      "raw_text": "Cung Tử tức chủ về: con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục.\nTọa thủ: Thiên việt, Thiên hỉ. Xung chiếu: Thái dương, Thái âm, Hỏa tinh, Thiên khôi, Hóa quyền, Hồng loan. Tam hợp: Thiên đồng, Địa kiếp, Địa không - Thiên cơ, Cự môn, Linh tinh, Hóa kỵ, Hàm trì. Giáp cung: Thất sát, Kình dương - Liêm trinh, Thiên mã, Thiên hư.\nNgũ hành khí của cung Kỷ Mùi: 20% THỔ (hỉ thần), 50% THỔ (hỉ thần), 30% HỎA (kị thần). Đây là cung khí đại cát. Thiên việt hành HỎA là kị thần. Thiên hỉ hành THỦY là nhàn thần.\nCung Tử tức can Kỷ làm cho:\n- Vũ khúc Hóa lộc nhập cung Phúc đức (cung Nô bộc của cung Tử tức). Cung Phúc đức can Giáp chuyển Liêm trinh Hóa Lộc nhập cung Phu thê, chuyển Thái dương Hóa kỵ nhập cung Điền trạch.\n- Văn khúc Hóa kỵ nhập cung Thiên di (cung Tử tức của cung Tử tức). Cung Thiên di can Bính chuyển Thiên đồng Hóa Lộc nhập cung Phụ mẫu, chuyển Liêm trinh Hóa kỵ nhập cung Phu thê.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của một cao thủ Bắc phái",
+        "author": "Kinh nghiệm của một cao thủ Bắc phái"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "tu_tuc_inc_2",
+      "condition_text": "Cung Tử tức địa chi là Mùi",
+      "raw_text": "Cung Tử Nữ cư Mùi là chỗ tứ khố vị, chủ giao lưu quan hệ có tính bảo thủ mà cũng bận rộn vất vả.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "tu_tuc_inc_3",
+      "condition_text": "Cung Tử tức thiên can là Kỷ",
+      "raw_text": "Cung Tử Nữ can Kỷ, tam tài thuộc Địa chi Nhân, thuộc Thổ, cho nên hay che chở người khác, giao thiệp đầu tư cùng người ta dễ bị phá hoại, cũng chủ công việc bên ngoài đa số mang tính phục vụ người ta. Lấy con cái mà nói, biểu thị có tính tự lập.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "tu_tuc_inc_4",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "Cung Tử tức là cung khí số vị cung Nô bộc. Trong trường hợp này biểu hiện bạn bè có tài chính và phương diện kinh tế rất có thành tựu, đặc biệt bản thân có sự nghiệp tốt sẽ có được sự trợ giúp.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Đồng bộ đoạn quyết - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "tu_tuc_inc_5",
+      "condition_text": "Thuận Thủy Kị (流水忌): cung Tử tức phi hóa kỵ tới cung Thiên di",
+      "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Tử tức khí tiết sang cung Thiên di.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+        "author": "Tiên thiên tứ hóa phi tinh kỳ phổ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_6",
+      "condition_text": "Cung Tử tức an tại Mùi có Lộc Phúc",
+      "raw_text": "Tử nữ Hóa Lộc nhập phúc đức.\n1. Tử nữ làm cho phúc đức cung của mệnh tạo sinh phát, hữu duyên, hỷ duyệt.\nMệnh tạo dễ được hưởng phúc của tử nữ, tử nữ làm cho mệnh tạo tự hào.\n2. Tử nữ làm cho tinh thần của mệnh tạo vui vẻ, là mối thiện duyên, nên tử nữ hiếu thuận, ngoan ngoãn, không phải lo lắng. Cùng tử nữ ứng xử hài hòa.\n3. Tử nữ Lộc nhập phúc đức chiếu tài bạch, từ khi có con, thu nhập gia tăng.\n4. Tử nữ thường mải chơi, tản mạn thiếu tập trung.\n5. Đào hoa tinh Hóa Lộc, hưởng thụ cuộc sống sinh lý hoàn hảo.\n6. Khi về già có cuộc sống chất lượng tốt, không phải lo nghĩ, hưởng lạc trời cho.\n7. Tử nữ là cung thứ 6 của phúc đức, luận sự bất ngờ, dễ gặp hung hóa cát.\nNếu liên kết tật ách, thiên di, phúc đức, điền trạch vượng, thường họa bất lâm thân.\n8. Tử nữ là cung thứ 6 của phúc đức, là người phúc hậu, dễ trường thọ.\n9. Tử nữ Hóa Lộc nhập phúc đức chiếu tài bạch, cộng tác thuận lợi, mang lại lợi nhuận.\n10. Thân thích vãng lai náo nhiệt (Tử nữ luận thân thích vị)\n11. Mệnh cung của tử nữ Hóa Lộc nhập phúc đức.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phúc"
+        ],
+        "transformations": [
+          "LOC"
+        ],
+        "transformation_target": [
+          "PHUC_DUC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_7",
+      "condition_text": "Cung Tử tức an tại Mùi có Lộc Phúc",
+      "raw_text": "Từ Tử Nữ hóa Lộc đến Phúc Đức cung, chiếu Tài Bạch cung\n1. Lộc là nguồn của cải, Kị là kho bạc, Lộc tùy Kị tẩu, như Kị ở lục nội chủ thực lộc, Kị ở lục ngoại là hư lộc.\n2. Lộc nhập Mệnh, tiền tài theo mệnh, một đời thực lộc không thiếu, giỏi tạo nguồn tài nguyên, tài nguyên không ngừng.\n3. Tính tình hoạt bát, hướng ngoại, sôi nổi, thích vui nhộn, ham chia sẻ, ấm áp, dễ gần và thân ái, tùy cảnh ngộ mà an không làm bộ, dễ phối hợp, tình cảm bền chặt, dễ hòa đồng với mọi người, tốt bụng và chu đáo, được lòng mọi người, được mọi người chào đón.\n4. Góc độ nhân duyên giữa con người, thì nam nữ già trẻ đều có. Nhân duyên tốt, thực lộc nhiều, thích ăn uống vui vẻ, giao lưu nhiều hơn. Có bạn rượu thịt, kết bạn nhiều, trọng nhân tình bên ngoài nên dễ hao tài tốn của.\n5. Hào phóng và sẵn sàng không tiếc tiền, không giỏi quản lý tài chính và dễ nhẹ dạ cả tin.\n6. Nói không có gì, không có chủ đề, ngồi nói mà không hành động, thiếu thực thi và hiệu quả. Biểu lộ khuôn mặt tươi cười muốn mình như bảo vật, tạo cho mọi người ấn tượng về sự bất cần đời.\n7. Lộc chủ khoái lạc vui vẻ, tốt nhàn xấu nhọc, lưu luyến quên lối về, cho nên dễ sa vào vui chơi.\n8. Tính tình hay cáu gắt, hay nổi giận, đến nhanh đi nhanh chóng, không thù dai, không cố chấp, đầu hổ đuôi rắn nên dễ trở thành người hiểu biết rộng nhưng không tinh thông.\n9. Thụ động trong cuộc sống, không chủ động và thích phụ thuộc sẵn.\n10. Thích hợp nghề nghiệp thì lấy cung vị làm phạm vi, lấy sao làm dụng, lấy tượng mà nói mười phương tài, thích đi tắt đón đầu, giỏi tạo nguồn tài nguyên, sáng tạo, bán được ý tưởng, quan hệ giữa các cá nhân tốt, nên nó liên quan đến sự nổi tiếng và giàu có.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phúc"
+        ],
+        "transformations": [
+          "LOC"
+        ],
+        "transformation_target": [
+          "PHUC_DUC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_8",
+      "condition_text": "Cung Tử tức an tại Mùi có Lộc Phúc",
+      "raw_text": "Con cái có phúc khí để hưởng, độ lượng, xem trọng hưởng thụ, thích động não, không thích lao động chân tay, kiếm tiền khá dễ. Nếu mệnh tạo hợp tác có thể kiếm được tiền; rất có uyên với người khác giới, dễ có tình nhân ở bên ngoài, thường tiêu xài tiền vào chuyện hưởng thụ đào hoa. Nếu chuyển phi Hóa Kị nhập cung phụ mẫu, nữ mệnh có thể bán thân để kiếm tiền, sinh hoạt tình dục quá độ khiến cơ thể cũng không được khỏe.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phúc"
+        ],
+        "transformations": [
+          "LOC"
+        ],
+        "transformation_target": [
+          "PHUC_DUC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_9",
+      "condition_text": "Cung Tử tức an tại Mùi có Lộc Phúc",
+      "raw_text": "子女禄入福德:\n1. 「享子女福」、也「喜欢」小孩的「纯真」。\n2. 防「子女乐天」、散漫不积极。\n3. 性生活愉悦〈桃花星〉。\n4. 「晚境无忧」、「天伦有乐」。\n5. 「合伙赚钱」。\n6. 亲戚往来热络〈子女为亲戚位〉。\nTử nữ Hóa lộc nhập cung phúc đức:\n1. \"Hưởng phúc từ con cái\", cũng \"thích\" sự \"ngây thơ\" của trẻ.\n2. Đề phòng \"con cái vô tư\", lười nhác không tích cực.\n3. Đời sống tình dục vui vẻ (sao đào hoa).\n4. \"Cuối đời vô lo\", \"thiên luân có niềm vui\".\n5. \"Hợp tác kiếm tiền\".\n6. Quan hệ họ hàng sôi nổi (Tử Tức là vị trí họ hàng).",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phúc"
+        ],
+        "transformations": [
+          "LOC"
+        ],
+        "transformation_target": [
+          "PHUC_DUC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_10",
+      "condition_text": "Cung Tử tức an tại Mùi có Lộc Phúc",
+      "raw_text": "子女禄入福德: \n1. 「享子女福」、也「喜欢」小孩的「纯真」。\n2. 防「子女乐天」、散漫不积极。\n3. 性生活愉悦〈桃花星〉。\n4. 「晚境无忧」、「天伦有乐」。\n5. 「合伙赚钱」。\n6. 亲戚往来热络〈子女为亲戚位〉。\nTử nữ Hóa lộc nhập cung phúc đức: \n1. Hưởng con cái phúc cũng thích đứa trẻ chân thật. \n2. Phòng con cái vô tư buông tuồng thiếu tích cực. \n3. Tính tình cuộc sống vui thich (đào hoa tinh). \n4. Về già không lo tình cha con vui vẻ. \n5. Hợp tác kiếm tiền. \n6. Thân thích lui tới vui vẻ (tử nữ là thân thích vị).",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phúc"
+        ],
+        "transformations": [
+          "LOC"
+        ],
+        "transformation_target": [
+          "PHUC_DUC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_11",
+      "condition_text": "Cung Tử tức an tại Mùi có Lộc Phúc",
+      "raw_text": "Tử tức cung Hóa Lộc nhập Phúc Đức, đối với người khác giới tiêu tiền rất hào phóng, dùng tiền chơi gái; con cái hiếu thảo, về già có chỗ dựa; Phúc Đức là Nô Bộc của Tử Tức, con cái có nhiều bạn bè, ủng hộ bạn bè nhiệt tình; nguồn tài, đường tài lộ ở thế hệ sau, con trai hùn hạp làm ăn.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phúc"
+        ],
+        "transformations": [
+          "LOC"
+        ],
+        "transformation_target": [
+          "PHUC_DUC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_12",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "Tử nữ Hóa Quyền nhập phu thê (chiếu quan lộc).\n1. Tử nữ tới tác thành hôn nhân của mệnh tạo, cho nên dễ ở cùng nhau trước khi cưới hoặc có thai rồi mới cưới hoặc nhập môn hỷ (đính hôn lập tức có thai hoặc có thai thời đính hôn).\n2. Họ hàng thân thích quan tâm, tác thành cho hôn nhân của mệnh tạo.\n3. Tử nữ Hóa Quyền nhập phu thê chiếu quan lộc, tử nữ, vãn bối, thuộc hạ, người làm trợ giúp sự nghiệp của mệnh tạo.\n4. Hợp tác công việc dễ thành, làm cho sự nghiệp của mệnh tạo hưng vượng.\n5. Mệnh cung của tử nữ Hóa Quyền nhập phu thê.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_13",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "Tử nữ Hóa Quyền nhập quan lộc.\n1. Tử nữ Hóa Quyền nhập quan lộc, là tử nữ trợ giúp công việc, sự nghiệp của mệnh tạo, mệnh tạo thích hợp kinh doanh hoặc nghề nghiệp liên quan đến con trẻ.\n2. Tử nữ Hóa Quyền nhập quan lộc, là tử nữ trợ giúp công việc sự nghiệp của mệnh tạo, mệnh tạo được trợ giúp đắc lực của thuộc hạ, người làm.\n3. Hợp tác công việc dễ thành.\n4. Thích hợp ra ngoài kiếm tiền.\n5. Áp lực cạnh tranh cùng bạn hàng đồng nghiệp lớn.\n6. Mệnh cung của tử nữ Hóa Quyền nhập quan lộc.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_14",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "Tử Nữ hóa Quyền nhập Quan Lộc biểu thị con cái sẽ kế thừa sự nghiệp.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_15",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "Từ Tử Nữ hóa Quyền đến Quan Lộc cung, chiếu Phu Thê cung\n1. Mệnh chủ cùng con cái, nhân viên và cấp dưới theo đuổi cảm giác đạt được thành tựu và thực hiện giá trị thể hiện khát vọng của bản thân.\n2. Mệnh chủ cùng con cái, nhân viên và cấp dưới thích quyền lực, cố gắng giành quyền chủ đạo và thích chỉ huy người khác.\n3. Mệnh chủ cùng con cái, nhân viên và cấp dưới của mình khéo léo tận dụng tốt các kỹ năng lãnh đạo và quản lý hoặc các kỹ năng chuyên môn của mình để mưu cầu sự giàu có và thu lợi.\n4. Có thể kinh doanh nghể có tính đào hoa, tám nghề nghiệp lớn, mai mỗi cưới hỏi....\n5. Mệnh chủ cùng con cái, nhân viên, cấp dưới thuộc mệnh lao lực, mệnh mang theo nghiệp, phải tự mình làm mọi việc.\n6. Mệnh chủ cùng con cái, nhân viên và cấp dưới có đặc điểm chủ động, tích cực, giỏi nắm bắt cơ hội và hoàn thành nhiệm vụ hiệu quả.\n7. Con cái, nhân viên và cấp dưới có thể giúp ích cho mệnh chủ và nâng cao hình ảnh xã hội.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_16",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "Con cái ưa cạnh tranh, không chịu thua, phản ứng lanh lẹ, có năng lực, học giỏi, làm việc tích cực và có nỗ lực, yêu cầu cao ở bản thân, đi làm dễ thăng tiến, cũng có thể làm chủ sáng lập cơ nghiệp. Mệnh tạo nên chú ý sức khỏe con cái; thích vui chơi đào hoa ở bên ngoài, không mang về nhà; nhân viên của mệnh tạo phần nhiều là người có tài; mệnh tạo cũng có thể hợp tác làm ăn, thuê người làm, sự nghiệp sẽ thành tựu.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_17",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "子女权入事业:\n1. 「合伙有成就」。\n2. 「子女」能力好、「事业心强」。\n3. 同行「竞争压力」。\nTử nữ Hóa quyền nhập cung sự nghiệp:\n1. \"Hợp tác có thành tựu\".\n2. \"Con cái\" năng lực tốt, \"tham vọng sự nghiệp mạnh\".\n3. Áp lực cạnh tranh từ đồng nghiệp.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_18",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "子女权入事业: \n1. 「合伙有成就」。\n2. 「子女」能力好、「事业心强」。\n3. 同行「竞争压力」。\nTử nữ Hóa quyền nhập cung sự nghiệp: \n1. Hợp tác có thành tựu. \n2. Con cái năng lực tốt, sự nghiệp vững tâm. \n3. Đồng hành áp lực cạnh tranh.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_19",
+      "condition_text": "Cung Tử tức an tại Mùi có Quyền Quan",
+      "raw_text": "Tử tức cung Hóa Quyền nhập Quan Lộc, trong sự nghiệp thì lớp hậu sinh, người trẻ tuổi là đối thủ cạnh tranh của mình, hoặc sau khi sinh con bản thân có thể nắm quyền; Quan Lộc à Tật Ách của Tử Tức, biểu thị là con cái có sức khỏe tốt, nhưng dễ có thương tật tai họa người ý muốn, cá tính mạnh mẽ, kiên cường, thính ganh đua, không chịu thua, sự nghiệp có thành.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Quan"
+        ],
+        "transformations": [
+          "QUYEN"
+        ],
+        "transformation_target": [
+          "QUAN_LOC"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_20",
+      "condition_text": "Cung Tử tức an tại Mùi có Khoa Tật",
+      "raw_text": "Tử nữ Hóa Khoa nhập tật ách.\n1. Tử nữ với mệnh tạo vừa gần vừa xa.\n2. Mệnh cung của tử nữ Hóa Khoa nhập tật ách.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Tật"
+        ],
+        "transformations": [
+          "KHOA"
+        ],
+        "transformation_target": [
+          "TAT_ACH"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_21",
+      "condition_text": "Cung Tử tức an tại Mùi có Khoa Tật",
+      "raw_text": "Tử Nữ Khoa nhập Tật Ách biểu thị con cái là quý nhân thân thể của ta, ngày sau khi có nạn con cái tất có thể tìm được thầy giỏi thuốc tốt chữa cho ta.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Tật"
+        ],
+        "transformations": [
+          "KHOA"
+        ],
+        "transformation_target": [
+          "TAT_ACH"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_22",
+      "condition_text": "Cung Tử tức an tại Mùi có Khoa Tật",
+      "raw_text": "Từ Tử Nữ cung hóa Khoa đến Tật Ách cung, chiếu Phụ Mẫu cung\n1. Con cái nhân viên vãn bối quan tâm, tôn trọng tình cảm, sức khỏe của mệnh chủ.\n2. Mệnh chủ cuộc sống là một người biết lắng nghe và là một người tri âm đối với thế hệ con cái nhân viên vãn bối.\n3. Mệnh chủ không chủ động, thuộc loại thụ động chờ đợi.\n4. Thích những mối tình platonic nặng nề.\n5. Thích những mối quan hệ có khoảng cách tuổi tác lớn, chẳng hạn như tình thầy trò, tình chị em, tình sếp thư ký...",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Tật"
+        ],
+        "transformations": [
+          "KHOA"
+        ],
+        "transformation_target": [
+          "TAT_ACH"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_23",
+      "condition_text": "Cung Tử tức an tại Mùi có Khoa Tật",
+      "raw_text": "Con cái có thể chất tốt, ít khi mắc bệnh nặng, có bệnh cũng dễ chữa. Mệnh tạo ra ngoài, thân tâm vui vẻ; nếu gặp cảnh khó khăn, có thể được quý nhân tương trợ; xuất ngoại có quý nhân trợ giúp, gặp tai ách được cứu; giao du với người khác giới khá chú trọng cảm giác, thích lãng mạn; nặng duyên với người khác giới; mở tiệm, làm ăn buôn bán, không nhất định phải hợp tác, sẽ không đầu tư lớn, tuy không kiếm được nhiều tiền, nhưng rất bình ổn.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Tật"
+        ],
+        "transformations": [
+          "KHOA"
+        ],
+        "transformation_target": [
+          "TAT_ACH"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_24",
+      "condition_text": "Cung Tử tức an tại Mùi có Khoa Tật",
+      "raw_text": "子女科入疾厄:\n1. 书生型的小孩、教养好、有规矩。\nTử nữ Hóa khoa nhập cung tật ách:\n1. Trẻ kiểu thư sinh, giáo dục tốt, có quy củ.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Tật"
+        ],
+        "transformations": [
+          "KHOA"
+        ],
+        "transformation_target": [
+          "TAT_ACH"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_25",
+      "condition_text": "Cung Tử tức an tại Mùi có Khoa Tật",
+      "raw_text": "子女科入疾厄: \n1. 书生型的小孩、教养好、有规矩。\nTử nữ Hóa khoa nhập cung tật ách: \n1. Thư sinh tiểu hài, dạy dỗ tốt, có quy củ.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Tật"
+        ],
+        "transformations": [
+          "KHOA"
+        ],
+        "transformation_target": [
+          "TAT_ACH"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_26",
+      "condition_text": "Cung Tử tức an tại Mùi có Khoa Tật",
+      "raw_text": "Tử tức cung Hóa Khoa nhập Tật ách, hậu bối quan tâm đến sức khỏe thân thể của ta, có nhiều quý nhân trẻ tuổi, có thể gặp hung hóa cát; con cái vui vẻ, được nhiều quý nhân giúp đỡ, học tập thuận lợi.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Tật"
+        ],
+        "transformations": [
+          "KHOA"
+        ],
+        "transformation_target": [
+          "TAT_ACH"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_27",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Tử nữ Hóa Kị Thiên di xung mệnh, khó có con trai. Điền trạch Hóa Kị xung mệnh, khó có con gái.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_28",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Tử nữ Hóa Kị nhập thiên di. (Kị xuất).\n1. Tử nữ Hóa Kị nhập thiên di xung mệnh, mệnh tạo và tử nữ duyên bạc, ít gần gũi, Kị xuất mang nghĩa hư không, không có con cái hoặc con cái xa cách.\n2. Tử nữ của mệnh tạo thật thà chất phác hoặc thành tựu kém. Nếu có hiện tượng tử tức vượng, tất tử nữ phát triển ở bên ngoài, không phát triển khi gần mệnh tạo.\n3. Lão vận kém, con trẻ ít quan tâm mệnh tạo (Dưỡng nhi nan phòng lão).\n4. Hợp tác công việc khó thành hoặc không lâu bền.\n5. Dễ phát sinh sự việc bất ngờ (cần liên kết tật ách, thiên di 3 Kị thành phá hoặc bệnh nhân quả (tử nữ là cung thứ 6 của phúc đức).\n6. Chất lượng cuộc sống sinh lý của mệnh tạo không tốt, nếu đào hoa tinh Hóa Kị khả năng sinh lý dễ sớm suy yếu hoặc ngoại ngộ gặp phải rắc rối phiền phức.\n7. Mệnh cung của tử nữ Hóa Kị nhập thiên di.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_29",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Tử nữ Hóa Kị nhập thiên di, không nên hợp tác, bất lợi cho bản thân.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_30",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Tử nữ vị Hóa Kị xung mệnh, khó có con trai, bản thân không có ngoại ngộ, không nên cộng tác hợp tác với người.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_31",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Từ Tử Nữ cung hóa Kị đến Thiên Di cung, xung Mệnh cung\n1. Mệnh không có con hoặc duyên với con mỏng, ở với nhau ít mà xa cách nhiều hoặc tình cảm không tốt.\n2. Quan hệ nhân tế khác phái không tốt, dễ phạm tiều nhân.\n3. Dễ vì con cái, nhân viên, cấp dưới vãn bối mà bị liên lụy, xa lánh, ức hiếp, quy kết và đổ lỗi làm kẻ chịu tội thay.\n4. Cuộc sống dễ bị hiểu lầm, thị phi nhiễu, đào hoa tranh chấp.\n5. Thiên Di cung tọa Kị xung Mệnh làm người không yên lòng, khiến người khác oán hờn không thích cùng.\n6. Không đúng mực, cứng đầu trong cư xử với người khác, cố chấp theo ý mình, tự cho mình là cao, cứng nhắc, không giỏi bày tỏ, không hòa đồng, đa nghi, không dễ tin người, không dễ tiếp thu ý kiến, dễ có tranh chấp với những người khác.\n7. Mệnh chủ khả năng có dịch mã, xuất ngoại xa nhà, bôn ba lao lực.\n8. Mệnh chủ và con cái dễ bị tai nạn, huyết quang.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_32",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Con cái nên rời gia đình sớm, ra ở riêng, phần nhiều không có con trai, có cũng khó nuôi hoặc có con trai cũng như không, vì lớn lên sẽ đi xa, ít gặp mệnh tạo. Mệnh tạo không có đào hoa (bản tính không thích), không nên hùn hạp trong sự nghiệp; không được \"chơi hụi\", cũng không nên làm người bảo đảm, nếu không sẽ có tổn thất lớn; thường bôn ba các nơi, rất ít khi định cư một chỗ, phải thuê nhà ở. Nếu đồng thời cung tử nữ phi Hóa Lộc nhập tam phương của cung tử nữ, là ý tượng: không có duyên với con trai. Nếu cung phu thê tự Hóa Kị, là ý tượng: sinh con gái nhiều hơn. Nếu cung mệnh hoặc cung thiên di cũng tự Hóa Kị, là dễ hư thai, có con gái nhiều hơn; mệnh tạo có tượng dịch mã, ra nước ngoài, nên phòng sự cố giao thông. Cung tử nữ phi Hóa Kị nhập cung thiên di xung cung mệnh, là ý tượng: không nên hợp tác với bạn bè, sẽ bất lợi đối với mệnh tạo.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_33",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "子女忌入迁移:\n1. 「子在远方」。\n2. 小孩常「不在身边」或「子息空虚」。\n3. 子女「憨厚」或小孩「成就差」。\n4. 老运较差, 养儿「未必能防老」。\n5. 合伙「难成事」或合伙「缘不长久」。\n6. 格局差, 防意外、业力病〈双忌以上〉。\nTử nữ Hóa kỵ nhập cung thiên di:\n1. \"Con ở xa\".\n2. Con cái thường \"không ở bên\" hoặc \"con cái trống rỗng\".\n3. Con cái \"thật thà\" hoặc \"thành tựu kém\".\n4. Vận già kém hơn, nuôi con \"chưa chắc phòng được già\".\n5. Hợp tác \"khó thành\" hoặc duyên hợp tác \"không lâu dài\".\n6. Cục diện kém, phòng tai nạn, bệnh nghiệp lực (trên hai Kỵ).",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_34",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "子女忌入迁移: \n1. 「子在远方」。\n2. 小孩常「不在身边」或「子息空虚」。\n3. 子女「憨厚」或小孩「成就差」。\n4. 老运较差, 养儿「未必能防老」。\n5. 合伙「难成事」或合伙「缘不长久」。\n6. 格局差, 防意外、业力病〈双忌以上〉。\nTử nữ Hóa kỵ nhập cung thiên di: \n1. Con cái tại viễn phương. \n2. Trẻ nít không ở bên người hoặc có như không. \n3. Con cái thực thà hoặc trẻ nít thành tựu kém. \n4. Lão vận hơi kém, nuôi mà không thể dưỡng lão. \n5. Hợp tác khó thành chuyện hoặc hợp tác duyên không dài. \n6. Cách cục xấu phòng ngoại ý, nghiệp lực bệnh (song kỵ trở lên).",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_35",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Cung Tử Nữ hóa kỵ nhập Thiên Di, cũng là chủ ở bên ngoài phát sinh sự cố, cũng thuộc tượng hung.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_36",
+      "condition_text": "Cung Tử tức an tại Mùi có Kỵ Di",
+      "raw_text": "Tử tức cung Hóa Kị nhập Thiên Di, cuộc đời không có đào hoa, khả năng sinh dục kém, con cái duyên bạc, có cũng không hiếu thuận, con cái làm bại gia đình, gia đạo suy sụp.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Di"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [
+          "THIEN_DI"
+        ],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tu_tuc_inc_37",
+      "condition_text": "Cung Tử tức an tại Mùi có M Di",
+      "raw_text": "Con cái mệnh xuất ngoại. Con cái xuất ngoại mới có thể thành công.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Di"
+        ],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": [
+          "M_CODE:Di"
+        ]
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "tu_tuc_inc_38",
+      "condition_text": "Cung Tử tức an tại Mùi có M Phúc",
+      "raw_text": "Con cái thích hưởng thụ. Con cái cần được truyền nối.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Phúc"
+        ],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": [
+          "M_CODE:Phúc"
+        ]
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "tu_tuc_inc_39",
+      "condition_text": "Cung Tử tức an tại Mùi có M Quan",
+      "raw_text": "Mệnh hợp tác đối tác liên minh. Sự nghiệp hợp tác kiếm được tiền.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Quan"
+        ],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": [
+          "M_CODE:Quan"
+        ]
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "tu_tuc_inc_40",
+      "condition_text": "Cung Tử tức an tại Mùi có M Tật",
+      "raw_text": "Trong mệnh có con cái. Lấy bản thân để giáo dục con cái.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Tật"
+        ],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": [
+          "M_CODE:Tật"
+        ]
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "tu_tuc_inc_41",
+      "condition_text": "Cung Tử tức an tại Mùi có các sao Địa không,Địa kiếp,Hóa kỵ hội hợp",
+      "raw_text": "Đều chủ hình khắc, đa phần là vì chuyện con cái mà thao tâm đến già. Nếu như ba sao trên hợp chiếu một cung, tuyệt tự, hội nhiều cát tinh chiếu đến, chủ một con cũng e chết yểu.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "các sao Địa không",
+          "Hóa kỵ"
+        ],
+        "transformations": [
+          "KY"
+        ],
+        "transformation_target": [],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tu_tuc_inc_42",
+      "condition_text": "Cung Tử tức an tại Mùi có các sao Hỏa tinh,Linh tinh hội hợp",
+      "raw_text": "Chủ hình khắc, đơn thủ chủ cô, hội nhiều cát tinh hội chiếu, dù có cũng khắc thương, đa phần có con nuôi, hội Kình Đà Không Kiếp không có con. Con cái tính tình thích phân tranh, cương cường thô bạo bất hòa. Miếu vượng làm các nghề thiên lệch có thể có thành tựu.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "các sao Hỏa tinh"
+        ],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tu_tuc_inc_43",
+      "condition_text": "Cung Tử tức an tại Mùi có Cung Tử tức",
+      "raw_text": "Tử Nữ cung, trong tình hình cuộc sống hiện nay thì việc xác định chính xác được số con cái nhiều hay ít là không dễ. Người này có sinh con trai hay không? Con trai có mấy người? Những câu hỏi này có thể đoán định được sơ lược, đồng thời cũng có thể thấy được tương lai con cái thế nào? Có hiếu thuận hay không?\nLưu ý: Muốn luận đoán đúng số con, cần kết hợp Cung Khí với Tinh Diệu trong cung. Tinh Diệu trong cung có hóa hợp hay không? Hoặc sau khi hóa hợp thì tổng luận hỷ kỵ của thuộc tính ngũ hành. Vì giới hạn trong khuôn khổ cuốn sách nên tôi sẽ không trình bày tỉ mỉ việc phối hợp các tinh diệu, mà chỉ luận Tinh Diệu đơn thủ. Quý vị độc giả hãy tự mình thực nghiệm!\nSở Hoàng đề yếu: vấn đề luận đoán số con ở trên, muốn luận đoán chính xác cần phải phối hợp với lá số của người phối ngẫu. Còn việc sinh con giờ nào thì phải kết hợp thêm với sinh niên quái của người phối ngẫu cũng như giờ sinh.",
+      "conditions": {
+        "palace": "TU_TUC",
+        "position": "MUI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung Tử tức"
+        ],
+        "transformations": [],
+        "transformation_target": [],
+        "additional_conditions": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    }
+  ]
+}

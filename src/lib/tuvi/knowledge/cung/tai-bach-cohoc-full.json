@@ -1,0 +1,1433 @@
+{
+  "palace": "TAI_BACH",
+  "source": "tuvi.cohoc.net",
+  "chart_id": "472159",
+  "total_blocks": 45,
+  "sections": [
+    {
+      "section_id": "tai-bach",
+      "title": "CUNG TÀI BẠCH",
+      "blocks": [
+        {
+          "block_id": "tai-bach_cohoc_1",
+          "condition_text": "Điểm \"xí hoa\" cung Tài bạch là -2.87",
+          "raw_text": "Cung Tài bạch chủ về: kinh tế, tiền bạc, kinh doanh, thu nhập.\nTọa thủ: Thất sát, Kình dương. Xung chiếu: Vũ khúc, Thiên phủ, Tả phù. Tam hợp: Phá quân, Âm sát, Văn xương - Tham lang, Hữu bật, Hóa khoa, Hóa lộc. Giáp cung: Thiên lương, Lộc tồn, Thiên hình - Thiên việt, Thiên hỉ.\nNgũ hành khí của cung Mậu Ngọ: 20% THỔ (hỉ thần), 50% HỎA (kị thần), 30% HỎA (kị thần). Đây là cung khí hung nhiều hơn cát (hữu cát). Thất sát hành KIM là hỉ thần. Kình dương hành KIM là hỉ thần.\nCan cung là Mậu thuộc phạm trù ĐỊA: Mình giúp người, nhưng chiếm vị thế nên hoàn cảnh, môi trường sẽ giúp lại cho ta. Can Mậu là Địa chi Địa có nghĩa là Địa lợi ở mức độ TRUNG ĐẲNG - chưa phải là cao nhất. Ngoài ra cung Mậu Ngọ có ngũ hành địa chi sinh cho thiên can cũng làm tăng độ số tính đắc Địa lợi của cung.\nCung Tài bạch can Mậu làm cho:\n- Tham lang Hóa lộc nhập cung Quan lộc (cung Tài bạch của cung Tài bạch). Cung Quan lộc can Giáp chuyển Liêm trinh Hóa Lộc nhập cung Phu thê, chuyển Thái dương Hóa kỵ nhập cung Điền trạch.\n- Thiên cơ Hóa kỵ nhập cung Nô bộc (cung Tử tức của cung Tài bạch). Cung Nô bộc can Ất làm Thiên cơ tự hóa lộc, chuyển Thái âm Hóa kỵ nhập cung Điền trạch.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của một cao thủ Bắc phái",
+            "author": "Kinh nghiệm của một cao thủ Bắc phái",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 9
+        },
+        {
+          "block_id": "tai-bach_cohoc_2",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lai nhân cung",
+          "raw_text": "Lai nhân cung tại Tài Bạch cung: Tự lập, giàu có là điều quan trọng nhất đối với mệnh chủ, điểm rơi tứ hóa là cách kiếm tiền và bộ não chứa đầy những tính toán làm thế nào để tối đa hóa sự giàu có. Làm thế nào để duy trì sự phát triển ổn định của tài sản là nhiệm vụ của cuộc sống này. Đồng thời, họ cũng sẽ có năng lượng quản lý và động cơ kinh doanh mạnh mẽ; tứ hóa rất thích khi ở nội cục vì có thực, nhập ngoại cục thi chỉ là hư.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lai nhân cung"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tai-bach_cohoc_3",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lai nhân cung",
+          "raw_text": "Lai nhân cung tại tam hợp Mệnh cung, Tài Bạch cung, Quan Lộc cung: Tam hợp Mệnh Tài Quan, chủ yếu thể hiện khả năng kiếm tiền của một người. Nó thuộc phạm vi tự lực cánh sinh, mọi hành động của mệnh chủ đều do chính mình chịu trách nhiệm. Dựa trên điều này và sau đó theo các vị trí cung vị khác nhau và tăng phân lượng của nó. Ví dụ như Lai nhân: lạc nhập Tài Bạch cung thì mệnh chủ chú ý đến vận hành tiền bạc, người đó làm việc chăm chỉ trong đời này là mưu cầu của cải, nếu rơi vào cung Quan Lộc nó sẽ đặc biệt chú ý đến công tác sự nghiệp kinh doanh. Khi tam hợp này ở thế cường thì tính chủ động trong công việc và sự nghiệp càng mạnh, càng có khả năng tạo ra tình thế mới từ đầu. Hóa Lộc nhập biểu thị mệnh chủ có động lực mạnh mẽ cho công việc và thành tựu sự nghiệp; Hóa Quyền nhập biểu thị mệnh chủ có khả năng làm việc mạnh mẽ và mệnh chủ có khát vọng kiếm tiền cao. Mệnh Tài Quan là lục nội cung nên tự mình có thể nắm giữ tự kiểm soát, chẳng hạn như Hóa Lộc và hóa Kị cùng nhập, thì mệnh chủ không chỉ có thể kiếm tiền mà còn có thể tái đầu tư và đạt được thành tựu sự nghiệp.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lai nhân cung"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tai-bach_cohoc_4",
+          "condition_text": "Cung Tài bạch địa chi là Ngọ",
+          "raw_text": "Cung Tài Bạch cư Ngọ thuộc Thiên cũng là chỗ tứ bại địa, có đắc tiền tài thì phải xem vào thời cơ và ý trời.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+            "author": "Ông Phúc Dụ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "tai-bach_cohoc_5",
+          "condition_text": "Đối trì Lộc (对峙禄): cung Tài bạch hóa Lộc phi nhập đối cung của cung Phu thê, mà đối cung của cung Phu thê có Hóa lộc [năm sinh] năm sinh đối chiếu",
+          "raw_text": "Dạng này gọi là Đối trì Lộc, gia tăng cát lợi. Cung Phu thê được nhiều cát lợi.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa lộc [năm sinh] năm sinh đối chiếu",
+              "Hóa lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_6",
+          "condition_text": "Thuận Thủy Kị (流水忌): cung Tài bạch phi hóa kỵ tới cung Nô bộc",
+          "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Tài bạch khí tiết sang cung Nô bộc.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_7",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lộc Quan",
+          "raw_text": "Tài bạch Hóa Lộc nhập quan lộc, tài lộc do quan lộc mà có.\n\nTài Lộc nhập quan, quan Kị nhập tài, có tiền tất tái đầu tư.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_8",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lộc Quan",
+          "raw_text": "Tài bạch cung Hóa Lộc nhập quan lộc.\nÝ nghĩa: Sự với sự. Tiền bạc của mệnh tạo làm cho sự nghiệp của mệnh tạo phát triển, nên sự nghiệp thuận lợi, thu nhập tốt.\n1. Kinh doanh tốt, vốn luân chuyển nhanh, càng làm càng thuận lợi.\nChú ý: mệnh tam phương đều thuộc dương cung, là tượng đầu tư luân chuyển.\n2. Dễ có thu nhập cao, chức vị cao.\n3. Buôn bán vốn luân chuyển biến động nhanh.\n4. Tài lộ rộng lớn, kiếm tiền thuận lợi. Quan lộc là vận khí vị, dễ vô tình mà được.\n5. Lộc hỷ Quyền hội, tất cơ ngộ càng tốt, không gian phát triển càng lớn.\n6. Hội Khoa tất tài nguồn lâu bền.\n7. Hội Kị tất gian khổ mà được.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_9",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lộc Quan",
+          "raw_text": "Từ Tài Bạch hóa Lộc đến Quan Lộc cung, chiếu Phu Thê cung\n1. Tự lực cánh sinh cách, việc tự tay mình làm, trong cuộc sống lấy công việc làm niềm vui.\n2. Rất vất vả, mệnh mang theo nghiệp mệnh, không nhàn hạ.\n3. Thu nhập từ công việc cao và nguồn tài chính dồi dào.\n4. Thích đầu tư kinh doanh, kiếm tiền, dùng tiền mua quan chức.\n5. Mệnh chủ kiếm tiền và sẽ chăm sóc phối ngẫu của mình.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_10",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lộc Quan",
+          "raw_text": "Thích đầu tư, đầu tư có thể kiếm được tiền, tiền kiếm được sẽ mang ra tái đầu tư để kiếm thêm tiền.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_11",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lộc Quan",
+          "raw_text": "Tài [Lộc nhập] Quan:\n* Buôn bán tốt, quay vòng vốn rất nhanh, chuyện làm ăn thì \"càng làm càng thuận lợi\" (trong Tam phương của Mệnh thì đều thuộc các cung \"Dương động\", cho nên có tượng là \"quay vòng đầu tư\" mang tính chất thường xuyên).\n* Dễ có lương cao, chức lớn, hợp với công việc ăn chia theo lợi nhuận, hoa hồng.\n* Hợp với buôn bán thu tiền mặt mà có tính chất biến đổi nhanh.\n* Lộc mừng có Quyền tới hội hợp thì cơ hội sẽ càng thêm tốt, không gian phát triển càng thêm lớn. Hội với Khoa thì nguồn tiền tài lâu dài, còn hội với Kị thì vất vả gian khổ mới thu được.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_12",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Lộc Quan",
+          "raw_text": "Tài bạch cung Hóa Lộc nhập Quan Lộc, nơi công tác thích hợp cho phát triển sự nghiệp, ăn ở với cấp trên và đồng sự rất hòa thuận, làm việc nhẹ nhàng vui vẻ.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_13",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Quyền Điền",
+          "raw_text": "Tài bạch Hóa Quyền nhập điền trạch:\nThành tựu tài bạch nhập điền trạch, làm cho điền trạch hưng thịnh.\n1. Tiền bạc của mệnh tạo làm cho tài sản lớn mạnh, dễ có tiền bạc dồi dào, tài sản ngày càng nhiều. Thích hợp dùng tiền đầu tư vào nhà đất. Nên dần học biết quản lý, áp dụng vào kinh doanh nhà đất, đạt được thu nhập cao.\n2. Mệnh tạo tích cực thể hiện hoài bão trong bồi đắp tài phú.\n3. Tài bạch Hóa Quyền, biểu thị năng lực, hình thức, phương thức kiếm tiền của mệnh tạo, Quyền có tính cách nắm bắt, khống chế, thích hợp phát triển kỹ năng chuyên nghiệp, có kỹ năng chuyên nghiệp dễ có thu nhập cao, địa vị cao.\n4. Dùng tiền xây dựng, sửa chữa, trang hoàng nhà cửa hoặc thay đổi nhà cửa lớn hơn.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_14",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Quyền Điền",
+          "raw_text": "Tài bạch Hóa Quyền nhập điền trạch, đầu tư bất động sản, kiếm được lại đầu tư, tham vọng lớn.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_15",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Quyền Điền",
+          "raw_text": "Từ Tài Bạch hóa Quyền đến Điền Trạch cung, chiếu Tử Nữ cung\n1. Các thành viên trong gia đình của mệnh chủ hoặc người phối ngẫu mạnh mẽ rất cá tính.\n2. Các thành viên trong gia đình của mệnh chủ hoặc người phối ngẫu là những người có tài năng và có kỹ năng lãnh đạo hoặc chuyên môn.\n3. Mệnh chủ hoặc người phối ngẫu rất nghiêm khắc trong việc quản lý gia đình và chăm sóc, đào tạo và hỗ trợ các thành viên trong gia đình chu đáo.\n4. Mệnh chủ hoặc người phối ngẫu rất coi trọng gia đình, là mẫu hình trong gia đình.\n5. Mệnh chủ hoặc người phối ngẫu bảo vệ những thiếu sót của người khác và thường kết đảng tại nơi làm việc, loại bỏ hiện tượng dị nghị.\n6. Mệnh chủ hoặc phối ngẫu làm việc chăm chỉ để kiếm tiền cho gia đình.\n7. Nơi ở và văn phòng được hợp nhất, lấy công ty làm nhà.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_16",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Quyền Điền",
+          "raw_text": "Rất ham muốn đầu tư, có thể đầu tư bất động sản, kiếm được tiền sẽ tái đầu tư, vận dụng tiền bạc hợp lí, biết tích lũy, sẽ mua tậu nhà cửa, có nhiều bất động sản; nhưng cũng dễ bị người ta giật nợ.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_17",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Quyền Điền",
+          "raw_text": "Tài [Quyền nhập] Điền:\n* Có sức sống, có lòng mưu đồ.\n* Quản lý tài chính, ứng dụng linh hoạt, có thể có thu nhập cao, tạo dựng được của cải.\n* Có không gian để phát triển trong những ngành chuyên về kỹ thuật và chuyên môn.\n* Dễ trang trí, thiết kế nhà cửa phòng ốc. Tái mua sắn điền sản, thay đổi lớn về nhà cửa.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_18",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Quyền Điền",
+          "raw_text": "Tài bạch cung Hóa Quyền nhập Điền Trạch, có dục vọng về tiền rất cao, yêu cầu cao đối với nhà ở, năm quyền hành trong gia đình.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_19",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Khoa Quan",
+          "raw_text": "Tài bạch Hóa Khoa nhập quan lộc, đầu tư sự nghiệp, tài lực bình ổn, thích hợp làm viên chức, làm công ăn lương.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_20",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Khoa Quan",
+          "raw_text": "Tài bạch Hóa Khoa nhập quan lộc.\n1. Mệnh tạo đầu tư hợp lý trong sự nghiệp, sự nghiệp phát triển bình ổn. Khoa – lợi nhuận đều đều.\n2. Tài bạch có thể luận nghề nghiệp, Hóa Khoa thích hợp làm về văn hóa tuyên truyền, quảng cáo.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_21",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Khoa Quan",
+          "raw_text": "Từ Tài Bạch hóa Khoa đến Quan Lộc cung, chiếu Phu Thê cung\n1. Lấy tiền tài của cải đầu tư vào sự nghiệp.\n2. Mệnh chủ theo đuổi công danh, tài lộc, sự nghiệp chỉ mong sự ổn định, suôn sẻ.\n3. Chú trọng vào hình tượng, lưu ý đánh giá từ những người khác.\n4. Lập kế hoạch rồi hành động, chưa mưa đã dự tính, lớp lang rõ ràng, làm từng bước, tuần tự tiến dần đến và có trật tự để kiếm tiền.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_22",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Khoa Quan",
+          "raw_text": "Về công việc hay sự nghiệp, thích hợp đi làm hưởng lương, có biểu hiện bình ổn, dễ được đề bạt, nâng đỡ thăng tiến. Đối với việc đầu tư trong sự nghiệp, sẽ đi từng bước vững chắc, có kế hoạch tỉ mỉ, công việc vận hành bình ổn. Vợ chồng tôn trọng nhau.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_23",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Khoa Quan",
+          "raw_text": "Tài [Khoa nhập] Quan:\n* Bình ổn hài hòa chính là phúc, chớ có tham to, đừng cầu lợi nhuận lớn.\n* Hợp với các công việc văn phòng, kế toán, thiết kế.\n* Hợp với đi làm công ăn lương, an ổn.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_24",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Khoa Quan",
+          "raw_text": "Tài bạch cung Hóa Khoa nhập Quan Lộc, công việc nhẹ nhàng thoải mái, ăn ở hài hòa với cấp trên và đồng nghiệp.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_25",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "Tài bạch Hóa Kị nhập nô bộc, vì bạn tổn tài. Không thể hợp tác đầu tư, cung cấp hàng hóa. Xung huynh đệ, khó vay mượn tiền bạc, khó khăn trao đổi tài chính với bạn bè.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_26",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "Tài bạch Kị nhập Nô bộc:\nLà người trọng tình nghĩa vì bạn, chu cấp chi tiêu cho bạn, dễ có chi tiêu lớn. Huynh đệ khố vị Kị xuất.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_27",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "Tài bạch Hóa Kị nhập Nô bộc:\nRộng rãi với bằng hữu. Với huynh đệ là Kị xuất nên thường có khoản chi lớn.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_28",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "Từ Tài Bạch cung hóa Kị đến Nô Bộc cung, xung Huynh Đệ cung\n1. Huynh đệ không có duyên với tiền, thường bị hao tài tốn của.\n2. Huynh đệ hôn nhân không suôn sẻ, sự nghiệp không suôn sẻ, tình cảm cũng không suôn sẻ.\n3. Mệnh chủ dễ vì vấn đề tiền bạc mà vô tình làm tổn thương huynh đệ.\n4. Mệnh chủ nợ anh em, bè bạn món nợ, thường tổn tài.\n5. Có sự xa cách với cha mẹ.\n6. Không nên giao dịch tài chính với bạn bè và người bảo lãnh giấy tờ các loại.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_29",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "Qua lại tiền bạc với bạn bè, thường thường là bạn bè được lợi, bản thân chịu thiệt, làm cho gia đình túng thiếu; bình thường hay cho bạn bè tiêu xài tiền chung, nhưng lúc muốn mượn tiền bạn bè thì không được.\nDễ bị người ta giật tiền, làm ăn khó kiếm được tiền, cũng không nên hợp tác với người khác, tốt nhất là nên đi làm hưởng lương hoặc dựa vào nghề nghiệp chuyên môn để mưu sinh.\nCung tài bạch phi Hóa Kị nhập cung nô bộc xung cung huynh đệ là ý tượng: không mượn được tiền, rất khó mượn tiền của bạn bè.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_30",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "财帛忌入交友:\n1. 「重义散财」、「漏财不蓄」、「不善理财」、「支出多」。\n2. 「利润微薄」、「惜情少赚」, 赚钱「不得要领」、事倍功半〈冲库〉。\n3. 命格差, 「入不敷出」、口袋空空, 还防「欠债背信」、人生「多起伏」。\n4. 少与人太多的金钱「往来借贷」, 防「交友无义」, 人去楼空。\nTài bạch Hóa kỵ nhập cung giao hữu:\n1. \"Trọng nghĩa tiêu tài\", \"tiền rò rỉ không tích lũy\", \"không giỏi quản lý tài chính\", \"chi tiêu nhiều\".\n2. \"Lợi nhuận mỏng\", \"quý tình ít kiếm\", kiếm tiền \"không đúng cách\", việc làm gấp đôi kết quả bằng nửa (xung kho).\n3. Mệnh cách kém, \"thu không đủ chi\", túi rỗng, còn phòng \"nợ nần mất tín\", đời người \"nhiều thăng trầm\".\n4. Ít qua lại tiền bạc với người khác, phòng \"giao hữu vô nghĩa\", người đi nhà trống.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_31",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "财帛忌入交友: \n1. 「重义散财」、「漏财不蓄」、「不善理财」、「支出多」。\n2. 「利润微薄」、「惜情少赚」, 赚钱「不得要领」、事倍功半〈冲库〉。\n3. 命格差, 「入不敷出」、口袋空空, 还防「欠债背信」、人生「多起伏」。\n4. 少与人太多的金钱「往来借贷」, 防「交友无义」, 人去楼空。\nTài bạch Hóa kỵ nhập cung giao hữu: \n1. Trọng nghĩa tán tài, lậu tài bất súc, không giỏi quản lý tài sản, chi ra nhiều. \n2. Kiếm tiền không phải mấu chốt, lời mỏng manh, chuyện nhiều công ít (xung khố). \n3. Mệnh cách kém thì nhập vào không đủ xuất, túi rỗng, còn phòng thiếu nợ bất tín, cuộc sống nhiều phập phồng. \n4. Ít cùng người có tiền lui tới vay mượn, phòng bằng hữu vô nghĩa, vườn không nhà trống.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_32",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "Cung Tài Bạch hóa Kỵ phi nhập cung Nô Bộc xung cung Huynh Đệ, biểu thị không thích hợp cùng bạn bè hợp tác làm ăn, vì nếu hợp tác sẽ dễ tổn thất.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+            "author": "Ông Phúc Dụ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_33",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kỵ Nô",
+          "raw_text": "Tài bạch cung Hóa Kỵ nhập Nô Bộc, có duyên bạc với anh em bạn bè, do bạn bè mà thương hại đến thân thể, sức khỏe.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai-bach_cohoc_34",
+          "condition_text": "Cung Tài bạch an tại Ngọ có M Điền",
+          "raw_text": "Mua bất động sản mới có thể giữ được tiền. Đầu tư bất động sản là tốt nhất.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Điền"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "tai-bach_cohoc_35",
+          "condition_text": "Cung Tài bạch an tại Ngọ có M Nô",
+          "raw_text": "Kiếm tiền nhờ bằng hữu. Thành công cũng bằng hữu, bại cũng bằng hữu.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Nô"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "tai-bach_cohoc_36",
+          "condition_text": "Cung Tài bạch an tại Ngọ có M Quan",
+          "raw_text": "Tiên thiên mệnh khởi nghiệp. Khởi nghiệp tự dựa bản thân đầu tư.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Quan"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "tai-bach_cohoc_37",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Thất sát",
+          "raw_text": "Thất sát tinh.\nNgười Thất sát, luôn coi mình có sứ mệnh về mặt tích lũy quản lý tiền tài, luôn hy vọng đầu tư ít mà có thể thu hoạch nhiều. Cho nên vì muốn đạt được nhiều mà không ngừng tạo áp lực cho bản thân. Mà như vậy sẽ tự mình đánh mất niềm tin hoặc sau sự việc mới lại hối hận. Sao phải vậy? Đôi khi không cần áp đặt lập trường dự tính cho bản thân lại thấy thoải mái dễ chịu hơn.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất sát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_38",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Thất sát",
+          "raw_text": "Thất sát tinh.\nNgười Thất sát, cá tính thích đầu tư phân tán, tài vận của họ đến từ sự đa biến động của tâm thái, nặng ham muốn đầu cơ của họ, luôn có thể quan sát tỉ mỉ sau đó mới ngồi lên con thuyền thuận gió. Họ làm việc tích cực, luôn nói ít làm nhiều, mà đó cũng là bí quyết để họ tích lũy tài phú. Nếu có thể càng chuyên tâm nhất ý trong đầu tư quản lý tiền tài, càng có thể thu hoạch nhiều hơn.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất sát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_39",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Thất sát",
+          "raw_text": "Thất sát.\nThất sát có tinh thần dũng cảm đối với thử thách mạo hiểm, thường thích đi khắp nơi tìm vận may, cho nên tài vận hoạch phát, có thể gọi là tài lộ khắp bốn phương. Tuy lợi ích và mạo hiểm tương đương, nhưng tâm lý đầu cơ của Thất sát là chỗ nào cũng có, không thể kìm chế ham muốn phát tài, bất kể là xổ số hay trò chơi, chỉ cần cơ hội có giải thưởng, họ đều tham gia nhiệt tình, giả dụ coca có khuyến mại treo thưởng họ liền uống coca để giải khát. Trong đầu của Thất sát, cơ hội tồn tại khắp nơi, một ngày nào đó giải thưởng sẽ thuộc về mình.\nMua xổ số là một trong những kế hoạch đầu cơ của Thất sát, mua nhiều hiệu suất trúng thưởng sẽ cao, vì thế họ có cơ hội phát tài, cơ duyên trúng giải thưởng lớn.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất sát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_40",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Thất sát",
+          "raw_text": "Thất sát tinh.\nQuan niệm đầu tư của Thất sát là cái gì kiếm được tiền thì đầu tư cái đó, chỉ cần có lợi là làm, không sợ mạo hiểm không tính đến hậu quả, vì thế tài vận lên xuống là khó tránh khỏi. Đặc biệt là năm đáo Thất sát, mạnh bạo đầu tư, tiêu tiền không nghĩ, tức muốn kiếm một khoản, cũng có thể rất nhanh tiêu hao đến nỗi sạch bách. Bí quyết phát tài thích hợp của Thất sát là mạo hiểm lớn, phương thức xuất nhanh thu nhanh, lấy tiền sinh tiền, ví dụ ngành tài chính, giao dịch hàng hóa và những ngành nghề tương tự. Nhưng phải là lĩnh vực bản thân có sở trường, dựa vào sự mẫn tiệp của giác quan và phương thức chuyên nghiệp để hành động chứ không phải đầu cơ mù quáng. Hoặc giả có nhân sĩ chuyên nghiệp phụ tá ở bên, cũng có thể khả quan nhanh chóng tích lũy tài phú. Khuyến cáo về quản tài của Thất sát: Thất sát rất khó phát đại tài bởi chi tiêu không tiết chế, Khống chế dục vọng chi tiêu mới có thể tích thiểu thành đại.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất sát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_41",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Kình dương",
+          "raw_text": "Kình Dương, Đà La: Kình Dương là Dao giải phẫu, Vũ khí, cho nên rất có liên quan tới bác sĩ Ngoại khoa, Quân cảnh, các nghề nghiệp khác mang tính chất liên quan tới \"Kim\" như Gia công kim loại, Chế tạo kim khí đều phù hợp.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kình dương"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+            "author": "Từ Tăng Sinh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_42",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Thất sát",
+          "raw_text": "Sao Thất Sát: Ý nghĩa như tên gọi, có mang theo sát khí đặc biệt, không nên có quan hệ với những nghề kim khí như Gia công ngũ kim, Tinh luyện kim loại, Chế tạo máy móc. Lại bởi vì sát khí cho nên cũng có thể xếp các nghề nghiệp nên làm có liên quan tới Quân nhân, Cảnh sát, Bác sĩ, Đồ tể. Nếu gia thêm Văn Xương, Văn Khúc phần nhiều là người huấn huấn luyện viên kiểu các loại Quân nhân văn chức, thêm Tứ Sát tinh thì đa số làm đồ tể. Các nghề chăn nuôi trồng trọt đánh bắt cũng có thể được.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất sát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+            "author": "Từ Tăng Sinh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_43",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Thất sát",
+          "raw_text": "Tại Dần Thân Tý Ngọ là chủ về hoạnh phát. Hãm địa là chủ về phải lao lực mới có tiền.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất sát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_44",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Thất sát",
+          "raw_text": "Nhập miếu vượng thì kiếm tiền trong lúc loạn, ở Dần Thân Tý Ngọ, có tiền ngoài dự kiến, nếu không có thêm cát tinh thì chủ hoạnh phát. Thất Sát đồng cung gia hội với Lộc Tồn, Hóa Lộc, Hóa Quyền, Hóa Khoa thì có số giàu cỡ phú hào, có khả năng kiếm tiền hơn người, hay là người kì tài của giới thương nghiệp. Đồng cung với Tả Hữu Khôi Việt, nhận được sự giúp đỡ của quý nhân về tiền bạc. Đồng cung bới Văn Xương Văn Khúc thì giàu có, có xu hướng hoạnh phát.\nThất Sát nhập cung tài bạch, tiền bạc đến nhanh đi cũng nhanh. Người này có xu hướng coi nhẹ tiền bạc, tiêu xài lãng phí, không có tư tưởng tiết kiệm, không coi trọng những cái lợi nhỏ. Thất Sát chủ bạo phát bạo phá, nếu gia cát tinh thì cũng có lúc giàu có, nếu gia nhiều hung sát tinh thì khó vượt qua được sóng gió để hồi phục lại. Đồng cung với Kình Đà Hỏa Linh, lãng phí tiền bạc, thành bại thay đổi thăng trầm, hay gặp họa do người hay thiên tai, tiền bạc tiêu hoa cực lớn, dẫn đến tình trạng khổ sở phiền não. Vào cung bình hòa gia Tứ sát thì nhờ sức lao động mà kiếm tiền, Tứ sát Không Kiếp hình kỵ hội chiếu thì một đời nghèo khó.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất sát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "tai-bach_cohoc_45",
+          "condition_text": "Cung Tài bạch an tại Ngọ có Cung Tài bạch",
+          "raw_text": "Một số vấn đề trong Tử Vi Đẩu số về Tài Bạch như: cuộc đời người này có tài sản hay không có tài sản? Khi nào có thể phát? Khi nào đại phá? Chúng ta có thể luận đoán được rất rõ ràng dựa vào Cung Khí phối hợp với Can Chi đại vận.\nNhững mỹ tài tinh trong Đẩu số như: Vũ Khúc Kim, Lộc Tồn Thổ, Tả Phụ Thổ, Hữu Bật Thủy, Tử Vi, Thiên Phủ Thổ, Thái Dương Hỏa, Thái Âm Thủy, Hỏa Tham Hỏa, Liêm Trinh Hỏa, Thiên Lương Thổ,.. Tất cả những tinh diệu này cũng cần phải phù hợp với Cung Khí thì mới có thể được coi là đắc vị, như thế thì tiền tài nhiều không kể xiết. Nhưng nếu bất đắc vị thì dẫu có Lộc Tồn hội Tả Phụ và đại chính tinh cũng vô dụng, chỉ là người bình thường mà thôi. Đối với năng lực quản lý tài sản thì cũng có thể xem được khi khán ý nghĩa tinh diệu. Tất nhiên, cũng cần phải có điều kiện Mệnh, Thân Cung Khí không gặp đại hung thì mới có thể kết luận được.\nLuận đoán cung Tài Bạch có tốt hay không? Người đó có tiền hay không? Ta dựa vào Cung Khí mà luận, Cung Khí đại hung, nhưng nếu tráng niên có 1 đại hạn đặc biệt tốt thì cũng có thể trở thành phú gia. Nếu không thì tài cách cũng chỉ duới mức trung bình mà thôi.",
+          "conditions": {
+            "palace": "TAI_BACH",
+            "position": "NGO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung T",
+              "i bạch"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        }
+      ]
+    }
+  ]
+}

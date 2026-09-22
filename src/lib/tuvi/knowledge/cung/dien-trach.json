@@ -1,0 +1,127 @@
+{
+  "palace": "dien_trach",
+  "sections": [
+    {
+      "section_id": "hoa_toa",
+      "title": "Hóa Tinh Tọa Thủ",
+      "interpretations": [
+        {
+          "id": "dien_toa_hoa_quyen",
+          "type": "mutagen_in_palace",
+          "conditions": {
+            "mutagen_in_palace": "quyen"
+          },
+          "text": "Hóa Quyền nhập điền trạch, chủ tranh chấp, thường là con trưởng trong nhà, có tham vọng mua nhà đất to đẹp. Trọng trang trí trang hoàng, có thẩm mỹ, bất động sản đa biến hóa. Nơi ở khá yên định. Trong đời sẽ có giai đoạn chịu áp lực vì bất động sản. Chỉ cần có cơ hội sẽ mua bất động sản. Dễ được thừa hưởng gia sản từ cha mẹ hoặc phối ngẫu.",
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+            "author": "Huy Hà Phan"
+          }
+        },
+        {
+          "id": "dien_toa_hoa_quyen_2",
+          "type": "mutagen_in_palace",
+          "conditions": {
+            "mutagen_in_palace": "quyen"
+          },
+          "text": "Chủ có bất động sản, bất kể có tài sản của tổ tiên để lại hay không, đều thích mua bất động sản, thích khoe khoang trang trí nhà cửa. Nhà rộng, chỗ ở rộng, sang trọng, có cơ hội đắc tổ nghiệp, cũng có thể tạo thêm tầng lầu mới, thuận lợi cho việc khởi nghiệp, thích hợp đầu tư bất động sản. Ở nhà thích nắm quyền và kỷ luật con cái nghiêm khắc, nhưng dễ xảy ra tranh chấp với các thành viên trong gia đình.",
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "phi_tu_hoa",
+      "title": "Phi Tứ Hóa Từ Cung Điền Trạch",
+      "interpretations": [
+        {
+          "id": "dien_loc_nhap_no",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "loc",
+            "source_palace": "dien_trach",
+            "target_palace": "no_boc"
+          },
+          "text": "Điền trạch Hóa Lộc nhập giao hữu: Kinh tế gia đình khả năng chi tiêu tốt. Gia đình nhân khí mạnh, nhân mạch tốt, họ hàng qua lại nhiều. Nhà ở gần ga xe, khu náo nhiệt, chợ đêm hoặc những nơi đông người. Có thể kinh doanh cà phê, trà đạo, ẩm thực, ngành giải trí. Hàng xóm hòa thuận, qua lại hỗ trợ lẫn nhau. Gia nghiệp lớn, có nhiều nhân viên.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "dien_quyen_nhap_tat",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "quyen",
+            "source_palace": "dien_trach",
+            "target_palace": "tat_ach"
+          },
+          "text": "Điền trạch Hóa Quyền nhập tật ách: Hoàn cảnh đời sống tích cực, có lực, gia đình phấn chấn, có sức sống. Đời sống vật chất xa hoa. Thích hợp kiếm lợi từ việc tự mở tiệm mở công ty ở nhà.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "dien_khoa_nhap_di",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "khoa",
+            "source_palace": "dien_trach",
+            "target_palace": "thien_di"
+          },
+          "text": "Điền trạch Hóa Khoa nhập thiên di: Danh tiếng gia đình tốt. Dòng họ có nhiều văn sĩ, gia đình thư hương. Gia đình nề nếp, hình ảnh bên ngoài tốt, nói chung được người ngoài khen ngợi.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "dien_tu_ky",
+          "type": "tu_hoa",
+          "conditions": {
+            "self_transformation": "ky"
+          },
+          "text": "Điền trạch Tự Hóa Kị: Tiền tài bị rò rỉ, ngầm tiêu hao, kinh tế trống rỗng. Tối kị việc lấy không đủ ánh sáng cho căn nhà, đồ đạc bừa bãi chồng chất, lộn xộn bẩn thỉu, khiến cho gia vận cứ bị liên tục gặp chuyện xấu mãi. Đề phòng gia đình có lực ly tâm, ai cũng có chí hướng khác. Đề phòng họ hàng thân thuộc ly tán lạnh nhạt. Dễ có nhiều phen chuyển nhà, thay đổi nghiệp sản xuất, bán tháo tài sản.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "chinh_tinh",
+      "title": "Chính Tinh Tại Điền Trạch",
+      "interpretations": [
+        {
+          "id": "dien_thai_duong_thai_am",
+          "type": "star_combination",
+          "conditions": {
+            "same_palace_stars": ["thai_duong", "thai_am"],
+            "position": ["suu", "mui"]
+          },
+          "text": "Nhật Nguyệt chiếu bích cách: Thái Dương, Thái Âm hai sao đồng cung ở Sửu Mùi, Sửu Mùi nếu là điền trạch cung, gọi là Nhật Nguyệt chiếu bích cách, nắm cách cục này thì một đời tập trung nhiều bất động sản, bao gồm cả thừa kế, tự mua, được tặng, cũng vì sở hữu nhiều nhà đất nên trở thành phú ông, đại địa chủ cách cục.",
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích",
+            "author": "Từ Tăng Sinh"
+          }
+        },
+        {
+          "id": "dien_thai_am_hoa_quyen",
+          "type": "star_with_mutagen",
+          "conditions": {
+            "required_stars": ["thai_am"],
+            "star_mutagen": "quyen"
+          },
+          "text": "Thái âm Hóa Quyền nhập điền trạch, nữ nhân nắm quyền trong nhà, nam mệnh tại gia cũng chủ lắm điều hay cằn nhằn như đàn bà, cai quản công việc nhà.",
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+            "author": "Huy Hà Phan"
+          }
+        }
+      ]
+    }
+  ]
+}

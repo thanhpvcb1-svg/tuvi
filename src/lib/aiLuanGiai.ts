@@ -1,5 +1,13 @@
 import { buildQuickReadings, findPalace, getPalaceMeaning, getTopStars } from "./chartUi";
 import type { BirthInput, ChartView, PalaceView, StarView } from "./types";
+import {
+  queryPalaceKnowledge,
+  extractStarsFromPalace,
+  extractMutagensFromPalace,
+  extractPhiHoaFlows,
+  hasPalaceKnowledge,
+  type PalaceQueryContext,
+} from "./tuvi/knowledge/knowledgeService";
 
 export type AIAnalysisMode = "basic" | "bac-phai";
 
@@ -202,6 +210,86 @@ const getPalaceSnapshot = (chart: ChartView, palaceName: string) => {
     stars,
     joinedStars: stars.join(", "),
   };
+};
+
+/**
+ * Query tri thức luận giải cho một cung
+ */
+const queryKnowledgeForPalace = (chart: ChartView, palaceName: string): string[] => {
+  const palace = chart.palaces.find((p) => p.name === palaceName);
+  if (!palace) {
+    return [];
+  }
+  
+  // Check if knowledge exists for this palace
+  if (!hasPalaceKnowledge(palaceName)) {
+    return [];
+  }
+
+  // Build context for query
+  const starsInPalace: string[] = [];
+  const addStars = (stars: StarView[] | undefined) => {
+    if (stars) {
+      for (const star of stars) {
+        starsInPalace.push(star.name);
+        if (star.display) starsInPalace.push(star.display);
+      }
+    }
+  };
+  addStars(palace.majorStars);
+  addStars(palace.goodStars);
+  addStars(palace.badStars);
+  addStars(palace.visibleStars);
+
+  const mutagensInPalace: string[] = [];
+  for (const star of palace.visibleStars || []) {
+    if (star.mutagen) {
+      mutagensInPalace.push(star.mutagen.toLowerCase());
+    }
+  }
+
+  const context: PalaceQueryContext = {
+    palace: palace as any,
+    starsInPalace: [...new Set(starsInPalace)],
+    branch: palace.earthlyBranch || "",
+    heavenlyStem: palace.heavenlyStem,
+    mutagensInPalace,
+    phiHoaFlows: extractPhiHoaFlows(palace as any),
+  };
+
+  const matches = queryPalaceKnowledge(context);
+  
+  // Return top 3 interpretations
+  return matches
+    .slice(0, 3)
+    .map((m) => m.interpretation.text)
+    .filter((text) => text && text.length > 20);
+};
+
+/**
+ * Build luận giải cho một cung từ knowledge base
+ */
+const buildKnowledgeBasedReading = (
+  chart: ChartView,
+  palaceName: string,
+  fallback: string
+): string => {
+  const knowledgeTexts = queryKnowledgeForPalace(chart, palaceName);
+  
+  if (knowledgeTexts.length === 0) {
+    // Fallback to basic reading
+    return buildPalaceLine(chart, palaceName, fallback);
+  }
+
+  // Combine knowledge with basic info
+  const snapshot = getPalaceSnapshot(chart, palaceName);
+  const meaning = snapshot.palace ? getPalaceMeaning(snapshot.palace.name) : "";
+  const starsInfo = snapshot.joinedStars ? `Các sao nổi bật: ${snapshot.joinedStars}.` : "";
+  
+  // Take first knowledge text (highest score)
+  const mainKnowledge = knowledgeTexts[0];
+  
+  return `${meaning} ${starsInfo} ${mainKnowledge}`.trim();
 };
 
 const buildPalaceLine = (chart: ChartView, palaceName: string, fallback: string) => {
@@ -448,7 +536,9 @@ export const buildOfflineAIAnalysis = (
   payload: AIAnalysisPayload,
 ): AIAnalysisResult => {
   const quickReadings = buildQuickReadings(chart);
-  const menhLine = buildPalaceLine(
+  
+  // Sử dụng knowledge base để luận giải các cung
+  const menhLine = buildKnowledgeBasedReading(
     chart,
     "Mệnh",
     "Cần thêm dữ liệu ở cung Mệnh để luận rõ khí chất và cách phản ứng với hoàn cảnh.",
@@ -458,21 +548,26 @@ export const buildOfflineAIAnalysis = (
     "Thân",
     "Cần xem thêm vị trí Thân để hiểu rõ điểm dồn lực trong đời sống.",
   );
-  const quanLocLine = buildPalaceLine(
+  const quanLocLine = buildKnowledgeBasedReading(
     chart,
     "Quan Lộc",
     "Phần sự nghiệp hiện chưa đủ dữ liệu nổi bật để kết luận sâu.",
   );
-  const taiBachLine = buildPalaceLine(
+  const taiBachLine = buildKnowledgeBasedReading(
     chart,
     "Tài Bạch",
     "Phần tài lộc nên đọc thêm kết hợp với Quan Lộc và Điền Trạch.",
   );
-  const phuTheLine = buildPalaceLine(
+  const phuTheLine = buildKnowledgeBasedReading(
     chart,
     "Phu Thê",
     "Phần tình duyên hiện nên xem như lớp tham khảo ban đầu.",
   );
+  
+  // Query thêm tri thức cho các cung khác
+  const phucDucKnowledge = queryKnowledgeForPalace(chart, "Phúc Đức");
+  const thienDiKnowledge = queryKnowledgeForPalace(chart, "Thiên Di");
+  const dienTrachKnowledge = queryKnowledgeForPalace(chart, "Điền Trạch");
   const natalFourTransformations = payload.bacPhai?.natalFourTransformations ?? [];
   const byTransformation = (transformation: NatalTransformation["transformation"]) =>
     natalFourTransformations.find((item) => item.transformation === transformation);
@@ -503,12 +598,12 @@ export const buildOfflineAIAnalysis = (
   return {
     tongQuanMenhCuc:
       quickReadings[0]?.summary ||
-      "Hệ thống đang dùng bản luận giải tự động từ dữ liệu lá số hiện có do dịch vụ AI tạm thời chưa phản hồi từ khu vực máy chủ này.",
+      "Hệ thống đang dùng bản luận giải tự động từ dữ liệu lá số hiện có.",
     luanMenhThan: `${menhLine} ${thanLine}`.trim(),
     trongTamBacPhai:
       phiHoaCanCung.length > 0
-        ? `Lá số hiện có ${phiHoaCanCung.length} dòng Phi Hóa Can Cung nổi bật, phù hợp để đọc theo hướng cung nào phát động, cung nào nhận tác động và chủ đề nào đang được kích hoạt mạnh hơn.`
-        : "Dữ liệu Phi Hóa Can Cung hiện còn hạn chế, nên bản luận giải tự động này ưu tiên đọc tổng quan và các cung trọng tâm.",
+        ? `Lá số hiện có ${phiHoaCanCung.length} dòng Phi Hóa Can Cung nổi bật. ${phucDucKnowledge[0] || ""}`
+        : `Dữ liệu Phi Hóa Can Cung hiện còn hạn chế. ${phucDucKnowledge[0] || ""}`,
     tuHoaNamSinh: {
       hoaLoc: byTransformation("loc") ? `Sinh niên Hóa Lộc nổi bật ở sao ${byTransformation("loc")?.star || ""}.` : "",
       hoaQuyen: byTransformation("quyen") ? `Sinh niên Hóa Quyền nổi bật ở sao ${byTransformation("quyen")?.star || ""}.` : "",
@@ -523,17 +618,17 @@ export const buildOfflineAIAnalysis = (
         : "Dữ liệu hiện tại chưa đủ để luận sâu riêng phần Thái Tuế Nhập Quái.",
     daiVan:
       payload.periods?.daiVan?.palace
-        ? `Đại vận hiện rơi vào cung ${payload.periods.daiVan.palace}${payload.periods.daiVan.ageRange ? `, giai đoạn tuổi ${payload.periods.daiVan.ageRange}` : ""}. Đây nên được xem như bối cảnh phát triển dài hơi thay vì kết luận tuyệt đối.`
+        ? `Đại vận hiện rơi vào cung ${payload.periods.daiVan.palace}${payload.periods.daiVan.ageRange ? `, giai đoạn tuổi ${payload.periods.daiVan.ageRange}` : ""}. ${thienDiKnowledge[0] || ""}`
         : "Dữ liệu hiện tại chưa đủ để xác định rõ bối cảnh Đại Vận.",
     luuNien:
       payload.periods?.luuNien?.notes?.length
         ? payload.periods.luuNien.notes.join(" ")
         : `Năm ${year} nên được đọc như xu hướng vận động của giai đoạn đang xem.`,
-    suNghiepTaiLoc: `${quanLocLine} ${taiBachLine}`.trim(),
+    suNghiepTaiLoc: `${quanLocLine} ${taiBachLine} ${dienTrachKnowledge[0] || ""}`.trim(),
     tinhDuyenGiaDao: phuTheLine,
     diemManh: quickReadings.slice(0, 3).map((item) => item.title),
     diemCanLuuY: [
-      "Bản này được tạo tự động từ dữ liệu lá số, chưa có lớp diễn giải mở rộng từ AI.",
+      "Luận giải được tạo từ tri thức Tử Vi cổ điển kết hợp dữ liệu lá số.",
       phiHoaCanCung.length === 0 ? "Phi Hóa Can Cung hiện còn mỏng nên cần đọc thận trọng hơn ở tầng Bắc Phái." : "Nên ưu tiên đọc kỹ các dòng Phi Hóa giữa cung nguồn và cung nhận.",
       "Nội dung chỉ mang tính tham khảo, phù hợp để định hướng câu hỏi tiếp theo.",
     ],
@@ -542,7 +637,7 @@ export const buildOfflineAIAnalysis = (
       "Nếu cần đọc sâu hơn, hãy đối chiếu thêm các dòng Phi Hóa Can Cung đang hiển thị trên lá số.",
       "Có thể tạo lại luận giải sau khi dịch vụ AI khả dụng để nhận bản phân tích sâu hơn.",
     ],
-    disclaimer: `${DEFAULT_DISCLAIMER} ${GEO_BLOCKED_MESSAGE}`,
+    disclaimer: DEFAULT_DISCLAIMER,
   };
 };
 

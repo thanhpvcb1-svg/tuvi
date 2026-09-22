@@ -1,0 +1,65 @@
+{
+  "palace": "than",
+  "palace_name": "Thân",
+  "source": "tuvi.cohoc.net",
+  "crawl_mode": "streaming",
+  "last_updated": "2026-09-22T03:00:19.094Z",
+  "total_blocks": 3,
+  "blocks": [
+    {
+      "block_id": "than_stream_1",
+      "condition_text": "Cung Thân đồng cung với cung Mệnh",
+      "raw_text": "Rất chủ quan, khó bị nhân tố bên ngoài gây ảnh hưởng",
+      "conditions": {
+        "palace": "THAN",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "than_stream_2",
+      "condition_text": "Cung Thân an tại Tuất có Phá quân",
+      "raw_text": "Tướng ngũ đoản, lưng dầy, mày thưa. Cơ thể không cân đối nên đi đứng nằm ngồi ngả nghiêng. Tính tình xảo trá, bất nhân, thích làm những chuyện mạo hiểm, trợ ác, nên ít hợp với người, nếu không theo tổ nghiệp thì thành công.\nChỉ có sao bại là chế hóa được tính ác của Phá Quân; Phá Quân nhập miếu lại thêm cát tinh thì chủ về hiển đạt võ nghiệp.",
+      "conditions": {
+        "palace": "THAN",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "than_stream_3",
+      "condition_text": "Cung Thân an tại Tuất có Văn xương",
+      "raw_text": "Mi thanh mục tú, thông minh cơ xảo. Là người học rộng tài cao, cơ biến khác thưởng, tính tình nho nhã nên thích nhàn hạ, ghét náo nhiệt.",
+      "conditions": {
+        "palace": "THAN",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Văn xương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "palace": "all",
+  "title": "Tổ Hợp Sao - Cách Cục",
+  "description": "Tri thức về các tổ hợp sao đi cùng nhau, ưu tiên cao nhất khi luận giải",
+  "sections": [
+    {
+      "section_id": "sat_pha_tham",
+      "title": "Sát Phá Tham - Tam Sát Tinh",
+      "interpretations": [
+        {
+          "id": "sat_pha_tham_menh",
+          "type": "star_combination",
+          "priority": 100,
+          "conditions": {
+            "required_stars": ["Thất Sát", "Phá Quân", "Tham Lang"],
+            "relation": "tam_hop"
+          },
+          "text": "Sát Phá Tham hội hợp tam phương tứ chính, chủ về người có chí lớn, dám nghĩ dám làm, thích khai phá tiên phong. Nếu có cát tinh phù trợ thì đại phú đại quý, nếu gặp hung tinh thì bôn ba vất vả, cuộc đời nhiều biến động.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        },
+        {
+          "id": "sat_pha_dong_cung",
+          "type": "star_combination",
+          "priority": 95,
+          "conditions": {
+            "required_stars": ["Thất Sát", "Phá Quân"],
+            "same_palace": true
+          },
+          "text": "Thất Sát Phá Quân đồng cung, chủ về người cương cường, quyết đoán, có tính phá hoại và xây dựng. Nếu có Lộc Tồn, Hóa Lộc thì phú quý song toàn, nếu gặp Kình Đà thì hình khắc, bôn ba.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        }
+      ]
+    },
+    {
+      "section_id": "tu_vi_thien_phu",
+      "title": "Tử Vi Thiên Phủ - Đế Tinh Hội",
+      "interpretations": [
+        {
+          "id": "tu_vi_thien_phu_dong_cung",
+          "type": "star_combination",
+          "priority": 100,
+          "conditions": {
+            "required_stars": ["Tử Vi", "Thiên Phủ"],
+            "same_palace": true
+          },
+          "text": "Tử Vi Thiên Phủ đồng cung, là cách cục đế vương, chủ về người có uy quyền, địa vị cao, được người kính trọng. Nếu có Tả Hữu, Xương Khúc phù trợ thì đại quý, nếu gặp Không Kiếp thì giảm quý khí.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        },
+        {
+          "id": "tu_vi_thien_tuong",
+          "type": "star_combination",
+          "priority": 95,
+          "conditions": {
+            "required_stars": ["Tử Vi", "Thiên Tướng"],
+            "same_palace": true
+          },
+          "text": "Tử Vi Thiên Tướng đồng cung, chủ về người có phong thái quý phái, được người tin tưởng, thích hợp làm quản lý, lãnh đạo. Nếu có Văn Xương Văn Khúc thì văn võ song toàn.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        }
+      ]
+    },
+    {
+      "section_id": "nhat_nguyet",
+      "title": "Nhật Nguyệt - Thái Dương Thái Âm",
+      "interpretations": [
+        {
+          "id": "nhat_nguyet_dong_cung",
+          "type": "star_combination",
+          "priority": 100,
+          "conditions": {
+            "required_stars": ["Thái Dương", "Thái Âm"],
+            "same_palace": true
+          },
+          "text": "Nhật Nguyệt đồng cung, âm dương hòa hợp, chủ về người thông minh, tài hoa, có cả văn lẫn võ. Nếu ở cung Sửu Mùi thì đắc địa, phú quý song toàn.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        },
+        {
+          "id": "nhat_nguyet_tam_hop",
+          "type": "star_combination",
+          "priority": 90,
+          "conditions": {
+            "required_stars": ["Thái Dương", "Thái Âm"],
+            "relation": "tam_hop"
+          },
+          "text": "Nhật Nguyệt hội chiếu tam phương, chủ về người có phúc lộc, được cha mẹ yêu thương, sự nghiệp hanh thông. Nếu Nhật Nguyệt đều sáng thì đại cát.",
+          "source": {"book": "Đẩu Số Chính Nhãn", "author": "Ông Phúc Dụ"}
+        }
+      ]
+    },
+    {
+      "section_id": "co_cu",
+      "title": "Cơ Cự - Thiên Cơ Cự Môn",
+      "interpretations": [
+        {
+          "id": "co_cu_dong_cung",
+          "type": "star_combination",
+          "priority": 95,
+          "conditions": {
+            "required_stars": ["Thiên Cơ", "Cự Môn"],
+            "same_palace": true
+          },
+          "text": "Thiên Cơ Cự Môn đồng cung, chủ về người thông minh, khéo léo, có tài ăn nói, thích hợp nghề luật sư, giáo viên, tư vấn. Nếu gặp Hóa Kỵ thì hay thị phi, khẩu thiệt.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        }
+      ]
+    },
+    {
+      "section_id": "luc_cat",
+      "title": "Lục Cát Tinh Hội",
+      "interpretations": [
+        {
+          "id": "ta_huu_dong_cung",
+          "type": "star_combination",
+          "priority": 90,
+          "conditions": {
+            "required_stars": ["Tả Phụ", "Hữu Bật"],
+            "same_palace": true
+          },
+          "text": "Tả Phụ Hữu Bật đồng cung, chủ về người được quý nhân phù trợ, có nhiều bạn bè giúp đỡ, sự nghiệp thuận lợi. Nếu có chính tinh tốt thì đại cát.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        },
+        {
+          "id": "xuong_khuc_dong_cung",
+          "type": "star_combination",
+          "priority": 90,
+          "conditions": {
+            "required_stars": ["Văn Xương", "Văn Khúc"],
+            "same_palace": true
+          },
+          "text": "Văn Xương Văn Khúc đồng cung, chủ về người thông minh, học giỏi, có tài văn chương, nghệ thuật. Nếu ở cung Sửu Mùi thì là cách 'Văn Quế Văn Hoa', đại cát.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        },
+        {
+          "id": "khoi_viet_dong_cung",
+          "type": "star_combination",
+          "priority": 85,
+          "conditions": {
+            "required_stars": ["Thiên Khôi", "Thiên Việt"],
+            "same_palace": true
+          },
+          "text": "Thiên Khôi Thiên Việt đồng cung, chủ về người có quý nhân phù trợ, thi cử đỗ đạt, sự nghiệp hanh thông. Là cách 'Tọa Quý Hướng Quý', đại cát.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        }
+      ]
+    },
+    {
+      "section_id": "luc_sat",
+      "title": "Lục Sát Tinh Hội",
+      "interpretations": [
+        {
+          "id": "kinh_da_dong_cung",
+          "type": "star_combination",
+          "priority": 85,
+          "conditions": {
+            "required_stars": ["Kình Dương", "Đà La"],
+            "same_palace": true
+          },
+          "text": "Kình Dương Đà La đồng cung, chủ về người cương cường, hay gặp thị phi, tranh chấp. Nếu gặp thêm Hóa Kỵ thì tai họa, hình khắc.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        },
+        {
+          "id": "hoa_linh_dong_cung",
+          "type": "star_combination",
+          "priority": 85,
+          "conditions": {
+            "required_stars": ["Hỏa Tinh", "Linh Tinh"],
+            "same_palace": true
+          },
+          "text": "Hỏa Tinh Linh Tinh đồng cung, chủ về người nóng nảy, hay gặp tai họa bất ngờ. Nếu gặp Tham Lang thì là cách 'Hỏa Tham' hoặc 'Linh Tham', có thể đột phát.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        },
+        {
+          "id": "khong_kiep_dong_cung",
+          "type": "star_combination",
+          "priority": 85,
+          "conditions": {
+            "required_stars": ["Địa Không", "Địa Kiếp"],
+            "same_palace": true
+          },
+          "text": "Địa Không Địa Kiếp đồng cung, chủ về người hay gặp trắc trở, hao tài, sự nghiệp không ổn định. Nếu có chính tinh tốt thì giảm hung.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        }
+      ]
+    },
+    {
+      "section_id": "hoa_tham_linh_tham",
+      "title": "Hỏa Tham Linh Tham - Cách Đột Phát",
+      "interpretations": [
+        {
+          "id": "hoa_tham",
+          "type": "star_combination",
+          "priority": 95,
+          "conditions": {
+            "required_stars": ["Hỏa Tinh", "Tham Lang"],
+            "same_palace": true
+          },
+          "text": "Hỏa Tinh Tham Lang đồng cung, là cách 'Hỏa Tham', chủ về đột phát, bất ngờ phát tài, phát quý. Nếu ở cung Thìn Tuất Sửu Mùi thì đại cát, có thể đại phú đại quý.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        },
+        {
+          "id": "linh_tham",
+          "type": "star_combination",
+          "priority": 95,
+          "conditions": {
+            "required_stars": ["Linh Tinh", "Tham Lang"],
+            "same_palace": true
+          },
+          "text": "Linh Tinh Tham Lang đồng cung, là cách 'Linh Tham', chủ về đột phát, bất ngờ phát tài, phát quý. Tương tự Hỏa Tham nhưng phát chậm hơn, bền hơn.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        }
+      ]
+    },
+    {
+      "section_id": "vu_tham",
+      "title": "Vũ Tham - Vũ Khúc Tham Lang",
+      "interpretations": [
+        {
+          "id": "vu_tham_dong_cung",
+          "type": "star_combination",
+          "priority": 90,
+          "conditions": {
+            "required_stars": ["Vũ Khúc", "Tham Lang"],
+            "same_palace": true
+          },
+          "text": "Vũ Khúc Tham Lang đồng cung, chủ về người có tài kinh doanh, buôn bán, thích hợp nghề tài chính, ngân hàng. Nếu có Hóa Lộc thì đại phú.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        }
+      ]
+    },
+    {
+      "section_id": "liem_tham",
+      "title": "Liêm Tham - Liêm Trinh Tham Lang",
+      "interpretations": [
+        {
+          "id": "liem_tham_dong_cung",
+          "type": "star_combination",
+          "priority": 90,
+          "conditions": {
+            "required_stars": ["Liêm Trinh", "Tham Lang"],
+            "same_palace": true
+          },
+          "text": "Liêm Trinh Tham Lang đồng cung, chủ về người đa tài đa nghệ, có tính phong lưu, thích hưởng thụ. Nếu gặp Đào Hồng thì tình duyên phức tạp.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        }
+      ]
+    },
+    {
+      "section_id": "tu_hoa_hoi",
+      "title": "Tứ Hóa Hội Tụ",
+      "interpretations": [
+        {
+          "id": "loc_quyen_dong_cung",
+          "type": "star_combination",
+          "priority": 95,
+          "conditions": {
+            "meeting_stars": ["Hóa Lộc", "Hóa Quyền"]
+          },
+          "text": "Hóa Lộc Hóa Quyền hội hợp, chủ về người có tài năng, quyền lực, sự nghiệp hanh thông, tài lộc dồi dào.",
+          "source": {"book": "Tứ Hóa Phi Tinh", "author": "Lương Nhược Du"}
+        },
+        {
+          "id": "loc_khoa_dong_cung",
+          "type": "star_combination",
+          "priority": 90,
+          "conditions": {
+            "meeting_stars": ["Hóa Lộc", "Hóa Khoa"]
+          },
+          "text": "Hóa Lộc Hóa Khoa hội hợp, chủ về người có danh tiếng, học vấn, tài lộc. Thích hợp nghề giáo dục, nghiên cứu.",
+          "source": {"book": "Tứ Hóa Phi Tinh", "author": "Lương Nhược Du"}
+        },
+        {
+          "id": "song_ky",
+          "type": "star_combination",
+          "priority": 85,
+          "conditions": {
+            "meeting_stars": ["Hóa Kỵ", "Hóa Kỵ"]
+          },
+          "text": "Song Kỵ hội hợp (hai Hóa Kỵ), chủ về người hay gặp trắc trở, thị phi, cần cẩn thận trong giao tiếp và quyết định.",
+          "source": {"book": "Tứ Hóa Phi Tinh", "author": "Lương Nhược Du"}
+        }
+      ]
+    },
+    {
+      "section_id": "dao_hong",
+      "title": "Đào Hồng - Tình Duyên",
+      "interpretations": [
+        {
+          "id": "dao_hong_dong_cung",
+          "type": "star_combination",
+          "priority": 80,
+          "conditions": {
+            "required_stars": ["Đào Hoa", "Hồng Loan"],
+            "same_palace": true
+          },
+          "text": "Đào Hoa Hồng Loan đồng cung, chủ về người có duyên với người khác giới, tình duyên phong phú. Nếu ở cung Mệnh thì đẹp người, có sức hút.",
+          "source": {"book": "Đẩu Số Cung Vị", "author": "Trần Bỉnh Húc"}
+        }
+      ]
+    },
+    {
+      "section_id": "loc_ma",
+      "title": "Lộc Mã - Tài Lộc Di Chuyển",
+      "interpretations": [
+        {
+          "id": "loc_ma_dong_cung",
+          "type": "star_combination",
+          "priority": 85,
+          "conditions": {
+            "required_stars": ["Lộc Tồn", "Thiên Mã"],
+            "same_palace": true
+          },
+          "text": "Lộc Tồn Thiên Mã đồng cung, là cách 'Lộc Mã Giao Trì', chủ về người kiếm tiền từ xa, buôn bán, kinh doanh vận tải, xuất nhập khẩu. Đại cát cho tài lộc.",
+          "source": {"book": "Tử Vi Đẩu Số Toàn Thư", "author": "Cổ thư"}
+        }
+      ]
+    }
+  ]
+}

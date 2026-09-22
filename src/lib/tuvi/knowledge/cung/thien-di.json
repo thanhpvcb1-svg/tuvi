@@ -1,0 +1,133 @@
+{
+  "palace": "thien_di",
+  "sections": [
+    {
+      "section_id": "phi_tu_hoa",
+      "title": "Phi Tứ Hóa Từ Cung Thiên Di",
+      "interpretations": [
+        {
+          "id": "di_loc_nhap_phu",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "loc",
+            "source_palace": "thien_di",
+            "target_palace": "phu_mau"
+          },
+          "text": "Thiên di Hóa Lộc nhập phụ mẫu: Có duyên bên ngoài tốt, duyên học hành dày dặn, học nhanh, phản ứng tốt. Hiểu biết rộng, hòa nhã, khéo léo, và giải quyết công việc trọn vẹn. Dễ dàng kết nối với người lớn tuổi hoặc những người thuộc tầng lớp cao trong xã hội. Vận thi cử tốt, may mắn trong các vấn đề liên quan đến tiền bạc. Căn cơ cao, trí tuệ viên mãn.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "di_quyen_nhap_no",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "quyen",
+            "source_palace": "thien_di",
+            "target_palace": "no_boc"
+          },
+          "text": "Thiên di Hóa Quyền nhập nô bộc: Khả năng giao tiếp tốt, giỏi vận dụng nguồn nhân mạch. Hoạt bát, chủ động, dễ nổi bật, thích thể hiện bản thân. Có thể làm công việc sáng tạo, phát triển, chuyên môn, dẫn đầu xu hướng, lãnh đạo thời trang. Đề phòng quá chú trọng hình thức, phô trương lãng phí.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "di_khoa_nhap_menh",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "khoa",
+            "source_palace": "thien_di",
+            "target_palace": "menh"
+          },
+          "text": "Thiên di Hóa Khoa nhập mệnh: Xử thế ôn hòa. Tu dưỡng, phẩm vị, không phù hoa. Được quý nhân, danh tiếng. Rất có duyên với người chung quanh, có tiếng tăm ở bên ngoài, có thể nhờ văn hóa nghệ thuật mà danh tiếng vang xa.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "di_ky_nhap_phoi",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "ky",
+            "source_palace": "thien_di",
+            "target_palace": "phu_the"
+          },
+          "text": "Thiên di Hóa Kị nhập phu thê: Đề phòng người thứ ba xen vào hoặc ngoại lực phá hoại hôn nhân. Không khéo che đậy, sẽ không có lời nói ngọt ngào. Đề phòng bất trắc, tai họa bệnh tật, tai bay vạ gió (vì Kị xung Quan Lộc). Chớ có đánh bạc, đầu cơ. Sự nghiệp ở bên ngoài không thuận lợi.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "chinh_tinh",
+      "title": "Chính Tinh Tại Thiên Di",
+      "interpretations": [
+        {
+          "id": "di_tu_vi",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["tu_vi"]
+          },
+          "text": "Tử Vi ở cung Thiên Di chủ xuất ngoại có quý nhân phù trợ, phát đạt. Đồng cung với Phụ Bật, ra ngoài hay được quý nhân giúp đỡ, đại cát đại lợi.",
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn",
+            "author": "Sở Hoàng"
+          }
+        },
+        {
+          "id": "di_thien_tuong",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["thien_tuong"]
+          },
+          "text": "Thiên Tướng nhập Thiên Di chủ xuất ngoại được quý nhân phù trợ. Ra ngoài luôn gặp sự hưởng ứng, yêu thích, thường có người theo làm vây cánh.",
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn",
+            "author": "Sở Hoàng"
+          }
+        },
+        {
+          "id": "di_tu_vi_thien_tuong",
+          "type": "star_combination",
+          "conditions": {
+            "same_palace_stars": ["tu_vi", "thien_tuong"]
+          },
+          "text": "Tử Vi Thiên Tướng cư thìn tuất, ra ngoài hay gặp may mắn thuận lợi, nhưng cũng có tiểu nhân, nếu cung mệnh có cát tinh thì tốt đẹp được phúc.",
+          "source": {
+            "book": "Đẩu số cung vị",
+            "author": "Trần Bỉnh Húc"
+          }
+        },
+        {
+          "id": "di_da_la",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["da_la"]
+          },
+          "text": "Hội hợp với cát tinh là chủ về ra ngoài gặp quý nhân và phát tài. Hãm địa, thêm Hỏa Linh Không Kiếp là chủ về thường tự chuốc lấy thị phi, không vừa lòng mọi người.",
+          "source": {
+            "book": "Phi tinh Trần Đoàn",
+            "author": "Hồng Khánh"
+          }
+        },
+        {
+          "id": "di_van_khuc",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["van_khuc"]
+          },
+          "text": "Chủ về ra ngoài gặp quý nhân, phát tài. Thêm cát tinh là chủ về được của. Thêm Kình Dương Đà La Hỏa Linh là chủ về chẳng mấy khi toại chí.",
+          "source": {
+            "book": "Phi tinh Trần Đoàn",
+            "author": "Hồng Khánh"
+          }
+        }
+      ]
+    }
+  ]
+}

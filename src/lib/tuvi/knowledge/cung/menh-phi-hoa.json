@@ -1,0 +1,148 @@
+{
+  "palace": "menh",
+  "section_id": "phi_tu_hoa",
+  "title": "Phi Tứ Hóa Từ Cung Mệnh",
+  "interpretations": [
+    {
+      "id": "menh_loc_nhap_tat",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "loc",
+        "source_palace": "menh",
+        "target_palace": "tat_ach"
+      },
+      "text": "Mệnh cung hóa Lộc nhập Tật ách cung: Ta làm cho cơ thể của ta khỏe mạnh, ít bệnh tật, có bệnh sẽ may mắn gặp thầy gặp thuốc mà qua khỏi, thân thể có da có thịt chứ không gầy gò, nhưng không thích bị vất vả nặng nhọc, cho nên tương đối lười, không thường vận động. Ta thích nơi công tác rộng rãi thoáng mát. Ta làm cho cảm xúc của ta thường tốt, bạn bè ở chung với ta cảm thấy dễ chịu thoải mái.",
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái",
+        "author": "Alex Alpha"
+      }
+    },
+    {
+      "id": "menh_loc_nhap_tat_2",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "loc",
+        "source_palace": "menh",
+        "target_palace": "tat_ach"
+      },
+      "text": "Lạc quan, ăn ngon mặc đẹp, thường chi tiêu cho bản thân. Thân thể suy nhược hoặc thường dùng thuốc. Dễ béo, tính dục mạnh.",
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+        "author": "Huy Hà Phan"
+      }
+    },
+    {
+      "id": "menh_loc_nhap_tat_3",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "loc",
+        "source_palace": "menh",
+        "target_palace": "tat_ach"
+      },
+      "text": "1. Tự lực cánh sinh, mọi việc đều phụ thuộc vào chính mình. 2. Trong đời không thiếu tiền bạc, của cải dồi dào, kiếm tiền có con đường tắt. 3. Tự ái, tự mãn. Quan tâm, chăm sóc, yêu bản thân, thích nhàn không thích lao động. 4. Tâm tính hợp nhất, hài hòa và thấu hiểu, lạc quan vui vẻ, vạn sự có thể lớn chuyển thành nhỏ. 5. Ăn uống tốt, không thích vận động, tấm lòng rộng rãi, dễ mập dễ gây béo phì.",
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      }
+    },
+    {
+      "id": "menh_quyen_nhap_di",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "quyen",
+        "source_palace": "menh",
+        "target_palace": "thien_di"
+      },
+      "text": "Mệnh cung Hóa Quyền nhập thiên di: Mệnh tạo mang tính tích cực nhập thiên di và muốn khống chế quản lý thiên di. 1. Mệnh tạo là người có năng lực, chủ kiến, sự tự tin thể hiện ra ngoài, là người có tính năng động, hoạt bát, quả đoán, có năng lực, trí tuệ, quyền biến và ý chí. 2. Là người có khả năng quan sát nhạy bén, khả năng ứng biến cao, người mưu lược, nên có thể lãnh đạo, khai phá tiên phong. 3. Là người làm việc quyết đoán, nhanh nhẹn, không thích chần chừ do dự. 4. Sự tự tin, chủ kiến, năng lực thể hiện ra ngoài, nếu có thêm kỹ năng chuyên nghiệp càng thuận lợi. 5. Nếu cách cục không đẹp, dễ trở thành độc đoán, bá khí, tự phụ, dễ kết oán.",
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+        "author": "Huy Hà Phan"
+      }
+    },
+    {
+      "id": "menh_quyen_nhap_di_2",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "quyen",
+        "source_palace": "menh",
+        "target_palace": "thien_di"
+      },
+      "text": "1. Bề ngoài kiên quyết và dứt khoát, tính tình thất thường, bá quyền, tranh giành quyền lực, giỏi chi phối, chỉ huy người khác, khiến người ta cảm thấy áp bức. 2. Có cảm giác về khoảng cách và áp lực. 3. Mạnh mẽ, thích nổi bật, cạnh tranh và mạo hiểm. Dễ thay đổi, không thương tiếc. Vì vậy, dễ sinh lòng ghen ghét, gây thù chuốc oán. 4. Làm việc chăm chỉ, theo đuổi sự tiến bộ, tích cực trong cuộc sống và không bao giờ được nhàn rỗi trong cuộc sống. 5. Có năng lực hoặc kỹ năng chuyên môn về lãnh đạo và quản lý, lập kế hoạch và quản lý. 6. Dễ bị vấp ngã và tai họa đổ máu. 7. Thường vất vả, dễ bận rộn.",
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      }
+    },
+    {
+      "id": "menh_khoa_nhap_phuc",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "khoa",
+        "source_palace": "menh",
+        "target_palace": "phuc_duc"
+      },
+      "text": "Mệnh cung Hóa Khoa nhập cung Phúc đức: Lễ giáo chế ước, lý trí hài hòa của mệnh tạo nhập Phúc đức. Phúc đức là linh tính cung vị, chủ về tinh thần. Nên tâm tính thường biểu hiện sự bình đạm, thanh đạm an nhàn, không thích hư hoa, tâm tính bình hòa. Phúc đức là phúc của tiên thiên, là đức của hậu thiên, nên khi khẩn cấp dễ được quí nhân trợ giúp.",
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+        "author": "Huy Hà Phan"
+      }
+    },
+    {
+      "id": "menh_khoa_nhap_phuc_2",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "khoa",
+        "source_palace": "menh",
+        "target_palace": "phuc_duc"
+      },
+      "text": "1. Cảm giác nặng nề, khí phách, lý tưởng chung thủy, chủ nghĩa hoàn mỹ. 2. Chú ý đến tinh thần, yêu thích lục nghệ, có khí chất tao nhã, nhẹ nhàng và tinh anh. 3. Nhạy bén, có giác quan thứ sáu, trí tuệ và tài năng.",
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      }
+    },
+    {
+      "id": "menh_ky_nhap_phuc",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "ky",
+        "source_palace": "menh",
+        "target_palace": "phuc_duc"
+      },
+      "text": "Mệnh cung hóa Kỵ nhập phúc đức cung: Mệnh cung hóa Kỵ nhập phúc đức, làm ta để ý phúc đức, ta nguyện vì phúc đức mà nỗ lực. Cho nên ta ham hưởng thụ tinh thần mà cam lòng tiêu phí tiền bạc. Phúc đức tọa Kỵ thường lo phiền. Ta hay nghi ngờ xoi mói, cho nên không thể thoải mái tinh thần tùy duyên tự tại.",
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái",
+        "author": "Alex Alpha"
+      }
+    },
+    {
+      "id": "menh_ky_nhap_phuc_2",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "ky",
+        "source_palace": "menh",
+        "target_palace": "phuc_duc"
+      },
+      "text": "1. Mệnh chủ cá tính cố chấp chủ quan, tự lấy mình là trung tâm. 2. Chấp nhất đi vào ngõ cụt, ngoan cố không thông, rất dễ tạo ra khoảng cách với người khác. 3. Mệnh chủ có xu hướng tư lợi, ích kỷ. 4. Khả năng kiếm tiền kém nhưng trong đời không thiếu tiền bạc.",
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      }
+    },
+    {
+      "id": "menh_ky_nhap_phuc_xung_tai",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "ky",
+        "source_palace": "menh",
+        "target_palace": "phuc_duc",
+        "clash_palace": "tai_bach"
+      },
+      "text": "Mệnh Hóa kỵ nhập cung phúc đức (xung tài bạch): 1. Cố chấp theo sở thích, chạy theo dục vọng. 2. Chú trọng hưởng thụ, chịu chi tiền. 3. Cục diện tốt, có thể kết hợp sở thích với công việc; cục diện kém, sa đà vào thú vui mất chí, không thoát ra được. 4. Phù hợp với nghiên cứu phát triển, thiết kế (có Lộc Quyền), cũng hợp với môi giới, kỹ thuật, kế toán, tư vấn trong ngành dịch vụ (xung tài bạch, không trữ hàng, không ép vốn). 5. Ít đầu cơ, tránh xa cờ bạc, ma túy, rượu chè, thói quen xấu, để tránh mê tình vọng dục, tự hủy tiền đồ. 6. Mệnh cách kém, dễ lo trời sập, lo lắng quá mức. Nữ mệnh càng rõ. 7. Cục diện kém, phòng bệnh tật hành hạ (trên hai Kỵ).",
+      "source": {
+        "book": "Tứ hóa phi tinh",
+        "author": "Lương Nhược Du"
+      }
+    }
+  ]
+}
