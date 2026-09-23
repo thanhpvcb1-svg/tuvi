@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import type { ChartView, PalaceView } from "../lib/types";
 import { findPalace, getPalaceMeaning } from "../lib/chartUi";
 import {
@@ -8,6 +8,7 @@ import {
   extractPhiHoaFlows,
   type KnowledgeMatch,
 } from "../lib/tuvi/knowledge/knowledgeService";
+import { callGeminiLuanGiai, callGeminiTongHop, type PalaceSummary } from "../lib/geminiService";
 import type { DisplayPalace } from "../lib/tuvi/config/types";
 
 type PalaceAnalysis = {
@@ -23,12 +24,25 @@ type PalaceAnalysis = {
   phiHoa: string[];
   isBodyPalace: boolean;
   knowledgeMatches: KnowledgeMatch[];
+  geminiAnalysis?: string;
+  geminiLoading?: boolean;
+  geminiError?: string;
 };
 
 type Props = {
   chart: ChartView;
   isActive: boolean;
   onComplete?: () => void;
+  userContext?: {
+    gender?: string;
+    yearToView?: number;
+  };
+};
+
+type TongHopState = {
+  loading: boolean;
+  analysis?: string;
+  error?: string;
 };
 
 const PALACE_CONFIG: Array<{ id: string; name: string; icon: string }> = [
@@ -135,16 +149,18 @@ function KnowledgeItem({ match }: { match: KnowledgeMatch }) {
   );
 }
 
-function PalaceCard({ analysis, isExpanded, onToggle }: { 
+function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: { 
   analysis: PalaceAnalysis; 
   isExpanded: boolean;
   onToggle: () => void;
+  onRequestGemini?: () => void;
 }) {
   const [showAll, setShowAll] = useState(false);
   const sortedMatches = useMemo(() => sortKnowledgeByPriority(analysis.knowledgeMatches), [analysis.knowledgeMatches]);
   const displayCount = showAll ? sortedMatches.length : 3;
   const hasMore = sortedMatches.length > 3;
   const knowledgeCount = analysis.knowledgeMatches.length;
+  const hasGeminiKey = Boolean(import.meta.env.VITE_GEMINI_API_KEY);
 
   return (
     <div className={`analysis-palace-card ${isExpanded ? "is-expanded" : ""}`}>
@@ -176,9 +192,46 @@ function PalaceCard({ analysis, isExpanded, onToggle }: {
         <div className="analysis-palace-content">
           <p className="analysis-palace-meaning">{analysis.meaning}</p>
 
+          {/* Gemini AI Analysis Section */}
+          {hasGeminiKey && sortedMatches.length > 0 && (
+            <div className="analysis-gemini">
+              <div className="analysis-gemini-header">
+                <span className="analysis-star-label">🤖 AI Luận giải:</span>
+                {!analysis.geminiAnalysis && !analysis.geminiLoading && (
+                  <button
+                    type="button"
+                    className="analysis-gemini-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRequestGemini?.();
+                    }}
+                  >
+                    Luận bằng AI
+                  </button>
+                )}
+              </div>
+              {analysis.geminiLoading && (
+                <div className="analysis-gemini-loading">
+                  <span className="analysis-gemini-spinner" />
+                  Đang luận giải...
+                </div>
+              )}
+              {analysis.geminiError && (
+                <div className="analysis-gemini-error">
+                  {analysis.geminiError}
+                </div>
+              )}
+              {analysis.geminiAnalysis && (
+                <div className="analysis-gemini-content">
+                  {analysis.geminiAnalysis}
+                </div>
+              )}
+            </div>
+          )}
+
           {sortedMatches.length > 0 && (
             <div className="analysis-knowledge">
-              <span className="analysis-star-label">Luận giải:</span>
+              <span className="analysis-star-label">📚 Tri thức cổ điển:</span>
               <div className="analysis-knowledge-list">
                 {sortedMatches.slice(0, displayCount).map((match, i) => (
                   <KnowledgeItem key={match.interpretation.id || i} match={match} />
@@ -212,18 +265,121 @@ function PalaceCard({ analysis, isExpanded, onToggle }: {
   );
 }
 
-export default function StreamingAnalysis({ chart, isActive, onComplete }: Props) {
+export default function StreamingAnalysis({ chart, isActive, onComplete, userContext }: Props) {
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set(["menh"]));
   const [isLoading, setIsLoading] = useState(true);
   const [visibleCount, setVisibleCount] = useState(0);
   const [loadingProgress, setLoadingProgress] = useState(0);
+  const [geminiStates, setGeminiStates] = useState<Map<string, { loading: boolean; analysis?: string; error?: string }>>(new Map());
+  const [tongHopState, setTongHopState] = useState<TongHopState>({ loading: false });
 
-  const analyses = useMemo(() => {
+  const baseAnalyses = useMemo(() => {
     if (!chart) return [];
     return PALACE_CONFIG
       .map((config) => analyzePalace(chart, config))
       .filter((a): a is PalaceAnalysis => a !== null);
   }, [chart]);
+
+  // Merge gemini states into analyses
+  const analyses = useMemo(() => {
+    return baseAnalyses.map((a) => {
+      const geminiState = geminiStates.get(a.id);
+      return {
+        ...a,
+        geminiLoading: geminiState?.loading,
+        geminiAnalysis: geminiState?.analysis,
+        geminiError: geminiState?.error,
+      };
+    });
+  }, [baseAnalyses, geminiStates]);
+
+  // Build data cho tổng hợp Bắc Phái - lấy TẤT CẢ tri thức
+  const buildTongHopData = useCallback((): PalaceSummary[] => {
+    return baseAnalyses.map((a) => ({
+      name: a.name,
+      branch: a.branch,
+      stem: a.stem,
+      majorStars: a.majorStars,
+      goodStars: a.goodStars,
+      badStars: a.badStars,
+      isBodyPalace: a.isBodyPalace,
+      knowledgeTexts: a.knowledgeMatches.map((m) => m.interpretation.text),
+      phiHoaFlows: a.phiHoa,
+    }));
+  }, [baseAnalyses]);
+
+  // Request tổng hợp Bắc Phái
+  const requestTongHopBacPhai = useCallback(async () => {
+    if (tongHopState.loading || tongHopState.analysis) return;
+
+    setTongHopState({ loading: true });
+
+    try {
+      const palaces = buildTongHopData();
+      const profile = {
+        gender: userContext?.gender || (chart.profile as any)?.gender,
+        yearToView: userContext?.yearToView,
+        menhChu: (chart.profile as any)?.menhChu,
+        thanChu: (chart.profile as any)?.thanChu,
+        cuc: (chart.profile as any)?.cucElement || (chart.profile as any)?.fiveElementsClass,
+      };
+
+      const response = await callGeminiTongHop({ palaces, profile });
+
+      if (response.success) {
+        setTongHopState({ loading: false, analysis: response.analysis });
+      } else {
+        setTongHopState({ loading: false, error: response.error || "Lỗi không xác định" });
+      }
+    } catch (error) {
+      setTongHopState({ loading: false, error: "Không thể kết nối Gemini" });
+    }
+  }, [tongHopState, buildTongHopData, userContext, chart.profile]);
+
+  // Request Gemini analysis for a palace
+  const requestGeminiAnalysis = useCallback(async (palaceId: string) => {
+    const analysis = baseAnalyses.find((a) => a.id === palaceId);
+    if (!analysis || analysis.knowledgeMatches.length === 0) return;
+
+    // Set loading state
+    setGeminiStates((prev) => {
+      const next = new Map(prev);
+      next.set(palaceId, { loading: true });
+      return next;
+    });
+
+    try {
+      const response = await callGeminiLuanGiai({
+        palaceName: analysis.name,
+        palaceInfo: {
+          branch: analysis.branch,
+          stem: analysis.stem,
+          majorStars: analysis.majorStars,
+          goodStars: analysis.goodStars,
+          badStars: analysis.badStars,
+          isBodyPalace: analysis.isBodyPalace,
+        },
+        knowledgeMatches: analysis.knowledgeMatches,
+        userContext,
+      });
+
+      setGeminiStates((prev) => {
+        const next = new Map(prev);
+        if (response.success) {
+          next.set(palaceId, { loading: false, analysis: response.analysis });
+        } else {
+          next.set(palaceId, { loading: false, error: response.error || "Lỗi không xác định" });
+        }
+        return next;
+      });
+    } catch (error) {
+      setGeminiStates((prev) => {
+        const next = new Map(prev);
+        next.set(palaceId, { loading: false, error: "Không thể kết nối Gemini" });
+        return next;
+      });
+    }
+  }, [baseAnalyses, userContext]);
 
   useEffect(() => {
     if (!isActive) {
@@ -338,6 +494,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete }: Props
               analysis={analysis}
               isExpanded={expandedIds.has(analysis.id)}
               onToggle={() => toggleExpand(analysis.id)}
+              onRequestGemini={() => requestGeminiAnalysis(analysis.id)}
             />
           ))}
         </div>
@@ -355,6 +512,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete }: Props
               analysis={analysis}
               isExpanded={expandedIds.has(analysis.id)}
               onToggle={() => toggleExpand(analysis.id)}
+              onRequestGemini={() => requestGeminiAnalysis(analysis.id)}
             />
           ))}
         </div>
@@ -368,10 +526,75 @@ export default function StreamingAnalysis({ chart, isActive, onComplete }: Props
       )}
 
       {!isStreaming && (
-        <div className="analysis-footer">
-          <p>💡 Nội dung chỉ mang tính tham khảo. Để được luận giải chuyên sâu, vui lòng liên hệ tư vấn.</p>
-        </div>
+        <>
+          {/* Box Tổng hợp Bắc Phái */}
+          {hasGeminiKey && (
+            <div className="analysis-section analysis-tonghop">
+              <h4 className="analysis-section-title">
+                <span className="analysis-section-icon">🔮</span>
+                Tổng hợp Bắc Phái - Phi Hóa Can Cung
+              </h4>
+              
+              {!tongHopState.analysis && !tongHopState.loading && !tongHopState.error && (
+                <div className="analysis-tonghop-cta">
+                  <p>Gemini sẽ tổng hợp toàn bộ tri thức đã match từ 12 cung, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>: Lộc nhập, Kỵ nhập, quan hệ Mệnh-Tài-Quan.</p>
+                  <button
+                    type="button"
+                    className="primary-button analysis-tonghop-btn"
+                    onClick={requestTongHopBacPhai}
+                  >
+                    🔮 Luận tổng hợp Bắc Phái
+                  </button>
+                </div>
+              )}
+
+              {tongHopState.loading && (
+                <div className="analysis-tonghop-loading">
+                  <div className="analysis-loading-spinner" />
+                  <p>Đang tổng hợp và luận giải theo Bắc Phái...</p>
+                  <span className="analysis-loading-hint">Phân tích Phi Hóa Can Cung: Lộc/Quyền/Khoa/Kỵ nhập</span>
+                </div>
+              )}
+
+              {tongHopState.error && (
+                <div className="analysis-tonghop-error">
+                  <p>❌ {tongHopState.error}</p>
+                  <button
+                    type="button"
+                    className="ghost-button"
+                    onClick={() => setTongHopState({ loading: false })}
+                  >
+                    Thử lại
+                  </button>
+                </div>
+              )}
+
+              {tongHopState.analysis && (
+                <div className="analysis-tonghop-content">
+                  {tongHopState.analysis.split("\n").map((line, i) => {
+                    if (line.startsWith("**") && line.endsWith("**")) {
+                      return <h5 key={i} className="analysis-tonghop-heading">{line.replace(/\*\*/g, "")}</h5>;
+                    }
+                    if (line.startsWith("- ")) {
+                      return <li key={i} className="analysis-tonghop-item">{line.slice(2)}</li>;
+                    }
+                    if (line.trim()) {
+                      return <p key={i}>{line}</p>;
+                    }
+                    return null;
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="analysis-footer">
+            <p>💡 Nội dung chỉ mang tính tham khảo. Để được luận giải chuyên sâu, vui lòng liên hệ tư vấn.</p>
+          </div>
+        </>
       )}
     </div>
   );
 }
+
+const hasGeminiKey = Boolean(import.meta.env.VITE_GEMINI_API_KEY);
