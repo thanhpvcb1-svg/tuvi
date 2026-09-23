@@ -35,7 +35,7 @@ if ("error" in result) {
 }
 ```
 
-### Netlify Function API
+### Cloudflare Pages Function API
 
 ```bash
 POST /api/cohoc-fetch
@@ -89,7 +89,7 @@ src/lib/cohoc/
 ├── client.ts     # HTTP client, CSRF handling
 └── parser.ts     # HTML parser
 
-netlify/functions/
+functions/api/
 └── cohoc-fetch.ts  # Serverless endpoint
 ```
 

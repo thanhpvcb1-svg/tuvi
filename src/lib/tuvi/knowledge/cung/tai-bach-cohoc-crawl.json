@@ -2,8 +2,8 @@
   "palace": "TAI_BACH",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-23T10:08:50.269Z",
-  "total_blocks": 933,
+  "last_updated": "2026-09-23T10:12:42.552Z",
+  "total_blocks": 937,
   "hashes": [
     "c0954fb2c36e",
     "c6b7c1e6fde0",
@@ -937,7 +937,11 @@
     "34d9f331bb94",
     "d0cf74c9af73",
     "f17d848b8d1b",
-    "62af22ce8ace"
+    "62af22ce8ace",
+    "36f2343e2d6d",
+    "1c767291a240",
+    "8bd69322f999",
+    "73402e3fd0fc"
   ],
   "sections": [
     {
@@ -9588,6 +9592,42 @@
           "id": "tai-bach_crawl_1790158130269_5",
           "type": "general",
           "text": "1. Cung Tài bạch (kinh tế, tiền bạc, kinh doanh, thu nhập) Hóa kỵ phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 113 - 122 tuổi ở Tí (vị trí nhất lục cộng tông với cung xung chiếu của cung Sửu) nhận kỵ của Tài bạch tiên thiên báo hiệu đại vận này có Kỵ Tài bạch. 3. Cung Tài bạch của Đại vận: 113 - 122 tuổi tại Thân Hóa kỵ phi phục nhập cung Thân. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tí, Ngọ, Hợi khi cung Tài bạch lưu niên ở tại cung Thân, Dần, Mùi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tai-bach_crawl_1790158362551_0",
+          "type": "general",
+          "text": "1. Cung Tài bạch (kinh tế, tiền bạc, kinh doanh, thu nhập) Hóa kỵ phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 45 - 54 tuổi ở Sửu nhận kỵ của Tài bạch tiên thiên báo hiệu đại vận này có Kỵ Tài bạch. 3. Cung Tài bạch của Đại vận: 45 - 54 tuổi tại Dậu Hóa kỵ phi phục nhập cung Ngọ. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Ngọ, Tí, Tị; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tuất, Thìn, Dậu khi cung Tài bạch lưu niên ở tại cung Ngọ, Tí, Tị vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tai-bach_crawl_1790158362552_1",
+          "type": "general",
+          "text": "1. Cung Tài bạch (kinh tế, tiền bạc, kinh doanh, thu nhập) Hóa lộc phi phục Tam điểm tại Mão, Dậu, Dần. 2. Đại vận: 55 - 64 tuổi ở Dần (vị trí nhất lục cộng tông với cung xung chiếu của cung Mão) nhận lộc của Tài bạch tiên thiên báo hiệu đại vận này có Lộc Tài bạch. 3. Cung Tài bạch của Đại vận: 55 - 64 tuổi tại Tuất Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tị, Hợi, Thìn khi cung Tài bạch lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tai-bach_crawl_1790158362552_2",
+          "type": "general",
+          "text": "1. Cung Tài bạch (kinh tế, tiền bạc, kinh doanh, thu nhập) Hóa kỵ phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 105 - 114 tuổi ở Mùi (xung chiếu với Sửu) nhận kỵ của Tài bạch tiên thiên báo hiệu đại vận này có Kỵ Tài bạch. 3. Cung Tài bạch của Đại vận: 105 - 114 tuổi tại Mão Hóa kỵ phi phục nhập cung Dần. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Dần, Thân, Sửu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Ngọ, Tí, Tị khi cung Tài bạch lưu niên ở tại cung Dần, Thân, Sửu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tai-bach_crawl_1790158362552_3",
+          "type": "general",
+          "text": "Trong vận này, vấn đề Tài bạch có 2 điều kiện rất tốt, 1 điều kiện tốt. Tạm kết là rất tốt . * Cung Tài bạch (chủ vật): Về người: bản tính (cá tính), nhân duyên (duyên phận trần thế), đối tượng, nhân duyên (hôn nhân), phối ngẫu. Về sự: đi làm, công chức, nghề nghiệp, sự nghiệp, khởi nghiệp, tài hoa, chuyên môn. Về vật: sở hữu độc quyền, sở hữu vốn, đầu tư, đầu cơ, quản lý tài chính, tài vận.",
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Cổ Học"

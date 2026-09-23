@@ -3,9 +3,6 @@
  * 
  * Usage:
  *   node scripts/crawl-random-charts.mjs [count]
- * 
- * Example:
- *   node scripts/crawl-random-charts.mjs 10
  */
 
 import * as fs from "fs";
@@ -15,468 +12,266 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Config
 const COUNT = parseInt(process.argv[2]) || 5;
-const DELAY_MS = 3000; // Delay between requests to avoid rate limiting
+const DELAY_MS = 3000;
 const OUTPUT_DIR = path.join(__dirname, "../src/lib/tuvi/knowledge/cung");
+const BASE_URL = "https://tuvi.cohoc.net/lap-la-so-tu-vi.html";
 
-// Vietnamese data
-const CAN = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"];
 const CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"];
 const CHI_SLUG = ["ti", "suu", "dan", "mao", "thin", "ty", "ngo", "mui", "than", "dau", "tuat", "hoi"];
-const GENDER = ["nam", "nu"];
-const CALENDAR = ["duong", "am"];
+const CAN = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"];
 
-// Generate random birth info
 function generateRandomBirth() {
-  const year = 1950 + Math.floor(Math.random() * 70); // 1950-2020
+  const year = 1950 + Math.floor(Math.random() * 70);
   const month = 1 + Math.floor(Math.random() * 12);
-  const day = 1 + Math.floor(Math.random() * 28); // Safe for all months
+  const day = 1 + Math.floor(Math.random() * 28);
   const hourIndex = Math.floor(Math.random() * 12);
-  const hour = CHI_SLUG[hourIndex];
-  const hourName = CHI[hourIndex];
-  const gender = GENDER[Math.floor(Math.random() * 2)];
-  const calendar = CALENDAR[Math.floor(Math.random() * 2)];
+  const gender = Math.random() > 0.5 ? "nam" : "nu";
+  const calendar = Math.random() > 0.5 ? "duong" : "am";
   
-  // Calculate Can Chi year
   const canIndex = (year - 4) % 10;
   const chiIndex = (year - 4) % 12;
-  const canChi = CAN[canIndex].toLowerCase() + "-" + CHI_SLUG[chiIndex];
   
   return {
-    year,
-    month,
-    day,
-    hour,
-    hourName,
+    year, month, day,
+    hourSlug: CHI_SLUG[hourIndex],
+    hourName: CHI[hourIndex],
     gender,
     calendar,
-    canChi,
     canChiDisplay: `${CAN[canIndex]} ${CHI[chiIndex]}`,
   };
 }
 
-// Build URL for cohoc.net
-function buildCohocUrl(birth) {
-  // Format: bac-phai-la-so-tu-vi-nam-mau-dan-thang-9-ngay-7-gio-ti-duong-nam-lid-XXXXX.html
-  // We need to submit form and get the result page
-  const baseUrl = "https://tuvi.cohoc.net/lap-la-so-tu-vi.html";
-  return baseUrl;
-}
-
-// Submit form to get chart
 async function submitChartForm(birth) {
   const formData = new URLSearchParams();
   formData.append("nam", birth.year.toString());
   formData.append("thang", birth.month.toString());
   formData.append("ngay", birth.day.toString());
-  formData.append("gio", birth.hour);
+  formData.append("gio", birth.hourSlug);
   formData.append("gioitinh", birth.gender === "nam" ? "1" : "0");
   formData.append("lich", birth.calendar === "duong" ? "1" : "0");
   formData.append("submit", "Lập lá số");
   
-  const response = await fetch("https://tuvi.cohoc.net/lap-la-so-tu-vi.html", {
+  const response = await fetch(BASE_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "Origin": "https://tuvi.cohoc.net",
+      "Referer": BASE_URL,
     },
     body: formData.toString(),
-    redirect: "follow",
   });
   
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}`);
-  }
-  
-  // Get the redirect URL which contains the chart
-  const html = await response.text();
-  
-  // Extract chart URL from response
-  const urlMatch = html.match(/href="(\/bac-phai-la-so-tu-vi[^"]+\.html)"/);
-  if (urlMatch) {
-    return `https://tuvi.cohoc.net${urlMatch[1]}`;
-  }
-  
-  // Or check if we're already on the chart page
-  if (html.includes("CUNG MỆNH") || html.includes("#### Cung")) {
-    return { html, url: response.url };
-  }
-  
-  return null;
-}
-
-// Fetch chart page
-async function fetchChartPage(url) {
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-    },
-  });
-  
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}`);
-  }
-  
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
   return response.text();
 }
 
-// Parse interpretations from HTML
-function parseInterpretations(html, birth) {
+function parseInterpretations(html) {
   const blocks = [];
   
-  // Pattern: "#### Cung X an tại Y có Z"
-  const sectionRegex = /####\s*([^\n]+)\n([\s\S]*?)(?=####|$)/g;
+  // Find interpretation sections
+  // Pattern: <h4>CUNG MỆNH</h4> or numbered sections like "1. LUẬN GIẢI MỆNH"
+  const palaceRegex = /<h[34][^>]*>([^<]*(?:CUNG|LUẬN GIẢI|GIẢI ĐOÁN)[^<]*)<\/h[34]>/gi;
+  const contentParts = html.split(palaceRegex);
   
-  let match;
-  while ((match = sectionRegex.exec(html)) !== null) {
-    const title = match[1].trim();
-    const content = match[2].trim();
+  for (let i = 1; i < contentParts.length; i += 2) {
+    const palaceTitle = contentParts[i]?.trim();
+    const content = contentParts[i + 1] || "";
     
-    const parsed = parseTitle(title);
-    if (!parsed) continue;
+    if (!palaceTitle) continue;
     
-    const { text, source } = parseContent(content);
-    if (!text || text.length < 20) continue;
+    const palace = normalizePalace(palaceTitle.replace(/CUNG\s*/i, ""));
     
-    const block = {
-      block_id: generateBlockId(parsed, blocks.length),
-      condition_text: title,
-      raw_text: text,
-      conditions: buildConditions(parsed),
-      source: {
-        book: source.book || "tuvi.cohoc.net",
-        author: source.author || "Unknown",
-        translator: source.translator || null,
-        url: "https://tuvi.cohoc.net",
-      },
-      accuracy: 7,
-    };
+    // Extract text content, removing HTML tags and decoding entities
+    const textContent = content
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "")
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+      .replace(/<[^>]+>/g, "\n")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&aacute;/gi, "á").replace(/&agrave;/gi, "à").replace(/&atilde;/gi, "ã").replace(/&acirc;/gi, "â")
+      .replace(/&eacute;/gi, "é").replace(/&egrave;/gi, "è").replace(/&ecirc;/gi, "ê")
+      .replace(/&iacute;/gi, "í").replace(/&igrave;/gi, "ì")
+      .replace(/&oacute;/gi, "ó").replace(/&ograve;/gi, "ò").replace(/&ocirc;/gi, "ô").replace(/&otilde;/gi, "õ")
+      .replace(/&uacute;/gi, "ú").replace(/&ugrave;/gi, "ù").replace(/&ucirc;/gi, "û")
+      .replace(/&yacute;/gi, "ý")
+      .replace(/&ldquo;/gi, "\"").replace(/&rdquo;/gi, "\"")
+      .replace(/&lsquo;/gi, "'").replace(/&rsquo;/gi, "'")
+      .replace(/&ndash;/gi, "-").replace(/&mdash;/gi, "—")
+      .replace(/&#\d+;/g, "")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim();
     
-    blocks.push(block);
+    if (textContent.length < 50) continue;
+    
+    // Split into paragraphs/blocks
+    const paragraphs = textContent.split(/\n\n+/).filter(p => p.trim().length > 30);
+    
+    for (const para of paragraphs.slice(0, 5)) { // Limit to 5 blocks per palace
+      blocks.push({
+        block_id: `${palace}_crawl_${blocks.length}_${Date.now()}`.toLowerCase(),
+        condition_text: palaceTitle,
+        raw_text: para.trim(),
+        conditions: { palace: palace.toUpperCase() },
+        source: { book: "tuvi.cohoc.net", url: "https://tuvi.cohoc.net" },
+        accuracy: 7,
+      });
+    }
   }
   
   return blocks;
 }
 
-function parseTitle(title) {
-  // Pattern: "Cung Mệnh an tại Tuất có Kỵ Phúc"
-  const palaceMatch = title.match(/[Cc]ung\s+(\S+)/);
-  if (!palaceMatch) return null;
-  
-  const palaceName = palaceMatch[1];
-  const palace = normalizePalace(palaceName);
-  
-  // Extract branch
-  const branchMatch = title.match(/(?:an\s+)?tại\s+(\S+)/i);
-  const position = branchMatch ? normalizeBranch(branchMatch[1]) : null;
-  
-  // Extract heavenly stem if present
-  const stemMatch = title.match(/can\s+(\S+)/i);
-  const heavenlyStem = stemMatch ? normalizeStem(stemMatch[1]) : null;
-  
-  // Extract stars or phi hoa
-  const hasMatch = title.match(/có\s+(.+)$/i);
-  let requiredStars = [];
-  let transformations = [];
-  let transformationTarget = [];
-  
-  if (hasMatch) {
-    const hasContent = hasMatch[1];
-    
-    // Check for phi hoa pattern: "Kỵ Phúc" = Hóa Kỵ nhập Phúc Đức
-    const phiHoaMatch = hasContent.match(/^(Lộc|Quyền|Khoa|Kỵ)\s+(\S+)/);
-    if (phiHoaMatch) {
-      transformations.push(normalizeHoa(phiHoaMatch[1]));
-      transformationTarget.push(normalizePalace(phiHoaMatch[2]));
-    } else {
-      // Extract star names
-      const starText = hasContent.replace(/^các sao\s+/i, "");
-      requiredStars = starText.split(/[,，、]/).map(s => s.trim()).filter(Boolean);
-    }
-  }
-  
-  return {
-    palace,
-    palaceName,
-    position,
-    heavenlyStem,
-    requiredStars,
-    transformations,
-    transformationTarget,
+function normalizePalace(name) {
+  // Decode HTML entities first
+  const decoded = name
+    .replace(/&aacute;/gi, "á").replace(/&agrave;/gi, "à").replace(/&atilde;/gi, "ã")
+    .replace(/&eacute;/gi, "é").replace(/&egrave;/gi, "è").replace(/&ecirc;/gi, "ê")
+    .replace(/&iacute;/gi, "í").replace(/&igrave;/gi, "ì")
+    .replace(/&oacute;/gi, "ó").replace(/&ograve;/gi, "ò").replace(/&ocirc;/gi, "ô")
+    .replace(/&uacute;/gi, "ú").replace(/&ugrave;/gi, "ù")
+    .replace(/&amp;/gi, "&").replace(/&#\d+;/g, "");
+  const n = decoded.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").trim();
+  const map = {
+    "menh": "MENH", "phu mau": "PHU_MAU", "phuc duc": "PHUC_DUC", 
+    "dien trach": "DIEN_TRACH", "quan loc": "QUAN_LOC", "no boc": "NO_BOC",
+    "thien di": "THIEN_DI", "tat ach": "TAT_ACH", "tai bach": "TAI_BACH",
+    "tu tuc": "TU_TUC", "phu the": "PHU_THE", "huynh de": "HUYNH_DE",
   };
+  for (const [key, val] of Object.entries(map)) {
+    if (n.includes(key)) return val;
+  }
+  return n.toUpperCase().replace(/\s+/g, "_");
 }
 
-function parseContent(content) {
-  const lines = content.split("\n").map(l => l.trim()).filter(Boolean);
+// Find existing knowledge file for a palace (prioritize -cohoc-full.json)
+function findExistingFile(palace) {
+  const palaceSlug = palace.toLowerCase().replace(/_/g, "-");
+  const candidates = [
+    `${palaceSlug}-cohoc-full.json`,
+    `${palaceSlug}-consolidated.json`,
+    `${palaceSlug}.json`,
+  ];
   
-  let text = "";
-  let source = { book: "tuvi.cohoc.net", author: "Unknown", translator: null };
+  for (const candidate of candidates) {
+    const filePath = path.join(OUTPUT_DIR, candidate);
+    if (fs.existsSync(filePath)) return { filePath, fileName: candidate };
+  }
   
-  for (const line of lines) {
-    // Check for source citation
-    const sourceMatch = line.match(/^([^-–—]+)\s*[-–—]\s*([^-–—]+?)(?:\s*[-–—]\s*(.+?))?$/);
+  // Fallback: create new file
+  return { filePath: path.join(OUTPUT_DIR, `${palaceSlug}-cohoc-full.json`), fileName: `${palaceSlug}-cohoc-full.json`, isNew: true };
+}
+
+// Get all existing texts from a knowledge file for dedup
+function getExistingTexts(data) {
+  const texts = new Set();
+  const sections = data.sections || [];
+  for (const section of sections) {
+    for (const block of section.blocks || []) {
+      if (block.raw_text) texts.add(block.raw_text.substring(0, 100));
+    }
+  }
+  return texts;
+}
+
+function mergeBlocks(newBlocks) {
+  const byPalace = {};
+  for (const block of newBlocks) {
+    const palace = block.conditions.palace.toLowerCase();
+    if (!byPalace[palace]) byPalace[palace] = [];
+    byPalace[palace].push(block);
+  }
+  
+  for (const [palace, blocks] of Object.entries(byPalace)) {
+    const { filePath, fileName, isNew } = findExistingFile(palace);
     
-    if (sourceMatch && line.length < 120) {
-      const book = sourceMatch[1].trim();
-      const author = sourceMatch[2].trim();
-      const translator = sourceMatch[3] ? sourceMatch[3].replace(/biên dịch/i, "").trim() : null;
-      
-      if (book.length < 60 && author.length < 40) {
-        source = { book, author, translator };
+    let existing;
+    if (isNew) {
+      existing = {
+        palace: palace.toUpperCase(),
+        source: "tuvi.cohoc.net",
+        last_updated: new Date().toISOString(),
+        total_blocks: 0,
+        sections: [{ section_id: "crawled", title: "Crawled from cohoc.net", blocks: [] }],
+      };
+    } else {
+      try {
+        existing = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      } catch (e) {
+        console.log(`  Warning: Could not parse ${fileName}`);
         continue;
       }
     }
     
-    if (text) text += "\n";
-    text += line;
-  }
-  
-  return { text: text.trim(), source };
-}
-
-function buildConditions(parsed) {
-  return {
-    palace: parsed.palace.toUpperCase(),
-    position: parsed.position ? parsed.position.toUpperCase() : null,
-    heavenly_stem: parsed.heavenlyStem ? parsed.heavenlyStem.toUpperCase() : null,
-    gender: null,
-    required_stars: parsed.requiredStars || [],
-    excluded_stars: [],
-    same_palace_stars: [],
-    meeting_stars: [],
-    opposite_stars: [],
-    trine_stars: [],
-    transformations: parsed.transformations || [],
-    transformation_target: parsed.transformationTarget || [],
-    additional_conditions: [],
-  };
-}
-
-function generateBlockId(parsed, index) {
-  const parts = [parsed.palace, "crawl", index];
-  if (parsed.position) parts.push(parsed.position);
-  if (parsed.requiredStars.length > 0) parts.push(parsed.requiredStars[0]);
-  return parts.join("_").toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .replace(/\s+/g, "_");
-}
-
-function normalizePalace(name) {
-  const normalized = name.toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .trim();
-  
-  const map = {
-    "menh": "MENH",
-    "phu": "PHU_MAU", "phu mau": "PHU_MAU",
-    "phuc": "PHUC_DUC", "phuc duc": "PHUC_DUC",
-    "dien": "DIEN_TRACH", "dien trach": "DIEN_TRACH",
-    "quan": "QUAN_LOC", "quan loc": "QUAN_LOC",
-    "no": "NO_BOC", "no boc": "NO_BOC",
-    "di": "THIEN_DI", "thien di": "THIEN_DI",
-    "tat": "TAT_ACH", "tat ach": "TAT_ACH",
-    "tai": "TAI_BACH", "tai bach": "TAI_BACH",
-    "tu": "TU_TUC", "tu tuc": "TU_TUC",
-    "phu the": "PHU_THE", "the": "PHU_THE",
-    "huynh": "HUYNH_DE", "huynh de": "HUYNH_DE",
-  };
-  
-  return map[normalized] || normalized.toUpperCase().replace(/\s+/g, "_");
-}
-
-function normalizeBranch(name) {
-  const normalized = name.toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .trim();
-  
-  const map = {
-    "ty": "TY", "ti": "TY",
-    "suu": "SUU",
-    "dan": "DAN",
-    "mao": "MAO",
-    "thin": "THIN",
-    "ty_": "TI",
-    "ngo": "NGO",
-    "mui": "MUI",
-    "than": "THAN",
-    "dau": "DAU",
-    "tuat": "TUAT",
-    "hoi": "HOI",
-  };
-  
-  return map[normalized] || normalized.toUpperCase();
-}
-
-function normalizeStem(name) {
-  const normalized = name.toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .trim();
-  
-  const map = {
-    "giap": "GIAP",
-    "at": "AT",
-    "binh": "BINH",
-    "dinh": "DINH",
-    "mau": "MAU",
-    "ky": "KY", "ki": "KY",
-    "canh": "CANH",
-    "tan": "TAN",
-    "nham": "NHAM",
-    "quy": "QUY",
-  };
-  
-  return map[normalized] || normalized.toUpperCase();
-}
-
-function normalizeHoa(name) {
-  const normalized = name.toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .trim();
-  
-  const map = {
-    "loc": "LOC",
-    "quyen": "QUYEN",
-    "khoa": "KHOA",
-    "ky": "KY", "ki": "KY",
-  };
-  
-  return map[normalized] || normalized.toUpperCase();
-}
-
-// Merge new blocks into existing knowledge files
-function mergeBlocks(newBlocks) {
-  // Group by palace
-  const byPalace = {};
-  for (const block of newBlocks) {
-    const palace = block.conditions.palace.toLowerCase();
-    if (!byPalace[palace]) {
-      byPalace[palace] = [];
-    }
-    byPalace[palace].push(block);
-  }
-  
-  // Merge into each palace file
-  for (const [palace, blocks] of Object.entries(byPalace)) {
-    const fileName = `${palace.replace(/_/g, "-")}-crawled.json`;
-    const filePath = path.join(OUTPUT_DIR, fileName);
+    // Get all existing texts for dedup
+    const existingTexts = getExistingTexts(existing);
     
-    let existing = {
-      palace: palace.toUpperCase(),
-      source: "tuvi.cohoc.net",
-      import_mode: "crawled",
-      last_updated: new Date().toISOString(),
-      total_blocks: 0,
-      sections: [{
-        section_id: palace,
-        title: `CUNG ${palace.toUpperCase().replace(/_/g, " ")}`,
-        blocks: [],
-      }],
-    };
-    
-    // Load existing if any
-    if (fs.existsSync(filePath)) {
-      try {
-        existing = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-      } catch (e) {
-        console.log(`  Warning: Could not parse ${fileName}, creating new`);
-      }
+    // Find or create "crawled" section
+    let crawledSection = existing.sections.find(s => s.section_id === "crawled");
+    if (!crawledSection) {
+      crawledSection = { section_id: "crawled", title: "Crawled from cohoc.net", blocks: [] };
+      existing.sections.push(crawledSection);
     }
     
-    // Add new blocks (avoid duplicates by text)
-    const existingTexts = new Set(
-      existing.sections[0].blocks.map(b => b.raw_text.substring(0, 100))
-    );
-    
-    let added = 0;
+    let added = 0, skipped = 0;
     for (const block of blocks) {
       const textKey = block.raw_text.substring(0, 100);
-      if (!existingTexts.has(textKey)) {
-        existing.sections[0].blocks.push(block);
+      if (existingTexts.has(textKey)) {
+        skipped++;
+      } else {
+        crawledSection.blocks.push(block);
         existingTexts.add(textKey);
         added++;
       }
     }
     
-    existing.total_blocks = existing.sections[0].blocks.length;
+    // Update total_blocks
+    existing.total_blocks = existing.sections.reduce((sum, s) => sum + (s.blocks?.length || 0), 0);
     existing.last_updated = new Date().toISOString();
     
     fs.writeFileSync(filePath, JSON.stringify(existing, null, 2));
-    console.log(`  ${palace}: +${added} blocks (total: ${existing.total_blocks})`);
+    if (added > 0 || skipped > 0) {
+      console.log(`  ${fileName}: +${added} new, ${skipped} dup (total: ${existing.total_blocks})`);
+    }
   }
 }
 
-// Sleep helper
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-// Main
 async function main() {
   console.log(`\n🔮 Crawling ${COUNT} random charts from tuvi.cohoc.net\n`);
-  console.log(`Output: ${OUTPUT_DIR}\n`);
   
-  let totalBlocks = 0;
-  let successCount = 0;
+  let totalBlocks = 0, successCount = 0;
   
   for (let i = 0; i < COUNT; i++) {
     const birth = generateRandomBirth();
-    console.log(`\n[${i + 1}/${COUNT}] ${birth.canChiDisplay} - ${birth.day}/${birth.month}/${birth.year} - Giờ ${birth.hourName} - ${birth.gender} - ${birth.calendar}`);
+    console.log(`[${i + 1}/${COUNT}] ${birth.canChiDisplay} - ${birth.day}/${birth.month}/${birth.year} - Giờ ${birth.hourName} - ${birth.gender} - ${birth.calendar}`);
     
     try {
-      // Try direct URL format first
-      const directUrl = `https://tuvi.cohoc.net/bac-phai-la-so-tu-vi-${birth.gender}-${birth.canChi}-thang-${birth.month}-ngay-${birth.day}-gio-${birth.hour}-${birth.calendar}-${birth.gender}.html`;
+      const html = await submitChartForm(birth);
       
-      console.log(`  Fetching: ${directUrl}`);
-      
-      let html;
-      try {
-        html = await fetchChartPage(directUrl);
-      } catch (e) {
-        // If direct URL fails, try form submission
-        console.log(`  Direct URL failed, trying form submission...`);
-        const result = await submitChartForm(birth);
-        if (result && result.html) {
-          html = result.html;
-        } else if (result) {
-          html = await fetchChartPage(result);
-        } else {
-          throw new Error("Could not get chart page");
-        }
+      if (!html.includes("CUNG MỆNH") && !html.includes("CUNG MỆ")) {
+        console.log("  No chart content found");
+        continue;
       }
       
-      // Parse interpretations
-      const blocks = parseInterpretations(html, birth);
-      console.log(`  Found ${blocks.length} interpretation blocks`);
+      const blocks = parseInterpretations(html);
+      console.log(`  Found ${blocks.length} blocks`);
       
       if (blocks.length > 0) {
         mergeBlocks(blocks);
         totalBlocks += blocks.length;
         successCount++;
       }
-      
     } catch (error) {
       console.log(`  Error: ${error.message}`);
     }
     
-    // Delay between requests
-    if (i < COUNT - 1) {
-      console.log(`  Waiting ${DELAY_MS}ms...`);
-      await sleep(DELAY_MS);
-    }
+    if (i < COUNT - 1) await sleep(DELAY_MS);
   }
   
-  console.log(`\n✅ Done! Crawled ${successCount}/${COUNT} charts, ${totalBlocks} total blocks\n`);
+  console.log(`\n✅ Done! ${successCount}/${COUNT} charts, ${totalBlocks} blocks\n`);
 }
 
 main().catch(console.error);

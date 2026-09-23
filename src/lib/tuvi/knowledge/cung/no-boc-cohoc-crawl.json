@@ -2,8 +2,8 @@
   "palace": "NO_BOC",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-23T10:08:50.158Z",
-  "total_blocks": 880,
+  "last_updated": "2026-09-23T10:12:42.468Z",
+  "total_blocks": 886,
   "hashes": [
     "d014ddde2c12",
     "1aa583b0feba",
@@ -884,7 +884,13 @@
     "83eaabc15ddd",
     "c8344d5484fa",
     "f9ac60ab7b71",
-    "9a1c48b0a044"
+    "9a1c48b0a044",
+    "95ce313f14c3",
+    "cd9b053c44fa",
+    "b03dd89433d4",
+    "29c61ad0abac",
+    "03dc169a68f9",
+    "6a048923aff2"
   ],
   "sections": [
     {
@@ -8992,6 +8998,60 @@
           "id": "no-boc_crawl_1790158130157_7",
           "type": "general",
           "text": "1. Cung Nô bộc (bạn bè, đồng sự, cấp dưới, người hợp tác) Hóa kỵ phi phục Tam điểm tại Tí, Ngọ, Hợi. 2. Đại vận: 113 - 122 tuổi ở Tí nhận kỵ của Nô bộc tiên thiên báo hiệu đại vận này có Kỵ Nô bộc. 3. Cung Nô bộc của Đại vận: 113 - 122 tuổi tại Tị Hóa kỵ phi phục nhập cung Dần. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Dần, Thân, Sửu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dậu, Mão, Thân khi cung Nô bộc lưu niên ở tại cung Dần, Thân, Sửu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "no-boc_crawl_1790158362468_0",
+          "type": "general",
+          "text": "1. Cung Nô bộc (bạn bè, đồng sự, cấp dưới, người hợp tác) Hóa lộc phi phục Tam điểm tại Tị, Hợi, Thìn. 2. Đại vận: 25 - 34 tuổi ở Hợi (xung chiếu với Tị) nhận lộc của Nô bộc tiên thiên báo hiệu đại vận này có Lộc Nô bộc. 3. Cung Nô bộc của Đại vận: 25 - 34 tuổi tại Thìn Hóa lộc phi phục nhập cung Thân. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Mão, Dậu, Dần khi cung Nô bộc lưu niên ở tại cung Thân, Dần, Mùi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "no-boc_crawl_1790158362468_1",
+          "type": "general",
+          "text": "1. Cung Nô bộc (bạn bè, đồng sự, cấp dưới, người hợp tác) Hóa kỵ phi phục Tam điểm tại Tí, Ngọ, Hợi. 2. Đại vận: 25 - 34 tuổi ở Hợi (vị trí nhất lục cộng tông với cung xung chiếu của cung Tí) nhận kỵ của Nô bộc tiên thiên báo hiệu đại vận này có Kỵ Nô bộc. 3. Cung Nô bộc của Đại vận: 25 - 34 tuổi tại Thìn Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Nô bộc lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "no-boc_crawl_1790158362468_2",
+          "type": "general",
+          "text": "1. Cung Nô bộc (bạn bè, đồng sự, cấp dưới, người hợp tác) Hóa kỵ phi phục Tam điểm tại Tí, Ngọ, Hợi. 2. Đại vận: 35 - 44 tuổi ở Tí nhận kỵ của Nô bộc tiên thiên báo hiệu đại vận này có Kỵ Nô bộc. 3. Cung Nô bộc của Đại vận: 35 - 44 tuổi tại Tị Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Nô bộc lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "no-boc_crawl_1790158362468_3",
+          "type": "general",
+          "text": "1. Cung Nô bộc (bạn bè, đồng sự, cấp dưới, người hợp tác) Hóa lộc phi phục Tam điểm tại Tị, Hợi, Thìn. 2. Đại vận: 75 - 84 tuổi ở Thìn (vị trí nhất lục cộng tông với cung xung chiếu của cung Tị) nhận lộc của Nô bộc tiên thiên báo hiệu đại vận này có Lộc Nô bộc. 3. Cung Nô bộc của Đại vận: 75 - 84 tuổi tại Dậu Hóa lộc phi phục nhập cung Tí. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tí, Ngọ, Hợi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Mùi, Sửu, Ngọ khi cung Nô bộc lưu niên ở tại cung Tí, Ngọ, Hợi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "no-boc_crawl_1790158362468_4",
+          "type": "general",
+          "text": "1. Cung Nô bộc (bạn bè, đồng sự, cấp dưới, người hợp tác) Hóa lộc phi phục Tam điểm tại Tị, Hợi, Thìn. 2. Đại vận: 85 - 94 tuổi ở Tị nhận lộc của Nô bộc tiên thiên báo hiệu đại vận này có Lộc Nô bộc. 3. Cung Nô bộc của Đại vận: 85 - 94 tuổi tại Tuất Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Nô bộc lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "no-boc_crawl_1790158362468_5",
+          "type": "general",
+          "text": "1. Cung Nô bộc (bạn bè, đồng sự, cấp dưới, người hợp tác) Hóa kỵ phi phục Tam điểm tại Tí, Ngọ, Hợi. 2. Đại vận: 95 - 104 tuổi ở Ngọ (xung chiếu với Tí) nhận kỵ của Nô bộc tiên thiên báo hiệu đại vận này có Kỵ Nô bộc. 3. Cung Nô bộc của Đại vận: 95 - 104 tuổi tại Hợi Hóa kỵ phi phục nhập cung Thân. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Mão, Dậu, Dần khi cung Nô bộc lưu niên ở tại cung Thân, Dần, Mùi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Cổ Học"

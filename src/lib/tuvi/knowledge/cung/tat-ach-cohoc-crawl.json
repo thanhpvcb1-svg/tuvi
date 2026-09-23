@@ -2,8 +2,8 @@
   "palace": "TAT_ACH",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-23T10:08:50.308Z",
-  "total_blocks": 936,
+  "last_updated": "2026-09-23T10:12:42.578Z",
+  "total_blocks": 942,
   "hashes": [
     "7a63d21e5b72",
     "137c7b1dedf2",
@@ -940,7 +940,13 @@
     "37ca1bf1f3d9",
     "cb1dff424f57",
     "7a37ec61fee4",
-    "0029a8d4141c"
+    "0029a8d4141c",
+    "3c9f313cf046",
+    "e50c3d74e07d",
+    "016b6b1dc5f6",
+    "d57b93a43c97",
+    "3b56f0cd3bb2",
+    "37617caa2eef"
   ],
   "sections": [
     {
@@ -9516,6 +9522,60 @@
           "id": "tat-ach_crawl_1790158130308_6",
           "type": "general",
           "text": "Trong vận này, vấn đề Tật ách có 1 điều kiện tốt, 2 điều kiện tốt vừa phải, 1 điều kiện xấu, 1 điều kiện xấu vừa phải. Tạm kết là tốt xấu đan xen, tuy nhiên tốt khá nhiều , phần xấu không đáng lo ngại. * Cung Tật ách (chủ sự): Về người: tư duy, tính khí, tật bệnh, sở thích cá nhân. Về sự: lao lực, lao bác, lao tâm, làm việc mọi thứ một mình. Về vật: tai ách, sự cố bất ngờ, sức khỏe, chăm sóc thân thể sắc đẹp.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tat-ach_crawl_1790158362578_0",
+          "type": "general",
+          "text": "1. Cung Tật ách (thân thể, sức khỏe, bệnh tật) Hóa kỵ phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 35 - 44 tuổi ở Tí (vị trí nhất lục cộng tông với cung xung chiếu của cung Sửu) nhận kỵ của Tật ách tiên thiên báo hiệu đại vận này có Kỵ Tật ách. 3. Cung Tật ách của Đại vận: 35 - 44 tuổi tại Mùi Hóa kỵ phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Tật ách lưu niên ở tại cung Mão, Dậu, Dần vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tat-ach_crawl_1790158362578_1",
+          "type": "general",
+          "text": "1. Cung Tật ách (thân thể, sức khỏe, bệnh tật) Hóa kỵ phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 45 - 54 tuổi ở Sửu nhận kỵ của Tật ách tiên thiên báo hiệu đại vận này có Kỵ Tật ách. 3. Cung Tật ách của Đại vận: 45 - 54 tuổi tại Thân Hóa kỵ phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Tật ách lưu niên ở tại cung Mão, Dậu, Dần vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tat-ach_crawl_1790158362578_2",
+          "type": "general",
+          "text": "1. Cung Tật ách (thân thể, sức khỏe, bệnh tật) Hóa lộc phi phục Tam điểm tại Thân, Dần, Mùi. 2. Đại vận: 55 - 64 tuổi ở Dần (xung chiếu với Thân) nhận lộc của Tật ách tiên thiên báo hiệu đại vận này có Lộc Tật ách. 3. Cung Tật ách của Đại vận: 55 - 64 tuổi tại Dậu Hóa lộc phi phục nhập cung Tí. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tí, Ngọ, Hợi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tị, Hợi, Thìn khi cung Tật ách lưu niên ở tại cung Tí, Ngọ, Hợi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tat-ach_crawl_1790158362578_3",
+          "type": "general",
+          "text": "1. Cung Tật ách (thân thể, sức khỏe, bệnh tật) Hóa lộc phi phục Tam điểm tại Thân, Dần, Mùi. 2. Đại vận: 105 - 114 tuổi ở Mùi (vị trí nhất lục cộng tông với cung xung chiếu của cung Thân) nhận lộc của Tật ách tiên thiên báo hiệu đại vận này có Lộc Tật ách. 3. Cung Tật ách của Đại vận: 105 - 114 tuổi tại Dần Hóa lộc phi phục nhập cung Tị. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tị, Hợi, Thìn; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tuất, Thìn, Dậu khi cung Tật ách lưu niên ở tại cung Tị, Hợi, Thìn vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tat-ach_crawl_1790158362578_4",
+          "type": "general",
+          "text": "1. Cung Tật ách (thân thể, sức khỏe, bệnh tật) Hóa kỵ phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 105 - 114 tuổi ở Mùi (xung chiếu với Sửu) nhận kỵ của Tật ách tiên thiên báo hiệu đại vận này có Kỵ Tật ách. 3. Cung Tật ách của Đại vận: 105 - 114 tuổi tại Dần Hóa kỵ phi phục nhập cung Tí. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tí, Ngọ, Hợi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tị, Hợi, Thìn khi cung Tật ách lưu niên ở tại cung Tí, Ngọ, Hợi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tat-ach_crawl_1790158362578_5",
+          "type": "general",
+          "text": "1. Cung Tật ách (thân thể, sức khỏe, bệnh tật) Hóa lộc phi phục Tam điểm tại Thân, Dần, Mùi. 2. Đại vận: 115 - 124 tuổi ở Thân nhận lộc của Tật ách tiên thiên báo hiệu đại vận này có Lộc Tật ách. 3. Cung Tật ách của Đại vận: 115 - 124 tuổi tại Mão Hóa lộc phi phục nhập cung Tuất. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tuất, Thìn, Dậu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Mão, Dậu, Dần khi cung Tật ách lưu niên ở tại cung Tuất, Thìn, Dậu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Cổ Học"

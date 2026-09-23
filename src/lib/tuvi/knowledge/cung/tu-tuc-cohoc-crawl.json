@@ -2,8 +2,8 @@
   "palace": "TU_TUC",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-23T10:08:50.195Z",
-  "total_blocks": 823,
+  "last_updated": "2026-09-23T10:12:42.487Z",
+  "total_blocks": 829,
   "hashes": [
     "297d9cf852c1",
     "1233fc9696f0",
@@ -827,7 +827,13 @@
     "4bd5276ed003",
     "1254a4e77bc7",
     "2e98430c939d",
-    "798bf9872b16"
+    "798bf9872b16",
+    "cd638fef3bd1",
+    "0bd23e7f1014",
+    "ae2321d836b6",
+    "ccf075e14a95",
+    "55ebfd3f4e95",
+    "e7a9f9df5650"
   ],
   "sections": [
     {
@@ -8332,6 +8338,60 @@
           "id": "tu-tuc_crawl_1790158130195_3",
           "type": "general",
           "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa lộc phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 63 - 72 tuổi ở Tị (xung chiếu với Hợi) nhận lộc của Tử tức tiên thiên báo hiệu đại vận này có Lộc Tử tức. 3. Cung Tử tức của Đại vận: 63 - 72 tuổi tại Dần Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thìn, Tuất, Mão khi cung Tử tức lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158362487_0",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa lộc phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 15 - 24 tuổi ở Tuất (vị trí nhất lục cộng tông với cung xung chiếu của cung Hợi) nhận lộc của Tử tức tiên thiên báo hiệu đại vận này có Lộc Tử tức. 3. Cung Tử tức của Đại vận: 15 - 24 tuổi tại Mùi Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thìn, Tuất, Mão khi cung Tử tức lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158362487_1",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa lộc phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 25 - 34 tuổi ở Hợi nhận lộc của Tử tức tiên thiên báo hiệu đại vận này có Lộc Tử tức. 3. Cung Tử tức của Đại vận: 25 - 34 tuổi tại Thân Hóa lộc phi phục nhập cung Dần. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Dần, Thân, Sửu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tị, Hợi, Thìn khi cung Tử tức lưu niên ở tại cung Dần, Thân, Sửu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158362487_2",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa kỵ phi phục Tam điểm tại Thân, Dần, Mùi. 2. Đại vận: 55 - 64 tuổi ở Dần (xung chiếu với Thân) nhận kỵ của Tử tức tiên thiên báo hiệu đại vận này có Kỵ Tử tức. 3. Cung Tử tức của Đại vận: 55 - 64 tuổi tại Hợi Hóa kỵ phi phục nhập cung Thân. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Hợi, Tị, Tuất khi cung Tử tức lưu niên ở tại cung Thân, Dần, Mùi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158362487_3",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa lộc phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 85 - 94 tuổi ở Tị (xung chiếu với Hợi) nhận lộc của Tử tức tiên thiên báo hiệu đại vận này có Lộc Tử tức. 3. Cung Tử tức của Đại vận: 85 - 94 tuổi tại Dần Hóa lộc phi phục nhập cung Tị. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tị, Hợi, Thìn; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Tử tức lưu niên ở tại cung Tị, Hợi, Thìn vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158362487_4",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa kỵ phi phục Tam điểm tại Thân, Dần, Mùi. 2. Đại vận: 105 - 114 tuổi ở Mùi (vị trí nhất lục cộng tông với cung xung chiếu của cung Thân) nhận kỵ của Tử tức tiên thiên báo hiệu đại vận này có Kỵ Tử tức. 3. Cung Tử tức của Đại vận: 105 - 114 tuổi tại Thìn Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thìn, Tuất, Mão khi cung Tử tức lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158362487_5",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa kỵ phi phục Tam điểm tại Thân, Dần, Mùi. 2. Đại vận: 115 - 124 tuổi ở Thân nhận kỵ của Tử tức tiên thiên báo hiệu đại vận này có Kỵ Tử tức. 3. Cung Tử tức của Đại vận: 115 - 124 tuổi tại Tị Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thìn, Tuất, Mão khi cung Tử tức lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Cổ Học"

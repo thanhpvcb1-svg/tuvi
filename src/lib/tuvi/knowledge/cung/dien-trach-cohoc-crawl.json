@@ -2,8 +2,8 @@
   "palace": "DIEN_TRACH",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-23T10:08:50.245Z",
-  "total_blocks": 1092,
+  "last_updated": "2026-09-23T10:12:42.623Z",
+  "total_blocks": 1097,
   "hashes": [
     "43ce07eafa2c",
     "09d19c972ae6",
@@ -1096,7 +1096,12 @@
     "1e47fb1f692d",
     "6a3322c9a87c",
     "aa23eb8a62e3",
-    "cfef8dcddb34"
+    "cfef8dcddb34",
+    "4844c26566fb",
+    "fcae32151117",
+    "9eb100178a47",
+    "2740873de1e4",
+    "7ef392924863"
   ],
   "sections": [
     {
@@ -12231,6 +12236,76 @@
           "id": "dien-trach_crawl_1790158130245_6",
           "type": "general",
           "text": "1. Cung Điền trạch (gia đình, kho tiền, bất động sản, gia sản) Hóa lộc phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 113 - 122 tuổi ở Tí (vị trí nhất lục cộng tông với cung xung chiếu của cung Sửu) nhận lộc của Điền trạch tiên thiên báo hiệu đại vận này có Lộc Điền trạch. 3. Cung Điền trạch của Đại vận: 113 - 122 tuổi tại Mão Hóa lộc phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tí, Ngọ, Hợi khi cung Điền trạch lưu niên ở tại cung Mão, Dậu, Dần vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "dien-trach_crawl_1790158362623_0",
+          "type": "star_in_palace",
+          "text": "Cung Điền trạch chủ về: gia đình, kho tiền, bất động sản, gia sản. Tọa thủ : Vũ khúc, Thiên phủ. Xung chiếu : Thất sát, Lộc tồn, Thiên hình, Văn khúc , Hàm trì. Tam hợp : Tử vi, Thiên tướng - Liêm trinh, Âm sát, Linh tinh , Văn xương , Thiên hỉ. Giáp cung : Thiên đồng, Thiên mã, Thiên khôi , Hóa quyền - Thái dương, Thái âm, Địa kiếp , Tả phù , Hữu bật , Hóa lộc. Ngũ hành khí của cung Nhâm Tí: 20% THỦY (kị thần), 50% THỦY (kị thần), 30% MỘC (kị thần). Đây là cung khí đại hung . Vũ khúc hành KIM là nhàn thần. Thiên phủ hành THỔ là hỉ thần. Cung Điền trạch can Nhâm làm cho: - Thiên lương Hóa lộc nhập cung Tài bạch (cung Nô bộc của cung Điền trạch). Cung Tài bạch can Ất chuyển Thiên cơ Hóa Lộc nhập cung Thiên di, chuyển Thái âm Hóa kỵ nhập cung Quan lộc. - Cung Điền trạch làm Vũ khúc tự hóa kỵ, chuyển Thiên lương Hóa Lộc nhập cung Tài bạch,",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "tu_vi",
+            "thien_co",
+            "thai_duong",
+            "vu_khuc",
+            "thien_dong",
+            "liem_trinh",
+            "thien_phu",
+            "thai_am",
+            "thien_tuong",
+            "thien_luong",
+            "that_sat"
+          ]
+        },
+        {
+          "id": "dien-trach_crawl_1790158362623_1",
+          "type": "star_in_palace",
+          "text": "Cung Nô bộc chủ về: bạn bè, đồng sự, cấp dưới, người hợp tác. Tọa thủ : Tham lang, Hồng loan. Xung chiếu : Liêm trinh, Âm sát, Linh tinh , Văn xương , Thiên hỉ. Tam hợp : Thất sát, Lộc tồn, Thiên hình, Văn khúc , Hàm trì - Phá quân, Thiên riêu. Giáp cung : Thái dương, Thái âm, Địa kiếp , Tả phù , Hữu bật , Hóa lộc - Thiên cơ, Cự môn, Hóa khoa, Hóa kỵ. Ngũ hành khí của cung Nhâm Dần: 20% THỦY (kị thần), 50% MỘC (kị thần), 30% KIM (nhàn thần). Đây là cung khí đại hung . Tham lang hành MỘC là kị thần. Hồng loan hành THỦY là kị thần. Cung Nô bộc can Nhâm làm cho: - Thiên lương Hóa lộc nhập cung Tài bạch (cung Điền trạch của cung Nô bộc). Cung Tài bạch can Ất chuyển Thiên cơ Hóa Lộc nhập cung Thiên di, chuyển Thái âm Hóa kỵ nhập cung Quan lộc. - Vũ khúc Hóa kỵ nhập cung Điền trạch (cung Phu thê của cung Nô bộc). Cung Điền trạch can Nhâm chuyển Thiên lương Hóa Lộc nhập cung Tài bạch, Vũ khúc tự hóa kỵ.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thien_co",
+            "thai_duong",
+            "vu_khuc",
+            "liem_trinh",
+            "thai_am",
+            "tham_lang",
+            "cu_mon",
+            "thien_luong",
+            "that_sat",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "dien-trach_crawl_1790158362623_2",
+          "type": "general",
+          "text": "1. Cung Điền trạch (gia đình, kho tiền, bất động sản, gia sản) Hóa lộc phi phục Tam điểm tại Tị, Hợi, Thìn. 2. Đại vận: 25 - 34 tuổi ở Hợi (xung chiếu với Tị) nhận lộc của Điền trạch tiên thiên báo hiệu đại vận này có Lộc Điền trạch. 3. Cung Điền trạch của Đại vận: 25 - 34 tuổi tại Dần Hóa lộc phi phục nhập cung Tị. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tị, Hợi, Thìn; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dần, Thân, Sửu khi cung Điền trạch lưu niên ở tại cung Tị, Hợi, Thìn vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "dien-trach_crawl_1790158362623_3",
+          "type": "general",
+          "text": "1. Cung Điền trạch (gia đình, kho tiền, bất động sản, gia sản) Hóa lộc phi phục Tam điểm tại Tị, Hợi, Thìn. 2. Đại vận: 85 - 94 tuổi ở Tị nhận lộc của Điền trạch tiên thiên báo hiệu đại vận này có Lộc Điền trạch. 3. Cung Điền trạch của Đại vận: 85 - 94 tuổi tại Thân Hóa lộc phi phục nhập cung Dần. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Dần, Thân, Sửu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Hợi, Tị, Tuất khi cung Điền trạch lưu niên ở tại cung Dần, Thân, Sửu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "dien-trach_crawl_1790158362623_4",
+          "type": "general",
+          "text": "Trong vận này, vấn đề Điền trạch có 1 điều kiện rất xấu, 1 điều kiện xấu vừa phải. Tạm kết là rất xấu , rất đáng lo ngại. * Cung Điền trạch (chủ vật): Về người: gia tộc, thân thích, gia đình nhỏ, cách cục của sản nghiệp gia tộc. Về sự: chuyển nhà, sự cố bất ngờ, cửa hàng, nhà xưởng, cách cục của sự nghiệp. Về vật: gia nghiệp, tổ nghiệp, kế thừa, cách cục của bất động sản tiên thiên.",
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Cổ Học"

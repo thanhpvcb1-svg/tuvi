@@ -14,7 +14,7 @@ Triển khai:
 ## TECH STACK
 
 - **Runtime:** Node.js
-- **Functions:** Netlify Functions
+- **Functions:** Cloudflare Pages Functions
 - **Language:** TypeScript/JavaScript
 - **External APIs:** AI services (Claude, etc.)
 
@@ -24,13 +24,8 @@ Triển khai:
 functions/
 └── api/
     ├── ai/
-    │   └── [AI-related endpoints]
-    ├── tiktok-oembed.ts
+    │   └── luan-giai.ts
     └── youtube-lessons.ts
-
-netlify/
-└── functions/
-    └── luan-giai.js
 ```
 
 ## NGUYÊN TẮC
@@ -111,10 +106,8 @@ export async function handler(event: HandlerEvent): Promise<HandlerResponse> {
 
 | Endpoint | Method | Purpose |
 |----------|--------|---------|
-| `/api/ai/*` | POST | AI analysis |
-| `/api/tiktok-oembed` | GET | TikTok embed |
+| `/api/ai/luan-giai` | POST | AI analysis |
 | `/api/youtube-lessons` | GET | YouTube data |
-| `/.netlify/functions/luan-giai` | POST | Luận giải AI |
 
 ## SECURITY
 

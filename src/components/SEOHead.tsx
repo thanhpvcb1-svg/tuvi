@@ -9,7 +9,7 @@ type Props = {
   noindex?: boolean;
 };
 
-const SITE_URL = "https://tuvi.pages.dev";
+const SITE_URL = "https://tuviphonglam.com";
 
 const upsertMeta = (selector: string, attributes: Record<string, string>) => {
   let element = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -34,7 +34,7 @@ export default function SEOHead({ title, description, canonicalPath, ogImage = `
     upsertMeta('meta[property="og:type"]', { property: "og:type", content: "website" });
     upsertMeta('meta[property="og:url"]', { property: "og:url", content: `${SITE_URL}${canonicalPath}` });
     upsertMeta('meta[property="og:image"]', { property: "og:image", content: ogImage });
-    upsertMeta('meta[property="og:site_name"]', { property: "og:site_name", content: "LaSoTuVi" });
+    upsertMeta('meta[property="og:site_name"]', { property: "og:site_name", content: "TuViPhongLam" });
     upsertMeta('meta[property="og:locale"]', { property: "og:locale", content: "vi_VN" });
     upsertMeta('meta[name="twitter:card"]', { name: "twitter:card", content: "summary_large_image" });
     upsertMeta('meta[name="twitter:title"]', { name: "twitter:title", content: title });

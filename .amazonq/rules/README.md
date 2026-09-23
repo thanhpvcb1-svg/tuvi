@@ -105,7 +105,7 @@ Chuyển sang vai trò [Tên Agent]
 - React + TypeScript
 - Vite
 - CSS (custom)
-- Netlify Functions
+- Cloudflare Pages Functions
 
 **Structure:**
 ```

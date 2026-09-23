@@ -166,7 +166,7 @@ Kiểm tra alignment:
 - Frontend: React + TypeScript + Vite
 - Styling: CSS (custom)
 - Routing: React Router
-- Deployment: Netlify
+- Deployment: Cloudflare Pages
 
 **Cấu trúc:**
 ```

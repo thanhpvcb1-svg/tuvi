@@ -2,8 +2,8 @@
   "palace": "HUYNH_DE",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-23T10:08:50.291Z",
-  "total_blocks": 882,
+  "last_updated": "2026-09-23T10:12:42.530Z",
+  "total_blocks": 885,
   "hashes": [
     "d556b4a3e3d9",
     "278512f9ba3e",
@@ -886,7 +886,10 @@
     "2a250919739d",
     "adbf5862b53a",
     "a6e983be9463",
-    "e6441c23cf96"
+    "e6441c23cf96",
+    "3ef63f83c89b",
+    "86b7a077a4ed",
+    "3fa55d078201"
   ],
   "sections": [
     {
@@ -8881,6 +8884,33 @@
           "id": "huynh-de_crawl_1790158130291_1",
           "type": "general",
           "text": "1. Cung Huynh đệ (anh chị em, bạn bè quan hệ, quan hệ hợp tác sự nghiệp) Hóa lộc phi phục Tam điểm tại Dần, Thân, Sửu. 2. Đại vận: 103 - 112 tuổi ở Sửu (vị trí nhất lục cộng tông với cung xung chiếu của cung Dần) nhận lộc của Huynh đệ tiên thiên báo hiệu đại vận này có Lộc Huynh đệ. 3. Cung Huynh đệ của Đại vận: 103 - 112 tuổi tại Tí Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dần, Thân, Sửu khi cung Huynh đệ lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "huynh-de_crawl_1790158362530_0",
+          "type": "general",
+          "text": "1. Cung Huynh đệ (anh chị em, bạn bè quan hệ, quan hệ hợp tác sự nghiệp) Hóa lộc phi phục Tam điểm tại Dần, Thân, Sửu. 2. Đại vận: 45 - 54 tuổi ở Sửu (vị trí nhất lục cộng tông với cung xung chiếu của cung Dần) nhận lộc của Huynh đệ tiên thiên báo hiệu đại vận này có Lộc Huynh đệ. 3. Cung Huynh đệ của Đại vận: 45 - 54 tuổi tại Tí Hóa lộc phi phục nhập cung Tị. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tị, Hợi, Thìn; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Ngọ, Tí, Tị khi cung Huynh đệ lưu niên ở tại cung Tị, Hợi, Thìn vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "huynh-de_crawl_1790158362530_1",
+          "type": "general",
+          "text": "1. Cung Huynh đệ (anh chị em, bạn bè quan hệ, quan hệ hợp tác sự nghiệp) Hóa lộc phi phục Tam điểm tại Dần, Thân, Sửu. 2. Đại vận: 55 - 64 tuổi ở Dần nhận lộc của Huynh đệ tiên thiên báo hiệu đại vận này có Lộc Huynh đệ. 3. Cung Huynh đệ của Đại vận: 55 - 64 tuổi tại Sửu Hóa lộc phi phục nhập cung Tuất. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tuất, Thìn, Dậu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Hợi, Tị, Tuất khi cung Huynh đệ lưu niên ở tại cung Tuất, Thìn, Dậu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "huynh-de_crawl_1790158362530_2",
+          "type": "general",
+          "text": "1. Cung Huynh đệ (anh chị em, bạn bè quan hệ, quan hệ hợp tác sự nghiệp) Hóa lộc phi phục Tam điểm tại Dần, Thân, Sửu. 2. Đại vận: 115 - 124 tuổi ở Thân (xung chiếu với Dần) nhận lộc của Huynh đệ tiên thiên báo hiệu đại vận này có Lộc Huynh đệ. 3. Cung Huynh đệ của Đại vận: 115 - 124 tuổi tại Mùi Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dần, Thân, Sửu khi cung Huynh đệ lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Cổ Học"
