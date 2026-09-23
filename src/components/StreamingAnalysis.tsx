@@ -495,6 +495,10 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
 
   return (
     <div className="analysis-panel">
+      <div style={{ background: "red", color: "white", padding: "20px", marginBottom: "20px" }}>
+        <strong>DEBUG v1:</strong> visibleCount={visibleCount}, analyses={analyses.length}, isStreaming={visibleCount < analyses.length ? "true" : "false"}
+        <button onClick={() => alert("Button works!")} style={{ marginLeft: "10px" }}>Test Button</button>
+      </div>
       <div className="analysis-header">
         <div className="analysis-header-content">
           <h3>📖 Luận giải 12 cung</h3>
