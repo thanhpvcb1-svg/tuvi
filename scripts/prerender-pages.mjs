@@ -3,7 +3,7 @@ import path from "node:path";
 
 const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
-const siteUrl = "https://tuvi.pages.dev";
+const siteUrl = "https://tuviphonglam.com";
 
 const articlePosts = [
   {
