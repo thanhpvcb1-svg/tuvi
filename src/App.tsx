@@ -48,7 +48,7 @@ const homeSectionRoutes: Record<HomeSectionId, string> = {
   "lien-he": "/lien-he",
 };
 
-const siteUrl = "https://tuvi.pages.dev";
+const siteUrl = "https://tuviphonglam.com";
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
 const contactSmsNumber = import.meta.env.VITE_CONTACT_SMS_NUMBER?.trim() || "";
 const contactZaloUrl = import.meta.env.VITE_CONTACT_ZALO_URL?.trim() || "https://zalo.me/";
@@ -1009,17 +1009,19 @@ export default function App() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "LaSoTuVi",
+    name: "TuViPhongLam",
     url: siteUrl,
     inLanguage: "vi-VN",
+    description: "Lập lá số tử vi online miễn phí theo ngày giờ sinh",
   };
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "LaSoTuVi",
+    name: "TuViPhongLam",
     url: siteUrl,
-    description: "Nền tảng lập lá số tử vi online và hỗ trợ luận giải theo câu hỏi cụ thể.",
+    logo: `${siteUrl}/favicon.svg`,
+    description: "Nền tảng lập lá số tử vi online và luận giải theo Bắc Phái.",
     ...(contactEmail ? { email: contactEmail } : {}),
   };
 
@@ -1058,96 +1060,170 @@ export default function App() {
   const compatibilityGuideSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Hướng dẫn xem hợp tuổi theo lá số",
-    description: "Trang hướng dẫn chuẩn bị dữ liệu và câu hỏi trước khi dùng công cụ hợp tuổi theo lá số.",
+    name: "Xem Hợp Tuổi Vợ Chồng Theo Lá Số Tử Vi",
+    description: "So khớp hợp tuổi tình cảm, hôn nhân, hợp tác theo lá số tử vi. Đối chiếu Mệnh, Thân, cung Phu Thê.",
     provider: {
       "@type": "Organization",
-      name: "LaSoTuVi",
+      name: "TuViPhongLam",
       url: siteUrl,
     },
+    serviceType: "Tư vấn hợp tuổi tử vi",
+    areaServed: "VN",
+  };
+
+  // SoftwareApplication schema cho trang lập lá số
+  const softwareAppSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Công Cụ Lập Lá Số Tử Vi Online",
+    applicationCategory: "LifestyleApplication",
+    operatingSystem: "Web Browser",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "VND",
+    },
+    description: "Công cụ lập lá số tử vi online miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, đại vận, tiểu vận.",
+    url: `${siteUrl}/lap-la-so`,
+    provider: {
+      "@type": "Organization",
+      name: "TuViPhongLam",
+      url: siteUrl,
+    },
+  };
+
+  // Product schema cho bảng giá
+  const productSchemas = primaryPlans.map((plan) => ({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: plan.name,
+    description: plan.description,
+    brand: {
+      "@type": "Brand",
+      name: "TuViPhongLam",
+    },
+    offers: {
+      "@type": "Offer",
+      price: plan.price.replace(/[^\d]/g, "") || "0",
+      priceCurrency: "VND",
+      availability: "https://schema.org/InStock",
+      url: `${siteUrl}/bang-gia`,
+      seller: {
+        "@type": "Organization",
+        name: "TuViPhongLam",
+      },
+    },
+  }));
+
+  // ItemList schema cho trang bài viết
+  const articleListSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Kiến Thức Tử Vi Bắc Phái - Tứ Hóa Phi Tinh",
+    description: "Tổng hợp bài viết chuyên sâu về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc Mệnh Thân, đại vận lưu niên.",
+    url: `${siteUrl}/bai-viet`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: knowledgeArticles.slice(0, 10).map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${siteUrl}/bai-viet/${article.slug}`,
+        name: article.title,
+      })),
+    },
+  };
+
+  // VideoGallery schema cho trang video
+  const videoGallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Video Học Tử Vi Bắc Phái - Tứ Hóa Phi Tinh",
+    description: "Tổng hợp video ngắn hướng dẫn Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc lá số dễ hiểu cho người mới.",
+    url: `${siteUrl}/video`,
   };
 
   const pageSeo = (() => {
     switch (activePage) {
       case "lap-la-so":
         return {
-          title: "Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh",
+          title: "Lập Lá Số Tử Vi Online - Xem Mệnh Thân 12 Cung Miễn Phí | TuViPhongLam",
           description:
-            "Công cụ lập lá số tử vi online miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
+            "Công cụ lập lá số tử vi miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, đại vận, tiểu vận. Luận giải Bắc Phái chuẩn xác.",
           canonicalPath: "/lap-la-so",
         };
       case "bang-gia":
         return {
-          title: "Bảng Giá Luận Giải Tử Vi - Hỏi 1 Câu Từ 50.000đ",
+          title: "Bảng Giá Luận Giải Tử Vi 2024 | Hỏi 1 Câu 50K | TuViPhongLam",
           description:
-            "Xem các gói luận giải tử vi: lập lá số miễn phí, hỏi 1 câu theo lá số 50.000đ và tư vấn trực tiếp 999.000đ.",
+            "Lập lá số miễn phí, hỏi 1 câu 50.000đ, tư vấn trực tiếp 999.000đ. Luận giải tử vi Bắc Phái chuyên sâu.",
           canonicalPath: "/bang-gia",
         };
       case "la-so-mau":
         return {
-          title: "Lá Số Tử Vi Mẫu - Xem Cách Luận Giải Lá Số",
+          title: "Lá Số Tử Vi Mẫu | Xem Demo 12 Cung Trước Khi Lập | TuViPhongLam",
           description:
-            "Xem giao diện lá số tử vi mẫu, cách hiển thị Mệnh, Thân, 12 cung, đại vận và tiểu vận trước khi lập lá số của riêng bạn.",
+            "Xem lá số tử vi mẫu miễn phí. Hiểu cách hiển thị Mệnh, Thân, 12 cung, đại vận trước khi lập lá số của bạn.",
           canonicalPath: "/la-so-mau",
         };
       case "blog":
         if (currentKnowledgeArticle) {
           return {
-            title: `${currentKnowledgeArticle.title} | Bài viết`,
+            title: `${currentKnowledgeArticle.title} | Kiến Thức Tử Vi | TuViPhongLam`,
             description: currentKnowledgeArticle.summary,
             canonicalPath: `/bai-viet/${currentKnowledgeArticle.slug}`,
           };
         }
         return {
-          title: "Bài viết",
+          title: "Kiến Thức Tử Vi Bắc Phái - Tứ Hóa Phi Tinh | TuViPhongLam",
           description:
-            "Những bài đọc nền tảng về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, can cung, đại vận và lưu niên.",
+            "Tổng hợp bài viết chuyên sâu về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc Mệnh Thân, đại vận lưu niên.",
           canonicalPath: "/bai-viet",
         };
       case "faq":
         return {
-          title: "FAQ Lập Lá Số Tử Vi - Giải Đáp Câu Hỏi Thường Gặp",
+          title: "Câu Hỏi Thường Gặp Về Lập Lá Số Tử Vi Online | TuViPhongLam",
           description:
-            "Giải đáp nhanh các câu hỏi thường gặp khi lập lá số tử vi online, chọn gói luận giải và sử dụng dữ liệu ngày giờ sinh.",
+            "Giải đáp thắc mắc về lập lá số tử vi online, giờ sinh, chọn gói luận giải tử vi Bắc Phái chuẩn xác.",
           canonicalPath: "/faq",
         };
       case "hop-tuoi":
         return {
-          title: "Hợp Tuổi Theo Lá Số - Chuẩn Bị Dữ Liệu So Khớp Quan Hệ",
+          title: "Xem Hợp Tuổi Vợ Chồng Theo Lá Số Tử Vi | TuViPhongLam",
           description:
-            "Hướng dẫn chuẩn bị dữ liệu hai người, câu hỏi và bối cảnh trước khi so khớp tình cảm, hôn nhân hoặc hợp tác theo lá số.",
+            "So khớp hợp tuổi tình cảm, hôn nhân, hợp tác theo lá số tử vi. Đối chiếu Mệnh, Thân, cung Phu Thê chính xác.",
           canonicalPath: "/hop-tuoi",
         };
       case "lien-he":
         return {
-          title: "Liên Hệ - Nhận Hướng Dẫn Chọn Gói Luận Giải",
+          title: "Liên Hệ Tư Vấn Luận Giải Tử Vi | TuViPhongLam",
           description:
-            "Liên hệ để được hướng dẫn chọn gói phù hợp, gửi câu hỏi theo lá số hoặc đặt lịch tư vấn trực tiếp.",
+            "Liên hệ đặt lịch tư vấn tử vi trực tiếp, hỏi 1 câu theo lá số hoặc nhận hướng dẫn chọn gói phù hợp.",
           canonicalPath: "/lien-he",
         };
       case "video":
         return {
-          title: "Video Học Tử Vi Bắc Phái",
-          description: "Tổng hợp video ngắn về Tử Vi, Bắc Phái, Tứ Hóa Phi Tinh và cách đọc lá số theo hướng dễ tiếp cận.",
+          title: "Video Học Tử Vi Bắc Phái - Tứ Hóa Phi Tinh | TuViPhongLam",
+          description:
+            "Tổng hợp video ngắn hướng dẫn Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc lá số dễ hiểu cho người mới.",
           canonicalPath: "/video",
         };
       case "terms":
         return {
-          title: "Điều Khoản Sử Dụng - LaSoTuVi",
-          description: "Điều khoản và điều kiện sử dụng dịch vụ lập lá số tử vi và luận giải trên LaSoTuVi.",
+          title: "Điều Khoản Sử Dụng Dịch Vụ | TuViPhongLam",
+          description: "Điều khoản và điều kiện sử dụng dịch vụ lập lá số tử vi online trên TuViPhongLam.",
           canonicalPath: "/dieu-khoan-su-dung",
         };
       case "privacy":
         return {
-          title: "Chính Sách Bảo Mật - LaSoTuVi",
-          description: "Chính sách bảo mật và cách chúng tôi bảo vệ thông tin cá nhân của bạn trên LaSoTuVi.",
+          title: "Chính Sách Bảo Mật Thông Tin | TuViPhongLam",
+          description: "Chính sách bảo mật và cách TuViPhongLam bảo vệ thông tin cá nhân của bạn.",
           canonicalPath: "/chinh-sach-bao-mat",
         };
       default:
         return {
-          title: "LaSoTuVi - Lập Lá Số Tử Vi Online & Luận Giải Theo Lá Số",
+          title: "Lập Lá Số Tử Vi Online Miễn Phí - Xem Mệnh Thân 12 Cung | TuViPhongLam",
           description:
-            "Lập lá số tử vi online miễn phí, xem Mệnh, Thân, 12 cung, đại vận, tiểu vận và hỏi thêm theo lá số về sự nghiệp, tài lộc, tình duyên.",
+            "Lập lá số tử vi miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, đại vận, tiểu vận. Luận giải Bắc Phái từ 50.000đ.",
           canonicalPath: "/",
         };
     }
@@ -1245,7 +1321,11 @@ export default function App() {
         title={pageSeo.title}
         description={pageSeo.description}
         canonicalPath={pageSeo.canonicalPath}
-        schema={[organizationSchema]}
+        schema={[
+          organizationSchema,
+          softwareAppSchema,
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Lập lá số", path: "/lap-la-so" }]),
+        ]}
       />
       <section className="top-hero-row">
         <section className="top-left-panel">
@@ -1277,14 +1357,6 @@ export default function App() {
         {hasRequestedChart && chart ? (
           <div className="chart-tools">
             <LuuStarOptions value={luuOptions} onChange={setLuuOptions} />
-            <div className="chart-tools-actions">
-              <button type="button" className="debug-button" onClick={handleCopyConsultationBrief} disabled={!chart || !submittedInput}>
-                Copy brief
-              </button>
-              <button type="button" className="debug-button" onClick={handleCopyChartJson} disabled={!chart || !submittedInput || isCopyingJson}>
-                {isCopyingJson ? "Đang copy JSON..." : "Copy JSON"}
-              </button>
-            </div>
           </div>
         ) : null}
 
@@ -1502,7 +1574,10 @@ export default function App() {
         title={pageSeo.title}
         description={pageSeo.description}
         canonicalPath={pageSeo.canonicalPath}
-        schema={[organizationSchema]}
+        schema={[
+          organizationSchema,
+          breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Lá số mẫu", path: "/la-so-mau" }]),
+        ]}
       />
       <section className="content-section">
         <div className="section-heading">
@@ -1561,7 +1636,7 @@ export default function App() {
           organizationSchema,
           faqSchema(pricingFaqs),
           breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bảng giá", path: "/bang-gia" }]),
-          ...pricingServiceSchemas,
+          ...productSchemas,
         ]}
       />
       <section className="content-section">
@@ -1640,6 +1715,7 @@ export default function App() {
         canonicalPath={pageSeo.canonicalPath}
         schema={[
           organizationSchema,
+          articleListSchema,
           breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bài viết", path: "/bai-viet" }]),
         ]}
       />
@@ -1894,6 +1970,7 @@ export default function App() {
         canonicalPath="/video"
         schema={[
           organizationSchema,
+          videoGallerySchema,
           breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Video", path: "/video" }]),
         ]}
       />
