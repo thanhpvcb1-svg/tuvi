@@ -433,9 +433,18 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
   // Auto-trigger Gemini tổng hợp khi streaming hoàn tất
   useEffect(() => {
     const isStreaming = visibleCount < analyses.length;
-    // Chỉ auto-call khi đã deploy (không phải localhost)
     const isProduction = !window.location.hostname.includes("localhost") && !window.location.hostname.includes("127.0.0.1");
+    
+    console.log("[StreamingAnalysis] State:", {
+      visibleCount,
+      analysesLength: analyses.length,
+      isStreaming,
+      isProduction,
+      tongHopState,
+    });
+    
     if (isProduction && !isStreaming && visibleCount > 0 && !tongHopState.loading && !tongHopState.analysis && !tongHopState.error) {
+      console.log("[StreamingAnalysis] Auto-triggering Gemini...");
       requestTongHopBacPhai();
     }
   }, [visibleCount, analyses.length, tongHopState, requestTongHopBacPhai]);
