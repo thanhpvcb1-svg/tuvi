@@ -266,6 +266,9 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
   );
 }
 
+// API key được cấu hình trên Cloudflare server-side
+const hasGeminiKey = true;
+
 export default function StreamingAnalysis({ chart, isActive, onComplete, userContext }: Props) {
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set(["menh"]));
   const [isLoading, setIsLoading] = useState(true);
@@ -325,7 +328,9 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
         cuc: (chart.profile as any)?.cucElement || (chart.profile as any)?.fiveElementsClass,
       };
 
+      console.log("[Gemini] Calling API...", { palacesCount: palaces.length });
       const response = await callGeminiTongHop({ palaces, profile });
+      console.log("[Gemini] Response:", response);
 
       if (response.success) {
         setTongHopState({ loading: false, analysis: response.analysis });
@@ -333,6 +338,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
         setTongHopState({ loading: false, error: response.error || "Lỗi không xác định" });
       }
     } catch (error) {
+      console.error("[Gemini] Error:", error);
       setTongHopState({ loading: false, error: "Không thể kết nối Gemini" });
     }
   }, [tongHopState, buildTongHopData, userContext, chart.profile]);
@@ -574,10 +580,13 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
                   <p>❌ {tongHopState.error}</p>
                   <button
                     type="button"
-                    className="ghost-button"
-                    onClick={() => setTongHopState({ loading: false })}
+                    className="primary-button"
+                    onClick={() => {
+                      setTongHopState({ loading: false });
+                      setTimeout(() => requestTongHopBacPhai(), 100);
+                    }}
                   >
-                    Thử lại
+                    🔄 Thử lại
                   </button>
                 </div>
               )}
