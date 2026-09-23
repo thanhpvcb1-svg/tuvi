@@ -426,6 +426,16 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     return () => clearTimeout(timer);
   }, [isLoading, visibleCount, analyses.length, isActive, onComplete]);
 
+  // Auto-trigger Gemini tổng hợp khi streaming hoàn tất
+  useEffect(() => {
+    const isStreaming = visibleCount < analyses.length;
+    // Chỉ auto-call khi đã deploy (không phải localhost)
+    const isProduction = !window.location.hostname.includes("localhost") && !window.location.hostname.includes("127.0.0.1");
+    if (isProduction && !isStreaming && visibleCount > 0 && !tongHopState.loading && !tongHopState.analysis && !tongHopState.error) {
+      requestTongHopBacPhai();
+    }
+  }, [visibleCount, analyses.length, tongHopState, requestTongHopBacPhai]);
+
   const toggleExpand = (id: string) => {
     setExpandedIds((prev) => {
       const next = new Set(prev);
@@ -536,9 +546,11 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
                 Tổng hợp Bắc Phái - Phi Hóa Can Cung
               </h4>
               
+
+
               {!tongHopState.analysis && !tongHopState.loading && !tongHopState.error && (
                 <div className="analysis-tonghop-cta">
-                  <p>Gemini sẽ tổng hợp toàn bộ tri thức đã match từ 12 cung, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>: Lộc nhập, Kỵ nhập, quan hệ Mệnh-Tài-Quan.</p>
+                  <p>Gemini sẽ tổng hợp toàn bộ tri thức đã match từ 12 cung, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>.</p>
                   <button
                     type="button"
                     className="primary-button analysis-tonghop-btn"

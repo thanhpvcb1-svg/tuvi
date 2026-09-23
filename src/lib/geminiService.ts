@@ -73,7 +73,28 @@ export async function callGeminiTongHop(
       body: JSON.stringify(request),
     });
 
-    const data = await response.json() as GeminiLuanGiaiResponse;
+    // Đọc response text trước để tránh lỗi parse JSON rỗng
+    const text = await response.text();
+    
+    if (!text || text.trim() === "") {
+      return {
+        success: false,
+        analysis: "",
+        error: "API trả về response rỗng",
+      };
+    }
+
+    let data: GeminiLuanGiaiResponse;
+    try {
+      data = JSON.parse(text) as GeminiLuanGiaiResponse;
+    } catch {
+      console.error("Invalid JSON response:", text.slice(0, 200));
+      return {
+        success: false,
+        analysis: "",
+        error: "API trả về dữ liệu không hợp lệ",
+      };
+    }
 
     if (!response.ok || !data.success) {
       return {

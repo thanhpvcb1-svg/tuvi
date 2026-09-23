@@ -1,0 +1,725 @@
+Hãy thực hiện một **AUDIT TOÀN BỘ LOGIC LUẬN GIẢI TỬ VI hiện đang có trong project**.
+
+## QUY TẮC QUAN TRỌNG
+
+* KHÔNG sửa code.
+* KHÔNG refactor.
+* KHÔNG thêm AI/Gemini.
+* KHÔNG thêm database.
+* KHÔNG thay đổi cấu trúc project.
+* Chỉ đọc, phân tích và lập tài liệu về logic hiện tại.
+* Không suy đoán logic nếu không tìm thấy trong code/data.
+* Mọi kết luận phải chỉ rõ file/function/data source làm căn cứ.
+
+Mục tiêu cuối cùng là tạo ra một **bản đồ hoàn chỉnh của hệ thống luận giải hiện tại**, để sau đó có thể tích hợp RAG + Gemini mà không phá logic đang có.
+
+---
+
+# 1. AUDIT TOÀN BỘ PROJECT
+
+Scan toàn bộ source code, bao gồm:
+
+* `src`
+* `public`
+* `knowledge`
+* `data`
+* `lib`
+* `utils`
+* `services`
+* `components`
+* `hooks`
+* `pages`
+* `api`
+* các JSON/Markdown/TXT knowledge
+* các script crawl/import/build data
+
+Tìm tất cả code liên quan đến:
+
+```text
+luận giải
+interpretation
+analysis
+meaning
+knowledge
+star
+palace
+cung
+sao
+Tứ Hóa
+Phi Hóa
+Thái Tuế
+tam hợp
+xung chiếu
+giáp cung
+đồng cung
+đại vận
+tiểu vận
+lưu niên
+```
+
+Không chỉ tìm theo tên file.
+
+Hãy trace cả call chain để tìm logic thực sự được sử dụng.
+
+---
+
+# 2. VẼ LUỒNG LOGIC HIỆN TẠI
+
+Hãy xác định chính xác flow:
+
+```text
+Input ngày giờ sinh
+        ↓
+Chart Calculation
+        ↓
+Chart Data
+        ↓
+Xác định Mệnh/Thân
+        ↓
+12 cung
+        ↓
+Sao
+        ↓
+Tứ Hóa
+        ↓
+Phi Hóa
+        ↓
+Tam hợp / Xung chiếu / Quan hệ cung
+        ↓
+Retrieval / Knowledge
+        ↓
+Logic luận giải
+        ↓
+Output
+        ↓
+UI
+```
+
+Nếu flow thực tế khác thì phải vẽ theo code thực tế.
+
+Tạo Mermaid diagram nếu phù hợp.
+
+Ví dụ:
+
+```mermaid
+flowchart TD
+    A[Birth Data]
+    B[Chart Engine]
+    C[Chart JSON]
+    D[Interpretation Engine]
+    E[Knowledge]
+    F[Interpretation Result]
+    G[UI]
+
+    A --> B
+    B --> C
+    C --> D
+    E --> D
+    D --> F
+    F --> G
+```
+
+Không được dùng diagram giả định. Chỉ thể hiện những gì thực sự tồn tại.
+
+---
+
+# 3. XÁC ĐỊNH CHART ENGINE
+
+Tìm chính xác:
+
+* file tính lá số
+* function chính
+* input
+* output
+* các bước tính
+
+Lập bảng:
+
+| Thành phần | File | Function | Input | Output |
+| ---------- | ---- | -------- | ----- | ------ |
+| An Mệnh    | ...  | ...      | ...   | ...    |
+| An Thân    | ...  | ...      | ...   | ...    |
+| 12 cung    | ...  | ...      | ...   | ...    |
+| Chính tinh | ...  | ...      | ...   | ...    |
+| Phụ tinh   | ...  | ...      | ...   | ...    |
+| Tứ Hóa     | ...  | ...      | ...   | ...    |
+| Phi Hóa    | ...  | ...      | ...   | ...    |
+
+---
+
+# 4. XÁC ĐỊNH LOGIC TỬ VI ĐANG ĐƯỢC TÍNH
+
+Kiểm tra xem project hiện tại thực sự có những logic nào:
+
+### Cơ bản
+
+* Âm Dương
+* Ngũ hành
+* Can Chi
+* Mệnh
+* Thân
+* Cục
+* 12 cung
+* chính tinh
+* phụ tinh
+
+### Quan hệ cung
+
+* tam hợp
+* xung chiếu
+* giáp cung
+* đồng cung
+* đối cung
+
+### Tứ Hóa
+
+Kiểm tra chính xác:
+
+* Hóa Lộc
+* Hóa Quyền
+* Hóa Khoa
+* Hóa Kỵ
+
+Xác định:
+
+* được tính ở đâu
+* dựa vào Thiên Can nào
+* mapping nằm ở đâu
+* có phân biệt trường phái không
+
+### Phi Hóa
+
+Kiểm tra:
+
+* có tính không
+* Phi Lộc
+* Phi Quyền
+* Phi Khoa
+* Phi Kỵ
+* phi từ cung nào
+* nhập cung nào
+* dữ liệu có được lưu lại không
+
+### Thái Tuế
+
+Kiểm tra:
+
+* có tính không
+* Thái Tuế năm sinh
+* Thái Tuế lưu niên
+* Thái Tuế nhập quái
+* các logic liên quan
+
+### Vận hạn
+
+Kiểm tra:
+
+* Đại vận
+* Tiểu vận
+* Lưu niên
+* lưu nguyệt nếu có
+
+---
+
+# 5. AUDIT LOGIC LUẬN GIẢI
+
+Đây là phần QUAN TRỌNG NHẤT.
+
+Tìm toàn bộ nơi project đang biến:
+
+```text
+Chart Data
+```
+
+thành:
+
+```text
+Interpretation
+```
+
+Ví dụ tìm các pattern:
+
+```text
+if star === ...
+if palace === ...
+stars.includes(...)
+switch(...)
+getInterpretation(...)
+getMeaning(...)
+interpret(...)
+analyze(...)
+generate...
+```
+
+Phải xác định:
+
+### Logic dạng rule
+
+Ví dụ:
+
+```text
+Nếu:
+Thất Sát tại Tài Bạch
+
+→ lấy interpretation X
+```
+
+### Logic kết hợp
+
+Ví dụ:
+
+```text
+Thất Sát + Kình Dương
+→ interpretation Y
+```
+
+### Logic quan hệ cung
+
+Ví dụ:
+
+```text
+Tài Bạch
++ Xung chiếu Quan Lộc
++ Tam hợp Phúc Đức
+→ interpretation Z
+```
+
+### Logic ưu tiên
+
+Nếu nhiều rule cùng match:
+
+```text
+Rule A
+Rule B
+Rule C
+```
+
+thì hệ thống đang:
+
+* lấy tất cả?
+* lấy rule đầu tiên?
+* merge?
+* overwrite?
+* priority?
+* score?
+
+Phải tìm trong code và ghi rõ.
+
+---
+
+# 6. AUDIT KNOWLEDGE
+
+Tìm toàn bộ nguồn tri thức đang được sử dụng.
+
+Phân loại:
+
+```text
+STAR_KNOWLEDGE
+PALACE_KNOWLEDGE
+STAR_PALACE
+STAR_COMBINATION
+FOUR_TRANSFORMATION
+FLYING_TRANSFORMATION
+PALACE_RELATION
+LUCK
+METHODOLOGY
+GENERAL_RULE
+```
+
+Với mỗi loại hãy cho:
+
+```text
+Source file
+Schema
+Key
+How retrieved
+How consumed
+```
+
+Ví dụ:
+
+| Knowledge | File | Key      | Cách lấy | Nơi sử dụng |
+| --------- | ---- | -------- | -------- | ----------- |
+| Thất Sát  | ...  | that_sat | ...      | ...         |
+| Tài Bạch  | ...  | tai_bach | ...      | ...         |
+| Tứ Hóa    | ...  | hoa_loc  | ...      | ...         |
+
+---
+
+# 7. PHÂN TÍCH DATA MODEL
+
+Lập cấu trúc thực tế của các object.
+
+Ví dụ:
+
+```ts
+Chart
+ ├── birth
+ ├── menh
+ ├── than
+ ├── palaces[]
+ │    ├── id
+ │    ├── name
+ │    ├── branch
+ │    ├── stars[]
+ │    ├── transformations[]
+ │    └── ...
+ └── ...
+```
+
+Nhưng KHÔNG được tự tạo schema.
+
+Phải lấy schema thực tế trong code.
+
+Nếu có nhiều schema khác nhau, ghi rõ:
+
+```text
+ChartSchema A
+ChartSchema B
+```
+
+và nơi sử dụng của từng schema.
+
+---
+
+# 8. TRACE MỘT CASE THỰC TẾ
+
+Chọn ít nhất 3 trường hợp có trong project và trace từ đầu đến cuối.
+
+Ví dụ:
+
+### Case 1
+
+```text
+Thất Sát tại Tài Bạch
+```
+
+Trace:
+
+```text
+Chart
+ ↓
+Tài Bạch
+ ↓
+Thất Sát
+ ↓
+Knowledge lookup
+ ↓
+Rule
+ ↓
+Interpretation
+ ↓
+UI
+```
+
+### Case 2
+
+```text
+Thất Sát + Kình Dương
+```
+
+### Case 3
+
+```text
+Tứ Hóa / Phi Hóa
+```
+
+Nếu project có dữ liệu phù hợp.
+
+Với mỗi case phải chỉ ra:
+
+```text
+INPUT
+↓
+FILE
+↓
+FUNCTION
+↓
+DATA
+↓
+RULE
+↓
+OUTPUT
+```
+
+---
+
+# 9. PHÂN BIỆT 3 LOẠI LOGIC
+
+Rất quan trọng.
+
+Phân loại mọi logic tìm được thành:
+
+### A. Calculation
+
+Ví dụ:
+
+```text
+Tính vị trí sao
+Tính cung
+Tính Tứ Hóa
+```
+
+### B. Retrieval
+
+Ví dụ:
+
+```text
+Tìm knowledge của Thất Sát
+Tìm knowledge của Tài Bạch
+```
+
+### C. Interpretation
+
+Ví dụ:
+
+```text
+Thất Sát + Kình Dương
+→ luận giải
+```
+
+Tạo bảng:
+
+| Logic                 | Loại           | File | Function |
+| --------------------- | -------------- | ---- | -------- |
+| An Mệnh               | Calculation    | ...  | ...      |
+| Tìm Thất Sát          | Retrieval      | ...  | ...      |
+| Thất Sát + Kình Dương | Interpretation | ...  | ...      |
+
+---
+
+# 10. TÌM LOGIC TRÙNG LẶP
+
+Kiểm tra:
+
+* cùng một sao nhưng có nhiều nguồn luận giải
+* cùng một cung nhưng nhiều rule
+* logic nằm cả frontend và backend
+* logic nằm trong JSON và hard-code
+* duplicate knowledge
+* duplicate rule
+* rule cũ nhưng vẫn được gọi
+* code dead/unreachable
+
+Không sửa.
+
+Chỉ báo cáo.
+
+---
+
+# 11. TÌM LOGIC THIẾU
+
+Sau khi hiểu hệ thống hiện tại, lập bảng:
+
+| Thành phần        | Đã có | Chưa có | Không xác định |
+| ----------------- | ----- | ------- | -------------- |
+| Chart calculation | ✅     |         |                |
+| Star knowledge    |       |         |                |
+| Palace knowledge  |       |         |                |
+| Combination       |       |         |                |
+| Tứ Hóa            |       |         |                |
+| Phi Hóa           |       |         |                |
+| Thái Tuế          |       |         |                |
+| Context expansion |       |         |                |
+| AI interpretation |       |         |                |
+
+Không đánh giá chất lượng phương pháp Tử Vi.
+
+Chỉ xác định project có implementation hay chưa.
+
+---
+
+# 12. ĐẶC BIỆT KIỂM TRA LOGIC "XUNG QUANH DATA"
+
+Tôi muốn biết hiện tại project có khả năng từ một điểm dữ liệu lấy ra các quan hệ xung quanh hay chưa.
+
+Ví dụ:
+
+```text
+Tài Bạch
+   │
+   ├── sao đồng cung
+   ├── xung chiếu
+   ├── tam hợp
+   ├── giáp cung
+   ├── Tứ Hóa
+   ├── Phi Hóa
+   └── các tổ hợp liên quan
+```
+
+Kiểm tra chính xác code hiện tại có làm được không.
+
+Nếu có:
+
+* file
+* function
+* input
+* output
+
+Nếu chưa có:
+ghi rõ `NOT IMPLEMENTED`.
+
+Không tự bổ sung.
+
+---
+
+# 13. ĐÁNH GIÁ KHẢ NĂNG TÍCH HỢP AI
+
+Sau khi audit xong, KHÔNG tích hợp AI.
+
+Chỉ đưa ra đề xuất kiến trúc:
+
+```text
+CURRENT SYSTEM
+       ↓
+[Existing Chart Engine]
+       ↓
+[Existing Knowledge]
+       ↓
+[Existing Interpretation Logic]
+       ↓
+       AI Layer?
+```
+
+Xác định AI nên đặt ở đâu:
+
+```text
+Calculation
+   ↓
+Retrieval
+   ↓
+Existing Rules
+   ↓
+AI Synthesis
+```
+
+hoặc nếu code hiện tại phù hợp hơn:
+
+```text
+Calculation
+   ↓
+Retrieval
+   ↓
+AI
+```
+
+Phải giải thích dựa trên code thực tế.
+
+---
+
+# 14. OUTPUT CUỐI CÙNG
+
+Tạo một báo cáo:
+
+```text
+AUDIT_LOGIC_LUAN_GIAI.md
+```
+
+Gồm:
+
+# 1. Executive Summary
+
+# 2. Architecture hiện tại
+
+# 3. Chart Engine
+
+# 4. Data Model
+
+# 5. Knowledge Architecture
+
+# 6. Retrieval Logic
+
+# 7. Interpretation Rules
+
+# 8. Tứ Hóa
+
+# 9. Phi Hóa
+
+# 10. Thái Tuế
+
+# 11. Tam hợp / Xung chiếu / Giáp cung
+
+# 12. Vận hạn
+
+# 13. Trace 3 case thực tế
+
+# 14. Rule Priority / Conflict Resolution
+
+# 15. Duplicate / Dead Logic
+
+# 16. Missing Logic
+
+# 17. Current Interpretation Pipeline
+
+# 18. AI Integration Point
+
+# 19. Recommended Target Architecture
+
+# 20. File Dependency Map
+
+---
+
+# 15. FILE DEPENDENCY MAP
+
+Cuối báo cáo tạo bảng:
+
+| File | Vai trò        | Gọi bởi | Gọi tới | Quan trọng |
+| ---- | -------------- | ------- | ------- | ---------- |
+| ...  | Chart          | ...     | ...     | HIGH       |
+| ...  | Knowledge      | ...     | ...     | HIGH       |
+| ...  | Interpretation | ...     | ...     | HIGH       |
+
+Nếu có thể, tạo dependency graph bằng Mermaid.
+
+---
+
+# 16. QUAN TRỌNG: KHÔNG SUY ĐOÁN
+
+Nếu không tìm thấy:
+
+```text
+Phi Hóa
+```
+
+thì ghi:
+
+```text
+NOT FOUND / NOT IMPLEMENTED
+```
+
+Không được viết:
+
+```text
+Có vẻ project đã hỗ trợ...
+```
+
+Nếu có nhiều implementation khác nhau, ghi rõ từng implementation.
+
+Nếu một logic chỉ tồn tại trong knowledge nhưng chưa có code gọi tới, phải phân biệt:
+
+```text
+Knowledge exists
+Implementation not found
+```
+
+---
+
+# 17. KẾT QUẢ PHẢI GIÚP TRẢ LỜI 5 CÂU HỎI
+
+Sau khi audit, tôi phải biết chính xác:
+
+1. Project hiện tại tính lá số bằng logic nào?
+2. Project hiện tại lấy tri thức luận giải từ đâu?
+3. Project hiện tại kết hợp các dữ liệu xung quanh một cung/sao như thế nào?
+4. Logic nào đang thực sự tạo ra luận giải?
+5. Nếu tích hợp Gemini, Gemini nên nằm ở vị trí nào mà không phá logic hiện tại?
+
+Bắt đầu bằng việc scan project.
+
+KHÔNG sửa code.
+
+KHÔNG tích hợp AI.
+
+KHÔNG tạo DB.
+
+Chỉ audit và tạo `AUDIT_LOGIC_LUAN_GIAI.md`.

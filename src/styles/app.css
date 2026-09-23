@@ -9546,3 +9546,239 @@ h4,
   border-color: rgba(232, 193, 112, 0.3);
   border-top-color: var(--gold);
 }
+
+
+/* ========================================
+   Analysis Tổng Hợp Bắc Phái (Auto-load Gemini)
+   ======================================== */
+.analysis-tonghop {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--gold);
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--gold-soft) 0%, var(--surface) 100%);
+  box-shadow: 0 8px 24px rgba(212, 160, 23, 0.12);
+}
+
+.analysis-tonghop .analysis-section-title {
+  color: var(--gold-dark);
+  font-size: 18px;
+}
+
+.analysis-tonghop-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.analysis-tonghop-loading p {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.analysis-tonghop-loading .analysis-loading-hint {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.analysis-tonghop-error {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--error-soft);
+  text-align: center;
+}
+
+.analysis-tonghop-error p {
+  margin: 0 0 12px;
+  color: var(--error);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.analysis-tonghop-content {
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+}
+
+.analysis-tonghop-content p {
+  margin: 0 0 12px;
+  color: var(--text-main);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.analysis-tonghop-content p:last-child {
+  margin-bottom: 0;
+}
+
+.analysis-tonghop-heading {
+  margin: 20px 0 10px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+  color: var(--gold-dark);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.analysis-tonghop-heading:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.analysis-tonghop-item {
+  margin: 0 0 8px 20px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Gemini AI Section trong từng cung */
+.analysis-gemini {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.08) 0%, rgba(212, 160, 23, 0.02) 100%);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+}
+
+.analysis-gemini-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.analysis-gemini-btn {
+  min-height: 32px;
+  padding: 0 14px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  background: var(--gold-soft);
+  color: var(--gold-dark);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.analysis-gemini-btn:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+.analysis-gemini-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.analysis-gemini-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--gold-soft);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.analysis-gemini-error {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--error-soft);
+  color: var(--error);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.analysis-gemini-content {
+  color: var(--text-main);
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* Dark theme */
+[data-theme="dark"] .analysis-tonghop {
+  background: linear-gradient(135deg, var(--gold-soft) 0%, var(--surface) 100%);
+  border-color: var(--gold);
+}
+
+[data-theme="dark"] .analysis-tonghop-content {
+  background: var(--surface-warm);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .analysis-tonghop-heading {
+  color: var(--gold);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .analysis-gemini {
+  background: linear-gradient(135deg, rgba(232, 193, 112, 0.1) 0%, rgba(232, 193, 112, 0.02) 100%);
+  border-color: rgba(232, 193, 112, 0.25);
+}
+
+[data-theme="dark"] .analysis-gemini-btn {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+[data-theme="dark"] .analysis-gemini-btn:hover {
+  background: var(--gold);
+  color: var(--bg-main);
+}
+
+@media (max-width: 760px) {
+  .analysis-tonghop {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .analysis-tonghop-content {
+    padding: 14px;
+  }
+
+  .analysis-gemini {
+    padding: 12px 14px;
+  }
+
+  .analysis-gemini-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .analysis-gemini-btn {
+    width: 100%;
+  }
+}
+
+
+.analysis-tonghop-cta {
+  text-align: center;
+  padding: 20px;
+}
+
+.analysis-tonghop-cta p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.analysis-tonghop-btn {
+  min-width: 240px;
+}
