@@ -2,7 +2,7 @@
 
 ## Cau hinh build
 
-- Framework preset: `Vite`
+- Framework preset: `Vite` (hoặc `None` nếu gặp lỗi auto-detection)
 - Build command: `npm run build`
 - Build output directory: `dist`
 - Production branch: `main`
