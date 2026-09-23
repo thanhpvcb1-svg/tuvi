@@ -53,15 +53,15 @@ const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
 const contactSmsNumber = import.meta.env.VITE_CONTACT_SMS_NUMBER?.trim() || "";
 const contactZaloUrl = import.meta.env.VITE_CONTACT_ZALO_URL?.trim() || "https://zalo.me/";
 const contactFacebookUrl = import.meta.env.VITE_CONTACT_FACEBOOK_URL?.trim() || "https://www.facebook.com/";
-const defaultLuuOptions: LuuDisplayOptions = {
+const getDefaultLuuOptions = (): LuuDisplayOptions => ({
   showLuuTuHoa: false,
-  showPhiHoaCanCung: true,
+  showPhiHoaCanCung: typeof window !== "undefined" && window.matchMedia("(max-width: 760px)").matches ? false : true,
   showLuuTuDuc: false,
   showLuuDaiVan: false,
   showLuuOtherStars: false,
   showLocKyNhap: false,
   showLuuTuanTriet: false,
-};
+});
 
 let chartModulesPromise: Promise<{
   createChart: typeof import("./lib/iztroEngine").createChart;
@@ -607,7 +607,7 @@ export default function App() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isDownloadingImage, setIsDownloadingImage] = useState(false);
   const [quickReadings, setQuickReadings] = useState<QuickReadingCard[]>([]);
-  const [luuOptions, setLuuOptions] = useState<LuuDisplayOptions>(defaultLuuOptions);
+  const [luuOptions, setLuuOptions] = useState<LuuDisplayOptions>(getDefaultLuuOptions);
   const [horoscopeYear, setHoroscopeYear] = useState(currentYear);
   const [lastSubmittedSignature, setLastSubmittedSignature] = useState<string | null>(null);
   const chartCaptureRef = useRef<HTMLDivElement | null>(null);
@@ -749,7 +749,7 @@ export default function App() {
     setShowReading(false);
     setShowStreaming(false);
     setQuickReadings([]);
-    setLuuOptions(defaultLuuOptions);
+    setLuuOptions(getDefaultLuuOptions());
     setHoroscopeYear(currentYear);
     setLastSubmittedSignature(null);
     navigate(targetPath, { replace: true });
@@ -806,7 +806,7 @@ export default function App() {
     setShareMessage("");
     setLuuOptions((current) => ({
       ...current,
-      showPhiHoaCanCung: true,
+      showPhiHoaCanCung: !isMobileViewport(),
     }));
     setIsGenerating(true);
     navigate("/lap-la-so");
