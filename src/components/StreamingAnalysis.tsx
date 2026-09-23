@@ -160,7 +160,8 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
   const displayCount = showAll ? sortedMatches.length : 3;
   const hasMore = sortedMatches.length > 3;
   const knowledgeCount = analysis.knowledgeMatches.length;
-  const hasGeminiKey = Boolean(import.meta.env.VITE_GEMINI_API_KEY);
+  // API key được cấu hình trên Cloudflare server-side
+  const hasGeminiKey = true;
 
   return (
     <div className={`analysis-palace-card ${isExpanded ? "is-expanded" : ""}`}>
@@ -597,4 +598,5 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
   );
 }
 
-const hasGeminiKey = Boolean(import.meta.env.VITE_GEMINI_API_KEY);
+// API key được cấu hình trên Cloudflare server-side
+const hasGeminiKey = true;
