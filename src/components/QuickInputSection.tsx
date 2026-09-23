@@ -168,15 +168,8 @@ export default function QuickInputSection({ currentValues, onFill, onSubmit }: P
   const handleSubmitClick = () => {
     if (!parseResult?.data) return;
 
-    const detectedConflicts = detectConflicts(parseResult.data);
-    
-    if (detectedConflicts.length > 0) {
-      setConflicts(detectedConflicts);
-      setPendingData(parseResult.data);
-      setShowConflictDialog(true);
-    } else {
-      applyData(parseResult.data, true);
-    }
+    // Khi đủ data để lập lá số, bỏ qua conflict check và submit ngay
+    applyData(parseResult.data, true);
   };
 
   const renderPreviewPills = (data: ParsedBirthData, isRealtime = false) => {
