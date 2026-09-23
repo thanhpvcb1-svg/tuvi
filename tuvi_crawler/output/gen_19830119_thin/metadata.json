@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19830119_thin",
+  "birth": {
+    "year": 1983,
+    "month": 1,
+    "day": 19,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:10:25.194Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

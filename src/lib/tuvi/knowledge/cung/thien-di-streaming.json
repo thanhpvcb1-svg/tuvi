@@ -1,0 +1,1038 @@
+{
+  "palace": "thien_di",
+  "palace_name": "Thiên Di",
+  "source": "tuvi.cohoc.net",
+  "crawl_mode": "streaming",
+  "last_updated": "2026-09-22T03:00:19.190Z",
+  "total_blocks": 54,
+  "blocks": [
+    {
+      "block_id": "thien_di_stream_1",
+      "condition_text": "Điểm \"xí hoa\" cung Thiên di là 2.1",
+      "raw_text": "Cung Thiên di chủ về: quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa.\nTọa thủ: Tử vi, Thiên tướng, Thiên khốc, Đà la, Văn khúc. Xung chiếu: Phá quân, Âm sát, Văn xương. Tam hợp: Liêm trinh, Thiên mã, Thiên hư - Vũ khúc, Thiên phủ, Tả phù. Giáp cung: Thiên cơ, Cự môn, Linh tinh, Hóa kỵ, Hàm trì - Thiên lương, Lộc tồn, Thiên hình.\nNgũ hành khí của cung Bính Thìn: 20% HỎA (kị thần), 50% THỔ (hỉ thần), 30% THỔ (hỉ thần). Đây là cung khí đại cát. Tử vi hành THỔ là hỉ thần. Thiên tướng hành THỦY là nhàn thần. Thiên khốc hành THỦY là nhàn thần. Đà la hành KIM là hỉ thần. Văn khúc hành THỦY là nhàn thần.\nCung Thiên di can Bính làm cho:\n- Thiên đồng Hóa lộc nhập cung Phụ mẫu (cung Tật ách của cung Thiên di). Cung Phụ mẫu can Quý chuyển Phá quân Hóa Lộc nhập cung Mệnh, chuyển Tham lang Hóa kỵ nhập cung Quan lộc.\n- Liêm trinh Hóa kỵ nhập cung Phu thê (cung Quan lộc của cung Thiên di). Cung Phu thê can Canh chuyển Thái dương Hóa Lộc nhập cung Điền trạch, chuyển Thiên đồng Hóa kỵ nhập cung Phụ mẫu.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của một cao thủ Bắc phái",
+        "author": "Kinh nghiệm của một cao thủ Bắc phái"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "thien_di_stream_2",
+      "condition_text": "Cung Thiên di phi hóa lộc nhập cung Phụ mẫu, phi hóa kỵ nhập cung Phu thê",
+      "raw_text": "Điểm mạnh nhất của lá số một trong các chủ đề về cha mẹ, cấp trên, văn thư giấy tờ. Điểm yếu nhất của lá số là một trong các chủ đề về người phối ngẫu, tình cảm, tình trạng hôn nhân.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của một cao thủ Bắc phái",
+        "author": "Kinh nghiệm của một cao thủ Bắc phái"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "thien_di_stream_3",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "Cung Thiên di là cung khí số vị cung Phúc đức. Trong trường hợp này biểu hiện tổ nghiệp (gia sản tổ tiên) tươi tốt. Phụ tật tuyến là cung vị Huynh Nô của cung Phúc đức, phụ mẫu được gọi là cung tướng mạo, là cung vị của cha, nhìn cung vị của gen di truyền.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đồng bộ đoạn quyết - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "thien_di_stream_4",
+      "condition_text": "Thuận Thủy Kị (流水忌): cung Thiên di phi hóa kỵ tới cung Phu thê",
+      "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Thiên di khí tiết sang cung Phu thê.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+        "author": "Tiên thiên tứ hóa phi tinh kỳ phổ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_5",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "Thiên di cung Hóa Lộc nhập phụ mẫu.\n1. Thiên di Hóa Lộc nhập phụ mẫu, mang lại hỷ duyệt cho ta trong học tập, nên là người thông minh, học nhanh hiểu rộng, thực tế, khéo léo trong quan hệ không mất lòng ai.\n2. Thiên di Hóa Lộc nhập phụ mẫu, mang lại hỷ duyệt cho phụ mẫu, trưởng bối nên dễ được bề trên (phụ mẫu, cấp trên) làm chỗ dựa, giúp đỡ.\n3. Cách cục đẹp, học nhiều biết rộng. xử thế viên mãn, khéo léo ôn hòa, Duyên xuất ngoại đẹp, đắc quí nhân.\n4. Căn khí cao, trí tuệ viên mãn (tôn giáo tinh).",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_6",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "Thiên di Hóa Lộc nhập phụ mẫu, tại ngoại đa quí nhân, phụ mẫu ít phải lo lắng cho mệnh tạo.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_7",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "Thiên di Hóa Lộc nhập phụ mẫu, được dựa nhờ trưởng bối, thông minh, khảo vận tốt, dịch mã nhiều. Phùng đào hoa tinh, dễ tán phát mê lực khác giới mà đa dâm, đa tình.\nTóm lại: Thiên di Hóa Lộc nhập bất kỳ cung vị, cung đó được phát triển, đắc lợi, cát sự gia tăng, là duyên quả báo phúc thiện ứng nhân xử thế tốt đẹp.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_8",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "Từ Thiên Di hóa Lộc đến Phụ Mẫu cung, chiếu Tật Ách cung\n1. Cha mẹ dịch mã, rời quê hương, kiếm tiền ở đất khách.\n2. Cha mẹ thích ra bên ngoài, ở bên ngoài nhân duyên tốt.\n3. Mệnh chủ xuất ngoại thị sát, du học, tham quan học tập.\n4. Mệnh chủ thông minh, năng lực học mạnh, giỏi bắt chước, học linh tinh có nhiều kiến thức.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_9",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "Ra ngoài tự lo liệu, không để người khác phải lo lắng; dễ được trưởng bối, quý nhân tương trợ. Thích hợp làm công chức, cẩn thận phòng nạn tai bất ngờ. Chú ý thói quen ăn uống và vấn đề vệ sinh.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_10",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "迁移禄入父母:\n1. 「外在缘好」、「学习缘厚」, 学习快、反应佳。\n2. 「见多识广」、「圆融和善」、「处事圆满」。\n3. 容易与长辈〈长官〉或社会上层人士「攀缘」。\n4. 防「逢迎附和」、「虚伪赞叹」。\n5. 防「光鲜亮丽」、「虚有其表」。\n6. 「考运好」、手气佳。\n7. 根器高, 「智慧圆融」〈宗教星〉。\nThiên di Hóa lộc nhập cung phụ mẫu:\n1. Có duyên bên ngoài tốt, duyên học hành dày dặn, học nhanh, phản ứng tốt.\n2. Hiểu biết rộng, hòa nhã, khéo léo, và giải quyết công việc trọn vẹn.\n3. Dễ dàng kết nối với người lớn tuổi (cấp trên) hoặc những người thuộc tầng lớp cao trong xã hội.\n4. Cần đề phòng việc nịnh bợ, xu nịnh và khen ngợi giả tạo.\n5. Cần đề phòng việc bề ngoài hào nhoáng nhưng bên trong rỗng tuếch.\n6. Vận thi cử tốt, may mắn trong các vấn đề liên quan đến tiền bạc.\n7. Căn cơ cao, trí tuệ viên mãn (liên quan đến sao tôn giáo).",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_11",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "迁移禄入父母: \n1. 「外在缘好」、「学习缘厚」, 学习快、反应佳。\n2. 「见多识广」、「圆融和善」、「处事圆满」。\n3. 容易与长辈〈长官〉或社会上层人士「攀缘」。\n4. 防「逢迎附和」、「虚伪赞叹」。\n5. 防「光鲜亮丽」、「虚有其表」。\n6. 「考运好」、手气佳。\n7. 根器高, 「智慧圆融」〈宗教星〉。\nThiên di Hóa lộc nhập cung phụ mẫu: \n1. Bên ngoài duyên tốt, học tập lâu dài, tiếp thu mau, phản ứng khéo. \n2. Kiến thức rộng, không câu nệ, xử lý hài hòa, xử sự viên mãn. \n3. Dễ dàng cùng trưởng bối (sếp) thượng tầng nhân sĩ quen biết. \n4. Phòng xu nịnh, dối trá khen ngợi. \n5. Phòng hào nhoáng bên ngoài. \n6. Thi cử tốt, vận may nhiều. \n7. Căn khí cao, trí tuệ viên dung (tông giáo tinh).",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_12",
+      "condition_text": "Cung Thiên di an tại Thìn có Lộc Phụ",
+      "raw_text": "Thiên di cung Hóa Lộc nhập cung Phụ mẫu, ở ngoài có trưởng bối quý nhân, ít bận tâm.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_13",
+      "condition_text": "Cung Thiên di an tại Thìn có Quyền Nô",
+      "raw_text": "Thiên di Hóa Quyền nhập nô bộc, tại ngoại nhiều bằng hữu, kỹ năng giáo tế tốt. Có ưu thế, phong thái sang trọng.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_14",
+      "condition_text": "Cung Thiên di an tại Thìn có Quyền Nô",
+      "raw_text": "Thiên di cung Hóa Quyền nhập nô bộc cung.\n1. Mệnh tạo có sở trường xử lý trong nhân tế, tổ chức sự kiện.\n2. Mệnh tạo có khả năng vận dụng tốt nguồn tài xã hội.\n3. Thiên di Hóa Quyền nhập nô bộc, là người chủ động, hoạt diệu trong giao tiếp nhân tế, thích thể hiện là người nổi trội, thể hiện bản thân.\n4. Có khả năng sáng tạo, khai phá, chuyên nghiệp, hào kiệt dẫn đầu, lãnh đạo.\n5. Dễ theo phù kẻ mạnh, kết giao quyền quí.\n6. Phòng quá chú trọng sĩ diện, hư hoa lãng phí.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_15",
+      "condition_text": "Cung Thiên di an tại Thìn có Quyền Nô",
+      "raw_text": "Từ Thiên Di hóa Quyền đến Nô Bộc cung, chiếu Huynh Đệ cung\n1. Phần lớn những người bạn kết giao đều là những nhà lãnh đạo, giám sát, chuyên gia và có địa vị xã hội nhất định.\n2. Sự nghiệp của cha mẹ và anh em hầu hết là tầng lớp đứng đầu, chủ quản hoặc kỹ thuật viên chuyên nghiệp, có địa vị xã hội nhất định.\n3. Mệnh chủ sẽ giúp anh em thăng tiến trong sự nghiệp.\n4. Mệnh chủ nhân xu nịnh, tâng bốc những người hơn mình, nhưng rất thực tế với những người kém hơn mình.\n5. Mệnh chủ có các mối quan hệ xã hội tốt đẹp giữa các cá nhân, hay vì bạn bè bôn ba trả giá.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_16",
+      "condition_text": "Cung Thiên di an tại Thìn có Quyền Nô",
+      "raw_text": "Giao du rộng, tiêu xài tiền hào phóng, giỏi giao tế, có năng lực lãnh đạo, được nhiều trưởng bối và bạn bè trợ lực. Giao du bạn bè có chọn lựa, bạn bè có năng lực, cạnh tranh nhau, dễ có tranh chấp.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_17",
+      "condition_text": "Cung Thiên di an tại Thìn có Quyền Nô",
+      "raw_text": "迁移权入交友:\n1. 「社交能力好」, 善长「人脉资源」的「运作」。\n2. 「活跃」、「主动」, 容易出风头, 喜欢凸显自己。\n3. 可从事「创意」、「开发」, 专业、「引领风骚」、「领导流行」等工作〈产品〉。\n4. 防太「讲究场面」、「朱门酒肉臭」、「虚华浪费」。\nThiên di Hóa quyền nhập cung giao hữu:\n1. \"Khả năng giao tiếp tốt\", giỏi \"vận dụng nguồn nhân mạch\".\n2. \"Hoạt bát\", \"chủ động\", dễ nổi bật, thích thể hiện bản thân.\n3. Có thể làm công việc \"sáng tạo\", \"phát triển\", chuyên môn, \"dẫn đầu xu hướng\", \"lãnh đạo thời trang\" (sản phẩm).\n4. Đề phòng quá \"chú trọng hình thức\", \"rượu thịt nhà giàu\", \"phô trương lãng phí\".",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_18",
+      "condition_text": "Cung Thiên di an tại Thìn có Quyền Nô",
+      "raw_text": "迁移权入交友: \n1. 「社交能力好」, 善长「人脉资源」的「运作」。\n2. 「活跃」、「主动」, 容易出风头, 喜欢凸显自己。\n3. 可从事「创意」、「开发」, 专业、「引领风骚」、「领导流行」等工作〈产品〉。\n4. 防太「讲究场面」、「朱门酒肉臭」、「虚华浪费」。\nThiên di Hóa quyền nhập cung giao hữu: \n1. Năng lực xã giao tốt, giỏi vận hành nhân mạch tài nguyên. \n2. Sống động, hoạt bát thích nổi tiếng, dễ nổi danh. \n3. Có thể làm những việc \"sáng kiến, mở rộng, chuyên nghiệp, đứng đầu hướng dẫn, lãnh đạo lưu hành\" các loại công việc (sản phẩm). \n4. Phòng cầu kỳ tình cảm, túi cơm túi rượu thô lỗ, xa hoa lãng phí.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_19",
+      "condition_text": "Cung Thiên di an tại Thìn có Quyền Nô",
+      "raw_text": "Thiên di cung Hóa Quyền nhập cung Nô Bộc, ở ngoài có nhiều bạn, có cách giao tiếp xã hội tốt.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_20",
+      "condition_text": "Cung Thiên di an tại Thìn có Khoa Mệnh",
+      "raw_text": "Thiên di Hóa Khoa nhập mệnh, nhân duyên tốt, đắc quí nhân trợ.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_21",
+      "condition_text": "Cung Thiên di an tại Thìn có Khoa Mệnh",
+      "raw_text": "Thiên di Hóa Khoa nhập mệnh.\n1. Thiên di là xã hội, khi ta ở bên ngoài, mọi người đối với ta khách khí, lễ mạo.\n2. Thiên di là khả năng ứng nhân xử thế của ta, biểu thị là người ứng nhân xử thế ôn văn nho nhã, làm việc cẩn thận, chậm rãi thong thả.\n3. Được xã hội bình giá là có tu dưỡng, có phẩm chất, danh tiếng dần dần được xã hội tán đồng, chấp nhận.\n4. Thiên di là phúc vận vị, tế ngộ vị, xuất ngoại dễ gặp quí nhân.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_22",
+      "condition_text": "Cung Thiên di an tại Thìn có Khoa Mệnh",
+      "raw_text": "Từ Thiên Di cung hóa Khoa đến Mệnh cung, chiếu Thiên Di cung\n1. Cô độc, trời sinh kiêu ngạo, không cúi đầu, không cầu xin người khác.\n2. Chủ nghĩa hoàn hảo, duy tâm, dễ xa rời thực tế, say sưa trong cõi hư ảo viển vông.\n3. Suy nghĩ quá nhiều, do dự và thiếu quyết đoán, bất định rối ren.\n4. Quá chăm chú đến hình tượng, tự cho là thanh cao, nặng vẻ bề ngoài, quan tâm đến đánh giá của người khác, không thể được thoải mái.\n5. Dễ bị mắc bẫy tình yêu, dễ xúc động, loạn thần kinh, mê đắm trong tình yêu và bị những cảm xúc tiêu cực, lo sợ không đâu, hay nghĩ đến hình ảnh của mình.\n6. Tình chấp, tình si, theo đuổi tình cảm tinh thuần, theo đuổi sự hoàn hảo không bao giờ có thể tồn tại, cầu bất đắc khổ.\n7. Khí hư, khí không đủ, dễ mắc các bệnh mãn tính, nội tiết, cảm xúc hóa, tình cảm và tinh thần suy nhược, cuồng loạn, hư ảo.\n8. Mệnh mang theo dịch mã rời quê hương đi xa, thường ra ngoài, đi công tác, du lịch.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_23",
+      "condition_text": "Cung Thiên di an tại Thìn có Khoa Mệnh",
+      "raw_text": "Rất có duyên với người chung quanh, có tiếng tăm ở bên ngoài, có thể nhờ văn hóa nghệ thuật mà danh tiếng vang xa. Ra bên ngoài sẽ vui vẻ, được nhiều quý nhân tương trợ.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_24",
+      "condition_text": "Cung Thiên di an tại Thìn có Khoa Mệnh",
+      "raw_text": "迁移科入命:\n1. 处世温文。修养、品味、不虚华。\n2. 得「贵人」、「名声」。\nThiên di Hóa khoa nhập cung mệnh:\n1. Xử thế ôn hòa. Tu dưỡng, phẩm vị, không phù hoa.\n2. Được \"quý nhân\", \"danh tiếng\".",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_25",
+      "condition_text": "Cung Thiên di an tại Thìn có Khoa Mệnh",
+      "raw_text": "迁移科入命: \n1. 处世温文。修养、品味、不虚华。\n2. 得「贵人」、「名声」。\nThiên di Hóa khoa nhập cung mệnh: \n1. Xử thế ôn văn, tu dưỡng, phẩm vị không hư hoa. \n2. Được quý nhân, thanh danh.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_26",
+      "condition_text": "Cung Thiên di an tại Thìn có Khoa Mệnh",
+      "raw_text": "Thiên di cung Hóa Khoa nhập Mệnh cung, nhân duyên tốt, ở ngoài có quý nhân.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_27",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Thiên di Hóa Kị nhập phu thê, hôn nhân duyên kém, ít được nhờ cậy giúp đỡ, tại ngoại nhiều trở ngại, tính cách cô độc, thiếu thốn tình cảm (đào hoa tinh Hóa Kị).",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_28",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Thiên di Hóa Kị nhập phu thê, tại ngoại bất thuận, gia tăng lo lắng cho phối ngẫu, phối ngấu ham tiền cũng biết điều khiển đồng tiền.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_29",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Thiên di cung Hóa Kị nhập phu thê cung. Xung quan lộc.\n1. Thiên di cung Hóa Kị nhập phu thê cung, tế ngộ xã hội, nguồn tài xã hội, năng lực xã giao của ta làm cho tình cảm hoặc hôn nhân của ta gặp nhiều trở ngại.\n2. xử lý quan hệ khác giới kém, nên thường khó khăn thể hiện tình cảm, đặc biệt Liêm trinh, Tham lang Kị càng nghiêm trọng.\n3. Giao tế kém ảnh hưởng đến tình cảm, dễ bị đổ vỡ không rõ nguyên nhân hoặc trở ngại trong hôn nhân hoặc có người thứ ba tham dự vào tình cảm (thường không nhận biết được)\n4. Không khéo trong xử lý quan hệ phu thê, nên không có hình tượng tốt trong mắt phối ngẫu.\n5. Thiên di Hóa Kị nhập phu thê xung quan lộc, công việc, sự nghiệp không thuận lợi.\n6. Quan lộc là vận khí vị, thiên Kị xung quan, nên dễ xảy ra sự bất ngờ, tai bệnh, họa hoạn. Vận khí kém.\n7. Phu thê là phúc phận tài, không có tài vận bất ngờ, cờ bạc hoặc đầu cơ, đặc biệt Liêm trinh, Tham lang Kị.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_30",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Từ Thiên Di hóa Kị đến Phu Thê cung, xung Quan Lộc cung\n1. Kị xung Quan Lộc, công việc khó được ổn định.\n2. Công việc có tính chất dịch mã, chẳng hạn như vận chuyển, hoặc rời quê hương phát triển ở ngoài.\n3. Lao tâm lao lực, bỏ công sức nhiều mà lợi nhuận thì ít.\n4. Vợ chồng cãi nhau về tiền bạc, thu nhập, vợ chồng nghèo hèn trăm sự buồn.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_31",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Người phối ngẫu tiết kiệm tiền, sợ bị chịu thiệt, hay so đo tính toán. Sự nghiệp rơi vào hoàn cảnh xấu, không thuận lợi, mệt mỏi bận rộn mà không có thu nhập. Ra bên ngoài dễ gặp nạn tai, dễ mắc bệnh. Tình cảm vợ chồng không hòa hợp; sự nghiệp của người phối ngẫu không có trợ lực.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_32",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Thiên Di [Kị nhập] Phu Thê:\n* Đề phòng \"người thứ ba\" xen vào hoặc ngoại lực phá hoại (gây trở ngại) hôn nhân của ta (tình cảm).\n* Không khéo che đậy, sẽ không có lời nói ngọt ngào.\n* Đề phòng bất trắc, tai họa bệnh tật, tai bay vạ gió (vì Kị xung Quan Lộc).\n* Chớ có đánh bạc, đầu cơ.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_33",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Cung Thiên Di hóa kỵ phi nhập cung Phu Thê, sự nghiệp ở bên ngoài không thuận lợi, thược tượng hung.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_34",
+      "condition_text": "Cung Thiên di an tại Thìn có Kỵ Phối",
+      "raw_text": "Thiên di cung Hóa Kị nhập cung Phu thê, ở người không thuận, vì phối nghẫu mà tăng thêm muộn phiền, mà sự nghiệp không thuận.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "thien_di_stream_35",
+      "condition_text": "Cung Thiên di an tại Thìn có M Mệnh",
+      "raw_text": "Mệnh cách xuất ngoại gặp quý nhân. Không xuất ngoại dễ sinh sự cố bất ngờ.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "thien_di_stream_36",
+      "condition_text": "Cung Thiên di an tại Thìn có M Nô",
+      "raw_text": "Mệnh xuất ngoại nhờ bằng hữu. Thành do bằng hữu, bại do bằng hữu.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "thien_di_stream_37",
+      "condition_text": "Cung Thiên di an tại Thìn có M Phối",
+      "raw_text": "Phối ngẫu mệnh xuất ngoại ngoại quốc. Phối ngẫu xuất ngoại, ra ngoài làm ăn.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "thien_di_stream_38",
+      "condition_text": "Cung Thiên di an tại Thìn có M Phụ",
+      "raw_text": "Mệnh cách xuất ngoại gặp quý nhân. Xuất ngoại ly hương vận phúc báo mạnh.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "thien_di_stream_39",
+      "condition_text": "Cung Thiên di an tại Thìn có Thiên tướng",
+      "raw_text": "Thiên Tướng ở cung thiên di, cung mệnh ắt sẽ thấy Phá Quân, là chủ về xuất ngoại có quý nhân tương trợ.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên tướng"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_40",
+      "condition_text": "Cung Thiên di an tại Thìn có Tử vi",
+      "raw_text": "Sao đế vương Tử Vi ở mười hai cung đều có chức năng chế nguy giải hóa, nếu kiềm chế Hỏa Tinh, Linh Tinh làm \"thiện\"; giáng Thất Sát làm \"quyền lực\"; được Thiên Phủ, Thiên Tướng, Tả Phụ, Hữu Bật, Văn Xương, Văn Khúc hội hợp, không quý hiến thì cũng giàu có, dù có tứ sát tinh xung phá, cũng thuộc tẩng lớp trung lưu. Tử Vi có Phá Quân đồng cung ở Thìn, Tuất, Sửu, Mùi, là tôi thần bất trung, là con bất hiếu, nữ mệnh gặp chúng thì luận là quý phụ, có thêm sát tinh xung phá cũng không luận bình thường, không phải là thấp hèn.\nTử Vi không gặp \"lục cát tinh\", mà gặp sát tinh, là ý tượng: bất lợi, chủ về vất vả, không quý hiển.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tử",
+          "i"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_41",
+      "condition_text": "Cung Thiên di an tại Thìn có Đà la",
+      "raw_text": "Hội hợp với cát tinh là chủ về ra ngoài gặp quý nhân và phát tài.\nHãm địa, thêm Hỏa Linh Không Kiếp là chủ về thường tự chuốc lấy thị phi, không vừa lòng mọi người.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Đ",
+          "la"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_42",
+      "condition_text": "Cung Thiên di an tại Thìn có Thiên tướng",
+      "raw_text": "Chủ về ra ngoài được quý nhân phù trợ.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên tướng"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_43",
+      "condition_text": "Cung Thiên di an tại Thìn có Tử vi",
+      "raw_text": "Cùng Tả Phụ Hữu Bật đồng cung, ra ngoài được quý nhân phù trợ, vì phát phúc.\nThêm Kình Dương Đà La Hỏa Linh Không Kiếp là chủ về cuộc đời không thể an tĩnh được.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tử",
+          "i"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_44",
+      "condition_text": "Cung Thiên di an tại Thìn có Tử vi,Thiên tướng",
+      "raw_text": "Chủ về ra ngoài phát đạt, nhiều may mắn.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tử",
+          "i"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_45",
+      "condition_text": "Cung Thiên di an tại Thìn có Văn khúc",
+      "raw_text": "Chủ về ra ngoài gặp quý nhân, phát tài. Thêm cát tinh là chủ về được của. Thêm Kình Dương Đà La Hỏa Linh là chủ về chẳng mấy khi toại chí.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Văn khúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_46",
+      "condition_text": "Cung Thiên di an tại Thìn có các sao Văn xương,Văn khúc hội hợp",
+      "raw_text": "Miếu vượng, ra ngoài phát đạt, gặp được quý nhân, nhờ tài năng nghệ thuật mà nổi danh, gia nhiều cát tinh thủ chiếu thì chủ được tiền tài, gia Tứ sát thì ít khi được như ý, hãm địa thì có kẻ tiểu nhân, gặp Không Kiếp hình kỵ chủ đơn độc nghèo khó, ở ngoài ít khi được bình yên, hao tâm tốn sức. Gặp Hóa Kỵ thì có tiếng xấu ở ngoài, chịu đả kích của người khác hoặc có phiền phức về giấy tờ, quan trường kiện tụng, tranh chấp thị phi với người.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "các sao Văn xương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_47",
+      "condition_text": "Cung Thiên di an tại Thìn có Thiên tướng",
+      "raw_text": "Ra ngoài luôn gặp sự hưởng ứng, yêu thích, thường có người theo làm vây cánh, thích xen vào chuyện không đâu. Miếu vượng địa thì được quý nhân phù rợ, phát tài như ý; đồng cung hoặc gia hội Lộc Tồn, Hóa Lộc, Hóa Quyền, Tả Hữu, Xương Khúc, Khôi Việt thì rất tốt, mọi chuyện đều dễ dàng thuận lợi. Gia Tứ sát Không Kiếp Hình Kỵ, kinh doanh gian khó, không được thuận lợi.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên tướng"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_48",
+      "condition_text": "Cung Thiên di an tại Thìn có Tử vi",
+      "raw_text": "Đồng cung với Phụ Bật, ra ngoài hay được quý nhân giúp đỡ, đại cát đại lợi.\nCó thể nhận được sự giúp đỡ từ bậc bề trên bạn bè, quan hệ với mọi người đều tốt đẹp. Giai đoạn trung niên có thể giao thiệp với các nhân vật hoạt động về mảng thương nghiệp, chính trị, có thể nhờ sự giúp đỡ của tầng lớp xã hội thượng lưu mà đạt được thành công trong sự nghiệp, điểm này cần phải xét thêm cát tinh cung mệnh.\nTử Vi và Tả Phụ, Hữu Bật, Văn Xương, Văn Khúc đồng cung, chủ ra ngoài dễ phát triển, ở bên ngoài gặp được quý nhân tương trợ, tượng trưng cho sự thành công ở nơi khác (ngoài quê hương). Gặp Lộc Tồn, Hóa Lộc, Thiên Mã đồng cung hoặc hội chiếu thì ra ngoài phát tài, lợi cho việc kinh doanh. Gia các sát tinh Tứ sát Không Kiếp hình kỵ thì ra ngoài không yên ổn, hay phải suy tính.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tử",
+          "i"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_49",
+      "condition_text": "Cung Thiên di an tại Thìn có Tử vi,Thiên tướng",
+      "raw_text": "Tử Vi Thiên Tướng cư thìn tuất, ra ngoài hay gặp may mắn thuận lợi, nhưng cũng có tiểu nhân, nếu cung mệnh có cát tinh thì tốt đẹp được phúc, còn nếu cung mệnh không có cát tinh mà lại có sát tinh thì ra ngoài bất lợi.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tử",
+          "i"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "thien_di_stream_50",
+      "condition_text": "Cung Thiên di an tại Thìn có Thiên tướng",
+      "raw_text": "Thiên Tướng nhập Thiên Di chủ xuất ngoại được quý nhân phù trợ.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên tướng"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "thien_di_stream_51",
+      "condition_text": "Cung Thiên di an tại Thìn có Thiên tướng,Cung khí đại cát",
+      "raw_text": "Thiên Tướng nhập Thiên Di, Cung Khí đại cát, nếu ngộ Thiên Tướng là hỷ thần thì 30 tuổi tất có xe. Trái lại, Thiên Tướng Thủy là kỵ thần thì cần gặp đại vận đẹp mới có xe.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên tướng"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "thien_di_stream_52",
+      "condition_text": "Cung Thiên di an tại Thìn có Tử vi",
+      "raw_text": "Tử Vi ở cung Thiên Di chủ xuất ngoại có quý nhân phù trợ, phát đạt.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tử",
+          "i"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "thien_di_stream_53",
+      "condition_text": "Cung Thiên di an tại Thìn có Tử vi,Cung khí đại cát",
+      "raw_text": "Tử Vi tinh nhập Thiên Di cung, Tử Vi Thổ tinh là hỷ thần, nếu Cung Khí đại cát thì trước 30 tuổi đã có xe hơi. Trái lại, nếu ngộ Tử Vi Thổ là kỵ thần cần đại vận hợp mới có thể mua xe được. Cung Khí tốt, xuất ngoại bình an, có thể phát triển.",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tử",
+          "i"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "thien_di_stream_54",
+      "condition_text": "Cung Thiên di an tại Thìn có Cung Thiên di",
+      "raw_text": "Thiên Di cung, cổ thư thường dùng để luận đoán những vấn đề xuất ngoại hay khi ra ngoài xã hội. Xuất ngoại có tốt hay không? Ly hương có phát đạt hay không? Trên mệnh bàn Tử Vi, Thiên Di cung xung chiếu cung Mệnh, tinh diệu ở cung Thiên Di hội chiếu gây tác động lên cung Mệnh. Ở đây là nói đến ý nghĩa tinh diệu mà thôi, còn đối với Thiên Di Cung Khí thì chỉ liên quan đến vấn đề của Thiên Di. Không thể luận đoán lẫn lộn với Cung Mệnh Cung Khí được.\nCung khí của cung Thiên Di có 3 ý nghĩa:\n1. Thứ nhất là đoán người này có xe như thế nào? Bao giờ có?\n2. Thứ hai là luận đoán người xung quanh hay xã hội nói về anh ta thế nào?\n3. Thứ ba là luận đoán người đó có ly hương hay không? Ly hương có phát triển được hay không?\nTất nhiên, khi luận đoán những điều này cũng cần phối hợp thêm với Mệnh Thân Cung Khí.\n***\nTrên đây, tôi đã trình bày Thiên Di Cung Khí phối hợp với chính tinh. Các tình huống tương đối phức tạp, nên tôi chỉ đề cập tới việc có sở hữu xe hơi hay không để bạn đọc tham khảo mà thôi.\nBởi vì, việc sở hữu xe cũng phản ánh phần nào mức độ giàu cỏ cũng như địa vị xã hội của người đó. Ví dụ, xé hạng sang có giá vài triệu tệ trở lên, xe vừa vừa thì cũng phải vài trăm nghìn tệ. Nếu bản Mệnh, Tài cung đẹp, thì đương nhiên sẽ có ô tô riêng chứ không phải là mội người hành nghề lái taxi. Trong tỉnh, theo thống kê không chính thức hiện cũng có đến hơn 60 vạn người lái taxi, chiếm hơn 5% dân số. Đấy là chưa kể đến các loại hình xe vận tải khác nữa. Do vậy, cũng không thể loại bỏ hìn",
+      "conditions": {
+        "palace": "THIEN_DI",
+        "position": "THIN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung Thiên di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19781210_ti",
+  "birth": {
+    "year": 1978,
+    "month": 12,
+    "day": 10,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:09:26.871Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

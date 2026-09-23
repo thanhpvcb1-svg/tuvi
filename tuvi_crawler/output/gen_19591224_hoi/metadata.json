@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19591224_hoi",
+  "birth": {
+    "year": 1959,
+    "month": 12,
+    "day": 24,
+    "hour": "hoi",
+    "hourName": "Hợi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:08:44.906Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

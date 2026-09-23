@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20180604_dau",
+  "birth": {
+    "year": 2018,
+    "month": 6,
+    "day": 4,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:19:49.209Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

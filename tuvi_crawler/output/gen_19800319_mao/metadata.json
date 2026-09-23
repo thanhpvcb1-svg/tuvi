@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19800319_mao",
+  "birth": {
+    "year": 1980,
+    "month": 3,
+    "day": 19,
+    "hour": "mao",
+    "hourName": "Mão",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:12:30.151Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

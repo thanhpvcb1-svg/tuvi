@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19951110_tuat",
+  "birth": {
+    "year": 1995,
+    "month": 11,
+    "day": 10,
+    "hour": "tuat",
+    "hourName": "Tuất",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:17:07.437Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

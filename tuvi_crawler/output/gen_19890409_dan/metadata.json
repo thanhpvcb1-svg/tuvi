@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19890409_dan",
+  "birth": {
+    "year": 1989,
+    "month": 4,
+    "day": 9,
+    "hour": "dan",
+    "hourName": "Dần",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:18:05.472Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,1175 @@
+{
+  "palace": "PHU_MAU",
+  "source": "tuvi.cohoc.net",
+  "chart_id": "472159",
+  "total_blocks": 39,
+  "sections": [
+    {
+      "section_id": "phu-mau",
+      "title": "CUNG PHỤ MẪU",
+      "blocks": [
+        {
+          "block_id": "phu-mau_cohoc_1",
+          "condition_text": "Điểm \"xí hoa\" cung Phụ mẫu là 1.5",
+          "raw_text": "Cung Phụ mẫu chủ về: cha mẹ, cấp trên, văn thư giấy tờ.\nTọa thủ: Thiên đồng, Địa kiếp, Địa không. Xung chiếu: Thiên lương, Lộc tồn, Thiên hình. Tam hợp: Thiên việt, Thiên hỉ - Thiên cơ, Cự môn, Linh tinh, Hóa kỵ, Hàm trì. Giáp cung: Vũ khúc, Thiên phủ, Tả phù - Phá quân, Âm sát, Văn xương.\nNgũ hành khí của cung Quý Hợi: 20% THỦY (nhàn thần), 50% THỦY (nhàn thần), 30% THỦY (nhàn thần). Đây là cung khí bình thường (không hung, không cát). Thiên đồng hành THỦY là nhàn thần. Địa kiếp hành HỎA là kị thần. Địa không hành HỎA là kị thần.\nCung Phụ mẫu can Quý làm cho:\n- Phá quân Hóa lộc nhập cung Mệnh (cung Huynh đệ của cung Phụ mẫu). Cung Mệnh can Nhâm chuyển Thiên lương Hóa Lộc nhập cung Tật ách, chuyển Vũ khúc Hóa kỵ nhập cung Phúc đức.\n- Tham lang Hóa kỵ nhập cung Quan lộc (cung Điền trạch của cung Phụ mẫu). Cung Quan lộc can Giáp chuyển Liêm trinh Hóa Lộc nhập cung Phu thê, chuyển Thái dương Hóa kỵ nhập cung Điền trạch.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của một cao thủ Bắc phái",
+            "author": "Kinh nghiệm của một cao thủ Bắc phái",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 9
+        },
+        {
+          "block_id": "phu-mau_cohoc_2",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Kỵ Quan",
+          "raw_text": "Cung Phụ mẫu là cung khí số vị cung Tử tức. Trong trường hợp này biểu hiện con cái hồ đồ.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đồng bộ đoạn quyết - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "phu-mau_cohoc_3",
+          "condition_text": "Thuận Thủy Kị (流水忌): cung Phụ mẫu phi hóa kỵ tới cung Quan lộc",
+          "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Phụ mẫu khí tiết sang cung Quan lộc.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_4",
+          "condition_text": "Củ Triều Kỵ (纠缠忌): cung Phụ mẫu phi hóa kỵ nhập cung Quan lộc, mà cung Thiên di phi hóa kỵ nhập cung Phu thê",
+          "raw_text": "Hóa kỵ xuất hiện ở tuyến phu quan, thì vợ chồng cãi nhau đến già, nhưng không nhất định sẽ ly hôn; muốn biết họ cãi nhau chuyện gì thì phải xem cung nào phi hóa kỵ để giải đoán.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_5",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Lộc Mệnh",
+          "raw_text": "Phụ mẫu cung Hóa Lộc nhập mệnh cung.\n1. Nhân sự vật của phụ mẫu cung mang cho mệnh tạo vui vẻ.\na. Với người: Mệnh tạo được phụ mẫu, bề trên, trưởng bối, cấp trên, ông chủ hoặc cơ quan trợ giúp, giúp đỡ.\nb. Với sự: Việc học làm cho mệnh tạo vui vẻ, nên mệnh tạo là người thông minh, dễ dàng lĩnh ngộ tri thức, học cao biết rộng.\nc. Với vật: Văn thư. Thể hiện mệnh tạo được thuận lợi như ý trong lĩnh vực văn thư, văn tự giấy tờ.\n2. Mệnh tạo có duyên với cấp trên, ông chủ, nên có lợi được đề bạt, thăng tiến.\n3. Mệnh tạo coi việc học hành là sự vui vẻ. Người thông minh dễ dàng lĩnh ngộ, tâm tưởng sự thành.\n4. Lợi làm công chức, cơ quan nhà nước, lợi giao tiếp nơi công quan.\n5. Phụ mẫu là nô bộc của tài bạch, dễ dàng vay mượn, tài chính luân chuyển thuận tiện.\n6. Phụ mẫu là tu dưỡng, hàm dưỡng cung vị, Lộc nhập mệnh cung, việc tu dưỡng hàm dưỡng dần như ý thuận lợi, tâm tính dễ lạc quan.\n7. Lợi cho thăng tiến, học hành, thi cử, làm công chức.\n8. Người làm kinh doanh, thường lấy đối tượng khách hàng là bậc trưởng bối, người cao tuổi.\n9. Dễ kết giao bạn vong niên. Phụ mẫu cung Hóa Lộc nhập tật ách cung.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_6",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Lộc Mệnh",
+          "raw_text": "Từ Phụ Mẫu cung hóa Lộc đến Mệnh cung, chiếu Thiên Di cung\n1. Gia đình giàu có, được cha mẹ thương yêu che chở chăm sóc.\n2. Học lực mạnh, khả năng đọc hiểu cao, bắt chước tốt, học tập và thi tốt.\n3. Có thể nhận được sự yêu thương, chăm sóc của quý nhân bề trên.\n4. Chiều chuộng, dễ hình thành thói lười biếng, thiếu tinh thần tự lập, thụ động hơn trong cuộc sống, thích làm sẵn, ỷ lại vào cha mẹ.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_7",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Lộc Mệnh",
+          "raw_text": "Cha mẹ rất quan tâm chăm sóc mệnh tạo, duyên phận sâu nặng. Quan hệ tốt đẹp với cấp trên hay trưởng bối, thường được họ quan tâm. Đi đòi nợ có thể thuận lợi. Người phối ngẫu có thể giúp vốn cho sự nghiệp của mệnh tạo. Mệnh tạo là người thích học hành, có thành tích cao.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_8",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Lộc Mệnh",
+          "raw_text": "父母禄入命:\n1. 得「父母荫」、有「长辈福」。「父母开明」。\n2. 我「见多识广」、「聪明融圆」。利于念书、「升迁」、「证照」考试。\n3. 与「公职」较「有缘」。少文书困扰〈父母宫为「文书宫」〉。\n4. 最宜做「长辈客户」生意。\n5. 或有「忘年之交」。\n6. 外〈夫〉家家境好。\nPhụ mẫu Hóa lộc nhập cung mệnh:\n1. Được \"phúc ấm từ cha mẹ\", có \"phúc từ người lớn\". \"Cha mẹ khai sáng\".\n2. Tôi \"kiến thức rộng\", \"thông minh tròn trịa\". Lợi cho học hành, \"thăng tiến\", \"thi chứng chỉ\".\n3. Có duyên với \"công việc công chức\". Ít rắc rối giấy tờ (Phụ Mẫu là cung \"văn thư\").\n4. Nên làm kinh doanh với \"khách hàng lớn tuổi\".\n5. Hoặc có \"bạn vong niên\".\n6. Nhà chồng (nhà vợ) gia cảnh tốt.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_9",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Lộc Mệnh",
+          "raw_text": "父母禄入命: \n1. 得「父母荫」、有「长辈福」。「父母开明」。\n2. 我「见多识广」、「聪明融圆」。利于念书、「升迁」、「证照」考试。\n3. 与「公职」较「有缘」。少文书困扰〈父母宫为「文书宫」〉。\n4. 最宜做「长辈客户」生意。\n5. 或有「忘年之交」。\n6. 外〈夫〉家家境好。\nPhụ mẫu Hóa lộc nhập cung mệnh: \n1. Được cha mẹ phúc ấm, trưởng bối phúc, cha mẹ sáng suốt. \n2. Bản thân kiến thức rộng, thông minh, lợi đọc sách, thi chứng chỉ, lên chức. \n3. Có duyên với nhiệm vụ, công vụ. Ít khốn khổ vì giấy tờ (phụ mẫu cung - văn thư cung). \n4. Tốt nhất là làm \"trưởng bối khách hàng\" sinh ý. \n5. Hoặc bạn hữu \"vong niên chi giao\". \n6. Ngoại (phu) ông nội gia cảnh tốt.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_10",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Lộc Mệnh",
+          "raw_text": "Phụ mẫu cung Hóa Lộc nhập Mệnh cung, có duyên đậm với phụ mẫu, có thể nhận được sự yêu thương từ cha mẹ, cha mẹ lấy tiền tài trợ giúp hoặc có di sản lưu lại cho ta; cha mẹ và chú bác có duyên hậu, sự nghiệp có thành tự, tài sản nhiều.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_11",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Quyền Nô",
+          "raw_text": "Phụ mẫu Hóa Quyền nhập nô bộc cung.\n1. Phụ mẫu can thiệp, quản thúc việc giao tế của mệnh tạo.\n2. Hội Lộc, tất mệnh tạo có đức hạnh khiêm nhường trong nhân tế, nô bộc tọa Lộc (niên Lộc hoặc mệnh Lộc), đắc nhân khí.\n3. Hội Kị, tất mệnh tạo trong nhân tế hay nói khoác, nói tục hoặc phát ngôn ngạo mạn, lớn tiếng, tu dưỡng kém. Thiên di tọa Kị, cương trực, xử thế vụng về.\nPhùng Kị hành động thô kệch.\n4. Mệnh cung của phụ mẫu Hóa Quyền nhập nô bộc.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_12",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Quyền Nô",
+          "raw_text": "Từ Phụ Mẫu hóa Quyền đến Nô Bộc cung, chiếu Huynh Đệ cung\n1. Đa số những người bạn do mệnh chủ và cha mẹ kết giao đều là lãnh đạo, giám sát viên hoặc kỹ thuật viên chuyên nghiệp và có địa vị xã hội nhất định.\n2. Mệnh chủ và cha mẹ sự nghiệp đa số là các nhà lãnh đạo, giám sát hoặc các chuyên gia có địa vị xã hội nhất định.\n3. phần lớn công việc kinh doanh của anh em đều là lãnh đạo, giám sát hoặc kỹ thuật viên chuyên nghiệp, có địa vị xã hội nhất định.\n4. Mệnh chủ và cha mẹ sẽ giúp sự nghiệp của anh em thăng tiến.\n5. Mệnh chủ và cha mẹ tính cách có đặc điểm tâng bốc, nịnh nọt người hơn mình, nhưng lại có con mắt rất thực tế với người dưới.\n6. Tượng trưng mệnh chủ và cha mẹ quan hệ nhân tế xã hội tốt.\n7. Những người bạn mà mệnh chủ kết giao hầu hết là những người lớn tuổi.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_13",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Quyền Nô",
+          "raw_text": "Cha mẹ có cơ thể khỏe mạnh, làm lụng vất vả đến già vẫn không chịu nghỉ. Cha mẹ sẽ can thiệp vào chuyện chọn đối tượng giao du của mệnh tạo.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_14",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Quyền Nô",
+          "raw_text": "Phụ Mẫu [Quyền nhập] Nô Bộc:\n* Bề trên ràng buộc việc qua lại kết giao bạn bè của ta.\n* Cha mẹ thuộc bậc đức cao vọng trọng trong chuyện giao tế với người ta. hoặc sự kết giao nhân tế của cha mẹ có tố chất đẳng cấp cao.\n* Ta có thể có được phương thức khá tốt trong những mối quan hệ với những bạn đã kết giao lâu năm, anh em kết nghĩa.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_15",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Quyền Nô",
+          "raw_text": "Phụ mẫu cung Hóa Quyền nhập Nô Bộc, cha mẹ quản giáo anh em rất nghiêm khắc; cha mẹ chăm chú công tác, sự nghiệp có thành, song thân tranh cãi nhau nhiều.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "NO_BOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_16",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Khoa Điền",
+          "raw_text": "Phụ mẫu cung Hóa Khoa nhập điền trạch.\n1. Phụ mẫu ứng xử với người trong gia đình hòa nhã, khách khí, dùng lý lẽ đạo lý dạy dỗ, phương pháp dân chủ.\n2. Phụ mẫu ít trợ giúp mệnh tạo về kinh tế.\n3. Phụ mẫu là văn thư cung, trong nhà, không khí thư hương nồng hậu, Trong nhà thường có thư phòng.\n4. Đối với người nhà, mệnh tạo biểu đạt hài hòa, khách khí, vui vẻ hòa nhã, dùng lý lẽ đạo lý, có hình tượng tốt với mọi người.\n5. Mệnh cung của phụ mẫu Hóa Khoa nhập điền trạch.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_17",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Khoa Điền",
+          "raw_text": "Từ Phụ Mẫu hóa Khoa đến Điền Trạch cung, chiếu Tử Nữ cung\n1. Mệnh chủ cha mẹ chăm sóc gia đình tốt, quản lý gia đình tốt.\n2. Quan hệ gia đình của vợ chồng đôi bên tình cảm tốt đẹp, sau khi kết hôn sức khỏe tốt, tầm trạng vui vẻ, cuộc sống gia đình ổn định, êm ấm.\n3. Gia đình hòa thuận êm ấm, ít tranh chấp phân chia, đối xử nhã nhặn, yêu thương nhau.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_18",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Khoa Điền",
+          "raw_text": "Cha mẹ rất quan tâm gia đình, giỏi chăm lo việc nhà. Quan hệ gia đình hai bên của vợ chồng rất tốt. Sau kết hôn, mệnh tạo có sức khỏe tốt, tâm tình vui vẻ, ít sinh bệnh.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_19",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Khoa Điền",
+          "raw_text": "父母科入田宅:\n1. 书香绕宅。\n2. 家中少有争吵吼嚷。\nPhụ mẫu Hóa khoa nhập cung điền trạch:\nCha mẹ Khoa nhập Điền trạch:\n1. Thư hương quanh nhà.\n2. Trong nhà ít cãi vã ầm ĩ.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_20",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Khoa Điền",
+          "raw_text": "父母科入田宅: \n1. 书香绕宅。\n2. 家中少有争吵吼嚷。\nPhụ mẫu Hóa khoa nhập cung điền trạch: \n1. Thư hương quanh nhà. \n2. Gia trung ít có cãi vã to tiếng.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_21",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Khoa Điền",
+          "raw_text": "Phụ mẫu cung Hóa Khoa nhập Điền Trạch, quan tâm chăm sóc gia đình và con cái của ta; cha mẹ sống giản dị, tiêu tiền có kế hoạch, cuộc sống vui vẻ.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_22",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Kỵ Quan",
+          "raw_text": "Phụ mẫu Hóa Kị nhập quan lộc.\n1. Phụ mẫu lo lắng, quan tâm đến công việc, sự nghiệp của mệnh tạo.\n2. Phụ mẫu làm cho công việc, sự nghiệp của mệnh tạo nhiều áp lực. (thường là cấp trên, người chủ).\n3. Văn thư hợp đồng ảnh hưởng đến sự phát triển công việc, sự nghiệp của mệnh tạo, ví dụ điều kiện cạnh tranh hoặc khả năng xoay sở công việc gặp khó khăn.\n4. Cần phải giúp đỡ phụ mẫu gánh vác công việc, có trách nhiệm hiếu dưỡng phụ mẫu. Phụ mẫu Kị nhập mệnh là vì phụ mẫu lao tâm. Phụ mẫu Kị nhập tài bạch là chi tiêu cho phụ mẫu. Phụ mẫu Kị nhập quan lộc, hiếu dưỡng phụ mẫu là trách nhiệm của mệnh tạo.\n5. Học hành gian khổ, dễ vừa học vừa làm, coi việc học như một loại công việc làm hàng ngày.\n6. Mệnh cung của phụ mẫu Hóa Kị nhập quan lộc.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_23",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Kỵ Quan",
+          "raw_text": "Từ Phụ Mẫu hóa Kị đến Quan Lộc cung, xung Phu Thê cung\n1. Kế thừa công việc kinh doanh của cha mẹ.\n2. Được cha mẹ trưởng bối che chở, vun đắp, giúp đỡ.\n3. Phù hợp với công chức hoặc nhà thầu, hoặc đảm nhận công việc kỹ thuật, văn hóa.\n4. Phối ngẫu mâu thuẫn với cha mẹ.\n5. Có những lo lắng tiềm ẩn trong hôn nhân do sự bất hòa giữa cha mẹ và phối ngẫu.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_24",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Kỵ Quan",
+          "raw_text": "Vận sự nghiệp không tốt, không thích hợp đi làm hưởng lương, sẽ khó khăn thăng tiến; lúc còn đi học, thành thích kém; nếu tự sáng lập cơ nghiệp, không nên mở rộng quá độ, dễ mắc nợ. Người phối ngẫu không được gia đình của họ trợ lực. Cha mẹ của mệnh tạo làm việc không chu đáo, khá cẩu thả.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_25",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Kỵ Quan",
+          "raw_text": "父母忌入事业:\n1. 长辈「执着工作」或父母「工作安定」。\n2. 长辈操心我工作。\n3. 长辈〈上司〉加诸我的「工作压力」。\n4. 须尽「孝养」之责。\n5. 念书辛苦。\n6. 外〈夫〉家辛劳。\nPhụ mẫu Hóa kỵ nhập cung sự nghiệp:\n1. Người lớn \"cố chấp với công việc\" hoặc cha mẹ \"công việc ổn định\".\n2. Người lớn lo lắng về công việc của tôi.\n3. Áp lực công việc từ người lớn (sếp).\n4. Phải tận tụy với trách nhiệm \"hiếu dưỡng\".\n5. Học hành vất vả.\n6. Nhà chồng (nhà vợ) lao tâm khổ tứ.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_26",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Kỵ Quan",
+          "raw_text": "父母忌入事业: \n1. 长辈「执着工作」或父母「工作安定」。\n2. 长辈操心我工作。\n3. 长辈〈上司〉加诸我的「工作压力」。\n4. 须尽「孝养」之责。\n5. 念书辛苦。\n6. 外〈夫〉家辛劳。\nPhụ mẫu Hóa kỵ nhập cung sự nghiệp: \n1. Trưởng bối cố chấp công tác hoặc Phụ mẫu công tác an định. \n2. Trưởng bối bận tâm công tác của ta. \n3. Trưởng bối (cấp trên) gia tăng áp lực công tác cho ta. \n4. Nên lấy hiếu dưỡng làm trách nhiệm. \n5. Đọc sách khổ cực. \n6. Ngoại (phu) gia vận khổ cực.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_27",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Kỵ Quan",
+          "raw_text": "Phụ mẫu cung Hóa Kị nhập Quan Lộc, công tác ở cơ quan công vụ không được cấp trên trọng dụng khen thưởng, thường bị trách phạt, sựu nghiệp khó toại ý; cha mẹ và phối ngẫu của ta quan hệ kém, hoặc phản đối việc kết hôn của ta; sản nghiệp cha mẹ không phát đạt, gia đạo suy sụp, con cháu ít ỏi.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "QUAN_LOC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-mau_cohoc_28",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có M Điền",
+          "raw_text": "Bất động sản có từ cha mẹ. Cha mẹ sẽ mua nhà đất cho ta.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Điền"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phu-mau_cohoc_29",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có M Mệnh",
+          "raw_text": "Trong mệnh cùng mắc nợ phụ mẫu. Là người chăm lo cho phụ mẫu.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Mệnh"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phu-mau_cohoc_30",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có M Nô",
+          "raw_text": "Bằng hữu là quý nhân trong mệnh. Sự nghiệp dựa bằng hữu kiếm tiền.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Nô"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Nô"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phu-mau_cohoc_31",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có M Quan",
+          "raw_text": "Mệnh cách chủ quản, ông chủ. Mệnh tiên thiên của sự nghiệp gia đình.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Quan"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Quan"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phu-mau_cohoc_32",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có các sao Địa không,Địa kiếp hội hợp",
+          "raw_text": "Tính cách ít chịu ảnh hưởng của cha mẹ, bản thân không thể chấp nhận cách giáo dục của cha mẹ, có sự phản kháng, nhưng sẽ hiếu dưỡng cha mẹ. Duyên với cha mẹ không sâu đậm, bản thân không sống cùng cha mẹ, ít khi ở cùng nhau.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "các sao Địa không",
+              "Địa k"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-mau_cohoc_33",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Thiên đồng",
+          "raw_text": "Miếu vượng không khắc, cha mẹ song toàn hòa thuận tốt đẹp, tình cảm nồng hậu, được nhận sự yêu thương che chở. Hãm địa nên nhận cha mẹ nuôi. Hội tứ sát thì xa tổ nghiệp hoặc ra ngoài sớm. Hãm địa hội tứ sát Không Kiếp hình thì chủ sớm khắc cha mẹ.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên đồng"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-mau_cohoc_34",
+          "condition_text": "Cung Phụ mẫu an tại Hợi có Cung Phụ mẫu",
+          "raw_text": "Cung Phụ Mẫu trong mệnh bàn Tử Vi Đẩu số nếu chỉ dựa vào việc phân tích tinh diệu thì chỉ có thể luận đoán được mối quan hệ hay tình cảm của Phụ Mẫu mà thôi. Chứ không thể luận đoán được Phụ Mẫu có trường thọ hay không? Có phú quý hay không? Hay Phụ Mẫu có bao nhiêu phu thê? Dựa vào Cung Khí, chúng ta hoàn toàn có thể biết được những điều ấy.\nPhụ mẫu Cung Khí có thể luận đoán được:\n1. Phụ mẫu có trường thọ không?\n2. Phụ mẫu có phú quý không?\n3. Phụ mẫu có bao nhiều đời phu thê?\nTrong 3 điều trên, thì điều 1 và điều 2 là tối trọng yếu trong thực tế luận đoán. Do đó, tôi sẽ chỉ trình bày những vấn đề đó ở đây.",
+          "conditions": {
+            "palace": "PHU_MAU",
+            "position": "HOI",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung Phụ mẫu"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        }
+      ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "phu_mau_crawl_55_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Chức năng của cung Phụ Mẫu cho biết mối quan hệ của đương số đối với cha mẹ của mình, tình cảm có hòa hợp tốt đẹp hay không, bối cảnh của gia đình đương số như thế nào, địa vị thành tựu của cha mẹ ra sao,&hellip; từ đó biết được xuất thân của đương số ở giai tầng nào trong xã hội, sự trợ giúp của cha mẹ đối với đương số, gián tiếp ước lượng suy đoán được thọ yểu của cha mẹ đương số.",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_56_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Cung Phụ Mẫu còn được gọi là Tướng Mạo cung, điều này vốn là sự kế thừa của môn Tử Vi Đẩu số từ các môn tiền thân của nó là Thất Chính Tứ Dư và Thập Bát Phi Tinh (còn được biết đến dưới cái tên Đạo Tạng Tử Vi Đẩu Số). Ngày nay, trong các thư tịch của môn Tử Vi Đẩu Số chúng ta vẫn thường hay bắt gặp bằng chứng là những câu như:",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_57_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Tướng mạo phùng hung tất đới phá tướng,",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_58_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Tật ách phùng Kị định hữu uông doanh.",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_59_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "(Tướng Mạo - tức Phụ Mẫu cung - gặp hung sát tinh thì kiểu gì cũng có phá tướng,",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
+    }
+  ],
+  "last_updated": "2026-09-23T02:33:10.339Z"
+}

@@ -1,0 +1,1119 @@
+{
+  "palace": "menh",
+  "palace_name": "Mệnh",
+  "source": "tuvi.cohoc.net",
+  "crawl_mode": "streaming",
+  "last_updated": "2026-09-22T03:00:19.090Z",
+  "total_blocks": 59,
+  "blocks": [
+    {
+      "block_id": "menh_stream_1",
+      "condition_text": "Điểm \"xí hoa\" cung Mệnh là 1.8",
+      "raw_text": "Cung Mệnh chủ về: bản thân đương số.\nTọa thủ: Phá quân, Âm sát, Văn xương. Xung chiếu: Tử vi, Thiên tướng, Thiên khốc, Đà la, Văn khúc. Tam hợp: Thất sát, Kình dương - Tham lang, Hữu bật, Hóa khoa, Hóa lộc. Giáp cung: Thiên riêu - Thiên đồng, Địa kiếp, Địa không.\nNgũ hành khí của cung Nhâm Tuất: 20% THỦY (nhàn thần), 50% THỔ (hỉ thần), 30% THỦY (nhàn thần). Đây là cung khí tiểu cát. Phá quân hành THỦY là nhàn thần. Âm sát hành THỦY là nhàn thần. Văn xương hành KIM là hỉ thần.\nCan cung là Nhâm thuộc phạm trù NHÂN: Người xung quanh giúp mình, nhưng chưa chắc được hưởng Thiên thời, Địa lợi. Can Nhâm là Nhân chi Nhân có nghĩa là Nhân hòa ở mức độ HẠ ĐẲNG - thấp nhất. Ngoài ra cung Nhâm Tuất có ngũ hành địa chi khắc thiên can cũng làm giảm rất nhiều độ số cho tính đắc Nhân hòa của cung.\nĐịa chi cung Mệnh là Tuất vị trí \"tứ khố\", vị trí Địa, chủ liên quan tới tiền tài.\nCung Mệnh can Nhâm làm cho:\n- Thiên lương Hóa lộc nhập cung Tật ách. Cung Tật ách can Đinh chuyển Thái âm Hóa Lộc nhập cung Điền trạch, chuyển Cự môn Hóa kỵ nhập cung Nô bộc.\n- Vũ khúc Hóa kỵ nhập cung Phúc đức. Cung Phúc đức can Giáp chuyển Liêm trinh Hóa Lộc nhập cung Phu thê, chuyển Thái dương Hóa kỵ nhập cung Điền trạch.",
+      "conditions": {
+        "palace": "MENH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của một cao thủ Bắc phái",
+        "author": "Kinh nghiệm của một cao thủ Bắc phái"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "menh_stream_2",
+      "condition_text": "Cung Mệnh là NHÂM TUẤT",
+      "raw_text": "Cổ thư chép: \"Nhâm Tuất Quí Hợi thủy, Quan Đới ở Tuất, Lâm Quan tại Hợi lực lượng hùng hậu. Hợi ví như dòng sông lớn nên gọi bằng Đại Hải Thủy.\nNước của Đại Hải Thủy diện tích quảng khoát, thế tượng bao la, xung kích lực mạnh, làm thiện hay làm ác đều dữ dội. Hoặc là gian hùng của thời đại, hoặc là anh hùng cái thế.\nNgười xưa giảng rằng: \"Nước Đại Hải Thủy thâu gồm trăm sông chảy miên man về biển cả, bao quát tính thăng trầm của đất trời, thâu tóm ánh sáng của nhật nguyệt. Nguồn của Đại Hải Thủy có trong có đục. Nhâm Tuất chứa thổ khí nên đục, Quí Hợi toàn thủy nên trong.\nNếu mệnh đáng bậc chính nhân thì khi ở ngôi vị thường bao dung đại lượng ưa làm điều thiện không ưa điều ác, ngược lại mệnh tầm thường hạ tiện sẽ thành con người lấy oán mà trả ân, tâm địa hẹp hòi như hai dòng nước trong đục vậy.\nNhâm Thủy Quí Hợi đều là Đại Hải Thủy, có điều Tuất thổ khiến cho Đại Hải Thủy chảy thành dòng như lòng sông, đầu óc sáng suốt cử chỉ minh bạch thiện ác phân minh.\nQuí Thủy là chính vị, thủy vượng cực chảy tràn lan không bờ bến nên tâm chất khó hiểu, muốn đề phòng cũng khó mà đề phòng nổi, thiện ác không rõ rệt. Quí Hợi mà có những sao ở Mệnh mang khuynh hướng làm chính trị sẽ là người ứng phó với những biến động lớn rất giỏi, lúc lâm nguy thì quyền biến.\nÝ tượng:\n- Cuộc đời dễ thăng trầm biến độ lớn\n- Nếu cách cục lớn, có thể thành anh hùng hào kiệt\n- Có thể thành đại ác hay đại thiện, đại trung hay đại gian, đại phúc hay đại họa",
+      "conditions": {
+        "palace": "MENH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Cổ thư bắc phái - Sưu tầm",
+        "author": "Sưu tầm"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "menh_stream_3",
+      "condition_text": "Cung Mệnh can Nhâm",
+      "raw_text": "Nhâm - Thủy có tính cách nhiệt tình cuồn cuộn như dòng sông đang trôi chảy, là kẻ đa tài đa nghệ, kiêm bị văn võ muốn chơi đằng nào cũng được, thường xuyên lạc quan yêu đời và ngoại hướng (thích hòa mình với sinh hoạt của dòng đời, dễ bị sự quyến rũ từ bên ngoài) có mưu lược và biết nắm lấy thời cơ, tuy thông minh nhưng hay làm theo ý của mình (ít chịu khuất phục kẻ khác). (Ns: các tính chất trên có thể hình tượng hóa như sau \"Nhâm = Dương thủy, nên có tượng là thác nước, mưa bão, những con sóng lớn.. có tính mạnh mẽ lôi cuốn nhưng không ổn định\").\nNHÂM = Tính cách độc lập và tự phụ rất cao, nắm được Thiên thời nên dễ chiếm được tiện nghi trong nhiều hoàn cảnh.",
+      "conditions": {
+        "palace": "MENH",
+        "position": null,
+        "heavenly_stem": "NHAM",
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của tác giả Ma Y Cung",
+        "author": "Kinh nghiệm của tác giả Ma Y Cung"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "menh_stream_4",
+      "condition_text": "Cung Mệnh địa chi là Tuất",
+      "raw_text": "Cung Mệnh cư Tuất thuộc khố vị, cá tính cố chấp câu nệ.",
+      "conditions": {
+        "palace": "MENH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "menh_stream_5",
+      "condition_text": "Cung Mệnh thiên can là Nhâm",
+      "raw_text": "Tính cách độc lập, tự mình làm ra, nên tính cách tự phụ, lại dựa vào khí của Thiên, biết người biết mình.",
+      "conditions": {
+        "palace": "MENH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "menh_stream_6",
+      "condition_text": "Thuận Thủy Kị (流水忌): cung Mệnh phi hóa kỵ tới cung Phúc đức",
+      "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Mệnh khí tiết sang cung Phúc đức.",
+      "conditions": {
+        "palace": "MENH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+        "author": "Tiên thiên tứ hóa phi tinh kỳ phổ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_7",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Mệnh cung hóa Lộc nhập Tật ách cung:\nTật ách cung chủ thân thể (hình thể, khỏe mạnh, tật bệnh), nơi công tác (sự nghiệp điền trạch), ở chung (tiếp xúc trên thân thể). Ta làm cho cơ thể của ta khỏe mạnh, ít bệnh tật, có bệnh sẽ may mắn gặp thầy gặp thuốc mà qua khỏi, thân thể có da có thịt chứ không gầy gò, nhưng không thích bị vất vả nặng nhọc, cho nên tương đối lười, không thường vận động. Ta thích nơi công tác rộng rãi thoáng mát (cung vị điền trạch của Sự nghiệp). Ta làm cho cảm xúc của ta thường tốt, bạn bè ở chung với ta cảm thấy dễ chịu thoải mái (Tật ách là giao hữu phúc đức).",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+        "author": "Alex Alpha"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_8",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Lạc quan, ăn ngon mặc đẹp, thường chi tiêu cho bản thân. Thân thể suy nhược hoặc thường dùng thuốc. Dễ béo, tính dục mạnh.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_9",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Mệnh cung Hóa Lộc nhập tật ách cung.\nMệnh cung là vô hình của Mệnh tạo, là tâm chủ tư duy, tinh thần, cung vị phản ứng của Mệnh tạo.\nTình cảm, tinh thần, tư duy, phúc trạch của Mệnh tạo nhập tật ách của mệnh tạo, mà Mệnh tạo cũng thu được hỷ duyệt của tật ách cung.\nSuy lý tượng nghĩa của Lộc: Sinh phát, hữu duyên, hỷ duyệt.\nThái độ của Lộc là khoan dung, quan hệ đối đãi cùng có lợi.\nTật ách chủ thân thể [thể hình, sức khỏe, tật bệnh], nơi làm việc [điền trạch của quan lộc vị], quan hệ giao tiếp [sự tiếp xúc của thân thể].\nMệnh tạo có thân thể hữu phúc, khỏe mạnh, có bệnh nhanh khỏi, gặp thầy gặp thuốc, thân thể thường đẫy đà, không tích tự làm mệt thân thể nên thường lười biếng, không tích vận động.\nThích môi trường làm việc thoải mái, dễ chịu.\nTinh thần thường lạc quan, giao tiếp cùng bằng hữu luôn vui vẻ [Tật ách là phúc đức của nô bộc vị], người mập mạp thường dễ giao tiếp.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_10",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Mệnh cung hóa Lộc nhập Tật Ách, trong tính cách có sự lo được lo mất, quá để ý thân thể của chính mình, có tố chất thần kinh, nhưng thường có nghi hoặc nghĩ mình có bệnh, đụng một tý bị thương chút là kêu lên sợ hãi không thôi.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_11",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Từ Mệnh cung hóa Lộc đến Tật Ách cung, chiếu Phụ Mẫu cung\n1. Tự lực cánh sinh, mọi việc đều phụ thuộc vào chính mình.\n2. Trong đời không thiếu tiền bạc, của cải dồi dào, kiếm tiền có con đường tắt.\n3. Tự ái, tự mãn. Quan tâm, chăm sóc, yêu bản thân, thích nhàn không thích lao động.\n4. Tâm tính hợp nhất, hài hòa và thấu hiểu, lạc quan vui vẻ, vạn sự có thể lớn chuyển thành nhỏ.\n5. Ăn uống tốt, không thích vận động, tấm lòng rộng rãi, dễ mập dễ gây béo phì.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_12",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Lạc quan, dễ có tính lười biếng, dễ phát phì; lúc còn nhỏ có thể chất yếu, trân quý sức khỏe, tiêu xài nhiều tiền cho bản thân, thích dùng thuốc bổ, thực phẩm bổ dưỡng; hiếu động, có đầu óc, duyên với người chung quanh tốt, hiếu thảo với cha mẹ, được bậc trưởng bối yêu thích, đề bạt, nâng đỡ; có thể phát triển lớn sự nghiệp. Nếu chuyển phi Hóa Kị nhập tuyến \"phu quan\": nữ mệnh chủ về có duyên với người khác giới; nam mệnh chủ về dựa dẫm phụ nữ, thích chuyện tính giao, đeo dính người phối ngẫu, có thể hưởng lạc thú phòng the.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_13",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Mệnh [Lộc nhập] Tật:\n* Lười vận động, dễ phát phì.\n* Không có tính nhẫn nại, không vững chí bền gan, thiếu tích cực.\n* Không dám chịu trách nhiệm, đời sống hưởng thụ, tùy cảnh mà thích ứng, lan man chẳng ràng buộc.\n* Tâm tính tốt.\n* Ăn ở tốt với nàng dâu (vì cung Tật Ách chính là vị trí của nàng dâu).",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_14",
+      "condition_text": "Cung Mệnh an tại Tuất có Lộc Tật",
+      "raw_text": "Mệnh cung Hóa Lộc nhập Tật ách: Tuổi nhỏ có thể chất kem, thân thể có tổn thương dễ phục hồi; cuộc đời lao tâm vất vả kiếm tiền, có tiền thì đầu tư mở rộng sản xuất; là người tương đối lạc quan, vui vẻ; Lộc chiếu Phụ Mẫu, dễ được trưởng bối đề bạt, có danh dự; cũng biểu thị cho sự quan tâm quá mức đến sức khở thân thể của mình, có thể có suy tính hơn thiệt, bệnh đa nghi; cung Tật Ách là nơi công tác, kiếm tiền ở nơi công tác.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_15",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "Mệnh cung Hóa Quyền nhập thiên di [Quyền xuất]:\nMệnh tạo mang tính tích cực nhập thiên di và muốn khống chế quản lý thiên di.\n1. Mệnh tạo là người có năng lực, chủ kiến, sự tự tin thể hiện ra ngoài, là người có tính năng động, hoạt bát, quả đoán, có năng lực, trí tuệ, quyền biến và ý chí.\n2. Là người có khả năng quan sát nhạy bén, khả năng ứng biến cao, người mưu lược (hiểu quyền biến), nên có thể lãnh đạo, khai phá tiên phong.\n3. Là người làm việc quyết đoán, nhanh nhẹn, không thích chần chừ do dự.\n4. Sự tự tin, chủ kiến, năng lực thể hiện ra ngoài, nếu có thêm kỹ năng chuyên nghiệp càng thuận lợi.\n5. Nếu cách cục không đẹp, dễ trở thành độc đoán, bá khí, tự phụ, dễ kết oán.\nHỷ hội Lộc, xử thế hài hòa, luôn giữ thái độ tươi vui.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_16",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "Mệnh cung Hóa Quyền nhập thiên di, biểu thị có năng lực, kiến thức chức vị, khí thế mạnh mẽ, hiểu quyền biến, lực quan sát mẫn tiệp, quyết đoán. Phùng Lộc, có vũ đài, cơ hội. Phùng Kị thường làm điều xấu.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_17",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "Tại ngoại thích được đề cao, nhưng là người không thực tế.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_18",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "Mệnh Quyền nhập Di, là đi ra ngoài tranh thủ một chút vì gì đó, xuất ngoại thường có tranh chấp với người khác.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_19",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "Từ Mệnh cung hóa Quyền đến Thiên Di cung, chiếu Mệnh cung\n1. Bề ngoài kiên quyết và dứt khoát, tính tình thất thường, bá quyền, tranh giành quyền lực, giỏi chi phối, chỉ huy người khác, khiến người ta cảm thấy áp bức.\n2. Có cảm giác về khoảng cách và áp lực.\n3. Mạnh mẽ, thích nổi bật, cạnh tranh và mạo hiểm. Dễ thay đổi, không thương tiếc. Vì vậy, dễ sinh lòng ghen ghét, gây thù chuốc oán.\n4. Làm việc chăm chỉ, theo đuổi sự tiến bộ, tích cực trong cuộc sống và không bao giờ được nhàn rỗi trong cuộc sống.\n5. Có năng lực hoặc kỹ năng chuyên môn về lãnh đạo và quản lý, lập kế hoạch và quản lý.\n6. Dễ bị vấp ngã và tai họa đổ máu.\n7. Thường vất vả, dễ bận rộn.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_20",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "Ở bên ngoài, mệnh tạo rất thích biểu hiện tài năng, rất thích ngồi ở địa vị lãnh đạo, rất thích được người ta kính trọng, cũng được người ta khẳng định, nhưng có lúc không được thực tế; thường hay cạnh tranh với người khác, tranh cường hiếu thắng; để tạo sự chú ý hoặc để phô trương thể diện, mệnh tạo sẽ có hành vi phóng đại năng lực của mình quá sự thật; có thể đạt được mục đích, nhưng cũng dễ bị tiểu nhân xúi giục hoặc ngầm hại; bản thân xúc phạm hay làm phiền lòng người khác mà không biết; khá chủ động trong hôn nhân và tình cảm.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_21",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "命权入迁移:\n1. 「活力」、「能干」、「果断」、「胆识」、「聪慧」、「镇定」、「意志力」。\n2. 「应变」佳、善「谋略」〈权变〉, 可以「开创拓展」。\n3. 利于「升迁」、「创业」、可以「领导统驭」。\n4. 拥「专业」、「专技」尤佳。\n5. 格局不佳, 「自负」、「霸气」、「尖锐」、「结怨」。\nMệnh Hóa quyền nhập cung thiên di:\n1. \"Sức sống\", \"năng lực\", \"quả đoán\", \"dũng khí\", \"thông minh\", \"bình tĩnh\", \"ý chí\".\n2. \"Ứng biến\" tốt, giỏi \"mưu lược\" (Quyền biến), có thể \"mở rộng khai sáng\".\n3. Lợi cho \"thăng tiến\", \"khởi nghiệp\", có thể \"lãnh đạo điều khiển\".\n4. Có \"chuyên môn\", \"kỹ năng chuyên sâu\" thì càng tốt.\n5. Cục diện không tốt, \"tự phụ\", \"bá khí\", \"sắc bén\", \"kết oán\".",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_22",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "命权入迁移: \n1. 「活力」、「能干」、「果断」、「胆识」、「聪慧」、「镇定」、「意志力」。\n2. 「应变」佳、善「谋略」〈权变〉, 可以「开创拓展」。\n3. 利于「升迁」、「创业」、可以「领导统驭」。\n4. 拥「专业」、「专技」尤佳。\n5. 格局不佳, 「自负」、「霸气」、「尖锐」、「结怨」。\nMệnh Hóa quyền nhập cung thiên di: \n1. Sức sống, năng lực, quả quyết, thông minh, trấn định, ý chí. \n2. Ứng biến tốt, giỏi mưu lược, (quyền biến) có thể khai sáng. \n3. Lợi lên chức, gây dựng sự nghiệp, có thể lãnh đạo thống ngự. \n4. Chuyên nghiệp, chuyên kỹ rất tốt. \n5. Cách cục không tốt, tự chịu trách nhiệm, thô bạo, kết oán, sắc bén.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_23",
+      "condition_text": "Cung Mệnh an tại Tuất có Quyền Di",
+      "raw_text": "Mệnh cung Hóa Quyền nhập Thiên Di, ra ngoài tích cực công tác có trách nhiệm, nhân duyên tốt, thích biểu hiện tài năng của mình, từ công tác tài năng trong công việc mà dễ gặt hái thành công; nhưng ở người tương đối tự phụ, dẽ có tranh quyền hoặc có bất đồng với người.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_24",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "Mệnh cung Hóa Khoa nhập cung Phúc đức.\nLễ giáo chế ước, lý trí hài hòa của mệnh tạo nhập Phúc đức.\nPhúc đức là linh tính cung vị, chủ về tinh thần. Nên tâm tính thường biểu hiện sự bình đạm, thanh đạm an nhàn, không thích hư hoa, tâm tính bình hòa.\nPhúc đức là phúc của tiên thiên, là đức của hậu thiên, nên khi khẩn cấp đễ được quí nhân trợ giúp.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_25",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "Khá ổn định, kinh doanh ít khi bị thiệt, lạm vốn.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_26",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "Mệnh cung hóa Khoa nhập Phúc Đức trong đời sống sinh hoạt phải liệu cơm gắp mắm.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_27",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "Từ Mệnh cung hóa Khoa đến Phúc Đức cung, chiếu Tài Bạch cung\n1. Cảm giác nặng nề, khí phách, lý tưởng chung thủy, chủ nghĩa hoàn mỹ.\n2. Chú ý đến tinh thần, yêu thích lục nghệ, có khí chất tao nhã, nhẹ nhàng và tinh anh.\n3. Nhạy bén, có giác quan thứ sáu, trí tuệ và tài năng.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_28",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "Nguồn tiền bình thuận, ổn định; lúc hưởng thụ sẽ cân đối cân đối thu chi, không tiêu xài loạn xạ, sử dụng đồng tiền có kế hoạch, suy nghĩ và tính toán tỉ mỉ, làm ăn thường không bị thiếu hụt tiền, không làm lỗ vốn, tính toán cân nhắc rõ ràng; có thị hiếu thanh nhã, tốt đẹp; việc học hành cũng không tệ, có tiếng tăm, thường thường sẽ có biển hiệu hoặc được xưng tụng; cuộc sống hôn nhân êm ấm, ít có sóng gió.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_29",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "命科入福德:\n1. 「恬淡安逸」、「不好虚华」。\n2. 个性平和、「不疾不徐」。\n3. 临急「贵人」好。\nMệnh Hóa khoa nhập cung phúc đức:\n1. \"Thong dong an nhàn\", \"không thích phô trương\".\n2. Tính cách ôn hòa, \"không vội vàng\".\n3. Khi cấp bách \"quý nhân\" tốt.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_30",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "命科入福德: \n1. 「恬淡安逸」、「不好虚华」。\n2. 个性平和、「不疾不徐」。\n3. 临急「贵人」好。\nMệnh Hóa khoa nhập cung phúc đức: \n1. Điềm đạm an nhàn, không thích hư hoa. \n2. Cá tính ôn hòa không nhanh không chậm. \n3. Gặp việc quý nhân tốt.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_31",
+      "condition_text": "Cung Mệnh an tại Tuất có Khoa Phúc",
+      "raw_text": "Mệnh cung Hóa Khoa nhập Phúc đức, chủ về gia đình có thành tựu, dành những điều tốt đẹp cho cha mẹ; thích theo nghề văn hóa giao dục nghệ thuật, dùng tiền có điều độ, chi tiêu phù hợp, ham muốn tiền tài không mạnh, không gặp trở ngại, không ưa lãng phí, nhưng thích thể hiện là người có tiền.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_32",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "Mệnh cung hóa Kỵ nhập phúc đức cung:\nMệnh cung hóa Kỵ nhập phúc đức, làm ta để ý phúc đức, ta nguyện vì phúc đức mà nỗ lực. Cho nên ta ham hưởng thụ tinh thần mà cam lòng tiêu phí tiền bạc. Phúc đức tọa Kỵ thường lo phiền. Ta hay nghi ngờ xoi mói, cho nên không thể thoải mái tinh thần tùy duyên tự tại.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+        "author": "Alex Alpha"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_33",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "Mệnh cung Hóa Kị nhập phúc đức. Sau khi chết không có tiền tài để lại cho phối ngẫu.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_34",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "Mệnh cung Hóa Kị nhập phúc đức cung.\nMệnh cung chủ tư duy, tinh thần, tính cách cung vị.\nTình cảm, tinh thần, tư duy của Ta chuyên chú tới nhân - sự - vật tại phúc đức và tự nguyện vì nhân sự vật tại phúc đức cống hiến hy sinh..\nSuy lý tượng nghĩa của Kị - ẩn tàng, cố chấp, trả giá (cống hiến).\nThái độ của Kị là chăm chú, dễ dẫn phát phạm (tham, sân, si, mạn, nghi) ngũ độc.\nLàm sao để giảm bớt lực lượng của Kị - ẩn phục, từ bi hỷ xả, bố thí tạo phúc, những điều trên trong quá trình tự rèn luyện dần dần sẽ giảm bớt sự cố chấp.\nPhúc đức cung chủ tư duy của phương diện tinh thần linh tính, cùng với hứng thú sở thích hưởng thụ, phúc phận của tiên thiên và đức hạnh của hậu thiên.\nMệnh cung Hóa Kị nhập phúc đức, là Ta để ý chăm lo phúc đức, tự nguyện cống hiến hy sinh. Là người trọng hưởng thụ, hao tán cho sở thích bản thân.\nPhúc đức tọa Kị thường hay buồn phiền, hoài nghi, đố kị nên khó tùy duyên tự tại. Cần học hành thiện tích đức, bố thí tạo phúc, tùy thuận nhân duyên.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_35",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "(xung tài bạch) Khó kiếm được tiền. Phối ngẫu phải chịu vất vả, ảnh hương sức khỏe, tinh thần (quan, khí số vị của phu thê). Vì gia đình mà vất vả mệt mỏi.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_36",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "Mệnh cung hóa Kị nhập Phúc Đức, hết ăn lại nằm, cả đời nỗi sầu nghèo khổ chán nản.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_37",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "Từ Mệnh cung hóa Kị đến Phúc Đức cung, xung Tài Bạch cung\n1. Mệnh chủ cá tính cố chấp chủ quan, tự lấy mình là trung tâm.\n2. Chấp nhất đi vào ngõ cụt, ngoan cố không thông, rất dễ tạo ra khoảng cách với người khác.\n3. Mệnh chủ có xu hướng tư lợị, ích kỷ.\n4. Khả năng kiếm tiền kém nhưng trong đời không thiếu tiền bạc.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_38",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "Bụng dạ hẹp hòi, dễ xung động, tâm tình không cởi mở, tư tưởng thiên chấp, tâm thần không yên ổn, hay đâm đầu vào những chuyện không giải quyết được; túi tiền thường trống rỗng, kiếm không ra tiền, ít được hưởng thụ, không có tiền cũng phải tiêu xài, kiêm được tiền cũng không giữ được, dễ vì tâm trạng không tốt mà tiêu tiền, dễ bị mất ngủ, giống như bị chứng ưu uất; giữa vợ chồng thường xảy ra cãi vã vì chuyện tiền nong; có tính thiên chấp vào thị hiếu của mình.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_39",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "命忌入福德:\n1. 「执着所好」、偏执其欲。\n2. 「重视享受」、「舍得花钱」〈财帛忌出〉。\n3. 格局佳, 能寓兴趣于工作；格局差, 「玩物丧志」、无法自拔。\n4. 适合「研发、设计」工作〈会禄权〉, 也适合中介、技术、会计、顾问、代书等「服务业」〈冲财帛, 「不囤货」、「不压本」〉。\n5. 少投机, 远睹、毒、酒色等「不良嗜好」, 以免「迷情妄欲」, 自毁前程。\n6. 命格差, 容易「杞人忧天」、「忧患太过」。女命尤显。\n7. 格局差, 防病痛折磨〈双忌以上〉。\nMệnh Hóa kỵ nhập cung phúc đức:\n1. \"Cố chấp theo sở thích\", chạy theo dục vọng.\n2. \"Chú trọng hưởng thụ\", \"chịu chi tiền\" (tài bạch Kỵ xuất).\n3. Cục diện tốt, có thể kết hợp sở thích với công việc; cục diện kém, \"sa đà vào thú vui mất chí\", không thoát ra được.\n4. Phù hợp với \"nghiên cứu phát triển, thiết kế\" (có Lộc Quyền), cũng hợp với môi giới, kỹ thuật, kế toán, tư vấn, công chứng viên trong \"ngành dịch vụ\" (xung tài bạch, \"không trữ hàng\", \"không ép vốn\").\n5. Ít đầu cơ, tránh xa cờ bạc, ma túy, rượu chè, \"thói quen xấu\", để tránh \"mê tình妄 dục\", tự hủy tiền đồ.\n6. Mệnh cách kém, dễ \"lo trời sập\", \"lo lắng quá mức\". Nữ mệnh càng rõ.\n7. Cục diện kém, phòng bệnh tật hành hạ (trên hai Kỵ).",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_40",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "命忌入福德: \n1. 「执着所好」、偏执其欲。\n2. 「重视享受」、「舍得花钱」〈财帛忌出〉。\n3. 格局佳, 能寓兴趣于工作；格局差, 「玩物丧志」、无法自拔。\n4. 适合「研发、设计」工作〈会禄权〉, 也适合中介、技术、会计、顾问、代书等「服务业」〈冲财帛, 「不囤货」、「不压本」〉。\n5. 少投机, 远睹、毒、酒色等「不良嗜好」, 以免「迷情妄欲」, 自毁前程。\n6. 命格差, 容易「杞人忧天」、「忧患太过」。女命尤显。\n7. 格局差, 防病痛折磨〈双忌以上〉。\nMệnh Hóa kỵ nhập cung phúc đức: \n1. Cố chấp, khăng khăng. \n2. Coi trọng hưởng thụ, chịu chi tiền (tài bạch kỵ xuất). \n3. Cách cục tốt hứng thú công việc, cách cục xấu lêu lổng chơi bời không cách nào tự kiềm chế. \n4. Thích hợp nghiên cứu, thiết kế công tác (hội lộc quyền). Thích hợp môi giới, kỹ thuật, kế toán viên (xung tài bạch không tích hàng, áp vốn). \n5. Không nên đầu cơ, đánh bạc, hút chích, tửu sắc. Tránh mê tình vọng dục tự hủy tương lai. \n6. Mệnh cách kém dễ buồn lo vô cớ, ưu hoạn quá mức. Nữ mệnh vưu hiển. \n7. Cách cục kém, phòng bệnh đau nặng (song kỵ trở lên).",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_41",
+      "condition_text": "Cung Mệnh an tại Tuất có Kỵ Phúc",
+      "raw_text": "Mệnh cung Hóa Kị nhập Phúc Đức, biểu tham ăn nhác làm, đầu óc chỉ nghĩ đến ăn ăn uống uống, lòng dạ độ lượng nhỏ, làm việc hay so đo tính toán, cuộc đời ít phúc khí, lắm vất vả, khó có phát triển, tâm tình bức bí, tương đối bi quan yếm thế; Phúc Đức là Sự Nghiệp của Phu Thê, Kị nhập vào chủ về thị phi, buồn phiền, nhìn thấy phối ngẫu thì lòng da không vui vẻ; Mệnh Hóa Kị xung Tài Bạch, có tranh chấp về tài chính, vì tiền tài mà muộn phiền, không hợp với kinh thương, đầu tư gây dựng sự nghiệp, bằng không sẽ phá tài; còn biểu thị là vô duyên với tiền tài, túi tiền trống rỗng, có nhiều tiêu nhiều có ít tiêu ít; Tài Bạch là Phụ Mẫu cảu Tật Ách, xung thì thân phận bản thân phấp kém, sự đánh giá của mợi người với mình thấp; Tài Bạch là Điền Trạch của Nô Bộc, xung thì biểu thị ta làm tổn hại đến tài khố của bạn bè, cũng biểu thị bạn bè muốn kiếm tiền của ta; Tài Bạch là Quan Lộc của Quan Lộc, xung thì sự nghiệp không ổn định; Tài là Nô Bộc của Điền Trạch, xung thì biểu hiện duyên bạc với gia đình, nếu ở cùng với người thân thì bất hòa; Tài Bạch là Phu Thê của Phu Thê, biểu thị là bất lợi cho nam mà thôi, nữ không lợi cho chồng; Tài là Huynh Đệ của Tử Tức, tuyến Huynh Hữu chủ về thành tựu, xung thì không thể có thành tựu cho con cái, không có phúc ấm lưu lại cho con cái, con cái chỉ có thể vào bản thân mà tay trắng thành gia; Tài Bạch là Phúc Đức của Thiên Di, biểu thị là ra ngoài kiếm sống khó khăn; Tài là Tật Ách của Phụ Mẫu, xung thì biểu thị sức khỏe của cha mẹ không tốt, tuổi nh",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "menh_stream_42",
+      "condition_text": "Cung Mệnh an tại Tuất có các sao Văn xương,Văn khúc hội hợp",
+      "raw_text": "二十七、文桂文华格\n昌、曲同宫在丑、未守命为此格, 由三方或迁移会照而入者亦是, 此格之人, 聪明好学, 爱修饰, 从小就能展露才华, 宜向文学、艺术方面发展, 将有名声, 不过不一定能得很高之学位, 曾见歌仔戏天王巨星杨丽花小姐就是此格。\n但是不可有忌星会入, 恐有文书是非, 故己、辛年生人不利, 早年有失学之痛或求学多波折, 成年人则要防签约、票据、借据、租赁等之文书纠纷。\nVăn quế văn hoa cách:\nXương Khúc đồng cung thủ mệnh tại Sửu Mùi, là cách này hoặc từ tam phương, thiên di nhập vào cũng được. Người cách này, thông minh hiếu học, yêu tân trang, từ nhỏ đã có thể triển lộ tài hoa, thích hợp văn học, phương diện nghệ thuật phát triển, đem lại danh tiếng, bất quá chưa chắc đã có được học vị cao. Từng thấy ngôi sao ca tử hí kịch Dương Tiểu Hoa tiểu thư là cách này.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "các sao Văn xương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "menh_stream_43",
+      "condition_text": "Cung Mệnh an tại Tuất có M Di",
+      "raw_text": "Mệnh cách xuất ngoại. Xuất ngoại gặp quý nhân.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Di"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "menh_stream_44",
+      "condition_text": "Cung Mệnh an tại Tuất có M Phúc",
+      "raw_text": "Người được phúc báo tổ tiên. Người hứng thú với việc kiếm tiền.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "menh_stream_45",
+      "condition_text": "Cung Mệnh an tại Tuất có M Tật",
+      "raw_text": "Mệnh cách lao bác. Là người công việc vất vả, làm việc một mình.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Tật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "menh_stream_46",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Chủ về người chính trực, hiếu thắng, thường hay thay đổi tình cảm, thiếu kiên nhẫn, có tâm lý phản kháng nhưng cũng thường tìm tòi, đi theo cái mới, tình cảm yêu ghét thay đổi bất thường.\nMệnh nữ sẽ lao tâm khổ tứ, giàu lòng tự trọng, cô đơn, thích ăn quà vặt.\nNên theo lĩnh vực quân đội, cảnh sát, kỹ thuật, kỹ sư, bác sỹ ngoại khoa, nha khoa, cũng có thể hoạt động trong hoạt động mang tính thần bí học và tôn giáo.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Ứng dụng thuyết Âm Dương - Lập và giải Tử vi đẩu số - THS. Vũ Mê Linh",
+        "author": "THS. Vũ Mê Linh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "menh_stream_47",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Phá Quân ở các cung Tí, Ngọ, Mão hoặc Dậu, duyên với người khá tốt, nhiều thù tạc; nhưng nữ mệnh rất sợ Phá Quân thủ cung mệnh, có thêm Địa Kiếp đồng cung, hôn nhân không tốt đẹp, cần phải tu tâm dưỡng tính nhiều, nếu không sẽ dễ bước vào chốn phong trần.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_48",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Phá Quân nhập cung mệnh, trước gặp khó khăn sau mới dễ dàng, có điểm đại thành hoặc đại bại. Phá Quân nhập cung mệnh, ưa ở cung Tí hoặc Ngọ, là ý tượng: quyền quý, phát đạt, thành tựu, nhưng vận lúc trẻ không tốt; ở các cung khác thì bôn ba nhiều, lao tâm.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_49",
+      "condition_text": "Cung Mệnh an tại Tuất có Văn xương,Phá quân",
+      "raw_text": "Văn Xương Phá Quân đồng cung, chỉ tai nạn đường thủy, ví dụ như chết đuối hoặc bị bệnh về đường tiết niệu, sinh sản hay gan thận.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Văn xương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_50",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Phá Quân vượng, đối cung là Tử Vi Thiên Tướng. Thìn cung Thân hình thon gầy, Tuất cung Thân hình đầy đặn. Chủ người tính tình khó hiểu, nghị lực hơn người, bảo thủ cố chấp, có tài nghệ, dũng cảm hơn người, rất trọng nghĩa khí.\nThìn Tuất là thiên la địa võng, cuộc sống hay có những điều không may ngoài ý muốn hoặc có bệnh tật kéo dài. Không theo gia nghiệp tổ tiên, tự tay lập nghiệp, nhưng không hợp với vợ con. Đối cung Tử Vi Thiên Tướng, là thần bất trung, là con bất hiếu, hội cát tinh chủ phú nhưng không quý, có hư danh. Thái Dương Thái Âm tọa cung điền trạch, mệnh và điền trạch có cát tinh cát hóa, là cách \"Nhật Nguyệt chiếu bích\", chủ đại phú, đặc biệt nhiều bất động sản. Nữ mệnh hội sát tinh, khắc phu tái giá, e là vợ bé.\nNgười sinh năm Giáp Quý là có phúc, người sinh năm Giáp Phá Quân hóa Quyền, người sinh năm Quý Phá Quân hóa Lộc, nếu được Tả Hữu phù trợ, chủ đại phú, nhưng cuộc sống cũng nhiều phong ba. Người sinh năm Bính thích hợp theo thương nghiệp, tuy rằng có thành tựu nhưng khó tránh hôn nhân bị đổ vỡ, cũng có những khuyết hãm khác. Tùy đắc Xương Khúc, cũng không tốt hoàn toàn, chủ hình khắc lao lực.\nKình Đà đồng cung, coi thường pháp luật, đa phần là những kẻ to gan làm loạn hay dân liều mạng hoặc vì phạm tội mà vào tù hoặc có tai họa tàn tạt, huyết quang, cơ thể không toàn vẹn, vết thương chồng chất, một đời hay gặp chuyện nguy hiểm hoặc vào sinh ra tử. Tam phương hội hợp Kình Đà, lục thân duyên bạc. Hỏa Linh đồng cung, bôn ba vất vả, chủ người âm mưu hiểm độc,",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_51",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Tướng ngũ đoản, lưng dầy, mày thưa. Cơ thể không cân đối nên đi đứng nằm ngồi ngả nghiêng. Tính tình xảo trá, bất nhân, thích làm những chuyện mạo hiểm, trợ ác, nên ít hợp với người, nếu không theo tổ nghiệp thì thành công.\nChỉ có sao bại là chế hóa được tính ác của Phá Quân; Phá Quân nhập miếu lại thêm cát tinh thì chủ về hiển đạt võ nghiệp.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_52",
+      "condition_text": "Cung Mệnh an tại Tuất có Văn xương",
+      "raw_text": "Mi thanh mục tú, thông minh cơ xảo. Là người học rộng tài cao, cơ biến khác thưởng, tính tình nho nhã nên thích nhàn hạ, ghét náo nhiệt.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Văn xương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_53",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Phá Quân có sao lộc rất tốt, là có gốc rễ, có thể tiêu trừ khuyết điểm hao tổn, phá tán của Phá Quân, làm tăng năng lực sáng tạo. Phá Quân Hoá Quyền ở cung Dần, có Lộc Tồn đồng độ cũng cát, có điều, tuy phú quý nhưng đời người ắt sẽ có khiếm khuyết. Ví dụ như bản thân sức khoẻ không tốt…Phá Quân Hoá Quyền ở cung Thân, có Lộc Tồn vây chiếu, cũng có cùng tình huống.\nPhá Quân gặp Tả Phụ, Hữu Bật, Thiên Khôi, Thiên Việt, chủ về phú quý, nhưng quý lớn hơn phú, tức tiền bạc nhờ địa vị mà có. Nhưng nếu có tứ sát lẫn lộn trong đó, thì thích hợp làm việc trong ngành công thương nghiệp; nếu gặp Văn Xương, Văn Khúc mà có sát tinh, người này là hàn sĩ mang tâm trạng có tài mà không gặp thời. Nếu gặp sát tinh nặng mà cát tinh nhẹ, thì nên theo ngành công nghệ hoặc làm công nhân chuyên nghiệp.\nPhá Quân ở ba cung Hợi, Tí, Sửu, đều không nên có Văn Khúc đồng độ, ngại nhất là Văn Khúc Hoá Kỵ, chủ về tuổi trẻ rời xa quê hương hoặc bị tàn tật hoặc trắc trở nghiêm trọng. Cổ nhân nói: \"Cùng với Văn KHúc vào thuỷ vực, thì tàn tật rời xa quê hương. \" (Dữ Văn Khúc nhập vu thuỷ vực, tàn tật ly hương. ), là nói lý luận này, \"thuỷ vực\" là nói 3 cung Hợi, Tí, Sửu, thuộc hành thuỷ.\nPhá Quân sợ Kình Dương, Đà La hơn là sợ Hoả Tinh, Linh Tinh. Gặp Hoả Tinh, Linh Tinh chủ về vất vả, bôn ba mà thôi; gặp Kình Dương, Đà La thì có hoạ tai, cũng chủ về cuối mang tật hoặc nhiễm thú vui không lành mạnh.\nPhá Quân có đặc tính thừa kế cái cũ mà đổi mới, cho nên phần nhiều đều làm kiêm nghề, hay kiêm nhiều chức vụ khá",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tam Hợp Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_54",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Phá Quân ở hai cung Thìn hoặc Tuất, chịu ảnh hưởng của đối cung là \"Tử Vi, Thiên Tướng\", cho nên danh lớn hơn lợi. Cổ nhân nói: \"Gặp Tử Vi thì mất uy quyền\" (Phùng Tử Vi tắc thất uy quyền. ), tức là nói trường hợp này. Vì vậy, tuy có danh vọng, cũng chỉ thuộc hư danh, chẳng có thực quyền, thực chức.\nPhá Quân ở hai cung Thìn hoặc Tuất, gặp các sao sát, hình, hao, thì phần nhiều đều có cuộc đời cô độc, mà hôn nhân cũng không cát tường, sinh ly hay tử biệt, còn chủ về thân mang bệnh tật. Trường hợp chỉ có Văn Xương, Văn Khúc đồng độ, mà không có các sao phụ, tá cát khác, thì cuộc đời bần hàn. Phá Quân cần phải được Hoá Lộc, Hoá Quyền mới là cát lợi, Thất sát kèm sao lộc đến hội cũng cát, có thể giàu có.\nPhá Quân ở hai cung Thìn hoặc Tuất, nữ mệnh, nếu Liêm trinh Hoá Kỵ hoặc Tham Lang Hoá Kỵ ở cung phu thê, chủ về tái giá.\nĐối với Phá Quân ở hai cung Thìn hoặc Tuất, các cung hạn Thất Sát, Tham Lang, \"Tử Vi, Thiên Tướng\", \"Thiên Cơ, Cự Môn\" là những lưu niên hay đại hạn có tính then chốt.\nPhá Quân ở hai cung Thìn hoặc Tuất, gặp \"Hoả Tham\", \"Linh Tham\", phát cũng chỉ chủ về danh mà không chủ về lợi.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tam Hợp Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "menh_stream_55",
+      "condition_text": "Cung Mệnh an tại Tuất có Phá quân",
+      "raw_text": "Thuộc chòm sao bắc đẩu, tính âm, hành Thủy, hóa khí là hao, chủ về phúc họa, chủ quản cung Phu thê, Tử nữ và Nô bộc.\nƯa các cát tinh (sao cát; ưa nhất là Tử vi; ưa tọa ở Thìn, Tuất, Sửu, Mùi, Tị, Hợi.\nKị các hung tinh (sao hung); kị tọa ở Tí, Ngọ, Mão, Dậu.\nNếu hội hợp với các cát tinh thì cương nghị, với hung tinh thì hao tán.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Phá quân"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hỉ kị tinh đẩu - Vương Đình Chi",
+        "author": "Vương Đình Chi"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "menh_stream_56",
+      "condition_text": "Cung Mệnh an tại Tuất có Âm sát",
+      "raw_text": "Chủ về người tâm thuật bất chính.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Âm sát"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tam Hợp Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "menh_stream_57",
+      "condition_text": "Cung Mệnh an tại Tuất có Âm sát",
+      "raw_text": "Âm sát vào mệnh hay gặp tiểu nhân, bản tính nghi hoặc nên dễ phiền não vô ích, nếu thấy luôn cả Đà la, Hóa Kị, Không Kiếp, chủ về đi đến ảo giác, suy nghĩ vớ vẩn hoặc vì ma túy mà con người đầu óc lơ mơ.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Âm sát"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi tinh điển - Vũ Tài Lục",
+        "author": "Vũ Tài Lục"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "menh_stream_58",
+      "condition_text": "Cung Mệnh an tại Tuất có Cung Mệnh",
+      "raw_text": "Trên mệnh bàn, Mệnh cung có ý nghĩa về mặt tinh thần đối với mệnh taọ. Có thể xem được tính cách người đó, an thái hay lao tâm, có lao lực hay không? Có phong lưu hay không? .. Nhưng ý nghĩa thực chất của Mệnh cung ta có thể xem được sự nghiệp, trường thọ hay không, hoàn cảnh lúc sơ vận, diện mạo, có thực lộc hay không, quý tiện thế/nào?.. Nếu như Cung Mệnh gặp hung tinh mà Cung Khí đại cát thì vẫn có thể trường thọ, vẫn có thể giàu có, hoàn cảnh lúc sơ vận cũng tốt. Ngược lại, nếu Cung Mệnh có trường thọ tinh như Cơ, Nguyệt, Nhật, Lương mà Cung Khí đại hung thì không thể trường thọ và đại phát được.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "menh_stream_59",
+      "condition_text": "Cung Mệnh an tại Tuất có Văn xương",
+      "raw_text": "Thuộc chòm sao Nam đẩu, tính dương, hành Kim, chủ về thi cử và tài năng văn chương.\nƯa các cát tinh (sao cát; đồng thời ưa tọa ở Thìn, Tị, Dậu, Sửu.\nKị các hung tinh (sao hung); đồng thời kị tọa ở Dần, Ngọ, Tuất.\nNếu hội hợp với các cát tinh thì cao thượng thanh nhã, với hung tinh thì chủ về thích phấn son, trang điểm.",
+      "conditions": {
+        "palace": "MENH",
+        "position": "TUAT",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Văn xương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hỉ kị tinh đẩu - Vương Đình Chi",
+        "author": "Vương Đình Chi"
+      },
+      "accuracy": 4
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19711112_than",
+  "birth": {
+    "year": 1971,
+    "month": 11,
+    "day": 12,
+    "hour": "than",
+    "hourName": "Thân",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:17:54.171Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

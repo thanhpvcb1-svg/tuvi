@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20160325_ty",
+  "birth": {
+    "year": 2016,
+    "month": 3,
+    "day": 25,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:09:33.344Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

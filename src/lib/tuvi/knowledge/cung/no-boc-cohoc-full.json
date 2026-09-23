@@ -1,0 +1,2229 @@
+{
+  "palace": "NO_BOC",
+  "source": "tuvi.cohoc.net",
+  "chart_id": "472159",
+  "total_blocks": 75,
+  "sections": [
+    {
+      "section_id": "no-boc",
+      "title": "CUNG NÔ BỘC",
+      "blocks": [
+        {
+          "block_id": "no-boc_cohoc_1",
+          "condition_text": "Điểm \"xí hoa\" cung Nô bộc là 2.02",
+          "raw_text": "Cung Nô bộc chủ về: bạn bè, đồng sự, cấp dưới, người hợp tác.\nTọa thủ: Thiên cơ, Cự môn, Linh tinh, Hóa kỵ, Hàm trì. Xung chiếu: Thiên riêu. Tam hợp: Thiên việt, Thiên hỉ - Thiên đồng, Địa kiếp, Địa không. Giáp cung: Tham lang, Hữu bật, Hóa khoa, Hóa lộc - Tử vi, Thiên tướng, Thiên khốc, Đà la, Văn khúc.\nNgũ hành khí của cung Ất Mão: 20% MỘC (kị thần), 50% MỘC (kị thần), 30% THỦY (nhàn thần). Đây là cung khí đại hung. Thiên cơ hành MỘC là kị thần. Cự môn hành THỦY là nhàn thần. Linh tinh hành HỎA là kị thần. Hóa kỵ hành THỦY là nhàn thần. Hàm trì hành MỘC là kị thần.\nCung Nô bộc can Ất làm cho:\n- Cung Nô bộc làm Thiên cơ tự hóa lộc, chuyển Thái âm Hóa kỵ nhập cung Điền trạch.\n- Thái âm Hóa kỵ nhập cung Điền trạch (cung Phu thê của cung Nô bộc). Cung Điền trạch can Ất chuyển Thiên cơ Hóa Lộc nhập cung Nô bộc, Thái âm tự hóa kỵ.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của một cao thủ Bắc phái",
+            "author": "Kinh nghiệm của một cao thủ Bắc phái",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 9
+        },
+        {
+          "block_id": "no-boc_cohoc_2",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Bằng hữu là quý nhân, bạn bè bán rẻ ta mới là quý nhân.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_3",
+          "condition_text": "Thị Phi Kị (是非忌): Nô bộc phi Kỵ sang Điền trạch, Điền trạch phi Lộc sang Nô bộc",
+          "raw_text": "Hình thái Lộc Kỵ đi đến này gọi là Thị Phi Kỵ (A phi kỵ sang B, B phi Lộc sang A): hình thái đối đãi giữa hai cung không tương xứng. B quan tâm tới A, mà A không quan tâm tới B.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC",
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_4",
+          "condition_text": "Cung Nô bộc an tại Mão có Cự Môn,Hóa kỵ",
+          "raw_text": "Gặp bạn bè làm hại, cùng bạn bè tranh giành đúng sai, nên không được bạn trợ giúp.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cự Môn",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+            "author": "Ông Phúc Dụ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_5",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ Hóa kỵ",
+          "raw_text": "Cung Nô Bộc tọa Thiên Cơ hóa Kỵ năm sinh: bị bạn bè làm liên lụy hoặc tiểu nhân hãm hại. Bạn bè ít, khó có tri kỷ, mắc nợ bạn bè.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Cửu Thiên Phi Tinh - Huyền Sơn dịch",
+            "author": "Huyền Sơn dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_6",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên Cơ,Hóa kỵ",
+          "raw_text": "Nhiều bạn bè tốt xấu nên dễ gặp chuyện thị phi, nên dễ gặp phiền phức, bạn bè hay để bụng, đề phòng bạn bè hãm hại.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên Cơ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+            "author": "Ông Phúc Dụ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_7",
+          "condition_text": "Cung Nô bộc an tại Mão có Cự môn,Hóa kỵ",
+          "raw_text": "Cự môn Hóa Kị nhập nô bộc, đa ngôn, hay chuốc phiền phức.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cự môn",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_8",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Giao hữu tọa sinh niên Kỵ:\nGiao hữu tọa sinh niên Kỵ, mắc nợ ân tình cũng như tài vật với bạn bè, thường vì bạn bè mà bị liên lụy. Năng lực cạnh tranh kém. Xét về tích đức hành thiện thì mệnh chủ sẽ phải ra sức hành thiện tích đức mới có thể trả bớt món nợ duyên nghiệp này.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+            "author": "Alex Alpha",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_9",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Hóa Kị nhập nô bộc, mắc \"nợ\" bằng hữu, khó được trợ giúp, khó hòa đồng. (lại chuyển Kị nhập tử điền, một đời vì quan hệ nhân tế tạo thành vấn đề của gia đình). Không thích hợp cộng tác hoặc giao dịch tiền bạc với người. Xung huynh đệ, anh em vô duyên, không có trợ lực thực chất, dễ phạm tiểu nhân. Quyền Lộc nô bộc vị, tùng hữu quan dã bôn trì.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_10",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Mệnh cung của bằng hữu, bằng hữu có đặc điểm của Kị. Mệnh chủ có cảm giác thiếu nợ bằng hữu, tấm lòng gắn bó với bằng hữu, coi trọng tình bằng hữu, nhưng Kị nhập lục ngoại chủ mất, nên tránh qua lại nhiều về tiền bạc. Cũng không nên hợp tác làm ăn, nếu không sẽ mất hết vốn liếng.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_11",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Hóa Kị năm sinh nhập cung Nô Bộc:\n* Là người \"luyến tiếc tình cảm\", nghĩa khí, trọng nghĩa khinh tài, coi trọng lời hứa.\n* Tán tài, ít tích trữ, quản lý tài chính không nắm được mấu chốt, khó tiết kiệm (Kị xung Huynh Đệ cung - chính là Khố vị).\n* Người phối ngẫu vất vả không được nhàn, đề phòng hôn nhân thiếu thú vị.\n* Vận thi cử kém.\n* Còn đề phòng cuộc sống nhiều thăng trầm, hợp với an định đi làm công ăn lương.\n* Phòng thân thể không đủ mạnh khỏe.\n* Bất lợi ở việc cạnh tranh, thăng tiến.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_12",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Hóa Kị nhập Cung Nô Bộc: Bạn bè cấp dưới ít, bản thân tuy rất coi trọng tình bạn, trái lại do giao hữu mà phạm tiểu nhân, bị tổn hại; thuộc hạ bằng mặt không bằng lòng, bán chủ cầu vinh, không nên kết hội hùn vốn, bản thân tương đối vất vả; anh em duyên bạch, anh em có người tổn thương.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_13",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Niên Kị tọa Giao Hữu:\n- Xem như cung Mệnh để giải thích. Là vị trí thân thể của người phối ngẫu (mệnh nam sao nữ, mệnh nữ sao nam sẽ có đào hoa).\n- Coi trọng tình nghĩa với bạn bè.\n- Có cảm giác mắc nợ bạn bè.\n- Trọng nghĩa khinh tài.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tượng số tâm học - Lưu Kim Phủ",
+            "author": "Lưu Kim Phủ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_14",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa Kỵ",
+          "raw_text": "Nô bộc cung tọa niên Kị.\nNô bộc cung chủ duyên phận nhân tế giao vãng, cạnh tranh thi cử vị, hành thiện tích đức vị [điền trạch của phúc đức vị].\nNiên Kị là bài học của tạo hóa mang lại, là trách nhiệm, nghĩa vụ.\nSuy lý tượng nghĩa của Kị: Ẩn tàng, cố chấp, trả giá (gánh vác trách nhiệm, cống hiến, hao tổn).\nNô bộc tọa niên Kị, mắc \"nợ\" bằng hữu, thường vì bạn chịu thiệt hoặc chơi với bạn xấu, bạn hay làm phiền. Không có năng lực cạnh tranh, phải chịu thiệt.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa Kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_15",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa Kỵ",
+          "raw_text": "Kỵ nhập Nô Bộc: Kiếp trước không có bạn tốt, bạn bè không giúp được sự nghiệp. Ít bạn, anh em duyên mỏng không trợ giúp không làm thiện sự, dễ bị tiểu nhân hãm hại, không thể hợp tác với người khác kinh doanh hay đầu tư. Con cái tài vận không tốt, sức khỏe của phối ngẫu không tốt. Sự nghiệp của cha mẹ và gia vận không tốt. Tùy thời cần chú ý sức khỏe bản thân.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa Kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+            "author": "Ông Phúc Dụ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_16",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ,Tự Lộc",
+          "raw_text": "Hóa Kị + tự Hóa Lộc, thành song Kị, xung đối cung đối cung tổn thất hơn bản cung.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_17",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ,Hóa kỵ",
+          "raw_text": "Thiên cơ Hóa Kị nhập nô bộc, vô duyên với bằng hữu, hay có mưu mô với nhau, khó thành thực giao tiếp.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_18",
+          "condition_text": "Cung Nô bộc an tại Mão có Tự Lộc",
+          "raw_text": "Cung Nô Bộc tự hóa Lộc, chủ đối với bằng hữu rất tâm giao, cho dù vay tiền không trả cũng sẽ không lưu ý.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Cửu cửu bí nghi - Lý Đạt Uy",
+            "author": "Lý Đạt Uy",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_19",
+          "condition_text": "Cung Nô bộc an tại Mão có Tự Lộc",
+          "raw_text": "Giao hữu cung tự hoá Lộc: bạn bè hướng ngoại, vui vẻ, nhiều hoạt động tuy không mang lại lợi ích gì cho người đó.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+            "author": "Alex Alpha",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_20",
+          "condition_text": "Cung Nô bộc an tại Mão có Tự Lộc",
+          "raw_text": "Nô bộc Tự Hóa Lộc, bằng hữu có tiền, có địa vị, cùng người mưu sự hợp tác thường do người nắm quyền.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_21",
+          "condition_text": "Cung Nô bộc an tại Mão có Tự Lộc",
+          "raw_text": "Từ Nô Bộc hóa Lộc đến Nô Bộc cung, chiếu Huynh Đệ cung\n1. Anh em và mệnh chủ là những người có tấm lòng ấm áp, hiếu khách và có nhiều bạn bè.\n2. Mệnh chủ là người nồng hậu nhiệt tình.\n3. Cơ thể, thể chất kém, hệ miễn dịch kém, dễ mắc các bệnh truyền nhiễm.\n4. Tổn thất liên tiếp vì bạn bè, thậm chí còn bị liên lụy, có xuyến liên lại là chuyện khác.\n5. Song Lộc ở Huynh Nô không có xuyến liên, Kị bị phá tổn, trong cuộc sống dễ vị anh chị em bạn bè mà hao tổn tiền bạc, sinh hoạt phí không cần thiết, giao du, giải trí, hao tốn tiền của và thời gian.\n6. Mệnh chủ và anh chí em hoặc bạn bè thông minh cơ trí, có lòng hiếu kỳ ham hiểu biết, nhiều sáng tạo nhưng dễ viển vông, không thực tế.\n7. Mệnh chủ cùng anh chị em hoặc bạn bè, giỏi khai sáng tài nguyên, thích đầu cơ và đi đường tắt, không thực dụng.\n8. Mệnh chủ cùng anh chị em hoặc bạn bè kết giao duyên bên ngoài tốt, vẻ ngoài hòa nhã, đáp ứng yêu cầu, nhưng bên trong hay cáu gắt, nóng nảy, tính tình không ổn định, thay đổi xoành xoạch.\n9. Song Lộc ở Mệnh có xuyến liên, Kị làm chỉ tiêu, mệnh chủ cùng anh chị em hoặc bạn bè kết giao là người xử sự có lý có tình, đối nhân xử thế có lòng nhân ái, có duyên với quần chúng, khéo léo tinh tế, quan hệ nhân tế mọi bề suôn sẻ.\n10. Mệnh chủ cùng anh chị em hoặc bạn bè kết giao tìm cách làm và giải quyết công việc bằng phương thức hợp tác, chia sẻ cùng có lợi và phối hợp.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_22",
+          "condition_text": "Cung Nô bộc an tại Mão có Tự Lộc",
+          "raw_text": "Giao du bạn bè có tiền, có địa vị, bạn bè đối xử với nhau tốt đẹp. Rất có ý tứ với bạn bè, qua lại tiền bạc, bạn bè không trả cũng không để bụng; là người tốt quá mức, không so đo tính toán với bạn bè. Giao du rộng, nhiều bạn bè, hợp tác với bạn bè dễ kiếm được tiền. (Xin xem thêm mục liên quan trong chương 6).",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_23",
+          "condition_text": "Cung Nô bộc an tại Mão có Tự Lộc",
+          "raw_text": "Nô Bộc cung Tự hóa Lộc:\n* Giao du với bạn bè không biết chọn người, thiếu nguyên tắc, tùy hứng.\n* Đa phần là bạn bè ăn nói luyên thuyên, gió chiều nào xuôi chiều ấy, a dua nịnh bợ.\n* Tuy có vẻ như nhiệt tình, đối xử tốt, cần đề phòng thiếu tính phòng bị, mừng hụt.\n* Quen biết khắp thiên hạ, ai là người tri kỷ?",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_24",
+          "condition_text": "Cung Nô bộc an tại Mão có Tự Lộc",
+          "raw_text": "Nô bộc cung Hóa Lộc nhập Nô Bộc, biểu thị bạn bà, cấp dưới thông minh, ngay thẳng, nói chuyện tương đối khéo léo, có tài nghệ, sẽ tự lập gia đình, có tài lợi không liên quan đến ta.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Lộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_25",
+          "condition_text": "Cung Nô bộc an tại Mão có Quyền Tật",
+          "raw_text": "Nô bộc Hóa Quyền nhập tật ách.\nĐối với mệnh tạo: Mệnh tạo vì bằng hữu hoặc cùng bằng hữu mà vận động\nnhiều.\nĐối với người: Bằng hữu là người khỏe mạnh, có hoạt lực, ưa vận động.\nQuan hệ giữa mệnh tạo và người: Bằng hữu chủ động và rộng lượng với mệnh tạo.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "TAT_ACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_26",
+          "condition_text": "Cung Nô bộc an tại Mão có Quyền Tật",
+          "raw_text": "Nô Bộc hóa cát nhập Tật Ách, biểu thị bằng hữu đối với ta rất chiếu cố.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "TAT_ACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+            "author": "Linh Chi biên dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_27",
+          "condition_text": "Cung Nô bộc an tại Mão có Quyền Tật",
+          "raw_text": "Từ Nô Bộc hóa Quyền đến Tật Ách cung, chiếu Phụ Mẫu cung\n1. Mệnh chủ và những người anh em, bạn bè rất mạnh mẽ, độc đoán khiến người ta cảm thấy bị áp bức, xấu xa, hay thay đổi, cô phương tự thưởng.\n2. Mệnh chủ và anh em, bạn bè của mình là người kiên quyết và dứt khoát bề ngoài, bên trong hay thay đổi, tính tình không ổn định.\n3. Mệnh chủ và những người anh em, bạn bè của mình mạnh mẽ hiếu thắng, thích nổi bật, cạnh tranh và mạo hiểm.\n4. Mệnh chủ và những người anh em, bạn bè của mình có khả năng lãnh đạo, thống ngự, quản lý, kỹ năng chuyên nghiệp.\n5. Mệnh chủ và anh em, bè bạn độc đoán, chuyên Quyền, tranh giành quyền lực, thống trị, chỉ huy người khác khiến người ta cảm thấy bị áp bức, dễ sinh lòng ghen ghét, oán hận, thù hằn.\n6. Mệnh chủ và những người anh em, bạn bè của mình hay thay đổi và tàn nhẫn.\n7. Mệnh chủ và những người anh em, bạn bè của mình lao lực lao tâm.\n8. Mệnh chủ và anh em, bạn bè dễ bị vấp ngã, tai nạn, đổ máu.\n9. Anh em, bạn bè quan tâm đến mệnh chủ, cũng dễ ảnh hưởng đến tâm trạng và suy nghĩ của mệnh chủ.\n10. Mệnh chủ có khả năng lãnh đạo thống nhất, chuyên môn, nghiệp vụ được anh em, bạn bè khẳng định, phục tùng, noi theo, kính trọng.\n11. Nữ mệnh nam tinh hóa Quyền ở cung Tật Ách, dễ bị ăn đậu phụ, bị xâm phạm, bị quấy nhiễu.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "TAT_ACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_28",
+          "condition_text": "Cung Nô bộc an tại Mão có Quyền Tật",
+          "raw_text": "Bạn bè thế mạnh hơn, rất chủ động; nếu giao du với bạn bè khác giới sẽ bị họ đeo bám, dễ có hành vi bạo lực. Nên cẩn thận phòng tai họa bất ngờ. Dễ xảy ra tranh cãi thị phi với đồng sự hoặc ông chủ trong công ti.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "TAT_ACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_29",
+          "condition_text": "Cung Nô bộc an tại Mão có Quyền Tật",
+          "raw_text": "交友权入疾厄:\n1. 对方主动、大方。\n2. 容易交往「主动」、「好动」的朋友。\nGiao hữu Hóa quyền nhập cung tật ách:\n1. Đối phương chủ động, hào phóng.\n2. Dễ kết giao với bạn \"chủ động\", \"hiếu động\".",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "TAT_ACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_30",
+          "condition_text": "Cung Nô bộc an tại Mão có Quyền Tật",
+          "raw_text": "交友权入疾厄: \n1. 对方主动、大方。\n2. 容易交往「主动」、「好动」的朋友。\nGiao hữu Hóa quyền nhập cung tật ách: \n1. Đối phương chủ động rộng rãi. \n2. Dễ lui tới bạn chủ động, hiếu động.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "TAT_ACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_31",
+          "condition_text": "Cung Nô bộc an tại Mão có Quyền Tật",
+          "raw_text": "Nô bộc cung Hóa Quyền nhập Tật ách, nam mệnh bị nữ giới làm phiền không ngới, nữ mệnh dễ đánh mất bản thân; công nhân có thể tích cực công tác.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "TAT_ACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_32",
+          "condition_text": "Cung Nô bộc an tại Mão có Khoa Di",
+          "raw_text": "Nô bộc Hóa Khoa nhập thiên di.\nĐối với mệnh tạo: Dễ kết giao với bằng hữu có văn hóa, khí chất.\nĐối với người: Bằng hữu khoa danh tại ngoại, có khí chất. Nam khí chất nho nhã, Nữ khí chất thanh tú. Phối ngẫu dịu dàng có khí chất.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_33",
+          "condition_text": "Cung Nô bộc an tại Mão có Khoa Di",
+          "raw_text": "Nô Bộc hóa cát nhập Thiên Di, xuất ngoại ra ngoài có thể tin tưởng bằng hữu.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+            "author": "Linh Chi biên dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_34",
+          "condition_text": "Cung Nô bộc an tại Mão có Khoa Di",
+          "raw_text": "Từ Nô Bộc cung hóa Khoa đến Thiên Di cung, chiếu Mệnh cung\n1. Mệnh chủ và những người anh em, bạn bè có mệnh cách dịch mã, rời quê hương ra ngoài.\n2. Mệnh chủ và những người anh em, bạn bè ra ngoài có nhiều quý nhân và nhiều cơ hội hơn.\n3. Mệnh chủ và những người anh em, bạn bè ở bên ngoài có hình ảnh tốt.\n4. Mệnh chủ được bạn bè bên ngoài chăm sóc và kính trọng.\n5. Mệnh chủ và những người anh em, bạn bè có tình bạn sâu sắc và tình cảm tốt đẹp, họ là quý nhân của nhau và hỗ trợ lẫn nhau.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_35",
+          "condition_text": "Cung Nô bộc an tại Mão có Khoa Di",
+          "raw_text": "Bạn bè xử sự với nhau chân thành, tình bạn lâu bền, có thể giúp đỡ lẫn nhau, không tính toán so đo.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_36",
+          "condition_text": "Cung Nô bộc an tại Mão có Khoa Di",
+          "raw_text": "交友科入迁移:\n1. 往来皆文士, 逢迎尽风雅。\n2. 配偶举止优雅〈交友─夫妻的疾厄〉。\nGiao hữu Hóa khoa nhập cung thiên di:\n1. Giao du toàn là người văn nhã, đón tiếp đều thanh lịch, tao nhã.\n2. Vợ/chồng có cử chỉ thanh lịch, tao nhã (liên quan đến cung Giao Hữu — Tật Ách của cung Phu Thê).",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_37",
+          "condition_text": "Cung Nô bộc an tại Mão có Khoa Di",
+          "raw_text": "交友科入迁移: \n1. 往来皆文士, 逢迎尽风雅。\n2. 配偶举止优雅〈交友─夫妻的疾厄〉。\nGiao hữu Hóa khoa nhập cung thiên di: \n1. Lui tới văn sĩ, cùng nghênh tiếp hết sức phong nhã. \n2. Phối ngẫu cử chỉ ưu nhã (giao hữu - phu thê đích tật ách).",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_38",
+          "condition_text": "Cung Nô bộc an tại Mão có Khoa Di",
+          "raw_text": "Nô bộc cung Hóa Khoa nhập Thiên Di, nhiều quý nhân có người bạn tốt, bạn bè hữu hảo với ta, phàm việc gì cũng làm cho ta.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "THIEN_DI"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_39",
+          "condition_text": "Cung Nô bộc an tại Mão có Kỵ Điền",
+          "raw_text": "Nô bộc Hóa Kị nhập điền trạch.\n1. Nô bộc kiếp tài, dễ có tiểu nhân xâm nhập gia đình gây tổn hại tài sản. Là loại tiểu nhân quen biết. Hoặc bị trộm cướp.\n2. Dễ có láng giềng xấu, hay đến gây chuyện thị phi.\n3. Hạn chế giao dịch tài chính với người, phòng hao tán thua thiệt.\n4. Thích hợp nghề nghiệp ẩm thưc, giải trí, thực phầm, bán lẻ, dịch vụ phục vụ người nhàn rỗi, vật phẩm cho thường nhật.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_40",
+          "condition_text": "Cung Nô bộc an tại Mão có Kỵ Điền",
+          "raw_text": "Nô bộc Hóa Kị nhập điền trạch, cộng tác bất lợi.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_41",
+          "condition_text": "Cung Nô bộc an tại Mão có Kỵ Điền",
+          "raw_text": "Từ Nô Bộc cung hóa Kị đến Điền Trạch cung, xung Tử Nữ cung\n1. Bạn bè chăm sóc che chở quan tâm người nhà của ta.\n2. Có khoảng cách thế hệ và hiểu lầm giữa bạn bè và các thành viên trong gia đình.\n3. Không dễ thụ thai, sinh sản không suôn sẻ, có nguy cơ sẩy thai.\n4. Kiếm tiền vì gia đình, thích kiếm tiền và bỏ bê việc chăm sóc con cái.\n5. Tài nhập khố, keo kiệt, bủn xỉn.\n6. Con trẻ sức khỏe thể chất không tốt, dễ bị ốm yếu và mắc các bệnh thường gặp.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_42",
+          "condition_text": "Cung Nô bộc an tại Mão có Kỵ Điền",
+          "raw_text": "Bạn bè thường đến nhà mệnh tạo để tán gẫu, bàn luận những chuyện vô dụng, không có lợi cho mệnh tạo, mà còn gây khó xử. Hợp tác bất lợi, nếu bạn bè có chuyện mượn tiền, sẽ một đi không trở lại. Rất có duyên với người khác giới, nếu có đào hoa sẽ khó cắt đứt, có quan hệ tính giao. Giao du với người khác giới khá xem trọng quan hệ nhục dục. Lúc sinh đẻ, phải lưu ý sức khỏe của đứa bé, nếu đồng thời cung nô bộc tự Hóa Lộc, là ý tượng: nguy hiểm đến tính mạng, nữ mệnh dễ mắc bệnh phụ khoa.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_43",
+          "condition_text": "Cung Nô bộc an tại Mão có Kỵ Điền",
+          "raw_text": "交友忌入田宅:\n1. 防损友「是非耗财」、小人「蚕食鲸吞」。\n2. 「检点门户」、防贼盗登堂、宵小入室、「歹徒觊觎」。\n3. 小心「恶邻」, 是非串门入宅。\n4. 宜休闲产业、咖啡、茶艺〈消磨时间〉, 食品、杂货、零售业、消耗品、日用品贩卖〈生活必需品〉。\n〈注: 「田宅」三方除了涵盖财富外, 亦可代表「物质生活」与「生活环境」。〉\nGiao hữu Hóa kỵ nhập cung điền trạch:\n1. Cần đề phòng bạn xấu gây thị phi, hao tổn tiền bạc, và tiểu nhân ăn bám, chiếm đoạt tài sản.\n2. Kiểm soát cửa nhà cẩn thận, đề phòng trộm cướp đột nhập, kẻ xấu vào nhà, và kẻ gian nhòm ngó.\n3. Cẩn thận hàng xóm xấu, thị phi từ bên ngoài xâm nhập vào nhà.\n4. Nên làm việc trong các ngành giải trí, cà phê, trà đạo (giúp tiêu khiển thời gian), hoặc thực phẩm, tạp hóa, bán lẻ, hàng tiêu dùng, bán đồ dùng hàng ngày (những thứ thiết yếu trong cuộc sống).\nGhi chú:\nCung Điền Trạch không chỉ liên quan đến tài sản mà còn đại diện cho đời sống vật chất và môi trường sống.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_44",
+          "condition_text": "Cung Nô bộc an tại Mão có Kỵ Điền",
+          "raw_text": "交友忌入田宅: \n1. 防损友「是非耗财」、小人「蚕食鲸吞」。\n2. 「检点门户」、防贼盗登堂、宵小入室、「歹徒觊觎」。\n3. 小心「恶邻」, 是非串门入宅。\n4. 宜休闲产业、咖啡、茶艺〈消磨时间〉, 食品、杂货、零售业、消耗品、日用品贩卖〈生活必需品〉。\n〈注: 「田宅」三方除了涵盖财富外, 亦可代表「物质生活」与「生活环境」。〉\nGiao hữu Hóa kỵ nhập cung điền trạch: \n1. Phòng bạn làm hao tổn tài, tiểu nhân từng bước xâm chiếm thôn tính. \n2. Kiểm điểm môn hộ, đề phòng trộm cướp, kẻ xấu rình mò, côn đồ ngấp nghé. \n3. Cẩn thận láng giêng ác, thị phị xuyên vào nhà. \n4. Nên hưu nhàn sản nghiệp, cà phê, uống trà (tiêu phí thời gian), thực phẩm, tạp hóa, bán lẻ nghiệp, vật tiêu hao, đồ dùng hàng ngày buôn bán (sinh hoạt nhu yếu phẩm). \n(Chú: điền trạch tam phương trừ bao gồm tài sản bên ngoài, cũng là đại biểu đời sống vật chất cùng sinh hoạt hoàn cảnh)",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_45",
+          "condition_text": "Cung Nô bộc an tại Mão có Kỵ Điền",
+          "raw_text": "Nô bộc cung Hóa Kị nhập Điền Trạch, trước hôn nhân sống chung với người khác, hoặc ăn ở không hợp pháp với nhau trong thời gian dài, gia đình bất hòa; không có con với vợ chính, hoặc có con cái muộn.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no-boc_cohoc_46",
+          "condition_text": "Cung Nô bộc an tại Mão có M chất",
+          "raw_text": "Đoán mệnh thực tế: trong mệnh là người thành công nhờ bằng hữu.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M chất"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:chất"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_47",
+          "condition_text": "Cung Nô bộc an tại Mão có M chất",
+          "raw_text": "Cung Nô bộc có M chất đoán mệnh thế nào?\nĐoán mệnh thực tế: nô bộc cung về \"nhân\", khi đoán thuộc hạ phải thế nào?\nĐoán tồn tại: đây là vấn đề của giai đoạn nâng cao, cần phối hợp nhiều công thức mới có thể đoán mệnh chính xác.\nĐoán quý nhân: chủ định trong mệnh thuộc hạ là quý nhân sự thăng tiến của bạn.\nĐoán mắc nợ: đây là vấn đề của giai đoạn nâng cao, cần phối hợp nhiều công thức mới có thể đoán mệnh chính xác.\nĐoán hữu duyên: chủ định trong mệnh có duyên phận sâu sắc với thuộc hạ, nhất định phải bồi dưỡng người của mình.\nĐoán hữu vận: bồi dưỡng đoàn thể cùng nỗ lực, mới có thể hình thành cơ hội của vận tốt.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M chất"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:chất"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_48",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Bạn ít bè nhiều, bản thân đi giúp bạn bè nhận phần thiệt về mình.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+            "author": "Từ Tăng Sinh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_49",
+          "condition_text": "Cung Nô bộc an tại Mão có M Chất",
+          "raw_text": "Mệnh cách của xuất ngoại gặp quý nhân: biểu thị \"huynh, nô, di\" một cung vị bất kì có M chất.\nPhân tích thực tế: biểu thị xuất ngoại mới có thể tìm được cơ hội phát triển mà thành công sự nghiệp.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Chất"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Chất"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_50",
+          "condition_text": "Cung Nô bộc an tại Mão có M Di",
+          "raw_text": "Mệnh xuất ngoại nhờ bằng hữu. Bằng hữu tương hỗ trợ giúp.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Di"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Di"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_51",
+          "condition_text": "Cung Nô bộc an tại Mão có M Điền",
+          "raw_text": "Hàng xóm láng giềng là bằng hữu. Mua nhà đất nhờ bằng hữu giới thiệu.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Điền"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_52",
+          "condition_text": "Cung Nô bộc an tại Mão có M Tật",
+          "raw_text": "Bằng hữu thích tìm ta. Bẩm sinh thường chú ý tới bằng hữu.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Tật"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Tật"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_53",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ,Tự Lộc",
+          "raw_text": "Là Lộc Kị, tương đương với Song Kị.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+            "author": "Đại Đức Sơn Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "no-boc_cohoc_54",
+          "condition_text": "Cung Nô bộc an tại Mão có Cự môn",
+          "raw_text": "Cự Môn nhập cung lục thân, là ý tượng: tính bài xích khá mạnh, tượng trưng cho sự bỏ rơi, là ý tượng: bản thân và lục thân duyên phận bạc bẽo.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cự môn"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Hà lạc phái - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_55",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ,Hóa kỵ",
+          "raw_text": "Thiên Cơ Hóa Kị, là ý tượng: mất mát lục thân, nhất là bất lợi về phái nam; nhập cung huynh đệ là chủ về mất mát anh em.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Hà lạc phái - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_56",
+          "condition_text": "Cung Nô bộc an tại Mão có Cự môn",
+          "raw_text": "Nhập miếu là chủ về người trẻ tuổi không được việc, gây tiếng thị phi cho chủ, cùng không ở với chú được bền lâu.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cự môn"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_57",
+          "condition_text": "Cung Nô bộc an tại Mão có Hóa kỵ",
+          "raw_text": "Kẻ dưới kém cỏi.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Hóa kỵ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_58",
+          "condition_text": "Cung Nô bộc an tại Mão có Linh tinh",
+          "raw_text": "Nhập miếu và có thêm cát tinh, là chủ về gia nhân tận tâm giúp chủ giữ nhà. Nếu Linh tinh đứng một mình là người làm đã chẳng giúp chủ được việc, lại còn oán hận chủ. Thêm không Kiếp Hao Kỵ là chủ về chi làm thiệt hại cho chủ.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Linh tinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_59",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ",
+          "raw_text": "Nhập miếu là chủ về làm lợi cho chủ, hãm Địa là chủ về oán chủ.\nThêm Kình Dương Đà La Hóa Linh Không Kiếp là chủ về gây họa cho chủ.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_60",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ,Cự môn",
+          "raw_text": "Chủ về gia nhân không thật lòng với chủ. Thêm cát tinh là chủ về có tình nghĩa chủ tớ.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_61",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ,Hóa kỵ",
+          "raw_text": "Kẻ dưóỉ kém cỏi không được việc.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ",
+              "Hóa kỵ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_62",
+          "condition_text": "Cung Nô bộc an tại Mão có Cự môn",
+          "raw_text": "Không phải điều tốt, bạn bè hay tranh cãi, lắm khẩu thiệt thị phi, hay xung đột với bạn bè cấp dưới. Nhập miếu, cấp dưới khi trẻ không đắc lực, khi già có thể tốt.\nHội cát diệu quyền lộc, có thể được bạn tốt giúp đỡ lập nghiệp. Hội Hóa Kỵ, bạn bè ít khi giúp đỡ, lắm thị phi tranh chấp. Hội sát tinh, chủ khẩu thiệt phân tranh, một đời lắm thiểu nhân, hay bị toan tính ngầm. Hội Không Kiếp, Đại Hao, Âm Sát đồng cung hội chiếu, vì bạn mà hao phá, bị kẻ dưới trộm cướp.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cự môn"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_63",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ",
+          "raw_text": "Quan hệ bạn hữu rộng, ở mọi tầng lớp đều có bạn, đa phần là người giới kỹ thuật, hay chuyên gia về môn học thuật nào đó, đôi bên đều không để ý đối phương, nên tính lưu động lớn. Thiên Cơ nhập miếu, bạn bè cấp dưới đắc lực, hãm địa thì bị oán trách.\nKình Đà đồng cung hội chiếu, không được việc, mệt mỏi vì bạn bè, bị tiểu nhân hãm hại, lắm tranh chấp thị phi. Hỏa Linh đồng cung hội chiếu, hay tranh đấu, tức giận. Không Kiếp, Đại Hao đồng cung hội chiếu, thất bại nhiều, vì bạn bè mà phá hao tiền tài.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_64",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ,Cự môn",
+          "raw_text": "Thiên Cơ Cự Môn ở mão dậu, bạn bè ít khi giúp đỡ, thường hay tranh cãi hay có hiểu lầm hoặc có bạn bè bằng mặt không bằng lòng, có cũng như không, một đời quan hệ đa phần đều ban đầu tốt sau xấu.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "no-boc_cohoc_65",
+          "condition_text": "Cung Nô bộc an tại Mão có Cung khí đại hung",
+          "raw_text": "Nô Bộc Cung Khí đại hung có 2 ý nghĩa:\n(1) Thuộc bộ có ít hoặc không có.\n(2) Vãn niên mới có, điều này thông thường cần phải phối hợp với đại vận.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung khí đại hung"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "no-boc_cohoc_66",
+          "condition_text": "Cung Nô bộc an tại Mão có Cự môn",
+          "raw_text": "Cự Môn chủ thuộc bộ có đắc lực, mà cũng có thị phi. Nhưng số lượng không nhiều, vấn đề thị phi thì cần phải phối hợp đại vận, lưu niên nữa mới trở lên nguy hại.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cự môn"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "no-boc_cohoc_67",
+          "condition_text": "Cung Nô bộc an tại Mão có Cự môn,Cung khí đại hung",
+          "raw_text": "Cự Môn nhập Nô Bộc, Cung Khí đại hung, nếu ngộ Cự Môn Thủy là hỷ là thứ vượng, hội Hữu Bật sẽ là tiểu vượng. Trái lại, Cự Môn Thủy là kỵ thần thì lấy nhược để luận.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cự môn"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "no-boc_cohoc_68",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ",
+          "raw_text": "Thiên Cơ chủ mối quan hệ với thuộc bộ như anh em.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "no-boc_cohoc_69",
+          "condition_text": "Cung Nô bộc an tại Mão có Thiên cơ,Cung khí đại hung",
+          "raw_text": "Thiên Cơ nhập Nô Bộc nếu Cung Khí đại hung, Thiên Cơ Mộc là hỷ thần, nội cung vô phá, nếu được đại vận hỗ trợ thì cũng chỉ là thứ vượng mà thôi. Trái lại, nếu ngộ Thiên Cơ Mộc là kỵ thần thì cung Nô Bộc nhược, có phá thì càng nhược hơn.",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên cơ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "no-boc_cohoc_70",
+          "condition_text": "Cung Nô bộc an tại Mão có Cung Nô bộc",
+          "raw_text": "Cung Nô Bộc trong Tử Vi Đẩu số có thể cho chúng ta biết những điều sau:\n1. Thứ nhất là năng lực của người giao hữu.\n2. Thứ hai là mối quan hệ với đồng sự, hoặc hậu bối cát hung như thế nào?\n3. Thứ ba là năng lực dụng người, năng lực lãnh đạo có mạnh hay không?\n4. Thứ tư là thuộc bộ của người đó có nhiều hay không?\nKinh nghiệm thấu xương của tôi là những người làm ăn lớn, hay giám đốc của những công ty lớn bên cạnh cung Tài Bạch vượng thinh ra thì đều có cung Nô Bộc rất mạnh. Đây là điểm quan trọng mà mấy trăm năm trở lại đây, chưa có cuốn sách nào nói tới. Nô Bộc cung tuyệt đối không thể xem nhẹ. Ân sư của tôi, giáo sư Trần Di Khôi cũng có cung Nô Bộc rất vượng. Thảo nào mà Học trò của ông khắp thiên hạ. Lại còn thấy có vị là hội trưởng hội Kinh Dịch Đài Loan. Trong lĩnh vực kinh thương. Hoàng tiên sinh là người nổi tiếng cũng có cung Nô bộc rất mạnh.\nĐó là những ví dụ điển hỉnh về văn nhân, hay những vị giám đốc công ty lớn. Quý vị độc giả húng thú có thể tim hiểu, khảo chứng thêm, sẽ nhận thấy là họ cũng đều có cung Nô Bộc mạnh.\nPhương pháp luận cung Nô Bộc cũng giống như các cung khác, đều phải lấy cung Mệnh, Thân làm cốt yếu rồi mới tiến hành phân tích để hiểu rõ hơn Nô Bộc cung.\n***\nTrên đây, khi bàn về Nô Bộc cung, tôi chú trọng đến sổ lượng thuộc bộ hay học trò, hậu bối, bời vì theo quan điểm cùa tôi đã nếu ra từ đầu chương, những người có nhiều thuộc bộ, học trò,., trong xã hội ngày nay là một điều tốt. Điều đó thể hiện địa vị xã hội của người ấy cao hay thấp? Là quan chức cấp cao, thương gia lớn, hay giáo sư nổi tiếng, đại biểu nhân dân, đường chủ... Được như thế, họ không chỉ cỏ cung Nô Bộc đẹp mà còn phài phối với hợp với Mệnh Thân Quan mới tạo thành được. Tuy không được như Nô Bộc cung của ân sư Trần Di Khôi, nhưng chắc chắn rằng khi đại vận đến, Nô Bộc của tôi cũng sẽ vượng thịnh mà thôi!",
+          "conditions": {
+            "palace": "NO_BOC",
+            "position": "MAO",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung Nô bộc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        }
+      ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "no_boc_crawl_35_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Cung Nô Bộc cho biết mối quan hệ của đương số đối với bạn bè, đồng nghiệp, những người trợ thủ giúp việc (chủ yếu là những người dưới quyền, nhưng đôi khi cũng ứng vào cấp trên - lúc này thường là ứng với các sao quý nhân).",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_36_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Cổ nhân sắp đặt bài bố cung chức Nô Bộc rất khéo léo ở vị trí giữa và giáp với cung Thiên Di, cung Quan Lộc, là hàm ý nhấn mạnh đến mối quan hệ liên kết giữa tính chất sự kiện của các cung này với nhau. Cho nên Phú có câu:",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_37_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Lộc cư Nô Bộc, túng hữu quan dã bôn trì,",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_38_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "(Lộc cư Nô thì tuy làm quan vẫn vất vả hoặc làm công việc có tính chất chạy đôn đáo ngược xuôi)",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_39_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Điều này chủ yếu là do bố cục của tinh đẩu với các cung đó thôi, vì khi Lộc Tồn cư Nô Bộc thì Kình Đà xâm phạm vào Thiên Di vào Quan Lộc, đồng thời 2 sát tinh này cùng chiếu vào Mệnh.",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
+    }
+  ],
+  "last_updated": "2026-09-23T02:33:10.326Z"
+}

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/api paths
+Disallow: /api/
+
+Sitemap: https://tuviphonglam.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

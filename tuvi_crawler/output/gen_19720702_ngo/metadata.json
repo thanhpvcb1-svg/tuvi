@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19720702_ngo",
+  "birth": {
+    "year": 1972,
+    "month": 7,
+    "day": 2,
+    "hour": "ngo",
+    "hourName": "Ngọ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:21:03.195Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

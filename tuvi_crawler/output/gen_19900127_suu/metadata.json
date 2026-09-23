@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19900127_suu",
+  "birth": {
+    "year": 1990,
+    "month": 1,
+    "day": 27,
+    "hour": "suu",
+    "hourName": "Sửu",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:08:36.881Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19630408_ti",
+  "birth": {
+    "year": 1963,
+    "month": 4,
+    "day": 8,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:18:33.413Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

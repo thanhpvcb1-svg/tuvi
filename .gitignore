@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-old-locktest/
+
+# Local platform folders
+.netlify/
+.codex/
+.agents/
+.claude/
+.repo-git/
+
+# Temporary verification and reports
+.tmp-verify/
+reports/
+
+# Logs
+*.log
+vite-*.log
+dev-server.*.log
+local-server.log
+
+# TypeScript incremental files
+*.tsbuildinfo
+
+# Local temp files
+tmp-local-*.json
+local-url.txt

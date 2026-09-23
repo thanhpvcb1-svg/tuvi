@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19800418_hoi",
+  "birth": {
+    "year": 1980,
+    "month": 4,
+    "day": 18,
+    "hour": "hoi",
+    "hourName": "Hợi",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:16:52.951Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

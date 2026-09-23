@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19740903_hoi",
+  "birth": {
+    "year": 1974,
+    "month": 9,
+    "day": 3,
+    "hour": "hoi",
+    "hourName": "Hợi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:17:15.524Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

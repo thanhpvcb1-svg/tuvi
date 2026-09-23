@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20120318_hoi",
+  "birth": {
+    "year": 2012,
+    "month": 3,
+    "day": 18,
+    "hour": "hoi",
+    "hourName": "Hợi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:18:25.313Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

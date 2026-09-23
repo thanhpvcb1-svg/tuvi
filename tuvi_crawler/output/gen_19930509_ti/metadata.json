@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19930509_ti",
+  "birth": {
+    "year": 1993,
+    "month": 5,
+    "day": 9,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:16:46.456Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,63 @@
+{
+  "palace": "quan_loc",
+  "section_id": "phi_tu_hoa",
+  "title": "Phi Tứ Hóa Từ Cung Quan Lộc",
+  "interpretations": [
+    {
+      "id": "quan_loc_nhap_phoi",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "loc",
+        "source_palace": "quan_loc",
+        "target_palace": "phu_the"
+      },
+      "text": "Quan lộc Hóa Lộc nhập phu thê, sự nghiệp được phối ngẫu trợ lực, bình thuận kiếm tiền. Sự nghiệp thuận lợi, kiếm tiền tốt. Sau hôn nhân mọi việc suôn sẻ. Phù hợp làm khách hàng là người khác giới. Tín dụng tốt, nên làm xuất khẩu, thích hợp với quan hệ công chúng, kinh doanh bán hàng. Phòng ngừa ngoại tình.",
+      "source": {
+        "book": "Tứ hóa phi tinh",
+        "author": "Lương Nhược Du"
+      }
+    },
+    {
+      "id": "quan_quyen_nhap_menh",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "quyen",
+        "source_palace": "quan_loc",
+        "target_palace": "menh"
+      },
+      "text": "Quan lộc Hóa Quyền nhập mệnh, bận rộn vì sự nghiệp, tự nắm quyền, năng lực lập nghiệp mạnh mẽ, nặng tinh thần trách nhiệm. Sáng suốt, tài cán, phản ứng lanh lẹ, có thể phát triển sự nghiệp từ nhỏ thành lớn. Xem trọng sự nghiệp, lao tâm lao lực, có thể sáng lập cơ nghiệp, nắm quyền, được người ta kính trọng, có thành tựu.",
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái",
+        "author": "Nguyễn Anh Vũ dịch"
+      }
+    },
+    {
+      "id": "quan_khoa_nhap_phuc",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "khoa",
+        "source_palace": "quan_loc",
+        "target_palace": "phuc_duc"
+      },
+      "text": "Quan lộc Hóa Khoa nhập phúc đức, tài lộc bình ổn, không biến động lớn. Điềm đạm trong công việc, dễ thích nghi, thích hợp nghề nghiệp cần sự tinh tế, mỹ học, tinh thần, tôn giáo, nghệ thuật. Nguồn tiền bình ổn thuận lợi, không dao động lớn, có kế hoạch điều chuyển vốn liếng rõ ràng.",
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+        "author": "Huy Hà Phan"
+      }
+    },
+    {
+      "id": "quan_ky_nhap_dien",
+      "type": "phi_hoa",
+      "conditions": {
+        "transformation": "ky",
+        "source_palace": "quan_loc",
+        "target_palace": "dien_trach"
+      },
+      "text": "Quan lộc Hóa Kị nhập điền trạch: Giữ thành, ổn định, tận trách. Thường làm công chức hoặc làm việc ở doanh nghiệp lớn ổn định đến lúc nghỉ hưu. Kinh doanh tiền mặt cùng gia đình, tích lũy từng chút. Có thể nhà và cửa hàng hợp nhất. Với bạn bè không đa tình, ít giao tiếp xã hội. Không nên hợp tác làm ăn với người khác, nên làm ăn bằng tiền mặt.",
+      "source": {
+        "book": "Tứ hóa phi tinh",
+        "author": "Lương Nhược Du"
+      }
+    }
+  ]
+}

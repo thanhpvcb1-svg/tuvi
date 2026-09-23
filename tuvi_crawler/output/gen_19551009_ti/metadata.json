@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19551009_ti",
+  "birth": {
+    "year": 1955,
+    "month": 10,
+    "day": 9,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:17:36.452Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

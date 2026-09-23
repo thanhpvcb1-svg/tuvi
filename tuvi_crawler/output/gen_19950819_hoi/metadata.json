@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19950819_hoi",
+  "birth": {
+    "year": 1995,
+    "month": 8,
+    "day": 19,
+    "hour": "hoi",
+    "hourName": "Hợi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:08:13.458Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

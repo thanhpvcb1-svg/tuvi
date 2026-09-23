@@ -1,0 +1,46 @@
+{
+  "palace": "menh",
+  "section_id": "m_code",
+  "title": "M Code - Quan Hệ Cung",
+  "interpretations": [
+    {
+      "id": "menh_m_di",
+      "type": "m_code",
+      "conditions": {
+        "m_code": "M Di",
+        "relation_palace": "thien_di"
+      },
+      "text": "Mệnh cách xuất ngoại. Xuất ngoại gặp quý nhân.",
+      "source": {
+        "book": "Đoán vận",
+        "author": "Trịnh Mục Đức"
+      }
+    },
+    {
+      "id": "menh_m_phuc",
+      "type": "m_code",
+      "conditions": {
+        "m_code": "M Phúc",
+        "relation_palace": "phuc_duc"
+      },
+      "text": "Người được phúc báo tổ tiên. Người hứng thú với việc kiếm tiền.",
+      "source": {
+        "book": "Đoán vận",
+        "author": "Trịnh Mục Đức"
+      }
+    },
+    {
+      "id": "menh_m_tat",
+      "type": "m_code",
+      "conditions": {
+        "m_code": "M Tật",
+        "relation_palace": "tat_ach"
+      },
+      "text": "Mệnh cách lao bác. Là người công việc vất vả, làm việc một mình.",
+      "source": {
+        "book": "Đoán vận",
+        "author": "Trịnh Mục Đức"
+      }
+    }
+  ]
+}

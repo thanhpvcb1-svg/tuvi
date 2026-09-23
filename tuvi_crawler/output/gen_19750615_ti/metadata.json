@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19750615_ti",
+  "birth": {
+    "year": 1975,
+    "month": 6,
+    "day": 15,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:21:06.493Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

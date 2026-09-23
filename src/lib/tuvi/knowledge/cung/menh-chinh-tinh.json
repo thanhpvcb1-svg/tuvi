@@ -1,0 +1,69 @@
+{
+  "palace": "menh",
+  "section_id": "chinh_tinh",
+  "title": "Chính Tinh Thủ Mệnh",
+  "interpretations": [
+    {
+      "id": "menh_pha_quan_general",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["pha_quan"]
+      },
+      "text": "Chủ về người chính trực, hiếu thắng, thường hay thay đổi tình cảm, thiếu kiên nhẫn, có tâm lý phản kháng nhưng cũng thường tìm tòi, đi theo cái mới, tình cảm yêu ghét thay đổi bất thường. Mệnh nữ sẽ lao tâm khổ tứ, giàu lòng tự trọng, cô đơn, thích ăn quà vặt. Nên theo lĩnh vực quân đội, cảnh sát, kỹ thuật, kỹ sư, bác sỹ ngoại khoa, nha khoa, cũng có thể hoạt động trong hoạt động mang tính thần bí học và tôn giáo.",
+      "source": {
+        "book": "Ứng dụng thuyết Âm Dương - Lập và giải Tử vi đẩu số",
+        "author": "THS. Vũ Mê Linh"
+      }
+    },
+    {
+      "id": "menh_pha_quan_ty_ngo_mao_dau",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["pha_quan"],
+        "position": ["ty", "ngo", "mao", "dau"]
+      },
+      "text": "Phá Quân ở các cung Tí, Ngọ, Mão hoặc Dậu, duyên với người khá tốt, nhiều thù tạc; nhưng nữ mệnh rất sợ Phá Quân thủ cung mệnh, có thêm Địa Kiếp đồng cung, hôn nhân không tốt đẹp, cần phải tu tâm dưỡng tính nhiều, nếu không sẽ dễ bước vào chốn phong trần.",
+      "source": {
+        "book": "Hà lạc phái",
+        "author": "Phương Ngoại Nhân"
+      }
+    },
+    {
+      "id": "menh_pha_quan_truoc_kho_sau_de",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["pha_quan"]
+      },
+      "text": "Phá Quân nhập cung mệnh, trước gặp khó khăn sau mới dễ dàng, có điểm đại thành hoặc đại bại. Phá Quân nhập cung mệnh, ưa ở cung Tí hoặc Ngọ, là ý tượng: quyền quý, phát đạt, thành tựu, nhưng vận lúc trẻ không tốt; ở các cung khác thì bôn ba nhiều, lao tâm.",
+      "source": {
+        "book": "Hà lạc phái",
+        "author": "Phương Ngoại Nhân"
+      }
+    },
+    {
+      "id": "menh_pha_quan_thin_tuat",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["pha_quan"],
+        "position": ["thin", "tuat"]
+      },
+      "text": "Phá Quân vượng, đối cung là Tử Vi Thiên Tướng. Thìn cung Thân hình thon gầy, Tuất cung Thân hình đầy đặn. Chủ người tính tình khó hiểu, nghị lực hơn người, bảo thủ cố chấp, có tài nghệ, dũng cảm hơn người, rất trọng nghĩa khí. Thìn Tuất là thiên la địa võng, cuộc sống hay có những điều không may ngoài ý muốn hoặc có bệnh tật kéo dài. Không theo gia nghiệp tổ tiên, tự tay lập nghiệp, nhưng không hợp với vợ con.",
+      "source": {
+        "book": "Đẩu số cung vị",
+        "author": "Trần Bỉnh Húc"
+      }
+    },
+    {
+      "id": "menh_pha_quan_phi_tinh",
+      "type": "star_in_palace",
+      "conditions": {
+        "required_stars": ["pha_quan"]
+      },
+      "text": "Tướng ngũ đoản, lưng dầy, mày thưa. Cơ thể không cân đối nên đi đứng nằm ngồi ngả nghiêng. Tính tình xảo trá, bất nhân, thích làm những chuyện mạo hiểm, trợ ác, nên ít hợp với người, nếu không theo tổ nghiệp thì thành công. Chỉ có sao bại là chế hóa được tính ác của Phá Quân; Phá Quân nhập miếu lại thêm cát tinh thì chủ về hiển đạt võ nghiệp.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      }
+    }
+  ]
+}

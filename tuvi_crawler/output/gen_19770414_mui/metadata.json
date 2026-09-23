@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19770414_mui",
+  "birth": {
+    "year": 1977,
+    "month": 4,
+    "day": 14,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:14:54.518Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

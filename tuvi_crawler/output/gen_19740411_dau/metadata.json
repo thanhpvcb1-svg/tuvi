@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19740411_dau",
+  "birth": {
+    "year": 1974,
+    "month": 4,
+    "day": 11,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:11:43.175Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

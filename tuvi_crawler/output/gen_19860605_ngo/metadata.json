@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19860605_ngo",
+  "birth": {
+    "year": 1986,
+    "month": 6,
+    "day": 5,
+    "hour": "ngo",
+    "hourName": "Ngọ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:15:51.066Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

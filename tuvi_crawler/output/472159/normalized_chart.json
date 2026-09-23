@@ -1,0 +1,257 @@
+{
+  "chart_id": "472159",
+  "source": "tuvi.cohoc.net",
+  "birth": {
+    "year": "Mậu Dần",
+    "month": "9",
+    "day": "7",
+    "hour": "Tí",
+    "gender": "Dương Nam",
+    "menh": "THÀNH ÐẦU THỔ",
+    "cuc": "THỦY NHỊ CỤC",
+    "than_cu": "Mệnh",
+    "menh_chu": "Lộc tồn",
+    "than_chu": "Thiên lương",
+    "hi_than": "THỔ, KIM",
+    "ki_than": "MỘC, HỎA"
+  },
+  "palaces": {
+    "tat_ach": {
+      "name": "TẬT ÁCH",
+      "diaChi": "Đ. Tị",
+      "daiVan": "72",
+      "chinhTinh": [
+        "THIÊN LƯƠNG"
+      ],
+      "saoTot": [
+        "Lộc tồn",
+        "Lộc Điền",
+        "Quyền Phụ",
+        "Khoa Nô"
+      ],
+      "saoXau": [
+        "Thiên hình",
+        "Kỵ Nô"
+      ],
+      "score": "2.69"
+    },
+    "tai_bach": {
+      "name": "TÀI BẠCH",
+      "diaChi": "M. Ngọ",
+      "daiVan": "82",
+      "chinhTinh": [
+        "THẤT SÁT"
+      ],
+      "saoTot": [
+        "Lộc Quan",
+        "Quyền Điền",
+        "Khoa Quan"
+      ],
+      "saoXau": [
+        "Kình dương",
+        "Kỵ Nô"
+      ],
+      "score": "-2.87"
+    },
+    "tu_tuc": {
+      "name": "TỬ TỨC",
+      "diaChi": "K. Mùi",
+      "daiVan": "92",
+      "chinhTinh": [],
+      "saoTot": [
+        "Thiên việt",
+        "Lộc Phúc",
+        "Quyền Quan",
+        "Khoa Tật"
+      ],
+      "saoXau": [
+        "Thiên hỉ",
+        "Kỵ Di"
+      ],
+      "score": "0.35"
+    },
+    "phu_the": {
+      "name": "PHU THÊ",
+      "diaChi": "C. Thân",
+      "daiVan": "102",
+      "chinhTinh": [
+        "LIÊM TRINH"
+      ],
+      "saoTot": [
+        "Thiên mã",
+        "Lộc Điền",
+        "Quyền Phúc",
+        "Khoa Điền"
+      ],
+      "saoXau": [
+        "Thiên hư",
+        "Thất địa",
+        "Thất nhân",
+        "Kỵ Phụ"
+      ],
+      "score": "0.7"
+    },
+    "thien_di": {
+      "name": "THIÊN DI",
+      "diaChi": "B. Thìn",
+      "daiVan": "62",
+      "chinhTinh": [
+        "TỬ VI",
+        "THIÊN TƯỚNG"
+      ],
+      "saoTot": [
+        "Văn khúc",
+        "Lộc Phụ",
+        "Quyền Nô",
+        "Khoa Mệnh"
+      ],
+      "saoXau": [
+        "Thiên khốc",
+        "Đà la",
+        "Kỵ Phối"
+      ],
+      "score": "2.1"
+    },
+    "huynh_de": {
+      "name": "HUYNH ĐỆ",
+      "diaChi": "T. Dậu",
+      "daiVan": "112",
+      "chinhTinh": [],
+      "saoTot": [
+        "Lộc Nô",
+        "Quyền Điền",
+        "Khoa Di"
+      ],
+      "saoXau": [
+        "Thiên riêu",
+        "Kỵ Mệnh"
+      ],
+      "score": "0.85"
+    },
+    "no_boc": {
+      "name": "NÔ BỘC",
+      "diaChi": "Ấ. Mão",
+      "daiVan": "52",
+      "chinhTinh": [
+        "THIÊN CƠ",
+        "CỰ MÔN"
+      ],
+      "saoTot": [
+        "Tự Lộc",
+        "Quyền Tật",
+        "Khoa Di"
+      ],
+      "saoXau": [
+        "Linh tinh",
+        "Hóa kỵ",
+        "Hàm trì",
+        "Kỵ Điền"
+      ],
+      "score": "2.02"
+    },
+    "menh": {
+      "name": "MỆNH",
+      "diaChi": "N. Tuất",
+      "daiVan": "2",
+      "chinhTinh": [
+        "PHÁ QUÂN"
+      ],
+      "saoTot": [
+        "Văn xương",
+        "Lộc Tật",
+        "Quyền Di",
+        "Khoa Phúc"
+      ],
+      "saoXau": [
+        "Âm sát",
+        "Kỵ Phúc"
+      ],
+      "score": "1.8"
+    },
+    "quan_loc": {
+      "name": "QUAN LỘC",
+      "diaChi": "G. Dần",
+      "daiVan": "42",
+      "chinhTinh": [
+        "THAM LANG"
+      ],
+      "saoTot": [
+        "Hữu bật",
+        "Hóa khoa",
+        "Hóa lộc",
+        "Lộc Phối",
+        "Quyền Mệnh",
+        "Khoa Phúc"
+      ],
+      "saoXau": [
+        "Thất thiên",
+        "Kỵ Điền"
+      ],
+      "score": "0.86"
+    },
+    "dien_trach": {
+      "name": "ĐIỀN TRẠCH",
+      "diaChi": "Ấ. Sửu",
+      "daiVan": "32",
+      "chinhTinh": [
+        "THÁI DƯƠNG",
+        "THÁI ÂM"
+      ],
+      "saoTot": [
+        "Thiên khôi",
+        "Hóa quyền",
+        "Hồng loan",
+        "Lộc Nô",
+        "Quyền Tật",
+        "Khoa Di"
+      ],
+      "saoXau": [
+        "Phá thể",
+        "Hỏa tinh",
+        "Tự Kỵ"
+      ],
+      "score": "0.07"
+    },
+    "phuc_duc": {
+      "name": "PHÚC ĐỨC",
+      "diaChi": "G. Tí",
+      "daiVan": "22",
+      "chinhTinh": [
+        "VŨ KHÚC",
+        "THIÊN PHỦ"
+      ],
+      "saoTot": [
+        "Tả phù",
+        "Lộc Phối",
+        "Quyền Mệnh",
+        "Tự Khoa"
+      ],
+      "saoXau": [
+        "Kỵ Điền"
+      ],
+      "score": "1.74"
+    },
+    "phu_mau": {
+      "name": "PHỤ MẪU",
+      "diaChi": "Q. Hợi",
+      "daiVan": "12",
+      "chinhTinh": [
+        "THIÊN ĐỒNG"
+      ],
+      "saoTot": [
+        "Lộc Mệnh",
+        "Quyền Nô",
+        "Khoa Điền"
+      ],
+      "saoXau": [
+        "Địa kiếp",
+        "Địa không",
+        "Kỵ Quan"
+      ],
+      "score": "1.5"
+    }
+  },
+  "metadata": {
+    "title": "Bắc phái Lá số tử vi DƯƠNG NAM sinh năm MẬU DẦN giờ TÍ ngày 7 tháng 9 Âm Lịch"
+  }
+}

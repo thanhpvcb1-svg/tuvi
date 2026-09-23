@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20200322_ti",
+  "birth": {
+    "year": 2020,
+    "month": 3,
+    "day": 22,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:15:20.385Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

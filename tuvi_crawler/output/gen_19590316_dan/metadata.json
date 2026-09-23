@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19590316_dan",
+  "birth": {
+    "year": 1959,
+    "month": 3,
+    "day": 16,
+    "hour": "dan",
+    "hourName": "Dần",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:08:54.526Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

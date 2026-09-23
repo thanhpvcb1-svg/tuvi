@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19880520_thin",
+  "birth": {
+    "year": 1988,
+    "month": 5,
+    "day": 20,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:16:23.533Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

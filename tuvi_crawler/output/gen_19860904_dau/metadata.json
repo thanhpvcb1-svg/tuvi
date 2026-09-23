@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19860904_dau",
+  "birth": {
+    "year": 1986,
+    "month": 9,
+    "day": 4,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:11:51.271Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

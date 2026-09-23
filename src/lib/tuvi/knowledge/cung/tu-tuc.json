@@ -1,0 +1,115 @@
+{
+  "palace": "tu_tuc",
+  "sections": [
+    {
+      "section_id": "can_cung",
+      "title": "Thiên Can Cung Tử Tức",
+      "interpretations": [
+        {
+          "id": "tu_can_ky",
+          "type": "heavenly_stem",
+          "conditions": {
+            "heavenly_stem": "ky"
+          },
+          "text": "Cung Tử Nữ can Kỷ, tam tài thuộc Địa chi Nhân, thuộc Thổ, cho nên hay che chở người khác, giao thiệp đầu tư cùng người ta dễ bị phá hoại, cũng chủ công việc bên ngoài đa số mang tính phục vụ người ta. Lấy con cái mà nói, biểu thị có tính tự lập.",
+          "source": {
+            "book": "Đẩu số chính nhãn",
+            "author": "Ông Phúc Dụ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "phi_tu_hoa",
+      "title": "Phi Tứ Hóa Từ Cung Tử Tức",
+      "interpretations": [
+        {
+          "id": "tu_loc_nhap_phuc",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "loc",
+            "source_palace": "tu_tuc",
+            "target_palace": "phuc_duc"
+          },
+          "text": "Tử nữ Hóa Lộc nhập phúc đức: Hưởng phúc từ con cái, cũng thích sự ngây thơ của trẻ. Đề phòng con cái vô tư, lười nhác không tích cực. Đời sống tình dục vui vẻ. Cuối đời vô lo, thiên luân có niềm vui. Hợp tác kiếm tiền. Quan hệ họ hàng sôi nổi.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "tu_quyen_nhap_quan",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "quyen",
+            "source_palace": "tu_tuc",
+            "target_palace": "quan_loc"
+          },
+          "text": "Tử nữ Hóa Quyền nhập sự nghiệp: Hợp tác có thành tựu. Con cái năng lực tốt, tham vọng sự nghiệp mạnh. Áp lực cạnh tranh từ đồng nghiệp. Con cái có thể kế thừa sự nghiệp.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "tu_khoa_nhap_tat",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "khoa",
+            "source_palace": "tu_tuc",
+            "target_palace": "tat_ach"
+          },
+          "text": "Tử nữ Hóa Khoa nhập tật ách: Trẻ kiểu thư sinh, giáo dục tốt, có quy củ. Con cái là quý nhân thân thể của ta, ngày sau khi có nạn con cái tất có thể tìm được thầy giỏi thuốc tốt chữa cho ta.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "tu_ky_nhap_di",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "ky",
+            "source_palace": "tu_tuc",
+            "target_palace": "thien_di"
+          },
+          "text": "Tử nữ Hóa Kị nhập thiên di: Con ở xa. Con cái thường không ở bên hoặc con cái trống rỗng. Con cái thật thà hoặc thành tựu kém. Vận già kém hơn, nuôi con chưa chắc phòng được già. Hợp tác khó thành hoặc duyên hợp tác không lâu dài. Cục diện kém, phòng tai nạn, bệnh nghiệp lực.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "sat_tinh",
+      "title": "Sát Tinh Tại Tử Tức",
+      "interpretations": [
+        {
+          "id": "tu_khong_kiep_ky",
+          "type": "star_combination",
+          "conditions": {
+            "meeting_stars": ["dia_khong", "dia_kiep", "hoa_ky"]
+          },
+          "text": "Đều chủ hình khắc, đa phần là vì chuyện con cái mà thao tâm đến già. Nếu như ba sao trên hợp chiếu một cung, tuyệt tự, hội nhiều cát tinh chiếu đến, chủ một con cũng e chết yểu.",
+          "source": {
+            "book": "Đẩu số cung vị",
+            "author": "Trần Bỉnh Húc"
+          }
+        },
+        {
+          "id": "tu_hoa_linh",
+          "type": "star_combination",
+          "conditions": {
+            "meeting_stars": ["hoa_tinh", "linh_tinh"]
+          },
+          "text": "Chủ hình khắc, đơn thủ chủ cô, hội nhiều cát tinh hội chiếu, dù có cũng khắc thương, đa phần có con nuôi, hội Kình Đà Không Kiếp không có con. Con cái tính tình thích phân tranh, cương cường thô bạo bất hòa.",
+          "source": {
+            "book": "Đẩu số cung vị",
+            "author": "Trần Bỉnh Húc"
+          }
+        }
+      ]
+    }
+  ]
+}

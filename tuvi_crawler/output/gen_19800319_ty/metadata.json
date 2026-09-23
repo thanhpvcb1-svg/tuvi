@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19800319_ty",
+  "birth": {
+    "year": 1980,
+    "month": 3,
+    "day": 19,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:10:51.186Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

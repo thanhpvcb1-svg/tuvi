@@ -1,0 +1,25 @@
+import type { AnnualStarRule } from "../config/types";
+
+export const ANNUAL_STAR_RULES: AnnualStarRule[] = [
+  { star: "L.Thái Tuế", source: "annual", placeBy: { type: "formula", formulaId: "annual-thai-tue-by-year-branch" } },
+  { star: "L.Thiếu Dương", source: "annual", placeBy: { type: "formula", formulaId: "annual-thieu-duong-by-year-branch" } },
+  { star: "L.Tang Môn", source: "annual", placeBy: { type: "formula", formulaId: "annual-tang-mon-by-year-branch" } },
+  { star: "L.Thiếu Âm", source: "annual", placeBy: { type: "formula", formulaId: "annual-thieu-am-by-year-branch" } },
+  { star: "L.Quan Phù", source: "annual", placeBy: { type: "formula", formulaId: "annual-quan-phu-by-year-branch" } },
+  { star: "L.Tử Phù", source: "annual", placeBy: { type: "formula", formulaId: "annual-tu-phu-by-year-branch" } },
+  { star: "L.Tuế Phá", source: "annual", placeBy: { type: "formula", formulaId: "annual-tue-pha-by-year-branch" } },
+  { star: "L.Long Đức", source: "annual", placeBy: { type: "formula", formulaId: "annual-long-duc-by-year-branch" } },
+  { star: "L.Kình Dương", source: "annual", placeBy: { type: "formula", formulaId: "annual-kinh-duong-by-year-stem" } },
+  { star: "L.Đà La", source: "annual", placeBy: { type: "formula", formulaId: "annual-da-la-by-year-stem" } },
+  { star: "L.Lộc Tồn", source: "annual", placeBy: { type: "formula", formulaId: "annual-loc-ton-by-year-stem" } },
+  { star: "L.Thiên Mã", source: "annual", placeBy: { type: "formula", formulaId: "annual-thien-ma-by-year-branch" } },
+  { star: "L.Bạch Hổ", source: "annual", placeBy: { type: "formula", formulaId: "annual-bach-ho-by-year-branch" } },
+  { star: "L.Phúc Đức", source: "annual", placeBy: { type: "formula", formulaId: "annual-phuc-duc-by-year-branch" } },
+  { star: "L.Điếu Khách", source: "annual", placeBy: { type: "formula", formulaId: "annual-dieu-khach-by-year-branch" } },
+  { star: "L.Trực Phù", source: "annual", placeBy: { type: "formula", formulaId: "annual-truc-phu-by-year-branch" } },
+  { star: "L.Thiên Khốc", source: "annual", placeBy: { type: "formula", formulaId: "annual-thien-khoc-by-year-branch" } },
+  { star: "L.Thiên Hư", source: "annual", placeBy: { type: "formula", formulaId: "annual-thien-hu-by-year-branch" } },
+  { star: "L.Đào Hoa", source: "annual", placeBy: { type: "formula", formulaId: "annual-dao-hoa-by-year-branch" } },
+  { star: "L.Hoa Cái", source: "annual", placeBy: { type: "formula", formulaId: "annual-hoa-cai-by-year-branch" } },
+  { star: "L.Kiếp Sát", source: "annual", placeBy: { type: "formula", formulaId: "annual-kiep-sat-by-year-branch" } },
+];

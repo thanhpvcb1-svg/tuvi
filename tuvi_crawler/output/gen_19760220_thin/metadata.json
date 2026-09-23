@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19760220_thin",
+  "birth": {
+    "year": 1976,
+    "month": 2,
+    "day": 20,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:19:54.079Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

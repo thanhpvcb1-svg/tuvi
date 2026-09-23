@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19930419_mui",
+  "birth": {
+    "year": 1993,
+    "month": 4,
+    "day": 19,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:11:12.148Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

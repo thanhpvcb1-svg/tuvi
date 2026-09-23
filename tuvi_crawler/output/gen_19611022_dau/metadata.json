@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19611022_dau",
+  "birth": {
+    "year": 1961,
+    "month": 10,
+    "day": 22,
+    "hour": "dau",
+    "hourName": "Dậu",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:11:10.499Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

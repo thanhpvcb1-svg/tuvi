@@ -1,0 +1,1374 @@
+{
+  "palace": "PHUC_DUC",
+  "source": "tuvi.cohoc.net",
+  "chart_id": "472159",
+  "total_blocks": 47,
+  "sections": [
+    {
+      "section_id": "phuc-duc",
+      "title": "CUNG PHÚC ĐỨC",
+      "blocks": [
+        {
+          "block_id": "phuc-duc_cohoc_1",
+          "condition_text": "Điểm \"xí hoa\" cung Phúc đức là 1.74",
+          "raw_text": "Cung Phúc đức chủ về: tinh thần, sinh hoạt hưởng thụ.\nTọa thủ: Vũ khúc, Thiên phủ, Tả phù. Xung chiếu: Thất sát, Kình dương. Tam hợp: Tử vi, Thiên tướng, Thiên khốc, Đà la, Văn khúc - Liêm trinh, Thiên mã, Thiên hư. Giáp cung: Thiên đồng, Địa kiếp, Địa không - Thái dương, Thái âm, Hỏa tinh, Thiên khôi, Hóa quyền, Hồng loan.\nNgũ hành khí của cung Giáp Tí: 20% MỘC (kị thần), 50% THỦY (nhàn thần), 30% KIM (hỉ thần). Đây là cung cát nhiều hơn hung (hữu cát). Vũ khúc hành KIM là hỉ thần. Thiên phủ hành THỔ là hỉ thần. Tả phù hành THỔ là hỉ thần.\nCung Phúc đức can Giáp làm cho:\n- Liêm trinh Hóa lộc nhập cung Phu thê (cung Tài bạch của cung Phúc đức). Cung Phu thê can Canh chuyển Thái dương Hóa Lộc nhập cung Điền trạch, chuyển Thiên đồng Hóa kỵ nhập cung Phụ mẫu.\n- Thái dương Hóa kỵ nhập cung Điền trạch (cung Phụ mẫu của cung Phúc đức). Cung Điền trạch can Ất chuyển Thiên cơ Hóa Lộc nhập cung Nô bộc, Thái âm tự hóa kỵ.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của một cao thủ Bắc phái",
+            "author": "Kinh nghiệm của một cao thủ Bắc phái",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 9
+        },
+        {
+          "block_id": "phuc-duc_cohoc_2",
+          "condition_text": "Cung Phúc đức thiên can là Giáp",
+          "raw_text": "Can Giáp thuộc Thiên chi Thiên, là người không hay che chở cho người khác và cũng không cần ai che chở cho mình.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+            "author": "Ông Phúc Dụ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "phuc-duc_cohoc_3",
+          "condition_text": "Cung Phúc đức an tại Tí có Kỵ Điền",
+          "raw_text": "Cung Phúc đức là cung khí số vị cung Phu thê. Trong trường hợp này biểu hiện bất lợi cho người phối ngẫu.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đồng bộ đoạn quyết - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "phuc-duc_cohoc_4",
+          "condition_text": "Thuận Thủy Kị (流水忌): cung Phúc đức phi hóa kỵ tới cung Điền trạch",
+          "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Phúc đức khí tiết sang cung Điền trạch.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_5",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự hóa li tâm",
+          "raw_text": "Cung Phúc Đức tự hóa chủ có liên quan đến tiền bạc, cũng chủ phúc phận hưởng thụ của bản thân.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự hóa li tâm"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Cửu cửu bí nghi - Lý Đạt Uy",
+            "author": "Lý Đạt Uy",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_6",
+          "condition_text": "Cung Phúc đức an tại Tí có Lộc Phối",
+          "raw_text": "Phúc đức cung Hóa Lộc nhập phu thê cung.\n(mệnh là tâm, tật ách là thân, phúc đức là linh (linh tính, linh hồn)\nPhúc đức cung chủ về mặt tư duy về mặt tinh thần linh tính, sở thích hứng thú hưởng thụ, phúc phận của tiên thiên và đức hạnh của hậu thiên.\nTư duy về mặt tinh thần linh tính, hứng thú sở thích hưởng thụ mệnh tạo, phúc phận của tiên thiên và đức hạnh của hậu thiên nhập vào phu thê của mệnh tạo và mệnh tạo cũng nhận được sự hưởng ứng báo đáp của phu thê, cho nên gọi là thiện duyên. Lộc của mệnh cung hóa nhập là hữu duyên (có duyên).\nSuy lý tượng nghĩa của Lộc - Sinh phát, hữu duyên, hỷ duyệt).\nThái độ của Lộc là khoan dung, quan hệ đối đãi cùng có lợi.\nPhu thê cung chủ duyên tình với phối ngẫu, tình duyên với người khác giới trong cuộc đời. Phúc phận tài (tài bạch của phúc đức vị), gia vận vị (tật ách của điền trạch).\n1. Ta và phối ngẫu duyên tình nồng hậu, tâm đầu ý hợp, nhanh nhẹn sắc sảo, là mối thiện duyên.\n2. Thường có nhiều bạn khác giới, nếu là Tham lang, Liêm trinh Hóa Lộc tất đa tình lãng mạn, đào hoa vượng.\n3. Phúc phận tài hậu trợ sự nghiệp (phu thê là tài bạch của phúc đức vị, Lộc xung quan lộc), sau kết hôn sự nghiệp thuận lợi. Nếu cùng tài bạch cung liên kết thành vượng, lại thêm biện tài tinh (Phá quân, Tham lang, Liêm trinh) giao hội, dễ được bạn khác giới trợ giúp đắc tài. Liên kết cùng điền trạch thành vượng, dễ hưng gia vận.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Phối"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "PHU_THE"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_7",
+          "condition_text": "Cung Phúc đức an tại Tí có Lộc Phối",
+          "raw_text": "Từ Phúc Đức hóa Lộc đến Phu Thê cung, chiếu Quan Lộc cung\n1. Mệnh chủ cùng phối ngẫu có phúc báo, một đời hưởng phúc.\n2. Phối ngẫu thích hưởng thụ, thực lộc một đời không thiếu.\n3. Phối ngẫu tương đối thích nhàn không thích làm, lười biếng, không năng động.\n4. Phối ngẫu dễ tính và tốt bụng.\n5. Người phối ngẫu được chiều chuộng sinh ra thói lười biếng, thiếu tinh thần độc lập.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Phối"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "PHU_THE"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_8",
+          "condition_text": "Cung Phúc đức an tại Tí có Lộc Phối",
+          "raw_text": "Người phối ngẫu thông minh, tài cán, có sở trường chuyên môn, rất có duyên với người chung quanh, có thể làm việc độc lập, sự nghiệp ổn định, trợ lực nhiều cho mệnh tạo, có phúc khí, hôn nhân tốt đẹp, công việc hay sự nghiệp gặp được cơ hội tốt, phát triển thuận lợi.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Phối"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "PHU_THE"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_9",
+          "condition_text": "Cung Phúc đức an tại Tí có Lộc Phối",
+          "raw_text": "Phúc Đức [Lộc nhập] Phu Thê:\n* Đối với người khác giới nhiều cảm tính, tình cảm dịu dàng. Nhưng đề phòng \"đa tình sinh chểnh mảng\", dễ chìm đắm vào hương tình ôn nhu.\n* Đề phòng đa tình mà dễ \"đứng núi này trông núi nọ\" kiểu lý trí bị che mờ, sinh ra ngoại tình.\n* Lộc chiếu Quan Lộc, kiếm tiền dễ dàng. Bất kể là làm việc gì hoặc cách kiếm tiền, ứng với phần lớn đối tượng khác giới là khách hàng thì sẽ rất tốt.\n* Gặp các sao Thiên Tài, dễ có khoản tiền tài ngoài dự kiến hoặc trúng thưởng.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Phối"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "PHU_THE"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_10",
+          "condition_text": "Cung Phúc đức an tại Tí có Quyền Mệnh",
+          "raw_text": "Phúc đức Hóa Quyền nhập mệnh, nhân cách đoan trang.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_11",
+          "condition_text": "Cung Phúc đức an tại Tí có Quyền Mệnh",
+          "raw_text": "Phúc đức cung Hóa Quyền nhập mệnh cung.\n(mệnh là tâm, tật ách là thân, phúc đức là linh).\nMệnh cung là vô hình, là tâm chủ tư duy của mệnh tạo, tinh thần, phản ứng tính cảm vị.\nPhúc đức Hóa Quyền nhập một cung, biểu thị tinh thần ý chí của mệnh tạo thể hiện tại cung vị đó và mệnh tạo tích cực quản lý khống chế nhân - sự - vật tại đó. Nếu có kỹ năng chuyên nghiệp tất dễ có thu nhập tốt, lại thêm biện tài tinh hóa quyền tất dễ có thu nhập cao.\nCho nên mệnh tạo sẽ thể hiện ý chí mạnh mẽ, tích cực không chịu thua kém với sự tự tin, chủ kiến, chủ quan. (phúc đức Hóa Quyền nhập mệnh).",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_12",
+          "condition_text": "Cung Phúc đức an tại Tí có Quyền Mệnh",
+          "raw_text": "Từ Phúc Đức hóa Quyền đến Mệnh cung, chiếu Thiên Di cung\n1. Mệnh chủ được gia tộc che chở, được trưởng bối hun đúc vun đắp, nâng đỡ, trở thành người có chuyên môn và tài năng xuất chúng.\n2. Mệnh chủ được trưởng bối khẳng định, coi trọng, ủy quyền và có thể kế thừa tổ nghiệp và tiếp tục phát triển.\n3. Mệnh chủ thông minh xuất chúng, học hành thi cử có lợi, là người học tập tinh chuyên.\n4. Mạnh mẽ nổi bật, độc đoán, hay thay đổi, dễ chiêu rước sự đố kỵ.\n5. Hưởng thụ tốt, thích so sánh, kén chọn, chơi trội phô trương, xa hoa.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_13",
+          "condition_text": "Cung Phúc đức an tại Tí có Quyền Mệnh",
+          "raw_text": "Nặng ý thức về cái tôi, rất chủ quan, không chịu nghe lời khuyên chân thành, ưa ra oai, thích nắm quyền. Có thể được hưởng phước ấm của tổ tiên. Người phối ngẫu bận rộn làm ăn, lao tâm lao lực nhưng có thành tựu.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_14",
+          "condition_text": "Cung Phúc đức an tại Tí có Quyền Mệnh",
+          "raw_text": "福德权入命:\n1. 「积极」、「有福」、「意志力强」, 得尝宿愿。\n2. 讲实务, 「企图」、「斗志」与「不服输」。\n3. 拥「专业」、「专技」更佳。有拓展空间。\n4. 防过于重视「物质生活」。\nPhúc đức Hóa quyền nhập cung mệnh:\n1. Tích cực, có phúc, ý chí mạnh mẽ, và đạt được những nguyện vọng lâu dài.\n2. Chú trọng thực tế, có tham vọng, tinh thần chiến đấu, và không chịu khuất phục.\n3. Nếu có chuyên môn hoặc kỹ năng chuyên sâu sẽ càng tốt. Có nhiều cơ hội để phát triển.\n4. Cần đề phòng việc quá coi trọng đời sống vật chất.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_15",
+          "condition_text": "Cung Phúc đức an tại Tí có Quyền Mệnh",
+          "raw_text": "福德权入命: \n1. 「积极」、「有福」、「意志力强」, 得尝宿愿。\n2. 讲实务, 「企图」、「斗志」与「不服输」。\n3. 拥「专业」、「专技」更佳。有拓展空间。\n4. 防过于重视「物质生活」。\nPhúc đức Hóa quyền nhập cung mệnh: \n1. Tích cực, có phúc, ý chí mạnh, hoàn hành ý nguyện. \n2. Thành thực, ý đồ, đấu chí cùng không khuất phục. \n3. Chuyên nghiệp chuyên kỹ có khả năng cao, có cơ hội phát triển. \n4. Phòng quá mức coi trọng vật chất.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "MENH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_16",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự Khoa",
+          "raw_text": "Phúc Đức tự hóa Khoa, là người có tu dưỡng, mọi việc theo lý mà làm, không cực đoan.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Khoa"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Cửu cửu bí nghi - Lý Đạt Uy",
+            "author": "Lý Đạt Uy",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_17",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự Khoa",
+          "raw_text": "Phúc cung tự hoá Khoa: người đó đa sầu đa cảm, thiếu quyết đoán.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Khoa"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+            "author": "Alex Alpha",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_18",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự Khoa",
+          "raw_text": "Phúc đức cung tự Hóa Khoa xuất.\nPhúc đức chủ tinh thần, linh tính cung vị. Nên thường thể hiện tinh thần bình ổn, thanh đạm yên tĩnh, không thích hư vinh. Tâm tính bình hòa. Phúc đức là phúc của tiên thiên, đức của hậu thiên, nên gặp sự cấp bách thường có quí nhân trợ giúp. Phúc đức cũng là tính cách cung vị, tự Hóa khoa thường do dự thiếu quyết đoán.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Khoa"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_19",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự Khoa",
+          "raw_text": "Phúc đức Tự Hóa Khoa, thích làm việc thiện bố thí, chính trực, có phong độ, không tham tài lộc bất nghĩa.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Khoa"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_20",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự Khoa",
+          "raw_text": "Từ Phúc Đức hóa Khoa đến Phúc Đức cung, chiếu Tài Bạch cung\n1. Cô độc, trời sinh kiêu ngạo, không cúi đầu, không nhờ vả.\n2. chủ nghĩa hoàn mỹ, chủ nghĩa duy tâm, say sưa trong cõi hư ảo viển vông mà không thể nhận ra hiện thực.\n3. Suy nghĩ quá mức, đòi hỏi quá nhiều, thiếu quyết đoán, do dự, bất định rối ren hỗn loạn, không thể cưỡng lại sự cám dỗ, không làm chủ được chính mình.\n4. Quá quan tâm đến hình tượng, tự cao tự đại, nặng vẻ ngoài, quan tâm đến sự đánh giá của người khác nhưng không an nhàn. Có thể xu nịnh tâng bốc.\n5. Dễ xúc động, thần kinh chất, chìm đắm trong những cảm xúc tiêu cực của tình yêu và những âm mưu của nhân vật phụ diện, lo sợ không đâu, ăn năn hối hận.\n6. Tình chấp, tình si, theo đuổi tình cảm tinh thuần, theo đuổi sự hoàn hảo không bao giờ có thể tồn tại, cầu bất đắc khổ.\n7. Khí hư, khí không đủ, dễ mắc các bệnh mãn tính, cảm xúc hóa, nội tiết, tình cảm và tinh thần suy nhược, cuồng loạn, hão huyền.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Khoa"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_21",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự Khoa",
+          "raw_text": "Là người có tu dưỡng tính tình, hành sự sáng suốt, có lí lẽ, không cực đoan, có phong độ, rộng lượng, có thể tự lập, có thiện tâm, thích giúp người khác, có kế hoạch kiếm tiền rõ ràng, nguồn tiền bình ổn, ít sóng gió. Tâm trạng ổn định, thái độ nhã nhặn, có thị hiếu lành mạnh. Người phối ngẫu làm việc có phong độ, dễ được quý nhân trợ giúp, dễ có thanh danh. Quan hệ hôn nhân bề ngoài có vẻ bình ổn, nhưng thực ra không êm ấm. (Xin xem thêm mục liên quan trong chương 6).",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Khoa"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_22",
+          "condition_text": "Cung Phúc đức an tại Tí có Tự Khoa",
+          "raw_text": "Phúc Đức cung Tự hóa Khoa:\n* Tuy điềm đạm thanh thản, cần đề phòng \"do dự đa cảm\".",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tự Khoa"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_23",
+          "condition_text": "Cung Phúc đức an tại Tí có Kỵ Điền",
+          "raw_text": "Phúc đức Hóa Kị nhập điền trạch: Mệnh tạo rất quan tâm gia đình (điền trạch) của mệnh tạo và phải vì gia đình của mệnh tạo mà gánh vác. Là một loại cố chấp của phi lý tính, dễ tạo thành áp lực cho người trong gia đình, dễ có tính phi lý trong chăm sóc gia đình. Cá tính rất bảo thủ, ít tham gia hoạt động xã hội, tâm cơ sâu sắc, đặc biệt là Thiên cơ Hóa Kị.\nVũ khúc 1 Kị - thích tiền, 2 Kị tất keo kiệt.\nThái âm 1 Kị - thích sạch sẽ ngăn nắp, 2 Kị tất quá sạch sẽ thanh khiết (thái quá).\nVăn khúc 2 Kị - thường lắm điều.\nThiên cơ 2 Kị - chăm chỉ cần cù quan tâm quá mức cần thiết, không thích đáng.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_24",
+          "condition_text": "Cung Phúc đức an tại Tí có Kỵ Điền",
+          "raw_text": "Phúc đức cung Hóa Kị nhập điền trạch.\nĐiền trạch chủ gia đình, tài sản, hoàn cảnh cuộc sống.\n1. Phúc đức cung Hóa Kị nhập điền trạch, Ta thường chăm chú để ý và tự nguyện vì điền trạch cống hiến hy sinh. Biểu thị là người tích cực chăm lo gia đình.\nThường là con trưởng, luôn vì gia đình lo lắng, dễ có thiên lệch trong việc chăm lo gia đình hoặc có cá tính chỉ biết nhà mình.\nĐiền trạch tọa niên Kị, trách nhiệm chăm lo gia đình là của Ta, thường là con trưởng, phải cống hiến hy sinh cho gia đình.\n2. Phúc đức là phúc của tiên thiên, Hóa Kị nhập điền trạch, kinh tế gia đình khó khăn, kém duyên với gia đình.\n3. Hoàn cảnh cuộc sống không tốt, cần cải thiện ánh sáng, không khí.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_25",
+          "condition_text": "Cung Phúc đức an tại Tí có Kỵ Điền",
+          "raw_text": "Từ Phúc Đức hóa Kị đến Điền Trạch cung, xung Tử Nữ cung\n1. Tổ tiên che chở và có được bất động sản.\n2. Trong mệnh có tài khố.\n3. Mệnh chủ rất coi trọng gia đình, nhưng giao thiệp với người nhà kém, có sự hiểu lầm về khoảng cách thế hệ.\n4. Con trẻ thân thể kém dễ ốm yếu.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_26",
+          "condition_text": "Cung Phúc đức an tại Tí có Kỵ Điền",
+          "raw_text": "Bụng dạ hẹp hòi, là người hay so đo tính toán. Gia vận không thuận lợi, trong nhà khó hòa hợp, dễ xảy ra tình trạng tranh giành gia sản, tiền bạc không thuận lợi, khó kiếm tiền, ít có phước để hưởng.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_27",
+          "condition_text": "Cung Phúc đức an tại Tí có Kỵ Điền",
+          "raw_text": "福德忌入田宅:\n1. 「偏执」的叮咛、唠叨。\n2. 防个性「自私自利」、「狭隘孤僻」。\n3. 格局差, 长久难戒的「不良嗜好」、玩物丧志的「恶习」、特殊「癖性」。\n4. 「祖德无芳」、「家宅欠宁」。\n5. 防「亲疏朋离」、「为富不仁」, 老运「孤独」。\n6. 最宜修习「慈爱」、「智慧」、「哲理」。\nPhúc đức Hóa kỵ nhập cung điền trạch:\n1. \"Cố chấp\" dặn dò, cằn nhằn.\n2. Phòng tính cách \"ích kỷ\", \"hẹp hòi cô lập\".\n3. Cục diện kém, thói quen xấu khó bỏ lâu dài, \"sa đà thú vui mất chí\", \"tật xấu\" đặc biệt.\n4. \"Tổ đức không thơm\", \"nhà cửa không yên\".\n5. Phòng \"xa cách bạn bè\", \"giàu mà không nhân\", vận già \"cô độc\".\n6. Nên tu tập \"từ ái\", \"trí tuệ\", \"triết lý\".",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_28",
+          "condition_text": "Cung Phúc đức an tại Tí có Kỵ Điền",
+          "raw_text": "福德忌入田宅: \n1. 「偏执」的叮咛、唠叨。\n2. 防个性「自私自利」、「狭隘孤僻」。\n3. 格局差, 长久难戒的「不良嗜好」、玩物丧志的「恶习」、特殊「癖性」。\n4. 「祖德无芳」、「家宅欠宁」。\n5. 防「亲疏朋离」、「为富不仁」, 老运「孤独」。\n6. 最宜修习「慈爱」、「智慧」、「哲理」。\nPhúc đức Hóa kỵ nhập cung điền trạch: \n1. Khăng khăng nói đi nói lại, lải nhải. \n2. Phòng cá tính tư lợi, nhỏ mọn. \n3. Cách cục xấu lâu dài sinh bất lương, tính cách chơi bời thành thói quen, nghiện. \n4. Tổ đức vô phương, trạch gia khiếm trữ. \n5. Phòng thân sơ rời xa, làm giàu bất nhân, về già cô độc. \n6. Tốt nhất nên tập từ bi, trí tuệ, triết lý học tập.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc-duc_cohoc_29",
+          "condition_text": "Cung Phúc đức an tại Tí có M Điền",
+          "raw_text": "Bất động sản có từ tổ tiên. Ngôi nhà yêu thích sẽ kiếm được tiền.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Điền"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phuc-duc_cohoc_30",
+          "condition_text": "Cung Phúc đức an tại Tí có M Mệnh",
+          "raw_text": "Mệnh cách của phúc báo tổ tiên. Mệnh cách theo đuổi ước mơ.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Mệnh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Mệnh"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phuc-duc_cohoc_31",
+          "condition_text": "Cung Phúc đức an tại Tí có M Phối",
+          "raw_text": "Đối tượng lựa chọn rất cố chấp. Sau kết hôn được phúc báo tiên thiên.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Phối"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Phối"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phuc-duc_cohoc_32",
+          "condition_text": "Cung Phúc đức an tại Tí có Vũ khúc",
+          "raw_text": "Vũ Khúc ở cung mệnh, Phá Quân ở cung thân hoặc Vũ Khúc ở mệnh thân đồng cung, phần lớn đều rời xa quê hương, là người lập thân bằng tay nghề giỏi, suốt đời nhiều thành bại, nhiều vất vả, khó được đắc ý.\nVũ Khúc luận về tiền bạc, thích hội hợp Tham Lang, nhất là ở can Kỷ, vận Kỷ, Lộc Quyền cùng vào bản cung, là chủ về \"thiên tài\" (tức tiền thu nhập không thương xuyên), hoạnh phát; gặp Lộc Tồn, Thiên Mã cũng tốt, nhưng phải kiếm tiền ở phương xa.\nVũ Khúc là một sao kiêm cả động lẫn tĩnh; vì khi có tâm tình tốt thì nó có thể bất động, còn lúc tâm tình không được tốt, thì cô độc không vui, nên gọi nó là \"sao quả tú\".",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Vũ khúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Hà lạc phái - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_33",
+          "condition_text": "Cung Phúc đức an tại Tí có Tả phù",
+          "raw_text": "Đứng một mình ở cung phúc đức là chủ về hậu vận mới được cát vượng, yên hướng tuổi già.\nHội hợp nhiều cát tinh là chủ về được hưởng phúc thọ song toàn, trong đời gặp toàn chuyện may mắn, xa quê hương được tài lộc.\nNếu hội hợp với Kình Dương Đà La Hỏa Linh Không Kiếp là chủ về phải cần cù, vất vả mưu sinh độ nhật.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tả phù"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_34",
+          "condition_text": "Cung Phúc đức an tại Tí có Thiên phủ",
+          "raw_text": "Chủ về an tĩnh hưởng phúc. Đứng một mình ở đất Tý hay đất Hợi là chủ về phúc thọ song toàn, họ tộc đều làm ăn cát vượng, có nhiều người tài giỏi.\nĐứng một mình ở các đất Sửu, Mùi, Mão, Dậu là chủ về phúc lộc kém, nếu tha hương lập nghiệp sẽ được yên thân đủ sống.\nĐồng cung với Tử vi là chủ về được hưởng đủ phúc lộc thọ, lúc nào cũng nhàn hạ, không lo lắng, dòng tộc đều phú quý, hiển đạt.\nĐồng cung với Vũ Khúc là chủ về được hưởng phúc trời ban, giàu có cho đến hết đời, họ tộc đa số cũng khá giả.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên phủ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_35",
+          "condition_text": "Cung Phúc đức an tại Tí có Vũ khúc",
+          "raw_text": "Đứng một mình ở miếu địa là chủ về an hưởng phúc thọ, càng về hậu vận càng cát vượng, trong họ tộc có người giàu có, hiển đạt về võ nghiệp.\nĐồng cung với Phá Quân là chủ về suốt đời long đong, sớm rời quê hương và chuyên chú vào một nghề mới có thể an hưởng tuổi già.\nĐồng cung với Thất Sát là chủ về phải tha phương cầu thực, suốt đời lao tâm khố trí mà chẳng mấy lúc được yên thân, họ tộc nghèo hèn, li tán, có người bị ác tật, chết yểu.\nĐồng cung với Tham Lang là chủ về hậu vận mới được phúc lộc, nếu gặp Linh Hỏa là chủ về giàu sang và sống thọ.\nĐồng cung với Thiên Phủ là chủ về giàu có cho đến già, họ tộc trong ngoài đều làm ăn thịnh vượng, khá giả.\nĐồng cung với Thiên  Tướng  là chủ về phúc thọ song toàn, cục đời luôn gặp may mắn, họ tộc cũng giàu sang và có nhiều người quý hiển.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Vũ khúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_36",
+          "condition_text": "Cung Phúc đức an tại Tí có Tả phù",
+          "raw_text": "Tả Phù: hội cát tinh thì có cả phúc lộc, độc thủ thì về già mới yên ổn, thọ trên 80 tuổi, thêm Tứ sát Không Kiếp thì phúc lộc thọ đều giảm.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Tả phù"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_37",
+          "condition_text": "Cung Phúc đức an tại Tí có Thiên phủ",
+          "raw_text": "Là người cẩn thận, bình tĩnh, hưởng phúc, Miếu vượng địa thì phúc lộc đều tốt, tài vận tốt, cung này và cung mệnh đều tốt, cả đời bình an, thọ trên 85 tuổi, bình hòa thì trước khó sau dễ. Nếu hãm địa lại hội sát tinh thì gian khó.\nĐà La thủ chiếu, keo kiệt, thích tự chuốc phiền não. Hội Hỏa Linh, thường ưu sầu vì nhiều chuyện không đáng có. Kình Dương, Thiên Hình thủ chiếu, trong lòng phiền muộn bất an, thường cảm thấy tinh thần bị uy hiếp. Không Kiếp, Đại Hao thủ chiếu, không có chuyện gì được nhàn tản.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên phủ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_38",
+          "condition_text": "Cung Phúc đức an tại Tí có Vũ khúc",
+          "raw_text": "Lao tâm lao lực, nóng vội cố chấp, không biết cách hưởng thụ. Miếu vượng địa thì an nhàn vui vẻ hưởng phúc, thọ trên 60 tuổi, hội thêm các sao tốt thì tuổi thọ tăng, có khả năng kiếm tiền. Bình hòa thì trước khó sau dễ. Hãm địa hoặc thêm Tứ sát, tinh thần hư không, bản thân có kỹ nghệ, phúc bạc, vất vả khó khăn. Thêm các sao Đào Hoa, chủ về niềm vui thú rượu chè, sắc đẹp. Vũ Khúc, Hóa Kỵ, hao tổn tâm sức. Hội Liêm Trinh Hóa Kỵ, chủ tự ti, sống nặng về tình cảm.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Vũ khúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_39",
+          "condition_text": "Cung Phúc đức an tại Tí có Vũ khúc,Thiên phủ",
+          "raw_text": "Vũ Khúc Thiên Phủ cư Tí Ngọ, khi trẻ gặp khó khăn, trung niên trở ra thì an nhàn vui vẻ hưởng phúc. Vũ Khúc Tham Lang cư sửu mùi, đa tình, hay có niềm vui rượu chè sắc đẹp, ban đầu khó khăn về già được an nhàn. Nếu gặp nhiều sát tinh thì một đời gian khổ. Thêm Hỏa Tinh thì được hưởng vui vẻ khoái lạc.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Vũ khúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phuc-duc_cohoc_40",
+          "condition_text": "Cung Phúc đức an tại Tí có Thiên phủ",
+          "raw_text": "Thiên Phủ nhập Phúc chủ xử thế rất ôn hòa, là mệnh hưởng phúc. Tử Vi đồng cung chủ cuộc đời rất vui vẻ. Phùng tứ sát, Không, Kiếp, Hóa Kỵ thì lao tâm lực rất nhiều.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên phủ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "phuc-duc_cohoc_41",
+          "condition_text": "Cung Phúc đức an tại Tí có Vũ khúc",
+          "raw_text": "Vũ Khúc nhập Phúc Đức cung chủ nhiều kế hoạch, lao tâm lao lực nhiều. Phá Quân đồng cung, chủ bôn ba, không yên bình. Thiên Tướng đồng cung thì tuổi già được hưởng phúc. Thất Sát đồng cung thì cuộc đời lao tâm lao lực. Tham Lang đồng cung vãn niên được hưởng phúc, Dương Đà đồng cung thì lại thêm lao lực.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Vũ khúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "phuc-duc_cohoc_42",
+          "condition_text": "Cung Phúc đức an tại Tí có Cung Phúc đức",
+          "raw_text": "Đối với cung Phúc Đức trong Tử Vi Đẩu số, nếu ta chỉ dựa vào ý nghĩa tinh diệu thôi thì việc giải đoán cũng đã rất thú vị rồi. Từ tinh diệu ta có thể biết được người này có lao tâm, lao lực hay không? Người kia có được hưởng phúc hay không? Người đó thanh nhàn, lạc quan, vui vẻ hay không? Hay cũng có thể biết được người nào lười biếng, người nào chăm chỉ, cần mẫn... Việc phối hợp thêm Cung Khí chỉ là để biết thêm Mệnh tạo được hưởng phúc có nhiều hay không mà thôi. Đối với thực tiễn xã hội ngày nay mà nói, tôi thấy không có nhiều lợi ích cho lắm. Vì thế, trong giới hạn của cuốn sách này, tôi sẽ chỉ trình bày ý nghĩa Tinh Diệu trong cung Phúc Đức.",
+          "conditions": {
+            "palace": "PHUC_DUC",
+            "position": "TY",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung Phúc đức"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        }
+      ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "phuc_duc_crawl_50_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Cung Phúc Đức là cung mang khái niệm trừu tượng nhất, cũng là một trong những cung quan trọng bậc nhất trên lá số, vì ảnh hưởng của Phúc Đức có thể chi phối tới hầu hết các cung chức còn lại như chúng ta đã biết trong quá trình luận đoán các cung chức vừa qua.",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_51_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Vai trò quan trọng của cung Phúc Đức khi luận đoán số Tử Vi cũng được cổ nhân đúc kết trong lời các bài phú như:",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_52_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Đệ nhất tiên khán phúc đức, tái tam tế khảo thiên di,",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_53_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "(Đầu tiên xem cung Phúc Đức, sau đó xét kỹ cung Thiên Di)",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_54_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Tiên quan Phúc Đức, vi tinh thần phúc ấm sở tại",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
+    }
+  ],
+  "last_updated": "2026-09-23T02:33:10.336Z"
+}

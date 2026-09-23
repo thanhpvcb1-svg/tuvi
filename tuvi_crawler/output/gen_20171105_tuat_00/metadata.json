@@ -1,0 +1,21 @@
+{
+  "lid": "gen_20171105_tuat_00",
+  "url": "https://tuvi.cohoc.net/lap-la-so-tu-vi.html",
+  "crawledAt": "2026-09-22T15:58:41.703Z",
+  "birth": {
+    "year": 2017,
+    "month": 11,
+    "day": 5,
+    "hour": "Tuất",
+    "gender": "Nữ",
+    "calendar": "Âm"
+  },
+  "info": {
+    "title": "Lập Lá Số Tử Vi Việt Nam",
+    "hasCung": true,
+    "hasStars": true,
+    "hasInterpretation": true,
+    "interpretationCount": 0,
+    "cungCount": 6
+  }
+}

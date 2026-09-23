@@ -1,0 +1,35 @@
+
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"https://tuvi.cohoc.net/bac-phai-la-so-tu-vi-nam-mau-dan-thang-9-ngay-7-gio-ti-duong-nam-lid-472159.html"
+      },
+      "headline": "Bắc phái Lá số tử vi DƯƠNG NAM sinh năm MẬU DẦN giờ TÍ ngày 7 tháng 9 Âm Lịch",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tuvi.cohoc.net/image/facebook-4.jpg",
+        "height": 272,
+        "width": 460
+      },
+      "datePublished": "2016-03-04T08:00:00+08:00",
+      "dateModified": "2016-03-04T013:20:00+08:00",
+      "author": {
+        "@type": "Person",
+        "url": "https://www.facebook.com/tuvi.cohoc.net",
+        "name": "Lục Quang Mạnh"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "Tử Vi Cổ Học",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tuvi.cohoc.net/image/logo.jpg",
+          "width": 207,
+          "height": 200
+        }
+      },
+      "description": "Bắc phái Lá số tử vi DƯƠNG NAM sinh năm MẬU DẦN (THÀNH ÐẦU THỔ) giờ TÍ ngày 7 tháng 9 Âm Lịch. Cung Mệnh, Thân đồng cung an tại Tuất có sao PHÁ QUÂN đơn thủ."
+    }
+    

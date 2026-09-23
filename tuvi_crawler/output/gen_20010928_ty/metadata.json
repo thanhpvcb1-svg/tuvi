@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20010928_ty",
+  "birth": {
+    "year": 2001,
+    "month": 9,
+    "day": 28,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:09:49.643Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

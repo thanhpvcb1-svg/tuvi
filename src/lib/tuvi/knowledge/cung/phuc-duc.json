@@ -1,0 +1,137 @@
+{
+  "palace": "phuc_duc",
+  "sections": [
+    {
+      "section_id": "can_cung",
+      "title": "Thiên Can Cung Phúc Đức",
+      "interpretations": [
+        {
+          "id": "phuc_can_giap",
+          "type": "heavenly_stem",
+          "conditions": {
+            "heavenly_stem": "giap"
+          },
+          "text": "Can Giáp thuộc Thiên chi Thiên, là người không hay che chở cho người khác và cũng không cần ai che chở cho mình.",
+          "source": {
+            "book": "Đẩu số chính nhãn",
+            "author": "Ông Phúc Dụ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "phi_tu_hoa",
+      "title": "Phi Tứ Hóa Từ Cung Phúc Đức",
+      "interpretations": [
+        {
+          "id": "phuc_loc_nhap_phoi",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "loc",
+            "source_palace": "phuc_duc",
+            "target_palace": "phu_the"
+          },
+          "text": "Phúc đức Hóa Lộc nhập phu thê: Ta và phối ngẫu duyên tình nồng hậu, tâm đầu ý hợp, nhanh nhẹn sắc sảo, là mối thiện duyên. Thường có nhiều bạn khác giới, nếu là Tham lang, Liêm trinh Hóa Lộc tất đa tình lãng mạn, đào hoa vượng. Phúc phận tài hậu trợ sự nghiệp, sau kết hôn sự nghiệp thuận lợi.",
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+            "author": "Huy Hà Phan"
+          }
+        },
+        {
+          "id": "phuc_quyen_nhap_menh",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "quyen",
+            "source_palace": "phuc_duc",
+            "target_palace": "menh"
+          },
+          "text": "Phúc đức Hóa Quyền nhập mệnh: Tích cực, có phúc, ý chí mạnh mẽ, và đạt được những nguyện vọng lâu dài. Chú trọng thực tế, có tham vọng, tinh thần chiến đấu, và không chịu khuất phục. Nếu có chuyên môn hoặc kỹ năng chuyên sâu sẽ càng tốt. Có nhiều cơ hội để phát triển. Cần đề phòng việc quá coi trọng đời sống vật chất.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "phuc_tu_khoa",
+          "type": "tu_hoa",
+          "conditions": {
+            "self_transformation": "khoa"
+          },
+          "text": "Phúc đức Tự Hóa Khoa: Là người có tu dưỡng, mọi việc theo lý mà làm, không cực đoan. Thích làm việc thiện bố thí, chính trực, có phong độ, không tham tài lộc bất nghĩa. Tuy điềm đạm thanh thản, cần đề phòng do dự đa cảm.",
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản",
+            "author": "Huy Hà Phan"
+          }
+        },
+        {
+          "id": "phuc_ky_nhap_dien",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "ky",
+            "source_palace": "phuc_duc",
+            "target_palace": "dien_trach"
+          },
+          "text": "Phúc đức Hóa Kị nhập điền trạch: Cố chấp dặn dò, cằn nhằn. Phòng tính cách ích kỷ, hẹp hòi cô lập. Cục diện kém, thói quen xấu khó bỏ lâu dài, sa đà thú vui mất chí. Tổ đức không thơm, nhà cửa không yên. Phòng xa cách bạn bè, giàu mà không nhân, vận già cô độc. Nên tu tập từ ái, trí tuệ, triết lý.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "chinh_tinh",
+      "title": "Chính Tinh Tại Phúc Đức",
+      "interpretations": [
+        {
+          "id": "phuc_vu_khuc",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["vu_khuc"]
+          },
+          "text": "Vũ Khúc nhập Phúc Đức cung chủ nhiều kế hoạch, lao tâm lao lực nhiều. Phá Quân đồng cung, chủ bôn ba, không yên bình. Thiên Tướng đồng cung thì tuổi già được hưởng phúc. Thất Sát đồng cung thì cuộc đời lao tâm lao lực. Tham Lang đồng cung vãn niên được hưởng phúc.",
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn",
+            "author": "Sở Hoàng"
+          }
+        },
+        {
+          "id": "phuc_thien_phu",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["thien_phu"]
+          },
+          "text": "Thiên Phủ nhập Phúc chủ xử thế rất ôn hòa, là mệnh hưởng phúc. Tử Vi đồng cung chủ cuộc đời rất vui vẻ. Phùng tứ sát, Không, Kiếp, Hóa Kỵ thì lao tâm lực rất nhiều.",
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn",
+            "author": "Sở Hoàng"
+          }
+        },
+        {
+          "id": "phuc_vu_khuc_thien_phu",
+          "type": "star_combination",
+          "conditions": {
+            "same_palace_stars": ["vu_khuc", "thien_phu"]
+          },
+          "text": "Vũ Khúc Thiên Phủ cư Tí Ngọ, khi trẻ gặp khó khăn, trung niên trở ra thì an nhàn vui vẻ hưởng phúc.",
+          "source": {
+            "book": "Đẩu số cung vị",
+            "author": "Trần Bỉnh Húc"
+          }
+        },
+        {
+          "id": "phuc_ta_phu",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["ta_phu"]
+          },
+          "text": "Đứng một mình ở cung phúc đức là chủ về hậu vận mới được cát vượng, yên hưởng tuổi già. Hội hợp nhiều cát tinh là chủ về được hưởng phúc thọ song toàn, trong đời gặp toàn chuyện may mắn, xa quê hương được tài lộc.",
+          "source": {
+            "book": "Phi tinh Trần Đoàn",
+            "author": "Hồng Khánh"
+          }
+        }
+      ]
+    }
+  ]
+}

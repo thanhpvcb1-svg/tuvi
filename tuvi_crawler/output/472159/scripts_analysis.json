@@ -1,0 +1,46 @@
+{
+  "scripts": [
+    {
+      "index": 0,
+      "src": "https://www.googletagmanager.com/gtag/js?id=UA-74756221-1",
+      "hasInline": false
+    },
+    {
+      "index": 1,
+      "hasInline": true
+    },
+    {
+      "index": 2,
+      "src": "js/fn.js?version=20240220",
+      "hasInline": false
+    },
+    {
+      "index": 3,
+      "src": "js/jquery.min.js?version=20240220",
+      "hasInline": false
+    },
+    {
+      "index": 4,
+      "hasInline": true
+    },
+    {
+      "index": 5,
+      "hasInline": true
+    },
+    {
+      "index": 6,
+      "hasInline": true
+    },
+    {
+      "index": 7,
+      "hasInline": true
+    },
+    {
+      "index": 8,
+      "hasInline": true
+    }
+  ],
+  "apiCandidates": [
+    "https://www.google.com/ccm/geo"
+  ]
+}

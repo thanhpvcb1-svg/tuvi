@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19561205_suu",
+  "birth": {
+    "year": 1956,
+    "month": 12,
+    "day": 5,
+    "hour": "suu",
+    "hourName": "Sửu",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:19:11.112Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

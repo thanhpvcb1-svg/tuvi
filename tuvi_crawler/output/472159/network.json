@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://www.googletagmanager.com/gtag/js?id=UA-74756221-1",
+    "status": 200,
+    "type": "script",
+    "size": 381805
+  },
+  {
+    "url": "https://tuvi.cohoc.net/js/fn.js?version=20240220",
+    "status": 200,
+    "type": "script",
+    "size": 1297
+  },
+  {
+    "url": "https://tuvi.cohoc.net/js/jquery.min.js?version=20240220",
+    "status": 200,
+    "type": "script",
+    "size": 86709
+  },
+  {
+    "url": "https://tuvi.cohoc.net/Core.html?lid=472159",
+    "status": 200,
+    "type": "api-probe",
+    "contentType": "",
+    "size": 0
+  }
+]

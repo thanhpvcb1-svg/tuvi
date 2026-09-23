@@ -1,0 +1,1348 @@
+[
+  {
+    "id": "tu_vi",
+    "name_vi": "Tử Vi",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "tho",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "thien_co",
+    "name_vi": "Thiên Cơ",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "moc",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 9
+  },
+  {
+    "id": "thai_duong",
+    "name_vi": "Thái Dương",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "hoa",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "vu_khuc",
+    "name_vi": "Vũ Khúc",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "kim",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "thien_dong",
+    "name_vi": "Thiên Đồng",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "thuy",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "liem_trinh",
+    "name_vi": "Liêm Trinh",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "hoa",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "thien_phu",
+    "name_vi": "Thiên Phủ",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "tho",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "thai_am",
+    "name_vi": "Thái Âm",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "thuy",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "tham_lang",
+    "name_vi": "Tham Lang",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "moc",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "cu_mon",
+    "name_vi": "Cự Môn",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "thuy",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "thien_tuong",
+    "name_vi": "Thiên Tướng",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "thuy",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "thien_luong",
+    "name_vi": "Thiên Lương",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "tho",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "that_sat",
+    "name_vi": "Thất Sát",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "kim",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "pha_quan",
+    "name_vi": "Phá Quân",
+    "category": "main_star",
+    "groups": [
+      "main_star"
+    ],
+    "element": "thuy",
+    "nature": "neutral",
+    "display_column": "center",
+    "has_brightness": true,
+    "priority": 10
+  },
+  {
+    "id": "ta_phu",
+    "name_vi": "Tả Phụ",
+    "aliases": ["Tả Phù"],
+    "category": "phu_dieu",
+    "groups": [
+      "luc_cat"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 30
+  },
+  {
+    "id": "huu_bat",
+    "name_vi": "Hữu Bật",
+    "category": "phu_dieu",
+    "groups": [
+      "luc_cat"
+    ],
+    "element": "thuy",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 30
+  },
+  {
+    "id": "van_xuong",
+    "name_vi": "Văn Xương",
+    "category": "ta_dieu",
+    "groups": [
+      "luc_cat",
+      "van_tinh"
+    ],
+    "element": "kim",
+    "nature": "van_tinh",
+    "display_column": "left",
+    "has_brightness": true,
+    "priority": 32
+  },
+  {
+    "id": "van_khuc",
+    "name_vi": "Văn Khúc",
+    "category": "ta_dieu",
+    "groups": [
+      "luc_cat",
+      "van_tinh"
+    ],
+    "element": "thuy",
+    "nature": "van_tinh",
+    "display_column": "left",
+    "has_brightness": true,
+    "priority": 32
+  },
+  {
+    "id": "thien_khoi",
+    "name_vi": "Thiên Khôi",
+    "category": "phu_dieu",
+    "groups": [
+      "quy_nhan"
+    ],
+    "element": "hoa",
+    "nature": "quy_nhan",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 34
+  },
+  {
+    "id": "thien_viet",
+    "name_vi": "Thiên Việt",
+    "category": "phu_dieu",
+    "groups": [
+      "quy_nhan"
+    ],
+    "element": "hoa",
+    "nature": "quy_nhan",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 34
+  },
+  {
+    "id": "loc_ton",
+    "name_vi": "Lộc Tồn",
+    "category": "ta_dieu",
+    "groups": [
+      "loc_tinh"
+    ],
+    "element": "tho",
+    "nature": "loc",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 36
+  },
+  {
+    "id": "hoa_loc",
+    "name_vi": "Hóa Lộc",
+    "category": "hoa_dieu",
+    "groups": [
+      "tu_hoa"
+    ],
+    "element": null,
+    "nature": "hoa_tot",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 20,
+    "color_override": "#16a34a"
+  },
+  {
+    "id": "hoa_quyen",
+    "name_vi": "Hóa Quyền",
+    "category": "hoa_dieu",
+    "groups": [
+      "tu_hoa"
+    ],
+    "element": null,
+    "nature": "hoa_quyen",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 21,
+    "color_override": "#16a34a"
+  },
+  {
+    "id": "hoa_khoa",
+    "name_vi": "Hóa Khoa",
+    "category": "hoa_dieu",
+    "groups": [
+      "tu_hoa"
+    ],
+    "element": null,
+    "nature": "hoa_tot",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 22,
+    "color_override": "#16a34a"
+  },
+  {
+    "id": "hoa_ky",
+    "name_vi": "Hóa Kỵ",
+    "category": "hoa_dieu",
+    "groups": [
+      "tu_hoa"
+    ],
+    "element": null,
+    "nature": "hoa_ky",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 23,
+    "color_override": "#111827"
+  },
+  {
+    "id": "kinh_duong",
+    "name_vi": "Kình Dương",
+    "category": "sat_dieu",
+    "groups": [
+      "luc_sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 50
+  },
+  {
+    "id": "da_la",
+    "name_vi": "Đà La",
+    "category": "sat_dieu",
+    "groups": [
+      "luc_sat"
+    ],
+    "element": "kim",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 51
+  },
+  {
+    "id": "hoa_tinh",
+    "name_vi": "Hỏa Tinh",
+    "category": "sat_dieu",
+    "groups": [
+      "luc_sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 52
+  },
+  {
+    "id": "linh_tinh",
+    "name_vi": "Linh Tinh",
+    "category": "sat_dieu",
+    "groups": [
+      "luc_sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 53
+  },
+  {
+    "id": "dia_khong",
+    "name_vi": "Địa Không",
+    "category": "sat_dieu",
+    "groups": [
+      "luc_sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 54
+  },
+  {
+    "id": "dia_kiep",
+    "name_vi": "Địa Kiếp",
+    "category": "sat_dieu",
+    "groups": [
+      "luc_sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 55
+  },
+  {
+    "id": "luc_si",
+    "name_vi": "Lực Sĩ",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "hoa",
+    "nature": "neutral",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "long_tri",
+    "name_vi": "Long Trì",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "tam_thai",
+    "name_vi": "Tam Thai",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 11
+  },
+  {
+    "id": "thai_phu",
+    "name_vi": "Thai Phụ",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "kim",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 12
+  },
+  {
+    "id": "dai_phu",
+    "name_vi": "Thai Ph?",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "kim",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 12,
+    "aliases": [
+      "??i Ph?"
+    ]
+  },
+  {
+    "id": "thien_tru",
+    "name_vi": "Thiên Trù",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "ln_van_tinh",
+    "name_vi": "LN Văn Tinh",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh",
+      "van_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "quan_phu",
+    "name_vi": "Quan Phủ",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "tu_phu",
+    "name_vi": "Tử Phù",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "dau_quan",
+    "name_vi": "Đẩu Quân",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 11,
+    "aliases": [
+      "Đầu Quân"
+    ]
+  },
+  {
+    "id": "tau_thu",
+    "name_vi": "Tấu Thư",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "kim",
+    "nature": "van_tinh",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "duong_phu",
+    "name_vi": "Đường Phù",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "hoa_cai",
+    "name_vi": "Hoa Cái",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 11
+  },
+  {
+    "id": "phi_liem",
+    "name_vi": "Phi Liêm",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "tho",
+    "nature": "neutral",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 70
+  },
+  {
+    "id": "bach_ho",
+    "name_vi": "Bạch Hổ",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "kim",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 9
+  },
+  {
+    "id": "dia_vong",
+    "name_vi": "Địa Võng",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "kim",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "am_sat",
+    "name_vi": "Âm Sát",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "thuy",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 61
+  },
+  {
+    "id": "thieu_duong",
+    "name_vi": "Thiếu Dương",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "hoa",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 5
+  },
+  {
+    "id": "thieu_am",
+    "name_vi": "Thiếu Âm",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "thuy",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 5
+  },
+  {
+    "id": "an_quang",
+    "name_vi": "Ân Quang",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 6
+  },
+  {
+    "id": "thien_quan",
+    "name_vi": "Thiên Quan",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 7
+  },
+  {
+    "id": "thien_phuc",
+    "name_vi": "Thiên Phúc",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 8
+  },
+  {
+    "id": "dia_giai",
+    "name_vi": "Địa Giải",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 9
+  },
+  {
+    "id": "dao_hoa",
+    "name_vi": "Đào Hoa",
+    "category": "tap_dieu",
+    "groups": [
+      "dao_hoa"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "ham_tri",
+    "name_vi": "Hàm Trì",
+    "category": "tap_dieu",
+    "groups": [
+      "dao_hoa"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "thien_khong",
+    "name_vi": "Thiên Không",
+    "category": "sat_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 50
+  },
+  {
+    "id": "phuc_binh",
+    "name_vi": "Phục Binh",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "kim",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 10
+  },
+  {
+    "id": "thien_thuong",
+    "name_vi": "Thiên Thương",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "tho",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 11
+  },
+  {
+    "id": "dai_hao",
+    "name_vi": "Đại Hao",
+    "category": "vong_sao",
+    "groups": [
+      "hao_tinh"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 8
+  },
+  {
+    "id": "thai_tue",
+    "name_vi": "Thái Tuế",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 9
+  },
+  {
+    "id": "bac_sy",
+    "name_vi": "Bác Sỹ",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "thuy",
+    "nature": "neutral",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 70
+  },
+  {
+    "id": "thanh_long",
+    "name_vi": "Thanh Long",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 70
+  },
+  {
+    "id": "tieu_hao",
+    "name_vi": "Tiểu Hao",
+    "category": "vong_sao",
+    "groups": [
+      "hao_tinh"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 74
+  },
+  {
+    "id": "tuong_quan",
+    "name_vi": "Tướng Quân",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 72
+  },
+  {
+    "id": "hy_than",
+    "name_vi": "Hỷ Thần",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 70
+  },
+  {
+    "id": "benh_phu",
+    "name_vi": "Bệnh Phù",
+    "category": "vong_sao",
+    "groups": [
+      "bac_si"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 70
+  },
+  {
+    "id": "long_duc",
+    "name_vi": "Long Đức",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 72
+  },
+  {
+    "id": "dieu_khach",
+    "name_vi": "Điếu Khách",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 72
+  },
+  {
+    "id": "thien_ma",
+    "name_vi": "Thiên Mã",
+    "category": "ta_dieu",
+    "groups": [
+      "dong_tinh"
+    ],
+    "element": "hoa",
+    "nature": "neutral",
+    "display_column": "left",
+    "has_brightness": true,
+    "priority": 40
+  },
+  {
+    "id": "bat_toa",
+    "name_vi": "Bát Tọa",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "phuong_cac",
+    "name_vi": "Phượng Các",
+    "aliases": [
+      "Phụng Các"
+    ],
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "thien_hu",
+    "name_vi": "Thiên Hư",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "thuy",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 61
+  },
+  {
+    "id": "nguyet_duc",
+    "name_vi": "Nguyệt Đức",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "thien_hy",
+    "name_vi": "Thiên Hỷ",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "thien_duc",
+    "name_vi": "Thiên Đức",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "thien_tai",
+    "name_vi": "Thiên Tài",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "thien_tho",
+    "name_vi": "Thiên Thọ",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "thien_hinh",
+    "name_vi": "Thiên Hình",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 61
+  },
+  {
+    "id": "co_than",
+    "name_vi": "Cô Thần",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "tho",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 61
+  },
+  {
+    "id": "thien_su",
+    "name_vi": "Thiên Sứ",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "thuy",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 61
+  },
+  {
+    "id": "luu_ha",
+    "name_vi": "Lưu Hà",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "thuy",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 61
+  },
+  {
+    "id": "thien_khoc",
+    "name_vi": "Thiên Khốc",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "thuy",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 61
+  },
+  {
+    "id": "thien_la",
+    "name_vi": "Thiên La",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "kim",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 61
+  },
+  {
+    "id": "quoc_an",
+    "name_vi": "Quốc Ấn",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "hong_loan",
+    "name_vi": "Hồng Loan",
+    "category": "tap_dieu",
+    "groups": [
+      "dao_hoa"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "qua_tu",
+    "name_vi": "Quả Tú",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "tho",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 61
+  },
+  {
+    "id": "pha_toai",
+    "name_vi": "Phá Toái",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 61
+  },
+  {
+    "id": "giai_than",
+    "name_vi": "Gi?i Th?n",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "kiep_sat",
+    "name_vi": "Kiếp Sát",
+    "category": "sat_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "moc",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 60
+  },
+  {
+    "id": "quan_phu_sat",
+    "name_vi": "Quan Ph?",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 72
+  },
+  {
+    "id": "phong_cao",
+    "name_vi": "Phong C?o",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 12
+  },
+  {
+    "id": "tang_mon",
+    "name_vi": "Tang M?n",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "thuy",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 12
+  },
+  {
+    "id": "tue_pha",
+    "name_vi": "Tu? Ph?",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "truc_phu",
+    "name_vi": "Trực Phù",
+    "category": "vong_sao",
+    "groups": [
+      "thai_tue"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "thien_quy",
+    "name_vi": "Thi?n Qu?",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "thien_giai",
+    "name_vi": "Thi?n Gi?i",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "moc",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "thien_y",
+    "name_vi": "Thiên Y",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "thuy",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "phuc_duc",
+    "name_vi": "Ph?c ??c",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 13
+  },
+  {
+    "id": "thien_vu",
+    "name_vi": "Thi?n Vu",
+    "category": "tap_dieu",
+    "groups": [
+      "cat_tinh"
+    ],
+    "element": "tho",
+    "nature": "cat",
+    "display_column": "left",
+    "has_brightness": false,
+    "priority": 14
+  },
+  {
+    "id": "thien_dieu",
+    "name_vi": "Thi?n Di?u",
+    "aliases": [
+      "Thi?n Ri?u"
+    ],
+    "category": "tap_dieu",
+    "groups": [
+      "dao_hoa"
+    ],
+    "element": "thuy",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": true,
+    "priority": 14
+  },
+  {
+    "id": "khong_vong",
+    "name_vi": "Kh?ng Vong",
+    "category": "tap_dieu",
+    "groups": [
+      "sat"
+    ],
+    "element": "hoa",
+    "nature": "sat",
+    "display_column": "right",
+    "has_brightness": false,
+    "priority": 14
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19811125_ti",
+  "birth": {
+    "year": 1981,
+    "month": 11,
+    "day": 25,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:14:36.613Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

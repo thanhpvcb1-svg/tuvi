@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20190102_ty",
+  "birth": {
+    "year": 2019,
+    "month": 1,
+    "day": 2,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:15:41.365Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

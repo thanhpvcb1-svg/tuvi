@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19691223_ngo",
+  "birth": {
+    "year": 1969,
+    "month": 12,
+    "day": 23,
+    "hour": "ngo",
+    "hourName": "Ngọ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:11:23.561Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

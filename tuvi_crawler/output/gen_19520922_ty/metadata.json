@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19520922_ty",
+  "birth": {
+    "year": 1952,
+    "month": 9,
+    "day": 22,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:20:18.507Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

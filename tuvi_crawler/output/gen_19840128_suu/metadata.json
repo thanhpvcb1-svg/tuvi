@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19840128_suu",
+  "birth": {
+    "year": 1984,
+    "month": 1,
+    "day": 28,
+    "hour": "suu",
+    "hourName": "Sửu",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:18:20.154Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

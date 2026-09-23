@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19860611_thin",
+  "birth": {
+    "year": 1986,
+    "month": 6,
+    "day": 11,
+    "hour": "thin",
+    "hourName": "Thìn",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:08:33.610Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19760815_ty",
+  "birth": {
+    "year": 1976,
+    "month": 8,
+    "day": 15,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:11:20.300Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

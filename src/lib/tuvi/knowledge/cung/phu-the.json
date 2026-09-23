@@ -1,0 +1,140 @@
+{
+  "palace": "phu_the",
+  "sections": [
+    {
+      "section_id": "can_cung",
+      "title": "Thiên Can Cung Phu Thê",
+      "interpretations": [
+        {
+          "id": "phoi_can_canh",
+          "type": "heavenly_stem",
+          "conditions": {
+            "heavenly_stem": "canh"
+          },
+          "text": "Cung Phu Thê can Canh chủ phối ngẫu cá tính cương nghị, hào sảng, độc lập, có thể che chở cho người khác mà không cần sự che chở của người ta.",
+          "source": {
+            "book": "Đẩu số chính nhãn",
+            "author": "Ông Phúc Dụ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "phi_tu_hoa",
+      "title": "Phi Tứ Hóa Từ Cung Phu Thê",
+      "interpretations": [
+        {
+          "id": "phoi_loc_nhap_dien",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "loc",
+            "source_palace": "phu_the",
+            "target_palace": "dien_trach"
+          },
+          "text": "Phu thê Hóa Lộc nhập điền trạch: Kết hôn mua nhà. Cuộc sống hôn nhân vui vẻ. Sau hôn nhân kinh tế bình ổn thuận lợi. Người phối ngẫu dễ hòa hợp với gia đình. Phối ngẫu che chở gia đình, được tài từ vợ (chồng), dễ phối ngẫu có tài sản. Người khác giới giúp tôi giàu có. Nhưng phòng dễ khác giới xen vào gia đình.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "phoi_quyen_nhap_phuc",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "quyen",
+            "source_palace": "phu_the",
+            "target_palace": "phuc_duc"
+          },
+          "text": "Phu thê Hóa Quyền nhập phúc đức: Người phối ngẫu có tính hiếu thắng khá mạnh, có thể sau khi kết hôn thì đời sống sinh hoạt khá xa hoa. Yêu đương thì đa phần đối phương sẽ chủ động. Sau khi kết hôn thì vận trình tiền tài khá tốt đẹp.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "phoi_khoa_nhap_dien",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "khoa",
+            "source_palace": "phu_the",
+            "target_palace": "dien_trach"
+          },
+          "text": "Phu thê Hóa Khoa nhập điền trạch: Cuộc sống hôn nhân đạm nhạt vui vẻ. Người phối ngẫu giữ nhà, ngăn nắp, sạch sẽ thoải mái. Hôn nhân có thể do gia đình hoặc hàng xóm giới thiệu.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        },
+        {
+          "id": "phoi_ky_nhap_phu",
+          "type": "phi_hoa",
+          "conditions": {
+            "transformation": "ky",
+            "source_palace": "phu_the",
+            "target_palace": "phu_mau"
+          },
+          "text": "Phu thê Hóa Kị nhập phụ mẫu: Sống chung mà vô danh phận. Phòng ly hôn danh phận biến mất. Vợ chồng bất đồng hộ tịch. Phòng hôn nhân trách cứ ra mặt. Phối ngẫu lo việc nhà bố mẹ quá thể. Cách cục tốt phối ngẫu hiếu thuận hoặc phối ngẫu hỷ nộ hiện sắc.",
+          "source": {
+            "book": "Tứ hóa phi tinh",
+            "author": "Lương Nhược Du"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "chinh_tinh",
+      "title": "Chính Tinh Tại Phu Thê",
+      "interpretations": [
+        {
+          "id": "phoi_liem_trinh",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["liem_trinh"]
+          },
+          "text": "Dấu hiệu tình cảm không mỹ mãn, yêu khá sớm, phối ngẫu tính cương, dễ cực đoan, vợ chồng không hòa thuận. Dù không hội sát tinh cũng chủ vợ chồng tình cảm bạc hoặc không hòa thuận, nam khắc vợ tái hôn, nữ khắc chồng tái giá.",
+          "source": {
+            "book": "Đẩu số cung vị",
+            "author": "Trần Bỉnh Húc"
+          }
+        },
+        {
+          "id": "phoi_liem_trinh_dan_than",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["liem_trinh"],
+            "position": ["dan", "than"]
+          },
+          "text": "Liêm Trinh lâm Dần Thân thủ Phu Thê: thê tử thanh tú hiền thục, có thần thái, có trợ lực. Không hội đào hoa tinh thì thông thường tốt đẹp. Ở cung Dần tính cách phối ngẫu tương đối dữ dằn.",
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số",
+            "author": "Phương Ngoại Nhân"
+          }
+        },
+        {
+          "id": "phoi_thien_ma",
+          "type": "star_in_palace",
+          "conditions": {
+            "required_stars": ["thien_ma"]
+          },
+          "text": "Thiên Mã nhập Phu Thê, hội Lộc Tồn biểu thị sẽ được gả đi, gia cát vui sướng, gả cho người nơi xa hoặc đi làm ăn xa, kết hôn sẽ mang đến may mắn. Chủ phối ngẫu ở nhà chịu khó, ở ngoài bôn ba, có dấu hiệu sống riêng khá lâu.",
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số",
+            "author": "Phương Ngoại Nhân"
+          }
+        },
+        {
+          "id": "phoi_ta_huu",
+          "type": "star_combination",
+          "conditions": {
+            "meeting_stars": ["ta_phu", "huu_bat"]
+          },
+          "text": "Tả Phụ và Hữu Bật bất lợi đối với hôn nhân, ở cung phu thê Hữu Bật mạnh hơn Tả Phụ. Có khuynh hướng tình yêu tay ba. Hễ Tả Phụ hoặc Hữu Bật nhập cung phu thê, nam nữ bất luận có sát tinh đồng cung hay không, đều chủ hai lần kết hôn.",
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích",
+            "author": "Từ Tăng Sinh"
+          }
+        }
+      ]
+    }
+  ]
+}

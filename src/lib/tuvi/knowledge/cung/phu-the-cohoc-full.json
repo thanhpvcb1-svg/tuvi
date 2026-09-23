@@ -1,0 +1,1749 @@
+{
+  "palace": "PHU_THE",
+  "source": "tuvi.cohoc.net",
+  "chart_id": "472159",
+  "total_blocks": 58,
+  "sections": [
+    {
+      "section_id": "phu-the",
+      "title": "CUNG PHU THÊ",
+      "blocks": [
+        {
+          "block_id": "phu-the_cohoc_1",
+          "condition_text": "Điểm \"xí hoa\" cung Phu thê là 0.7",
+          "raw_text": "Cung Phu thê chủ về: người phối ngẫu, tình cảm, tình trạng hôn nhân.\nTọa thủ: Liêm trinh, Thiên mã, Thiên hư. Xung chiếu: Tham lang, Hữu bật, Hóa khoa, Hóa lộc. Tam hợp: Tử vi, Thiên tướng, Thiên khốc, Đà la, Văn khúc - Vũ khúc, Thiên phủ, Tả phù. Giáp cung: Thiên việt, Thiên hỉ - Thiên riêu.\nNgũ hành khí của cung Canh Thân: 20% KIM (hỉ thần), 50% KIM (hỉ thần), 30% MỘC (kị thần). Đây là cung khí đại cát. Liêm trinh hành HỎA là kị thần. Thiên mã hành HỎA là kị thần. Thiên hư hành THỦY là nhàn thần.\nCung Phu thê can Canh làm cho:\n- Thái dương Hóa lộc nhập cung Điền trạch (cung Nô bộc của cung Phu thê). Cung Điền trạch can Ất chuyển Thiên cơ Hóa Lộc nhập cung Nô bộc, Thái âm tự hóa kỵ.\n- Thiên đồng Hóa kỵ nhập cung Phụ mẫu (cung Điền trạch của cung Phu thê). Cung Phụ mẫu can Quý chuyển Phá quân Hóa Lộc nhập cung Mệnh, chuyển Tham lang Hóa kỵ nhập cung Quan lộc.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Kinh nghiệm của một cao thủ Bắc phái",
+            "author": "Kinh nghiệm của một cao thủ Bắc phái",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 9
+        },
+        {
+          "block_id": "phu-the_cohoc_2",
+          "condition_text": "Cung Phu thê an tại Thân có Thất nhân",
+          "raw_text": "Mệnh chủ coi trọng tình cảm cùng nữ sắc.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thất nhân"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Thất tinh định điểm bí truyền - Dương Trinh Tường",
+            "author": "Dương Trinh Tường",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "phu-the_cohoc_3",
+          "condition_text": "Cung Phu thê thiên can là Canh",
+          "raw_text": "Cung Phu Thê can Canh chủ phối ngẫu cá tính cương nghị, hào sảng, độc lập, có thể che chở cho người khác mà không cần sự che chở của người ta.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+            "author": "Ông Phúc Dụ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "phu-the_cohoc_4",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Cung Phu thê là cung khí số vị cung Thiên di. Trong trường hợp này biểu hiện phát triển bên ngoài không tiện, không thể làm xuất khẩu.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đồng bộ đoạn quyết - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 8
+        },
+        {
+          "block_id": "phu-the_cohoc_5",
+          "condition_text": "Thuận Thủy Kị (流水忌): cung Phu thê phi hóa kỵ tới cung Phụ mẫu",
+          "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Phu thê khí tiết sang cung Phụ mẫu.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": null,
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "author": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_6",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "Phu thê Hóa Lộc nhập điền trạch, biểu thị phối ngẫu sẽ mang lại hòa lạc cho gia đình của mệnh tạo, trợ giúp cho gia đình của mệnh tạo.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_7",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "Phu thê Hóa lộc nhập điền trạch (sự với người).\nGia đình không phải lo lắng về hôn nhân của mệnh tạo. Mệnh tạo được gia đình chúc phúc.\nPhu thê Hóa Lộc nhập điền trạch (sự với sự)\n1. Mệnh tạo dễ có tài sản từ hôn nhân (của hồi môn)\n2. Điền trạch là hoan lạc cung, biểu thị hôn nhân mang đến cho mệnh tạo cuộc sống vật chất, vui vẻ, kinh tế sung túc.\n3. Phu thê là phúc của tài bạch, ấu niên hoàn cảnh gia đình tốt, một đời không lo thiếu thốn.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_8",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "Phu thê Hóa Lộc nhập điền trạch, Tình cảm phu thê tốt, phối ngẫu và bằng hữu có nhân duyên tốt.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_9",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "Phu Thê Lộc nhập Điền Trạch, phối ngẫu cùng người nhà của ta ở chung hòa hợp.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+            "author": "Linh Chi biên dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_10",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "Từ Phu Thê hóa Lộc đến Điền Trạch cung, chiếu Tử Nữ cung\n1. Người phối ngẫu để tâm quản lý hôn nhân gia đình.\n2. Sau khi kết hôn gia đình vui vẻ, giàu sang, hạnh phúc viên mãn.\n3. Phối ngẫu là quý nhân của mệnh chủ, giúp ta kiếm tiền.\n4. Phối ngẫu sẽ chi tiền cho gia đình, nam mệnh nam tinh, nữ mệnh nữ tinh.\n5. Người phối ngẫu có thói quen tiết kiệm, nam mệnh nam tinh, nữ mệnh nữ tinh.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_11",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "Người phối ngẫu rất chăm lo cho gia đình, rất có duyên với người khác giới, nhiều bạn bè, cuộc sống vợ chồng khá hạnh phúc. Hoàn cảnh công việc hay sự nghiệp của mệnh tạo khá tốt đẹp, có phát triển.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_12",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "夫妻禄入田宅:\n1. 「结婚置产」。\n2. 婚姻「生活愉悦」。婚后经济「平稳顺畅」。\n3. 配偶与家人「容易相处」。\n4. 「配偶荫家」、得妻〈夫〉财、容易「配偶有财产」。\n5. 「婚姻、置产」两「相近」或配偶「相助置产」。\n6. 异性助我财富。\n7. 但防容易「异性介入」家庭、隐含双妻〈夫〉格。\n8. 少小即「家境不恶」, 一生「衣食丰足」〈夫妻者「福德的财帛」, 禄之于田宅「库位」, 一生有福〉。\nPhu thê Hóa lộc nhập cung điền trạch:\n1. \"Kết hôn mua nhà\".\n2. Cuộc sống hôn nhân \"vui vẻ\". Sau hôn nhân kinh tế \"bình ổn thuận lợi\".\n3. Người phối ngẫu dễ hòa hợp với gia đình.\n4. \"Phối ngẫu che chở gia đình\", được tài từ vợ (chồng), dễ \"phối ngẫu có tài sản\".\n5. \"Hôn nhân, mua nhà\" hai việc \"gần nhau\" hoặc phối ngẫu \"giúp mua nhà\".\n6. Người khác giới giúp tôi giàu có.\n7. Nhưng phòng dễ \"khác giới xen vào\" gia đình, ẩn chứa kiểu hai vợ (chồng).\n8. Từ nhỏ \"gia cảnh không tệ\", cả đời \"ăn mặc đầy đủ\" (vợ chồng là \"tài bạch của phúc đức\", Lộc ở vị trí \"kho\" của điền trạch, cả đời có phúc).",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_13",
+          "condition_text": "Cung Phu thê an tại Thân có Lộc Điền",
+          "raw_text": "夫妻禄入田宅: \n1. 「结婚置产」。\n2. 婚姻「生活愉悦」。婚后经济「平稳顺畅」。\n3. 配偶与家人「容易相处」。\n4. 「配偶荫家」、得妻〈夫〉财、容易「配偶有财产」。\n5. 「婚姻、置产」两「相近」或配偶「相助置产」。\n6. 异性助我财富。\n7. 但防容易「异性介入」家庭、隐含双妻〈夫〉格。\n8. 少小即「家境不恶」, 一生「衣食丰足」〈夫妻者「福德的财帛」, 禄之于田宅「库位」, 一生有福〉。\nPhu thê Hóa lộc nhập cung điền trạch: \n1. Kết hôn trí sản. \n2. Hôn nhân sinh hoạt vui vẻ, sau khi cưới kinh tế vững vàng trôi chảy. \n3. Phối ngẫu cùng người nhà dễ dàng sống chung với nhau. \n4. Phối ngẫu ấm gia. Đắc thê (phu) tài, dễ dàng \"phối ngẫu có tài sản\". \n5. Hôn nhân trí sản, có cả tương cận hoặc phối ngẫu tương trợ trí sản. \n6. Khác phái giúp ta tài sản. \n7. Phòng khác phái xen vào cuộc sống gia đình, ẩm hàm song thê (phu) cách. \n8. Lúc nhỏ gia cảnh không khổ, cơm no áo ấm (người phu thê phúc đức đích tài bạch, lộc ở điền trạch là khố vị. Một đời có phúc).",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Lộc Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "LOC"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_14",
+          "condition_text": "Cung Phu thê an tại Thân có Quyền Phúc",
+          "raw_text": "Phu thê Hóa Quyền nhập phúc đức, phối ngẫu nắm vững sự nghiệp của bản thân, có trợ lực cho mệnh tạo về tài chính.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Phúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "PHUC_DUC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_15",
+          "condition_text": "Cung Phu thê an tại Thân có Quyền Phúc",
+          "raw_text": "Phu thê Hóa Quyền nhập phúc đức.\nĐối với mệnh tạo: Sau kết hôn trở nên háo thắng, cuộc sống vật chất dễ chịu, dễ lãng phí, thu nhập cao (Quyền chiếu tài bạch).\nĐối với người: Phối ngẫu là người háo thắng.\nPhối ngẫu là người chủ động trong tình cảm.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Phúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "PHUC_DUC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_16",
+          "condition_text": "Cung Phu thê an tại Thân có Quyền Phúc",
+          "raw_text": "Từ Phu Thê hóa Quyền đến Phúc Đức cung, chiếu Tài Bạch cung\n1. Mệnh chủ hoặc phối ngẫu thích hưởng thụ, thích hoa mỹ, chú trọng phong cách, phô trương, xa hoa, hay chỉ trích.\n2. Mệnh chủ hoặc người phối ngẫu khó cưỡng lại danh vọng, tài sản, quyền lực, sự cám dỗ, tâng bốc và xu nịnh.\n3. Mệnh chủ hoặc người phối ngẫu được phúc đức sâu dày, có thể kế thừa gia nghiệp và hưởng tổ ấm.\n4. Mệnh chủ hoặc người phối ngẫu tích cực, năng động, có động cơ, tham vọng và luôn nỗ lực để đạt được sở thích và đam mê.\n5. Mệnh chủ hoặc người phối ngẫu không ngại gian khổ, chuyên tâm phát triển, ham học hỏi mà trưởng thành.\n6. Mệnh chủ hoặc người phối ngẫu là người uy nghiêm, dũng cảm, hoang dã, năng động, rất vui vẻ, hướng ngoại, không biết kiềm chế làm người khác e dè.\n7. Mệnh chủ hoặc người phối ngẫu tùy hứng, dễ giận và hay thay đổi, trở mặt như lật sách hoặc trở mặt tàn nhẫn.\n8. Mệnh chủ hoặc người phối ngẫu đã thích là muốn lấy, lòng chiếm hữu mạnh mẽ, coi trọng bản thân, không muốn trở nên tầm thường, cảm giác anh hùng cô đơn, cao ngạo nên thiếu nhân hòa.\n9. Mệnh chủ hoặc người phối ngẫu có cùng sở thích hứng thú, cùng gặp gỡ, chia sẻ hạnh phúc.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Phúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "PHUC_DUC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_17",
+          "condition_text": "Cung Phu thê an tại Thân có Quyền Phúc",
+          "raw_text": "Người phối ngẫu có vận sự nghiệp tốt, cũng có thể giúp mệnh tạo phát triển, chú trọng hưởng thụ, vì thể diện có thể tiêu xài một khoản tiền lớn, nhưng cũng có năng lực quản lí tài chính rất tốt.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Phúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "PHUC_DUC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_18",
+          "condition_text": "Cung Phu thê an tại Thân có Quyền Phúc",
+          "raw_text": "Phu Thê [Quyền nhập] Phúc Đức:\n* Người phối ngẫu có tính hiếu thắng khá mạnh, có thể sau khi kết hôn thì đời sống sinh hoạt khá xa hoa.\n* Yêu đương thì đa phần đối phương sẽ chủ động.\n* Sau khi kết hôn thì vận trình tiền tài khá tốt đẹp.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Quyền Phúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "QUYEN"
+            ],
+            "transformation_target": [
+              "PHUC_DUC"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "author": "Lương Nhược Du. Quách Ngọc Bội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_19",
+          "condition_text": "Cung Phu thê an tại Thân có Khoa Điền",
+          "raw_text": "Phu thê Hóa Khoa nhập điền trạch.\nĐối với mệnh tạo: Sau kết hôn, cư gia sạch sẽ dễ chịu, có khí chất thư hương. Tùy nhập mà xuất.\nĐối với người: Phối ngẫu biết quản gia, điều chỉnh hoàn cảnh gia đình, phù hợp dễ chịu sạch sẽ. Có khí chất thư hương. Phối ngẫu quản tài, tùy nhập mà xuất.\nPhối ngẫu có thể do người nhà hoặc hàng xóm giới thiệu mai mối.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_20",
+          "condition_text": "Cung Phu thê an tại Thân có Khoa Điền",
+          "raw_text": "Phu thê Hóa Khoa nhập điền trạch, phu thê tình cảm tốt, cuộc sống gia đình hòa hợp, trí túc.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_21",
+          "condition_text": "Cung Phu thê an tại Thân có Khoa Điền",
+          "raw_text": "Từ Phu Thê hóa Khoa đến Điền Trạch cung, chiếu Tử Nữ cung\n1. Mệnh chủ và người phối ngẫu vì gia đình lao tâm phiền lòng.\n2. Mệnh chủ và người phối ngẫu thích trang trí nhà cửa sang trọng và giản dị.\n3. Mệnh chủ và người phối ngẫu quan tâm, chăm sóc các thành viên trong gia đình và rất chu đáo.\n4. Mệnh chủ và người phối ngẫu coi trọng sự đấm ấm của không khí gia đình.\n5. Mệnh chủ và người phối ngẫu là trụ cột tinh thần và là quý nhân của gia đình, họ hy sinh để rèn luyện khí chất, tu thân cho con cái và các thành viên trong gia đình.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_22",
+          "condition_text": "Cung Phu thê an tại Thân có Khoa Điền",
+          "raw_text": "Người phối ngẫu rất có duyên với người khác giới, biết trông nom lo liệu cho gia đình, sinh hoạt gia đình thư thả và thoải mái.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_23",
+          "condition_text": "Cung Phu thê an tại Thân có Khoa Điền",
+          "raw_text": "夫妻科入田宅:\n1. 婚姻生活淡怡然。\n2. 配偶持家, 有条不紊、干净雅适。\n3. 婚姻可能介缘于家人或邻居。\nPhu thê Hóa khoa nhập cung điền trạch:\n1. Cuộc sống hôn nhân đạm nhạt vui vẻ.\n2. Người phối ngẫu giữ nhà, ngăn nắp, sạch sẽ thoải mái.\n3. Hôn nhân có thể do gia đình hoặc hàng xóm giới thiệu.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_24",
+          "condition_text": "Cung Phu thê an tại Thân có Khoa Điền",
+          "raw_text": "夫妻科入田宅: \n1. 婚姻生活淡怡然。\n2. 配偶持家, 有条不紊、干净雅适。\n3. 婚姻可能介缘于家人或邻居。\nPhu thê Hóa khoa nhập cung điền trạch: \n1. Cuộc sống hôn nhân đạm bạc vui vẻ. \n2. Phối ngẫu lo việc nhà đâu vào đấy sạch sẽ an ổn. \n3. Hôn nhân có khả năng từ gia nhân hoặc hàng xóm.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Khoa Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KHOA"
+            ],
+            "transformation_target": [
+              "DIEN_TRACH"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_25",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Phu thê Hóa Kị nhập phụ mẫu, phối ngẫu cùng phụ mẫu dễ bất hòa, phối ngẫu nắm giữ tài chính, bủn xỉn hà tiện. Phu thê duyên bạc, phối ngẫu sức khỏe kém hoặc có bện phải mổ xẻ.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_26",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Phu thê Hóa Kị nhập phụ mẫu (sự với sự).\n1. Dễ đồng cư mà không có danh phận. (phụ mẫu là văn thư cung).\n2. Phụ mẫu là điền trạch của phu thê, cung vị liên quan đến việc ly hôn, mất danh phận.\nGiả ly hôn biến thành thật.\n3. Phu thê dễ không cùng quốc tịch. (cần có Cự môn tinh).\n4. Hôn nhân không mỹ mãn dễ làm người xung quanh đều biết.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_27",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Phu thê Hóa Kị nhập phụ mẫu (người với người).\n1. Mệnh cung của phu thê Hóa Kị nhập phụ mẫu.\n2. Phối ngẫu hỷ nộ biểu hiện ra mặt, giao tiếp cùng phụ mẫu không tốt. Sau kết hôn thích hợp sống riêng độc lập.\nPhu thê Hóa Kị nhập phụ mẫu (người với sự).\n1. Phối ngẫu biết chăm lo gia đình.\n2. Phối ngẫu hỷ nộ biểu hiện ra mặt, xung tật ách, dễ nảy sinh bất hòa. Mệnh tạo cần nhẫn nhịn.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_28",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Phu thê cung Hóa Kị phụ mẫu xung tật ách cung:\nLà cách hai người diện hợp thần ly, ví dụ vợ không thân thiết với chồng, chồng làm chủ muốn tìm nhân tình bí mật, muốn có phu xướng phụ tùy thật là khó khăn.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_29",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Phu thê Hóa Kị nhập phụ mẫu (sự với người).\n1. Hôn nhân của mệnh tạo làm phụ mẫu lo lắng.\n2. Hôn nhân không được phụ mẫu chúc phúc.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+            "author": "Huy Hà Phan",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_30",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Phu Thê Kị nhập tuyến Phụ Tật, biểu thị sau hôn nhân có chuyện không may mắn, không được thuận lợi.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+            "author": "Linh Chi biên dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_31",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Từ Phu Thê cung hóa Kị đến Phụ Mẫu cung, xung Tật Ách cung\n1. Phối ngẫu cố chấp đi vào ngõ cụt, ngoan cố không thông rất dễ phát sinh sự xa cách.\n2. Mệnh chủ với phối ngẫu duyên phận mỏng, dễ có hôn nhân tan vỡ, ly hôn, ly tán.\n3. Cùng phối ngẫu dễ gần nhau ít mà xa cách nhiều hơn, xa cách, hiểu lầm và cãi vã.\n4. Dễ xảy ra mầu thuẫn với cô dì, chị dầu, mầu thuẫn với cha mẹ vợ chồng.\n5. Tình cảm bị tổn thương và có thể tự tử.\n6. Mệnh chủ với phối ngẫu thích hợp nhân viên văn phòng công ty tư nhân công việc ổn định.\n7. Chú ý thư từ nơi công sở, dễ sinh tranh chấp văn thư.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+            "author": "Ngô Trung Thành, Khâu Thu Mỹ",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_32",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "Người phối ngẫu có gia thế không tốt, thể chất yếu, xử sự không hòa hợp với cha mẹ của mệnh tạo. Vợ chồng duyên bạc, gần nhau ít mà xa nhau nhiều, dễ xảy ra tình trạng li hôn. Công việc hay sự nghiệp của người phối ngẫu không thuận lợi, khó được đề bạt, nâng đỡ; sau kết hôn sự nghiệp thường xuống dốc.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+            "author": "Nguyễn Anh Vũ dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_33",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "夫妻忌入父母:\n1. 「同居」无名份。\n2. 防「离婚」名分消失。\n3. 夫妻「不同户籍」。\n4. 防婚姻「怨形于色」。\n5. 配偶太过「顾外〈夫〉家」。\n6. 格局好, 配偶「孝顺」。或者, 配偶喜怒「形于色」。\nPhu thê Hóa kỵ nhập cung phụ mẫu:\n1. \"Sống chung\" không danh phận.\n2. Phòng \"ly hôn\" mất danh phận.\n3. Vợ chồng \"khác hộ khẩu\".\n4. Phòng hôn nhân \"oán trách lộ rõ\".\n5. Phối ngẫu quá \"chăm lo nhà ngoại (nhà chồng)\".\n6. Cục diện tốt, phối ngẫu \"hiếu thuận\". Hoặc phối ngẫu vui giận \"lộ rõ\".",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+            "author": "Lương Nhược Du. AI biên dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_34",
+          "condition_text": "Cung Phu thê an tại Thân có Kỵ Phụ",
+          "raw_text": "夫妻忌入父母: \n1. 「同居」无名份。\n2. 防「离婚」名分消失。\n3. 夫妻「不同户籍」。\n4. 防婚姻「怨形于色」。\n5. 配偶太过「顾外〈夫〉家」。\n6. 格局好, 配偶「孝顺」。或者, 配偶喜怒「形于色」。\nPhu thê Hóa kỵ nhập cung phụ mẫu: \n1. Ở chung mà vô danh phận. \n2. Phòng ly dị danh phận biến mất. \n3. Vợ chồng bất đồng hộ tịch. \n4. Phòng hôn nhân trách cứ ra mặt. \n5. Phối ngẫu lo việc nhà bố mẹ quá thể. \n6. Cách cục tốt phối ngẫu hiếu thuận hoặc phối ngẫu hỷ nộ hiện sắc.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Kỵ Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [
+              "KY"
+            ],
+            "transformation_target": [
+              "PHU_MAU"
+            ],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu-the_cohoc_35",
+          "condition_text": "Cung Phu thê an tại Thân có M Điền",
+          "raw_text": "Phối ngẫu mệnh có nhà đất. Kết hôn sẽ có nhà đất.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Điền"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Điền"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phu-the_cohoc_36",
+          "condition_text": "Cung Phu thê an tại Thân có M Phụ",
+          "raw_text": "Phối ngẫu mệnh chủ quản ông chủ. Phối ngẫu là người phúc báo.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Phụ"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Phụ"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phu-the_cohoc_37",
+          "condition_text": "Cung Phu thê an tại Thân có M Phúc",
+          "raw_text": "Phối ngẫu là người nối dõ tổ tiên. Phối ngẫu là người mệnh tốt.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "M Phúc"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": [
+              "M_CODE:Phúc"
+            ]
+          },
+          "source": {
+            "book": "Đoán vận - Trịnh Mục Đức",
+            "author": "Trịnh Mục Đức",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 6
+        },
+        {
+          "block_id": "phu-the_cohoc_38",
+          "condition_text": "Cung Phu thê an tại Thân có Liêm trinh",
+          "raw_text": "Liêm Trinh ở cung mệnh, cung thân hoặc cung tử nữ, cung điền trạch là sao đào hoa thứ, nếu có Hóa Kị đồng cung, thì có thế nảy sinh tác dụng kiếm soát.\nLiêm Trinh ở các cung Dần, Thân, Tị, Hợi, có liên quan đến dịch mã. Nêu cung mệnh có tượng dịch mã động mạnh, thông thường đều đi xa phát triển, thậm chí đi du học nước ngoài hay làm về mậu dịch xuất nhập khẩu, v. v.... Nếu là cung điền trạch thì chủ về lúc còn bé đã rời xa quê hương, ở đất khách mưu sinh phát triển.\nThị phi của Liêm Trinh thuộc về phương diện hành chính, không chủ về nhân sự, ở cung tật ách thuộc tai nạn bất ngờ hoặc bệnh nan y.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Liêm trinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Hà lạc phái - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_39",
+          "condition_text": "Cung Phu thê an tại Thân có Liêm trinh",
+          "raw_text": "Liêm Trinh nhập cung mệnh, lục thân phần lớn đều không nhờ cậy, có tính hiếu cường, không chịu thua, dễ thành \"khéo quá mà thành vụng\".",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Liêm trinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Hà lạc phái - Phương Ngoại Nhân",
+            "author": "Phương Ngoại Nhân",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_40",
+          "condition_text": "Cung Phu thê an tại Thân có các sao Tả phù,Hữu bật hội hợp",
+          "raw_text": "Tả Phụ và Hữu Bật nhập cung mệnh, cung thiên di hoặc cung phu thê, cuộc đời phần nhiều được quý nhân nâng đỡ, nhưng Tả Phụ và Hữu Bật đều là sao chủ về phong thái vãn nhã, vì vậy đối với tình cảm lại bất lợi.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "các sao Tả phù",
+              "Tả p"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+            "author": "Từ Tăng Sinh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_41",
+          "condition_text": "Cung Phu thê an tại Thân có các sao Tả phù,Hữu bật hội hợp",
+          "raw_text": "Tả Phụ và Hữu Bật bất lợi đối với hôn nhân, ở cung phu thê Hữu Bật mạnh hơn Tả Phụ. Phàm Hữu Bật ở cung mệnh hoặc cung phu thê, cần phải chú ý nhiều về vấn để tình cảm, trước khi kết hôn lúc chọn đối tượng, phải mở to mắt ra nhìn, phải cố hết sức tìm người có tính tình hợp với mình, để tránh sau khi kết hôn tình cảm xảy ra sóng gió.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "các sao Tả phù",
+              "Tả p"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+            "author": "Từ Tăng Sinh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_42",
+          "condition_text": "Cung Phu thê an tại Thân có các sao Tả phù,Hữu bật hội hợp",
+          "raw_text": "Tả Phụ và Hữu Bật ở cung mệnh, cung phu thê hoặc cung tử nữ, lúc chọn lựa đối tượng trước khi kết hôn, dễ xuất hiện hơn hai đối tượng, nên cần phải đặc biệt thận trọng.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "các sao Tả phù",
+              "Tả p"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+            "author": "Từ Tăng Sinh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_43",
+          "condition_text": "Cung Phu thê an tại Thân có Liêm trinh",
+          "raw_text": "Nam mệnh phải ba đời vợ mới thành; nữ mệnh cùng ba đời chồng mới đúng số. Gặp Dương, Đà, Hỏa, Linh chủ về vợ chồng phải sinh ly.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Liêm trinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_44",
+          "condition_text": "Cung Phu thê an tại Thân có Thiên mã",
+          "raw_text": "Hội hợp với cát tinh, cả hai vợ chồng đều là người hiển quý. Riêng nam mệnh có số được vợ giàu.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên mã"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+            "author": "Hồng Khánh",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_45",
+          "condition_text": "Cung Phu thê an tại Thân có các sao Tả phù,Hữu bật hội hợp",
+          "raw_text": "Có khuynh hướng tình yêu tay ba. Phối ngẫu dung mạo đoan chính, tính tình rộng rãi, vợ chồng giúp đỡ lẫn nhau, viên mãn. Nam mệnh chủ vợ nhỏ tuổi đôn hậu, hội Xương Khúc dung mạo đẹp, hội Thiên Cơ, Thái Âm hoặc tam hợp Thiên Cơ, Thái Âm, chủ bản thân có ngoại tình, hội sát tinh.\nHễ Tả Phụ hoặc Hữu Bật nhập cung phu thê, nam nữ bất luận có sát tinh đồng cung hay không, đều chủ hai lần kết hôn. Đồng cung với Sát, Phá, Tham, Vũ, Liêm, Cự, Dương, Đà, Hỏa, Linh, Không, Kiếp, Kỵ, chắc chắn tái hôn. Nếu muộn hôn hay trước khi kết hôn tình cảm nhiều trở ngại thì có thể tránh sinh ly.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "các sao Tả phù",
+              "Tả p"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_46",
+          "condition_text": "Cung Phu thê an tại Thân có Liêm trinh",
+          "raw_text": "Dấu hiệu tình cảm không mỹ mãn, yêu khá sớm, phối ngẫu tính cương, dễ cực đoan, vợ chồng không hòa thuận. Dù không hội sát tinh cũng chủ vợ chồng tình cảm bạc hoặc không hòa thuận, nam khắc vợ tái hôn, nữ khắc chồng tái giá, hội Tứ sát Hóa Kỵ hình khắc đặc biệt hung, hỉ vào cung Thủy hoặc đồng chiếu củng chiếu với sao hành Thủy thì tai họa nhẹ. Liêm Trinh Hóa Lộc, tuy rằng vợ chồng ân ái, tình cảm nồng nhiệt, nhưng phòng bản thân được hâm mộ. Liêm Trinh Hóa Kỵ, không những sẽ ly hôn, mà còn có nhiều tình cảm vướng mắc với người khác phái.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Liêm trinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_47",
+          "condition_text": "Cung Phu thê an tại Thân có Liêm trinh",
+          "raw_text": "Liêm Trinh cư dần thân, phối ngẫu dữ dằn, cãi nhau không ngừng, phối ngẫu ngoại tình hay (?) có thể tránh khắc, hội sát tinh Hóa Kỵ thì vài độ kết hôn, hội Lộc Tồn cũng khắc. Hội Tả Hữu Xương Khúc Khôi Việt, khó tránh cảnh tư thông, sinh ly.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Liêm trinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_48",
+          "condition_text": "Cung Phu thê an tại Thân có Liêm trinh",
+          "raw_text": "Liêm Trinh lâm Dần Thân thủ Phu Thê: thê tử thanh tú hiền thục, có thần thái, có trợ lực. Không hội đào hoa tinh thì thông thường tốt đẹp. Ở cung Dần tính cách phối ngẫu tương đối dữ dằn.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Liêm trinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+            "author": "Linh Chi biên dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_49",
+          "condition_text": "Cung Phu thê an tại Thân có Thiên mã",
+          "raw_text": "Nam chủ lấy được vợ hiền, hội cát tinh, chủ được sự giúp đỡ từ nhà vợ hoặc lấy được vợ có tiền hoặc nhờ có sự giúp đỡ của vợ mà phát tài. Nữ mệnh Thiên Mã nhập cung phu thê hội cát tinh, chủ vượng phu, có thể hưởng phú quý từ chồng, là số quý phu nhân. Hội nhiều cát tinh thì nam nữ đều quý mỹ. Hội lộc tinh tốt nhất. Hội sát kỵ Không Kiếp, nam nữ cô quả, sinh ly. Thiên Mã nhập cung phu thê, chủ phối ngẫu ở nhà chịu khó, ở ngoài bôn ba, có dấu hiệu sống riêng khá lâu.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên mã"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+            "author": "Trần Bỉnh Húc",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_50",
+          "condition_text": "Cung Phu thê an tại Thân có Thiên mã",
+          "raw_text": "Thiên Mã nhập Phu Thê, hội Lộc Tồn biểu thị sẽ được gả đi, gia cát vui sướng, gả cho người nơi xa hoặc đi làm ăn xa, kết hôn sẽ mang đến may mắn.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Thiên mã"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+            "author": "Linh Chi biên dịch",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 5
+        },
+        {
+          "block_id": "phu-the_cohoc_51",
+          "condition_text": "Cung Phu thê an tại Thân có Cung khí đại cát",
+          "raw_text": "Cung Khí đại cát có các hàm ý như sau:\n1. Người phối ngẫu có mệnh phú quý\n2. Kết hôn sớm\n3. Đa thê\n4. Phối ngẫu là người tốt\nĐối với những vấn đề như: tình cảm của vợ chồng thể nào? Có gắn bó keo sơn hay không? Nói chuyện có tình cảm hay không? Đặc trưng khuôn mặt thế nào thì chỉ cần dựa vào đặc tính Tinh Diệu trong Phu thê cung, chúng ta hoàn toàn có thể luận đoán được.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung khí đại cát"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "phu-the_cohoc_52",
+          "condition_text": "Cung Phu thê an tại Thân có Liêm trinh,Cung khí đại cát",
+          "raw_text": "Liêm Trinh nhập Phu Thê nếu Cung Khí đại cát, Liêm Trinh Hỏa là hỷ thần thì chủ người phối ngẫu xinh đẹp, phú quý. Ngộ Hữu Bật thì e là nam có thiếp, nữ làm vợ lẽ hoặc chồng hơn nhiều tuổi. Ngược lại, nếu ngộ Liêm Trinh Hỏa là kỵ thần thì kết hôn muộn hoặc đường hôn nhân không thuân lợi, có thể tái giá.",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Liêm trinh"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        },
+        {
+          "block_id": "phu-the_cohoc_53",
+          "condition_text": "Cung Phu thê an tại Thân có Cung Phu thê",
+          "raw_text": "Nếu chỉ xét đến ý nghĩa tinh diệu trong Phu Thê cung thì có những vấn đề như sau: Phu Thê cung nhập Sát, Phá, Lang, Liêm, Cự Môn nên kết hôn muộn thì tốt; Thiên Diêu, Tả, Hữu thì thường có 2 lần kết hôn; Không Kiếp thì người phối ngẫu nhan sắc không đẹp; Hóa Kỵ nhập Phu Thê người phối ngẫu nhiều thị phi, hoặc làm công tác đặc biệt, hoặc không kết hôn; Dương Đà nhập thì phối ngẫu gặp nhiều hình thương. Trên thực tế lại có những dị biệt. Người có Phu Thê cung: Sát Phá Lang lại kết hôn sớm rồi lại ly hôn, thậm chí có người kết hôn muộn nhưng cũng hình khắc phối ngẫu mà dẫn đến tái giá,.. Trường họp này sẽ giải thích như thế nào đây?\nNếu kết hợp Cung Khí để luận đoán, ta có thể biết rõ được thời điểm nào tất phải kết hôn, thời điểm nào người phối ngẫu bị thương, thời điểm nào tình cảm gặp trắc trở? Có vấn đề sinh ly tử biệt hay không? Cuộc đời có kết hôn hay không? Có phải mệnh đơn thân hay không?..\nSở Hoàng đề yếu:\nĐối với việc luận đoán Phu Thê cung, mệnh tạo thực chất có kết hôn muộn hay không? Kết hôn sớm mà ly hôn? Có hình khắc hay không? Thì không phải chỉ đơn thuần là dựa vào Cung khí hay dựa vào ý nghĩa Tinh Diệu để luận đoán mà còn phải kết hợp với nhân tố Đại vận và Can cung để quyết định!",
+          "conditions": {
+            "palace": "PHU_THE",
+            "position": "THAN",
+            "heavenly_stem": null,
+            "gender": null,
+            "required_stars": [
+              "Cung Phu thê"
+            ],
+            "excluded_stars": [],
+            "same_palace_stars": [],
+            "meeting_stars": [],
+            "opposite_stars": [],
+            "trine_stars": [],
+            "transformations": [],
+            "transformation_target": [],
+            "additional_conditions": []
+          },
+          "source": {
+            "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+            "author": "Sở Hoàng",
+            "translator": null,
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 4
+        }
+      ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "phu_the_crawl_10_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Cung Phu Thê cho biết mối quan hệ của đương số với vợ/chồng của mình, tình duyên thuận lợi hay trắc trở, đến mau hay hay muộn, tình cảm nồng thắm hay lạnh nhạt, có được hạnh phúc hay hình khắc,&hellip; Đồng thời cung Phu Thê cũng khái lược về một số nét chính của người phối ngẫu của đương số như là người gần hay người xa tới mức dị tộc (ngoại quốc), có được thành công và tương trợ cho sự thành công của đương số sau khi kết phối hay chăng,&hellip;",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_11_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Cung Phu Thê được liệt vào một trong những cường cung (tức là cung có tác động mạnh mẽ đến cuộc đời của đương số), bởi vì theo hình thái xã hội và quan niệm của người xưa thì người nữ lấy chồng là sự trao thân gửi phận, mọi việc đều nhất nhất theo chồng, cuộc đời nương tựa vào người chồng,&hellip; còn người nam lấy vợ là sự bắt đầu của duy trì nòi giống, đối với nhà giàu, quyền quý còn là sự liên kết thế lực họ tộc để giữ gìn và tăng cường của cải; đối với những nhà nghèo thì người vợ còn lại hậu phương quán xuyến việc gia đình, buôn bán chăm sóc cho chồng ăn học để đi thi cử,&hellip; Ngoài ra, các âm Dương gia còn chủ trương rằng \"cô âm bất sinh, cô Dương bất trưởng\", vợ chồng chính là cặp âm Dương, chỉ khi kết phối và hòa hợp thì mới phát triển thịnh vượng được.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_12_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Người xưa nói \"lấy vợ xem tông, lấy chồng xem giống\" vì tông tộc họ hàng cùng với nòi giống là những điểm quan trọng của người xưa khi lựa chọn kết phối, gốc gác giống nòi tông tộc mà có thế lực và thông minh khỏe mạnh (gen tốt) thường được ưu tiên lựa chọn hơn. Nhưng quy tắc đó là áp dụng ở phần xét bên ngoài mà không dùng đến lá số.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_13_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Vậy ở trong lá số tử vi có dạng quan niệm tương đồng hay không? Thưa, có. Đó là xem cung Phu Thê phải lưu ý kết hợp đồng thời với cung Phúc Đức, cung Mệnh - Thân. Những dấu hiệu tốt xấu của cung Phúc Đức, cung Mệnh - Thân, của đương số đều có ảnh hưởng trực tiếp đến tốt xấu ở cung Phu Thê của đương số, các cung ấy mà được tốt đẹp thì có thể giải được những điểm hình khắc, trắc trở ở cung Phối của đương số, ngược lại các cung ấy mà xấu thì cũng là giảm đi sự tốt đẹp ở cung Phối.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_14_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Xem cung Phu Thê, cần chú ý đến sao Phá Quân và cặp sao âm Dương (Nhật Nguyệt), bởi vì Phá Quân là thần chủ quản cung Phu Thê, Tử Tức và Nô Bộc, còn sao Thái âm là tượng của người vợ trên lá số của người nam, và sao Thái Dương là tượng của người chồng trên lá số của người nữ. Tốt xấu của các sao này đều có ảnh hưởng đến tốt xấu của cung Phu Thê. Tất nhiên, đây chỉ là yếu tố gia giảm, chủ yếu vẫn phải xét kỹ ở bản cung Phu Thê.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
+    }
+  ],
+  "last_updated": "2026-09-23T02:33:10.311Z"
+}

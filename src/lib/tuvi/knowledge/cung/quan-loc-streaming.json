@@ -1,0 +1,1655 @@
+{
+  "palace": "quan_loc",
+  "palace_name": "Quan Lộc",
+  "source": "tuvi.cohoc.net",
+  "crawl_mode": "streaming",
+  "last_updated": "2026-09-22T03:00:19.142Z",
+  "total_blocks": 87,
+  "blocks": [
+    {
+      "block_id": "quan_loc_stream_1",
+      "condition_text": "Điểm \"xí hoa\" cung Quan lộc là 0.86",
+      "raw_text": "Cung Quan lộc chủ về: chức vị, công danh, học vấn, học lực, nghề nghiệp.\nTọa thủ: Tham lang, Hữu bật, Hóa khoa, Hóa lộc. Xung chiếu: Liêm trinh, Thiên mã, Thiên hư. Tam hợp: Thất sát, Kình dương - Phá quân, Âm sát, Văn xương. Giáp cung: Thái dương, Thái âm, Hỏa tinh, Thiên khôi, Hóa quyền, Hồng loan - Thiên cơ, Cự môn, Linh tinh, Hóa kỵ, Hàm trì.\nNgũ hành khí của cung Giáp Dần: 20% MỘC (kị thần), 50% MỘC (kị thần), 30% THỦY (nhàn thần). Đây là cung khí đại hung. Tham lang hành MỘC là kị thần. Hữu bật hành THỔ là hỉ thần. Hóa khoa hành MỘC là kị thần. Hóa lộc hành KIM là hỉ thần.\nCan cung là Giáp thuộc phạm trù THIÊN: Tự giúp mình (độc lập, tự lập) nhưng nắm được thời cơ, điều kiện thuận lợi. Can Giáp là Thiên chi Thiên có nghĩa là Thiên thời ở mức độ THƯỢNG ĐẲNG - cao nhất. Ngoài ra cung Giáp Dần có thiên can và địa chi đồng hành cũng làm tăng rất nhiều độ số tính đắc Thiên thời của cung.\nCung Quan lộc can Giáp làm cho:\n- Liêm trinh Hóa lộc nhập cung Phu thê (cung Thiên di của cung Quan lộc). Cung Phu thê can Canh chuyển Thái dương Hóa Lộc nhập cung Điền trạch, chuyển Thiên đồng Hóa kỵ nhập cung Phụ mẫu.\n- Thái dương Hóa kỵ nhập cung Điền trạch (cung Huynh đệ của cung Quan lộc). Cung Điền trạch can Ất chuyển Thiên cơ Hóa Lộc nhập cung Nô bộc, Thái âm tự hóa kỵ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của một cao thủ Bắc phái",
+        "author": "Kinh nghiệm của một cao thủ Bắc phái"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "quan_loc_stream_2",
+      "condition_text": "Cung Quan lộc địa chi là Dần",
+      "raw_text": "Cung Quan lộc cư Dần thuộc tài Nhân, chủ sự nghiệp khá nhiều bôn ba.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "quan_loc_stream_3",
+      "condition_text": "Cung Quan lộc thiên can là Giáp",
+      "raw_text": "Can Giáp thuộc Thiên chi Thiên; chủ sự nghiệp dựa vào nỗ lực của chính mình không dựa vào người khác, không che chở cho người khác cũng không cần ai che chở.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số chính nhãn - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "quan_loc_stream_4",
+      "condition_text": "Dẫn xuất Lộc (引出禄): cung Quan lộc có Lộc năm sinh tọa thủ, mà thiên can cung Quan lộc lại hóa Lộc đến đối cung Phu thê",
+      "raw_text": "Tổn thất có nguyên nhân là do Lộc bị kéo sang cung đối diện.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc năm sinh tọa thủ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+        "author": "Tiên thiên tứ hóa phi tinh kỳ phổ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_5",
+      "condition_text": "Thuận Thủy Kị (流水忌): cung Quan lộc phi hóa kỵ tới cung Điền trạch",
+      "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Quan lộc khí tiết sang cung Điền trạch.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+        "author": "Tiên thiên tứ hóa phi tinh kỳ phổ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_6",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Trái tim thành danh, mới là điều kiện của sự nghiệp thành công.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_7",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Có trái tim sáng tạo, mới là điều kiện của sự nghiệp thành công.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_8",
+      "condition_text": "Cung Quan lộc an tại Dần có Hữu bật Hóa khoa",
+      "raw_text": "Cung Quan Lộc tọa Hữu Bật hóa Khoa năm sinh: nhờ sự trợ giúp của người khác mà sự nghiệp thành công, có lợi cho thăng chức.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hữu bật Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Cửu Thiên Phi Tinh - Huyền Sơn dịch",
+        "author": "Huyền Sơn dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_9",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang Hóa lộc",
+      "raw_text": "Cung Quan Lộc tọa Tham Lang hóa Lộc năm sinh: thích hợp ngành nghề giải trí. Nữ mệnh thì cẩn thận chọn nghề nghiệp, tuyệt đối đừng đi vào con đường tà môn ngoại đạo.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Cửu Thiên Phi Tinh - Huyền Sơn dịch",
+        "author": "Huyền Sơn dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_10",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham Lang,Hóa lộc",
+      "raw_text": "Theo công việc kiếm tiền dễ dàng. Phúc giàu trí tuệ, có thể được người nữ trợ giúp.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham Lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_11",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Sự nghiệp cung tọa sinh niên khoa:\nSự nghiệp tọa sinh niên khoa, tính chất công tác bình ổn. Dễ làm công ăn lương. Làm công việc có chuyên môn.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+        "author": "Alex Alpha"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_12",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Hóa Khoa nhập quan lộc, trọng danh tiếng, công việc nhẹ nhàng, dễ gặp quý nhân, vận thi cử tốt, sự nghiệp bình ổn, ít chịu bị động, thích hợp làm công chức, thường làm cho công ty có danh tiếng. Phùng Hóa Kị có thể học trường tư hoặc quá trình học tập, thi cử gặp trắc trở.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_13",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Mệnh chủ hanh thông về công việc và sự nghiệp, công việc suôn sẻ, ổn định, có quý nhân giúp đỡ. Phù hợp với công việc văn hóa, giáo dục, có thể được sếp coi trọng, có địa vị trung bình. Vận trình học hành suôn sẻ, chủ có danh vọng, học được ở các trường danh tiếng. Mệnh chủ duyên khác giới tốt, cũng nên chú ý đến chuyện tình cảm nơi công sở (tùy nam tinh nữ tinh mà định).",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_14",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Hóa Khoa năm sinh nhập cung Quan Lộc:\n* Được quý nhân phò trợ (cung Quan Lộc chính là vị trí của vận khí).\n* Ổn định có thừa, nhưng đề phòng không đủ sự dứt khoát kiên quyết.\n* Hợp với làm công ăn lương, các công việc thiết kế hoặc làm quan văn, dân sự.\n* Đề phòng làm việc \"có nhiều do dự\".",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_15",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Hóa Khoa nhập cung Quan Lộc: Sự nghiệp thuận lợi, công việc ổn định, không cao không thấp, được quý nhân trợ giúp đề bạt, có danh tiếng.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_16",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Niên Khoa tọa Quan Lộc:\n- Giỏi hoạch định, lập kế hoạch, thịch hợp theo ngành văn, giáo dục, trợ tá trong công việc và sự nghiệp.\n- Công việc thuận lợi, khi ổn định thích được an định, có quý nhân tương trợ.\n- Quá trình học tập diễn ra suôn sẻ, cả đời yêu thích việc học.\n- Chủ có công danh.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tượng số tâm học - Lưu Kim Phủ",
+        "author": "Lưu Kim Phủ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_17",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa Khoa",
+      "raw_text": "Quan lộc cung tọa niên Khoa.\nQuan lộc cung chủ trạng thái công việc, nghề nghiệp kiếm tiền, vận khí vị.\nHóa Khoa năm sinh là lực lượng ôn hòa của tạo hóa mạng lại.\nSuy lý tượng nghĩa của Khoa: Văn chất, lý trí, ôn hòa.\nThái độ của Khoa là thong thả chậm rãi, dễ do dự thiếu quyết đoán.\nQuan lộc cung tọa niên Khoa, công việc bình ổn.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa Khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_18",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa Khoa",
+      "raw_text": "Khoa nhập Quan Lộc: Công việc ổn định, lâu dài. Nên hợp với làm nghề giáo dục, văn hóa. Trên công việc có được nhiều người giúp đỡ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa Khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_19",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Sự nghiệp cung tọa sinh niên Lộc:\nSự nghiệp cung chủ trạng thái làm việc, phương thức kiếm tiền, vận khí.\nSự nghiệp tọa sinh niên Lộc, trạng thái làm việc rất thuận lợi trôi chảy. Xem cụ thể cách thức kiếm tiền cần lưu ý tham khảo các thông tin khác trên lá số mới có thể dự đoán chính xác. Nhưng dù sao có niên Lộc ở cung sự nghiệp tất nhiên công việc thuận lợi. Nhưng có thành tựu hay không phải xem tam phương điền tật bào là các cung thành quả của đời người, đặc biệt bào là cung sự nghiệp của tật ách cho biết trực tiếp thành tựu sự nghiệp.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình phi tinh Lương Phái - Alex Alpha",
+        "author": "Alex Alpha"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_20",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Hóa Lộc nhập quan lộc, bận rộn, đắc quý nhân, có năng lực lập nghiệp, địa vị, tài phú, lập nghiệp dễ kiếm tiền. Phùng Không Kiếp không nên thường thay đổi công việc, ngộ phúc tinh Lộc tồn không dễ thay đổi công việc. Hóa Lộc phùng Khoa Quyền tương hợp có thể đạt chức vị cao. Phùng Kị sát xung phá, thường ít chuyên tâm cho công việc, thiếu nhẫn nại, thích công việc nhẹ nhàng. Quan lộc vị là chỗ chi tiêu, Lộc nhập sẽ bị tiêu hao, như dễ có chi tiêu lớn, bận rộn mà không được hưởng thụ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_21",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Trong nghề nghiệp hoặc môi trường làm việc nhân duyên tương đối tốt, nhờ nhân duyên mà đắc tài. Trong công việc và sự nghiệp bận rộn nhưng nhờ đó mà kiếm được tiền, làm việc vui vẻ, tuy không hoàn toàn tốt nhưng vẫn có thề nhận được sự tín nhiệm ở nơi làm việc. Đó là công việc kiếm tiền khả quan và gặp nhiều may mắn trong sự nghiệp. Học lực khá và giỏi. Nhưng cũng phải thận trọng, nếu như tinh diệu hóa Lộc có cùng tính với mệnh chủ, dễ ngoại tình nơi công sở (ngọ thê).",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_22",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Hóa Lộc năm sinh nhập cung Quan Lộc:\n* Tiếp nhận cơ hội đơn lẻ một cách vững chắc.\n* Chức vị khá như ý.\n* Người phối ngẫu có duyên tốt với bên ngoài.\n* Sức khỏe của con cái tốt (cung Quan Lộc chính là [cung Tật Ách của cung Tử Tức]).\n* Đề phòng tình cảm ngoài hôn nhân hoặc hôn nhân không giá thú (khi có đào hoa tinh).",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_23",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Hóa Lộc nhập cung Quan Lộc: Tự lập, năng lực công tác tốt, vận khí cuộc đời khá tốt, thích đầu tư, trong sự nghiệp có thể phát huy tài năng của mình, dễ được sự ngưỡng mộ và xem trọng của thủ trưởng mà được lên chức, sự nghiệp hiển đạt, làm ăn buôn bán hưng vượng; Phu Thê duyên dày.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_24",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Niên Lộc tọa Quan Lộc:\n- Có mối quan hệ nhân duyên tốt trong công việc hoặc sự nghiệp, vì vậy mà có được tiền tài nhờ vào những mối nhân duyên đó.\n- Kiếm được tiền bạc trong khi bận rộn làm việc, thuộc phạm vi chính tài.\n- Vận học hành và thành tích học tập tốt.\n- Vận sự nghiệp tốt.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tượng số tâm học - Lưu Kim Phủ",
+        "author": "Lưu Kim Phủ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_25",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa Lộc",
+      "raw_text": "Lộc nhập Quan Lộc: Thông minh, nhanh nhẹ, năng động đầu tư sự nghiệp kiếm tiền, kiếm được nhiều tiền, tay trắng làm lên sự nghiệp. Mặt dù chưa thật sự chuyên tâm vào công việc, nên không thu được kết quả tốt. Không thích đọc sách, nhưng đạt được hiệu quả công việc và học tập. Vợ chồng cảm tình tốt, cũng có lúc lạnh nhạt với nhau.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa Lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_26",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa khoa",
+      "raw_text": "Lộc Khoa cách cục\n- Thích hợp với ngành nghề danh tiếng và chủ đạo trong liên kết.\n- Thích hợp ngành nghề ổn định hoặc không có tính mạo hiểm lớn.\n- Thích hợp ngành nghề làm đối tác, cộng tác, liên minh, trung gian, môi giới.\n- Thích hợp làm công, viên chức, quân sư, cố vấn, ủy thác, chế tạo, nghề cá nhân.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_27",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa khoa",
+      "raw_text": "Lộc Khoa - Nhân duyên cộng nghiệp cách\n- Bố đại hòa thượng: Tay ươm mầm xanh khắp cánh đồng, cúi xuống liền thấy mặt trời trong nước; Tâm địa thanh tịnh lấy làm đạo, lùi bước vốn là tiến bước. \n- Giải thích thực tế: Phú quý trong mệnh không phải cưỡng cầu mà có, mà là chờ đợi khi nhân duyên chín muồi.\n- Mệnh cách của tùy tính nhân duyên và hợp tác đối tác.\n- Tìm sự phát triển trong ổn định, là mệnh cách của thần không phải là vua.\n- Tài năng và năng lực phải nhờ bạn bè hoặc người ngoài huấn luyện.\n- Lấy nhu khác cương, lấy thoái làm tiến, mệnh cách của dĩ hòa vi quý.\n- Không cầu mà được lợi ích ngoài sức tưởng tượng. \n- Nhân vật đại biểu: Đoàn đội và công chức.\n- Lễ vật của trời: Con người,\n- Tính cách thành công: Thay đổi những phương pháp thất bại trước đây, màu sắc cuộc đời sẽ thay đổi.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_28",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa khoa",
+      "raw_text": "Lộc Khoa cách cục\n- Phối hợp, nhẫn nại, tinh tế, chấp hành là bản tính của nó.\n- Chia sẻ lợi ích là lợi ích lón nhất.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_29",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa khoa",
+      "raw_text": "- Bản tính thích hợp lấy nhu khắc cương, dĩ hòa vi quý.\n- [Thành cách] tổ chức thành đoàn đội, [không thành cách] làm công.\n- Nắm bắt cơ hội đối với công ty hoặc người đó hai lần.\n- Mệnh cách trong ổn định mới có thể phát triển.\n- Tình cảm nam nữ rơi vào lưới tình trong vô thức.\n- Chủ định trong mệnh là mệnh cách của xảo nghệ an thân.\n- Kinh doanh theo tiên thiên an định mới có thể lâu dài.\n- Trọng tâm của cuộc đời phải học cách dựa vào thương hiệu kiếm tiền.\n- Phú quý không phải là cưỡng cầu, mà là chở đợi mà tới.\n- Thích tiền tiền ở nơi xa, danh tiếng mới là lâu bền.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_30",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa khoa",
+      "raw_text": "Lộc + Khoa: Có danh, có lợi, trường thọ, Danh lớn hơn lợi, thường theo nghề chính trị.\nKhoa Lộc trùng phùng, Chu Bột hân nhiên nhập tướng. (lưu niên tam hợp Khoa Lộc, lại phùng đại hạn Khoa Lộc, hiệu quả càng rõ).\nMinh Khoa ám Lộc, vị trí tam đài.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_31",
+      "condition_text": "Cung Quan lộc an tại Dần có Hữu bật,Hóa khoa",
+      "raw_text": "Hữu bật Hóa Khoa nhập quan lộc, đa trợ lực, lợi cho học hành, thi cử, công việc, thăng tiến thuận lợi.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hữu bật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_32",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang,Hóa lộc",
+      "raw_text": "Tham lang Hóa Lộc nhập quan lộc, chủ biện tài, mang tính đầu cơ, tính vui vẻ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_33",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Quan lộc vị Hóa Kị nhập điền trạch, chủ đầu tư, nhưng tiền kiếm được ít mà lao bác.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_34",
+      "condition_text": "Cung Quan lộc an tại Dần có Lộc Phối",
+      "raw_text": "Quan lộc Hóa Lộc nhập phu thê, sự nghiệp được phối ngẫu trợ lực, bình thuận kiếm tiền.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_35",
+      "condition_text": "Cung Quan lộc an tại Dần có Lộc Phối",
+      "raw_text": "Từ Quan Lộc cung hóa Lộc đến Phu Thê cung, chiếu Quan Lộc cung\n1. Song Lộc ở cung Phu Thê không có xuyến liên, Kị bị phá tổn, dễ bị hao tài tốn của cho phối ngẫu hoặc bản thân, bạn bè khác phái, chi phí sinh hoạt lớn, giao tế tiếp khách nhiều mà lãng phí tiền bạc và thời gian.\n2. Mệnh chủ cùng phối ngẫu hoặc bạn khác giới của họ đa phần thông minh, cơ trí, có lòng hiếu kỳ có sáng tạo, nhưng lại có xu hướng hư ảo, thiếu thực tế.\n3. Mệnh chủ cùng phối ngẫu hoặc bạn bè khác phái giỏi khai sáng tài nguyên, thích đầu cơ, thích đi tắt đón đầu, phi thực tế, hao tài tốn của, lãng phí tiền bạc, dễ tiền đến tiền đi.\n4. Mệnh chủ dễ phá tài vì người khác phái.\n5. Song Lộc ở cung Phu Thê có xuyến liên, Kị làm chỉ tiêu.\n6. Mệnh chủ hoặc phối ngẫu hoặc bạn bè khác giới, cư xử hợp tình hợp lý, đối xử nhân hậu, rộng lượng, quan hệ nhân tế mọi bề suôn sẻ.\n7. Mệnh chủ hoặc phối ngẫu hoặc bạn bè khác phái tìm cách giải quyết công việc, họ đều giải quyết công việc theo phương thức hợp tác, đôi bên cùng có lợi, chia sẻ và phối hợp.\n8. Mệnh chủ hoặc người phối ngẫu hoặc người khác phái dễ trở thành người lãnh đạo, có tầm nhìn của nhà kinh doanh, giỏi tạo ra của cải.\n9. Mệnh chủ hoặc người phối ngẫu hoặc nhóm bạn khác giới kết giao với nhau một đời có quý nhân phù trợ, được trưởng bối nâng đỡ, được cùng lứa ủng hộ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_36",
+      "condition_text": "Cung Quan lộc an tại Dần có Lộc Phối",
+      "raw_text": "Hoàn cảnh sự nghiệp khá tốt đẹp, có không gian để phát triển, có thể được người phối ngẫu tương trợ, phát triển theo nhiều hướng, có thể mang tài phú đến cho gia tộc. Trong công việc hay sự nghiệp, quý nhân phần nhiều là người khác giới. Rất có duyên với người khác giới, dễ gặp đào hoa ở bên ngoài.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_37",
+      "condition_text": "Cung Quan lộc an tại Dần có Lộc Phối",
+      "raw_text": "事业禄入夫妻:\n1. 事业顺畅、赚钱〈禄照事业〉。\n2. 婚后诸事顺遂。\n3. 适合以「异性」对象为客户。\n4. 「信誉」好、宜出口贸易〈禄出〉, 适合公关、销售业务。也适合婚友社。\n5. 特种营业〈偏财星〉。房屋销售、中介〈偏财星〉家电、家具〈夫妻为田宅的共宗六位〉。\n6. 防「婚外情」〈桃花星〉〈事业宫─婚姻之外非正常的感情位〉。\nSự nghiệp Hóa lộc nhập cung phu thê:\n1. Sự nghiệp thuận lợi, kiếm tiền tốt (Lộc chiếu sự nghiệp).\n2. Sau hôn nhân mọi việc suôn sẻ.\n3. Phù hợp làm khách hàng là \"người khác giới\".\n4. \"Tín dụng\" tốt, nên làm xuất khẩu (Lộc xuất), thích hợp với quan hệ công chúng, kinh doanh bán hàng. Cũng phù hợp với dịch vụ mai mối hôn nhân.\n5. Kinh doanh đặc thù (tài tinh lệch). Bán nhà, môi giới (tài tinh lệch), đồ gia dụng, nội thất (vợ chồng là vị trí chung thứ sáu của điền trạch).\n6. Phòng ngừa \"ngoại tình\" (đào hoa tinh) (cung sự nghiệp – vị trí tình cảm bất thường ngoài hôn nhân).",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_38",
+      "condition_text": "Cung Quan lộc an tại Dần có Lộc Phối",
+      "raw_text": "事业禄入夫妻: \n1. 事业顺畅、赚钱〈禄照事业〉。\n2. 婚后诸事顺遂。\n3. 适合以「异性」对象为客户。\n4. 「信誉」好、宜出口贸易〈禄出〉, 适合公关、销售业务。也适合婚友社。\n5. 特种营业〈偏财星〉。房屋销售、中介〈偏财星〉家电、家具〈夫妻为田宅的共宗六位〉。\n6. 防「婚外情」〈桃花星〉〈事业宫─婚姻之外非正常的感情位〉。\nSự nghiệp Hóa lộc nhập cung phu thê: \n1. Sự nghiệp trôi chảy, kiếm tiền (lộc chiếu sự nghiệp). \n2. Sau khi cưới mọi chuyện thuận toại. \n3. Thích hợp khác phái đối tượng thuê nhà. \n4. Uy tín tốt, xuất nhập khẩu (lộc xuất) thích hợp giao tiếp, tiêu thụ nghiệp vụ. Cũng thích hợp hôn hữu xã (kiểu mai mối). \n5. Buôn bán đặc chủng (thiên tài tinh). Phòng ốc tiêu thụ, môi giới (thiên tài tinh) đồ điện, đồ dùng trong nhà (phu thê điền trạch 1 - 6 cộng tông). \n6. Phòng hôn ngoại tình (đào hoa tinh). (Sự nghiệp cung - hôn nhân là vị trí phụ xem tình cảm).",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_39",
+      "condition_text": "Cung Quan lộc an tại Dần có Lộc Phối",
+      "raw_text": "Quan lộc cung Hóa Lộc nhập cung Phu thê, sự nghiệp có thệ được phối ngẫu trợ giúp, mà suông sẻ kiếm tiền.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_40",
+      "condition_text": "Cung Quan lộc an tại Dần có Quyền Mệnh",
+      "raw_text": "Quan lộc Hóa Quyền nhập mệnh, bận rộn vì sự nghiệp, tự nắm quyền, năng lực lập nghiệp mạnh mẽ, nặng tinh thần trách nhiệm.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_41",
+      "condition_text": "Cung Quan lộc an tại Dần có Quyền Mệnh",
+      "raw_text": "Quan lộc Hóa Quyền nhập mệnh.\nThành tựu quan lộc cung của mệnh tạo nhập mệnh cung và làm cho mệnh cung của mệnh tạo hưng thịnh.\n1. Năng lực cao trong công việc, sự nghiệp của mệnh tạo, tạo cho mệnh tạo sự tự tin.\n2. Năng lực cao trong công việc, sự nghiệp tạo nên sự tự tin, lập nghiệp dễ thành, có thể phát huy sáng tạo. Sự nghiệp càng làm càng lớn, chức vị đắc ý.\n3. Năng lực cao trong công việc, sự nghiệp tạo sự tự tin, làm cho mệnh tạo can đảm, tích cực, phát triển. Thích hợp lãnh đạo, khai phá.\n4. Quyền hỷ Lộc hội càng có không gian phát triển. Hội Khoa tất tự tin, tinh tế.\nHội Kị công việc nặng nhọc, tốn sức lực.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_42",
+      "condition_text": "Cung Quan lộc an tại Dần có Quyền Mệnh",
+      "raw_text": "Từ Quan Lộc hóa Quyền đến Mệnh cung, chiếu Thiên Di cung\n1. Theo đuổi cảm giác thành tích để thỏa mãn mong muốn kiếm tiền.\n2. Lấy kiếm tiền làm cảm giác thành công trong cuộc sống.\n3. Sự nghiệp thích quyền uy, tranh giành quyền lực, thống trị và chỉ huy người khác.\n4. Sử dụng tốt các kỹ năng lãnh đạo, chỉ huy, chiến lược, kỹ năng quản lý hoặc kỹ năng chuyên môn để tìm kiếm sự giàu có và lợi nhuận.\n5. Tài năng, được người khác ngưỡng mộ, tán thưởng, khẳng định mình và được người khác ủy quyền, phục tùng, ủng hộ.\n6. Không muốn trở nên tầm thường, theo đuổi cảm giác thành công.\n7. Lao lực mệnh, nghiệp mệnh, việc gì cũng phải nhúng tay vào.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_43",
+      "condition_text": "Cung Quan lộc an tại Dần có Quyền Mệnh",
+      "raw_text": "Sáng suốt, tài cán, phản ứng lanh lẹ, có thể phát triển sự nghiệp từ nhỏ thành lớn. Xem trọng sự nghiệp, lao tâm lao lực, có thể sáng lập cơ nghiệp, nắm quyền, được người ta kính trọng, có thành tựu. Có năng lực làm việc, không ngừng tiến bộ, bận rộn vì sự nghiệp.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_44",
+      "condition_text": "Cung Quan lộc an tại Dần có Quyền Mệnh",
+      "raw_text": "Quan [Quyền nhập] Mệnh:\n* Vận khí mạnh mẽ, dễ được đề bạt, nước chảy thành sông có thể phát huy sáng tạo. Thường được chức vụ đắc ý, sự nghiệp càng làm càng lớn.\n* Vốn có điềm báo trước về kiến thức và tự tin, tích cực và khai sáng.\n* Dễ thăng tiến, sáng lập sự nghiệp. Nắm giữ nghiệp vụ, kỹ thuật chuyên môn rất giỏi. Thích hợp để lãnh đạo, mở rộng, khai phá.\n* Quyền ưa có Lộc đến hội, sẽ càng có thêm không gian phát huy. Hội với Khoa thì kiêm cả quả cảm và tinh tế. Hội với Kị thì làm việc căng thẳng, khiến người khác hết sức buồn rầu.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_45",
+      "condition_text": "Cung Quan lộc an tại Dần có Quyền Mệnh",
+      "raw_text": "Quan lộc cung Hóa Quyền nhập Mệnh cung, bận rộn vì sự nghiệp, bản thân nắm quyền, năng lực gây dựng sự nghiệp mạnh.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_46",
+      "condition_text": "Cung Quan lộc an tại Dần có Khoa Phúc",
+      "raw_text": "Quan lộc Hóa Khoa nhập phúc đức, tài lộc bình ổn, không biến động lớn.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_47",
+      "condition_text": "Cung Quan lộc an tại Dần có Khoa Phúc",
+      "raw_text": "Quan lộc Hóa Khoa nhập phúc đức.\nĐiềm đạm trong công việc, dễ thích nghi, thích hợp nghề nghiệp cần sự tinh tế, mỹ học, tinh thần, tôn giáo, nghệ thuật.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_48",
+      "condition_text": "Cung Quan lộc an tại Dần có Khoa Phúc",
+      "raw_text": "Từ Quan Lộc hóa Khoa đến Phúc Đức cung, chiêu Tài Bạch cung\n1. Chú ý đến sự hưởng thụ tinh thần, cảm nhận, bầu không khí, lý tưởng, cầu toàn.\n2. Tính tình tao nhã, dịu dàng và tinh anh, thích lục nghệ.\n3. Mệnh chủ là người trong ngoài nhất quán, thanh tịnh.\n4. Thân thể kém nhiều bệnh, bệnh mãn tính và bệnh nghề nghiệp.\n5. Cũng sẽ tham gia vào các câu lạc bộ thực hành tôn giáo và đọc sách.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_49",
+      "condition_text": "Cung Quan lộc an tại Dần có Khoa Phúc",
+      "raw_text": "Nguồn tiền bình ổn thuận lợi, không dao động lớn, có kế hoạch điều chuyển vốn liếng rõ ràng, không lo bị lãng phí. Công việc hay sự nghiệp phù hợp với hứng thú, có thể vận dụng được sở học. Vợ chồng đều thích hợp đi làm hưởng lương hoặc theo ngành văn hóa giáo dục, trợ lực lẫn nhau.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_50",
+      "condition_text": "Cung Quan lộc an tại Dần có Khoa Phúc",
+      "raw_text": "事业科入福德:\n1. 适合精致、美学、精神、宗教、艺文事业。\nSự nghiệp Hóa khoa nhập cung phúc đức:\n1. Phù hợp với ngành tinh tế, mỹ học, tinh thần, tôn giáo, nghệ văn.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_51",
+      "condition_text": "Cung Quan lộc an tại Dần có Khoa Phúc",
+      "raw_text": "事业科入福德: \n1. 适合精致、美学、精神、宗教、艺文事业。\nSự nghiệp Hóa khoa nhập cung phúc đức: \n1. Thích hợp tinh xảo, mỹ học, tinh thần, tôn giáo, văn nghệ sự nghiệp.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_52",
+      "condition_text": "Cung Quan lộc an tại Dần có Khoa Phúc",
+      "raw_text": "Quan lộc cung Hóa Khoa nhập cung Phúc đức, nguồn tài vững vàng, không có phong ba lớn.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_53",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Quan lộc Hóa Kị nhập điền trạch. (Đối với người)\n1. Công việc sự nghiệp của mệnh tạo thành mối lo lắng của gia đình, cần được gia đình trợ giúp (Kị, tích lũy vất vả).\n2. Công việc làm cả gia đình bận rộn.\nQuan lộc Hóa Kị nhập điền trạch. (Đối với sự)\n1. Mệnh tam phương Kị nhập thu tàng tam phương, cá tính nội tâm, thận trọng, ưa an định, không nhiệt tình với bạn, ít giao tiếp xã hội. (xung nô bộc tam phương).\n2. Trong công việc sự nghiệp, cá tính thận trọng, bình tĩnh, tận tụy. Thích hợp làm công chức.\n3. Nếu người làm kinh doanh, có thể vừa là nhà ở vừa làm cửa hàng.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_54",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Quan lộc Hóa Kị nhập điền trạch, có thể kinh doanh bất động sản hoặc mở cửa hàng, nhưng thu nhập không cao, lại lao bác, Thích hợp kinh doanh vốn tiền mặt luân chuyển hàng ngày (buôn bán nhỏ).",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_55",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Quan Lộc hóa Kị nhập tuyến Tử Điền nguyên nhân chuyện không may tất có liên quan đến đào hoa, gia tộc, phòng ốc nhà cửa.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Khai quán nhân tử vi đẩu số - Phương Ngoại Nhân - Linh Chi biên dịch",
+        "author": "Linh Chi biên dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_56",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Từ Quan Lộc hóa Kị đến Điền Trạch cung, xung Tử Nữ cung\n1. Coi trọng gia đình và có khả năng gánh vác những trách nhiệm của gia đình.\n2. Cá tính cố chấp, dễ sinh cãi vã.\n3. Công việc sự nghiệp của mệnh chủ dễ làm công việc kinh doanh của gia đình.\n4. Mệnh chủ hoặc phối ngẫu bận công việc mà không để ý chăm sóc con cái.\n5. Khi công việc và sự nghiệp không suôn sẻ, cũng rất dễ phải ngồi tù.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_57",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Không nên hợp tác làm ăn với người khác, nên làm ăn bằng tiền mặt. Mở tiệm tại nhà hoặc biến phòng khách thành phòng làm việc. Có thể là môi giới mua bán bất động sản để hưởng hoa hồng; muốn mua bán bất động sản, không đủ vốn. Sự nghiệp dễ bị tan rã hợp tác, gia vận không được hanh thông, thuận lợi. Dễ có tình nhân ở bên ngoài, sẽ gặp nhiều phiền phức, rắc rối.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_58",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "事业忌入田宅:\n1. 「守成」、「安定」、「尽责」。常公职、大企业上班安定到退休。\n2. 与家人胼手砥足的现金生意〈忌, 点滴累积〉。可以「家、店合一」。\n3. 对朋友不多情, 「少社交」〈冲交友三方〉。\n4. 收藏星〈忌〉入「收藏宫」, 适得其所。\nSự nghiệp Hóa kỵ nhập cung điền trạch:\n1. \"Giữ thành\", \"ổn định\", \"tận trách\". Thường làm công chức hoặc làm việc ở doanh nghiệp lớn ổn định đến lúc nghỉ hưu.\n2. Kinh doanh tiền mặt cùng gia đình bằng đôi tay và sự kiên trì (kỵ, tích lũy từng chút). Có thể \"nhà và cửa hàng hợp nhất\".\n3. Với bạn bè không đa tình, \"ít giao tiếp xã hội\" (xung tam phương Giao Hữu).\n4. Sao thu tàng (kỵ) nhập \"cung thu tàng\", vừa đúng chỗ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_59",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "事业忌入田宅: \n1. 「守成」、「安定」、「尽责」。常公职、大企业上班安定到退休。\n2. 与家人胼手砥足的现金生意〈忌, 点滴累积〉。可以「家、店合一」。\n3. 对朋友不多情, 「少社交」〈冲交友三方〉。\n4. 收藏星〈忌〉入「收藏宫」, 适得其所。\nSự nghiệp Hóa kỵ nhập cung điền trạch: \n1. Thủ thành, an định, tẫn trách. Công chức xí nghiệp đi làm an ổn. \n2. Cùng người nhà biền thủ chỉ túc buôn bán tiền mặt (kỵ, tích lũy từng chút), có thể gia điếm hợp nhất. \n3. Đối với bằng hữu ít giao tình, thiểu xã giao (xung giao hữu tam phương). \n4. Thu tàng tinh Hóa kỵ nhập cung thu tàng cung, thích cất giữ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_60",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Cung Quan Lộc hóa kỵ phi nhập cung Điền Trạch (đồng loại), có ý làm bất động sản hoặc kiếm tiền mang về nhà, thuộc tượng cát.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số - Phi tinh giải mã - Ông Phúc Dụ",
+        "author": "Ông Phúc Dụ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_61",
+      "condition_text": "Cung Quan lộc an tại Dần có Kỵ Điền",
+      "raw_text": "Quan lộc cung Hóa Kị nhập cung Điền trạch, kinh doanh bất động sản nhưng kiếm được ít, có nhiều tranh chấp.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "quan_loc_stream_62",
+      "condition_text": "Cung Quan lộc an tại Dần có M chất",
+      "raw_text": "Đoán mệnh thực tế: trong mệnh là người sẽ có thành tựu.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M chất"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_63",
+      "condition_text": "Cung Quan lộc an tại Dần có M chất",
+      "raw_text": "Cung Quan lộc có M chất đoán mệnh thế nào?\nĐoán mệnh thực tế: Quan lộc cung về \"sự\", khi đoán sự nghiệp phải thế nào?\nĐoán tồn tại: đây là vấn đề của giai đoạn nâng cao, cần phối hợp nhiều công thức mới có thể đoán mệnh chính xác.\nĐoán quý nhân: chỉ cần nỗ lực làm việc, nhất định gặp được quý nhân giúp đỡ bạn. \nĐoán mắc nợ: đây là vấn đề của giai đoạn nâng cao, cần phối hợp nhiều công thức mới có thể đoán mệnh chính xác.\nĐoán hữu duyên: chủ định trong mệnh là người kiên trì khát vọng, sự nghiệp nhất định có thể thành công.\nĐoán hữu vận: chủ định trong mệnh bồi dưỡng một sở trường chuyên môn, chuyên nghiệp, có thể nhờ xảo nghệ an thân.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M chất"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_64",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Sự nghiệp vững vàng, duy trì trình độ tương đối, khó khăn bất trắc thường xuyên có trợ lực.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_65",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Sự nghiệp vững vàng, khó khăn bất trắc là có trợ lực.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_66",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Chuyên tâm sự nghiệp, hành sự không kỹ, sự nghiệp tốt, có khả năng thành công.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_67",
+      "condition_text": "Cung Quan lộc an tại Dần có M Chất",
+      "raw_text": "Mệnh cách của tự lực cánh sinh: biểu thị \"mệnh, tài, quan\" một cung vị bất kì có M chất.\nPhân tích thực tế: biểu thị trước hết phải dựa vào nỗ lực của bản thân, mới có thể tìm được quý nhân tương trợ mà thành công.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Chất"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_68",
+      "condition_text": "Cung Quan lộc an tại Dần có M Điền",
+      "raw_text": "Theo nghề bất động sản sẽ kiếm được tiền. Mua bán bất bất động sản sẽ kiếm được tiền.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_69",
+      "condition_text": "Cung Quan lộc an tại Dần có M Mệnh",
+      "raw_text": "Mệnh tiên thiên lao tâm, lao bác. Là người theo đuổi thành tựu sự nghiệp.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Mệnh"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_70",
+      "condition_text": "Cung Quan lộc an tại Dần có M Phối",
+      "raw_text": "Tìm phối ngẫu ở nơi làm việc. Sự nghiệp cùng phối ngẫu.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Phối"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_71",
+      "condition_text": "Cung Quan lộc an tại Dần có M Phúc",
+      "raw_text": "Công việc hứng thú sẽ kiếm tiền. BẨm sinh là người theo đuổi ước mơ.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Phúc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_72",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa khoa",
+      "raw_text": "Sau khi thành danh mới được lợi, tài chính vững vàng, có tài cán.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_73",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa khoa",
+      "raw_text": "Là tổ hợp cát; biểu thị có tài cán, công danh rạng rỡ (danh lớn hơn lợi), thành danh rồi mới thu được lợi, tài lợi khá bình ổn.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số tinh hoa tập thành - Đại Đức Sơn Nhân",
+        "author": "Đại Đức Sơn Nhân"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_74",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc,Hóa Khoa",
+      "raw_text": "化禄与化科同宫: 化禄属金, 化科属木, 金克木, 刀斧能砍伐树木, 也能雕琢木头为器皿, 所以, 会加强化科的力量, 引喻人命就有评价极高的文采表现。\nHóa Lộc cùng Hóa Khoa đồng cung: Hóa Lộc thuộc kim, Hóa Khoa thuộc mộc, kim khắc mộc, dao búa có thể chặt cây cối, cũng có thể đẽo gọt cây thành đồ vật, cho nên, sẽ tăng cường lực lượng Hóa Khoa, dẫn đến Mệnh người có biểu hiện tài văn chương cực cao.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "quan_loc_stream_75",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang",
+      "raw_text": "Tham Lang nhập cung quan lộc, phấn đấu gian khổ, trước 30 tuổi vận trình không tốt, sau 30 tuổi dần dần chuyên biến theo hướng tốt.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_76",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang,Hóa lộc",
+      "raw_text": "Tham Lang Hóa Lộc nhập cung quan lộc, cung tài bạch, là ý tượng: kiếm được tiền.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_77",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang",
+      "raw_text": "Sao Tham Lang: Là sao tài nghệ, vừa sẵn có nghị lực kiên nhẫn, cho nên tính thích nghi của nó khá rộng, nhưng không rời xa phạm vi các nghề nghiệp \"Rượu, sắc, tài, khí\", như: Ăn uống, thực phẩm, rượu chè, vui chơi, trang hoàng nội thất, trang trí, thiết kế quần áo trang sức, thương nghiệp. Trong đó chữ \"Sắc\" là chỉ cả hai phương diện về tài hoa tạo hình mỹ thuật và tình dục. Cho nên nếu mà Tham Lang lạc hãm thì phần nhiều sẽ lưu lạc trong chốn phong trần, nhưng Hóa Kị hoặc Không, Kiếp đến chế hóa thì ngược lại sẽ có thể nết na đoan chính.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích - Từ Tăng Sinh",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_78",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Sang nhỏ (tiểu quý).",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_79",
+      "condition_text": "Cung Quan lộc an tại Dần có Hữu bật",
+      "raw_text": "Chủ về tối vượng cho võ nghiệp, không lợi với văn nhân. Cùng bại Thiên Phủ Xương Khúc ở cung tài bạch và cung quan lộc là song mỹ. Hãm địa chủ về khi thành khi bại, bị khiến trách, hạ chức. Thấy Kình Dương Đà La Hỏa Linh Không Kiếp chủ về bị truất giáng.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hữu bật"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_80",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang",
+      "raw_text": "Nhập miếu, gặp được Hỏa Linh là chủ về ở vị nắm giữ đại quyền trong binh nghiệp. Hãm địa là chủ về chi đến địa vị tham mưu.\nThêm Kình Dương Đà La Không Kiếp là chủ về bình thường.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_81",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa khoa",
+      "raw_text": "Là điềm đại cat, là hiện thân của thành công, thịnh vượng, phát đạt, thuận lợi, danh tiếng. Một đời sự nghiệp vận khí cực đẹp. Là người có học thức chuyên môn hết sức ưu tú, với công việc có năng lực tính toán tốt, có tầm nhìn tốt, dễ nhận được sự đánh giá tốt của cấp trên, đồng nghiệp và người ngoài. Sao nào hóa Khoa ở cung quan lộc thì tín hiệu tốt của sao ấy tăng gấp bội. Là người có thể danh ghi bảng vàng. Gia hội Hóa Lộc, Hóa Quyền và Xương Khúc thì chắc chắn quý hiển. Hội hợp với Thiên Khôi, Thiên Việt thì nổi danh thiên hạ. Hóa Khoa và Kình Đà, Không Vong, Hóa Kỵ đồng cung là hãm, là có tài năng nhưng khó có thể phát huy.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa khoa"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_82",
+      "condition_text": "Cung Quan lộc an tại Dần có Hóa lộc",
+      "raw_text": "Là điềm đại cát, là hiện thân của thành công, thịnh vượng, uy quyền, phát đạt, thuận lợi. Một đời sự nghiệp vận khí cực đẹp, có thể duy trì thịnh vượng dài lâu không suy thoái, ít gặp trở ngại hoặc bất toại ý, đồng thời biết cách sử dụng tiền bạc, sự nghiệp phát triển, có thể đạt được thành tựu tương đối cao về tài phú, địa vị, danh tiếng. Sao nào Hóa Lộc ở cung quan lộc thì dấu hiệu may mắn tốt đẹp của sao ấy tăng gấp bội. Nếu có Lộc Tồn, Thiên Mã, Hóa Quyền, Hóa Khoa gia hội thì đại phú đại quý.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Hóa lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_83",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang",
+      "raw_text": "Cách cục khai sáng, sự nghiệp thăng trầm nhiều biến đổi. Không thích hợp với những công việc ổn định, đơn điệu và bình thường. Hay làm những nghề nghiệp không bị thúc bó, có thể biến hóa, giàu tính đầu cơ, mạo hiểm, có rất nhiều mối quan hệ trong giao tiếp, tiệc tùng mà hình thành công việc, có thể kết giao với người quyền quý, quan chức chính phủ. Nhập Miếu thì sự nghiệp sớm hưng thịnh, có thể đạt được nhiều cơ hội bất ngờ mà thành công. Gặp Hỏa Linh đồng cung, Văn Võ chức quyền quý, đảm nhiệm nhiệm vụ quan trọng, phú quý song toàn. Tam phương tứ chính không có Kình Đà Không Kiếp mà hội Khoa Quyền Lộc thì là nhân vật quan trọng trong giới chính trị hoặc thương gia giàu có. Nếu gặp Tả Hữu Khôi Việt thì sự nghiệp phát triển thuận lợi, cơ hội may mắn nhiều. Tham Lang Bình hòa hoặc Hãm, không có cát tinh đồng cung thì sự nghiệp không bình ổn, làm nhiều mà công lao ít, nếu như tam phương có cát tinh thì có thể phát triển thương nghiệp. Thêm Xương Khúc thì chủ kế hoạch hỗn loạn, chính sự đảo điên. Kình Đà, Không Kiếp đồng thủ, là người bình thường, khó có sự nghiệp, thành công đáng kể.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "quan_loc_stream_84",
+      "condition_text": "Cung Quan lộc an tại Dần có Cung khí đại hung",
+      "raw_text": "Quan Lộc Cung Khí đại hung có 2 ý nghĩa:\n1. Học vấn thấp, thời niên thiếu không có duyên với việc học hành\n2. Sáng nghiệp trở thành ông chủ muộn",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung khí đại hung"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "quan_loc_stream_85",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang",
+      "raw_text": "Tham Lang chủ quan chức có liên quan đến tiền, sáng nghiệp muộn mà nên.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "quan_loc_stream_86",
+      "condition_text": "Cung Quan lộc an tại Dần có Tham lang,Cung khí đại hung",
+      "raw_text": "Tham Lang nhập Quan Lộc, Cung Khí đại hung, nếu ngộ Tham Lang Mộc là hỷ thần nếu đại vận vô phá thì có thể đạt đến trung học, nếu đại vận phù trợ Quan Lộc thì có thể đạt đen chuyên khoa. Trái lại, ngộ Tham Lang Mộc là kỵ thần thì chỉ là bằng cấp 1, cấp 2 mà thôi.",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Tham lang"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "quan_loc_stream_87",
+      "condition_text": "Cung Quan lộc an tại Dần có Cung Quan lộc",
+      "raw_text": "Quan Lộc cung biểu thị:\n1. Vận học hành thời niên thiếu.\n2. Sự nghiệp.\n3. Phối hợp với lưu niên đại vận có thể biết được khi nào có thể sáng nghiệp, làm ông chủ? Khi nào có thể thăng quan? Khi nào chuyển việc? Hay khi nào phát sinh quan sự? Trong thời gian bao lâu?\n4. Khi luân đoán nghề nghiệp của mệnh tạo, ta cũng dựa vào Quan Lộc cung: như làm quan chức, quân đội, hay công hoặc thương nghiệp ...\nTrong xã hội ngày nay, người có học vị cao như cử nhân, thạc sỹ, tiến sỹ thường có cơ hội cũng như tiềm năng phát triển hơn những người có học vị thấp. Do vậy, trong giới hạn của cuốn sách này, tôi xin được trinh bày vấn đề Quan Lộc cung liên quan đến vận học hành mà thôi. Hi vọng quý vị độc giả có thể nắm bắt được nội dung phương pháp, từ đó phát huy mà suy rộng ra đối với những vấn đề khác.\nViệc khán Quan Lộc cung cũng cần phải lấy Mệnh cung, Thân cung làm cơ sở. Điểm thứ hai là: trong hai đại vận đầu tiên, Quan Lộc cung có được phù ủng hay không sẽ là yếu tố chính quyết định học lực, hay học vị cao thấp của bản thân đương số. Ví dụ như, Cung Khí của Quan Lộc cung bản mệnh tốt, gặp đại vận Quan Lộc cung được vượng thế, nhất là lại đúng vào đại vận từ hơn 10 tuổi đến hơn 20 tuổi, thì đây chính là tượng: thân đắc quan phù.\n***\nTừ đầu đến giờ, tôi chỉ nếu 2 loại: Cung Khí đại cát và Cung Khí đại hung. Kỳ thực trong mỗi cung vị, Cung Khí đều được phân làm 4 thứ bậc: Cung Khí đại cát, Cung Khí hữu cát, Cung Khí tiểu hung và Cung Khí đại hung. Tôi cũng đã lưu ý quý vị ở phần đầu cuốn sá",
+      "conditions": {
+        "palace": "QUAN_LOC",
+        "position": "DAN",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung Quan lộc"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    }
+  ]
+}

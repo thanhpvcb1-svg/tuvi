@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19920403_mui",
+  "birth": {
+    "year": 1992,
+    "month": 4,
+    "day": 3,
+    "hour": "mui",
+    "hourName": "Mùi",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:18:28.535Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

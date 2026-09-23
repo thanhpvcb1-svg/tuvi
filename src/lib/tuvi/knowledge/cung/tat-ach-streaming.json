@@ -1,0 +1,747 @@
+{
+  "palace": "tat_ach",
+  "palace_name": "Tật Ách",
+  "source": "tuvi.cohoc.net",
+  "crawl_mode": "streaming",
+  "last_updated": "2026-09-22T03:00:19.300Z",
+  "total_blocks": 39,
+  "blocks": [
+    {
+      "block_id": "tat_ach_stream_1",
+      "condition_text": "Điểm \"xí hoa\" cung Tật ách là 2.69",
+      "raw_text": "Cung Tật ách chủ về: thân thể, sức khỏe, bệnh tật.\nTọa thủ: Thiên lương, Lộc tồn, Thiên hình. Xung chiếu: Thiên đồng, Địa kiếp, Địa không. Tam hợp: Thiên riêu - Thái dương, Thái âm, Hỏa tinh, Thiên khôi, Hóa quyền, Hồng loan. Giáp cung: Tử vi, Thiên tướng, Thiên khốc, Đà la, Văn khúc - Thất sát, Kình dương.\nNgũ hành khí của cung Đinh Tị: 20% HỎA (kị thần), 50% HỎA (kị thần), 30% THỔ (hỉ thần). Đây là cung khí hung nhiều hơn cát (hữu cát). Thiên lương hành THỔ là hỉ thần. Lộc tồn hành THỔ là hỉ thần. Thiên hình hành HỎA là kị thần.\nCung Tật ách can Đinh làm cho:\n- Thái âm Hóa lộc nhập cung Điền trạch (cung Tài bạch của cung Tật ách). Cung Điền trạch can Ất chuyển Thiên cơ Hóa Lộc nhập cung Nô bộc, Thái âm tự hóa kỵ.\n- Cự môn Hóa kỵ nhập cung Nô bộc (cung Phu thê của cung Tật ách). Cung Nô bộc can Ất làm Thiên cơ tự hóa lộc, chuyển Thái âm Hóa kỵ nhập cung Điền trạch.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Kinh nghiệm của một cao thủ Bắc phái",
+        "author": "Kinh nghiệm của một cao thủ Bắc phái"
+      },
+      "accuracy": 9
+    },
+    {
+      "block_id": "tat_ach_stream_2",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "Được gọi là \"Thuận thủy Kỵ\", là ý tượng: không tiết chế về phương diện tiền bạc, sức khỏe cũng có vấn đề, lúc vui chơi không tiếc tiền với bạn bè.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+        "author": "Tiên thiên tứ hóa phi tinh kỳ phổ"
+      },
+      "accuracy": 8
+    },
+    {
+      "block_id": "tat_ach_stream_3",
+      "condition_text": "Thuận Thủy Kị (流水忌): cung Tật ách phi hóa kỵ tới cung Nô bộc",
+      "raw_text": "\"Thuận thủy\" là nước chảy ra thuận theo tự nhiên. Nếu cung A phi Hóa Kị đến cung B, mà cung B không phải là đối cung của cung A, thì Hóa Kị này gọi là \"Thuận Thủy Kị\" hay \"Lưu Thủy Kị\". Cung A giống như một dòng nước chảy về cung B.\nTrường hợp này chủ việc cung Tật ách khí tiết sang cung Nô bộc.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": null,
+        "heavenly_stem": null,
+        "required_stars": [],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tiên thiên tứ hóa phi tinh kỳ phổ",
+        "author": "Tiên thiên tứ hóa phi tinh kỳ phổ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_4",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc Điền",
+      "raw_text": "Tật ách Hóa Lộc nhập điền trạch, có tài vận, sức khỏe tốt, tại gia bình thuận, dạy dỗ con cái nghiêm khắc.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_5",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc Điền",
+      "raw_text": "Tật ách cung Hóa Lộc nhập điền trạch cung.\nTật ách cung chủ thân thể (thể hình, sức khỏe, tật bệnh), nơi làm việc (điền trạch của quan lộc), giao tiếp (tiếp xúc của thân thể).\nPhúc trạch thân thể của mệnh tạo nhập điền trạch cung và mệnh tạo cũng thu được sự hưởng ứng báo đáp của điền trạch.\nSuy lý tượng nghĩa của Lộc - Sinh phát, hữu duyên, hỷ duyệt.\nThái độ của Lộc là khoan dung, quan hệ đối đãi cùng có lợi.\nĐiền trạch cung chủ gia đình, tài sản, hoàn cảnh cuộc sống.\n1. Thân thể phúc trạch của Ta nhập điền trạch, biểu thị có thể tại gia hưởng phúc, gia vận, kinh tế tốt, gia đình dễ có hạnh phúc mỹ mãn.\n2. Dành nhiều thời gian ở nhà, cùng người trong gia đình ứng xử hòa lạc, vui vẻ.\n3. Thích ở nơi rộng rãi, sang sủa, cảnh quan không gian đẹp, hưởng thụ cuộc sống.\n4. Phúc của thân thể nhập thu tàng cung, sức khỏe tốt, trường thọ, phòng lười vận động dễ phát phì.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_6",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc Điền",
+      "raw_text": "Từ Tật Ách hóa Lộc đến Điền Trạch cung, chiếu Tử Nữ cung\n1. Tự lập, dựa vào bản thân để ra sức xây dựng tổ ấm.\n2. Mệnh chủ để tâm chăm lo mối quan hệ gia đình và hôn nhân.\n3. Vui vẻ làm việc chăm chỉ để kiếm tiền và chi tiêu cho gia đình.\n4. Thích mua nhà và có thói quen tiết kiệm.\n5. Gia đình hạnh phúc, giàu sang.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_7",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc Điền",
+      "raw_text": "Sức khỏe tốt, tài vận tốt, sinh hoạt gia đình dư dả, bình thuận, rất có duyên với người khác giới, nhiều đào hoa. Nữ mệnh sau kết hôn sẽ phát phì.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_8",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc Điền",
+      "raw_text": "Tật Ách [Lộc nhập] Điền Trạch:\n* Gia cảnh tốt, nhà yên cửa thuận.\n* Thời gian ở tại nhà nhiều, ăn ở tốt với người nhà.\n* Ưa thích những không gian rộng rãi sáng sủa, đời sống hưởng thụ.\n* Sức khỏe tốt, đề phòng mức động vận động ít, béo phì.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Quách Ngọc Bội dịch.",
+        "author": "Lương Nhược Du. Quách Ngọc Bội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_9",
+      "condition_text": "Cung Tật ách an tại Tị có Quyền Phụ",
+      "raw_text": "Tật ách Hóa Quyền nhập phụ mẫu, ngôn hành dễ thô lỗ, xung động, nói bậy khó nghe. Cũng là có hoạt lực. Phùng Kị dễ nói năng bạt mạng, lớn tiếng, ác ngôn.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_10",
+      "condition_text": "Cung Tật ách an tại Tị có Quyền Phụ",
+      "raw_text": "Tật ách cung Hóa Quyền nhập phụ mẫu cung (Quyền xuất).\nTật ách Hóa Quyền nhập phụ mẫu, biểu thị hoạt lực của ta thể hiện tại phụ mẫu cung, thường là người thẳng tính, không giấu giếm giả bộ, nên lời nói thô kệch, dễ xung động, thêm Kị tọa phụ mẫu, dễ bất cẩn ngôn, nói to, ác ngôn. Những người đọc sách thánh hiền, tu dưỡng tốt thường là người trượng nghĩa, trực ngôn, không chấp nhận việc phi lý. Nếu được bồi dưỡng chuyên môn, chuyên nghiệp tất có khả năng hùng biện. Tật ách Quyền xuất thường can đảm, độ lượng, học hành uyên bác, dám phát ngôn (phụ mẫu cung là biểu đạt cung, hàm dưỡng cung).",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_11",
+      "condition_text": "Cung Tật ách an tại Tị có Quyền Phụ",
+      "raw_text": "Tật ách Hóa Quyền nhập phụ mẫu, được trưởng bối trợ giúp kịp thời, tại ngoại đa tranh chấp.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_12",
+      "condition_text": "Cung Tật ách an tại Tị có Quyền Phụ",
+      "raw_text": "Từ Tật Ách hóa Quyền đến Phụ Mẫu cung, chiếu Tật Ách cung\n1. Mệnh chủ cùng cha mẹ bề ngoài kiên quyết, dứt khoát, bên trong nửa vời, tính tình không ổn định.\n2. Mệnh chủ cùng cha mẹ độc đoán, chuyên quyền, tranh giành quyền lực, giỏi lãnh đạo, thích chỉ huy người khác khiến người ta cảm thấy bị áp bức.\n3. Mệnh chủ cùng cha mẹ của mình có cảm giác xa cách, có sự đè nén.\n4. Mệnh chủ cùng cha mẹ mạnh mẽ, thích nổi bật, thích cạnh tranh và mạo hiểm.\n5. Mệnh chủ cùng cha mẹ hay thay đổi, trở mặt như không có chuyện gì.\n6. Mệnh chủ cùng cha mẹ dễ chiêu rước đố kỵ, oán hận và gây thù chuốc oán với nhau.\n7. Mệnh chủ cùng cha mẹ của mình làm việc chăm chỉ, theo đuổi, cầu tiến và có cái nhìn tích cực về cuộc sống, cũng khó được thanh nhàn.\n8. Mệnh chủ cùng cha mẹ có kỹ năng lãnh đạo và quản lý hoặc kỹ năng chuyên môn.\n9. Mệnh chủ cùng cha mẹ dễ có bất trắc, tai nạn, huyết quang.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_13",
+      "condition_text": "Cung Tật ách an tại Tị có Quyền Phụ",
+      "raw_text": "Cơ thể cường tráng, hiếu động, dễ chuốc tranh chấp phiền phức, rắc rối; thường bị tổn thương bất ngờ.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_14",
+      "condition_text": "Cung Tật ách an tại Tị có Quyền Phụ",
+      "raw_text": "疾厄权入父母:\n1. 举止「鲁直」、「傲慢」, 「容易冲动」。「加忌」则「口无遮拦」、「恶言毒语」。\n2. 宜读圣贤书, 则「仗义直言」。或培养「专业」、「专技」, 滔滔辩才。\nTật ách Hóa quyền nhập cung phụ mẫu:\n1. Cử chỉ \"thô lỗ\", \"ngạo mạn\", \"dễ bốc đồng\". \"Thêm Kỵ\" thì \"miệng không che đậy\", \"lời độc ác\".\n2. Nên đọc sách thánh hiền, thì \"thẳng thắn chính nghĩa\". Hoặc rèn \"chuyên môn\", \"kỹ năng đặc thù\", tài hùng biện dạt dào.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_15",
+      "condition_text": "Cung Tật ách an tại Tị có Quyền Phụ",
+      "raw_text": "疾厄权入父母: \n1. 举止「鲁直」、「傲慢」, 「容易冲动」。「加忌」则「口无遮拦」、「恶言毒语」。\n2. 宜读圣贤书, 则「仗义直言」。或培养「专业」、「专技」, 滔滔辩才。\nTật ách Hóa quyền nhập cung phụ mẫu: \n1. Cử chỉ thô lỗ ngạo mạn. Dễ xung động, thêm kỵ thì không kín miệng, nói gở mồm. \n2. Nên đọc sách thành hiền thì trượng nghĩa nói thẳng hoặc đào tạo chuyên nghiệp, chuyên kỹ thì thao thao biện thuyết.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Quyền Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_16",
+      "condition_text": "Cung Tật ách an tại Tị có Khoa Nô",
+      "raw_text": "Tật ách Hóa Khoa nhập nô bộc, giao tế có lựa chọn (chọn bạn mà chơi).",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_17",
+      "condition_text": "Cung Tật ách an tại Tị có Khoa Nô",
+      "raw_text": "Tật ách cung Hóa Khoa nhập nô bộc cung.\n1. Cùng người giao tiếp có văn hóa, hòa nhã, lễ độ.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_18",
+      "condition_text": "Cung Tật ách an tại Tị có Khoa Nô",
+      "raw_text": "Từ Tật Ách hóa Khoa đến Nổ Bộc cung, chiếu Huynh Đệ cung\n1. Mệnh chủ nhiệt tình, chân thành, thường là quý nhân bạn bè.\n2. Mệnh chủ nhiệt tình với phúc lợi công cộng, từ thiện và nhân ái.\n3. Mệnh chủ đối xử với người khác bằng sự đồng cảm, quan tâm và chăm sóc người khác.\n4. Mệnh chủ thân thể yếu kém nhiều tật bệnh, dễ mắc các bệnh mãn tính.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_19",
+      "condition_text": "Cung Tật ách an tại Tị có Khoa Nô",
+      "raw_text": "Giao du bạn bè hiền hòa, lễ độ, có lí lẽ, có tài năng; không giao du lầm bạn xấu. Cơ thể có quý khí, khó bị bệnh di truyền; nếu gặp tai ách, thường sẽ có quý nhân xuất hiện để giải quyết. Hòa hợp với đồng sự.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_20",
+      "condition_text": "Cung Tật ách an tại Tị có Khoa Nô",
+      "raw_text": "疾厄科入交友:\n1. 与人相处斯文、优柔、含蓄。\nTật ách Hóa khoa nhập cung giao hữu:\n1. Giao tiếp với người khác nhẹ nhàng, ôn nhu, kín đáo.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_21",
+      "condition_text": "Cung Tật ách an tại Tị có Khoa Nô",
+      "raw_text": "疾厄科入交友: \n1. 与人相处斯文、优柔、含蓄。\nTật ách Hóa khoa nhập cung giao hữu: \n1. Cùng người sống chung lịch sự, ưu nhu, kín đáo.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Khoa Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_22",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "Tật ách cung Hóa Kị nhập nô bộc cung:\nLoại quan hệ đối đãi này ví như thân thể của mệnh tạo trao cho thân thể đối phương, cùng gắn kết; Nếu như can cung lại tự hóa tức biến thành đơn luyến, mệnh tạo yêu đơn phương, mà đối phương không chú ý mệnh tạo.\nTrong Tử vi đẩu số, nô bộc cung đại biểu cho thân thể của phối ngẫu (tật ách của phu thê vị). Giả sử mệnh cung hoặc phu thê cung tứ hóa nhập nô bộc cung hoặc tật ách cung là biểu thị có duyên phu thê, có nhu cầu về sinh lý, khá dễ bị kích động tình cảm trong kết giao bạn nam nữ, động lực tự nhiên của duyên phận khá mãnh liệt.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_23",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "Tật ách Hóa Kị nhập nô bộc (xung huynh đệ).\n1. Sơ sài lạnh nhạt trong giao tiếp, không biết sử dụng ngôn ngữ thân thể. Không biết chăm sóc gần gũi.\n2. Sức khỏe dễ sa sút. (xung huynh đệ cung, xung thể chất vị).\n3. Phòng tình cảm phu thê đồng sàng dị mộng, có thể ly thân.\n4. Dễ có thói tật xấu, mất lòng người khác. (cần có liên kết của đa Kị).",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_24",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "Tật ách Hóa Kị nhập nô bộc, nhân duyên kém, dễ vì người tổn hại bản thân, thân thể, bệnh tật dễ xuất hiện, dễ mắc bệnh.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Giáo trình tứ hóa phi tinh sơ trung cơ bản - Huy Hà Phan",
+        "author": "Huy Hà Phan"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_25",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "Từ Tật Ách cung hóa Kị đến Nô Bộc cung, xung Huynh Đệ cung\n1. Cung Tật Ách hóa Kị đến cung Nô Bộc xung cung Huynh Đệ, anh chị em có thể bị chết yểu hoặc tàn tật, thân thể nhiều bệnh tật, ốm đau, tai nạn.\n2. Mệnh chủ nợ anh em, bè bạn món nợ nên thường tổn tài.\n3. Mệnh chủ với anh em đơn bạc, có khoảng cách, duyên mỏng, sum vầy ít xa cách nhiều hoặc loại trừ anh em.\n4. Cung Nô Bộc là khí số vị Phụ Mẫu, cung Tật Ách hóa Kị nhập, cha mẹ có thể gặp tai nạn.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Lai Nhân Cung 144 quyết - Ngô Trung Thành, Khâu Thu Mỹ",
+        "author": "Ngô Trung Thành, Khâu Thu Mỹ"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_26",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "Lúc trẻ dễ giao du bạn xấu, dẫn đến nhiều thị phi, dễ xảy ra tranh chấp. Lúc còn nhỏ, thể chất kém, dễ mắc bệnh lây nhiễm qua đường tính dục, cũng dễ mắc bệnh tiềm ẩn bẩm sinh, di truyền, khó chữa trị. Sự nghiệp đầu tư, vận kinh doanh không thuận lợi, dễ gặp nguy cơ về tài chính, khó xoay sở vốn liếng. Dễ vì tình cảm xung động mà hiến thân.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Trung Châu tử vi đẩu số - Tứ Hóa Phái - Nguyễn Anh Vũ dịch",
+        "author": "Nguyễn Anh Vũ dịch"
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_27",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "疾厄忌入交友:\n1. 与人相处不爱「热络攀缘」, 也不喜欢「久腻」的朋友。\n2. 小心健康下滑。\n3. 防夫妻「同床异梦」, 宜分床分房。\n4. 「坏的习性」, 令人不悦。\nTật ách Hóa kỵ nhập cung giao hữu:\n1. Chung sống với người khác không thích \"nồng nhiệt tạo quan hệ\", cũng không thích bạn \"dính lâu\".\n2. Cẩn thận sức khỏe suy giảm.\n3. Đề phòng vợ chồng \"cùng giường khác mộng\", nên ngủ riêng giường riêng phòng.\n4. \"Thói quen xấu\", khiến người không vui.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. AI biên dịch.",
+        "author": "Lương Nhược Du. AI biên dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_28",
+      "condition_text": "Cung Tật ách an tại Tị có Kỵ Nô",
+      "raw_text": "疾厄忌入交友: \n1. 与人相处不爱「热络攀缘」, 也不喜欢「久腻」的朋友。\n2. 小心健康下滑。\n3. 防夫妻「同床异梦」, 宜分床分房。\n4. 「坏的习性」, 令人不悦。\nTật ách Hóa kỵ nhập cung giao hữu: \n1. Cùng người sống chung không thích vui vẻ kết thân, cũng không thích cửu nị bằng hữu. \n2. Cẩn thận sức khỏe tụt dốc. \n3. Phòng vợ chồng đồng sang dị mộng, nên phân giường chia phòng. \n4. Tập quán xấu khiến người khác không vui.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Kỵ Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tứ hóa phi tinh - Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch.",
+        "author": "Lương Nhược Du. Thiên Hỏa Đồng Nhân Hội dịch."
+      },
+      "accuracy": 7
+    },
+    {
+      "block_id": "tat_ach_stream_29",
+      "condition_text": "Cung Tật ách an tại Tị có M Điền",
+      "raw_text": "Là người thích ở nhà. Bản tính là người thích ở nhà.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Điền"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "tat_ach_stream_30",
+      "condition_text": "Cung Tật ách an tại Tị có M Nô",
+      "raw_text": "Bẩm sinh thích tìm bạn. Thành công do bạn, bại cũng do bạn.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Nô"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "tat_ach_stream_31",
+      "condition_text": "Cung Tật ách an tại Tị có M Phụ",
+      "raw_text": "Mệnh làm công chức. Mệnh làm chủ quản, ông chủ.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "M Phụ"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đoán vận - Trịnh Mục Đức",
+        "author": "Trịnh Mục Đức"
+      },
+      "accuracy": 6
+    },
+    {
+      "block_id": "tat_ach_stream_32",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc tồn",
+      "raw_text": "Lộc Tồn nhập cung tật ách, là ý tượng: tuổi trẻ cơ thể hư nhược, nhiều bệnh.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc tồn"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Hà lạc phái - Phương Ngoại Nhân",
+        "author": "Phương Ngoại Nhân"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tat_ach_stream_33",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc tồn",
+      "raw_text": "Thêm cát tinh là chủ về ít bị tai ách. Thấy Hỏa Linh là chủ về tay chân bị thương tật. Thêm Không Kiếp là chủ về tự chuốc ám tật và lâu khỏi.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc tồn"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tat_ach_stream_34",
+      "condition_text": "Cung Tật ách an tại Tị có Thiên lương",
+      "raw_text": "Chủ về ít tai ách. Thêm Hỏa Linh là chủ về bị tàn tật.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên lương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Phi tinh Trần Đoàn - Hồng Khánh",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tat_ach_stream_35",
+      "condition_text": "Cung Tật ách an tại Tị có các sao Địa không,Địa kiếp hội hợp",
+      "raw_text": "Tai họa nhẹ, cũng chủ váng đầu, hoa mắt... đồng thủ với cát tinh thì một đời ít tai bệnh.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "các sao Địa không"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tat_ach_stream_36",
+      "condition_text": "Cung Tật ách an tại Tị có Lộc tồn",
+      "raw_text": "Khi nhỏ lắm bệnh tật, đều có thể chuyển nguy thành an. Được cát tinh thủ chiếu bệnh nhẹ mà gặp tai họa có thể được cứu chữa, hội Hỏa Linh chủ tàn tật. Dạ dày, lá lách khá yếu.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Lộc tồn"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tat_ach_stream_37",
+      "condition_text": "Cung Tật ách an tại Tị có Thiên lương",
+      "raw_text": "Nhập miếu ít tai bệnh, thân thể khỏe mạnh, hãm địa họa nhẹ, hội Hỏa Linh Không Kiếp chủ tàn tật, hội Kình Đà thì cơ thể bị thương. Tuy có tai họa, cũng có thể chuyển nguy thành an. Thiên Lương chủ bệnh về hệ thống tiêu hóa, phổi, gan.\nTrạng thái bệnh: đau dạ dày, tiêu hóa không tốt, ợ, tưa lưỡi nhiều, váng đầu, đau mắt, mất ngủ, ban ngày dễ mệt mỏi.\nThiên Lương, Kình Đà, Thiên Hình, chủ ngoại thương tay chân, nội thương xương cốt, ngực, eo bị thương hoặc mổ ruột thừa. Thiên Lương, Hỏa Linh, ung thư vú, ung thư dạ dày, mụn nhọt lở loét. Thiên Lương, Không Kiếp, Đại Hao, phong thấp, tê liệt, đau nhức. Thiên Lương, Thiên Nguyệt, Âm Sát, chủ bệnh táo bón, cảm mạo, thương phong đầu thống...",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên lương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Đẩu số cung vị - Trần Bỉnh Húc",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "block_id": "tat_ach_stream_38",
+      "condition_text": "Cung Tật ách an tại Tị có Thiên lương",
+      "raw_text": "Thiên Lương chủ tác dụng đồng hóa kém, bệnh về mũi, da.",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Thiên lương"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    },
+    {
+      "block_id": "tat_ach_stream_39",
+      "condition_text": "Cung Tật ách an tại Tị có Cung Tật ách",
+      "raw_text": "Cuộc đời con người thường trải qua bốn giai đoạn: Sinh, Lão, Bệnh, Tử. Ai ai cũng muốn sức khỏe của mình luôn tốt, không có bệnh tật. Nhưng đó là điều không thể! Vấn đề ở chỗ là liệu người đó có gặp họng bệnh hay không? Khi nào thì xảy ra? Đối với những câu hỏi như vậy, Tử Vi hay Bát tự đều có thể luận đoán được.\nTrong Tử Vi Đẩu số, việc luận đoán bệnh tật luôn lấy cung Mệnh, cung Thân làm gốc, cung Tật Ách chỉ là phụ trợ để luận đoán tính chất mà thôi. Xét tứ Hòa Lộc Quyền Khoa Kỵ, khi cung Tật Ách bản mệnh có Hóa Kỵ thì thường mang ý nghĩa hung. Dùng tứ hóa luận đoán khá rố nét, chủ yếu thường dùng để luận đoán đại vận, lưu niên xảy ra trọng bệnh. Càng chính xác hơn khi Hóa Kỵ vận lai lâm cung Tật Ách.\nCung Khí của cung Tật ách đại biểu 2 ý nghĩa:\n1. Thứ nhất là thể trạng người đó như thế nào? Như Tật ách Cung Khí của mệnh bàn đại cát thì người này khỏe mạnh, ít bệnh, nhưng nếu đại vận xấu thì cũng có khả năng bệnh nặng.\n2. Thứ hai là cho biết người này có thể bị những bệnh nào, cần tránh những gì? Ví dụ mệnh bàn hỷ Mộc Hỏa, nhưng Tật Ách Cung Khí lại toàn Kim Thủy khí thì người này có thể cần đề phòng bệnh đường tiết niệu. Lại như mệnh bàn hỷ Mộc Hỏa, mà Tật Ách Cung Khí cũng là Mộc Hỏa thì khi đại vận lưu niên Kim Thủy cần đề phòng bệnh liên quan đến tâm tạng, huyết quản, nó cũng có thể đen rất bất ngờ. Thông thường, mệnh bàn hỷ Tật Ách Cung Khí thuộc cát, có thể tránh được bệnh tật khi đến đại vận không tốt.\nTrên là những điểm quan trọng đối với vấn đề Tật Ách Cung Khí t",
+      "conditions": {
+        "palace": "TAT_ACH",
+        "position": "TI",
+        "heavenly_stem": null,
+        "required_stars": [
+          "Cung Tật ách"
+        ],
+        "transformations": []
+      },
+      "source": {
+        "book": "Tử vi đẩu số cao cấp lý luận đại toàn - Sở Hoàng",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 4
+    }
+  ]
+}

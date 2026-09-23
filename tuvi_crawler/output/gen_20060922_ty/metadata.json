@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20060922_ty",
+  "birth": {
+    "year": 2006,
+    "month": 9,
+    "day": 22,
+    "hour": "ty",
+    "hourName": "Tỵ",
+    "gender": "0",
+    "genderName": "Nữ",
+    "calendar": "1",
+    "calendarName": "Dương"
+  },
+  "crawledAt": "2026-09-22T16:11:48.043Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

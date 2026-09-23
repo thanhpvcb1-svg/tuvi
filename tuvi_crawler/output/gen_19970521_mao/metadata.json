@@ -1,0 +1,17 @@
+{
+  "lid": "gen_19970521_mao",
+  "birth": {
+    "year": 1997,
+    "month": 5,
+    "day": 21,
+    "hour": "mao",
+    "hourName": "Mão",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:11:07.285Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

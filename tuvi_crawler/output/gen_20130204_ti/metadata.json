@@ -1,0 +1,17 @@
+{
+  "lid": "gen_20130204_ti",
+  "birth": {
+    "year": 2013,
+    "month": 2,
+    "day": 4,
+    "hour": "ti",
+    "hourName": "Tý",
+    "gender": "1",
+    "genderName": "Nam",
+    "calendar": "0",
+    "calendarName": "Âm"
+  },
+  "crawledAt": "2026-09-22T16:18:57.994Z",
+  "blocksFound": 226,
+  "blocksAdded": 0
+}

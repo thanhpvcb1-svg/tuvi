@@ -1,0 +1,72 @@
+{
+  "palace": "menh",
+  "sections": [
+    {
+      "section_id": "can_cung",
+      "title": "Thiên Can Cung Mệnh",
+      "interpretations": [
+        {
+          "id": "menh_can_nham",
+          "type": "heavenly_stem",
+          "conditions": {
+            "heavenly_stem": "nham"
+          },
+          "text": "Nhâm - Thủy có tính cách nhiệt tình cuồn cuộn như dòng sông đang trôi chảy, là kẻ đa tài đa nghệ, kiêm bị văn võ muốn chơi đằng nào cũng được, thường xuyên lạc quan yêu đời và ngoại hướng, có mưu lược và biết nắm lấy thời cơ, tuy thông minh nhưng hay làm theo ý của mình. NHÂM = Tính cách độc lập và tự phụ rất cao, nắm được Thiên thời nên dễ chiếm được tiện nghi trong nhiều hoàn cảnh.",
+          "source": {
+            "book": "Cổ thư bắc phái",
+            "author": "Sưu tầm"
+          }
+        },
+        {
+          "id": "menh_can_nham_2",
+          "type": "heavenly_stem",
+          "conditions": {
+            "heavenly_stem": "nham"
+          },
+          "text": "Tính cách độc lập, tự mình làm ra, nên tính cách tự phụ, lại dựa vào khí của Thiên, biết người biết mình.",
+          "source": {
+            "book": "Đẩu số chính nhãn",
+            "author": "Ông Phúc Dụ"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "dia_chi_cung",
+      "title": "Địa Chi Cung Mệnh",
+      "interpretations": [
+        {
+          "id": "menh_tuat",
+          "type": "earthly_branch",
+          "conditions": {
+            "position": "tuat"
+          },
+          "text": "Cung Mệnh cư Tuất thuộc khố vị, cá tính cố chấp câu nệ.",
+          "source": {
+            "book": "Kinh nghiệm của tác giả Ma Y Cung",
+            "author": "Ma Y Cung"
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "nap_am",
+      "title": "Nạp Âm Cung Mệnh",
+      "interpretations": [
+        {
+          "id": "menh_nham_tuat_dai_hai_thuy",
+          "type": "nap_am",
+          "conditions": {
+            "heavenly_stem": "nham",
+            "position": "tuat"
+          },
+          "text": "Nhâm Tuất Quí Hợi thủy, Quan Đới ở Tuất, Lâm Quan tại Hợi lực lượng hùng hậu. Hợi ví như dòng sông lớn nên gọi bằng Đại Hải Thủy. Nước của Đại Hải Thủy diện tích quảng khoát, thế tượng bao la, xung kích lực mạnh, làm thiện hay làm ác đều dữ dội. Hoặc là gian hùng của thời đại, hoặc là anh hùng cái thế. Nếu mệnh đáng bậc chính nhân thì khi ở ngôi vị thường bao dung đại lượng ưa làm điều thiện không ưa điều ác, ngược lại mệnh tầm thường hạ tiện sẽ thành con người lấy oán mà trả ân, tâm địa hẹp hòi. Cuộc đời dễ thăng trầm biến độ lớn. Nếu cách cục lớn, có thể thành anh hùng hào kiệt. Có thể thành đại ác hay đại thiện, đại trung hay đại gian, đại phúc hay đại họa.",
+          "source": {
+            "book": "Cổ thư bắc phái",
+            "author": "Sưu tầm"
+          }
+        }
+      ]
+    }
+  ]
+}
