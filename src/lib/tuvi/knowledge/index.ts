@@ -122,3 +122,17 @@ export {
   formatMatchResult,
   type KnowledgeQueryResult,
 } from "./improvedKnowledgeService";
+
+// Unified Knowledge Service (NEW - Single interface for all knowledge queries)
+export {
+  UnifiedKnowledgeService,
+  unifiedKnowledgeService,
+  queryPalaceKnowledgeUnified,
+  queryAllPalacesKnowledge,
+  type KnowledgeType as UnifiedKnowledgeType,
+  type KnowledgeSource as UnifiedKnowledgeSource,
+  type KnowledgeResult,
+  type UnifiedQueryContext,
+  type QueryOptions,
+  type UnifiedQueryResult,
+} from "./unifiedKnowledgeService";
