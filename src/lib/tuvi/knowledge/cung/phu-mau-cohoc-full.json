@@ -2,7 +2,7 @@
   "palace": "PHU_MAU",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 34,
+  "total_blocks": 39,
   "sections": [
     {
       "section_id": "phu-mau",
@@ -1098,6 +1098,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "phu_mau_crawl_55_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Chức năng của cung Phụ Mẫu cho biết mối quan hệ của đương số đối với cha mẹ của mình, tình cảm có hòa hợp tốt đẹp hay không, bối cảnh của gia đình đương số như thế nào, địa vị thành tựu của cha mẹ ra sao,&hellip; từ đó biết được xuất thân của đương số ở giai tầng nào trong xã hội, sự trợ giúp của cha mẹ đối với đương số, gián tiếp ước lượng suy đoán được thọ yểu của cha mẹ đương số.",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_56_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Cung Phụ Mẫu còn được gọi là Tướng Mạo cung, điều này vốn là sự kế thừa của môn Tử Vi Đẩu số từ các môn tiền thân của nó là Thất Chính Tứ Dư và Thập Bát Phi Tinh (còn được biết đến dưới cái tên Đạo Tạng Tử Vi Đẩu Số). Ngày nay, trong các thư tịch của môn Tử Vi Đẩu Số chúng ta vẫn thường hay bắt gặp bằng chứng là những câu như:",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_57_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Tướng mạo phùng hung tất đới phá tướng,",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_58_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "Tật ách phùng Kị định hữu uông doanh.",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_mau_crawl_59_1790130587417",
+          "condition_text": "12. Luận Giải cung Phụ Mẫu",
+          "raw_text": "(Tướng Mạo - tức Phụ Mẫu cung - gặp hung sát tinh thì kiểu gì cũng có phá tướng,",
+          "conditions": {
+            "palace": "PHU_MAU"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.339Z"
 }

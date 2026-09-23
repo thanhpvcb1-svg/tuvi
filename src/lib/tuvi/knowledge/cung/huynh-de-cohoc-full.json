@@ -2,7 +2,7 @@
   "palace": "HUYNH_DE",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 33,
+  "total_blocks": 38,
   "sections": [
     {
       "section_id": "huynh-de",
@@ -1064,6 +1064,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "huynh_de_crawl_5_1790130587413",
+          "condition_text": "2. Giải đo&aacute;n cung B&agrave;o (Huynh đệ cung)",
+          "raw_text": "Cung Huynh Đệ cho biết mối quan hệ của đương số với anh chị em trong gia đình, tình cảm có hòa hợp hay là xung khắc, có tương trợ cho nhau được hay không, anh chị em được đoàn viên gần gũi hay phải chia lìa phân tán,&hellip; Đồng thời dự đoán khái lược về anh chị em có nhiều hay ít, có anh chị em thành đạt hay không, có anh chị em yểu chiết hay không, có anh chị em dị bào (cùng cha khác mẹ hoặc cùng mẹ khác cha),&hellip;",
+          "conditions": {
+            "palace": "HUYNH_DE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh_de_crawl_6_1790130587413",
+          "condition_text": "2. Giải đo&aacute;n cung B&agrave;o (Huynh đệ cung)",
+          "raw_text": "Xem cung Huynh Đệ cần lưu ý kết hợp với cung Phúc Đức vì phúc đức là cái gốc của tình cảm thân thích họ hàng, dẫu cho cung Huynh Đệ có đẹp mà cung Phúc Đức bị sát ám bại tinh tụ họp xung phá thì sự tốt đẹp ở cung Huynh Đệ bị giảm đi khá nhiều, anh chị em có thể thành công nhưng không hòa hợp hay ở gần gũi cùng đương số hoặc ngược lại. Nếu như cung Huynh Đệ bị sát ám bại tinh tụ họp xung phá, nhưng có được cung Phúc Đức tốt đẹp thì kể như là được cứu giải, giảm đi sự hình khắc và ly tán, anh chị em với đương số có thể nương tựa đùm bọc lẫn nhau, hỗ trợ cho nhau mà phát triển trong cuộc sống.",
+          "conditions": {
+            "palace": "HUYNH_DE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh_de_crawl_7_1790130587413",
+          "condition_text": "2. Giải đo&aacute;n cung B&agrave;o (Huynh đệ cung)",
+          "raw_text": "Xem cung Huynh Đệ cần lưu ý tới vị trí của sao Thiên Cơ, bởi vì sao này là thần chủ quản của cung Huynh Đệ, cho nên tốt hay xấu của sao Thiên Cơ đều có tác động ảnh hưởng tốt hay xấu đến cung Huynh Đệ. Tất nhiên, yếu tố này là phụ luận gia giảm thêm, còn chủ yếu vẫn là xem trực tiếp tại bản cung Huynh Đệ.",
+          "conditions": {
+            "palace": "HUYNH_DE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh_de_crawl_8_1790130587413",
+          "condition_text": "2. Giải đo&aacute;n cung B&agrave;o (Huynh đệ cung)",
+          "raw_text": "Trong câu luận về cung Huynh Đệ ở bài Phát Vi Luận, thì tiên sinh Bạch Ngọc Thiềm có viết:",
+          "conditions": {
+            "palace": "HUYNH_DE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "huynh_de_crawl_9_1790130587413",
+          "condition_text": "2. Giải đo&aacute;n cung B&agrave;o (Huynh đệ cung)",
+          "raw_text": "Cự đáo nhị cung, tất thị huynh đệ vô nghĩa.",
+          "conditions": {
+            "palace": "HUYNH_DE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.308Z"
 }

@@ -2,8 +2,8 @@
   "palace": "MENH",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-22T16:51:29.299Z",
-  "total_blocks": 2157,
+  "last_updated": "2026-09-23T10:08:50.009Z",
+  "total_blocks": 2179,
   "hashes": [
     "5853918326ee",
     "a39a22abadb0",
@@ -2161,7 +2161,29 @@
     "2f536c2540b9",
     "0b2d89890615",
     "518419b8fedb",
-    "2da1a1bd3536"
+    "2da1a1bd3536",
+    "7505b77beac3",
+    "18e33848346c",
+    "ba25e9640a34",
+    "d0439fefbcfc",
+    "9b02a89a2517",
+    "40366888bfe5",
+    "5e46ce2c9c50",
+    "3e7ec5842cb0",
+    "0ae46049991b",
+    "6e95adc229b1",
+    "af4e0fbd5435",
+    "154bb89b0d47",
+    "33823e4f95d5",
+    "079390295245",
+    "b18a76050c2b",
+    "c524a1eaeaed",
+    "0f7ff76f6f13",
+    "19a79b58da81",
+    "931e2ed2dd81",
+    "df67e718a8dd",
+    "1c38d988804d",
+    "08b7885aa4fa"
   ],
   "sections": [
     {
@@ -28531,6 +28553,305 @@
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Bắc Phái"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_0",
+          "type": "general",
+          "text": "Điểm \"xí hoa lá số\" dương báo hiệu đây là lá số tốt. Bạn nên đọc kỹ lời giải của lá số để tìm ra cho mình cách sống và ứng xử phù hợp với cuộc đời. - Các cung tốt: Phụ mẫu (1.97), Điền trạch (1.43), Quan lộc (1.65), Nô bộc (0.99), Tật ách (1.13), Tử tức (1.86), Mệnh (0.54), Phu thê (0.47) - Các cung xấu: Phúc đức (-2.23), Thiên di (-1.24), Huynh đệ (-0.47), Tài bạch (-0.35) - Truy Lộc Kỵ toàn lá số: cung phụ mẫu 4 kỵ, cung huynh đệ 2 kỵ, cung nô bộc 4 lộc, cung nô bộc 3 lộc, cung mệnh tụ 4 lộc, cung tử tức 1 lộc - Thất tinh định điểm tháng xem sơ lược xu thế một đời người, ở trường hợp này tại cung Tử tức (vị trí Thiên). Thất tinh ngày là trung tâm, nhận chuyển Thiên, Nhân (Thiên Nhân hợp nhất, hành vi trung gian) mà dẫn dắt thể, ở trường hợp này tại cung Tử tức (vị trí Địa). Định điểm giờ sinh là điểm kết thúc thất tinh định điểm, là điểm quan hệ trọng yếu nhất cuộc đời (có thể xem như cung Mệnh mượn danh nghĩa), ở trường hợp này tại cung Điền trạch (vị trí Nhân). Thiên Nhân hợp nhất: Tử tức + Điền trạch = lấy cung Tử tức làm trung gian.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_1",
+          "type": "general",
+          "text": "Cung Mệnh, Thân trùng lặp ở Hợi THỦY vượng, Kỷ Hợi (Bình Địa Mộc: Gỗ đồng bằng) là Mộc Suy, nếu sinh ra ở nơi ẩm ướt thì Mộc khí trung bình, nhưng sinh ra ở nơi khôi ráo thì Mộc khí chuyển yếu. Người sinh vào tháng 4, có Hỏa lâm quan, Kim khí trường sinh, Thủy khí nhập tuyệt, Mộc khí nhập bệnh (lâm quan: rất vượng, trường sinh: vượng, tuyệt: rất suy, bệnh: suy).",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_2",
+          "type": "star_in_palace",
+          "text": "Cung Mệnh ở Hợi, ngũ hành cục MỘC gia tăng thêm 1. Sao Thiên đồng hành THỦY, độ số: 1. Sao Thiên khôi hành HỎA, độ số: 0.33. Sao Hóa lộc hành THỔ, độ số: 1. Kết luận: - Hành MỘC là 1. - Hành THỦY là 1. - Hành HỎA là 0.33. - Hành THỔ là 1. (*) Cần áp dụng: Phù ức, Thông quan, Điều hậu để tìm Hỉ thần, Kị thần, Dụng thần của lá số.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thien_dong"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_3",
+          "type": "star_in_palace",
+          "text": "Cung Mệnh chủ về: bản thân đương số. Tọa thủ : Thiên đồng, Thiên khôi , Hóa lộc. Xung chiếu : Thiên lương, Lộc tồn, Địa kiếp , Địa không . Tam hợp : Tả phù , Hữu bật - Thiên cơ, Cự môn, Hóa quyền, Hồng loan. Giáp cung : Vũ khúc, Thiên phủ, Thiên hình - Phá quân, Văn khúc . Ngũ hành khí của cung Kỷ Hợi: 20% THỔ (kị thần), 50% THỦY (hỉ thần), 30% MỘC (hỉ thần). Đây là cung khí đại cát . Thiên đồng hành THỦY là hỉ thần. Thiên khôi hành HỎA là nhàn thần. Hóa lộc hành KIM là kị thần. Can cung là Kỷ thuộc phạm trù NHÂN: Người xung quanh giúp mình, nhưng chưa chắc được hưởng Thiên thời, Địa lợi. Can Kỷ là Địa chi Nhân có nghĩa là Nhân hòa ở mức độ TRUNG ĐẲNG - chưa phải là cao nhất. Ngoài ra cung Kỷ Hợi có ngũ hành thiên can khắc địa chi cũng làm giảm nhiều độ số cho tính đắc Nhân hòa của cung. Địa chi cung Mệnh là Hợi vị trí \"tứ mã\", vị trí Nhân, chủ người thường phải bôn ba làm việc bên ngoài. Cung Mệnh can Kỷ làm cho: - Vũ khúc Hóa lộc nhập cung Phụ mẫu. Cung Phụ mẫu can Canh chuyển Thái dương Hóa Lộc nhập cung Phúc đức, chuyển Thiên đồng Hóa kỵ nhập cung Mệnh. - Văn khúc Hóa kỵ nhập cung Huynh đệ. Cung Huynh đệ can Mậu chuyển Tham lang Hóa Lộc nhập cung Điền trạch, chuyển Thiên cơ Hóa kỵ nhập cung Quan lộc.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thien_co",
+            "thai_duong",
+            "vu_khuc",
+            "thien_dong",
+            "thien_phu",
+            "tham_lang",
+            "cu_mon",
+            "thien_luong",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_4",
+          "type": "general",
+          "text": "Đây là cách Củ triều kỵ: có sự xung đột ở hai cung Huynh đệ - Nô bộc, nguyên nhân do cặp cung Mệnh - Phúc đức",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_5",
+          "type": "general",
+          "text": "Đây là cách Củ triều kỵ: có sự xung đột ở hai cung Huynh đệ - Nô bộc, nguyên nhân do cặp cung Mệnh - Quan lộc",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_6",
+          "type": "star_in_palace",
+          "text": "Cung Tử tức chủ về: con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục. Tọa thủ : Liêm trinh, Âm sát, Hỏa tinh , Hóa kỵ. Xung chiếu : Tham lang, Thiên mã. Tam hợp : Tử vi, Thiên tướng, Thiên riêu, Đà la , Linh tinh , Văn xương , Hóa khoa - Vũ khúc, Thiên phủ, Thiên hình. Giáp cung : Tả phù , Hữu bật - Thiên việt , Hàm trì, Thiên hỉ. Ngũ hành khí của cung Bính Thân: 20% HỎA (nhàn thần), 50% KIM (kị thần), 30% HỎA (nhàn thần). Đây là cung khí tiểu hung . Liêm trinh hành HỎA là nhàn thần. Âm sát hành THỦY là hỉ thần. Hỏa tinh hành HỎA là nhàn thần. Hóa kỵ hành THỦY là hỉ thần. Cung Tử tức can Bính làm cho: - Thiên đồng Hóa lộc nhập cung Mệnh (cung Điền trạch của cung Tử tức). Cung Mệnh can Kỷ chuyển Vũ khúc Hóa Lộc nhập cung Phụ mẫu, chuyển Văn khúc Hóa kỵ nhập cung Huynh đệ. - Cung Tử tức làm Liêm trinh tự hóa kỵ, chuyển Thiên đồng Hóa Lộc nhập cung Mệnh,",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "tu_vi",
+            "vu_khuc",
+            "thien_dong",
+            "liem_trinh",
+            "thien_phu",
+            "tham_lang",
+            "thien_tuong"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_7",
+          "type": "star_in_palace",
+          "text": "Cung Điền trạch chủ về: gia đình, kho tiền, bất động sản, gia sản. Tọa thủ : Tham lang, Thiên mã. Xung chiếu : Liêm trinh, Âm sát, Hỏa tinh , Hóa kỵ. Tam hợp : Thất sát, Thiên khốc, Thiên hư, Kình dương - Phá quân, Văn khúc . Giáp cung : Thái dương, Thái âm - Thiên cơ, Cự môn, Hóa quyền, Hồng loan. Ngũ hành khí của cung Canh Dần: 20% KIM (kị thần), 50% MỘC (hỉ thần), 30% MỘC (hỉ thần). Đây là cung khí đại cát . Tham lang hành MỘC là hỉ thần. Thiên mã hành HỎA là nhàn thần. Cung Điền trạch can Canh làm cho: - Thái dương Hóa lộc nhập cung Phúc đức (cung Huynh đệ của cung Điền trạch). Cung Phúc đức can Tân chuyển Cự môn Hóa Lộc nhập cung Quan lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc. - Thiên đồng Hóa kỵ nhập cung Mệnh (cung Tử tức của cung Điền trạch). Cung Mệnh can Kỷ chuyển Vũ khúc Hóa Lộc nhập cung Phụ mẫu, chuyển Văn khúc Hóa kỵ nhập cung Huynh đệ.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thien_co",
+            "thai_duong",
+            "vu_khuc",
+            "thien_dong",
+            "liem_trinh",
+            "thai_am",
+            "tham_lang",
+            "cu_mon",
+            "that_sat",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_8",
+          "type": "star_in_palace",
+          "text": "Cung Tật ách chủ về: thân thể, sức khỏe, bệnh tật. Tọa thủ : Thất sát, Thiên khốc, Thiên hư, Kình dương . Xung chiếu : Vũ khúc, Thiên phủ, Thiên hình. Tam hợp : Phá quân, Văn khúc - Tham lang, Thiên mã. Giáp cung : Thiên lương, Lộc tồn, Địa kiếp , Địa không - Tả phù , Hữu bật . Ngũ hành khí của cung Giáp Ngọ: 20% MỘC (hỉ thần), 50% HỎA (nhàn thần), 30% KIM (kị thần). Đây là cung khí hung nhiều hơn cát (hữu cát). Thất sát hành KIM là kị thần. Thiên khốc hành THỦY là hỉ thần. Thiên hư hành THỦY là hỉ thần. Kình dương hành KIM là kị thần. Cung Tật ách can Giáp làm cho: - Liêm trinh Hóa lộc nhập cung Tử tức (cung Phúc đức của cung Tật ách). Cung Tử tức can Bính chuyển Thiên đồng Hóa Lộc nhập cung Mệnh, Liêm trinh tự hóa kỵ. - Thái dương Hóa kỵ nhập cung Phúc đức (cung Tật ách của cung Tật ách). Cung Phúc đức can Tân chuyển Cự môn Hóa Lộc nhập cung Quan lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thai_duong",
+            "vu_khuc",
+            "thien_dong",
+            "liem_trinh",
+            "thien_phu",
+            "tham_lang",
+            "cu_mon",
+            "thien_luong",
+            "that_sat",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_9",
+          "type": "star_in_palace",
+          "text": "Cung Thiên di chủ về: quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa. Tọa thủ : Thiên lương, Lộc tồn, Địa kiếp , Địa không . Xung chiếu : Thiên đồng, Thiên khôi , Hóa lộc. Tam hợp : Thiên việt , Hàm trì, Thiên hỉ - Thái dương, Thái âm. Giáp cung : Tử vi, Thiên tướng, Thiên riêu, Đà la , Linh tinh , Văn xương , Hóa khoa - Thất sát, Thiên khốc, Thiên hư, Kình dương . Ngũ hành khí của cung Quý Tị: 20% THỦY (hỉ thần), 50% HỎA (nhàn thần), 30% THỦY (hỉ thần). Đây là cung khí đại cát . Thiên lương hành THỔ là kị thần. Lộc tồn hành THỔ là kị thần. Địa kiếp hành HỎA là nhàn thần. Địa không hành HỎA là nhàn thần. Cung Thiên di can Quý làm cho: - Phá quân Hóa lộc nhập cung Huynh đệ (cung Nô bộc của cung Thiên di). Cung Huynh đệ can Mậu chuyển Tham lang Hóa Lộc nhập cung Điền trạch, chuyển Thiên cơ Hóa kỵ nhập cung Quan lộc. - Tham lang Hóa kỵ nhập cung Điền trạch (cung Tử tức của cung Thiên di). Cung Điền trạch can Canh chuyển Thái dương Hóa Lộc nhập cung Phúc đức, chuyển Thiên đồng Hóa kỵ nhập cung Mệnh.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "tu_vi",
+            "thien_co",
+            "thai_duong",
+            "thien_dong",
+            "thai_am",
+            "tham_lang",
+            "thien_tuong",
+            "thien_luong",
+            "that_sat",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_10",
+          "type": "star_in_palace",
+          "text": "Thiên Cơ, Cự Môn cư Mão, Dậu, cung mệnh tất có Thiên Đồng. Sự nghiệp hay có nhiều biến động, ở Mão thì tốt hơn ở Dậu, cung Dậu phúc không dài lâu. Có thể theo đuổi các công việc văn hóa, nghệ thuật, quảng cáo, tiêu thụ…, nếu làm thương nghiệp thì có thể là người quản lý. Gặp Văn Xương Văn Khúc, chủ văn chương cái thế. Ba sao Khoa Quyền Lộc hội họp thì cự phú đại quý, nổi danh trong ngoài. Lộc Tồn đồng cung thì phú quý, dễ làm chính trị. Nếu gặp Sát tinh công việc nhiều cạnh tranh, hợp kinh doanh.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thien_co",
+            "thien_dong",
+            "cu_mon"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_11",
+          "type": "star_in_palace",
+          "text": "Cung Phụ mẫu chủ về: cha mẹ, cấp trên, văn thư giấy tờ. Tọa thủ : Vũ khúc, Thiên phủ, Thiên hình. Xung chiếu : Thất sát, Thiên khốc, Thiên hư, Kình dương . Tam hợp : Tử vi, Thiên tướng, Thiên riêu, Đà la , Linh tinh , Văn xương , Hóa khoa - Liêm trinh, Âm sát, Hỏa tinh , Hóa kỵ. Giáp cung : Thiên đồng, Thiên khôi , Hóa lộc - Thái dương, Thái âm. Ngũ hành khí của cung Canh Tí: 20% KIM (kị thần), 50% THỦY (hỉ thần), 30% THỔ (kị thần). Đây là cung khí cát hung đan xen (hữu cát). Vũ khúc hành KIM là kị thần. Thiên phủ hành THỔ là kị thần. Thiên hình hành HỎA là nhàn thần. Cung Phụ mẫu can Canh làm cho: - Thái dương Hóa lộc nhập cung Phúc đức (cung Phụ mẫu của cung Phụ mẫu). Cung Phúc đức can Tân chuyển Cự môn Hóa Lộc nhập cung Quan lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc. - Thiên đồng Hóa kỵ nhập cung Mệnh (cung Huynh đệ của cung Phụ mẫu). Cung Mệnh can Kỷ chuyển Vũ khúc Hóa Lộc nhập cung Phụ mẫu, chuyển Văn khúc Hóa kỵ nhập cung Huynh đệ.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "tu_vi",
+            "thai_duong",
+            "vu_khuc",
+            "thien_dong",
+            "liem_trinh",
+            "thien_phu",
+            "thai_am",
+            "cu_mon",
+            "thien_tuong",
+            "that_sat"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_12",
+          "type": "star_in_palace",
+          "text": "Cung Huynh đệ chủ về: anh chị em, bạn bè quan hệ, quan hệ hợp tác sự nghiệp. Tọa thủ : Phá quân, Văn khúc . Xung chiếu : Tử vi, Thiên tướng, Thiên riêu, Đà la , Linh tinh , Văn xương , Hóa khoa. Tam hợp : Thất sát, Thiên khốc, Thiên hư, Kình dương - Tham lang, Thiên mã. Giáp cung : Thiên việt , Hàm trì, Thiên hỉ - Thiên đồng, Thiên khôi , Hóa lộc. Ngũ hành khí của cung Mậu Tuất: 20% THỔ (kị thần), 50% THỔ (kị thần), 30% MỘC (hỉ thần). Đây là cung khí hung nhiều hơn cát (hữu cát). Phá quân hành THỦY là hỉ thần. Văn khúc hành THỦY là hỉ thần. Cung Huynh đệ can Mậu làm cho: - Tham lang Hóa lộc nhập cung Điền trạch (cung Quan lộc của cung Huynh đệ). Cung Điền trạch can Canh chuyển Thái dương Hóa Lộc nhập cung Phúc đức, chuyển Thiên đồng Hóa kỵ nhập cung Mệnh. - Thiên cơ Hóa kỵ nhập cung Quan lộc (cung Nô bộc của cung Huynh đệ). Cung Quan lộc can Tân làm Cự môn tự hóa lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "tu_vi",
+            "thien_co",
+            "thai_duong",
+            "thien_dong",
+            "tham_lang",
+            "cu_mon",
+            "thien_tuong",
+            "that_sat",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_13",
+          "type": "star_in_palace",
+          "text": "Cung Nô bộc chủ về: bạn bè, đồng sự, cấp dưới, người hợp tác. Tọa thủ : Tử vi, Thiên tướng, Thiên riêu, Đà la , Linh tinh , Văn xương , Hóa khoa. Xung chiếu : Phá quân, Văn khúc . Tam hợp : Liêm trinh, Âm sát, Hỏa tinh , Hóa kỵ - Vũ khúc, Thiên phủ, Thiên hình. Giáp cung : Thiên cơ, Cự môn, Hóa quyền, Hồng loan - Thiên lương, Lộc tồn, Địa kiếp , Địa không . Ngũ hành khí của cung Nhâm Thìn: 20% THỦY (hỉ thần), 50% THỔ (kị thần), 30% THỦY (hỉ thần). Đây là cung khí đại cát . Tử vi hành THỔ là kị thần. Thiên tướng hành THỦY là hỉ thần. Thiên riêu hành THỦY là hỉ thần. Đà la hành KIM là kị thần. Linh tinh hành HỎA là nhàn thần. Văn xương hành KIM là kị thần. Hóa khoa hành MỘC là hỉ thần. Cung Nô bộc can Nhâm làm cho: - Thiên lương Hóa lộc nhập cung Thiên di (cung Phụ mẫu của cung Nô bộc). Cung Thiên di can Quý chuyển Phá quân Hóa Lộc nhập cung Huynh đệ, chuyển Tham lang Hóa kỵ nhập cung Điền trạch. - Vũ khúc Hóa kỵ nhập cung Phụ mẫu (cung Tài bạch của cung Nô bộc). Cung Phụ mẫu can Canh chuyển Thái dương Hóa Lộc nhập cung Phúc đức, chuyển Thiên đồng Hóa kỵ nhập cung Mệnh.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "tu_vi",
+            "thien_co",
+            "thai_duong",
+            "vu_khuc",
+            "thien_dong",
+            "liem_trinh",
+            "thien_phu",
+            "tham_lang",
+            "cu_mon",
+            "thien_tuong",
+            "thien_luong",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "menh_crawl_1790158130009_14",
+          "type": "general",
+          "text": "1. Cung Mệnh (bản thân đương số) Hóa lộc phi phục Tam điểm tại Tí, Ngọ, Hợi. 2. Đại vận: 3 - 12 tuổi ở Hợi (vị trí nhất lục cộng tông với cung xung chiếu của cung Tí) nhận lộc của Mệnh tiên thiên báo hiệu đại vận này có Lộc Mệnh. 3. Cung Mệnh của Đại vận: 3 - 12 tuổi tại Hợi Hóa lộc phi phục nhập cung Tí. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tí, Ngọ, Hợi; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_15",
+          "type": "general",
+          "text": "1. Cung Mệnh (bản thân đương số) Hóa kỵ phi phục Tam điểm tại Tuất, Thìn, Dậu. 2. Đại vận: 13 - 22 tuổi ở Tuất nhận kỵ của Mệnh tiên thiên báo hiệu đại vận này có Kỵ Mệnh. 3. Cung Mệnh của Đại vận: 13 - 22 tuổi tại Tuất Hóa kỵ phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_16",
+          "type": "general",
+          "text": "1. Cung Mệnh (bản thân đương số) Hóa kỵ phi phục Tam điểm tại Tuất, Thìn, Dậu. 2. Đại vận: 23 - 32 tuổi ở Dậu (vị trí nhất lục cộng tông với cung xung chiếu của cung Tuất) nhận kỵ của Mệnh tiên thiên báo hiệu đại vận này có Kỵ Mệnh. 3. Cung Mệnh của Đại vận: 23 - 32 tuổi tại Dậu Hóa kỵ phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_17",
+          "type": "general",
+          "text": "Đây gọi là \"quy vị lộc\", là cát tượng, mang ý nghĩa cung Mệnh (bản thân đương số). Ứng kỳ có thể vào một năm Thân, Hợi hoặc tam điểm tại Hợi, Tị, Tuất; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_18",
+          "type": "general",
+          "text": "1. Cung Mệnh (bản thân đương số) Hóa lộc phi phục Tam điểm tại Tí, Ngọ, Hợi. 2. Đại vận: 53 - 62 tuổi ở Ngọ (xung chiếu với Tí) nhận lộc của Mệnh tiên thiên báo hiệu đại vận này có Lộc Mệnh. 3. Cung Mệnh của Đại vận: 53 - 62 tuổi tại Ngọ Hóa lộc phi phục nhập cung Thân. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_19",
+          "type": "general",
+          "text": "1. Cung Mệnh (bản thân đương số) Hóa kỵ phi phục Tam điểm tại Tuất, Thìn, Dậu. 2. Đại vận: 73 - 82 tuổi ở Thìn (xung chiếu với Tuất) nhận kỵ của Mệnh tiên thiên báo hiệu đại vận này có Kỵ Mệnh. 3. Cung Mệnh của Đại vận: 73 - 82 tuổi tại Thìn Hóa kỵ phi phục nhập cung Tí. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tí, Ngọ, Hợi; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_20",
+          "type": "general",
+          "text": "1. Cung Mệnh (bản thân đương số) Hóa lộc phi phục Tam điểm tại Tí, Ngọ, Hợi. 2. Đại vận: 113 - 122 tuổi ở Tí nhận lộc của Mệnh tiên thiên báo hiệu đại vận này có Lộc Mệnh. 3. Cung Mệnh của Đại vận: 113 - 122 tuổi tại Tí Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "menh_crawl_1790158130009_21",
+          "type": "general",
+          "text": "Trong vận này, vấn đề Mệnh có 2 điều kiện tốt, 1 điều kiện tốt vừa phải, 1 điều kiện xấu. Tạm kết là tốt xấu đan xen, tuy nhiên tốt khá nhiều , phần xấu không đáng lo ngại. * Cung Mệnh (chủ nhân): Về người: bản tính (tính cách), sở thích, tài năng, nhân duyên, thế giới nội tâm của ta. Về sự: ưu thế trong mệnh, cá tính (nhân cách, tính cách) thành công, điều kiện của cung quan lộc tiên thiên. Về vật: sự cố bất ngờ, tình duyên, tất cả định số liên quan tới [nhân, sự, vật].",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
           }
         }
       ]

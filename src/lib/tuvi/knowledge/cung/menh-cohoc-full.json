@@ -3,8 +3,8 @@
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
   "import_mode": "incremental",
-  "last_updated": "2026-09-22T03:00:29.986Z",
-  "total_blocks": 59,
+  "last_updated": "2026-09-23T02:33:10.305Z",
+  "total_blocks": 64,
   "sections": [
     {
       "section_id": "menh",
@@ -1860,6 +1860,77 @@
             "url": "https://tuvi.cohoc.net"
           },
           "accuracy": 4
+        }
+      ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "menh_crawl_0_1790130587413",
+          "condition_text": "1. Giải đo&aacute;n cung Mệnh",
+          "raw_text": "Các bước phía trên (phần A, B ) đã nói rất nhiều đến những lý luận để giải đoán cung Mệnh, đồng thời những phần tính lý chung của các sao cũng hầu hết đều dùng cung Mệnh làm đại diện để mô tả tính chất của chúng. Cho nên mọi người cần đọc lại và nắm cho vững, còn trong phần này xin dành để trình bày phần phụ luận cho cung Mệnh với các điểm cần quan tâm như an Mệnh vào Kim Tỏa Thiết Xà và an Mệnh theo giờ Quan Sát.",
+          "conditions": {
+            "palace": "MENH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "menh_crawl_1_1790130587413",
+          "condition_text": "1. Giải đo&aacute;n cung Mệnh",
+          "raw_text": "Về tên gọi thì còn được biết đến với tên gọi là \"Kim Xà Thiết Tỏa\", nhưng quả thực tôi cũng không hiểu nghĩa của \"Kim Xà Thiết Tỏa\" là cái gì, theo tôi suy đoán thì có lẽ do phương pháp truyền khẩu nên đây là một cách gọi lệch đi của \"Kim Tỏa Thiết Xà\" mà thôi, dần dà cứ gọi nhiều thành quen nên cứ dùng như vậy.",
+          "conditions": {
+            "palace": "MENH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "menh_crawl_2_1790130587413",
+          "condition_text": "1. Giải đo&aacute;n cung Mệnh",
+          "raw_text": "\"Kim Tỏa\" thì chúng ta vẫn thường biết đến với cụm từ \"vòng Kim Tỏa\" tức là vòng xiềng xích khóa chặt, vây hãm nguy hiểm,&hellip; và \"Thiết Xà\" nghĩa là con rắn đen, còn chữ \"quan\" có nghĩa là cửa ải. Vì vậy, \"Kim Tỏa Thiết Xà quan\" có nghĩa là cái cửa ải nguy hiểm bị bao vây bởi những con rắn đen, hoặc nghĩa là Khóa vàng Rắn sát bao vây.",
+          "conditions": {
+            "palace": "MENH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "menh_crawl_3_1790130587413",
+          "condition_text": "1. Giải đo&aacute;n cung Mệnh",
+          "raw_text": "Cách xác định cung an vào chỗ Kim Tỏa Thiết Xà quan như sau:",
+          "conditions": {
+            "palace": "MENH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "menh_crawl_4_1790130587413",
+          "condition_text": "1. Giải đo&aacute;n cung Mệnh",
+          "raw_text": "Đương tòng Tuất thượng, khởi Tý niên,",
+          "conditions": {
+            "palace": "MENH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
         }
       ]
     }

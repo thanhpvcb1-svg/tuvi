@@ -2,7 +2,7 @@
   "palace": "TAI_BACH",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 45,
+  "total_blocks": 50,
   "sections": [
     {
       "section_id": "tai-bach",
@@ -1428,6 +1428,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "tai_bach_crawl_20_1790130587414",
+          "condition_text": "5. Luận giải cung T&agrave;i Bạch",
+          "raw_text": "Trong hai chữ Tài Bạch, thì chữ Tài nghĩa là tiền bạc, của cải, đủ để người ta hiểu sơ lược về ý nghĩa của cái tên gọi. Còn chữ Bạch nghĩa là lụa là gấm vóc, trong xã hội thời xưa thì đây là một loại hàng hóa có giá trị rất cao, người dùng nó thì thể hiện được vị trí giai tầng của mình, đồng thời nó cũng là tặng phẩm của vua ban cho triều thần hoặc là vật trân quý của những nước chư hầu đem đi cống nạp cho nước lớn,&hellip;",
+          "conditions": {
+            "palace": "TAI_BACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai_bach_crawl_21_1790130587414",
+          "condition_text": "5. Luận giải cung T&agrave;i Bạch",
+          "raw_text": "Cung Tài Bạch là một trong số các cung quan trọng vào hàng bậc nhất trên lá số, bởi vì ngoài chức năng mà nó đảm nhiệm về phương diện cung chức thì cung Tài Bạch nằm ở vị trí tam hợp vĩnh viễn với cung Mệnh nên những sao tọa thủ ở trong cung Tài Bạch có ảnh hưởng rất mạnh suốt cả cuộc đời con người ta thông qua sự hợp chiếu vào cung Mệnh. Nói cách khác, tốt xấu của cung Tài Bạch có ảnh hưởng trực tiếp đến tốt xấu của cung Mệnh và ngược lại.",
+          "conditions": {
+            "palace": "TAI_BACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai_bach_crawl_22_1790130587414",
+          "condition_text": "5. Luận giải cung T&agrave;i Bạch",
+          "raw_text": "Chức năng của cung Tài Bạch là cho biết mối quan hệ của đương số với tiền bạc, tài sản, của cải vật chất trong suốt cuộc đời của mình; cung Tài Bạch còn cho biết hình thức thụ hưởng của cải của người ta là thuộc dạng nào, thông qua lương lậu bổng lộc, qua kinh doanh buôn bán, qua sản xuất trồng trọt, hay được thừa hưởng gia tài từ người khác... Xưa nay, có nhiều người nghĩ đơn giản là xem sự giàu hay nghèo của đương số là cứ nhìn ngay vào cung Tài Bạch xem nó như thế nào, nếu thấy hội tụ nhiều sao chủ về tài lộc và các cát tinh, xa lánh được được các sát hung tinh, Kị tinh, hao bại tinh,... thì liền đoán rằng đương số giàu có. Kỳ thực, điều đó đúng nhưng mà chưa đủ, bởi vì sự giàu nghèo của đương số trong mối quan hệ với tiền bạc, tài sản, của cải vật chất trong suốt cuộc đời không đơn thuần chỉ như vậy, mà nó còn phụ thuộc vào rất nhiều các yếu tố khác có sự đan xen phức tạp với nhau.",
+          "conditions": {
+            "palace": "TAI_BACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai_bach_crawl_23_1790130587414",
+          "condition_text": "5. Luận giải cung T&agrave;i Bạch",
+          "raw_text": "Đó là lý do mà các cụ vẫn thường truyền dạy rằng, xem về giàu nghèo của đương số cần phải chú trọng xem đồng thời đến các cung Phúc Đức, Mệnh Thân và Điền Trạch.",
+          "conditions": {
+            "palace": "TAI_BACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tai_bach_crawl_24_1790130587414",
+          "condition_text": "5. Luận giải cung T&agrave;i Bạch",
+          "raw_text": "Như, cung Phúc Đức mà tốt đẹp thì mới có phúc phận, có lương duyên để được hưởng những ảnh hưởng tốt đẹp về tài lộc ở cung Tài Bạch; dẫu cho cung Tài Bạch khi đó có mờ ám xấu xa thì vẫn có ý chí thôi thúc đương số lăn lộn trong gian khó để kiếm tiền, sẵn sàng nắm bắt những cơ hội (cơ duyên) trong công việc sản xuất cũng như kinh doanh để kiếm được tiền của. Tức là, vai trò của cung Phúc Đức đối với vấn đề tiền bạc nắm giữ vị trí ảnh hưởng về tinh thần tư tưởng và quan niệm của đương số đối với của cải vật chất, có khát khao kiếm tiền hay không; cung Phúc Đức cũng cho biết đương số có nhiều cơ duyên để kiếm tiền hay không.",
+          "conditions": {
+            "palace": "TAI_BACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.317Z"
 }

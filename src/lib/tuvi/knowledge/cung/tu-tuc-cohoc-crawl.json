@@ -2,8 +2,8 @@
   "palace": "TU_TUC",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-22T16:51:29.462Z",
-  "total_blocks": 819,
+  "last_updated": "2026-09-23T10:08:50.195Z",
+  "total_blocks": 823,
   "hashes": [
     "297d9cf852c1",
     "1233fc9696f0",
@@ -823,7 +823,11 @@
     "5bcfddc0901b",
     "b358cd643b8c",
     "3a2504cb23f1",
-    "702e71451084"
+    "702e71451084",
+    "4bd5276ed003",
+    "1254a4e77bc7",
+    "2e98430c939d",
+    "798bf9872b16"
   ],
   "sections": [
     {
@@ -8295,6 +8299,42 @@
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Bắc Phái"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158130195_0",
+          "type": "general",
+          "text": "Kị tiên thiên thêm Kị hậu thiên đây gọi là \"quy vị\", là cát tượng, mang ý nghĩa cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục). Ứng kỳ này có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158130195_1",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa lộc phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 3 - 12 tuổi ở Hợi nhận lộc của Tử tức tiên thiên báo hiệu đại vận này có Lộc Tử tức. 3. Cung Tử tức của Đại vận: 3 - 12 tuổi tại Thân Hóa lộc phi phục nhập cung Hợi. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Hợi, Tị, Tuất; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dần, Thân, Sửu khi cung Tử tức lưu niên ở tại cung Hợi, Tị, Tuất vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158130195_2",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa lộc phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 13 - 22 tuổi ở Tuất (vị trí nhất lục cộng tông với cung xung chiếu của cung Hợi) nhận lộc của Tử tức tiên thiên báo hiệu đại vận này có Lộc Tử tức. 3. Cung Tử tức của Đại vận: 13 - 22 tuổi tại Mùi Hóa lộc phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Ngọ, Tí, Tị khi cung Tử tức lưu niên ở tại cung Mão, Dậu, Dần vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "tu-tuc_crawl_1790158130195_3",
+          "type": "general",
+          "text": "1. Cung Tử tức (con cái, tình trạng sinh đẻ, tình trạng sinh hoạt tình dục) Hóa lộc phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 63 - 72 tuổi ở Tị (xung chiếu với Hợi) nhận lộc của Tử tức tiên thiên báo hiệu đại vận này có Lộc Tử tức. 3. Cung Tử tức của Đại vận: 63 - 72 tuổi tại Dần Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thìn, Tuất, Mão khi cung Tử tức lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
           }
         }
       ]

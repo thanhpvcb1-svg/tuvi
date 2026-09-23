@@ -2,7 +2,7 @@
   "palace": "PHUC_DUC",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 42,
+  "total_blocks": 47,
   "sections": [
     {
       "section_id": "phuc-duc",
@@ -1297,6 +1297,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "phuc_duc_crawl_50_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Cung Phúc Đức là cung mang khái niệm trừu tượng nhất, cũng là một trong những cung quan trọng bậc nhất trên lá số, vì ảnh hưởng của Phúc Đức có thể chi phối tới hầu hết các cung chức còn lại như chúng ta đã biết trong quá trình luận đoán các cung chức vừa qua.",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_51_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Vai trò quan trọng của cung Phúc Đức khi luận đoán số Tử Vi cũng được cổ nhân đúc kết trong lời các bài phú như:",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_52_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Đệ nhất tiên khán phúc đức, tái tam tế khảo thiên di,",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_53_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "(Đầu tiên xem cung Phúc Đức, sau đó xét kỹ cung Thiên Di)",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phuc_duc_crawl_54_1790130587416",
+          "condition_text": "11. Luận Giải cung Ph&uacute;c Đức",
+          "raw_text": "Tiên quan Phúc Đức, vi tinh thần phúc ấm sở tại",
+          "conditions": {
+            "palace": "PHUC_DUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.336Z"
 }

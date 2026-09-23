@@ -2,8 +2,8 @@
   "palace": "PHUC_DUC",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-22T16:51:29.327Z",
-  "total_blocks": 1203,
+  "last_updated": "2026-09-23T10:08:50.059Z",
+  "total_blocks": 1213,
   "hashes": [
     "8346515e454f",
     "4dac7df7401c",
@@ -1207,7 +1207,17 @@
     "068074c88717",
     "f63c4b0b622f",
     "9c937737b948",
-    "89945aad3bde"
+    "89945aad3bde",
+    "00094a7e09fc",
+    "440cafd8af70",
+    "2b4ee9e4b513",
+    "071f52124587",
+    "dcd5e2d799e4",
+    "faf64be92ee4",
+    "467fbf447c07",
+    "293563847e05",
+    "1285accdd219",
+    "d28693dead34"
   ],
   "sections": [
     {
@@ -14551,6 +14561,114 @@
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Bắc Phái"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130058_0",
+          "type": "star_in_palace",
+          "text": "Cung Phu thê chủ về: người phối ngẫu, tình cảm, tình trạng hôn nhân. Tọa thủ : Thiên việt , Hàm trì, Thiên hỉ. Xung chiếu : Thiên cơ, Cự môn, Hóa quyền, Hồng loan. Tam hợp : Thiên lương, Lộc tồn, Địa kiếp , Địa không - Thái dương, Thái âm. Giáp cung : Liêm trinh, Âm sát, Hỏa tinh , Hóa kỵ - Phá quân, Văn khúc . Ngũ hành khí của cung Đinh Dậu: 20% HỎA (nhàn thần), 50% KIM (kị thần), 30% HỎA (nhàn thần). Đây là cung khí tiểu hung . Thiên việt hành HỎA là nhàn thần. Hàm trì hành MỘC là hỉ thần. Thiên hỉ hành THỦY là hỉ thần. Cung Phu thê can Đinh làm cho: - Thái âm Hóa lộc nhập cung Phúc đức (cung Quan lộc của cung Phu thê). Cung Phúc đức can Tân chuyển Cự môn Hóa Lộc nhập cung Quan lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc. - Cự môn Hóa kỵ nhập cung Quan lộc (cung Thiên di của cung Phu thê). Cung Quan lộc can Tân làm Cự môn tự hóa lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thien_co",
+            "thai_duong",
+            "liem_trinh",
+            "thai_am",
+            "cu_mon",
+            "thien_luong",
+            "pha_quan"
+          ]
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130058_1",
+          "type": "star_in_palace",
+          "text": "Cung Tài bạch chủ về: kinh tế, tiền bạc, kinh doanh, thu nhập. Tọa thủ : Tả phù , Hữu bật . Xung chiếu : Thái dương, Thái âm. Tam hợp : Thiên đồng, Thiên khôi , Hóa lộc - Thiên cơ, Cự môn, Hóa quyền, Hồng loan. Giáp cung : Thất sát, Thiên khốc, Thiên hư, Kình dương - Liêm trinh, Âm sát, Hỏa tinh , Hóa kỵ. Ngũ hành khí của cung Ất Mùi: 20% MỘC (hỉ thần), 50% THỔ (kị thần), 30% KIM (kị thần). Đây là cung khí hung nhiều hơn cát (hữu cát). Tả phù hành THỔ là kị thần. Hữu bật hành THỔ là kị thần. Can cung là Ất thuộc phạm trù ĐỊA: Mình giúp người, nhưng chiếm vị thế nên hoàn cảnh, môi trường sẽ giúp lại cho ta. Can Ất là Thiên chi Địa có nghĩa là Địa lợi ở mức độ THƯỢNG ĐẲNG - cao nhất. Ngoài ra cung Ất Mùi có ngũ hành thiên can khắc địa chi cũng làm giảm nhiều độ số cho tính đắc Địa lợi của cung. Cung Tài bạch can Ất làm cho: - Thiên cơ Hóa lộc nhập cung Quan lộc (cung Tài bạch của cung Tài bạch). Cung Quan lộc làm can Tân Cự môn tự hóa lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc. - Thái âm Hóa kỵ nhập cung Phúc đức (cung Thiên di của cung Tài bạch). Cung Phúc đức can Tân chuyển Cự môn Hóa Lộc nhập cung Quan lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thien_co",
+            "thai_duong",
+            "thien_dong",
+            "liem_trinh",
+            "thai_am",
+            "cu_mon",
+            "that_sat"
+          ]
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130058_2",
+          "type": "general",
+          "text": "Đây gọi là \"quy vị lộc\", là cát tượng, mang ý nghĩa cung Phúc đức (tinh thần, sinh hoạt hưởng thụ). Ứng kỳ có thể vào một năm Tuất, Hợi hoặc tam điểm tại Sửu, Mùi, Tí; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130058_3",
+          "type": "general",
+          "text": "1. Cung Phúc đức (tinh thần, sinh hoạt hưởng thụ) Hóa kỵ phi phục Tam điểm tại Thìn, Tuất, Mão. 2. Đại vận: 13 - 22 tuổi ở Tuất (xung chiếu với Thìn) nhận kỵ của Phúc đức tiên thiên báo hiệu đại vận này có Kỵ Phúc đức. 3. Cung Phúc đức của Đại vận: 13 - 22 tuổi tại Tí Hóa kỵ phi phục nhập cung Hợi. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Hợi, Tị, Tuất; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dậu, Mão, Thân khi cung Phúc đức lưu niên ở tại cung Hợi, Tị, Tuất vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130058_4",
+          "type": "general",
+          "text": "1. Cung Phúc đức (tinh thần, sinh hoạt hưởng thụ) Hóa lộc phi phục Tam điểm tại Mão, Dậu, Dần. 2. Đại vận: 23 - 32 tuổi ở Dậu (xung chiếu với Mão) nhận lộc của Phúc đức tiên thiên báo hiệu đại vận này có Lộc Phúc đức. 3. Cung Phúc đức của Đại vận: 23 - 32 tuổi tại Hợi Hóa lộc phi phục nhập cung Tí. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tí, Ngọ, Hợi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tuất, Thìn, Dậu khi cung Phúc đức lưu niên ở tại cung Tí, Ngọ, Hợi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130058_5",
+          "type": "general",
+          "text": "Đây gọi là \"quy vị lộc\", là cát tượng, mang ý nghĩa cung Phúc đức (tinh thần, sinh hoạt hưởng thụ). Ứng kỳ có thể vào một năm Mùi, Hợi hoặc tam điểm tại Sửu, Mùi, Tí; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130058_6",
+          "type": "general",
+          "text": "1. Cung Phúc đức (tinh thần, sinh hoạt hưởng thụ) Hóa kỵ phi phục Tam điểm tại Thìn, Tuất, Mão. 2. Đại vận: 73 - 82 tuổi ở Thìn nhận kỵ của Phúc đức tiên thiên báo hiệu đại vận này có Kỵ Phúc đức. 3. Cung Phúc đức của Đại vận: 73 - 82 tuổi tại Ngọ Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Hợi, Tị, Tuất khi cung Phúc đức lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130059_7",
+          "type": "general",
+          "text": "1. Cung Phúc đức (tinh thần, sinh hoạt hưởng thụ) Hóa lộc phi phục Tam điểm tại Mão, Dậu, Dần. 2. Đại vận: 83 - 92 tuổi ở Mão nhận lộc của Phúc đức tiên thiên báo hiệu đại vận này có Lộc Phúc đức. 3. Cung Phúc đức của Đại vận: 83 - 92 tuổi tại Tị Hóa lộc phi phục nhập cung Tuất. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tuất, Thìn, Dậu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Phúc đức lưu niên ở tại cung Tuất, Thìn, Dậu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130059_8",
+          "type": "general",
+          "text": "1. Cung Phúc đức (tinh thần, sinh hoạt hưởng thụ) Hóa kỵ phi phục Tam điểm tại Thìn, Tuất, Mão. 2. Đại vận: 83 - 92 tuổi ở Mão (vị trí nhất lục cộng tông với cung xung chiếu của cung Thìn) nhận kỵ của Phúc đức tiên thiên báo hiệu đại vận này có Kỵ Phúc đức. 3. Cung Phúc đức của Đại vận: 83 - 92 tuổi tại Tị Hóa kỵ phi phục nhập cung Dần. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Dần, Thân, Sửu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tí, Ngọ, Hợi khi cung Phúc đức lưu niên ở tại cung Dần, Thân, Sửu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phuc-duc_crawl_1790158130059_9",
+          "type": "general",
+          "text": "Trong vận này, vấn đề Phúc đức có 1 điều kiện tốt, 1 điều kiện tốt vừa phải, 1 điều kiện xấu vừa phải. Tạm kết là tốt xấu đan xen, mức độ không lớn. * Cung Phúc đức (chủ vật): Về người: quý nhân, ông bà nội, tổ ấm, vị trí phúc báo tích thiện của người nhà. Về sự: sở thích, hưởng thụ, quý nhân, các liên quan lợi hại của quan hệ. Về vật: gia nghiệp, tổ nghiệp, kế thừa, vị trí nhân quả của góc độ tôn giáo.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
           }
         }
       ]

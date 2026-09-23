@@ -2,7 +2,7 @@
   "palace": "PHU_THE",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 53,
+  "total_blocks": 58,
   "sections": [
     {
       "section_id": "phu-the",
@@ -1672,6 +1672,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "phu_the_crawl_10_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Cung Phu Thê cho biết mối quan hệ của đương số với vợ/chồng của mình, tình duyên thuận lợi hay trắc trở, đến mau hay hay muộn, tình cảm nồng thắm hay lạnh nhạt, có được hạnh phúc hay hình khắc,&hellip; Đồng thời cung Phu Thê cũng khái lược về một số nét chính của người phối ngẫu của đương số như là người gần hay người xa tới mức dị tộc (ngoại quốc), có được thành công và tương trợ cho sự thành công của đương số sau khi kết phối hay chăng,&hellip;",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_11_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Cung Phu Thê được liệt vào một trong những cường cung (tức là cung có tác động mạnh mẽ đến cuộc đời của đương số), bởi vì theo hình thái xã hội và quan niệm của người xưa thì người nữ lấy chồng là sự trao thân gửi phận, mọi việc đều nhất nhất theo chồng, cuộc đời nương tựa vào người chồng,&hellip; còn người nam lấy vợ là sự bắt đầu của duy trì nòi giống, đối với nhà giàu, quyền quý còn là sự liên kết thế lực họ tộc để giữ gìn và tăng cường của cải; đối với những nhà nghèo thì người vợ còn lại hậu phương quán xuyến việc gia đình, buôn bán chăm sóc cho chồng ăn học để đi thi cử,&hellip; Ngoài ra, các âm Dương gia còn chủ trương rằng \"cô âm bất sinh, cô Dương bất trưởng\", vợ chồng chính là cặp âm Dương, chỉ khi kết phối và hòa hợp thì mới phát triển thịnh vượng được.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_12_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Người xưa nói \"lấy vợ xem tông, lấy chồng xem giống\" vì tông tộc họ hàng cùng với nòi giống là những điểm quan trọng của người xưa khi lựa chọn kết phối, gốc gác giống nòi tông tộc mà có thế lực và thông minh khỏe mạnh (gen tốt) thường được ưu tiên lựa chọn hơn. Nhưng quy tắc đó là áp dụng ở phần xét bên ngoài mà không dùng đến lá số.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_13_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Vậy ở trong lá số tử vi có dạng quan niệm tương đồng hay không? Thưa, có. Đó là xem cung Phu Thê phải lưu ý kết hợp đồng thời với cung Phúc Đức, cung Mệnh - Thân. Những dấu hiệu tốt xấu của cung Phúc Đức, cung Mệnh - Thân, của đương số đều có ảnh hưởng trực tiếp đến tốt xấu ở cung Phu Thê của đương số, các cung ấy mà được tốt đẹp thì có thể giải được những điểm hình khắc, trắc trở ở cung Phối của đương số, ngược lại các cung ấy mà xấu thì cũng là giảm đi sự tốt đẹp ở cung Phối.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "phu_the_crawl_14_1790130587414",
+          "condition_text": "3. Giải đo&aacute;n cung Phối (Phu Th&ecirc; cung)",
+          "raw_text": "Xem cung Phu Thê, cần chú ý đến sao Phá Quân và cặp sao âm Dương (Nhật Nguyệt), bởi vì Phá Quân là thần chủ quản cung Phu Thê, Tử Tức và Nô Bộc, còn sao Thái âm là tượng của người vợ trên lá số của người nam, và sao Thái Dương là tượng của người chồng trên lá số của người nữ. Tốt xấu của các sao này đều có ảnh hưởng đến tốt xấu của cung Phu Thê. Tất nhiên, đây chỉ là yếu tố gia giảm, chủ yếu vẫn phải xét kỹ ở bản cung Phu Thê.",
+          "conditions": {
+            "palace": "PHU_THE"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.311Z"
 }

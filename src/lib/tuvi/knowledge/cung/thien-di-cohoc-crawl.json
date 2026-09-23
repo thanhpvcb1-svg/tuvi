@@ -2,8 +2,8 @@
   "palace": "THIEN_DI",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-22T16:51:29.355Z",
-  "total_blocks": 941,
+  "last_updated": "2026-09-23T10:08:50.134Z",
+  "total_blocks": 947,
   "hashes": [
     "643266e22eb1",
     "d10d677c897d",
@@ -945,7 +945,13 @@
     "5439545f7cf3",
     "fc94a31a67dd",
     "40400b72cbec",
-    "eac0a9fb0a45"
+    "eac0a9fb0a45",
+    "64b18ba07655",
+    "c2bfc8e1d225",
+    "ebcc84b0e1d3",
+    "8d84c70126cb",
+    "c1637b0f3f1a",
+    "6b7a64d5c6ca"
   ],
   "sections": [
     {
@@ -9596,6 +9602,60 @@
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Bắc Phái"
+          }
+        },
+        {
+          "id": "thien-di_crawl_1790158130134_0",
+          "type": "general",
+          "text": "1. Cung Thiên di (quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa) Hóa lộc phi phục Tam điểm tại Tuất, Thìn, Dậu. 2. Đại vận: 13 - 22 tuổi ở Tuất nhận lộc của Thiên di tiên thiên báo hiệu đại vận này có Lộc Thiên di. 3. Cung Thiên di của Đại vận: 13 - 22 tuổi tại Thìn Hóa lộc phi phục nhập cung Tị. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tị, Hợi, Thìn; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Hợi, Tị, Tuất khi cung Thiên di lưu niên ở tại cung Tị, Hợi, Thìn vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "thien-di_crawl_1790158130134_1",
+          "type": "general",
+          "text": "1. Cung Thiên di (quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa) Hóa lộc phi phục Tam điểm tại Tuất, Thìn, Dậu. 2. Đại vận: 23 - 32 tuổi ở Dậu (vị trí nhất lục cộng tông với cung xung chiếu của cung Tuất) nhận lộc của Thiên di tiên thiên báo hiệu đại vận này có Lộc Thiên di. 3. Cung Thiên di của Đại vận: 23 - 32 tuổi tại Mão Hóa lộc phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dậu, Mão, Thân khi cung Thiên di lưu niên ở tại cung Mão, Dậu, Dần vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "thien-di_crawl_1790158130134_2",
+          "type": "general",
+          "text": "1. Cung Thiên di (quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa) Hóa kỵ phi phục Tam điểm tại Dần, Thân, Sửu. 2. Đại vận: 33 - 42 tuổi ở Thân (xung chiếu với Dần) nhận kỵ của Thiên di tiên thiên báo hiệu đại vận này có Kỵ Thiên di. 3. Cung Thiên di của Đại vận: 33 - 42 tuổi tại Dần Hóa kỵ phi phục nhập cung Hợi. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Hợi, Tị, Tuất; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tị, Hợi, Thìn khi cung Thiên di lưu niên ở tại cung Hợi, Tị, Tuất vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "thien-di_crawl_1790158130134_3",
+          "type": "general",
+          "text": "1. Cung Thiên di (quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa) Hóa lộc phi phục Tam điểm tại Tuất, Thìn, Dậu. 2. Đại vận: 73 - 82 tuổi ở Thìn (xung chiếu với Tuất) nhận lộc của Thiên di tiên thiên báo hiệu đại vận này có Lộc Thiên di. 3. Cung Thiên di của Đại vận: 73 - 82 tuổi tại Tuất Hóa lộc phi phục nhập cung Dần. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Dần, Thân, Sửu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thân, Dần, Mùi khi cung Thiên di lưu niên ở tại cung Dần, Thân, Sửu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "thien-di_crawl_1790158130134_4",
+          "type": "general",
+          "text": "1. Cung Thiên di (quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa) Hóa kỵ phi phục Tam điểm tại Dần, Thân, Sửu. 2. Đại vận: 93 - 102 tuổi ở Dần nhận kỵ của Thiên di tiên thiên báo hiệu đại vận này có Kỵ Thiên di. 3. Cung Thiên di của Đại vận: 93 - 102 tuổi tại Thân Hóa kỵ phi phục nhập cung Thân. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dần, Thân, Sửu khi cung Thiên di lưu niên ở tại cung Thân, Dần, Mùi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "thien-di_crawl_1790158130134_5",
+          "type": "general",
+          "text": "1. Cung Thiên di (quan hệ bên ngoài, đối ngoại, xuất ngoại, giao tế, chuyển dời, đi xa) Hóa kỵ phi phục Tam điểm tại Dần, Thân, Sửu. 2. Đại vận: 103 - 112 tuổi ở Sửu (vị trí nhất lục cộng tông với cung xung chiếu của cung Dần) nhận kỵ của Thiên di tiên thiên báo hiệu đại vận này có Kỵ Thiên di. 3. Cung Thiên di của Đại vận: 103 - 112 tuổi tại Mùi Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Mùi, Sửu, Ngọ khi cung Thiên di lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
           }
         }
       ]

@@ -2,7 +2,7 @@
   "palace": "THIEN_DI",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 54,
+  "total_blocks": 59,
   "sections": [
     {
       "section_id": "thien-di",
@@ -1716,6 +1716,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "thien_di_crawl_30_1790130587416",
+          "condition_text": "7. Luận Giải cung Thi&ecirc;n Di",
+          "raw_text": "Cung Thiên Di cho biết mối quan hệ của đương số với môi trường xã hội bên ngoài, từ việc đi lại lành dữ ra sao, cho đến những sự giao tiếp đối ngoại cùng người được quý trọng nâng đỡ, hay dèm pha dị nghị như thế nào,&hellip;",
+          "conditions": {
+            "palace": "THIEN_DI"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "thien_di_crawl_31_1790130587416",
+          "condition_text": "7. Luận Giải cung Thi&ecirc;n Di",
+          "raw_text": "Nếu ta đứng ở vị trí của Di thì tiến trình và mối quan hệ của các cung bên cạnh cung Di cũng gần như tương tự và ngược lại mối quan hệ ở Mệnh: Khi ta ở bên ngoài xã hội, những yếu tố ảnh hưởng mạnh mẽ tới ta nhất chính là Nô Bộc và Tật ách, người phò trợ giúp đỡ quan tâm tới ta chính là bạn bè đồng nghiệp (tương tự như Huynh Đệ đối ta còn bé ở Mệnh), bệnh tật có thể hành hạ làm tổn thương ta có thể khiến cho ta vong mạng (tương tự như Phụ Mẫu đã sinh hạ và nuôi dưỡng khi ta còn bé ở Mệnh).",
+          "conditions": {
+            "palace": "THIEN_DI"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "thien_di_crawl_32_1790130587416",
+          "condition_text": "7. Luận Giải cung Thi&ecirc;n Di",
+          "raw_text": "Lại nói, khi quan niệm Mệnh cung là nơi ta ra đời phát sinh mệnh vận thì sau 60 năm cuộc đời sẽ đi đến gặp các sao Thương Sứ để rồi tới cung Di sẽ là nơi ra đi an nghỉ vĩnh hằng.",
+          "conditions": {
+            "palace": "THIEN_DI"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "thien_di_crawl_33_1790130587416",
+          "condition_text": "7. Luận Giải cung Thi&ecirc;n Di",
+          "raw_text": "Nói chung Thiên Di mang ý nghĩa về mối quan hệ ngoại cảnh đối với đương số, nhưng ngoài ý nghĩa cung chức thì sự bố cục ở vị trí đối xung vào cung Mệnh mang ý nghĩa rất lớn đối với việc luận giải lá số.",
+          "conditions": {
+            "palace": "THIEN_DI"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "thien_di_crawl_34_1790130587416",
+          "condition_text": "7. Luận Giải cung Thi&ecirc;n Di",
+          "raw_text": "Đối chiếu hề tường hung tường cát,",
+          "conditions": {
+            "palace": "THIEN_DI"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.323Z"
 }

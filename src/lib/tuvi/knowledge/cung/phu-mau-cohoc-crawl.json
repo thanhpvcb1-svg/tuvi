@@ -2,8 +2,8 @@
   "palace": "PHU_MAU",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-22T16:51:29.397Z",
-  "total_blocks": 1402,
+  "last_updated": "2026-09-23T10:08:50.100Z",
+  "total_blocks": 1411,
   "hashes": [
     "f82dc6e26950",
     "a639ca039e1d",
@@ -1406,7 +1406,16 @@
     "c9c08ab7b0d7",
     "0a79ad4e67e9",
     "2a9de3283d92",
-    "eeba6588aa25"
+    "eeba6588aa25",
+    "cc6580fe3998",
+    "2597de79ff3a",
+    "bcdaf6c3c01d",
+    "b24422a0b328",
+    "4886e532b27c",
+    "648b19640716",
+    "e67af0328d1b",
+    "8f997dd54140",
+    "4db58ce32677"
   ],
   "sections": [
     {
@@ -19133,6 +19142,106 @@
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Bắc Phái"
+          }
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_0",
+          "type": "star_in_palace",
+          "text": "Cung Phúc đức chủ về: tinh thần, sinh hoạt hưởng thụ. Tọa thủ : Thái dương, Thái âm. Xung chiếu : Tả phù , Hữu bật . Tam hợp : Thiên lương, Lộc tồn, Địa kiếp , Địa không - Thiên việt , Hàm trì, Thiên hỉ. Giáp cung : Vũ khúc, Thiên phủ, Thiên hình - Tham lang, Thiên mã. Ngũ hành khí của cung Tân Sửu: 20% KIM (kị thần), 50% THỔ (kị thần), 30% THỔ (kị thần). Đây là cung khí đại hung . Thái dương hành HỎA là nhàn thần. Thái âm hành THỦY là hỉ thần. Cung Phúc đức can Tân làm cho: - Cự môn Hóa lộc nhập cung Quan lộc (cung Phúc đức của cung Phúc đức). Cung Quan lộc làm can Tân Cự môn tự hóa lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc. - Văn xương Hóa kỵ nhập cung Nô bộc (cung Điền trạch của cung Phúc đức). Cung Nô bộc can Nhâm chuyển Thiên lương Hóa Lộc nhập cung Thiên di, chuyển Vũ khúc Hóa kỵ nhập cung Phụ mẫu.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "thai_duong",
+            "vu_khuc",
+            "thien_phu",
+            "thai_am",
+            "tham_lang",
+            "cu_mon",
+            "thien_luong"
+          ]
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_1",
+          "type": "star_in_palace",
+          "text": "Cung Quan lộc chủ về: chức vị, công danh, học vấn, học lực, nghề nghiệp. Tọa thủ : Thiên cơ, Cự môn, Hóa quyền, Hồng loan. Xung chiếu : Thiên việt , Hàm trì, Thiên hỉ. Tam hợp : Tả phù , Hữu bật - Thiên đồng, Thiên khôi , Hóa lộc. Giáp cung : Tham lang, Thiên mã - Tử vi, Thiên tướng, Thiên riêu, Đà la , Linh tinh , Văn xương , Hóa khoa. Ngũ hành khí của cung Tân Mão: 20% KIM (kị thần), 50% MỘC (hỉ thần), 30% MỘC (hỉ thần). Đây là cung khí đại cát . Thiên cơ hành MỘC là hỉ thần. Cự môn hành THỦY là hỉ thần. Hóa quyền hành HỎA là nhàn thần. Hồng loan hành THỦY là hỉ thần. Can cung là Tân thuộc phạm trù ĐỊA: Mình giúp người, nhưng chiếm vị thế nên hoàn cảnh, môi trường sẽ giúp lại cho ta. Can Tân là Nhân chi Địa có nghĩa là Địa lợi ở mức độ HẠ ĐẲNG - thấp nhất. Ngoài ra cung Tân Mão có ngũ hành thiên can khắc địa chi cũng làm giảm nhiều độ số cho tính đắc Địa lợi của cung. Cung Quan lộc can Tân làm cho: - Cung Quan lộc làm Cự môn tự hóa lộc, chuyển Văn xương Hóa kỵ nhập cung Nô bộc. - Văn xương Hóa kỵ nhập cung Nô bộc (cung Phụ mẫu của cung Quan lộc). Cung Nô bộc can Nhâm chuyển Thiên lương Hóa Lộc nhập cung Thiên di, chuyển Vũ khúc Hóa kỵ nhập cung Phụ mẫu.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          },
+          "required_stars": [
+            "tu_vi",
+            "thien_co",
+            "vu_khuc",
+            "thien_dong",
+            "tham_lang",
+            "cu_mon",
+            "thien_tuong",
+            "thien_luong"
+          ]
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_2",
+          "type": "general",
+          "text": "1. Cung Phụ mẫu (cha mẹ, cấp trên, văn thư giấy tờ) Hóa kỵ phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 3 - 12 tuổi ở Hợi nhận kỵ của Phụ mẫu tiên thiên báo hiệu đại vận này có Kỵ Phụ mẫu. 3. Cung Phụ mẫu của Đại vận: 3 - 12 tuổi tại Tí Hóa kỵ phi phục nhập cung Hợi. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Hợi, Tị, Tuất; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tuất, Thìn, Dậu khi cung Phụ mẫu lưu niên ở tại cung Hợi, Tị, Tuất vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_3",
+          "type": "general",
+          "text": "Đây gọi là \"quy vị lộc\", là cát tượng, mang ý nghĩa cung Phụ mẫu (cha mẹ, cấp trên, văn thư giấy tờ). Ứng kỳ có thể vào một năm Tuất, Hợi hoặc tam điểm tại Tí, Ngọ, Hợi; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_4",
+          "type": "general",
+          "text": "1. Cung Phụ mẫu (cha mẹ, cấp trên, văn thư giấy tờ) Hóa kỵ phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 13 - 22 tuổi ở Tuất (vị trí nhất lục cộng tông với cung xung chiếu của cung Hợi) nhận kỵ của Phụ mẫu tiên thiên báo hiệu đại vận này có Kỵ Phụ mẫu. 3. Cung Phụ mẫu của Đại vận: 13 - 22 tuổi tại Hợi Hóa kỵ phi phục nhập cung Tuất. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tuất, Thìn, Dậu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dậu, Mão, Thân khi cung Phụ mẫu lưu niên ở tại cung Tuất, Thìn, Dậu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_5",
+          "type": "general",
+          "text": "1. Cung Phụ mẫu (cha mẹ, cấp trên, văn thư giấy tờ) Hóa lộc phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 43 - 52 tuổi ở Mùi (xung chiếu với Sửu) nhận lộc của Phụ mẫu tiên thiên báo hiệu đại vận này có Lộc Phụ mẫu. 3. Cung Phụ mẫu của Đại vận: 43 - 52 tuổi tại Thân Hóa lộc phi phục nhập cung Hợi. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Hợi, Tị, Tuất; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tuất, Thìn, Dậu khi cung Phụ mẫu lưu niên ở tại cung Hợi, Tị, Tuất vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_6",
+          "type": "general",
+          "text": "1. Cung Phụ mẫu (cha mẹ, cấp trên, văn thư giấy tờ) Hóa kỵ phi phục Tam điểm tại Hợi, Tị, Tuất. 2. Đại vận: 63 - 72 tuổi ở Tị (xung chiếu với Hợi) nhận kỵ của Phụ mẫu tiên thiên báo hiệu đại vận này có Kỵ Phụ mẫu. 3. Cung Phụ mẫu của Đại vận: 63 - 72 tuổi tại Ngọ Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tí, Ngọ, Hợi khi cung Phụ mẫu lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_7",
+          "type": "general",
+          "text": "1. Cung Phụ mẫu (cha mẹ, cấp trên, văn thư giấy tờ) Hóa lộc phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 103 - 112 tuổi ở Sửu nhận lộc của Phụ mẫu tiên thiên báo hiệu đại vận này có Lộc Phụ mẫu. 3. Cung Phụ mẫu của Đại vận: 103 - 112 tuổi tại Dần Hóa lộc phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tí, Ngọ, Hợi khi cung Phụ mẫu lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-mau_crawl_1790158130100_8",
+          "type": "general",
+          "text": "1. Cung Phụ mẫu (cha mẹ, cấp trên, văn thư giấy tờ) Hóa lộc phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 113 - 122 tuổi ở Tí (vị trí nhất lục cộng tông với cung xung chiếu của cung Sửu) nhận lộc của Phụ mẫu tiên thiên báo hiệu đại vận này có Lộc Phụ mẫu. 3. Cung Phụ mẫu của Đại vận: 113 - 122 tuổi tại Sửu Hóa lộc phi phục nhập cung Mão. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Mão, Dậu, Dần; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dần, Thân, Sửu khi cung Phụ mẫu lưu niên ở tại cung Mão, Dậu, Dần vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
           }
         }
       ]

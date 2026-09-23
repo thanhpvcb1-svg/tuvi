@@ -2,7 +2,7 @@
   "palace": "NO_BOC",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 70,
+  "total_blocks": 75,
   "sections": [
     {
       "section_id": "no-boc",
@@ -2152,6 +2152,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "no_boc_crawl_35_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Cung Nô Bộc cho biết mối quan hệ của đương số đối với bạn bè, đồng nghiệp, những người trợ thủ giúp việc (chủ yếu là những người dưới quyền, nhưng đôi khi cũng ứng vào cấp trên - lúc này thường là ứng với các sao quý nhân).",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_36_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Cổ nhân sắp đặt bài bố cung chức Nô Bộc rất khéo léo ở vị trí giữa và giáp với cung Thiên Di, cung Quan Lộc, là hàm ý nhấn mạnh đến mối quan hệ liên kết giữa tính chất sự kiện của các cung này với nhau. Cho nên Phú có câu:",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_37_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Lộc cư Nô Bộc, túng hữu quan dã bôn trì,",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_38_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "(Lộc cư Nô thì tuy làm quan vẫn vất vả hoặc làm công việc có tính chất chạy đôn đáo ngược xuôi)",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "no_boc_crawl_39_1790130587416",
+          "condition_text": "8. Luận giải cung N&ocirc; Bộc",
+          "raw_text": "Điều này chủ yếu là do bố cục của tinh đẩu với các cung đó thôi, vì khi Lộc Tồn cư Nô Bộc thì Kình Đà xâm phạm vào Thiên Di vào Quan Lộc, đồng thời 2 sát tinh này cùng chiếu vào Mệnh.",
+          "conditions": {
+            "palace": "NO_BOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.326Z"
 }

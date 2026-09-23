@@ -2,7 +2,7 @@
   "palace": "QUAN_LOC",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 87,
+  "total_blocks": 92,
   "sections": [
     {
       "section_id": "quan-loc",
@@ -2823,6 +2823,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "quan_loc_crawl_40_1790130587416",
+          "condition_text": "9. Luận giải cung Quan Lộc",
+          "raw_text": "Cung Quan Lộc cho biết mối quan hệ của đương số đối với sự thành bại trong công danh sự nghiệp, công việc có được thuận lợi hay không, mức độ thăng tiến đến vị trí cỡ nào, có uy quyền ổn định hay thăng trầm, có bị truất giáng chuyển đổi gì không, khả năng chuyên môn (tức trình độ, tay nghề) là cao hay thấp, có phù hợp với đương số hay không,&hellip;",
+          "conditions": {
+            "palace": "QUAN_LOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "quan_loc_crawl_41_1790130587416",
+          "condition_text": "9. Luận giải cung Quan Lộc",
+          "raw_text": "Cung Quan Lộc bao gồm 2 phần Quan (sự nghiệp, công việc) và Lộc (tước lộc, bổng lộc đạt được từ công việc), cái chữ \"Lộc\" gắn liền với chữ Quan này có nguyên xuất phát thời Tây Hán, do Khoái Thông (thuộc hạ của Hàn Tín) nói với Hán Cao Tổ Lưu Bang rằng \"Nhà Tần bị mất con hươu, thiên hạ cùng truy đuổi, ai tài cao thì sẽ bắt được\". Con Hươu gọi là Lộc, câu đó ám chỉ sự nghiệp tranh tài đoạt quyền lực, cho nên \"Trục Lộc\" (đuổi Hươu) sau này được dùng kèm với \"Trảm Xà\" (chém rắn, gắn liền với việc khởi sự của Lưu Bang) mà tạo ra thành ngữ \"Trảm Xà trục Lộc\". Nói như thế để chúng ta biết được ý nghĩa của Quan Lộc, là nhấn mạnh về Quan vị Tước lộc,&hellip; cũng là nhằm hiểu chữ Lộc này mà suy ngẫm về câu phú \"Định tam hợp chi nguyên lưu\", \"Định tam hợp phù trì cát hung\". Đối với Tam hợp của Mệnh - Quan - Tài thì từ cung Mệnh là phát sinh khởi lưu, chuyển tới cung Quan Lộc là nơi phát triển thịnh vượng từ quan tước hưởng bổng lộc để quy về cung Tài Bạch vậy.",
+          "conditions": {
+            "palace": "QUAN_LOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "quan_loc_crawl_42_1790130587416",
+          "condition_text": "9. Luận giải cung Quan Lộc",
+          "raw_text": "Xem cung Quan Lộc phải chú ý tới Mệnh Thân và cung Phúc, vì cát hung của những cung này có ảnh hưởng mạnh mẽ đến sự nghiệp của đương số. Cung Mệnh thì liên quan gắn liền chặt chẽ đến cung Quan theo thế tam hợp chiếu, cung Thân thì biểu thị căn cơ và sức phấn đấu tự lực bản thân để vươn lên trong sự nghiệp, hai cung này thì rõ rồi. Vậy còn cung Phúc Đức ảnh hưởng như thế nào đến Quan Lộc của đương số mà cần phải xem kỹ?",
+          "conditions": {
+            "palace": "QUAN_LOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "quan_loc_crawl_43_1790130587416",
+          "condition_text": "9. Luận giải cung Quan Lộc",
+          "raw_text": "Thưa, nguyên do là vì ngày xưa trong chế độ phong kiến thì Phúc - Ấm là hai yếu tố gắn liền với nhau. Cha ông mà là hoàng thân quốc thích, hay là người có công lao với vua với triều đình thì nghiễm nhiên vợ con cháu chắt được hưởng ấm phong. Tùy theo từng thời từng triều đại, mức độ thân thích và công lao mà mức độ ấm phong là nhiều hay ít. Có khi được phong tước lộc, có khi được phong quan, nhưng thường là được phong hưởng lợi ích từ việc quản lý thuế má hoa lợi đối với một số không ít các hộ dân quanh khu vực người được phong ấm sinh sống. Bởi vậy, cung Phúc Đức mà bị sát tinh xâm phạm, bị phá trong khi cung Quan Lộc đẹp đẽ thì sự nghiệp quan tước cũng không thể được coi là thành công to lớn đâu nhé.",
+          "conditions": {
+            "palace": "QUAN_LOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "quan_loc_crawl_44_1790130587416",
+          "condition_text": "9. Luận giải cung Quan Lộc",
+          "raw_text": "Xem cung Quan Lộc phải chú ý đến các sao Thái Dương, Thiên Tướng, vì sao Thái Dương hóa khí là quyền quý là thần chủ quản cung Quan Lộc, sao Thiên Tướng hóa khí là ấn cũng là thần chủ quản cung Quan Lộc. Bên cạnh đó cũng cần chú ý tới Tử Vi, Thiên Phủ vì chúng là quyền và lệnh tinh quản về quyền hành và tước lộc. Cát hung của các sao trên đều có ảnh hưởng đến cát hung của cung Quan Lộc.",
+          "conditions": {
+            "palace": "QUAN_LOC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.330Z"
 }

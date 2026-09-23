@@ -2,7 +2,7 @@
   "palace": "DIEN_TRACH",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 63,
+  "total_blocks": 68,
   "sections": [
     {
       "section_id": "dien-trach",
@@ -1917,6 +1917,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "dien_trach_crawl_45_1790130587416",
+          "condition_text": "10. Luận Giải cung Điền Trạch",
+          "raw_text": "Chức năng của cung Điền Trạch cho biết mối quan hệ của đương số đối với tài sản vật chất, nhà cửa đấtđai, ruộng đồng vườn tược,&hellip; của mình. Chữ \"Điền\" có nghĩa là ruộng, vườn, còn chữ \"Trạch\" có nghĩa là nhà, là nơi ở nói chung. Do đó, cung Điền Trạch thì ngoài phần phản ánh mối quan hệ về đất đai, ruộng vườn mà đương số có sở hữu thì còn phản ánh cả mối quan hệ về nơi ở, nơi cư trú mà đương số không sở hữu, ví dụ như nhà đi thuê, chỗ tạm trú trong một thời hạn nào đó.",
+          "conditions": {
+            "palace": "DIEN_TRACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "dien_trach_crawl_46_1790130587416",
+          "condition_text": "10. Luận Giải cung Điền Trạch",
+          "raw_text": "Ruộng vườn là môi trường để con người ta lao động sản xuất canh tác, trồng trọt nhằm tạo ra của cải vật chất, cũng là để có lương thực để phục vụ nhu cầu sinh hoạt. Bởi thế mà người xưa nói \"tấc đất tấc vàng\". Ngày nay, ý nghĩa của câu này còn thực tiễn hơn nữa đối với đất ruộng vườn mà còn với cả đất nơi cư trú, do giá trị của chúng rất lớn nên được coi là một loại hàng hóa đặc biệt, loại tài sản mà được xếp vào nhóm bất động sản. Vì vậy, trong môn Tử Vi Đẩu Số, khi xét mức độ giàu có (phú) của đương số thì ngoài cung Mệnh Thân, Tài Bạch, thì nhất định phải chú ý đến các cách cục ở cung Điền Trạch.",
+          "conditions": {
+            "palace": "DIEN_TRACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "dien_trach_crawl_47_1790130587416",
+          "condition_text": "10. Luận Giải cung Điền Trạch",
+          "raw_text": "Xem về vấn đề có sở hữu được nhiều hay ít đất đai, bất động sản thì khi xét cung Điền Trạch cần phải chú ý đến cung Mệnh Thân và cung Phúc Đức của đương số, bởi vì cung Mệnh Thân cho biết khả năng tạo dựng cơ nghiệp còn cung Phúc Đức thì cho biết đương số có phúc phần được hưởng thừa kế đất đai từ cha ông hay không, được hưởng thì nhiều hay ít và dòng dõi xuất thân của đương số là cao quý hay nghèo hèn.",
+          "conditions": {
+            "palace": "DIEN_TRACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "dien_trach_crawl_48_1790130587416",
+          "condition_text": "10. Luận Giải cung Điền Trạch",
+          "raw_text": "Xem về vấn đề cát hung phần dương trạch để biết nơi cư trú của đương số có phù hợp để đương số và gia đình có sức khỏe tốt hay không (vì an cư thì mới lạc nghiệp mà) thì khi xét cung Điền Trạch gốc phải xét đồng thời đến cung Lưu Điền Trạch và Thiên Di của các hạn (chủ yếu là theo đại hạn, cung Lưu Điền Trạch được gọi là cung Điền Trạch hậu thiên). Nếu như chúng đều có cách cục tốt, có các cát tinh tụ hội thì đương số tất sẽ được ở trên mảnh đất lành, vận thế tốt đẹp làm bàn đạp tạo dựng cơ nghiệp vững chắc ổn định, người trong nhà cũng luôn được khỏe mạnh vui vẻ, buôn bán bất động sản cũng được suôn sẻ đem về nhiều lợi nhuận. Còn nếu như các hung sát ám tinh xâm phạm thì nhà cửa không ổn định, trong nhà dễ phát sinh ốm đau, tang tóc, lục đục cãi cọ, tranh chấp,&hellip; Như thế thì khó lòng mà chuyên tâm công việc tạo dựng sự nghiệp được. Hơn nữa, những việc liên quan đến buôn bán bất động sản cũng thường sẽ bị ế ẩm thua lỗ, bị lường gạt.",
+          "conditions": {
+            "palace": "DIEN_TRACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "dien_trach_crawl_49_1790130587416",
+          "condition_text": "10. Luận Giải cung Điền Trạch",
+          "raw_text": "Xem cung Điền Trạch, cần chú ý đến sao Thái âm (chính) và Thiên Phủ, Vũ Khúc (phụ) vì hóa khí là tài phú, là thần chủ quản cung Điền Trạch, độ miếu hãm và cát hung đi kèm của các sao ấy cũng ảnh hưởng trực tiếp đến cát hung của cung Điền Trạch.",
+          "conditions": {
+            "palace": "DIEN_TRACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.333Z"
 }

@@ -2,8 +2,8 @@
   "palace": "QUAN_LOC",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-22T16:51:29.378Z",
-  "total_blocks": 933,
+  "last_updated": "2026-09-23T10:08:50.218Z",
+  "total_blocks": 939,
   "hashes": [
     "c9ee1ff985d9",
     "cb5889f687dc",
@@ -937,7 +937,13 @@
     "2690f8e83010",
     "039faa4d297f",
     "752a2145fd1e",
-    "cb81d941e918"
+    "cb81d941e918",
+    "bf758215c119",
+    "f85f7e33cb36",
+    "7e0677559300",
+    "74c492cd9c82",
+    "42475d6526be",
+    "3f4c33287069"
   ],
   "sections": [
     {
@@ -10016,6 +10022,60 @@
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Bắc Phái"
+          }
+        },
+        {
+          "id": "quan-loc_crawl_1790158130218_0",
+          "type": "general",
+          "text": "Đây gọi là \"quy vị lộc\", là cát tượng, mang ý nghĩa cung Quan lộc (chức vị, công danh, học vấn, học lực, nghề nghiệp). Ứng kỳ có thể vào một năm Hợi, Hợi hoặc tam điểm tại Mão, Dậu, Dần; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "quan-loc_crawl_1790158130218_1",
+          "type": "general",
+          "text": "1. Cung Quan lộc (chức vị, công danh, học vấn, học lực, nghề nghiệp) Hóa kỵ phi phục Tam điểm tại Thìn, Tuất, Mão. 2. Đại vận: 13 - 22 tuổi ở Tuất (xung chiếu với Thìn) nhận kỵ của Quan lộc tiên thiên báo hiệu đại vận này có Kỵ Quan lộc. 3. Cung Quan lộc của Đại vận: 13 - 22 tuổi tại Dần Hóa kỵ phi phục nhập cung Hợi. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Hợi, Tị, Tuất; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Mùi, Sửu, Ngọ khi cung Quan lộc lưu niên ở tại cung Hợi, Tị, Tuất vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "quan-loc_crawl_1790158130218_2",
+          "type": "general",
+          "text": "Đây gọi là \"quy vị lộc\", là cát tượng, mang ý nghĩa cung Quan lộc (chức vị, công danh, học vấn, học lực, nghề nghiệp). Ứng kỳ có thể vào một năm Dậu, Hợi hoặc tam điểm tại Mão, Dậu, Dần; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "quan-loc_crawl_1790158130218_3",
+          "type": "general",
+          "text": "1. Cung Quan lộc (chức vị, công danh, học vấn, học lực, nghề nghiệp) Hóa kỵ phi phục Tam điểm tại Thìn, Tuất, Mão. 2. Đại vận: 73 - 82 tuổi ở Thìn nhận kỵ của Quan lộc tiên thiên báo hiệu đại vận này có Kỵ Quan lộc. 3. Cung Quan lộc của Đại vận: 73 - 82 tuổi tại Thân Hóa kỵ phi phục nhập cung Thân. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thân, Dần, Mùi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thìn, Tuất, Mão khi cung Quan lộc lưu niên ở tại cung Thân, Dần, Mùi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "quan-loc_crawl_1790158130218_4",
+          "type": "general",
+          "text": "1. Cung Quan lộc (chức vị, công danh, học vấn, học lực, nghề nghiệp) Hóa kỵ phi phục Tam điểm tại Thìn, Tuất, Mão. 2. Đại vận: 83 - 92 tuổi ở Mão (vị trí nhất lục cộng tông với cung xung chiếu của cung Thìn) nhận kỵ của Quan lộc tiên thiên báo hiệu đại vận này có Kỵ Quan lộc. 3. Cung Quan lộc của Đại vận: 83 - 92 tuổi tại Mùi Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dậu, Mão, Thân khi cung Quan lộc lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "quan-loc_crawl_1790158130218_5",
+          "type": "general",
+          "text": "Trong vận này, vấn đề Quan lộc có 1 điều kiện tốt, 3 điều kiện tốt vừa phải, 1 điều kiện xấu vừa phải. Tạm kết là tốt xấu đan xen, tuy nhiên tốt khá nhiều , phần xấu không đáng lo ngại. * Cung Quan lộc (chủ sự): Về người: bản tính (cá tính), đồng sự, tình duyên, điều kiện ưu thế tiên thiên. Về sự: công việc, sự nghiệp, chức nghiệp, điều kiện thành công của tiên thiên. Về vật: công danh, thi cử, trường học, điều kiện phú quý của tiên thiên.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
           }
         }
       ]

@@ -2,12 +2,12 @@
   "palace": "THAN",
   "palace_name": "Thân",
   "source": "tuvi.cohoc.net + existing",
-  "consolidated_at": "2026-09-22T09:42:43.496Z",
-  "total_interpretations": 411,
+  "consolidated_at": "2026-09-23T09:57:15.263Z",
+  "total_interpretations": 391,
   "stats": {
-    "from_existing": 647,
+    "from_existing": 400,
     "from_crawled": 2769,
-    "duplicates_removed": 3005
+    "duplicates_removed": 2778
   },
   "interpretations": [
     {
@@ -1639,17 +1639,6 @@
       "accuracy": 7
     },
     {
-      "id": "batch_337924_148",
-      "condition": "Cung Thân an tại Dậu có Cung Phúc đức",
-      "text": "Cung Thân nhập cung Phúc Đức (người sinh giờ Sửu hoặc Mùi): Khá xem trọng hưởng thụ cá nhân, tổ hợp sao cát thì có hưởng thụ, hung thì không. Tiêu tiền cho mình, để thỏa mãn chuyện vui chơi giải trí. Trường hợp hai cung Tài Phúc đều không tốt, là một đời vất vả, cuộc sống quá buồn. Trường hợp cung Tài tốt còn cung Phúc không tốt, có tiền mà không biết xài, là đầy tớ giữ tiền. Trường hợp cung Tài không tốt mà cung Phúc tốt, biết tri túc.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Unknown",
-        "chart_id": "337924"
-      },
-      "accuracy": 7
-    },
-    {
       "id": "batch_337924_149",
       "condition": "Cung Thân Vô Chính Diệu tại Dậu, khi mượn sao của đối cung thì có Phúc đức",
       "text": "Mệnh nữ tốt, mệnh nam không thích hợp.",
@@ -1947,17 +1936,6 @@
       "accuracy": 7
     },
     {
-      "id": "batch_15408_176",
-      "condition": "Cung Thân an tại Mùi có Đà la",
-      "text": "Hành sự sai lầm mà hối hận về sau, nên trong tâm luôn có dằn vặt, đau khổ.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Unknown",
-        "chart_id": "15408"
-      },
-      "accuracy": 7
-    },
-    {
       "id": "batch_15408_177",
       "condition": "Cung Thân an tại Mùi có Thiên không",
       "text": "Nếu sao này nhập Thân, Mệnh thì không xuất gia cũng sống đời cô độc, có duyên phận mỏng với lục thân. hậu vận nên hiến thân cho tôn giáo.",
@@ -1983,17 +1961,6 @@
       "id": "batch_15408_179",
       "condition": "Cung Thân an tại Mùi có Cung Thiên di",
       "text": "Cung Thân ở cung Thiên Di, nên kinh doanh du lịch với các ngành nghề có tính chất lưu động hoặc làm nhân viên bán hàng, bán bảo hiểm, làm dự án.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Unknown",
-        "chart_id": "15408"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_15408_180",
-      "condition": "Cung Thân an tại Mùi có Cung Thiên di",
-      "text": "Cung Thân nhập cung Thiên Di (người sinh giờ Mão hoặc Dậu): Thân nhập vào không gian xã hội hoạt động, là giao du rộng, thích ứng được với hoàn cảnh nhiều biến động, mệnh vận một đời nhiều thay đổi lớn, thân tâm khá bận rộn vất vả, khó được thanh nhàn, ưa ra bên ngoài, đi xa chơi. Do Mệnh Di đối nhau, nên ảnh hưởng lẫn nhau; nếu hai cung Mệnh Di đều tốt, bản cung Thân hoặc cung Mệnh chủ có tài năng, còn có thể phát huy. Nếu cung Mệnh tốt mà cung Di không tốt, bản cung Thân hoặc cung Mệnh chủ tuy có tài năng, nhưng lúc khởi đầu khó phát huy, phải trải qua nỗ lực, mới được mọi người công nhận, từ đó có chỗ để phát huy. Trường hợp cung Mệnh không tốt mà cung Thân tốt, lúc bé cơ thể hư nhược nhiều bệnh, bú sữa của người khác hoặc làm con nuôi của người khác, người này rời xa quê hương để tìm hướng phát triển sẽ tốt hơn ở tại quê nhà.",
       "source": {
         "book": "tuvi.cohoc.net",
         "author": "Unknown",
@@ -2137,17 +2104,6 @@
       "id": "batch_451570_193",
       "condition": "Cung Thân an tại Mão có Cung Phu thê",
       "text": "Thân cư Thê (Cung Thân ở cung Phu thê)\nCung Phu thê ở vị trí đối xung với cung Quan lộc. Cho nên, các sao ở cung Quan lộc đều có ảnh hưởng rất lớn đến cung Phu thê. Khi cung Phu thê và cung Quan Lộc đều tốt, mệnh nam vì được sự hậu thuẫn của nhà vợ mà đạt được địa vị trong xã hội. Mệnh Nữ nhờ chồng giỏi giang mà địa vị cũng được nâng cao.\nNếu cung Quan lộc và cung Phu thê đều không tốt thì mệnh nam không được vợ hậu thuẫn, mệnh nữ lấy phải chồng kém cỏi nên cả hai đều không nổi trội hơn người.\nCung Quan lộc không tốt, cung Phu thê tốt, nam mệnh tuy được vợ hậu thuẫn nhưng vẫn không có phương cách để giỏi giang hơn người. Nữ mệnh lấy được chồng giỏi giang nên toàn tâm toàn ý lo cho gia đình, cuộc sống gia đình hạnh phúc.\nNói chung, người này nhạy cảm với tình yêu, rất ân cần, chiều chuộng đối phương (nếu có Thiên phủ tọa Mệnh sẽ rất ứng nghiệm).",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Unknown",
-        "chart_id": "451570"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_451570_194",
-      "condition": "Cung Thân an tại Mão có Cung Phu thê",
-      "text": "Cung Thân nhập cung Phu Thê (người sinh giờ Tỵ hoặc Hợi): Quan niệm gia đình khá nặng, nhạy cảm đối với tình yêu. Nữ mệnh, đối với nhà chồng và nhà cha mẹ ruột đều quan tâm chăm sóc. Tổ hợp sao mà cát thì tình cảm vợ chồng tốt đẹp, rất quan tâm chăm sóc người phối ngẫu; có thể nhờ hôn nhân mà được ích lợi; nếu tố hợp sao không tốt, dễ bị khốn đốn vì tình, cũng dễ bị tương tư đơn phương, tình cảm đau khổ phiền não, hôn nhân không hạnh phúc.",
       "source": {
         "book": "tuvi.cohoc.net",
         "author": "Unknown",
@@ -4354,182 +4310,6 @@
         "chart_id": "existing"
       },
       "accuracy": 9
-    },
-    {
-      "id": "batch_185385_2",
-      "condition": "Cung Thân đồng cung với cung Quan lộc",
-      "text": "Có nhiệt tình trong sự nghiệp, có khuynh hướng xem trọng danh vị và sự nghiệp, cũng xem trọng sự cảm thụ trong công việc\n\n---\n\nNgười sinh giờ Dần hoặc Thân, xem trọng địa vị và sự nghiệp, có tinh thần nặng về chuyện được mất, hơn thua; nếu tổ hợp tinh hệ mà cát thì có thể sáng lập đại nghiệp, năng lực tuân thủ chức trách khá mạnh. Cung Quan Lộc là \"cung quý\", vì vậy người có khí chất cao, có dục vọng (hoặc tham vọng), rất xem trọng sự vinh dự.\n\n---\n\nBất chấp trước sự nghiệp, có tinh thần trách nhiệm, rất xem trọng vinh dự, có tham vọng. Nếu tổ hợp sao tốt, có thể lập nên nghiệp lớn, năng lực làm việc rất tốt, một đời thuận lợi, khí chất cao thượng; nếu tổ hợp sao không tốt thì ngược lại.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_34179_15",
-      "condition": "Cung Thân đồng cung với cung Thiên di",
-      "text": "Dễ bị hoàn cảnh thay đổi gây ảnh hưởng, nhà ở và nơi làm việc hay thay đổi\n\n---\n\nThân nhập vào không gian xã hội hoạt động, là giao du rộng, thích ứng được với hoàn cảnh nhiều biến động, mệnh vận một đời nhiều thay đổi lớn, thân tâm khá bận rộn vất vả, khó được thanh nhàn, ưa ra bên ngoài, đi xa chơi. Do Mệnh Di đối nhau, nên ảnh hưởng lẫn nhau; nếu hai cung Mệnh Di đều tốt, bản cung Thân hoặc cung Mệnh chủ có tài năng, còn có thể phát huy. Nếu cung Mệnh tốt mà cung Di không tốt, bản cung Thân hoặc cung Mệnh chủ tuy có tài năng, nhưng lúc khởi đầu khó phát huy, phải trải qua nỗ lực, mới được mọi người công nhận, từ đó có chỗ để phát huy.\nTrường hợp cung Mệnh không tốt mà cung Thân tốt, lúc bé cơ thể hư nhược nhiều bệnh, bú sữa của người khác hoặc làm con nuôi của người khác, người này rời xa quê hương để tìm hướng phát triển sẽ tốt hơn ở tại quê nhà.\n\n---\n\nNgười sinh giờ Mão hoặc Dậu, duyên ở bên ngoài tốt, giao du rộng, rất giỏi thích ứng với hoàn cảnh. Do cung thân và cung mệnh tương xung, nên vận mệnh cuộc đời có biến động thay đổi lớn, thường bận rộn vất vả (về hoạt động thân hoặc tâm), khó được thanh nhàn. Cung mệnh có tổ hợp tinh hệ hung mà cung thân tổ hợp tinh hệ cát thì li hương xa xứ sẽ phát triển tốt hơn ở cổ hương.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_34179_17",
-      "condition": "Cung Thân an tại Dậu có sao Thái dương",
-      "text": "Phu tinh không tốt đẹp nên làm vợ lẽ\n\n---\n\nCó cách cục có hai người mẹ, hoặc kết hôn hai lần hoặc cha lấy mẹ kế",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_469834_24",
-      "condition": "Cung Thân đồng cung với cung Phúc đức",
-      "text": "Rất biết cảm thụ và hưởng thụ cuộc sống, nặng quan niệm nhân quả và phúc đức của tổ tiên\n\n---\n\nKhá xem trọng hưởng thụ cá nhân, tổ hợp sao cát thì có hưởng thụ, hung thì không. Tiêu tiền cho mình, để thỏa mãn chuyện vui chơi giải trí. Trường hợp hai cung Tài Phúc đều không tốt, là một đời vất vả, cuộc sống quá buồn. Trường hợp cung Tài tốt còn cung Phúc không tốt, có tiền mà không biết xài, là đầy tớ giữ tiền. Trường hợp cung Tài không tốt mà cung Phúc tốt, biết tri túc.\n\n---\n\nNgười sinh giờ Sửu hoặc Mùi, nặng hưởng thụ cá nhân, cần phải xem tổ hợp tinh hệ của cung phúc đức để luận đoán, cát thì có phúc, hung thì vô phúc. Cung phúc đức có liên quan đến sự hưởng thụ tinh thần, phương thức suy nghĩ, thị hiếu hưởng thụ, chỉ số IQ, khuynh hướng tình dục.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_439334_33",
-      "condition": "Cung Thân an tại Dậu có sao Thái tuế",
-      "text": "Khi hành động thì tự hào coi mình như là người làm gì có sứ mạng cho người khác, làm rất quang minh, chính đại\n\n---\n\nÍt giao du, ít bạn bè",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_216152_37",
-      "condition": "Cung Thân đồng cung với cung Tài bạch",
-      "text": "Xem trọng giá trị đồng tiền, dễ bị nhân tố kinh tế tác động đến hướng đi của mệnh vận\n\n---\n\nNgười sinh giờ Thìn hoặc Tuất, có đầu óc làm ăn, giỏi tính toán, khéo quản lý tiền bạc, phần nhiều là người kinh doanh. Nếu tổ hợp tinh hệ mà cát, có thể thành đại phú, cuộc đời phần lớn đều không thiếu tiền xài.\n\n---\n\nPhần nhiều không thiếu tiền tiêu xài, một đời xem trọng việc vận dụng tiền bạc, có đầu óc kinh tế, giỏi tính toán, khéo quản lý tiền bạc. Thường theo ngành kinh doanh buôn bán, nếu tổ hợp sao cát, có thể trở thành đại phú ông; nếu tổ hợp sao hung thì không được vậy, một đời bôn ba vất vả vì tiền, cuộc sống quá gian khổ.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_10638_63",
-      "condition": "Cung Thân đồng cung với cung Phu Thê",
-      "text": "Xem trọng trách nhiệm gia đình, còn xem trọng niềm vui trong sinh hoạt gia đình, dễ bị người phối ngẫu gây ảnh hưởng\n\n---\n\nNgười sinh giờ Tị hoặc Hợi, nặng quan niệm gia đình, đối với người phối ngẫu rất ân cần, quan tâm chăm sóc, không thiếu sót điều gì. Nữ mệnh đối với nhà chồng, nhà mình đều quan tâm; đối với tình yêu khá nhạy cảm, dễ bị tình cảm chi phối. Nếu tổ hợp tinh hệ mà cát, có thể nhờ hôn nhân mà được lợi ích; nếu tổ hợp tinh hệ mà hung, dễ rơi vào tình yêu đơn phương, tình yêu đau khổ, tình yêu không bình thường, tình cảm và hôn nhân không được mĩ mãn, thậm chí có thể vì vậy mà hủy hoại cuộc đời.\n\n---\n\nQuan niệm gia đình khá nặng, nhạy cảm đối với tình yêu. Nữ mệnh, đối với nhà chồng và nhà cha mẹ ruột đều quan tâm chăm sóc. Tổ hợp sao mà cát thì tình cảm vợ chồng tốt đẹp, rất quan tâm chăm sóc người phối ngẫu; có thể nhờ hôn nhân mà được ích lợi; nếu tố hợp sao không tốt, dễ bị khốn đốn vì tình, cũng dễ bị tương tư đơn phương, tình cảm đau khổ phiền não, hôn nhân không hạnh phúc.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_121116_96",
-      "condition": "Cung Thân an tại Ngọ có Lộc tồn",
-      "text": "Tướng mạo đôn hậu, xinh đẹp. Là người thông minh lỗi lạc, lòng dạ hiền từ nhưng rất sáng suốt và nhạy bén, có mưu trí, cơ biến, hay giúp đỡ người.\n\n---\n\nLộc tồn đóng tại cung Mệnh cung Thân, không chỉ gặp Hóa Kị đồng cung mới hung, mà tại cung tam phương tứ chính nếu có 4 sát tinh Hỏa Linh Không Kiếp hoặc Hóa Kị xung phá, cũng chủ về trong cát có hung, nên đừng quá chú trọng đến vẻ tốt đẹp bề ngoài, mà cần lưu ý đến những nguy cơ tiềm ẩn phía sau nó, thường là sống nhờ kỹ nghệ, tay nghề khéo léo. Lộc tồn hay Hóa Lộc trấn mệnh, nếu gặp Địa không Địa kiếp là cách Lưỡng trùng Hoa cái (hai tầng lọng hoa), chủ về cao ngạo, cô độc, bần hàn, thường có duyên với đường tu hành.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_121116_97",
-      "condition": "Cung Thân an tại Ngọ có Tử vi",
-      "text": "Tướng mạo đôn hậu, mặt đỏ, lung dầy, tính tình trung hậu, chính trực, xử sự khiêm cung với mọi người.\n\n---\n\nTử Vi độc toạ ở hai cung Tí hoặc Ngọ, nếu là trường hợp \"bách quan triều củng\" thì ưa đến đại hạn hay lưu niên được Hoá Lộc, Hoá Quyền, Hoá Khoa. Nếu Tử Vi Hoá Quyền hoặc Hoá Khoa ở nguyên cục mà không có \"bách quan triều củng\", thì ưa đến đại hạn hoặc lưu niên có các sao Văn Xương, Văn Khúc, Thiên Khôi, Thiên Việt, Tả Phụ, Hữu Bật hội hợp.\nNếu nguyên cục vốn là cách cục \"tại dã cô quân\", đến niên hạn dù được Hoá Lộc, Hoá Quyền, Hoá Khoa, thì cát lợi cũng nhỏ, e rằng chỉ là nhất thời đắc ý. Nếu nguyên cục vốn là cách cục \"vô đạo cô quân\", lại đến niên hạn có các sao sát, kị tụ tập, thường chủ về tai hoạ, mà phần nhiều là tự chuốc lấy.\nTử Vi độc toạ ở hai cung Tí hoặc Ngọ ưa có Lộc Tồn đồng độ. Có điều, Tử Vi \"tại dã cô quân\" thì phần nhiều chủ về ích kỷ, hay nghi kỵ. Đến niên hạn có các sao sát, kỵ, hình cùng chiếu, phần nhiều chủ về oán trách, thị phi, thường còn gây nên hoạ kiện tụng.\n\n---\n\nTử vi độc tọa, ở cung Tý không bằng ở cung Ngọ, bởi vì khi ở cung Ngọ là nhập miếu, tài lãnh đạo và lực điều hòa với lực chế hóa đều lớn hơn khi độc tọa ở cung Tý, vì vậy địa vị và tài phú cũng đều hơn hẳn.\nTử vi độc tọa, ngoài việc ưa \"bách quan triều củng\" ra, còn ưa Tả phụ, Hữu bật giáp mệnh, Văn xương Văn khúc giáp mệnh, Long trì Phượng các giáp mệnh, thảy đều có thể làm tăng khí thế và giảm bớt vất vả.\nNếu là \"tại dã cô quân\", còn gặp các sao \"không\" như Thiên không, Địa không, thì thích hợp làm người truy tìm chân lý, thành nhân vật tôn giáo, cũng có thể thành nhân vật lãnh đạo. Gặp Hoa cái, khuynh hướng tôn giáo tín ngưỡng càng sâu, hơn nữa còn thích tìm hiểu về việc thần bí.\nTử vi độc tọa, mà gặp các sao Phụ – Tá – Sát – Hóa, thì cần phải xét xem các sao cát hung nhiều ít thế nào, sức mạnh của chúng ra sao, để định tốt xấu. Thông thường phần lớn trường hợp đều chủ về có lý tưởng cao nhưng sức mạnh hành động không đủ, cần phải dùng hậu thiên để bổ cứu (nhân mệnh), để nỗ lực thực hiện lý tưởng.\nNếu như không có sao Cát hội hợp, mà chỉ gặp Sát tinh, thì rất dễ cảm thấy có tài mà không gặp thời, nên làm việc ở lĩnh vực kinh doanh thương mại. Chỉ cần Sát tinh nhập miếu, mà Sát tinh không nhiều, thì vẫn có thể hoạt động trong lĩnh vực kinh doanh thương mại mà trở nên giầu có. Tốt nhất là được Hóa Lộc hoặc Lộc tồn hội hợp, dễ giầu có mà còn có địa vị trong xã hội, nhất là càng dễ phát triển trong giới thương nghiệp. Nếu theo lĩnh vực chính trị, văn hóa, giáo dục, thì trái lại, sẽ gặp nhiều trắc trở, bất đắc chí.\nSát tinh nặng, thông thường đều chủ về bất hòa, tranh chấp thị phi. Nhất là gặp phải Kình dương lạc hãm, càng chủ về kiện tụng, hoặc phẫu thuật ngoại khoa\nTử vi độc tọa, cũng ưa hóa Quyền (can Nhâm) hóa Khoa (can Ất), khi hóa Quyền thì làm tăng tài lãnh đạo và có sức cạnh tranh, khi hóa Khoa thì có tiếng tăm, hơn nữa theo ngành nghiên cứu học thuật thì có thể dung hợp được các thuyết mà sáng tạo ra cái mới. Nhưng đều khiến cho mệnh tạo tăng mạnh tính chủ quan, nên khó tiếp thu ý kiến của người khác. Đây là đặc thù khi gặp hóa diệu Khoa Quyền.\nTrường hợp Tử vi chỉ gặp một hai sao Sát – Kị, thì lại chủ về dễ nghe lời nói xấu, dèm pha, thị phi.\nPhàm Tử vi độc tọa, đối cung ắt sẽ gặp Tham lang, chủ về hiếu sắc, có các sao đào hoa hội hợp thì càng nặng. Nếu chỉ hội hợp Thiên hình, thì chủ về tự bản thân biết kiềm chế, gặp Đà la cũng có thể tự kiềm chế.\nTrong đại hạn hoặc lưu niên, Tử vi độc tọa tại cung hạn, cần phải xét kỹ các sao hội hợp để định cát – hung. Gặp cát tinh thì chức vị thăng tiến, thượng vụ phát triển, phúc lộc đều hậu hỉ, nếu gặp Địa không, Địa kiếp, sao Hao, thì chủ về nguồn kinh tế khó khăn hoặc phá tài, có Sát tinh tương hội thì chủ về bất hòa tranh chấp, trong làm ăn có thể dẫn đến đình trệ, trong chức vụ có thể bị giáng chức, hoặc bị truất phế.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_279040_106",
-      "condition": "Cung Thân an tại Sửu có Cự môn",
-      "text": "Cự Môn thủ mệnh Thân cung, bất luận miếu hãm, một đời rước chuyện thị phi khẩu thiệt.\n\n---\n\nCự Môn nhập miếu, vóc người lưng dài và mông dầy. Là người học rộng, tài cao, mặt mày thanh tú, tính tình hiền lành, đôn hậu. Nếu rơi vào hãm cung, là người tướng ngũ đoản, môi thâm, gầy nhỏ, tính tình đa nghi, khó hợp với người khác. Tuy học nhiều nhưng kém tinh anh, thích dấn thân vào chuyện thị phỉ, khiến vận số phải bôn ba lao lực. Chỉ có sao Lộc Tồn mới hóa giải được tính hung ác của Cự Môn hãm địa.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_472160_122",
-      "condition": "Cung Thân an tại Tí có Hóa lộc",
-      "text": "Cả đời ăn bổng lộc, cả đời không lo về tiền bạc nếu ở hãm địa thì ái mộ hư vinh.\n\n---\n\nHóa Lộc chủ về tài lộc, rất mừng gặp Lộc Tồn. Hóa. Lộc thủ cung mệnh đất Tý, Ngọ, Mão, Dậu là rất tốt.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_300161_125",
-      "condition": "Cung Thân an tại Dần có Hóa kỵ",
-      "text": "Hóa Kỵ cư mệnh thân, di, độ hung cực lớn, chủ một đời không thuận, hay gặp trắc trở thất bại, tuy nhiên người này cũng không phải không có tài năng.\n\n---\n\nChủ về thị phi, đóng ở mệnh, Thân suốt đời không được vừa ý, toại tâm. Nếu Hóa Kỵ ở cung quan lộc chủ về dù có phát đạt công danh cũng không bền vững.\nSao Hóa Kỵ cùng cát tinh đóng ở miếu địa, biến đổi được tính xấu của nó.\n\n---\n\nViệc gì cũng không thuận.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_243_162",
-      "condition": "Cung Thân Vô Chính Diệu tại Dần, khi mượn sao của đối cung thì có Thái âm",
-      "text": "Người cung thân có Thái Âm thì gặp những tình huống sau:\n1. Trong nhà có hai mẹ.\n2. Theo mẹ làm con thừa tự.\n3. Bái cha mẹ nuôi.\n\n---\n\nPhàm Thái Âm nhập mệnh, thành Thái Âm độc tọa, nam mệnh hay nữ mệnh đều bất lợi về người thân phái nữ. Nam mệnh thì nên lưu chú ý mẹ, mẹ mất thì lưu ý vợ, vợ mất thì lưu ý con gái; nữ mệnh thì lưu ý mẹ, mẹ mất thì lưu ý bản thân (thực ra là bất lợi về người phối ngẫu), ở tuổi vãn niên thì nên lưu ý con gái. Nguời sinh ban ngày thì càng tệ, người sinh vào ban đêm thì khá tốt.\nThái Âm thủ mệnh, nam nữ đều dễ được người khác giới yêu thích, nhập cung miếu thì càng nghiệm; cung hãm thì chưa chắc dùng; người sinh vào ban đêm thì xử sự bằng tình cảm, người sinh ban ngày thì không dễ gì xử sự bằng tình cảm. Thông thường, trong hôn nhân hoặc tình yêu đều dễ sinh sóng gió, trắc trở.\nThái Âm ở cung mệnh, chủ về hướng nội, nhưng giỏi dùng tâm kế, ôn hòa thẳng thắn, thông minh nhanh trí, tháo vát; nam mệnh phần nhiều ưu tú, nữ mệnh phần nhiều đoan trang. Giáp Văn Xương, Văn Khúc, ắt có sở trường đặc biệt hoặc nghề nghiệp chuyên môn. Có Phượng Các và Thiên Tài đồng độ, thì ưa thư pháp, hội hoạ, cầm kì; được các sao đào hoa hội chiếu, thì đa tài, học rộng, quyến luyến trăng gió tửu sắc, nhưng không mất sắc thái phong lưu của văn sĩ.\nThái Âm chủ về phú, Thái Dương chủ về quý. Phàm Thái Âm thủ mệnh, cần phải xem xét kĩ các sao mà Thái Dương hội hợp, xem tính chất của tinh hệ hội hợp để định địa vị xã hội của mệnh tạo. Ngoài ra, cần phải xem xét kì tính chất của tinh hệ hội hợp sao Thái Âm của cung mệnh, để định mức độ giàu có. Thông thường, Thái Âm thủ mệnh thì thích hợp công tác giáo dục, hoặc văn hóa văn nghệ.\nThái Âm gặp sát tinh, rơi vào cung hãm thì chủ về rời xa quê hương, hoặc theo mẹ làm con người khác. Nếu lạc hãm mà có tứ sát, Hóa Kị, Thiên Hình, Hàm Trì, Thiên Diêu, Địa Không, Địa Kiếp, Thiên Nguyệt củng chiếu, chủ về ham mê tửu sắc, dâm tà, lại nhiều âm mưu, lòng dạ thiếu ngay thẳng. Nếu gặp thêm Hóa Lộc, Hóa Quyền, Hóa Khoa tuy có thể phú quý nhưng cũng chỉ là phù hư.\nNữ mệnh nhập miếu gặp cát tinh, chủ về thông minh đoan trang, trọng tình cảm, ôn hòa nhưng nhiều nghĩ ngợi lo toan, có thể giúp chồng dạy con, Đây là cách cục tốt, nếu gặp thêm sao văn và các sao đào hoa, thì tình cảm dễ nổi sóng gió, trắc trở, thậm chí gia đình không yên. Nếu ở hãm địa mà gặp tứ sát, Địa Không, Địa Kiếp, các sao hình, kị, thì hình phu khắc tử.\n\n---\n\nThiên Muội là Thái Âm ở cung Dần. Lúc này mặt trời mới mọc, Thái Âm mất sáng, cho nên chủ về tính hay do dự, phản ứng sai lầm, hành động không mang lại hiệu quả tốt cho bản thân.\n\n---\n\nThái Âm nên nhập miếu, không nên lạc hãm, nên là người sinh vào ban đêm, không nên là người sinh vào ban ngày. Nếu người sinh vào ban đêm gặp Thái Âm nhập miếu thì rất tốt; người sinh vào ban ngày thì giảm phúc. Nếu người sinh vào ban đêm gặp Thái Âm lạc hãm, chưa chắc đã hung, vẫn cần phải xem xét các sao phụ, tá, sát, hoá mà định; nếu người sinh vào ban ngày gặp Thái Âm lạc hãm, ắt sẽ bất lợi đối với người thân phái nữ. Nữ mệnh cũng bất lợi đối với bản thân, hoặc sớm mồ côi.\nCung mệnh vô chính diệu, cung thân ở cung thiên di là Thái Âm lạc hãm, gặp sát tinh (sợ nhất là Hoả Tinh, Linh Tinh), người sinh vào ban ngày chủ về theo mẹ cải giá, hoặc làm con thừa tự của bác hay chú.\nThái Âm thủ mệnh, lại còn chia ra hai nhóm, nhóm người sinh vào thượng huyền (ngày 1 đến 15) và người sinh vào hạ huyền (ngày 16 đến 30). Sinh vào thượng huyền thì cát, đây là thời kỳ trăng tròn dần; sinh vào hạ huyền thì không cát tường, đây là thời kỳ trăng khuyết dần. Người sinh vào hạ huyền càng đúng với ứng nghiệm \"theo mẹ cải giá\" thuật ở trên.\nThái Âm nhập miếu, gặp sao cát ở tam phương đến hội, chủ về hưởng thụ, nhất là hưởng thụ tinh thần. Tức không mang toàn bộ tinh thần tập trung vào việc kiếm tiền và theo đuổi sinh hoạt vật chất. Còn gặp Văn Xương, Văn Khúc thì thiên về văn chương; gặp Thiên Đồng thì ưa thích âm nhạc, dù gặp Thiên Cơ cũng chủ về có hứng thú nhiều lãnh vực, lấy đó để tiêu khiển. Chỉ đồng độ với Thái Dương là thiếu sinh hoạt tinh thần.\nHễ Thái Âm ở cung mệnh, lúc luận đoán cần phải xem kèm cung phúc đức, mà cung phúc đức ắt sẽ là Cự Môn toạ thủ, cát hung của nó có thể ảnh hưởng đến Thái Âm của cung mệnh, nhất là về phương diện hưởng thụ tinh thần. Thái Âm chủ về phú, nên ưa có Lộc Tồn hoặc Hoá Lộc đồng độ hoặc vây chiếu; trường hợp Lộc Tồn hoặc Hoá Lộc ở cung tam hợp là kế đó. Gặp Hoá Quyền, Hoá Khoa mà không gặp sao lộc, sẽ chủ về tài lộc do địa vị xã hội và học lực quyết định. Cho nên cần phải cực lực tranh thủ tiến bộ; gặp Văn Xương, Văn Khúc là chủ về thông minh; gặp Tả Phụ, Hữu Bật mới có thể làm tăng địa vị.\nThái Âm có bản tính hướng nội, nhưng nếu hướng nội thái quá sẽ chủ về tiêu trầm. Nó không ưa các sao Đà La, Linh Tinh, Hoá Kị, Âm Sát, Địa Không, Địa Kiếp, Thiên Hình. Nếu có các sao hình, hao tụ tập, sẽ chủ về chứng tự kỷ, thiểu năng trí tuệ, hoặc có tâm lý mặc cảm; nhất là ở bốn cung Dần, Thân, Mão, Dậu thì càng đúng.\nCổ quyết: \"Thái Dương ở cung Tị, Thái Âm ở cung Dậu, an mệnh ở cung Sửu là chủ về phú, bước lên cung Hằng\" (Nhật Tị Nguyệt dậu, an mệnh Sửu phú, bộ thiềm cung); \"Thái Dương ở cung Mão, Thái Âm ở cung Hợi, an mệnh ở cung Mùi, phần nhiều đỗ đạt\" (Nhật Mão Nguyệt Hợi, an mệnh Mùi cung, đa chiết quế). Đây là Thái Dương, Thái Âm miếu vượng, hội chiếu cung mệnh. Còn nói: \"Thái Dương, Thái Âm cùng ở cung Mùi, an mệnh ở cung Sửu, là tài đến bậc hầu bá\" (Nhật Nguyệt đồng Mùi, an mệnh Sửu, hầu bá chi tài). Đây là mệnh vô chính diệu, mượn \"Thái Âm, Thái Dương\" của cung Mùi để an sao, cũng bằng Thái Dương, Thái Âm hội chiếu. Hễ Thái Dương, Thái Âm hội chiếu, trong các tình hình thông thường thì tốt hơn Thái Dương, Thái Âm đồng cung. Vì tính chất của Thái Dương, Thái Âm đồng cung không hợp nhau, dễ sinh khuyết điểm.\nCung mệnh được Thái Dương, Thái Âm giáp, nếu Thái Dương và Thái Âm miếu vượng thì cũng chủ về phú quý. Giáp Thiên Phủ Hoá Khoa, hoặc Thiên Phủ đối nhau với Liêm Trinh Hoá Lộc là cát lợi; giáp Vũ Khúc, Tham Lang Hoá Lộc là kế đó.\nThái Dương ở cung Hợi, Thái Âm ở cung Mão, không phải là cách cục \"phản bối\", các sách thường lầm. \"Phản bối\" là Thái Dương ở Tuất, Thái Âm ở cung Thìn. Cách cục \"phản bối\" chủ về rời xa quê hương, hay làm con nuôi người khác, nếu có Hoả Tinh, Linh Tinh đồng cung, thì còn bé đã rời xa cha mẹ, sát tinh nặng chủ về bị bỏ rơi. Nếu lại gặp các sao phụ, tá cát, thì rời xa quê hương mà phát phúc.\nThái Âm không ưa có Kình Dương, Đà La cùng ở cung mệnh, chủ về gian khổ. Nếu Thái Âm Hoá Kị (hoặc hội sao kị, hoặc Thái Âm Hoá Kị bị Kình Dương, Đà La giáp cung), đều chủ về không có duyên với lục thân, cô quả linh đinh, còn chủ về dễ đầu tư sai lầm.\nThái Âm chủ về ẩn tàng, vì vậy cũng không nên có Địa Không, Địa Kiếp, Thiên không đồng độ. Mức độ không cát tường lớn hơn so với Thái Dương.\nThái Âm chủ về phú, cho nên rất ưa gặp sao lộc. Hoá Lộc là rất tốt, Lộc Tồn là kế đó. Thái Âm Hoá Quyền chỉ chủ về quản lý tài chính, hoặc nắm quyền tài chính, dù có thể phú cũng nhờ đó mà ra.\n\n---\n\nSao này ở cung Thân, phần nhiều có cách cục được nhận làm con nuôi vì cha mẹ mất sớm.\n\n---\n\nSAO THÁI ÂM TỌA MỆNH CUNG THÂN\nNgũ hành âm dương sao Thái Âm thuộc âm Thủy, là cát tinh Trung Thiên Đẩu, hóa khí là phú, là chủ Tài Bạch, Điền Trạch, là tượng trưng cho âm tính, nam mệnh đại diện cho mẹ và vợ, nữ mệnh đại diện cho mẹ, bản thân, nữ và sao Thái Dương phân chia chủ về âm dương, ngày đêm.\nDUNG MẠO VÀ TÍNH CÁCH\nNgười có sao Thái Âm tọa mệnh cung Thân, mặt tròn da trắng, mắt mũi thanh tú, đoan trang nhã nhặn, ngôn ngữ cử chỉ nho nhã, có sức hấp dẫn. Thông minh dịu dàng, lãng mạn đa tình, độ lượng khoan hồng, học nhiều biết nhiều, thẳng thắn thích tửu sắc, chắc chắn chính trực, cá tính nội hướng mà giỏi về suy ngẫm, quan sát tỉ mỉ, khả năng lý giải tốt, có tính nhẫn nại, hay nghi ngờ, tình cảm yếu đuối, tinh khiết. Người sinh lúc trăng sáng, vui vẻ an nhàn, thích hưởng thụ, coi trọng niềm vui cuộc sống, ăn mặc cầu kỳ, thích tự do, nhân duyên đẹp, duyên khác giới đẹp, có tài thiên phú về văn chương văn nghệ.\nNgười sinh lúc trăng tối, nhát gan, lười nhác, giọng nữ, thích thanh khiết nhưng lực bất tòng tâm, dễ chìm đắm trong ảo tưởng, không cối mỏ trong tình cảm, có thể trở thành nghệ thuật gia có phong cách khác biệt, tư tưởng tự do phóng khoáng, khó khiến người khác hiểu được.\nNữ mệnh, da dẻ trắng mà mịn màng, mắt long lanh, rất nữ tính và có tính trẻ con, đa tình, coi trọng bên ngoài, thích lãng mạn, có tư chất nghệ thuật, cá tính dịu dàng, ngọt ngào lương thiện, tâm địa hiền lành, nhưng thiếu chủ kiến, trong lòng có việc đều nói hết ra, dễ bị người khác chi phối. Sau khi kết hôn có thể trở thành vợ đảm mẹ hiền, nhưng không chịu được cuộc sống đơn điệu, thích thay đổi sắp xếp nội thất, ra ngoài du lịch, mong thay đổi. Nếu như sao Thái Âm gặp miếu vượng, tam hợp chiếu sao Thái Dương, thường là quý phụ. Sao Thái Âm lạc hãm lại thêm sao Tứ Sát thì không tốt.\nSUY ĐOÁN MỆNH LÝ\nSao Thái Âm chủ về phú, thường là chủ về quý, là chủ Tài Bạch, Điền Trạch. Trong mệnh bàn, ánh sáng của sao Thái Âm thay đổi theo thời khắc khác nhau, ánh sáng cung Mão, Thìn, Tỵ là thế lạc hãm tối nhất; tiếp đến ánh sáng cung Ngọ, Mùi là thế bất đắc địa tối; cung Thân là lợi thế ánh sáng vừa phải; cung Dậu, Tuất thì ánh sáng là vượng thế thứ hai, ánh sáng cung Hợi, Tý, Sửu là thế nhập miếu mạnh nhất; cung Dần giáng xuống vượng thế. Sao Thái Âm cung Dần tượng trưng ánh sáng mặt trăng giờ Dần, là điểm mặt trăng xuống, sao Thái Âm cung Thân tượng trưng cho ánh sáng mặt trăng giờ Thân là điểm trăng lên.\nSao Thái Âm tượng trưng cho \"âm\" tính, đại diện cho mẹ. Nên bất luận nam nữ mệnh, khi mẹ còn, sao Thái Âm trong cung mệnh có thể dùng suy đoán cát hung của mẹ; sau khi mẹ mất, nữ mệnh sao Thái Âm đại diện cho bản thân; nam mệnh thì đại diện cho vợ, sau khi vợ mất thì sao Thái Âm cung mệnh đại diện cho con gái. Do vậy, muốn suy đoán cát hưng của mẹ, vợ, nữ đều phải lấy sao Thái Âm là gốc.\nTrong tử vi đẩu số, phàm là chủ tinh đứng đầu, nếu như sao Tử Vi của hệ sao Bắc Đẩu, sao Thiên Phủ của hệ sao Nam Đẩu, hệ sao Trung Thiên đẩu chia sao Thái Âm, Thái Dương chủ về âm dương, ngày đêm, nếu như đứng một mình cung mệnh, thường chủ về cô độc, lại đều lấy thời ấu thơ là chính. Do vậy, người có sao Thái Âm tọa mệnh, nam hay nữ mệnh đều chủ về một trong phụ mẫu, bạn đời, con cái có hiện tượng thiếu tình cảm, hoặc xa nhiều hơn ở cùng, hoặc sinh li tử biệt, hoặc tình cảm không hòa thuận, hoặc quan hệ không tốt hoặc người kia sức khỏe không tốt trong thời gian dài, hoặc sự nghiệp thất bại trong thời gian dài. Nếu như cung Mệnh sao Thái Âm lạc hãm, lại gặp sao Hóa Kỵ, nữ mệnh bất lợi cho bản thân, nam mệnh thì bất lợi cho vợ, con gái.\nNhật, Nguyệt là sao Trung Thiên Đẩu phân chia âm dương, ngày đêm, mặt trăng chuyển động quanh trái đất không ngừng, nên sao Thái Âm chủ về dịch mã đại diện cho bôn ba vất vả, đặc biệt là là tại vị trí tứ mã chi địa (cung Dần, Thân, Tỵ, Hợi), cùng cung với sao Thiên Cơ, không thích bị trói buộc, thích cuộc sống tự do tự tại, dễ phải tha hương, phải đi xa mưu sinh phát triển.\nÁnh trăng được chia làm thượng huyền và hạ huyền. Nguyệt thượng huyền (khoảng mùng 8 âm lịch) nguyệt huyền triều thượng, do đầu tháng (mùng 1 âm lịch) đến giữa tháng (ngày 15 âm lịch), mặt trăng dần dần tròn, nên người sinh vào thượng huyền vận thế chuyển từ xấu sang tốt; trăng hạ huyền (khoảng ngày 22, 23 âm lịch), mặt trăng từ tròn chuyển sang khuyết, nên người sinh vào hạ huyền vận thế chuyển từ tốt sang xấu. Sao Thái Âm tọa cung Mệnh, thích người sinh vào giữa tháng, người sinh vào ban đêm, người sinh vào thượng huyền, người sinh vào trung thu, kỵ người sinh khi trăng tối.\nSao Thái Âm chủ lộc khố, cuộc sống vật chất, tinh thần sung túc, viên mãn, tuy không quá coi trọng tiền bạc nhưng là hiểu được cách sử dụng tiền, tiền bạc được tích lũy dần dần mà có, tuyệt đối không giàu có đột ngột, có thể mãn nguyện và vui vẻ, lãng mạn lại đa tình.\nThái Âm, Vũ Khúc, Thiên Phủ đều là tài tinh, nhưng lại có sự khác biệt lẫn nhau:\nTiền tài của sao Vũ Khúc có được do gây dựng sự nghiệp; sao Thiên Phủ thì đầu tư tích lũy mà có; sao Thái Âm thì cần kiệm làm việc tích góp.\nSao Thái Âm và sao Thiên Phủ đều là chủ về Điền Trạch, nhưng Điền Trạch của sao Thiên Phủ giữ được giá trị; sao Thái Âm thì coi trọng thực dụng.\nThái Dương ban ngày cùng mang ánh sáng, mặt trăng ban đêm khúc xạ ánh sáng của mặt trời, mang ánh sáng, hi vọng, trợ giúp, phối hợp với tình yêu đến cho con người, có vai trò của \"từ mẫu\" trong gia đình, nên sao Thái Âm thích hợp làm các công việc như hộ lý, giáo dục, thư ký, văn nghệ, phúc lợi xã hội.\nSao Thái Dương và sao Thái Âm bản thân đều có sinh mệnh, đồng thời cùng giao phó sinh mệnh của các sao khác trong mệnh bàn, cách phát huy của chúng có những điểm khác biệt như sau:\nÁnh sáng của sao Thái Âm lấy từ nhiệt lượng của sao Thái Dương, mà khúc xạ anh sáng của sao Thái Dương chuyển thạnh ánh sáng của yêu thương, bình tĩnh hiền hòa, chiếu sáng nhân gian. Saọ Thái Dương thì tích cực, và nhiệt tình trực tiếp mang lại ánh sáng và ấm áp; sao Thái Âm thì dùng cách uyển chuyển và nhẹ nhàng, gián tiếp mang đến sự giúp đỡ và hi vọng.\nSao Thái Dương có nhiệt độ chia thành mạnh yếu; sao Thái Âm nhiệt độ trước sau không thay đổi, trong đêm mang đến con người sự bình tĩnh và ôn hòa.\nSao Thái Dương bất luận là ngày hay đêm, đông hay hè luôn luôn không ngừng chiếu sáng trái đất; sao Thái Âm lại phân biệt ngày, đêm, tròn, khuyết và non, đầy, cũng do vậy mà nhân gian có bi, hoan, li, hợp.\nSao Thái Âm miếu vượng tọa mệnh, cung tam hợp nếu như chiếu sao Thái Dương, không có ác tinh xung phá, thường là quý phụ.\nNgười có sao Thái Âm tọa mệnh, thường có các đặc điểm sau:\nSao Thái Âm và sao Thái Dương như nhau, tự nhiên chủ động đi giúp đỡ châm sóc nhưng người bất hạnh già, yếu, cô độc mà không mong được đền đáp. Nhưng sao Thái Dương thường dùng tiền, chủ ý, một cách bác ái toàn diện để sắp xếp và giúp đỡ; sao Thái Âm thường gửi gắm những an ủi, quan tâm vào những tiểu tiết trong cuộc sống, dùng yêu thương trực tiếp chăm sóc, khiến cho mọi người tin tưởng.\nRất tự nhiên tham gia các công việc phúc lợi xã hội, hoặc đảm nhận việc nghĩa, mong đợi có thể gửi tặng xã hội.\nCó ánh sáng của người mẹ, giữ yên bên trong, mưu cầu cuộc sống ý nghĩa, coi trọng công việc gia đình, nữ mệnh thường giỏi việc nhà.\nThường làm các công việc cần \"viện trợ và phối hợp\", công việc có tính chất ban đêm hoặc theo ca, như công việc hộ lý cần phải thay ca hoặc làm vào buổi tối, để giúp đỡ người bệnh, phối hợp trị liệu của bác sĩ.\nThường làm các công việc có quan hệ trực tiếp, gián tiếp với nước ngoài, như kinh doanh, giao thông, du lịch, có thể do tác dụng của chênh lệch thời điểm mà phù hợp tích chất công việc ban đêm sao Thái Âm.\nNgười có sao Thái Âm tọa mệnh, có những đặc tính của phụ nữ như bình tĩnh, bụng dạ hiền hòa chu đáo, dịu dàng lại kiên nhẫn, lạc quan vui vẻ. Thường sau khi nhiều lần tôi luyện, bồi dưõng mà có được cá tính kiên định, điểm tĩnh và kiên nhẫn tuy bề ngoài nhìn có vẻ lãnh đạm, nhưng bên trong lại nhiệt tình và từ bi. Đối điện với những việc không được như ý, phản ứng trực tiếp thường là nhẫn nại, không tranh đấu tích cực hay thể hiện ý kiến, nội tâm thường hay tủi thân, nhưng bản năng của sao Thái Dương là gián tiếp, phối hợp, cho dù việc cấp bách nhưng càng muốn nhanh càng hỏng việc.\nBất kỳ cung nào có sao Thái Âm, đều khiến người yên với bên trong trước, thể hiện bình tĩnh và hiền hòa, sau đó mới chuyển đổi ra bên ngoài, tại thòi khắc chuyển đổi chính là sự bắt đầu của sao Thái Dương, cũng là sự kết thúc của sao Thái Âm.\nNgười có sao Thái Âm tọa mệnh, nên nuôi dưỡng thói quan thường xuyên đọc, đồng thời làm công việc có tính chất nghiên cứu lâu dài, thường nên kết với mọi người để giảm tình trạng tình cảm gia đình suy giảm, đồng thời đề phòng khẩu thiệt thị phi và tiểu nhân, bạn bè lừa gạt, từ nhỏ đã khống chế việc ăn uống để duy trì sức khỏe của bản thân, mới có thể hướng cát tránh hung, đi đến con đường thành công.\nSao Thái Âm thích sao Hóa cát, bất luận là Hóa Lộc, Hóa Quyền, Hóa Khoa đều có thể tăng thêm hào quang. Gặp Hóa Lộc, Lộc Tồn thì trong cuộc đời được hưởng tiền tài vô tận; gặp Hóa Quyền có thể lập nghiệp, nắm quyền; gặp Hóa Khoa thì thường do tiền tài mà có danh.\nSinh vật trên đòi thiếu mặt trăng thì vẫn có thể tồn tại, thiếu mặt trời thì khó tồn tại được lâu dài. Nên bất luận là nam hay nữ mệnh, cung Mệnh sao Thái Âm hóa kỵ, còn có thể nhờ Hóa Lộc của sao Thái Dương đến giúp đỡ nhằm giảm tổn hại.\nTại cung Hợi, sao Thái Âm là \"nguyệt lãng thiên môn\", không sợ sao Hóa Kỵ phá phách, ngược lại có chức năng thay đổi khung cảnh. Sao Thái Âm lac hãm Hóa Kỵ, do bản thân không có hào quang, không thể tạo thành uy lực lớn.\nSao Thái Âm thích gặp sao Lục Cát, gặp Tả Phù, Hữu Bật thì có phúc phận; gặp Văn Xương, Văn Khúc thì có tài văn nghệ; gặp Thiên Khôi, Thiên Việt có quý nhân, nhận chức trong cơ quan nhà nước, bình an thuận lợi.\nSao Thái Âm không thích gặp lục cát tinh, chủ về trắc trở. Lạc hãm gặp bốn sát tinh Dương, Đà, Hỏa, Kỵ, sợ có họa thương tật chân tay; nếu cung miếu vượng thì không sợ sao Địa Không, tuy nhiên bất lợi về tiền tài, nhưng không ảnh hưởng đến công danh. Sao Thái Âm kỵ nhất cùng cung với Kình Dương, Đà La ắt người thì li tán tài sản thì tiêu hao, nếu như lại gặp sát tinh ngược lại rất may mắn. Sao Thái Âm lạc hãm lại gặp sát tinh, thể hiện lộc khố có lỗ hổng, ắt tiền đến tiền đi, cuộc đời nhiều vất vả, xa nhà phát triển là tốt nhất, nên chú ý có tiền bạc xen giữa bạn bè dễ do tiền bạc mà gây ra phiền nhiễu.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_374814_222",
-      "condition": "Cung Thân an tại Mão có Thái âm",
-      "text": "Phản Bối là Thái Âm ở cung Mão. Cổ nhân cho rằng chủ về đại phú, nhưng phải gặp các sao cát hóa Lộc, Quyền, Khoa mới đúng.\n\n---\n\nThái Âm độc toạ ở hai cung Mão hoặc Dậu, ở cung dậu ưu hơn ở cung Mão rất nhiều. Có điều, nếu ở cung Mão gặp các sao phụ, tá cát mà không gặp sát tinh, lại được cát hoá, đây là cách cục \"phản bối\", chủ về đại phú.\nĐối với Thái Âm độc toạ ở hai cung Mão hoặc Dậu, các cung hạn Cự Môn, \"Liêm Trinh, Thiên Tướng\", Thất Sát, Thiên Cơ là những đại vận hoặc lưu niên có tính then chốt. Cách cục \"phản bối\" thì không luận Thiên Cơ.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_94259_354",
-      "condition": "Cung Thân an tại Mão có Phá quân",
-      "text": "Nam mệnh cuồng say cờ bạc, coi sắc như mạng. Nữ mệnh chủ phóng đãng, không an phận, thích giao du, có sở thích.\n\n---\n\nNên rời xa quê hương sớm để phát triển. Nếu có Sát Tinh xung chiếu cung đối diện thì đầu mặt hoặc cơ thể có sẹo. Phá Quân Hóa Lộc để cứu vớt, khỏi phải than thở!",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
-    },
-    {
-      "id": "batch_397666_360",
-      "condition": "Cung Thân an tại Mão có Thiên phủ",
-      "text": "Cho thấy tài hoa xuất chúng, là người đa tài đa nghệ đầu óc tốt, nên có chút kiêu ngạo tự phụ, cũng thích hưởng thụ, dễ có hành vi tính toán chi li.\n\n---\n\n(1) Bảo thủ, ổn trọng, không thích cạnh tranh, nhưng rất tự tin vào bản thân.\n(2) Có chuyên môn, nhưng chuyên môn khá phổ biến.\n\n---\n\nHình thái: Dung mạo thanh tú, da hồng răng trắng; tâm tính ôn hòa, lương thiện, thông minh khôn khéo, an phận thủ thường, có tài năng thiên bẩm trong học tập.\nTính cách: Thích ra lệnh cho người khác, không thích bị người khác gò bó. Có tài lãnh đạo, quản lý, hoạch định tổ chức, xử lý tài chính.\nCó nhược điểm là tranh giành quyền lực, so đo lợi ích với người khác, không chịu thua, chú ý đến những chi tiết nhỏ.\nThích học những điều mới mẻ, rất kiên trì với mục tiêu. Biết tích lũy, quản lý tài chính, vì vậy khá có tiền. Thiếu sáng tạo, nhưng giỏi giữ gìn.\nCát hung:\nVị trí của Thân Cung là \"Tỵ, Hợi\", chủ quý.\nKhi Thân Cung có các sao khác:\nThân Cung có: Lộc Tồn, danh lợi song thu.\nThân Cung có: Văn Khúc, Văn Xương, Tả Phù, Hữu Bật, tài học tốt, vận thi cử tốt.\nThân Cung có: Kình Dương, Đà La, Hỏa Tinh, Linh Tinh, nếu không có cát tinh phụ tá hỗ trợ, thì là người giỏi mưu mô, xảo trá.\nThân Cung có: Thiên Không, Địa Kiếp, chủ cô độc, phúc không vẹn toàn.\nThân Cung có: Thiên Diêu, chủ mưu mẹo, xảo quyệt.\nNữ mệnh: Thanh tú, tao nhã, lý trí nặng hơn tình cảm, có quan niệm thẩm mỹ độc đáo, chú trọng ăn mặc, thích trang trí nhà cửa.",
-      "source": {
-        "book": "tuvi.cohoc.net",
-        "author": "Multiple sources",
-        "chart_id": "existing"
-      },
-      "accuracy": 7
     }
   ]
 }

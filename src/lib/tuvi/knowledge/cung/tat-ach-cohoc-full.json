@@ -2,7 +2,7 @@
   "palace": "TAT_ACH",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 39,
+  "total_blocks": 44,
   "sections": [
     {
       "section_id": "tat-ach",
@@ -1255,6 +1255,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "tat_ach_crawl_25_1790130587416",
+          "condition_text": "6. Luận giải cung Tật &Aacute;ch",
+          "raw_text": "Cung Tật ách cho biết tổng quát khái lược về sức khỏe của đương số, trong đó bao gồm cả các Bệnh mà đương số dễ mắc phải, các Tật mà đương số có thể sẽ có (ví dụ tật nói ngọng, nói lắp,&hellip; hoặc cái tính kiêu ngạo, hoặc hay nói tục chửi bậy, cũng được coi là tật xấu,.. hoặc người nào có tính táy máy tắt mắt, thấy cái gì của người khác mà thích là liền nhặt lấy mang về chơi, chẳng hỏi han mượn chủ nhân gì cả, dân gian thường gọi là cái tật ăn cắp vặt,&hellip; là thuần túy về tật chứ không coi là bệnh), các khiếm khuyết trên cơ thể vừa thuộc Bệnh vừa thuộc Tật mà thông qua các Tai ách (hoặc do bẩm sinh) mà đương số có thể bị như điếc, lác, mù, què,&hellip; Cung Tật ách cũng cho biết khái lược về một số điểm thuộc tính cách của đương số (ví dụ như thích ăn diện, thích khoe khoang,...).",
+          "conditions": {
+            "palace": "TAT_ACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tat_ach_crawl_26_1790130587416",
+          "condition_text": "6. Luận giải cung Tật &Aacute;ch",
+          "raw_text": "Có nhiều Tật biểu lộ ra ngay bên ngoài hình tướng của đương số, vì thế xem cung Tật ách cần rất lưu ý đến cung xung chiếu vào nó là Phụ Mẫu, ngoài ý nghĩa xung chiếu thì cung Phụ Mẫu còn được gọi là cung Tướng Mạo (do ảnh hưởng của các môn tiền thân của môn Tử Vi Đẩu Số như môn Thất Chính Tứ Dư, Thập Bát Phi Tinh) và nó cũng được lý luận rằng thể chất và sức khỏe của đương số là chịu ảnh hưởng rất nhiều từ di truyền cũng như sự chăm sóc của cha mẹ đương số. Bên cạnh đó, tâm sinh lý của đương số ngay từ bé cũng bị ảnh hưởng rất nhiều từ tâm trạng cũng như cuộc sống của cha mẹ có hạnh phúc hay không.",
+          "conditions": {
+            "palace": "TAT_ACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tat_ach_crawl_27_1790130587416",
+          "condition_text": "6. Luận giải cung Tật &Aacute;ch",
+          "raw_text": "Ngoài những Tật lộ rõ ra bên ngoài thì cũng có những Tật thuộc dạng kín, khó nhìn thấy bằng mắt thường, mà phải do quan sát tập tính thói quen với quá trình lâu dài, hoặc là ở những nơi kín đáo trên cơ thể mà đương số nói ra,&hellip; những cái này thường được gọi là ám Tật.",
+          "conditions": {
+            "palace": "TAT_ACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tat_ach_crawl_28_1790130587416",
+          "condition_text": "6. Luận giải cung Tật &Aacute;ch",
+          "raw_text": "Xem cung Tật ách còn cần lưu ý đến cung Phúc Đức, nếu cung Phúc Đức tốt đẹp sáng sủa thì có thể được thừa hưởng âm đức của tổ tiên mà cứu giảm được bệnh tật tai ách phải gánh chịu. Đồng thời cần kết hợp xem Mệnh Thân cung có tốt đẹp hay không, nếu như có các Quý tinh, Phúc Ấm tinh, các sao giải nạn trừ hung thì cũng đều có khả năng giảm thiểu bệnh tật tai ách ở cung Tật ách. Riêng trường hợp cung Mệnh mà nhị hợp vào cung Tật ách, như đã nói ở phần an Mệnh theo giờ Quan Sát trong phụ luận cho cung Mệnh, đây là một trường hợp khá đặc biệt vì chỉ khi Mệnh cung an ở Mão Dậu mới gặp hoàn cảnh này. Tam hợp Cục của Mệnh sinh xuất cho Tam hợp Cục của Tật ách, khiến cho đương số gần như suốt cuộc đời sống cứ phải trăn trở đau đáu về một loại bệnh hay một cái tật nào đó, như một phần định mệnh của đời mình. Có thể người ta bị bệnh hay ốm đau thường xuyên, nhưng cũng có thể người ta bị một cái tật nào đó ám ảnh cả đời (như sống trong hoài niệm, sống với nỗi sợ về sự đổ vỡ nào đó, sợ bị thất bại, sợ bị mất danh tiếng với người thân và những người xung quanh,&hellip;), kiểu như vậy bị coi như Mệnh có phần bị lệ thuộc vào Tật ách nên theo phương thức xoay cung bàn thì cung Mệnh nằm ở vị trí cung Nô của cung Tật ách.",
+          "conditions": {
+            "palace": "TAT_ACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tat_ach_crawl_29_1790130587416",
+          "condition_text": "6. Luận giải cung Tật &Aacute;ch",
+          "raw_text": "Trong phần luận cung Tậc ách ở bài phú Phát Vi Luận thì tiên sinh Bạch Ngọc Thiềm có nói:",
+          "conditions": {
+            "palace": "TAT_ACH"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.321Z"
 }

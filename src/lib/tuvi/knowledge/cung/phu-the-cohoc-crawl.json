@@ -2,8 +2,8 @@
   "palace": "PHU_THE",
   "source": "tuvi.cohoc.net",
   "import_mode": "crawl",
-  "last_updated": "2026-09-22T16:51:29.367Z",
-  "total_blocks": 928,
+  "last_updated": "2026-09-23T10:08:50.176Z",
+  "total_blocks": 934,
   "hashes": [
     "aef068c64324",
     "f3bafb7d59aa",
@@ -932,7 +932,13 @@
     "2ee60dc9f261",
     "7212e30d8251",
     "bba0af2f662b",
-    "8bb662d9accd"
+    "8bb662d9accd",
+    "9a4dda2abd6e",
+    "da82cde47198",
+    "6f4620194093",
+    "7e9eb1e94dc5",
+    "2e4f85529d6c",
+    "20ae7e8dff92"
   ],
   "sections": [
     {
@@ -9482,6 +9488,60 @@
           "source": {
             "book": "tuvi.cohoc.net",
             "author": "Bắc Phái"
+          }
+        },
+        {
+          "id": "phu-the_crawl_1790158130176_0",
+          "type": "general",
+          "text": "1. Cung Phu thê (người phối ngẫu, tình cảm, tình trạng hôn nhân) Hóa kỵ phi phục Tam điểm tại Mão, Dậu, Dần. 2. Đại vận: 23 - 32 tuổi ở Dậu (xung chiếu với Mão) nhận kỵ của Phu thê tiên thiên báo hiệu đại vận này có Kỵ Phu thê. 3. Cung Phu thê của Đại vận: 23 - 32 tuổi tại Mùi Hóa kỵ phi phục nhập cung Sửu. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Sửu, Mùi, Tí; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Mão, Dậu, Dần khi cung Phu thê lưu niên ở tại cung Sửu, Mùi, Tí vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-the_crawl_1790158130176_1",
+          "type": "general",
+          "text": "1. Cung Phu thê (người phối ngẫu, tình cảm, tình trạng hôn nhân) Hóa lộc phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 43 - 52 tuổi ở Mùi (xung chiếu với Sửu) nhận lộc của Phu thê tiên thiên báo hiệu đại vận này có Lộc Phu thê. 3. Cung Phu thê của Đại vận: 43 - 52 tuổi tại Tị Hóa lộc phi phục nhập cung Tuất. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tuất, Thìn, Dậu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Tí, Ngọ, Hợi khi cung Phu thê lưu niên ở tại cung Tuất, Thìn, Dậu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-the_crawl_1790158130176_2",
+          "type": "general",
+          "text": "1. Cung Phu thê (người phối ngẫu, tình cảm, tình trạng hôn nhân) Hóa kỵ phi phục Tam điểm tại Mão, Dậu, Dần. 2. Đại vận: 83 - 92 tuổi ở Mão nhận kỵ của Phu thê tiên thiên báo hiệu đại vận này có Kỵ Phu thê. 3. Cung Phu thê của Đại vận: 83 - 92 tuổi tại Sửu Hóa kỵ phi phục nhập cung Thìn. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Thìn, Tuất, Mão; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Ngọ, Tí, Tị khi cung Phu thê lưu niên ở tại cung Thìn, Tuất, Mão vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-the_crawl_1790158130176_3",
+          "type": "general",
+          "text": "1. Cung Phu thê (người phối ngẫu, tình cảm, tình trạng hôn nhân) Hóa kỵ phi phục Tam điểm tại Mão, Dậu, Dần. 2. Đại vận: 93 - 102 tuổi ở Dần (vị trí nhất lục cộng tông với cung xung chiếu của cung Mão) nhận kỵ của Phu thê tiên thiên báo hiệu đại vận này có Kỵ Phu thê. 3. Cung Phu thê của Đại vận: 93 - 102 tuổi tại Tí Hóa kỵ phi phục nhập cung Hợi. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Hợi, Tị, Tuất; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Sửu, Mùi, Tí khi cung Phu thê lưu niên ở tại cung Hợi, Tị, Tuất vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-the_crawl_1790158130176_4",
+          "type": "general",
+          "text": "1. Cung Phu thê (người phối ngẫu, tình cảm, tình trạng hôn nhân) Hóa lộc phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 103 - 112 tuổi ở Sửu nhận lộc của Phu thê tiên thiên báo hiệu đại vận này có Lộc Phu thê. 3. Cung Phu thê của Đại vận: 103 - 112 tuổi tại Hợi Hóa lộc phi phục nhập cung Tí. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Tí, Ngọ, Hợi; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Dần, Thân, Sửu khi cung Phu thê lưu niên ở tại cung Tí, Ngọ, Hợi vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
+          }
+        },
+        {
+          "id": "phu-the_crawl_1790158130176_5",
+          "type": "general",
+          "text": "1. Cung Phu thê (người phối ngẫu, tình cảm, tình trạng hôn nhân) Hóa lộc phi phục Tam điểm tại Sửu, Mùi, Tí. 2. Đại vận: 113 - 122 tuổi ở Tí (vị trí nhất lục cộng tông với cung xung chiếu của cung Sửu) nhận lộc của Phu thê tiên thiên báo hiệu đại vận này có Lộc Phu thê. 3. Cung Phu thê của Đại vận: 113 - 122 tuổi tại Tuất Hóa lộc phi phục nhập cung Dần. 4. Ứng kỳ lưu niên có thể sẽ vào một trong các năm Dần, Thân, Sửu; nếu năm này có trong đại vận. 5. Cũng có thể một trong các năm Thìn, Tuất, Mão khi cung Phu thê lưu niên ở tại cung Dần, Thân, Sửu vừa lúc ứng hạn; nếu năm này có trong đại vận.",
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "author": "Cổ Học"
           }
         }
       ]

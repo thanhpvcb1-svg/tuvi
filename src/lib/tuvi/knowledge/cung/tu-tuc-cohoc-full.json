@@ -2,7 +2,7 @@
   "palace": "TU_TUC",
   "source": "tuvi.cohoc.net",
   "chart_id": "472159",
-  "total_blocks": 43,
+  "total_blocks": 48,
   "sections": [
     {
       "section_id": "tu-tuc",
@@ -1390,6 +1390,78 @@
           "accuracy": 4
         }
       ]
+    },
+    {
+      "section_id": "crawled",
+      "title": "Crawled from cohoc.net",
+      "blocks": [
+        {
+          "block_id": "tu_tuc_crawl_15_1790130587414",
+          "condition_text": "4. Luận giải cung Tử Tức",
+          "raw_text": "Cung Tử Tức cho biết mối quan hệ của đương số với con cái của mình, tình cảm có gắn bó thâm sâu hay không, có lạnh nhạt thờ ơ hay không, con cái có hiếu thuận với cha mẹ (tức vợ chồng đương số) hay không&hellip; cung Tử Tức cũng cho biết những thông tin để có thể dự đoán đương số có con hay không, con cái đầy đàn có trai có gái hay là hiếm muộn hay là tuyệt tự, có con trai nhiều hơn hay con gái nhiều hơn, có con dị bào hay không,&hellip;",
+          "conditions": {
+            "palace": "TU_TUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tu_tuc_crawl_16_1790130587414",
+          "condition_text": "4. Luận giải cung Tử Tức",
+          "raw_text": "Đối với Nữ mệnh thì Tử Tức là cường cung đã đành, đối với Nam mệnh thì Tử Tức được liệt vào số các cung nhược nhưng mà Thái Thứ Lang đã dặn lại chúng ta không nên coi nhẹ cung Tử bởi vì sách nói:",
+          "conditions": {
+            "palace": "TU_TUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tu_tuc_crawl_17_1790130587414",
+          "condition_text": "4. Luận giải cung Tử Tức",
+          "raw_text": "Mệnh hung nhi cát do hữu Tử cung cát;",
+          "conditions": {
+            "palace": "TU_TUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tu_tuc_crawl_18_1790130587414",
+          "condition_text": "4. Luận giải cung Tử Tức",
+          "raw_text": "Mệnh cát nhi hung do hữu Tử cung hung.",
+          "conditions": {
+            "palace": "TU_TUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        },
+        {
+          "block_id": "tu_tuc_crawl_19_1790130587414",
+          "condition_text": "4. Luận giải cung Tử Tức",
+          "raw_text": "(Mệnh có hung tượng nhưng được cát lợi tốt lành là do có cung Tử Tức cát lành; Mệnh cát nhưng cuộc đời vẫn gặp những việc hung là do cung Tử Tức có hung tượng).",
+          "conditions": {
+            "palace": "TU_TUC"
+          },
+          "source": {
+            "book": "tuvi.cohoc.net",
+            "url": "https://tuvi.cohoc.net"
+          },
+          "accuracy": 7
+        }
+      ]
     }
-  ]
+  ],
+  "last_updated": "2026-09-23T02:33:10.314Z"
 }
