@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState, useMemo, useCallback } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import type { ChartView, PalaceView } from "../lib/types";
 import { findPalace, getPalaceMeaning } from "../lib/chartUi";
 import {
@@ -46,18 +46,18 @@ type TongHopState = {
 };
 
 const PALACE_CONFIG: Array<{ id: string; name: string; icon: string }> = [
-  { id: "menh", name: "Má»‡nh", icon: "ðŸ‘¤" },
-  { id: "phu_mau", name: "Phá»¥ Máº«u", icon: "ðŸ‘¨â€ðŸ‘©â€ðŸ‘§" },
-  { id: "phuc_duc", name: "PhÃºc Äá»©c", icon: "ðŸ€" },
-  { id: "dien_trach", name: "Äiá»n Tráº¡ch", icon: "ðŸ " },
-  { id: "quan_loc", name: "Quan Lá»™c", icon: "ðŸ’¼" },
-  { id: "no_boc", name: "NÃ´ Bá»™c", icon: "ðŸ¤" },
-  { id: "thien_di", name: "ThiÃªn Di", icon: "âœˆï¸" },
-  { id: "tat_ach", name: "Táº­t Ãch", icon: "ðŸ’Š" },
-  { id: "tai_bach", name: "TÃ i Báº¡ch", icon: "ðŸ’°" },
-  { id: "tu_tuc", name: "Tá»­ Tá»©c", icon: "ðŸ‘¶" },
-  { id: "phu_the", name: "Phu ThÃª", icon: "ðŸ’‘" },
-  { id: "huynh_de", name: "Huynh Äá»‡", icon: "ðŸ‘¥" },
+  { id: "menh", name: "Mệnh", icon: "👤" },
+  { id: "phu_mau", name: "Phụ Mẫu", icon: "👨‍👩‍👧" },
+  { id: "phuc_duc", name: "Phúc Đức", icon: "🍀" },
+  { id: "dien_trach", name: "Điền Trạch", icon: "🏠" },
+  { id: "quan_loc", name: "Quan Lộc", icon: "💼" },
+  { id: "no_boc", name: "Nô Bộc", icon: "🤝" },
+  { id: "thien_di", name: "Thiên Di", icon: "✈️" },
+  { id: "tat_ach", name: "Tật Ách", icon: "💊" },
+  { id: "tai_bach", name: "Tài Bạch", icon: "💰" },
+  { id: "tu_tuc", name: "Tử Tức", icon: "👶" },
+  { id: "phu_the", name: "Phu Thê", icon: "💑" },
+  { id: "huynh_de", name: "Huynh Đệ", icon: "👥" },
 ];
 
 function getStarDisplay(star: { name: string; display?: string }) {
@@ -72,7 +72,7 @@ function getPhiHoaFlows(palace: PalaceView): string[] {
     for (const flow of phiTuHoa.flows) {
       if (flow.targetPalaceName) {
         const label = flow.typeLabel || flow.type;
-        results.push(`${label} â†’ ${flow.targetPalaceName}`);
+        results.push(`${label} → ${flow.targetPalaceName}`);
       }
     }
   }
@@ -114,25 +114,25 @@ function analyzePalace(chart: ChartView, config: { id: string; name: string; ico
   };
 }
 
-// Sáº¯p xáº¿p knowledge: vá»‹ trÃ­ cung > sao Ä‘á»“ng cung > tá»© hÃ³a > phi hÃ³a
+// Sắp xếp knowledge: vị trí cung > sao đồng cung > tứ hóa > phi hóa
 function sortKnowledgeByPriority(matches: KnowledgeMatch[]): KnowledgeMatch[] {
   return [...matches].sort((a, b) => {
     const getTypePriority = (type: string) => {
-      // Æ¯u tiÃªn 1: Vá»‹ trÃ­ cung, can cung
+      // Ưu tiên 1: Vị trí cung, can cung
       if (type === "position" || type === "heavenly_stem") return 1;
-      // Æ¯u tiÃªn 2: Sao trong cung, sao Ä‘á»“ng cung, cÃ¡ch cá»¥c
+      // Ưu tiên 2: Sao trong cung, sao đồng cung, cách cục
       if (type === "star_in_palace" || type === "star_combination" || type === "cach_cuc") return 2;
-      // Æ¯u tiÃªn 3: Tá»© hÃ³a tá»a thá»§
+      // Ưu tiên 3: Tứ hóa tọa thủ
       if (type === "mutagen_in_palace" || type === "mutagen_combination") return 3;
-      // Æ¯u tiÃªn 4: Phi hÃ³a
+      // Ưu tiên 4: Phi hóa
       if (type.startsWith("phi_")) return 4;
-      // Æ¯u tiÃªn 5: KhÃ¡c
+      // Ưu tiên 5: Khác
       return 5;
     };
     const priorityA = getTypePriority(a.interpretation.type);
     const priorityB = getTypePriority(b.interpretation.type);
     if (priorityA !== priorityB) return priorityA - priorityB;
-    return b.matchScore - a.matchScore; // CÃ¹ng loáº¡i thÃ¬ theo score
+    return b.matchScore - a.matchScore; // Cùng loại thì theo score
   });
 }
 
@@ -142,7 +142,7 @@ function KnowledgeItem({ match }: { match: KnowledgeMatch }) {
       <p className="analysis-knowledge-text">{match.interpretation.text}</p>
       <div className="analysis-knowledge-meta">
         <span className="analysis-knowledge-reasons">
-          {match.matchReasons.join(" Â· ")}
+          {match.matchReasons.join(" · ")}
         </span>
       </div>
     </div>
@@ -160,7 +160,7 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
   const displayCount = showAll ? sortedMatches.length : 3;
   const hasMore = sortedMatches.length > 3;
   const knowledgeCount = analysis.knowledgeMatches.length;
-  // API key Ä‘Æ°á»£c cáº¥u hÃ¬nh trÃªn Cloudflare server-side
+  // API key được cấu hình trên Cloudflare server-side
   const hasGeminiKey = true;
 
   return (
@@ -172,20 +172,20 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
             <strong>
               {analysis.name}
               {knowledgeCount > 0 && (
-                <span className="analysis-knowledge-badge" title={`${knowledgeCount} luáº­n giáº£i`}>
+                <span className="analysis-knowledge-badge" title={`${knowledgeCount} luận giải`}>
                   {knowledgeCount}
                 </span>
               )}
             </strong>
-            {analysis.isBodyPalace && <span className="analysis-body-badge">ThÃ¢n</span>}
-            <span className="analysis-palace-position">{analysis.branch} Â· {analysis.stem}</span>
+            {analysis.isBodyPalace && <span className="analysis-body-badge">Thân</span>}
+            <span className="analysis-palace-position">{analysis.branch} · {analysis.stem}</span>
           </div>
         </div>
         <div className="analysis-palace-preview">
           {analysis.majorStars.length > 0 && (
             <span className="analysis-star-preview">{analysis.majorStars.join(", ")}</span>
           )}
-          <span className={`analysis-toggle-icon ${isExpanded ? "is-open" : ""}`}>â–¼</span>
+          <span className={`analysis-toggle-icon ${isExpanded ? "is-open" : ""}`}>▼</span>
         </div>
       </button>
 
@@ -197,7 +197,7 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
           {hasGeminiKey && sortedMatches.length > 0 && (
             <div className="analysis-gemini">
               <div className="analysis-gemini-header">
-                <span className="analysis-star-label">ðŸ¤– AI Luáº­n giáº£i:</span>
+                <span className="analysis-star-label">🤖 AI Luận giải:</span>
                 {!analysis.geminiAnalysis && !analysis.geminiLoading && (
                   <button
                     type="button"
@@ -207,14 +207,14 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
                       onRequestGemini?.();
                     }}
                   >
-                    Luáº­n báº±ng AI
+                    Luận bằng AI
                   </button>
                 )}
               </div>
               {analysis.geminiLoading && (
                 <div className="analysis-gemini-loading">
                   <span className="analysis-gemini-spinner" />
-                  Äang luáº­n giáº£i...
+                  Đang luận giải...
                 </div>
               )}
               {analysis.geminiError && (
@@ -232,7 +232,7 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
 
           {sortedMatches.length > 0 && (
             <div className="analysis-knowledge">
-              <span className="analysis-star-label">ðŸ“š Tri thá»©c cá»• Ä‘iá»ƒn:</span>
+              <span className="analysis-star-label">📚 Tri thức cổ điển:</span>
               <div className="analysis-knowledge-list">
                 {sortedMatches.slice(0, displayCount).map((match, i) => (
                   <KnowledgeItem key={match.interpretation.id || i} match={match} />
@@ -244,7 +244,7 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
                   className="analysis-show-more"
                   onClick={() => setShowAll(!showAll)}
                 >
-                  {showAll ? "Thu gá»n" : `Xem thÃªm ${sortedMatches.length - 3} luáº­n giáº£i`}
+                  {showAll ? "Thu gọn" : `Xem thêm ${sortedMatches.length - 3} luận giải`}
                 </button>
               )}
             </div>
@@ -252,7 +252,7 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
 
           {analysis.phiHoa.length > 0 && (
             <div className="analysis-phi-hoa">
-              <span className="analysis-star-label">Phi HÃ³a:</span>
+              <span className="analysis-star-label">Phi Hóa:</span>
               <div className="analysis-phi-hoa-tags">
                 {analysis.phiHoa.map((flow, i) => (
                   <span key={i} className="analysis-phi-hoa-tag">{flow}</span>
@@ -266,8 +266,6 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
   );
 }
 
-// API key Ä‘Æ°á»£c cáº¥u hÃ¬nh trÃªn Cloudflare server-side
-
 export default function StreamingAnalysis({ chart, isActive, onComplete, userContext }: Props) {
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set(["menh"]));
   const [isLoading, setIsLoading] = useState(true);
@@ -275,6 +273,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [geminiStates, setGeminiStates] = useState<Map<string, { loading: boolean; analysis?: string; error?: string }>>(new Map());
   const [tongHopState, setTongHopState] = useState<TongHopState>({ loading: false });
+  const hasGeminiKey = true; // API key được cấu hình trên Cloudflare server-side
 
   const baseAnalyses = useMemo(() => {
     if (!chart) return [];
@@ -296,7 +295,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     });
   }, [baseAnalyses, geminiStates]);
 
-  // Build data cho tá»•ng há»£p Báº¯c PhÃ¡i - láº¥y Táº¤T Cáº¢ tri thá»©c
+  // Build data cho tổng hợp Bắc Phái - lấy TẤT CẢ tri thức
   const buildTongHopData = useCallback((): PalaceSummary[] => {
     return baseAnalyses.map((a) => ({
       name: a.name,
@@ -311,7 +310,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     }));
   }, [baseAnalyses]);
 
-  // Request tá»•ng há»£p Báº¯c PhÃ¡i
+  // Request tổng hợp Bắc Phái
   const requestTongHopBacPhai = useCallback(async () => {
     if (tongHopState.loading || tongHopState.analysis) return;
 
@@ -334,11 +333,11 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       if (response.success) {
         setTongHopState({ loading: false, analysis: response.analysis });
       } else {
-        setTongHopState({ loading: false, error: response.error || "Lá»—i khÃ´ng xÃ¡c Ä‘á»‹nh" });
+        setTongHopState({ loading: false, error: response.error || "Lỗi không xác định" });
       }
     } catch (error) {
       console.error("[Gemini] Error:", error);
-      setTongHopState({ loading: false, error: "KhÃ´ng thá»ƒ káº¿t ná»‘i Gemini" });
+      setTongHopState({ loading: false, error: "Không thể kết nối Gemini" });
     }
   }, [tongHopState, buildTongHopData, userContext, chart.profile]);
 
@@ -374,14 +373,14 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
         if (response.success) {
           next.set(palaceId, { loading: false, analysis: response.analysis });
         } else {
-          next.set(palaceId, { loading: false, error: response.error || "Lá»—i khÃ´ng xÃ¡c Ä‘á»‹nh" });
+          next.set(palaceId, { loading: false, error: response.error || "Lỗi không xác định" });
         }
         return next;
       });
     } catch (error) {
       setGeminiStates((prev) => {
         const next = new Map(prev);
-        next.set(palaceId, { loading: false, error: "KhÃ´ng thá»ƒ káº¿t ná»‘i Gemini" });
+        next.set(palaceId, { loading: false, error: "Không thể kết nối Gemini" });
         return next;
       });
     }
@@ -431,10 +430,10 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     return () => clearTimeout(timer);
   }, [isLoading, visibleCount, analyses.length, isActive, onComplete]);
 
-  // Auto-trigger Gemini tá»•ng há»£p khi streaming hoÃ n táº¥t
+  // Auto-trigger Gemini tổng hợp khi streaming hoàn tất
   useEffect(() => {
     const isStreaming = visibleCount < analyses.length;
-    // Chá»‰ auto-call khi Ä‘Ã£ deploy (khÃ´ng pháº£i localhost)
+    // Chỉ auto-call khi đã deploy (không phải localhost)
     const isProduction = !window.location.hostname.includes("localhost") && !window.location.hostname.includes("127.0.0.1");
     if (isProduction && !isStreaming && visibleCount > 0 && !tongHopState.loading && !tongHopState.analysis && !tongHopState.error) {
       requestTongHopBacPhai();
@@ -468,8 +467,8 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       <div className="analysis-panel">
         <div className="analysis-loading">
           <div className="analysis-loading-spinner" />
-          <p>Äang phÃ¢n tÃ­ch 12 cung trong lÃ¡ sá»‘...</p>
-          <span className="analysis-loading-hint">Tra cá»©u tri thá»©c tá»« sÃ¡ch cá»•</span>
+          <p>Đang phân tích 12 cung trong lá số...</p>
+          <span className="analysis-loading-hint">Tra cứu tri thức từ sách cổ</span>
           <div className="analysis-progress">
             <div className="analysis-progress-bar" style={{ width: `${loadingProgress}%` }} />
           </div>
@@ -489,19 +488,19 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     <div className="analysis-panel">
       <div className="analysis-header">
         <div className="analysis-header-content">
-          <h3>ðŸ“– Luáº­n giáº£i 12 cung</h3>
-          <p>PhÃ¢n tÃ­ch chi tiáº¿t tá»«ng cung trong lÃ¡ sá»‘ cá»§a báº¡n</p>
+          <h3>📖 Luận giải 12 cung</h3>
+          <p>Phân tích chi tiết từng cung trong lá số của bạn</p>
         </div>
         <div className="analysis-header-actions">
-          <button type="button" className="analysis-action-btn" onClick={expandAll}>Má»Ÿ táº¥t cáº£</button>
-          <button type="button" className="analysis-action-btn" onClick={collapseAll}>Thu gá»n</button>
+          <button type="button" className="analysis-action-btn" onClick={expandAll}>Mở tất cả</button>
+          <button type="button" className="analysis-action-btn" onClick={collapseAll}>Thu gọn</button>
         </div>
       </div>
 
       <div className="analysis-section">
         <h4 className="analysis-section-title">
-          <span className="analysis-section-icon">â­</span>
-          CÃ¡c cung trá»ng tÃ¢m
+          <span className="analysis-section-icon">⭐</span>
+          Các cung trọng tâm
         </h4>
         <div className="analysis-palace-grid">
           {keyPalaces.map((analysis) => (
@@ -518,8 +517,8 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
 
       <div className="analysis-section">
         <h4 className="analysis-section-title">
-          <span className="analysis-section-icon">ðŸ“‹</span>
-          CÃ¡c cung khÃ¡c
+          <span className="analysis-section-icon">📋</span>
+          Các cung khác
         </h4>
         <div className="analysis-palace-grid">
           {otherPalaces.map((analysis) => (
@@ -537,31 +536,31 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       {isStreaming && (
         <div className="analysis-streaming-status">
           <div className="analysis-streaming-spinner" />
-          <span>Äang phÃ¢n tÃ­ch cung {visibleCount + 1}/12...</span>
+          <span>Đang phân tích cung {visibleCount + 1}/12...</span>
         </div>
       )}
 
       {!isStreaming && (
         <>
-          {/* Box Tá»•ng há»£p Báº¯c PhÃ¡i */}
+          {/* Box Tổng hợp Bắc Phái */}
           {hasGeminiKey && (
             <div className="analysis-section analysis-tonghop">
               <h4 className="analysis-section-title">
-                <span className="analysis-section-icon">ðŸ”®</span>
-                Tá»•ng há»£p Báº¯c PhÃ¡i - Phi HÃ³a Can Cung
+                <span className="analysis-section-icon">🔮</span>
+                Tổng hợp Bắc Phái - Phi Hóa Can Cung
               </h4>
               
 
 
               {!tongHopState.analysis && !tongHopState.loading && !tongHopState.error && (
                 <div className="analysis-tonghop-cta">
-                  <p>Gemini sáº½ tá»•ng há»£p toÃ n bá»™ tri thá»©c Ä‘Ã£ match tá»« 12 cung, luáº­n theo <strong>Báº¯c PhÃ¡i</strong> vá»›i trá»ng tÃ¢m <strong>Phi HÃ³a Can Cung</strong>.</p>
+                  <p>Gemini sẽ tổng hợp toàn bộ tri thức đã match từ 12 cung, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>.</p>
                   <button
                     type="button"
                     className="primary-button analysis-tonghop-btn"
                     onClick={requestTongHopBacPhai}
                   >
-                    ðŸ”® Luáº­n tá»•ng há»£p Báº¯c PhÃ¡i
+                    🔮 Luận tổng hợp Bắc Phái
                   </button>
                 </div>
               )}
@@ -569,14 +568,14 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
               {tongHopState.loading && (
                 <div className="analysis-tonghop-loading">
                   <div className="analysis-loading-spinner" />
-                  <p>Äang tá»•ng há»£p vÃ  luáº­n giáº£i theo Báº¯c PhÃ¡i...</p>
-                  <span className="analysis-loading-hint">PhÃ¢n tÃ­ch Phi HÃ³a Can Cung: Lá»™c/Quyá»n/Khoa/Ká»µ nháº­p</span>
+                  <p>Đang tổng hợp và luận giải theo Bắc Phái...</p>
+                  <span className="analysis-loading-hint">Phân tích Phi Hóa Can Cung: Lộc/Quyền/Khoa/Kỵ nhập</span>
                 </div>
               )}
 
               {tongHopState.error && (
                 <div className="analysis-tonghop-error">
-                  <p>âŒ {tongHopState.error}</p>
+                  <p>❌ {tongHopState.error}</p>
                   <button
                     type="button"
                     className="primary-button"
@@ -585,7 +584,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
                       setTimeout(() => requestTongHopBacPhai(), 100);
                     }}
                   >
-                    ðŸ”„ Thá»­ láº¡i
+                    🔄 Thử lại
                   </button>
                 </div>
               )}
@@ -610,12 +609,10 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
           )}
 
           <div className="analysis-footer">
-            <p>ðŸ’¡ Ná»™i dung chá»‰ mang tÃ­nh tham kháº£o. Äá»ƒ Ä‘Æ°á»£c luáº­n giáº£i chuyÃªn sÃ¢u, vui lÃ²ng liÃªn há»‡ tÆ° váº¥n.</p>
+            <p>💡 Nội dung chỉ mang tính tham khảo. Để được luận giải chuyên sâu, vui lòng liên hệ tư vấn.</p>
           </div>
         </>
       )}
     </div>
   );
 }
-
-// API key Ä‘Æ°á»£c cáº¥u hÃ¬nh trÃªn Cloudflare server-side
