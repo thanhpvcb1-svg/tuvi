@@ -274,12 +274,24 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     "Access-Control-Allow-Headers": "Content-Type",
   };
 
+  // Debug: log env keys
+  const hasKey1 = Boolean(env.GEMINI_API_KEY);
+  const hasKey2 = Boolean(env.GEMINI_API_KEY_2);
+  const keyPreview = env.GEMINI_API_KEY ? `${env.GEMINI_API_KEY.substring(0, 8)}...` : "EMPTY";
+  console.log(`[DEBUG] GEMINI_API_KEY exists: ${hasKey1}, preview: ${keyPreview}`);
+  console.log(`[DEBUG] GEMINI_API_KEY_2 exists: ${hasKey2}`);
+  console.log(`[DEBUG] All env keys:`, Object.keys(env));
+
   // Check API keys
   const apiKeys = [env.GEMINI_API_KEY, env.GEMINI_API_KEY_2].filter(Boolean) as string[];
   
   if (apiKeys.length === 0) {
     return new Response(
-      JSON.stringify({ success: false, error: "GEMINI_API_KEY chưa được cấu hình" }),
+      JSON.stringify({ 
+        success: false, 
+        error: "GEMINI_API_KEY chưa được cấu hình",
+        debug: { hasKey1, hasKey2, keyPreview, envKeys: Object.keys(env) }
+      }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
