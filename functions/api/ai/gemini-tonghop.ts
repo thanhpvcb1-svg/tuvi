@@ -307,7 +307,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     const prompt = buildPrompt(body);
-    const model = env.GEMINI_MODEL || "gemini-2.5-flash-lite";
+    const model = env.GEMINI_MODEL || "gemini-3.5-flash-lite";
 
     // Try each key, fallback to next if error
     let lastError = "";
