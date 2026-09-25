@@ -1,10 +1,10 @@
 /**
- * Debug endpoint to test Gemini API from Cloudflare Pages Function
+ * Debug endpoint to test Cloudflare Workers AI
  * GET /api/ai/test-gemini
  */
 
 interface Env {
-  GEMINI_API_KEY: string;
+  AI: Ai;
 }
 
 export const onRequestGet: PagesFunction<Env> = async (context) => {
@@ -15,52 +15,29 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     "Content-Type": "application/json",
   };
 
-  // Check if API key exists (don't log the actual key)
-  if (!env.GEMINI_API_KEY) {
+  if (!env.AI) {
     return new Response(
-      JSON.stringify({ error: "GEMINI_API_KEY not configured" }),
+      JSON.stringify({ error: "AI binding not configured. Add [[ai]] to wrangler.toml or enable in Cloudflare Dashboard." }),
       { status: 500, headers: corsHeaders }
     );
   }
 
   try {
-    // Force request through US datacenter to avoid geo-restriction
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=${env.GEMINI_API_KEY}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Forwarded-For": "8.8.8.8",
-        },
-        // @ts-ignore - Cloudflare specific option
-        cf: {
-          resolveOverride: "generativelanguage.googleapis.com",
-        },
-        body: JSON.stringify({
-          contents: [
-            {
-              parts: [
-                {
-                  text: "Hello",
-                },
-              ],
-            },
-          ],
-        }),
-      }
-    );
-
-    const body = await response.text();
-
-    return new Response(body, {
-      status: response.status,
-      headers: corsHeaders,
+    const response = await env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
+      messages: [
+        { role: "user", content: "Xin chào, trả lời ngắn gọn bằng tiếng Việt." }
+      ],
+      max_tokens: 100,
     });
+
+    return new Response(
+      JSON.stringify({ success: true, response }),
+      { status: 200, headers: corsHeaders }
+    );
   } catch (error) {
     return new Response(
       JSON.stringify({
-        error: "Fetch failed",
+        error: "AI request failed",
         message: error instanceof Error ? error.message : "Unknown error",
       }),
       { status: 500, headers: corsHeaders }
