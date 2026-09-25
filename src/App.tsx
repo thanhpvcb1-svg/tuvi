@@ -2016,6 +2016,9 @@ export default function App() {
 
   return (
     <div className="site-shell">
+      <div style={{ background: "red", color: "white", padding: "20px", position: "fixed", top: 0, left: 0, zIndex: 9999 }}>
+        <strong>DEBUG v2:</strong> Deploy OK!
+      </div>
       <a href="#main-content" className="skip-link">Bỏ qua đến nội dung chính</a>
       <header className="site-header">
         <div className="site-header-inner">
