@@ -45,6 +45,67 @@ type TongHopState = {
   error?: string;
 };
 
+// Loading messages xoay vòng tạo hiệu ứng "chuyên gia đang suy nghĩ"
+const EXPERT_THINKING_MESSAGES = [
+  "Đang phân tích cấu trúc Mệnh - Thân...",
+  "Đang xem xét Tứ Hóa Lộc, Quyền, Khoa, Kỵ...",
+  "Đang truy vấn tri thức Bắc Phái...",
+  "Đang phân tích Phi Hóa Can Cung...",
+  "Đang đối chiếu tam hợp, xung chiếu...",
+  "Đang tổng hợp các cung trọng yếu...",
+  "Đang xem xét Quan Lộc, Tài Bạch, Phu Thê...",
+  "Đang phân tích mối quan hệ giữa các cung...",
+  "Đang đánh giá cát hung tinh...",
+  "Đang hoàn thiện luận giải...",
+];
+
+const PALACE_THINKING_MESSAGES = [
+  "Đang xem xét chính tinh tọa thủ...",
+  "Đang phân tích phụ tinh đồng cung...",
+  "Đang tra cứu tri thức cổ điển...",
+  "Đang đối chiếu Tứ Hóa...",
+  "Đang xem xét tam hợp cung...",
+  "Đang tổng hợp luận giải...",
+];
+
+// Component hiển thị loading với message xoay vòng
+function ExpertThinkingLoader({ messages, variant = "block" }: { messages: string[]; variant?: "block" | "inline" }) {
+  const [messageIndex, setMessageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMessageIndex((prev) => (prev + 1) % messages.length);
+    }, 2500); // Đổi message mỗi 2.5 giây
+
+    return () => clearInterval(interval);
+  }, [messages.length]);
+
+  if (variant === "inline") {
+    return (
+      <div className="analysis-gemini-loading">
+        <span className="analysis-gemini-spinner" />
+        <span className="analysis-thinking-text">{messages[messageIndex]}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="analysis-tonghop-loading">
+      <div className="analysis-expert-avatar">
+        <span className="analysis-expert-icon">🧙‍♂️</span>
+        <span className="analysis-expert-pulse" />
+      </div>
+      <div className="analysis-expert-content">
+        <p className="analysis-expert-title">Chuyên gia đang phân tích...</p>
+        <p className="analysis-thinking-text">{messages[messageIndex]}</p>
+      </div>
+      <div className="analysis-thinking-dots">
+        <span /><span /><span />
+      </div>
+    </div>
+  );
+}
+
 const PALACE_CONFIG: Array<{ id: string; name: string; icon: string }> = [
   { id: "menh", name: "Mệnh", icon: "👤" },
   { id: "phu_mau", name: "Phụ Mẫu", icon: "👨‍👩‍👧" },
@@ -212,10 +273,7 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
                 )}
               </div>
               {analysis.geminiLoading && (
-                <div className="analysis-gemini-loading">
-                  <span className="analysis-gemini-spinner" />
-                  Đang luận giải...
-                </div>
+                <ExpertThinkingLoader messages={PALACE_THINKING_MESSAGES} variant="inline" />
               )}
               {analysis.geminiError && (
                 <div className="analysis-gemini-error">
@@ -575,11 +633,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
               )}
 
               {tongHopState.loading && (
-                <div className="analysis-tonghop-loading">
-                  <div className="analysis-loading-spinner" />
-                  <p>Đang tổng hợp và luận giải theo Bắc Phái...</p>
-                  <span className="analysis-loading-hint">Phân tích Phi Hóa Can Cung: Lộc/Quyền/Khoa/Kỵ nhập</span>
-                </div>
+                <ExpertThinkingLoader messages={EXPERT_THINKING_MESSAGES} />
               )}
 
               {tongHopState.error && (

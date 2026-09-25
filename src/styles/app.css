@@ -9782,3 +9782,196 @@ h4,
 .analysis-tonghop-btn {
   min-width: 240px;
 }
+
+/* ========================================
+   Expert Thinking Loader - "Chuyên gia đang suy nghĩ"
+   ======================================== */
+.analysis-tonghop-loading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.08) 0%, rgba(255, 249, 238, 0.9) 100%);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+}
+
+.analysis-expert-avatar {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.analysis-expert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-soft) 0%, rgba(212, 160, 23, 0.25) 100%);
+  font-size: 28px;
+  animation: expert-bob 2s ease-in-out infinite;
+}
+
+@keyframes expert-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.analysis-expert-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  animation: expert-pulse 1.5s ease-out infinite;
+}
+
+@keyframes expert-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+.analysis-expert-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.analysis-expert-title {
+  margin: 0 0 6px;
+  color: var(--gold-dark);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.analysis-thinking-text {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  animation: thinking-fade 2.5s ease-in-out infinite;
+}
+
+@keyframes thinking-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Thinking Dots Animation */
+.analysis-thinking-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  padding-left: 16px;
+}
+
+.analysis-thinking-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: thinking-dot 1.4s ease-in-out infinite;
+}
+
+.analysis-thinking-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.analysis-thinking-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.analysis-thinking-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes thinking-dot {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Inline variant for palace cards */
+.analysis-gemini-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(212, 160, 23, 0.08);
+}
+
+.analysis-gemini-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(212, 160, 23, 0.2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.analysis-gemini-loading .analysis-thinking-text {
+  font-size: 13px;
+  animation: thinking-fade 2.5s ease-in-out infinite;
+}
+
+/* Dark theme */
+[data-theme="dark"] .analysis-tonghop-loading {
+  background: linear-gradient(135deg, rgba(232, 193, 112, 0.1) 0%, var(--surface-warm) 100%);
+  border-color: rgba(232, 193, 112, 0.25);
+}
+
+[data-theme="dark"] .analysis-expert-icon {
+  background: linear-gradient(135deg, var(--gold-soft) 0%, rgba(232, 193, 112, 0.3) 100%);
+}
+
+[data-theme="dark"] .analysis-expert-pulse {
+  border-color: var(--gold);
+}
+
+[data-theme="dark"] .analysis-expert-title {
+  color: var(--gold);
+}
+
+[data-theme="dark"] .analysis-thinking-dots span {
+  background: var(--gold);
+}
+
+[data-theme="dark"] .analysis-gemini-loading {
+  background: rgba(232, 193, 112, 0.1);
+}
+
+[data-theme="dark"] .analysis-gemini-spinner {
+  border-color: rgba(232, 193, 112, 0.2);
+  border-top-color: var(--gold);
+}
+
+@media (max-width: 760px) {
+  .analysis-tonghop-loading {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  .analysis-expert-content {
+    text-align: center;
+  }
+
+  .analysis-thinking-dots {
+    margin: 12px auto 0;
+    padding-left: 0;
+  }
+}
