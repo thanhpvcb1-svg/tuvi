@@ -24,12 +24,18 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   }
 
   try {
+    // Force request through US datacenter to avoid geo-restriction
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=${env.GEMINI_API_KEY}`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-Forwarded-For": "8.8.8.8",
+        },
+        // @ts-ignore - Cloudflare specific option
+        cf: {
+          resolveOverride: "generativelanguage.googleapis.com",
         },
         body: JSON.stringify({
           contents: [
