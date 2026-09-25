@@ -1,14 +1,10 @@
 /**
- * Cloudflare Pages Function - Gemini Luận Giải Tổng Hợp
- * 
- * API Key được cấu hình trong Cloudflare Dashboard:
- * Settings > Environment Variables > GEMINI_API_KEY
+ * Cloudflare Pages Function - AI Luận Giải Tổng Hợp
+ * Sử dụng Cloudflare Workers AI (Llama 3.3)
  */
 
 interface Env {
-  GEMINI_API_KEY: string;
-  GEMINI_API_KEY_2?: string;
-  GEMINI_MODEL?: string;
+  AI: Ai;
 }
 
 interface PalaceSummary {
@@ -60,65 +56,6 @@ KHI LUẬN GIẢI, ƯU TIÊN:
 3. Tổ hợp sao
 4. Chính tinh
 5. Phụ tinh
-6. Các quan hệ Tam hợp/Xung chiếu/Giáp cung nếu CONTEXT_DATA có cung cấp.
-
-ĐỐI VỚI TỨ HÓA:
-
-Nếu dữ liệu có Tứ Hóa, hãy xác định:
-
-* Hóa Lộc
-* Hóa Quyền
-* Hóa Khoa
-* Hóa Kỵ
-* sao nào nhận Hóa
-* cung nào liên quan
-
-Sau đó diễn giải tác động của Tứ Hóa đối với cung đang luận.
-
-ĐỐI VỚI PHI HÓA:
-
-Nếu dữ liệu có Phi Hóa, hãy xác định:
-
-* cung phát Phi Hóa
-* loại Phi Hóa: Lộc/Quyền/Khoa/Kỵ
-* sao nhận Phi Hóa
-* cung đích
-* chiều Phi Hóa: nhập/xuất nếu dữ liệu có
-
-Sau đó giải thích mối liên hệ giữa cung phát và cung nhận.
-
-Đặc biệt chú ý các dạng:
-
-Mệnh → Tài Bạch
-Mệnh → Quan Lộc
-Mệnh → Phu Thê
-Tài Bạch → Mệnh
-Quan Lộc → Mệnh
-Phu Thê → Mệnh
-
-Không tự tạo các quan hệ trên nếu CONTEXT_DATA không có.
-
-KHI CÓ NHIỀU YẾU TỐ:
-
-Không chỉ liệt kê ý nghĩa từng sao.
-
-Hãy tổng hợp theo:
-
-DỮ KIỆN → TỨ HÓA / PHI HÓA → TRI THỨC PHÙ HỢP → TÁC ĐỘNG → TỔNG HỢP
-
-Nếu có Phi Kỵ hoặc nhiều Phi Hóa cùng tác động, phải phân tích từng dòng Phi Hóa trước rồi mới tổng hợp.
-
-Nếu có mâu thuẫn giữa các yếu tố:
-
-* nêu các yếu tố đó
-* phân tích riêng
-* sau đó đưa ra nhận định tổng hợp
-* không tự bịa quy tắc giải quyết mâu thuẫn.
-
-Nếu dữ liệu không đủ:
-"Dữ liệu chưa đủ để kết luận."
-
-Không khẳng định tuyệt đối.
 
 Trả lời bằng tiếng Việt, tự nhiên, dễ hiểu, tập trung điểm chính, không lan man.`;
 
@@ -179,14 +116,12 @@ function buildKnowledgeData(palaces: PalaceSummary[]): string {
   return JSON.stringify(knowledgeByPalace, null, 2);
 }
 
-function buildPrompt(body: RequestBody): string {
+function buildUserPrompt(body: RequestBody): string {
   const chartData = buildChartData(body.profile);
   const contextData = buildContextData(body.palaces);
   const knowledge = buildKnowledgeData(body.palaces);
 
-  return `${SYSTEM_PROMPT}
-
-CẤU TRÚC TRẢ LỜI:
+  return `CẤU TRÚC TRẢ LỜI:
 
 ### Tổng quan
 Tóm tắt các yếu tố nổi bật (2-4 câu).
@@ -195,16 +130,13 @@ Tóm tắt các yếu tố nổi bật (2-4 câu).
 Phân tích các Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ có trong dữ liệu.
 
 ### Phi Hóa
-Phân tích các luồng Phi Hóa quan trọng, đặc biệt là cung phát → cung nhận.
+Phân tích các luồng Phi Hóa quan trọng.
 
 ### Các sao và tổ hợp
 Phân tích các sao/tổ hợp sao phù hợp với KNOWLEDGE.
 
 ### Tổng hợp
-Kết hợp Tứ Hóa + Phi Hóa + sao + các quan hệ cung để đưa ra nhận định chung.
-
-### Lưu ý
-Nêu những dữ liệu còn thiếu hoặc cần xem thêm.
+Kết hợp Tứ Hóa + Phi Hóa + sao để đưa ra nhận định chung.
 
 DỮ LIỆU:
 
@@ -218,51 +150,6 @@ KNOWLEDGE:
 ${knowledge}`;
 }
 
-// ============ GEMINI API CALL ============
-
-type GeminiResponse = {
-  candidates?: Array<{
-    content?: {
-      parts?: Array<{ text?: string }>;
-    };
-  }>;
-};
-
-async function callGeminiWithKey(
-  apiKey: string,
-  model: string,
-  prompt: string
-): Promise<{ success: boolean; text?: string; error?: string }> {
-  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-
-  const response = await fetch(apiUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 1800,
-        topP: 0.9,
-      },
-    }),
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    return { success: false, error: `API ${response.status}: ${errorText}` };
-  }
-
-  const data = await response.json() as GeminiResponse;
-  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
-
-  if (!text) {
-    return { success: false, error: "Không nhận được phản hồi" };
-  }
-
-  return { success: true, text: text.trim() };
-}
-
 // ============ HANDLER ============
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
@@ -274,24 +161,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     "Access-Control-Allow-Headers": "Content-Type",
   };
 
-  // Debug: log env keys
-  const hasKey1 = Boolean(env.GEMINI_API_KEY);
-  const hasKey2 = Boolean(env.GEMINI_API_KEY_2);
-  const keyPreview = env.GEMINI_API_KEY ? `${env.GEMINI_API_KEY.substring(0, 8)}...` : "EMPTY";
-  console.log(`[DEBUG] GEMINI_API_KEY exists: ${hasKey1}, preview: ${keyPreview}`);
-  console.log(`[DEBUG] GEMINI_API_KEY_2 exists: ${hasKey2}`);
-  console.log(`[DEBUG] All env keys:`, Object.keys(env));
-
-  // Check API keys
-  const apiKeys = [env.GEMINI_API_KEY, env.GEMINI_API_KEY_2].filter(Boolean) as string[];
-  
-  if (apiKeys.length === 0) {
+  if (!env.AI) {
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: "GEMINI_API_KEY chưa được cấu hình",
-        debug: { hasKey1, hasKey2, keyPreview, envKeys: Object.keys(env) }
-      }),
+      JSON.stringify({ success: false, error: "AI binding chưa được cấu hình" }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
@@ -306,32 +178,32 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
-    const prompt = buildPrompt(body);
-    const model = env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+    const userPrompt = buildUserPrompt(body);
 
-    // Try each key, fallback to next if error
-    let lastError = "";
-    for (let i = 0; i < apiKeys.length; i++) {
-      const key = apiKeys[i];
-      console.log(`Trying GEMINI_API_KEY${i === 0 ? "" : "_2"}...`);
+    const response = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: userPrompt }
+      ],
+      max_tokens: 2000,
+      temperature: 0.7,
+    });
 
-      const result = await callGeminiWithKey(key, model, prompt);
+    // Extract text from response
+    const text = (response as any)?.response 
+      || (response as any)?.choices?.[0]?.message?.content 
+      || "";
 
-      if (result.success && result.text) {
-        return new Response(
-          JSON.stringify({ success: true, analysis: result.text }),
-          { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
-        );
-      }
-
-      lastError = result.error || "Lỗi không xác định";
-      console.error(`Key ${i + 1} failed:`, lastError);
+    if (!text) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Không nhận được phản hồi từ AI" }),
+        { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
     }
 
-    // All keys failed
     return new Response(
-      JSON.stringify({ success: false, error: `Tất cả API key đều lỗi: ${lastError}` }),
-      { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      JSON.stringify({ success: true, analysis: text }),
+      { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
 
   } catch (error) {
