@@ -32,12 +32,12 @@ export function createChart(
     if (calendarType === "solar") {
       raw =
         typeof astroApi?.astrolabeBySolarDate === "function"
-          ? astroApi.astrolabeBySolarDate(date, birthHourIndex, apiGender, true, "vi-VN")
+          ? astroApi.astrolabeBySolarDate(date, birthHourIndex, apiGender, false, "vi-VN")
           : {};
     } else {
       raw =
         typeof astroApi?.astrolabeByLunarDate === "function"
-          ? astroApi.astrolabeByLunarDate(date, birthHourIndex, apiGender, false, true, "vi-VN")
+          ? astroApi.astrolabeByLunarDate(date, birthHourIndex, apiGender, false, false, "vi-VN")
           : {};
     }
   } catch (error) {

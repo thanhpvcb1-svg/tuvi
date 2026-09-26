@@ -23,6 +23,21 @@ const clampNumberInput = (value: string, maxDigits: number, max: number) => {
   return String(Math.min(parsed, max));
 };
 
+const BIRTH_HOURS = [
+  { value: "0", label: "Giờ Tý (23h-1h)" },
+  { value: "1", label: "Giờ Sửu (1h-3h)" },
+  { value: "3", label: "Giờ Dần (3h-5h)" },
+  { value: "5", label: "Giờ Mão (5h-7h)" },
+  { value: "7", label: "Giờ Thìn (7h-9h)" },
+  { value: "9", label: "Giờ Tỵ (9h-11h)" },
+  { value: "11", label: "Giờ Ngọ (11h-13h)" },
+  { value: "13", label: "Giờ Mùi (13h-15h)" },
+  { value: "15", label: "Giờ Thân (15h-17h)" },
+  { value: "17", label: "Giờ Dậu (17h-19h)" },
+  { value: "19", label: "Giờ Tuất (19h-21h)" },
+  { value: "21", label: "Giờ Hợi (21h-23h)" },
+];
+
 export default function BirthForm({
   value,
   onChange,
@@ -78,7 +93,7 @@ export default function BirthForm({
           </div>
 
           {/* Row 2: Date of birth */}
-          <div className="form-row form-row--5col">
+          <div className="form-row form-row--4col">
             <div className="form-field">
               <label htmlFor="day">Ngày *</label>
               <input
@@ -121,33 +136,21 @@ export default function BirthForm({
               />
               {fieldErrors.year && <p id={getErrorId("year")} className="form-field__error">{fieldErrors.year}</p>}
             </div>
-            <div className="form-field">
-              <label htmlFor="birthHour">Giờ {value.unknownBirthTime ? "" : "*"}</label>
-              <input
+            <div className="form-field form-field--hour">
+              <label htmlFor="birthHour">Giờ sinh {value.unknownBirthTime ? "" : "*"}</label>
+              <select
                 id="birthHour"
-                type="text"
-                inputMode="numeric"
-                autoComplete="off"
-                placeholder="HH"
                 value={value.birthHour}
-                onChange={(e) => update({ birthHour: clampNumberInput(e.target.value, 2, 23) })}
+                onChange={(e) => update({ birthHour: e.target.value, birthMinute: "0" })}
                 disabled={value.unknownBirthTime}
                 aria-invalid={fieldErrors.birthHour ? "true" : "false"}
-              />
+              >
+                <option value="">-- Chọn giờ --</option>
+                {BIRTH_HOURS.map((h) => (
+                  <option key={h.value} value={h.value}>{h.label}</option>
+                ))}
+              </select>
               {fieldErrors.birthHour && <p id={getErrorId("birthHour")} className="form-field__error">{fieldErrors.birthHour}</p>}
-            </div>
-            <div className="form-field">
-              <label htmlFor="birthMinute">Phút</label>
-              <input
-                id="birthMinute"
-                type="text"
-                inputMode="numeric"
-                autoComplete="off"
-                placeholder="mm"
-                value={value.birthMinute}
-                onChange={(e) => update({ birthMinute: clampNumberInput(e.target.value, 2, 59) })}
-                disabled={value.unknownBirthTime}
-              />
             </div>
           </div>
 

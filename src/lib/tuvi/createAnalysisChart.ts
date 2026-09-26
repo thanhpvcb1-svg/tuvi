@@ -635,10 +635,18 @@ function getElementalAssessment(natalElement?: string, cucElement?: string) {
 function getYinYangAssessment(raw: any, gender: NormalizedBirthInput["gender"]) {
   const yearlyStem = normalizeStem(raw?.rawDates?.chineseDate?.yearly?.[0]);
   const stemPolarity = YIN_YANG_BY_STEM[normalizeLookupKey(yearlyStem)];
-  const label = gender === "male" ? "Dương Nam" : "Âm Nữ";
   if (!stemPolarity) {
-    return { label, status: undefined };
+    // Fallback khi không xác định được Thiên Can
+    const fallbackLabel = gender === "male" ? "Nam" : "Nữ";
+    return { label: fallbackLabel, status: undefined };
   }
+  // Label dựa trên Âm Dương của năm sinh + giới tính
+  // Nam sinh năm Dương = Dương Nam, Nam sinh năm Âm = Âm Nam
+  // Nữ sinh năm Dương = Dương Nữ, Nữ sinh năm Âm = Âm Nữ
+  const genderLabel = gender === "male" ? "Nam" : "Nữ";
+  const label = `${stemPolarity} ${genderLabel}`;
+  // Thuận lý: Nam-Dương hoặc Nữ-Âm (cùng tính chất)
+  // Nghịch lý: Nam-Âm hoặc Nữ-Dương (khác tính chất)
   const favorable = (gender === "male" && stemPolarity === "Dương") || (gender === "female" && stemPolarity === "Âm");
   return { label, status: favorable ? "Âm Dương thuận lý" : "Âm Dương nghịch lý" };
 }
