@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import { createRequire } from "node:module";
+import { buildSync } from "esbuild";
 
 const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
@@ -15,6 +17,63 @@ const escapeHtml = (value) =>
 
 // Cùng nguồn dữ liệu với src/utils/appUtils.ts -> ChartPage, để HTML tĩnh không lệch với bản React.
 const lapLaSoContent = JSON.parse(fs.readFileSync(path.resolve("src/content/lapLaSoContent.json"), "utf8"));
+
+const loadKnowledgeArticles = () => {
+  const result = buildSync({
+    entryPoints: [path.resolve("src/content/bacPhaiLibrary.ts")],
+    bundle: true,
+    platform: "node",
+    format: "cjs",
+    write: false,
+    logLevel: "silent",
+  });
+  const module = { exports: {} };
+  new Function("module", "exports", "require", result.outputFiles[0].text)(module, module.exports, createRequire(import.meta.url));
+  return module.exports.knowledgeArticles ?? [];
+};
+const knowledgeArticlesBySlug = new Map(loadKnowledgeArticles().map((article) => [article.slug, article]));
+
+const paragraphs = (text) =>
+  String(text || "")
+    .split(/\n{2,}/)
+    .map((p) => p.trim())
+    .filter(Boolean)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join("\n          ");
+
+const renderArticleBody = (post) => {
+  const article = knowledgeArticlesBySlug.get(post.route.replace("/bai-viet/", ""));
+  const heading = post.title.replace(" | Bài viết", "");
+  if (!article) {
+    return `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>${escapeHtml(heading)}</h1>
+          <p>${escapeHtml(post.description)}</p>
+        </section>
+      </main>
+    `;
+  }
+  const sources = (article.sourceRefs ?? [])
+    .map((ref) => (ref.href ? `<li><a href="${escapeHtml(ref.href)}" rel="nofollow noopener">${escapeHtml(ref.title)}</a></li>` : `<li>${escapeHtml(ref.title)}</li>`))
+    .join("\n            ");
+  return `
+      <main class="prerender-shell">
+        <article class="prerender-hero">
+          <h1>${escapeHtml(article.title)}</h1>
+          <p>${escapeHtml(article.summary)}</p>
+          ${(article.content ?? []).map((block) => `<h2>${escapeHtml(block.heading)}</h2>\n          ${paragraphs(block.body)}`).join("\n          ")}
+          <h2>${escapeHtml(article.applicationBox?.title ?? "Ứng dụng vào lá số")}</h2>
+          ${paragraphs(article.applicationBox?.body)}
+          ${sources ? `<h2>Nguồn tham khảo</h2>\n          <ul>\n            ${sources}\n          </ul>` : ""}
+          <div class="prerender-actions">
+            <a href="${escapeHtml(article.cta?.href ?? "/lap-la-so")}/">${escapeHtml(article.cta?.label ?? "Lập lá số miễn phí")}</a>
+            <a href="/bai-viet/" class="secondary">Các bài viết khác</a>
+          </div>
+        </article>
+      </main>
+    `;
+};
 
 const articlePosts = [
   {
@@ -46,6 +105,21 @@ const articlePosts = [
     route: "/bai-viet/dai-van-va-luu-nien-trong-bac-phai",
     title: "Đại vận và lưu niên trong Bắc Phái | Bài viết",
     description: "Cách đọc đại vận và lưu niên cùng Tứ Hóa để thấy năm nào thật sự chạm mạch trọng yếu của lá số.",
+  },
+  {
+    route: "/bai-viet/12-cung-trong-la-so-tu-vi",
+    title: "12 cung trong lá số Tử Vi | Bài viết",
+    description: "Thứ tự an 12 cung, ý nghĩa khái quát từng cung, sáu trục đối cung và tam phương tứ chính - khung để đọc mọi lá số.",
+  },
+  {
+    route: "/bai-viet/cung-menh-la-gi",
+    title: "Cung Mệnh là gì? | Bài viết",
+    description: "Cách an cung Mệnh, cung Mệnh nói gì, bộ Mệnh - Tài - Quan - Thiên Di và góc nhìn Bắc Phái về can cung Mệnh.",
+  },
+  {
+    route: "/bai-viet/cung-than-la-gi",
+    title: "Cung Thân và Thân cư là gì? | Bài viết",
+    description: "Cung Thân luôn đồng cung với một trong sáu cung theo giờ sinh; vị trí Thân cư cho biết trọng tâm đời sống khi trưởng thành.",
   },
 ];
 
@@ -92,66 +166,77 @@ const lapLaSoSchemas = [
   },
 ];
 
+const c = lapLaSoContent;
+const li = (items) => items.join("\n            ");
 const lapLaSoBody = `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Lập Lá Số Tử Vi Online Miễn Phí</h1>
-          <p>Nhập ngày giờ sinh để an lá số và khám phá Mệnh, Thân, 12 cung, Tứ Hóa và các yếu tố Tử Vi Bắc phái.</p>
+          <h1>${escapeHtml(c.hero.title)}</h1>
+          <p>${escapeHtml(c.hero.subtitle)}</p>
           <div class="prerender-actions">
-            <a href="#lap-la-so-form">Lập Lá Số Ngay</a>
-            <a href="#bac-phai-ai" class="secondary">Tìm hiểu Tử Vi Bắc phái</a>
+            <a href="#lap-la-so-form">Lập lá số ngay</a>
+            <a href="/la-so-mau/" class="secondary">Xem lá số mẫu</a>
           </div>
         </section>
         <section id="lap-la-so-form" class="prerender-section">
-          <p>Đang tải biểu mẫu lập lá số: họ tên, giới tính, loại lịch (dương/âm), ngày - tháng - năm sinh, giờ sinh theo 12 khung giờ và năm xem vận.</p>
+          <h2>${escapeHtml(c.formSection.heading)}</h2>
+          <p>${escapeHtml(c.formSection.intro)}</p>
+          <p>${escapeHtml(c.formSection.unknownTimeNote)}</p>
         </section>
         <section class="prerender-section">
-          <h2>Lá Số Tử Vi Là Gì?</h2>
-          <p>Lá số tử vi là bản đồ tổng hợp theo ngày giờ sinh, trình bày trên 12 cung để thể hiện tính cách, xu hướng phát triển và các giai đoạn vận hành nổi bật trong cuộc đời một người. Đây là công cụ chiêm nghiệm truyền thống, không phải một dự đoán khẳng định tuyệt đối.</p>
-        </section>
-        <section class="prerender-section">
-          <h2>Lập Lá Số Tử Vi Cần Những Thông Tin Gì?</h2>
+          <h2>${escapeHtml(c.overview.heading)}</h2>
+          <p>${escapeHtml(c.overview.intro)}</p>
           <ul>
-            <li>Ngày, tháng, năm sinh (dương lịch hoặc âm lịch)</li>
-            <li>Giờ sinh theo 12 khung giờ (Tý - Hợi) - càng chính xác, vị trí cung và sao càng sát</li>
-            <li>Giới tính</li>
-            <li>Năm muốn xem vận hạn (mặc định là năm hiện tại)</li>
+            ${li(c.laSoOverviewCards.map((card) => `<li><strong>${escapeHtml(card.title)}</strong>: ${escapeHtml(card.description)}</li>`))}
           </ul>
-          <p>Nếu không nhớ chính xác giờ sinh, bạn vẫn có thể lập lá số bằng cách tick "Không rõ giờ sinh" - kết quả khi đó mang tính tham khảo.</p>
-        </section>
-        <section class="prerender-section">
-          <h2>Lá Số Của Bạn Có Gì?</h2>
-          <p>Sau khi nhập dữ liệu sinh, hệ thống an lá số và hiển thị đầy đủ cung Mệnh - Thân, 12 cung, chính - phụ tinh, Tứ Hóa, đại vận và tiểu vận trên cùng một biểu đồ trực quan.</p>
-          <ul>
-            ${lapLaSoContent.laSoOverviewCards.map((card) => `<li><strong>${escapeHtml(card.title)}</strong>: ${escapeHtml(card.description)}</li>`).join("\n            ")}
-          </ul>
+          <h3>${escapeHtml(c.overview.readingHeading)}</h3>
+          <ol>
+            ${li(c.overview.readingSteps.map((step) => `<li><strong>${escapeHtml(step.title)}</strong>: ${escapeHtml(step.description)}</li>`))}
+          </ol>
         </section>
         <section id="bac-phai-ai" class="prerender-section">
-          <h2>Luận Giải Tử Vi Theo Phương Pháp Bắc Phái</h2>
-          <p>Hệ thống kết hợp dữ liệu lá số với kho tri thức Tử Vi chuyên sâu để phân tích Mệnh - Thân, cung vị, tam hợp, xung chiếu, Tứ Hóa, Phi Hóa và các yếu tố thời vận khi có đủ dữ liệu.</p>
-          <p>Tử Vi Bắc phái đọc lá số theo mạch vận động thay vì xét từng sao độc lập. Tứ Hóa (Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ) phát sinh từ Thiên Can năm sinh; Phi Hóa là khi lấy Thiên Can của một cung bất kỳ để tạo Tứ Hóa mới bay sang cung khác. <a href="/bai-viet/tu-vi-bac-phai-la-gi/">Tìm hiểu chi tiết về Tử Vi Bắc phái</a>.</p>
+          <h2>${escapeHtml(c.bacPhai.heading)}</h2>
+          <p>${escapeHtml(c.bacPhai.intro)}</p>
+          <ol>
+            ${li(c.bacPhai.flow.map((step) => `<li>${escapeHtml(step)}</li>`))}
+          </ol>
+          <p>${escapeHtml(c.bacPhai.aiNote)}</p>
+          <p>${escapeHtml(c.bacPhai.matching)} <a href="/bai-viet/tu-vi-bac-phai-la-gi/">Tìm hiểu thêm về Tử Vi Bắc phái</a>.</p>
         </section>
-        <section class="prerender-section">
-          <h2>Khám Phá 12 Cung Trong Lá Số Tử Vi</h2>
+        <section id="12-cung" class="prerender-section">
+          <h2>${escapeHtml(c.twelvePalacesSection.heading)}</h2>
+          <p>${escapeHtml(c.twelvePalacesSection.intro)} <a href="${escapeHtml(c.twelvePalacesSection.link.path)}/">${escapeHtml(c.twelvePalacesSection.link.title)}</a></p>
           <ul>
-            ${lapLaSoContent.twelvePalaces.map((palace) => `<li><strong>Cung ${escapeHtml(palace.name)}</strong>: ${escapeHtml(palace.description)}</li>`).join("\n            ")}
+            ${li(c.twelvePalaces.map((palace) => `<li><strong>Cung ${escapeHtml(palace.name)}</strong>: ${escapeHtml(palace.description)}</li>`))}
+          </ul>
+        </section>
+        <section id="tu-hoa-phi-hoa" class="prerender-section">
+          <h2>${escapeHtml(c.tuHoa.heading)}</h2>
+          <p>${escapeHtml(c.tuHoa.intro)}</p>
+          <ul>
+            ${li(c.tuHoa.items.map((item) => `<li><strong>${escapeHtml(item.title)}</strong>: ${escapeHtml(item.description)}</li>`))}
+          </ul>
+          <p>${escapeHtml(c.tuHoa.phiHoa)}</p>
+          <ul>
+            ${li(c.tuHoa.links.map((link) => `<li><a href="${escapeHtml(link.path)}/">${escapeHtml(link.title)}</a></li>`))}
           </ul>
         </section>
         <section class="prerender-section">
-          <h2>Khám Phá Kiến Thức Tử Vi</h2>
+          <h2>${escapeHtml(c.knowledgeSection.heading)}</h2>
+          <p>${escapeHtml(c.knowledgeSection.intro)}</p>
           <ul>
-            ${lapLaSoContent.knowledgeHubItems.filter((item) => item.path).map((item) => `<li><a href="${escapeHtml(item.path)}/">${escapeHtml(item.title)}</a></li>`).join("\n            ")}
+            ${li(c.knowledgeHubItems.filter((item) => item.path).map((item) => `<li><a href="${escapeHtml(item.path)}/">${escapeHtml(item.title)}</a></li>`))}
           </ul>
         </section>
         <section class="prerender-section">
-          <h2>Câu Hỏi Thường Gặp</h2>
-          ${lapLaSoContent.lapLaSoFaqs.map((faq) => `<h3>${escapeHtml(faq.question)}</h3>\n          <p>${escapeHtml(faq.answer)}</p>`).join("\n          ")}
+          <h2>${escapeHtml(c.faqSection.heading)}</h2>
+          ${c.lapLaSoFaqs.map((faq) => `<h3>${escapeHtml(faq.question)}</h3>\n          <p>${escapeHtml(faq.answer)}</p>`).join("\n          ")}
         </section>
         <section class="prerender-section">
-          <h2>Sẵn sàng khám phá lá số của bạn?</h2>
-          <p>Chỉ mất chưa đến 1 phút để an Mệnh, Thân, 12 cung và Tứ Hóa theo ngày giờ sinh của bạn.</p>
+          <h2>${escapeHtml(c.bottomCta.heading)}</h2>
+          <p>${escapeHtml(c.bottomCta.text)}</p>
           <div class="prerender-actions">
-            <a href="#lap-la-so-form">Lập Lá Số Ngay</a>
+            <a href="#lap-la-so-form">Lập lá số ngay</a>
           </div>
         </section>
       </main>
@@ -181,7 +266,7 @@ const routes = [
     route: "/lap-la-so",
     title: "Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh | Tử Vi Phong Lam",
     description:
-      "Lập lá số tử vi online theo ngày tháng năm giờ sinh. An Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận, hỗ trợ luận giải theo Tử Vi Bắc phái.",
+      "Lập lá số tử vi online miễn phí theo ngày tháng năm giờ sinh. An Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận. Khám phá luận giải Tử Vi theo phương pháp Bắc phái.",
     body: lapLaSoBody,
     extraSchemas: lapLaSoSchemas,
   },
@@ -201,15 +286,28 @@ const routes = [
   },
   {
     route: "/la-so-mau",
-    title: "Lá Số Tử Vi Mẫu - Xem Cách Luận Giải Lá Số",
+    title: "Demo Luận Giải Tử Vi Bắc Phái Trên Lá Số Mẫu | Tử Vi Phong Lam",
     description:
-      "Xem lá số tử vi mẫu để hiểu cách trình bày Mệnh, Thân, 12 cung, đại vận, tiểu vận và các phần luận giải.",
+      "Xem cách Tử Vi Phong Lam đọc một lá số mẫu theo Bắc phái: Mệnh – Thân, Mệnh Tài Quan, 12 cung, Tứ Hóa, đại vận và luận giải dựa trên tri thức đã khớp.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Lá số tử vi mẫu</h1>
-          <p>Xem trước cách Tử Vi Phong Lam trình bày Mệnh, Thân, 12 cung, đại vận, tiểu vận và các phần luận giải trước khi lập lá số của riêng bạn.</p>
+          <h1>Demo luận giải Tử Vi Bắc phái</h1>
+          <p>Một lá số mẫu được an bằng đúng công cụ lập lá số của Tử Vi Phong Lam, rồi đọc theo thứ tự Bắc phái: Mệnh – Thân, Mệnh – Tài – Quan, 12 cung, Tứ Hóa, đại vận và luận giải dựa trên tri thức khớp với chính lá số này.</p>
+          <p>Lá số minh họa (không phải người thật): Nam, sinh ngày 12/5/1990 (dương lịch), giờ Mùi.</p>
+          <div class="prerender-actions">
+            <a href="/lap-la-so/">Lập lá số của tôi</a>
+            <a href="#luan-giai-mau" class="secondary">Xem luận giải mẫu</a>
+          </div>
         </section>
+        <section class="prerender-section"><h2>Tổng quan</h2><p>Các thông số nền của lá số mẫu: Mệnh, Thân, Cục, Âm dương, Ngũ hành, năm xem.</p></section>
+        <section class="prerender-section"><h2>Mệnh – Thân</h2><p>Cung Mệnh, Thân cư, Cục, Mệnh chủ và Thân chủ. <a href="/bai-viet/cung-menh-la-gi/">Cung Mệnh là gì?</a> · <a href="/bai-viet/cung-than-la-gi/">Cung Thân và Thân cư là gì?</a></p></section>
+        <section class="prerender-section"><h2>Mệnh – Tài – Quan</h2><p>Tam phương tứ chính của cung Mệnh: Mệnh, Tài Bạch, Quan Lộc và cung xung chiếu Thiên Di.</p></section>
+        <section class="prerender-section"><h2>12 cung</h2><p>Lá số đầy đủ với chính tinh, phụ tinh, độ sáng, Tứ Hóa và Phi Hóa can cung. <a href="/bai-viet/12-cung-trong-la-so-tu-vi/">Cách đọc 12 cung</a></p></section>
+        <section class="prerender-section"><h2>Tứ Hóa sinh niên</h2><p>Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ phát sinh từ can năm sinh và gắn vào bốn sao cụ thể. <a href="/bai-viet/loc-quyen-khoa-ky-co-y-nghia-gi/">Lộc - Quyền - Khoa - Kỵ có ý nghĩa gì?</a></p></section>
+        <section class="prerender-section"><h2>Đại vận</h2><p>Bảng 12 đại vận 10 năm và đại vận của năm xem. <a href="/bai-viet/dai-van-va-luu-nien-trong-bac-phai/">Đại vận và lưu niên trong Bắc phái</a></p></section>
+        <section id="luan-giai-mau" class="prerender-section"><h2>Luận giải mẫu</h2><p>Mỗi cung hiển thị các đoạn tri thức khớp với chính lá số mẫu kèm lý do khớp; AI tổng hợp từ dữ liệu này, không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu.</p></section>
+        <section class="prerender-section"><h2>Lập lá số của tôi</h2><p>Nhập ngày giờ sinh để an Mệnh, Thân, 12 cung, Tứ Hóa và xem luận giải theo đúng lá số của bạn.</p><div class="prerender-actions"><a href="/lap-la-so/">Lập lá số của tôi</a></div></section>
       </main>
     `,
   },
@@ -310,18 +408,7 @@ const routes = [
     route: post.route,
     title: post.title,
     description: post.description,
-    body: `
-      <main class="prerender-shell">
-        <section class="prerender-hero">
-          <h1>${post.title.replace(" | Bài viết", "")}</h1>
-          <p>${post.description}</p>
-          <div class="prerender-actions">
-            <a href="/bai-viet/">Vào bài viết</a>
-            <a href="/lap-la-so/" class="secondary">Lập lá số miễn phí</a>
-          </div>
-        </section>
-      </main>
-    `,
+    body: renderArticleBody(post),
   })),
 ];
 

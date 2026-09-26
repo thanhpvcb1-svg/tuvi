@@ -292,12 +292,69 @@ export function checkTextScopeIndependently(chart: ChartView, cardPalace: string
   // Độ sáng: một chính tinh + chỉ "miếu/vượng/đắc" hoặc chỉ "hãm"
   const good = /nhập miếu|miếu địa|miếu vượng|vượng địa|đắc địa|(^|[^\p{L}])(miếu|vượng)([^\p{L}]|$)/iu.test(lead);
   const bad = /lạc hãm|hãm địa|(^|[^\p{L}])hãm([^\p{L}]|$)/iu.test(lead);
-  if (mentioned.length === 1 && good !== bad) {
+  // Câu không nêu tên sao -> áp cho chính tinh duy nhất được nêu trong điều kiện (không tính "hội hợp").
+  const conditionMain = /hội hợp/i.test(condition) ? [] : MAIN.filter((name) => lower(condition).includes(name));
+  const target = mentioned.length === 1 ? mentioned[0] : mentioned.length === 0 && conditionMain.length === 1 ? conditionMain[0] : null;
+  if (target && good !== bad) {
     const holders = palaces.flatMap((p) => [p, atOffset(chart, p, 6)!]);
-    const star = holders.flatMap(natal).find((s) => starNorm(s.name) === mentioned[0] && s.brightness);
+    const star = holders.flatMap(natal).find((s) => starNorm(s.name) === target && s.brightness);
     const code = String(star?.brightness ?? "").toUpperCase();
     const ok = good ? ["M", "V", "Đ"].includes(code) : code === "H";
-    if (!ok) return wrong(`nội dung nói ${mentioned[0]} ${good ? "miếu/vượng" : "hãm"} nhưng lá số là "${code || "?"}": "${lead.slice(0, 90)}"`);
+    if (!ok) return wrong(`nội dung nói ${target} ${good ? "miếu/vượng" : "hãm"} nhưng lá số là "${code || "?"}": "${lead.slice(0, 90)}"`);
   }
   return OK;
+}
+
+// ============ VẬN HẠN ============
+//
+// Cung đại vận / tiểu vận lấy từ getActivePalaceIndexes (hàm của thanh chọn năm trên lá số) -
+// độc lập với computePeriod() của bộ so khớp (đọc decadalRange / ages).
+
+export type ActivePeriod = { daiVan?: number; tieuVan?: number };
+
+const ROLE_ORDER = ["mệnh", "phụ mẫu", "phúc đức", "điền trạch", "quan lộc", "nô bộc", "thiên di", "tật ách", "tài bạch", "tử tức", "phu thê", "huynh đệ"];
+
+export function checkPeriodConditionIndependently(chart: ChartView, condition: string, active: ActivePeriod): CheckResult {
+  const c = String(condition || "").normalize("NFC").trim();
+  const dv = chart.palaces.find((p) => p.index === active.daiVan);
+  const tv = chart.palaces.find((p) => p.index === active.tieuVan);
+  const roleAt = (role: string, extra = 0) => (dv ? atOffset(chart, dv, ROLE_ORDER.indexOf(palaceNorm(role)) + extra) : undefined);
+  let m: RegExpMatchArray | null;
+
+  if ((m = c.match(/^(Đại vận|Tiểu vận) ở cung (.+?) \(tại (\S+)\) có sao (.+?)( tọa thủ)?$/))) {
+    const holder = m[1] === "Đại vận" ? dv : tv;
+    const p = findPalace(chart, m[2]);
+    if (!holder || !p || holder.name !== p.name) return wrong(`${m[1].toLowerCase()} năm xem ở ${holder?.name}, không phải ${m[2]}`);
+    if (branchNorm(p.earthlyBranch) !== branchNorm(m[3])) return wrong(`cung ${p.name} ở ${p.earthlyBranch}`);
+    return checkToken(chart, p, m[4].replace(/^(các )?sao /i, ""), [p]);
+  }
+  if ((m = c.match(/^ĐV\. ?(.+?) \(Cung (.+?) bản mệnh\) Tự Hóa (lộc|quyền|khoa|kỵ|kị)$/i))) {
+    const p = findPalace(chart, m[2]);
+    const expected = roleAt(m[1]);
+    if (!p || !expected || expected.name !== p.name) return wrong(`ĐV. ${m[1]} là ${expected?.name}, không phải ${m[2]}`);
+    return flows(p).some((f) => f.relation === "tu_hoa" && f.type === HOA[lower(m![3])]) ? OK : wrong(`${p.name} không tự Hóa ${m[3]}`);
+  }
+  if ((m = c.match(/^Cung (.+?) phi hóa (lộc|quyền|khoa|kỵ|kị) (nhập|chiếu) ĐV\. ?(.+)$/i))) {
+    const source = findPalace(chart, m[1]);
+    const target = roleAt(m[4], lower(m[3]) === "chiếu" ? 6 : 0);
+    if (!source || !target) return wrong("không xác định được cung");
+    const hit = flows(source).some((f) => f.relation !== "tu_hoa" && f.type === HOA[lower(m![2])] && lower(f.targetPalaceName ?? "") === lower(target.name));
+    return hit ? OK : wrong(`${source.name} không phi Hóa ${m[2]} ${m[3]} ĐV. ${m[4]} (${target.name})`);
+  }
+  if ((m = c.match(/^Đại vận ở cung (.+?) phi Hóa (lộc|quyền|khoa|kỵ|kị) nhập cung (.+?)(?: và Hóa (lộc|quyền|khoa|kỵ|kị) nhập cung (.+?))?(?: gặp (Tự Hóa|Hóa) (lộc|quyền|khoa|kỵ|kị)( \[năm sinh\])?)?$/i))) {
+    const p = findPalace(chart, m[1]);
+    if (!p || !dv || p.name !== dv.name) return wrong(`đại vận năm xem ở ${dv?.name}, không phải ${m[1]}`);
+    const hasFlow = (hoa: string, target: string) => flows(p).some((f) => f.relation !== "tu_hoa" && f.type === HOA[lower(hoa)] && palaceNorm(f.targetPalaceName ?? "") === palaceNorm(target));
+    if (!hasFlow(m[2], m[3])) return wrong(`${p.name} không phi Hóa ${m[2]} nhập ${m[3]}`);
+    if (m[5] && !hasFlow(m[4], m[5])) return wrong(`${p.name} không phi Hóa ${m[4]} nhập ${m[5]}`);
+    if (m[6]) {
+      const meet = findPalace(chart, m[5] ?? m[3])!;
+      const ok = /^tự/i.test(m[6])
+        ? flows(meet).some((f) => f.relation === "tu_hoa" && f.type === HOA[lower(m![7])])
+        : mutagensIn(meet).has(HOA[lower(m[7])]);
+      if (!ok) return wrong(`${meet.name} không gặp ${m[6]} ${m[7]}`);
+    }
+    return OK;
+  }
+  return UNCHECKED;
 }

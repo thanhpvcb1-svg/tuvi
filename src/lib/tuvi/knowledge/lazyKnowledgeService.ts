@@ -8,7 +8,9 @@ import type { DisplayPalace, DisplayStar } from "../config/types";
 import {
   buildChartFacts,
   checkTextRequirements,
+  computePeriod,
   conditionPalaceKeys,
+  isPeriodCondition,
   evaluateCondition,
   isAnchoredCondition,
   palaceKey,
@@ -99,6 +101,9 @@ export type PalaceQueryContext = {
   chart?: ChartView;
   /** Chỉ dùng cho kiểm thử: bỏ lọc theo nhóm, trả về mọi mục khớp (tối đa limit). */
   limit?: number;
+  /** Năm xem + năm sinh -> bật tri thức vận hạn (đại vận / tiểu vận của năm xem). */
+  yearToView?: number;
+  birthYear?: number;
   palace: DisplayPalace;
   starsInPalace: string[];
   branch: string;
@@ -226,7 +231,9 @@ export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatc
   if (!palaceId) return [];
 
   const index = buildKnowledgeIndex(cache);
-  const facts = getChartFacts(context.chart);
+  const baseFacts = getChartFacts(context.chart);
+  const period = computePeriod(context.chart, context.yearToView, context.birthYear);
+  const facts: ChartFacts = period ? { ...baseFacts, period } : baseFacts;
   const candidates = [...(index[palaceId] ?? [])];
   if (context.palace.isBodyPalace) candidates.push(...(index.than ?? []));
   // Tổng quan lá số (bảng 12 cung, nạp âm...) không phải tri thức của riêng cung nào -> không đưa vào thẻ cung.
@@ -251,7 +258,8 @@ export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatc
       const matchScore = conditionScore * 10 + entry.accuracy;
       if (!best || matchScore > best.matchScore) {
         best = {
-          interpretation: { id: entry.id, type: "condition", condition: rule.condition, text: entry.text, source },
+          // type "period": tri thức vận hạn của năm xem - UI hiển thị thành nhóm riêng.
+          interpretation: { id: entry.id, type: isPeriodCondition(rule) ? "period" : "condition", condition: rule.condition, text: entry.text, source },
           section,
           matchedConditions,
           matchScore,
@@ -276,7 +284,10 @@ export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatc
   }
 
   if (context.limit) return deduped.slice(0, context.limit);
-  return selectMostSpecific(deduped, conditionReasons);
+  // Lá số gốc và vận hạn năm xem được chọn lọc riêng để không chèn ép nhau.
+  const natal = deduped.filter((item) => item.interpretation.type !== "period");
+  const periodItems = deduped.filter((item) => item.interpretation.type === "period");
+  return [...selectMostSpecific(natal, conditionReasons), ...selectMostSpecific(periodItems, conditionReasons)];
 }
 
 /**

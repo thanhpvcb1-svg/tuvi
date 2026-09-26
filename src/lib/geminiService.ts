@@ -17,13 +17,30 @@ export type GeminiLuanGiaiRequest = {
     goodStars: string[];
     badStars: string[];
     isBodyPalace: boolean;
+    tamPhuong?: string[];
+    xungChieu?: string;
+    giapCung?: string[];
+    daiVan?: string;
+    vanNamXem?: string[];
+    phiHoaFlows?: string[];
   };
   knowledgeMatches: KnowledgeMatch[];
   userContext?: {
     gender?: string;
     yearToView?: number;
+    birthYear?: number;
   };
 };
+
+/**
+ * Tri thức gửi cho AI kèm nguồn và điều kiện đã khớp để AI trích [NGUỒN] trung thực,
+ * không tự gán sách/tác giả.
+ */
+export function formatKnowledgeForAi(match: KnowledgeMatch): string {
+  const { book, author } = match.interpretation.source ?? { book: "", author: "" };
+  const source = [book, author && !/^unknown$/i.test(author) ? author : ""].filter(Boolean).join(" – ") || "Không rõ nguồn";
+  return `[Nguồn: ${source}] [Khớp: ${match.matchReasons.join("; ")}] ${match.interpretation.text}`;
+}
 
 export type GeminiLuanGiaiResponse = {
   success: boolean;
@@ -39,6 +56,15 @@ export type PalaceSummary = {
   goodStars?: string[];
   badStars?: string[];
   isBodyPalace: boolean;
+  /** Tên các cung tam hợp (không gồm bản cung). */
+  tamPhuong?: string[];
+  xungChieu?: string;
+  /** Hai cung kẹp hai bên. */
+  giapCung?: string[];
+  /** Khoảng tuổi đại vận của cung, vd "45-54 tuổi". */
+  daiVan?: string;
+  /** "Đại vận năm xem" / "Tiểu vận năm xem" nếu cung đang được kích hoạt ở năm xem. */
+  vanNamXem?: string[];
   knowledgeTexts: string[];
   phiHoaFlows: string[];
 };
@@ -48,6 +74,7 @@ export type GeminiTongHopRequest = {
   profile: {
     gender?: string;
     yearToView?: number;
+    birthYear?: number;
     menhChu?: string;
     thanChu?: string;
     cuc?: string;
@@ -134,13 +161,19 @@ export async function callGeminiLuanGiai(
       goodStars: request.palaceInfo.goodStars,
       badStars: request.palaceInfo.badStars,
       isBodyPalace: request.palaceInfo.isBodyPalace,
-      // Server chỉ dùng 10 mục đầu (đã xếp theo độ cụ thể) - không gửi thừa.
-      knowledgeTexts: request.knowledgeMatches.slice(0, 10).map((m) => m.interpretation.text),
-      phiHoaFlows: [],
+      tamPhuong: request.palaceInfo.tamPhuong,
+      xungChieu: request.palaceInfo.xungChieu,
+      giapCung: request.palaceInfo.giapCung,
+      daiVan: request.palaceInfo.daiVan,
+      vanNamXem: request.palaceInfo.vanNamXem,
+      // Server chỉ dùng 10 mục đầu (đã xếp theo độ khớp) - không gửi thừa.
+      knowledgeTexts: request.knowledgeMatches.slice(0, 10).map(formatKnowledgeForAi),
+      phiHoaFlows: request.palaceInfo.phiHoaFlows ?? [],
     }],
     profile: {
       gender: request.userContext?.gender,
       yearToView: request.userContext?.yearToView,
+      birthYear: request.userContext?.birthYear,
     },
   };
 

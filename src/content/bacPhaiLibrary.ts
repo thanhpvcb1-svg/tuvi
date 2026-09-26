@@ -309,11 +309,136 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       href: "/lap-la-so",
     },
   },
+  {
+    id: "muoi-hai-cung",
+    title: "12 cung trong lá số Tử Vi",
+    slug: "12-cung-trong-la-so-tu-vi",
+    category: "Nhập môn",
+    level: "Sơ nhập",
+    readingTime: "8 phút",
+    summary: "Mười hai cung là khung của mệnh bàn: mỗi cung ứng với một lĩnh vực đời sống, và các cung luôn được đọc theo cặp đối cung cùng tam phương tứ chính chứ không tách rời.",
+    curiosityHook: "Vì sao đọc cung Phu Thê lại phải nhìn sang Quan Lộc, và đọc Tài Bạch lại phải nhìn Phúc Đức?",
+    tags: ["12 cung", "Nhập môn", "Tam phương tứ chính", "Đối cung"],
+    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiVi, sourceRefs.wikiZh],
+    content: [
+      {
+        heading: "Mười hai cung được an như thế nào",
+        body:
+          "Mệnh bàn Tử Vi có mười hai ô, ứng với mười hai địa chi từ Tý đến Hợi. Sau khi xác định cung Mệnh theo tháng và giờ sinh âm lịch, mười một cung còn lại được an nối tiếp theo một thứ tự cố định: Mệnh, Phụ Mẫu, Phúc Đức, Điền Trạch, Quan Lộc, Nô Bộc, Thiên Di, Tật Ách, Tài Bạch, Tử Tức, Phu Thê, Huynh Đệ. Nói cách khác, Phụ Mẫu luôn đứng liền sau Mệnh và Huynh Đệ luôn đứng liền trước Mệnh.\n\nVì thứ tự này không đổi, chỉ cần biết cung Mệnh nằm ở chi nào là suy ra được vị trí của cả mười hai cung. Mỗi cung còn mang một thiên can (can cung) - đây là chất liệu để Bắc Phái đọc Phi Hóa giữa các cung.",
+      },
+      {
+        heading: "Ý nghĩa khái quát của từng cung",
+        body:
+          "Mệnh: khí chất, cách hành xử và trục chính của cả đời người. Phụ Mẫu: cha mẹ, người trên, giấy tờ. Phúc Đức: đời sống tinh thần, phúc phần, sở thích. Điền Trạch: nhà cửa, tài sản cố định, môi trường gia đình. Quan Lộc: công việc, sự nghiệp, cách làm việc. Nô Bộc (Giao Hữu): bạn bè, đồng nghiệp, cộng sự. Thiên Di: ra ngoài, xã hội, cơ hội khi rời chỗ quen. Tật Ách: thân thể, sức khỏe, áp lực. Tài Bạch: tiền bạc, cách kiếm và dùng tiền. Tử Tức: con cái, sự sáng tạo, thành quả gây dựng. Phu Thê: hôn nhân, người phối ngẫu. Huynh Đệ: anh chị em, người ngang vai gần gũi.\n\nĐây chỉ là nghĩa khung. Nội dung thật của mỗi cung do sao, độ sáng, Tứ Hóa và các cung liên quan quyết định.",
+      },
+      {
+        heading: "Đối cung và sáu trục của mệnh bàn",
+        body:
+          "Mỗi cung có một cung đối diện cách sáu vị trí, hai cung này chiếu thẳng vào nhau (xung chiếu). Mười hai cung vì thế tạo thành sáu trục: Mệnh - Thiên Di, Huynh Đệ - Nô Bộc, Phu Thê - Quan Lộc, Tử Tức - Điền Trạch, Tài Bạch - Phúc Đức, Tật Ách - Phụ Mẫu.\n\nKhi một cung không có chính tinh (vô chính diệu), người đọc thường mượn chính tinh của cung đối diện để luận, nhưng sức ảnh hưởng được xem là kém hơn so với tọa thủ trực tiếp.",
+      },
+      {
+        heading: "Tam phương tứ chính",
+        body:
+          "Ngoài cung đối diện, mỗi cung còn hợp với hai cung tam hợp, cách bốn vị trí về hai phía. Bản cung, hai cung tam hợp và cung xung chiếu gọi chung là tam phương tứ chính. Với cung Mệnh, tam phương tứ chính gồm Mệnh, Tài Bạch, Quan Lộc và Thiên Di - đây là lý do Mệnh, Tài, Quan luôn được đọc cùng nhau.\n\nNgoài ra còn xét hai cung kẹp hai bên (giáp cung): cát tinh hay sát tinh ở hai cung giáp cũng tác động tới bản cung.",
+      },
+    ],
+    applicationBox: {
+      title: "Ứng dụng vào lá số",
+      body:
+        "Khi xem một cung, đừng dừng ở sao trong cung đó. Hãy xem lần lượt: bản cung, cung xung chiếu, hai cung tam hợp và hai cung giáp. Trên lá số của Tử Vi Phong Lam, phần luận giải từng cung cũng đối chiếu tri thức theo đúng thứ tự này.",
+    },
+    cta: {
+      label: "Lập lá số để xem 12 cung của bạn",
+      href: "/lap-la-so",
+    },
+  },
+  {
+    id: "cung-menh",
+    title: "Cung Mệnh là gì?",
+    slug: "cung-menh-la-gi",
+    category: "12 cung",
+    level: "Sơ nhập",
+    readingTime: "6 phút",
+    summary: "Cung Mệnh là trục chính của lá số: nơi thể hiện khí chất, cách hành xử và là điểm xuất phát để đọc mọi cung còn lại.",
+    curiosityHook: "Hai người có cùng một chính tinh ở cung Mệnh, vì sao đời sống lại khác nhau đến thế?",
+    tags: ["Cung Mệnh", "12 cung", "Mệnh Tài Quan", "Can cung"],
+    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiVi, sourceRefs.wikiZh],
+    content: [
+      {
+        heading: "Cung Mệnh được an như thế nào",
+        body:
+          "Cung Mệnh được xác định từ tháng sinh và giờ sinh âm lịch: bắt đầu từ cung Dần, đếm thuận theo tháng sinh, rồi từ đó đếm nghịch theo giờ sinh. Vì phụ thuộc trực tiếp vào giờ sinh, chỉ cần lệch một canh giờ là cung Mệnh đã có thể dời sang ô bên cạnh - đó là lý do giờ sinh chính xác quan trọng như vậy.\n\nTừ vị trí cung Mệnh và thiên can năm sinh còn suy ra được Cục (Thủy Nhị Cục, Mộc Tam Cục, Kim Tứ Cục, Thổ Ngũ Cục, Hỏa Lục Cục), từ Cục mới an được sao Tử Vi và cả chòm chính tinh.",
+      },
+      {
+        heading: "Cung Mệnh nói gì",
+        body:
+          "Cung Mệnh phản ánh khí chất, thiên hướng tính cách và cách một người đối diện với các việc trong đời. Nó cũng là điểm tựa để đọc mọi cung khác: sự nghiệp, tiền bạc hay hôn nhân đều được đặt trong tương quan với Mệnh.\n\nTuy vậy, không nên kết luận từ một sao ở cung Mệnh. Cùng một chính tinh nhưng khác độ sáng (miếu, vượng, đắc, bình, hãm), khác cung tam hợp, khác Tứ Hóa thì ý nghĩa đã khác đi rất nhiều.",
+      },
+      {
+        heading: "Mệnh - Tài - Quan - Thiên Di",
+        body:
+          "Tam phương tứ chính của cung Mệnh gồm Mệnh, Tài Bạch, Quan Lộc và Thiên Di. Bộ bốn cung này cho biết khung lớn của đời người: bản thân, cách làm ra tiền, con đường sự nghiệp và cách hòa vào xã hội. Người đọc lá số thường đánh giá cung Mệnh mạnh hay yếu dựa trên cả bộ bốn cung này chứ không chỉ riêng bản cung.",
+      },
+      {
+        heading: "Góc nhìn Bắc Phái: can cung Mệnh",
+        body:
+          "Trong Bắc Phái, thiên can của cung Mệnh được dùng để hóa ra Lộc, Quyền, Khoa, Kỵ bay vào các cung khác (phi hóa). Mệnh phi Hóa Lộc vào đâu thường là nơi mệnh chủ đặt tâm sức và dễ có thu hoạch; Mệnh phi Hóa Kỵ vào đâu là nơi mệnh chủ dễ vướng bận, chấp niệm. Đây là cách đọc động bổ sung cho cách đọc sao tĩnh.",
+      },
+    ],
+    applicationBox: {
+      title: "Ứng dụng vào lá số",
+      body:
+        "Sau khi lập lá số, hãy xem cung Mệnh nằm ở chi nào, có chính tinh gì, độ sáng ra sao, rồi đọc tiếp Tài Bạch, Quan Lộc và Thiên Di. Bật hiển thị Phi Hóa can cung để xem Mệnh đang phi Lộc và Kỵ vào cung nào.",
+    },
+    cta: {
+      label: "Lập lá số để xem cung Mệnh của bạn",
+      href: "/lap-la-so",
+    },
+  },
+  {
+    id: "cung-than",
+    title: "Cung Thân và Thân cư là gì?",
+    slug: "cung-than-la-gi",
+    category: "12 cung",
+    level: "Sơ nhập",
+    readingTime: "5 phút",
+    summary: "Cung Thân không phải một cung riêng mà luôn đồng cung với một trong sáu cung: Mệnh, Phúc Đức, Quan Lộc, Thiên Di, Tài Bạch hoặc Phu Thê. Vị trí Thân cư cho biết trọng tâm đời sống về sau.",
+    curiosityHook: "Nếu Mệnh là nền tảng bẩm sinh, thì Thân cho biết người ta dồn sức vào đâu khi trưởng thành?",
+    tags: ["Cung Thân", "Thân cư", "12 cung", "Giờ sinh"],
+    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiVi, sourceRefs.wikiZh],
+    content: [
+      {
+        heading: "Cung Thân được an như thế nào",
+        body:
+          "Cung Thân cũng được xác định từ tháng và giờ sinh âm lịch: bắt đầu từ cung Dần, đếm thuận theo tháng sinh rồi đếm thuận tiếp theo giờ sinh. Vì cách an này, cung Thân chỉ có thể rơi vào sáu vị trí, và vị trí đó phụ thuộc vào giờ sinh.",
+      },
+      {
+        heading: "Sáu vị trí Thân cư theo giờ sinh",
+        body:
+          "Sinh giờ Tý hoặc Ngọ: Thân cư Mệnh (Mệnh Thân đồng cung). Sinh giờ Sửu hoặc Mùi: Thân cư Phúc Đức. Sinh giờ Dần hoặc Thân: Thân cư Quan Lộc. Sinh giờ Mão hoặc Dậu: Thân cư Thiên Di. Sinh giờ Thìn hoặc Tuất: Thân cư Tài Bạch. Sinh giờ Tỵ hoặc Hợi: Thân cư Phu Thê.\n\nTrên lá số, cung có Thân cư được đánh dấu riêng để bạn nhận ra ngay.",
+      },
+      {
+        heading: "Mệnh và Thân khác nhau thế nào",
+        body:
+          "Cách đọc phổ biến coi Mệnh là phần bẩm sinh, nền tảng; Thân là phần thể hiện ra khi trưởng thành, cho biết người ta dồn sức và chịu ảnh hưởng nhiều ở lĩnh vực nào. Ví dụ Thân cư Quan Lộc thường được đọc là coi trọng sự nghiệp, địa vị; Thân cư Phu Thê là đời sống chịu ảnh hưởng lớn từ hôn nhân và người phối ngẫu; Thân cư Phúc Đức là chú trọng đời sống tinh thần, sự hưởng thụ.\n\nHai cung này luôn được đọc cùng nhau: cung có Thân cư cần được xem kỹ như một cung trọng điểm thứ hai sau Mệnh.",
+      },
+    ],
+    applicationBox: {
+      title: "Ứng dụng vào lá số",
+      body:
+        "Sau khi lập lá số, xem cung nào có đánh dấu Thân. Đọc cung đó như cung Mệnh: sao tọa thủ, độ sáng, tam phương tứ chính và Tứ Hóa. Phần luận giải 12 cung cũng tự động bổ sung tri thức về cung Thân vào đúng cung Thân cư.",
+    },
+    cta: {
+      label: "Lập lá số để xem Thân cư cung nào",
+      href: "/lap-la-so",
+    },
+  },
 ];
 
 export const knowledgeCategories = Array.from(new Set(knowledgeArticles.map((article) => article.category)));
 export const knowledgeLevels = Array.from(new Set(knowledgeArticles.map((article) => article.level)));
 
 export const findKnowledgeArticleByPath = (pathname: string) => {
-  return knowledgeArticles.find((article) => pathname === getKnowledgeArticleHref(article.slug)) ?? null;
+  const path = pathname.replace(/\/+$/, ""); // chấp nhận cả /bai-viet/slug/ (URL prerender)
+  return knowledgeArticles.find((article) => path === getKnowledgeArticleHref(article.slug)) ?? null;
 };

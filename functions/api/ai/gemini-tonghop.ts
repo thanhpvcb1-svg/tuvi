@@ -18,6 +18,11 @@ interface PalaceSummary {
   goodStars?: string[];
   badStars?: string[];
   isBodyPalace: boolean;
+  tamPhuong?: string[];
+  xungChieu?: string;
+  giapCung?: string[];
+  daiVan?: string;
+  vanNamXem?: string[];
   knowledgeTexts: string[];
   phiHoaFlows: string[];
 }
@@ -27,6 +32,7 @@ interface RequestBody {
   profile: {
     gender?: string;
     yearToView?: number;
+    birthYear?: number;
     menhChu?: string;
     thanChu?: string;
     cuc?: string;
@@ -45,7 +51,10 @@ const SYSTEM_PROMPT = `Bạn là **chuyên gia luận giải Tử Vi Đẩu Số
    - [PHÂN TÍCH]: suy luận từ lá số và Knowledge.
    - [THIẾU DỮ LIỆU]: không đủ căn cứ để kết luận.
 3. Không luận theo kiểu văn mẫu. Mọi nhận định quan trọng phải dựa trên **cung, sao, Tứ Hóa, Phi Hóa, tam hợp, xung chiếu hoặc thời vận**.
-4. Không đánh giá một sao độc lập. Luôn xét **bản cung + tam hợp + xung chiếu + giáp cung + Tứ Hóa/Phi Hóa** khi dữ liệu có.
+4. Không đánh giá một sao độc lập ("một sao = một kết luận"). Luôn xét **sao + cung + miếu/vượng/hãm + tam phương + xung chiếu + giáp cung + Tứ Hóa + Phi Hóa + đại vận** khi dữ liệu có, rồi mới tổng hợp.
+5. Chỉ dùng dữ liệu trong CHART_DATA, CONTEXT_DATA và KNOWLEDGE. Mỗi mục KNOWLEDGE có dạng "[Nguồn: ...] [Khớp: ...] nội dung": khi dùng phải ghi đúng nguồn đó sau nhãn [NGUỒN], không đổi tên sách/tác giả, không thêm nguồn khác.
+6. Nếu một mục không có dữ liệu (vd không có tri thức, không có Phi Hóa, không rõ tiểu vận) thì ghi "[THIẾU DỮ LIỆU] Không đủ dữ liệu để kết luận." - không suy đoán lấp chỗ trống.
+7. Không khẳng định dự đoán chắc chắn về tương lai; dùng ngôn ngữ xu hướng, tham khảo.
 
 ## PHƯƠNG PHÁP BẮC PHÁI
 
@@ -73,12 +82,58 @@ Khi có dữ liệu Đại vận/Tiểu vận/Lưu niên, đối chiếu với l
 
 Trả lời bằng tiếng Việt, tự nhiên, dễ hiểu, có cấu trúc rõ ràng.`;
 
+const FULL_STRUCTURE = `### 1. Dữ liệu sử dụng
+Liệt kê ngắn các dữ liệu có trong CHART_DATA / CONTEXT_DATA / KNOWLEDGE được dùng.
+
+### 2. Cấu trúc lá số
+Mệnh, Thân cư cung nào, Cục, Mệnh chủ / Thân chủ nếu có.
+
+### 3. Mệnh – Thân
+Bản cung + tam phương + xung chiếu + giáp cung của Mệnh và cung Thân cư.
+
+### 4. Mệnh – Tài – Quan
+Tam phương Mệnh, Tài Bạch, Quan Lộc.
+
+### 5. Tứ Hóa
+Hóa Lộc, Quyền, Khoa, Kỵ sinh niên nằm ở sao nào, cung nào.
+
+### 6. Phi Hóa
+Các luồng Phi Hóa can cung quan trọng (cung phát → cung nhận).
+
+### 7. Các cung trọng điểm
+Chỉ các cung có dữ liệu và tri thức khớp nổi bật.
+
+### 8. Đại vận
+Theo daiVan / vanNamXem trong CONTEXT_DATA.
+
+### 9. Tiểu vận / Lưu niên
+Theo vanNamXem của năm xem; nếu không có thì [THIẾU DỮ LIỆU].
+
+### 10. Tổng hợp
+Kết hợp các yếu tố trên; nêu rõ đâu là xu hướng, đâu là điểm cần lưu ý.`;
+
+const SINGLE_PALACE_STRUCTURE = `### Dữ liệu sử dụng
+Sao, độ sáng, Tứ Hóa, tam phương, xung chiếu, giáp cung, đại vận của cung và các mục KNOWLEDGE đã khớp.
+
+### Cấu trúc cung
+Bản cung + tam phương + xung chiếu + giáp cung.
+
+### Tứ Hóa và Phi Hóa
+Tứ Hóa sinh niên và Phi Hóa liên quan tới cung.
+
+### Thời vận
+Đại vận / tiểu vận nếu cung đang được kích hoạt ở năm xem.
+
+### Tổng hợp
+Nhận định có căn cứ; phần thiếu căn cứ ghi [THIẾU DỮ LIỆU].`;
+
 // ============ HELPERS ============
 
 function buildChartData(profile: RequestBody["profile"]): string {
   return JSON.stringify({
     gender: profile.gender || "Chưa rõ",
     yearToView: profile.yearToView || new Date().getFullYear(),
+    birthYear: profile.birthYear || null,
     menhChu: profile.menhChu || null,
     thanChu: profile.thanChu || null,
     cuc: profile.cuc || null,
@@ -96,6 +151,11 @@ function buildContextData(palaces: PalaceSummary[]): string {
     cung: p.name,
     viTri: `${p.stem} ${p.branch}`,
     isBodyPalace: p.isBodyPalace || undefined,
+    tamPhuong: p.tamPhuong?.slice(0, 2).map((x) => String(x).slice(0, 20)),
+    xungChieu: p.xungChieu ? String(p.xungChieu).slice(0, 20) : undefined,
+    giapCung: p.giapCung?.slice(0, 2).map((x) => String(x).slice(0, 20)),
+    daiVan: p.daiVan ? String(p.daiVan).slice(0, 20) : undefined,
+    vanNamXem: p.vanNamXem?.slice(0, 2).map((x) => String(x).slice(0, 30)),
     chinhTinh: p.majorStars.length > 0 ? p.majorStars.slice(0, MAX_STARS_PER_PALACE) : undefined,
     catTinh: p.goodStars && p.goodStars.length > 0 ? p.goodStars.slice(0, MAX_STARS_PER_PALACE) : undefined,
     hungTinh: p.badStars && p.badStars.length > 0 ? p.badStars.slice(0, MAX_STARS_PER_PALACE) : undefined,
@@ -141,22 +201,12 @@ function buildUserPrompt(body: RequestBody): string {
   const contextData = buildContextData(body.palaces);
   const knowledge = buildKnowledgeData(body.palaces);
 
-  return `CẤU TRÚC TRẢ LỜI:
+  // Luận một cung (nút "Giải nghĩa chi tiết") dùng cấu trúc gọn; luận tổng hợp dùng đủ 10 mục.
+  const structure = body.palaces.length === 1 ? SINGLE_PALACE_STRUCTURE : FULL_STRUCTURE;
 
-### Tổng quan
-Tóm tắt các yếu tố nổi bật (2-4 câu).
+  return `CẤU TRÚC TRẢ LỜI (gắn nhãn [NGUỒN] / [PHÂN TÍCH] / [THIẾU DỮ LIỆU] cho từng nhận định):
 
-### Tứ Hóa
-Phân tích các Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ có trong dữ liệu.
-
-### Phi Hóa
-Phân tích các luồng Phi Hóa quan trọng.
-
-### Các sao và tổ hợp
-Phân tích các sao/tổ hợp sao phù hợp với KNOWLEDGE.
-
-### Tổng hợp
-Kết hợp Tứ Hóa + Phi Hóa + sao để đưa ra nhận định chung.
+${structure}
 
 DỮ LIỆU:
 
@@ -213,8 +263,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: userPrompt }
       ],
-      max_tokens: 2000,
-      temperature: 0.7,
+      max_tokens: 2500,
+      // Thấp để bám dữ liệu/tri thức được cung cấp, hạn chế tự sáng tác.
+      temperature: 0.4,
     });
 
     // Extract text from response

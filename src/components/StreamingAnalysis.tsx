@@ -11,7 +11,8 @@ import {
   loadKnowledge,
   type KnowledgeMatch,
 } from "../lib/tuvi/knowledge/lazyKnowledgeService";
-import { callGeminiLuanGiai, callGeminiTongHop, type PalaceSummary } from "../lib/geminiService";
+import { callGeminiLuanGiai, callGeminiTongHop, formatKnowledgeForAi, type PalaceSummary } from "../lib/geminiService";
+import { getActivePalaceIndexes } from "./VanHanhSelector";
 import type { DisplayPalace } from "../lib/tuvi/config/types";
 
 type PalaceAnalysis = {
@@ -26,6 +27,12 @@ type PalaceAnalysis = {
   meaning: string;
   phiHoa: string[];
   isBodyPalace: boolean;
+  /** Cấu trúc Bắc phái của cung - gửi kèm cho AI để không phải tự suy ra. */
+  tamPhuong: string[];
+  xungChieu: string;
+  giapCung: string[];
+  daiVan: string;
+  vanNamXem: string[];
   knowledgeMatches: KnowledgeMatch[];
   geminiAnalysis?: string;
   geminiLoading?: boolean;
@@ -39,6 +46,7 @@ type Props = {
   userContext?: {
     gender?: string;
     yearToView?: number;
+    birthYear?: number;
   };
 };
 
@@ -124,8 +132,29 @@ const PALACE_CONFIG: Array<{ id: string; name: string; icon: string }> = [
   { id: "huynh_de", name: "Huynh Đệ", icon: "👥" },
 ];
 
-function getStarDisplay(star: { name: string; display?: string }) {
-  return star.display || star.name;
+// Tên sao kèm độ sáng và Tứ Hóa sinh niên, vd "Thiên Đồng(V) hóa Kỵ".
+function getStarDisplay(star: { name: string; display?: string; mutagen?: string }) {
+  const label = star.display || star.name;
+  return star.mutagen ? `${label} hóa ${star.mutagen}` : label;
+}
+
+const BRANCHES = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"];
+
+// decadalRange là tuổi bắt đầu đại vận dạng chuỗi ("5", "15"...) -> "5-14 tuổi".
+function formatDaiVan(decadalRange: unknown): string {
+  const start = Number(decadalRange);
+  return Number.isFinite(start) && start > 0 ? `${start}-${start + 9} tuổi` : "";
+}
+
+// Tam phương tứ chính, xung chiếu, giáp cung theo địa chi - chỉ đọc lá số, không tính lại sao.
+function getPalaceStructure(chart: ChartView, palace: PalaceView) {
+  const index = BRANCHES.indexOf(palace.earthlyBranch ?? "");
+  const at = (offset: number) => chart.palaces.find((p) => p.earthlyBranch === BRANCHES[(index + offset + 12) % 12])?.name ?? "";
+  return {
+    tamPhuong: [at(4), at(8)].filter(Boolean),
+    xungChieu: at(6),
+    giapCung: [at(-1), at(1)].filter(Boolean),
+  };
 }
 
 function getPhiHoaFlows(palace: PalaceView): string[] {
@@ -146,7 +175,12 @@ function getPhiHoaFlows(palace: PalaceView): string[] {
 // Luận giải nguyên cục: chỉ lấy sao gốc, không lẫn sao lưu niên/đại vận đang bật trên lá số.
 const isNatalStar = (star: { scope?: string }) => !star.scope || star.scope === "origin";
 
-function analyzePalace(chart: ChartView, config: { id: string; name: string; icon: string }): PalaceAnalysis | null {
+function analyzePalace(
+  chart: ChartView,
+  config: { id: string; name: string; icon: string },
+  active: { daiVan?: number; tieuVan?: number },
+  years: { yearToView?: number; birthYear?: number },
+): PalaceAnalysis | null {
   const palace = findPalace(chart, config.name);
   if (!palace) return null;
 
@@ -160,6 +194,8 @@ function analyzePalace(chart: ChartView, config: { id: string; name: string; ico
 
   const knowledgeMatches = queryPalaceKnowledge({
     chart,
+    yearToView: years.yearToView,
+    birthYear: years.birthYear,
     palace: displayPalace,
     starsInPalace,
     branch: palace.earthlyBranch || "",
@@ -180,6 +216,12 @@ function analyzePalace(chart: ChartView, config: { id: string; name: string; ico
     meaning: getPalaceMeaning(config.name),
     phiHoa: getPhiHoaFlows(palace),
     isBodyPalace: palace.isBodyPalace || false,
+    ...getPalaceStructure(chart, palace),
+    daiVan: formatDaiVan((palace as any).decadalRange),
+    vanNamXem: [
+      active.daiVan === palace.index ? "Đại vận năm xem" : "",
+      active.tieuVan === palace.index ? "Tiểu vận năm xem" : "",
+    ].filter(Boolean),
     knowledgeMatches,
   };
 }
@@ -219,15 +261,24 @@ function KnowledgeItem({ match }: { match: KnowledgeMatch }) {
   );
 }
 
-function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: { 
-  analysis: PalaceAnalysis; 
+function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini, yearToView }: {
+  analysis: PalaceAnalysis;
   isExpanded: boolean;
   onToggle: () => void;
   onRequestGemini?: () => void;
+  yearToView?: number;
 }) {
   const [showAll, setShowAll] = useState(false);
   const [showAiResult, setShowAiResult] = useState(false);
-  const sortedMatches = useMemo(() => sortKnowledgeByPriority(analysis.knowledgeMatches), [analysis.knowledgeMatches]);
+  // Tri thức lá số gốc và tri thức vận hạn năm xem hiển thị thành hai nhóm.
+  const sortedMatches = useMemo(
+    () => sortKnowledgeByPriority(analysis.knowledgeMatches.filter((m) => m.interpretation.type !== "period")),
+    [analysis.knowledgeMatches],
+  );
+  const periodMatches = useMemo(
+    () => analysis.knowledgeMatches.filter((m) => m.interpretation.type === "period"),
+    [analysis.knowledgeMatches],
+  );
   const displayCount = showAll ? sortedMatches.length : 3;
   const hasMore = sortedMatches.length > 3;
   const knowledgeCount = analysis.knowledgeMatches.length;
@@ -280,8 +331,8 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
         <div className="analysis-palace-content">
           <p className="analysis-palace-meaning">{analysis.meaning}</p>
 
-          {/* AI Button - compact */}
-          {hasGeminiKey && sortedMatches.length > 0 && (
+          {/* AI Button - compact (vẫn luận được bằng dữ liệu cung khi không có tri thức khớp) */}
+          {hasGeminiKey && (
             <div className="analysis-ai-compact">
               <button
                 type="button"
@@ -335,6 +386,20 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
             </div>
           )}
 
+          {periodMatches.length > 0 && (
+            <div className="analysis-knowledge analysis-knowledge--period">
+              <span className="analysis-star-label">
+                🗓 Vận hạn năm {yearToView}
+                {analysis.vanNamXem.length ? ` (${analysis.vanNamXem.join(", ").toLowerCase()})` : ""}:
+              </span>
+              <div className="analysis-knowledge-list">
+                {periodMatches.map((match, i) => (
+                  <KnowledgeItem key={match.interpretation.id || i} match={match} />
+                ))}
+              </div>
+            </div>
+          )}
+
           {analysis.phiHoa.length > 0 && (
             <div className="analysis-phi-hoa">
               <span className="analysis-star-label">Phi Hóa:</span>
@@ -378,10 +443,16 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
 
   const baseAnalyses = useMemo(() => {
     if (!chart || !knowledgeLoaded) return [];
+    // Cung đại vận / tiểu vận của năm xem (cùng hàm với thanh chọn năm trên lá số).
+    const age = userContext?.yearToView && userContext?.birthYear ? userContext.yearToView - userContext.birthYear : undefined;
+    const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
+    const active = age !== undefined
+      ? getActivePalaceIndexes(chart.palaces, age, menhBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel)
+      : {};
     return PALACE_CONFIG
-      .map((config) => analyzePalace(chart, config))
+      .map((config) => analyzePalace(chart, config, active, { yearToView: userContext?.yearToView, birthYear: userContext?.birthYear }))
       .filter((a): a is PalaceAnalysis => a !== null);
-  }, [chart, knowledgeLoaded]);
+  }, [chart, knowledgeLoaded, userContext?.yearToView, userContext?.birthYear]);
 
   // Merge gemini states into analyses
   const analyses = useMemo(() => {
@@ -406,8 +477,13 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       goodStars: a.goodStars,
       badStars: a.badStars,
       isBodyPalace: a.isBodyPalace,
-      // Server chỉ dùng 10 mục đầu mỗi cung (đã xếp theo độ cụ thể) - không gửi thừa.
-      knowledgeTexts: a.knowledgeMatches.slice(0, 10).map((m) => m.interpretation.text),
+      tamPhuong: a.tamPhuong,
+      xungChieu: a.xungChieu,
+      giapCung: a.giapCung,
+      daiVan: a.daiVan,
+      vanNamXem: a.vanNamXem,
+      // Server chỉ dùng 10 mục đầu mỗi cung (đã xếp theo độ khớp) - không gửi thừa.
+      knowledgeTexts: a.knowledgeMatches.slice(0, 10).map(formatKnowledgeForAi),
       phiHoaFlows: a.phiHoa,
     }));
   }, [baseAnalyses]);
@@ -423,8 +499,10 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       const profile = {
         gender: userContext?.gender || (chart.profile as any)?.gender,
         yearToView: userContext?.yearToView,
-        menhChu: (chart.profile as any)?.menhChu,
-        thanChu: (chart.profile as any)?.thanChu,
+        birthYear: userContext?.birthYear,
+        // profile.soul / profile.body là Mệnh chủ / Thân chủ (menhChu/thanChu không tồn tại trên profile).
+        menhChu: (chart.profile as any)?.soul,
+        thanChu: (chart.profile as any)?.body,
         cuc: (chart.profile as any)?.cucElement || (chart.profile as any)?.fiveElementsClass,
       };
 
@@ -446,7 +524,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
   // Request Gemini analysis for a palace
   const requestGeminiAnalysis = useCallback(async (palaceId: string) => {
     const analysis = baseAnalyses.find((a) => a.id === palaceId);
-    if (!analysis || analysis.knowledgeMatches.length === 0) return;
+    if (!analysis) return;
 
     // Set loading state
     setGeminiStates((prev) => {
@@ -465,6 +543,12 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
           goodStars: analysis.goodStars,
           badStars: analysis.badStars,
           isBodyPalace: analysis.isBodyPalace,
+          tamPhuong: analysis.tamPhuong,
+          xungChieu: analysis.xungChieu,
+          giapCung: analysis.giapCung,
+          daiVan: analysis.daiVan,
+          vanNamXem: analysis.vanNamXem,
+          phiHoaFlows: analysis.phiHoa,
         },
         knowledgeMatches: analysis.knowledgeMatches,
         userContext,
@@ -604,6 +688,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
               isExpanded={expandedIds.has(analysis.id)}
               onToggle={() => toggleExpand(analysis.id)}
               onRequestGemini={() => requestGeminiAnalysis(analysis.id)}
+              yearToView={userContext?.yearToView}
             />
           ))}
         </div>
@@ -622,6 +707,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
               isExpanded={expandedIds.has(analysis.id)}
               onToggle={() => toggleExpand(analysis.id)}
               onRequestGemini={() => requestGeminiAnalysis(analysis.id)}
+              yearToView={userContext?.yearToView}
             />
           ))}
         </div>

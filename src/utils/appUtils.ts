@@ -97,24 +97,12 @@ export const contactFaqs = [
 
 // ============ GUIDE DATA ============
 
-export const chartReadingSteps = [
-  {
-    title: "1. Kiểm tra dữ liệu nền",
-    description: "Xem lại ngày sinh, loại lịch, giờ sinh và năm đang xem trước khi đọc kết quả.",
-  },
-  {
-    title: "2. Đọc Mệnh, Thân và các cung trọng tâm",
-    description: "Bắt đầu từ Mệnh - Thân, sau đó đi vào Quan Lộc, Tài Bạch, Phu Thê hoặc cung đúng với câu hỏi của bạn.",
-  },
-  {
-    title: "3. Đặt vận năm vào toàn cục",
-    description: "Dùng thanh chọn năm để xem tiểu vận, rồi đối chiếu với đại vận và các cung liên quan.",
-  },
-];
+export const chartReadingSteps = lapLaSoContent.overview.readingSteps;
 
 // Nội dung tĩnh trang /lap-la-so dùng chung với scripts/prerender-pages.mjs (HTML tĩnh cho crawler).
 // Sửa nội dung tại src/content/lapLaSoContent.json để React và bản prerender luôn khớp nhau.
 // knowledgeHubItems: `path` chỉ gán khi bài viết CÓ THẬT (xem src/content/bacPhaiLibrary.ts); null = "Sắp ra mắt".
+export { lapLaSoContent };
 export const { twelvePalaces, laSoOverviewCards, knowledgeHubItems, lapLaSoFaqs } = lapLaSoContent;
 
 export const pricingGuides = [

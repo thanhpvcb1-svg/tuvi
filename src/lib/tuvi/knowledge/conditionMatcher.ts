@@ -166,7 +166,37 @@ export type ChartFacts = {
   gender: "male" | "female" | null;
   /** Can năm sinh ("canh") */
   yearStem: string | null;
+  /** Chi của cung đại vận / tiểu vận ở năm xem (chỉ có khi truyền năm xem). */
+  period?: { daiVan?: string; tieuVan?: string; label?: string };
 };
+
+// Thứ tự vai cung tính từ Mệnh (cung kế tiếp theo địa chi) - dùng cho cung vai của đại vận ("ĐV. Tài bạch").
+const ROLE_OFFSETS: Record<string, number> = {
+  "mệnh": 0, "phụ mẫu": 1, "phúc đức": 2, "điền trạch": 3, "quan lộc": 4, "nô bộc": 5,
+  "thiên di": 6, "tật ách": 7, "tài bạch": 8, "tử tức": 9, "phu thê": 10, "huynh đệ": 11,
+};
+
+/**
+ * Cung đại vận / tiểu vận ở năm xem, đọc thẳng từ lá số:
+ * - đại vận: cung có decadalRange (tuổi bắt đầu) <= tuổi <= decadalRange + 9
+ * - tiểu vận: cung có tuổi trong danh sách ages
+ * Tuổi = năm xem - năm sinh (cùng cách tính với thanh chọn năm trên lá số).
+ */
+export function computePeriod(chart: ChartView, yearToView?: number, birthYear?: number): ChartFacts["period"] {
+  if (!yearToView || !birthYear) return undefined;
+  const age = yearToView - birthYear;
+  const dv = chart.palaces.find((p) => {
+    const start = Number((p as any).decadalRange);
+    return Number.isFinite(start) && start > 0 && age >= start && age <= start + 9;
+  });
+  const tv = chart.palaces.find((p) => Array.isArray((p as any).ages) && (p as any).ages.includes(age));
+  const start = dv ? Number((dv as any).decadalRange) : 0;
+  return {
+    daiVan: dv ? branchKey(dv.earthlyBranch || "") : undefined,
+    tieuVan: tv ? branchKey(tv.earthlyBranch || "") : undefined,
+    label: dv ? `${start}-${start + 9} tuổi` : undefined,
+  };
+}
 
 // Chỉ dùng sao gốc (lá số bẩm sinh); sao lưu/đại vận không được tính khi đối chiếu tri thức nguyên cục.
 const isNatalStar = (star: StarView) => !star.scope || star.scope === "origin";
@@ -301,7 +331,13 @@ export type Predicate =
   | { kind: "flank"; items: FlankItem[] }
   | { kind: "laiNhan" }
   | { kind: "soulStar" }
-  | { kind: "bodyStar" };
+  | { kind: "bodyStar" }
+  /** Cung đang là cung đại vận / tiểu vận của năm xem. */
+  | { kind: "period"; which: "daiVan" | "tieuVan" }
+  /** Cung giữ vai `role` của đại vận hiện tại ("ĐV. Tài bạch"). */
+  | { kind: "periodRole"; role: string }
+  /** Cung phi Hóa nhập (hoặc chiếu = nhập đối cung) cung vai `role` của đại vận. */
+  | { kind: "flowPeriodRole"; hoa: HoaType; role: string; mode: "nhap" | "chieu" };
 
 // Một mệnh đề = "cung P (tại B) thỏa các predicate".
 export type Clause = { palace: string; branch?: string; predicates: Predicate[]; subjectBranch?: string };
@@ -421,9 +457,77 @@ function parseFlowClauses(text: string): Clause[] | null {
   return clauses.length ? clauses : null;
 }
 
+// Vai cung của đại vận: "Sự nghiệp", "Tử nữ", "Giao hữu"... -> khóa vai chuẩn
+const roleKey = (value: string) => {
+  const key = palaceKey(value);
+  return key && key in ROLE_OFFSETS ? key : null;
+};
+
+/** Điều kiện vận hạn - chỉ khớp khi biết năm xem. */
+function parsePeriodCondition(condition: string): Clause[] | null {
+  let m: RegExpMatchArray | null;
+  const isBranch = (value: string) => BRANCH_ORDER.includes(branchKey(value));
+
+  // "Đại vận ở cung Điền trạch (tại Tuất) có sao Thiên không tọa thủ" / "Tiểu vận ở cung ... có sao Bệnh"
+  if ((m = condition.match(/^(Đại vận|Tiểu vận) ở cung (.+?) \(tại (\S+)\) có sao (.+?)( tọa thủ)?$/))) {
+    const palace = palaceKey(m[2]);
+    const predicates = parseTail(m[4]);
+    if (!palace || !predicates || !isBranch(m[3])) return null;
+    const which = m[1] === "Đại vận" ? "daiVan" : "tieuVan";
+    return [{ palace, branch: branchKey(m[3]), predicates: [{ kind: "period", which }, ...predicates] }];
+  }
+
+  // "ĐV. Sự nghiệp (Cung Điền trạch bản mệnh) Tự Hóa Lộc"
+  if ((m = condition.match(new RegExp(`^ĐV\\. ?(.+?) \\(Cung (.+?) bản mệnh\\) Tự Hóa ${H}$`, "i")))) {
+    const role = roleKey(m[1]);
+    const palace = palaceKey(m[2]);
+    if (!role || !palace) return null;
+    return [{ palace, predicates: [{ kind: "periodRole", role }, { kind: "selfHoa", hoa: hoaType(m[3])! }] }];
+  }
+
+  // "Cung Điền trạch phi hóa kỵ nhập ĐV. Điền trạch" / "... chiếu ĐV. Điền trạch"
+  if ((m = condition.match(new RegExp(`^Cung (.+?) phi hóa ${H} (nhập|chiếu) ĐV\\. ?(.+)$`, "i")))) {
+    const palace = palaceKey(m[1]);
+    const role = roleKey(m[4]);
+    if (!palace || !role) return null;
+    return [{ palace, predicates: [{ kind: "flowPeriodRole", hoa: hoaType(m[2])!, role, mode: lower(m[3]) === "chiếu" ? "chieu" : "nhap" }] }];
+  }
+
+  // "Đại vận ở cung P phi Hóa Lộc nhập cung Q [và Hóa Kị nhập cung S] [gặp Tự Hóa H | gặp Hóa H [năm sinh]]"
+  if ((m = condition.match(new RegExp(`^Đại vận ở cung (.+?) phi Hóa ${H} nhập cung (.+?)(?: và Hóa ${H} nhập cung (.+?))?(?: gặp (Tự Hóa|Hóa) ${H}( \\[năm sinh\\])?)?$`, "i")))) {
+    const palace = palaceKey(m[1]);
+    const target1 = palaceKey(m[3]);
+    const target2 = m[5] ? palaceKey(m[5]) : null;
+    if (!palace || !target1 || (m[5] && !target2)) return null;
+    const clauses: Clause[] = [
+      {
+        palace,
+        predicates: [
+          { kind: "period", which: "daiVan" },
+          { kind: "flow", hoa: hoaType(m[2])!, target: target1 },
+          ...(target2 ? [{ kind: "flow" as const, hoa: hoaType(m[4])!, target: target2 }] : []),
+        ],
+      },
+    ];
+    if (m[6]) {
+      // "gặp ..." nói về cung nhận hóa (cung đích cuối cùng được nêu)
+      const meet = target2 ?? target1;
+      const hoa = hoaType(m[7])!;
+      if (/^tự/i.test(m[6])) clauses.push({ palace: meet, predicates: [{ kind: "selfHoa", hoa }] });
+      else if (m[8]) clauses.push({ palace: meet, predicates: [{ kind: "hoa", hoa, scope: "palace" }] });
+      else return null;
+    }
+    return clauses;
+  }
+
+  return null;
+}
+
 function parseConditionShape(condition: string): Clause[] | null {
   let m: RegExpMatchArray | null;
   const isBranch = (value: string) => BRANCH_ORDER.includes(branchKey(value));
+
+  if (/^(Đại vận|Tiểu vận) ở cung|^ĐV\.|ĐV\. ?\S/.test(condition)) return parsePeriodCondition(condition);
 
   // "Cung Mệnh an tại Dần có sao Vô chính diệu tọa thủ và các sao Thiên đồng,Cự môn xung chiếu"
   if ((m = condition.match(/^Cung (.+?) an tại (\S+) có sao Vô chính diệu tọa thủ và các sao (.+) xung chiếu$/))) {
@@ -549,7 +653,7 @@ function parseConditionShape(condition: string): Clause[] | null {
 const PREDICATE_WEIGHT: Record<Predicate["kind"], number> = {
   star: 3, starHoa: 4, singleMain: 2, noMain: 2, hoa: 2, selfHoa: 2, selfHoaAny: 2, noSelfHoa: 1, flow: 2,
   changsheng: 1, marker: 1, branchGroup: 0, stemBranch: 3, cuc: 1, samePalace: 2, flank: 3,
-  laiNhan: 2, soulStar: 1, bodyStar: 1,
+  laiNhan: 2, soulStar: 1, bodyStar: 1, period: 3, periodRole: 3, flowPeriodRole: 3,
 };
 
 function scoreClauses(clauses: Clause[]): number {
@@ -576,7 +680,7 @@ export function parseCondition(raw: string): ParsedCondition | null {
 // Nội dung crawl từ lá số cụ thể của người khác (tuổi đại vận, "phi phục Tam điểm tại <chi>"...)
 // không áp dụng được cho lá số hiện tại dù điều kiện khớp.
 export function isChartSpecificText(text: string): boolean {
-  return /phi phục Tam điểm tại|\d+\s*-\s*\d+\s*tuổi|^\s*(Cung khí số vị )?đại vận/i.test(text);
+  return /phi phục Tam điểm tại|\d+\s*-\s*\d+\s*tuổi|\(\d+ tuổi\)|Thông tin chung|^\s*(Cung khí số vị )?đại vận/i.test(text);
 }
 
 /**
@@ -651,7 +755,35 @@ export function isPeriodText(text: string): boolean {
   return /đại hạn|đại vận|lưu niên|tiểu hạn|tiểu vận|vận này|hạn này/i.test(leadSentence(text));
 }
 
-export function extractTextRequirements(text: string): TextRequirements | undefined {
+/** Câu nói độ sáng một chiều: "good" (miếu/vượng/đắc), "bad" (hãm), null nếu không nói hoặc nói cả hai. */
+function brightnessClaim(lead: string): "good" | "bad" | null {
+  const good = /nhập miếu|miếu địa|miếu vượng|vượng địa|đắc địa|(^|[^\p{L}])(miếu|vượng)([^\p{L}]|$)/iu.test(lead);
+  const bad = /lạc hãm|hãm địa|(^|[^\p{L}])hãm([^\p{L}]|$)/iu.test(lead);
+  return good === bad ? null : good ? "good" : "bad";
+}
+
+/** Chính tinh mà điều kiện đòi có ở cung (tọa thủ, mượn đối cung, hoặc kèm Hóa). */
+export function conditionMainStars(parsed: Pick<ParsedCondition, "clauses">): string[] {
+  const stars = new Set<string>();
+  for (const clause of parsed.clauses) {
+    for (const p of clause.predicates) {
+      if ((p.kind === "star" && p.scope !== "tpt") || p.kind === "starHoa" || p.kind === "singleMain") {
+        if (MAIN_STARS.has(p.star)) stars.add(p.star);
+      }
+    }
+  }
+  return [...stars];
+}
+
+/**
+ * Vế "Nếu ..." ở đầu nội dung là một điều kiện phụ. Chỉ giữ khi trích được phạm vi để kiểm chứng
+ * (vị trí / chính tinh / giới tính / năm sinh / độ sáng); "Nếu có nhà đất của tổ nghiệp..." thì bỏ.
+ */
+export function isUnverifiableConditional(text: string, requires: TextRequirements | undefined): boolean {
+  return /^\s*nếu\b/i.test(text) && !requires;
+}
+
+export function extractTextRequirements(text: string, conditionStars?: string[]): TextRequirements | undefined {
   const lead = leadSentence(text);
   const req: TextRequirements = {};
 
@@ -678,9 +810,10 @@ export function extractTextRequirements(text: string): TextRequirements | undefi
   if (year) req.yearStems = year[1].split(/\s*(?:,|hoặc|và|\/)\s*/).map(stemKey);
 
   // Độ sáng: chỉ khi câu mở đầu nói về đúng MỘT chính tinh và chỉ một chiều (miếu/vượng/đắc hoặc hãm).
-  const saysGood = /nhập miếu|miếu địa|miếu vượng|vượng địa|đắc địa|(^|[^\p{L}])(miếu|vượng)([^\p{L}]|$)/iu.test(lead);
-  const saysBad = /lạc hãm|hãm địa|(^|[^\p{L}])hãm([^\p{L}]|$)/iu.test(lead);
-  if (stars.length === 1 && saysGood !== saysBad) req.brightness = { star: stars[0], level: saysGood ? "good" : "bad" };
+  // Câu không nêu tên sao ("Vào miếu vượng có nhiều bạn tốt") -> gán cho chính tinh duy nhất của điều kiện.
+  const level = brightnessClaim(lead);
+  const brightnessStar = stars.length === 1 ? stars[0] : stars.length === 0 && conditionStars?.length === 1 ? conditionStars[0] : null;
+  if (level && brightnessStar) req.brightness = { star: brightnessStar, level };
 
   return Object.keys(req).length ? req : undefined;
 }
@@ -745,6 +878,9 @@ export function isAnchoredCondition(parsed: Pick<ParsedCondition, "clauses">): b
           case "selfHoaAny":
           case "singleMain":
           case "flank":
+          case "flowPeriodRole":
+          case "periodRole":
+          case "period": // là cung đại vận / tiểu vận của năm xem - đã đủ cụ thể
             return true;
           case "hoa":
             return p.scope !== "tpt";
@@ -753,6 +889,11 @@ export function isAnchoredCondition(parsed: Pick<ParsedCondition, "clauses">): b
         }
       }),
   );
+}
+
+/** Điều kiện chỉ khớp theo năm xem (đại vận / tiểu vận). */
+export function isPeriodCondition(parsed: Pick<ParsedCondition, "clauses">): boolean {
+  return parsed.clauses.some((c) => c.predicates.some((p) => p.kind === "period" || p.kind === "periodRole" || p.kind === "flowPeriodRole"));
 }
 
 /** Các cung được nhắc trong điều kiện (để đối chiếu phạm vi nội dung). */
@@ -823,6 +964,25 @@ function evalPredicate(p: Predicate, palace: PalaceFacts, facts: ChartFacts): st
       return facts.laiNhan === palace.key ? "Lai nhân cung" : null;
     case "soulStar":
       return facts.soulStar && palace.stars.has(facts.soulStar) ? "Có Mệnh chủ" : null;
+    case "period": {
+      const branch = facts.period?.[p.which];
+      if (!branch || palace.branch !== branch) return null;
+      return p.which === "daiVan" ? `Đại vận ${facts.period?.label ?? ""} tại ${palace.label}`.replace("  ", " ") : `Tiểu vận năm xem tại ${palace.label}`;
+    }
+    case "periodRole": {
+      const dv = facts.period?.daiVan;
+      if (!dv) return null;
+      const target = BRANCH_ORDER[(BRANCH_ORDER.indexOf(dv) + ROLE_OFFSETS[p.role]) % 12];
+      return palace.branch === target ? `${palace.label} là cung ${label(p.role)} của đại vận` : null;
+    }
+    case "flowPeriodRole": {
+      const dv = facts.period?.daiVan;
+      if (!dv) return null;
+      const roleBranch = BRANCH_ORDER[(BRANCH_ORDER.indexOf(dv) + ROLE_OFFSETS[p.role] + (p.mode === "chieu" ? 6 : 0)) % 12];
+      const target = palaceAt(facts, roleBranch);
+      if (!target || !palace.flowsOut.some((f) => f.type === p.hoa && f.target === target.key)) return null;
+      return `${palace.label} phi ${HOA_LABELS[p.hoa]} ${p.mode === "chieu" ? "chiếu" : "nhập"} cung ${label(p.role)} của đại vận`;
+    }
     case "bodyStar":
       return facts.bodyStar && palace.stars.has(facts.bodyStar) ? "Có Thân chủ" : null;
   }

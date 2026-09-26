@@ -11010,7 +11010,8 @@ h4,
   justify-content: center;
 }
 
-.workspace-page .result-empty-card h2 {
+.workspace-page .result-empty-card h2,
+.workspace-page .result-empty-card h3 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -11459,4 +11460,180 @@ h4,
     flex-direction: column;
     gap: 10px;
   }
+}
+
+/* ===== /lap-la-so: các khối nội dung (Bắc phái + AI, 12 cung, Tứ Hóa) ===== */
+.form-panel__heading h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: var(--text-main);
+}
+
+.form-panel__heading p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.content-subheading {
+  margin: 28px 0 12px;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+.reading-steps {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.reading-steps strong {
+  display: block;
+  color: var(--text-main);
+}
+
+ol.bac-phai-ai-flow {
+  list-style: none;
+  margin: 16px 0;
+}
+
+.bac-phai-ai-flow__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bac-phai-ai-note {
+  padding: 12px 16px;
+  border-left: 3px solid var(--gold-dark);
+  background: var(--surface);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.palace-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.palace-toggle::after {
+  content: "+";
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+.palace-toggle[aria-expanded="true"]::after {
+  content: "−";
+}
+
+.palace-toggle:focus-visible {
+  outline: 3px solid rgba(212, 160, 23, 0.5);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.seo-copy-card.is-open {
+  border-color: var(--gold);
+}
+
+.tu-hoa-grid {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 760px) {
+  .bac-phai-ai-flow__item {
+    flex-direction: column;
+  }
+}
+
+/* CTA phụ ở hero là <Link> (điều hướng thật tới /la-so-mau/) - căn giống nút */
+.page-intro-cta a.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* ===== /la-so-mau: demo luận giải ===== */
+.sample-demo__label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.demo-facts {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.demo-note {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.demo-table th,
+.demo-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.demo-table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.demo-table tr.is-active td {
+  background: var(--surface);
+  font-weight: 600;
+}
+
+.page-intro-cta a.ghost-button,
+.sample-demo-page .page-intro-cta a.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.analysis-knowledge--period {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+/* Giới hạn bề rộng như .chart-panel để bảng lá số (1040px) tự cuộn ngang bên trong trên mobile */
+.sample-demo-page .content-section,
+.sample-demo-page .page-intro {
+  width: min(100%, 1040px);
+  min-width: 0;
+}
+
+.sample-demo-page .demo-table {
+  display: block;
+  overflow-x: auto;
 }

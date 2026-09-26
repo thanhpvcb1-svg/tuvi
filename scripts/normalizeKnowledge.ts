@@ -13,9 +13,12 @@
  * File gốc giữ nguyên làm nguồn - chỉ sửa script này rồi chạy lại khi cần.
  */
 import {
+  conditionMainStars,
   extractTextRequirements,
   isChartSpecificText,
+  isPeriodCondition,
   isPeriodText,
+  isUnverifiableConditional,
   parseCondition,
   parseStarCombination,
   type Clause,
@@ -70,8 +73,11 @@ const stripChinese = (text: string) =>
     .replace(/[（(「〈《]?[㐀-鿿][　-〿㐀-鿿＀-￯]*[）)」〉》]?/g, "")
     .replace(/\(\s*\)|（\s*）/g, "");
 
+// "Ứng kỳ này có thể sẽ vào một trong các năm Sửu, Mùi, Tí..." được suy từ lá số gốc của người khác -> bỏ dòng đó.
+const stripUngKy = (text: string) => text.split("\n").filter((line) => !/^\s*Ứng kỳ/i.test(line)).join("\n");
+
 const cleanText = (text: string) =>
-  stripChinese(String(text || "").normalize("NFC").replace(/\r\n?/g, "\n"))
+  stripChinese(stripUngKy(String(text || "").normalize("NFC").replace(/\r\n?/g, "\n")))
     .replace(/[ \t ]+/g, " ")
     .replace(/ *\n */g, "\n")
     .replace(/\n{3,}/g, "\n\n")
@@ -105,7 +111,8 @@ function main() {
       const text = cleanText(item.text);
       if (text.length < MIN_TEXT_LENGTH) return drop("nội dung quá ngắn");
       if (isChartSpecificText(text)) return drop("nội dung gắn lá số khác");
-      if (isPeriodText(text)) return drop("nội dung nói về vận hạn");
+      // Nội dung nói về vận hạn chỉ hợp với điều kiện vận hạn (khớp theo năm xem).
+      if (!isPeriodCondition(rule) && isPeriodText(text)) return drop("nội dung nói về vận hạn");
 
       const src: Source = { book: item.source?.book || "tuvi.cohoc.net", author: item.source?.author, translator: item.source?.translator ?? undefined };
       const srcKey = `${src.book}|${src.author ?? ""}|${src.translator ?? ""}`;
@@ -123,7 +130,8 @@ function main() {
       }
       // Phạm vi nội dung (vị trí / chính tinh / giới tính / năm sinh ở câu mở đầu). Tổng quan lá số là
       // bảng liệt kê 12 cung nên không trích.
-      const requires = id === "tong-quan" ? undefined : extractTextRequirements(text);
+      const requires = id === "tong-quan" ? undefined : extractTextRequirements(text, conditionMainStars(rule));
+      if (isUnverifiableConditional(text, requires)) return drop("vế 'Nếu...' không kiểm chứng được");
       byText.set(key, { id: item.id, section: item.section, text, source: sourceIndex.get(srcKey)!, accuracy: Number(item.accuracy) || 0, rules: [rule], ...(requires ? { requires } : {}) });
     };
 

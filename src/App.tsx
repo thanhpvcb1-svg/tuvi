@@ -27,7 +27,10 @@ import type { BirthInput } from "./lib/types";
 
 // ============ TYPES ============
 
-type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "video" | "terms" | "privacy" | "about" | "404";
+// "/lap-la-so/" -> "/lap-la-so" (giữ nguyên "/")
+const normalizePath = (pathname: string) => pathname.replace(/\/+$/, "") || "/";
+
+type MainPageId ="home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "video" | "terms" | "privacy" | "about" | "404";
 type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he" | "gioi-thieu";
 
 const homeSectionRoutes: Record<HomeSectionId, string> = {
@@ -61,7 +64,8 @@ function AppContent() {
 
   // Route to page mapping
   useEffect(() => {
-    const path = location.pathname;
+    // Cloudflare Pages phục vụ route prerender ở dạng có "/" cuối (/lap-la-so/) -> bỏ "/" cuối trước khi so route.
+    const path = normalizePath(location.pathname);
     
     if (path === "/lap-la-so") {
       setActivePage("lap-la-so");
@@ -119,7 +123,7 @@ function AppContent() {
   const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((prev) => !prev), []);
 
   const getNavLinkClass = (route: string) =>
-    `site-nav-link${location.pathname === route || (route !== "/" && location.pathname.startsWith(`${route}/`)) ? " is-active" : ""}`;
+    `site-nav-link${normalizePath(location.pathname) === route || (route !== "/" && location.pathname.startsWith(`${route}/`)) ? " is-active" : ""}`;
 
   const handleSampleChartSelect = useCallback((input: BirthInput) => {
     setBirthInput(input);

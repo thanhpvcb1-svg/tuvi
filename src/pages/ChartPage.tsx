@@ -27,6 +27,7 @@ import {
   isMobileViewport,
   getRuntimeProfile,
   knowledgeHubItems,
+  lapLaSoContent as content,
   lapLaSoFaqs,
   laSoOverviewCards,
   serializeInputToSearch,
@@ -229,7 +230,7 @@ export default function ChartPage() {
     <div className="app workspace-page">
       <SEOHead
         title="Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh | Tử Vi Phong Lam"
-        description="Lập lá số tử vi online theo ngày tháng năm giờ sinh. An Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận, hỗ trợ luận giải theo Tử Vi Bắc phái."
+        description="Lập lá số tử vi online miễn phí theo ngày tháng năm giờ sinh. An Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận. Khám phá luận giải Tử Vi theo phương pháp Bắc phái."
         canonicalPath="/lap-la-so"
         schema={[
           organizationSchema,
@@ -240,17 +241,15 @@ export default function ChartPage() {
       />
 
       <section className="page-intro">
-        <h1>Lập Lá Số Tử Vi Online Miễn Phí</h1>
-        <p>
-          Nhập ngày giờ sinh để an lá số và khám phá Mệnh, Thân, 12 cung, Tứ Hóa và các yếu tố Tử Vi Bắc phái.
-        </p>
+        <h1>{content.hero.title}</h1>
+        <p>{content.hero.subtitle}</p>
         <div className="page-intro-cta">
           <button type="button" className="primary-button" onClick={() => scrollToSection("lap-la-so-form")}>
-            ✨ Lập Lá Số Ngay
+            Lập lá số ngay
           </button>
-          <button type="button" className="ghost-button" onClick={() => scrollToSection("bac-phai-ai")}>
-            Tìm hiểu Tử Vi Bắc phái
-          </button>
+          <Link to="/la-so-mau" className="ghost-button">
+            Xem lá số mẫu
+          </Link>
         </div>
       </section>
 
@@ -259,6 +258,10 @@ export default function ChartPage() {
           <SolarNoonCalculator />
         </section>
         <section className="form-panel">
+          <div className="form-panel__heading">
+            <h2>{content.formSection.heading}</h2>
+            <p>{content.formSection.intro}</p>
+          </div>
           <QuickInputSection
             currentValues={birthInput}
             onFill={(values) => setBirthInput((prev) => ({ ...prev, ...values }))}
@@ -338,7 +341,15 @@ export default function ChartPage() {
             />
 
             {showReading && chart ? (
-              <StreamingAnalysis chart={chart} isActive={showReading} />
+              <StreamingAnalysis
+                chart={chart}
+                isActive={showReading}
+                userContext={{
+                  gender: submittedInput.gender === "female" ? "Nữ" : "Nam",
+                  yearToView: horoscopeYear,
+                  birthYear: parseInt(submittedInput.year, 10) || undefined,
+                }}
+              />
             ) : null}
 
             <div className="result-disclaimer">
@@ -407,71 +418,21 @@ export default function ChartPage() {
           <section className="result-empty-card">
             <div className="result-empty-icon" aria-hidden="true">✨</div>
             <p className="eyebrow">Sẵn sàng</p>
-            <h2>Lá số sẽ xuất hiện sau khi bạn bấm "Lập lá số ngay"</h2>
+            <h3>Lá số sẽ xuất hiện sau khi bạn bấm "Lập lá số ngay"</h3>
             <p>Hệ thống sẽ hiển thị biểu đồ 12 cung, luận giải nhanh và phần chi tiết từng cung ngay bên dưới.</p>
           </section>
         )}
       </section>
 
-      <section className="content-section">
+      <section className="content-section" aria-labelledby="la-so-co-gi">
         <div className="section-heading section-heading--compact">
-          <p className="eyebrow">Cách đọc kết quả</p>
-          <h2>Sau khi lập lá số, nên đọc theo 3 bước</h2>
-          <p>Đi theo thứ tự này sẽ giúp bạn tránh bị ngợp bởi quá nhiều sao và cung cùng lúc.</p>
-        </div>
-        <div className="seo-copy-grid">
-          {chartReadingSteps.map((step) => (
-            <article key={step.title} className="seo-copy-card">
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="content-section">
-        <div className="section-heading section-heading--compact">
-          <p className="eyebrow">Kiến thức nền tảng</p>
-          <h2>Lá Số Tử Vi Là Gì?</h2>
-        </div>
-        <p>
-          Lá số tử vi là bản đồ tổng hợp theo ngày giờ sinh, trình bày trên 12 cung để thể hiện tính cách, xu hướng phát
-          triển và các giai đoạn vận hành nổi bật trong cuộc đời một người. Đây là công cụ chiêm nghiệm truyền thống,
-          không phải một dự đoán khẳng định tuyệt đối.
-        </p>
-      </section>
-
-      <section className="content-section">
-        <div className="section-heading section-heading--compact">
-          <p className="eyebrow">Chuẩn bị dữ liệu</p>
-          <h2>Lập Lá Số Tử Vi Cần Những Thông Tin Gì?</h2>
-        </div>
-        <p>Để an lá số chính xác, bạn cần chuẩn bị:</p>
-        <ul className="seo-info-list">
-          <li>Ngày, tháng, năm sinh (dương lịch hoặc âm lịch)</li>
-          <li>Giờ sinh theo 12 khung giờ (Tý - Hợi) - càng chính xác, vị trí cung và sao càng sát</li>
-          <li>Giới tính</li>
-          <li>Năm muốn xem vận hạn (mặc định là năm hiện tại)</li>
-        </ul>
-        <p>
-          Nếu không nhớ chính xác giờ sinh, bạn vẫn có thể lập lá số bằng cách tick "Không rõ giờ sinh" - hệ thống sẽ
-          lập lá số dựa trên các dữ liệu còn lại và ghi chú rằng kết quả mang tính tham khảo.
-        </p>
-      </section>
-
-      <section className="content-section">
-        <div className="section-heading section-heading--compact">
-          <p className="eyebrow">Cấu trúc kết quả</p>
-          <h2>Lá Số Của Bạn Có Gì?</h2>
-          <p>
-            Sau khi nhập dữ liệu sinh, hệ thống an lá số và hiển thị đầy đủ cung Mệnh - Thân, 12 cung, chính - phụ
-            tinh, Tứ Hóa, đại vận và tiểu vận trên cùng một biểu đồ trực quan.
-          </p>
+          <h2 id="la-so-co-gi">{content.overview.heading}</h2>
+          <p>{content.overview.intro}</p>
         </div>
         <div className="feature-overview-grid feature-overview-grid--six">
           {laSoOverviewCards.map((card) => (
             <article key={card.title} className="feature-card feature-card--landing feature-card--with-icon">
-              <span className="feature-card__icon" style={{ backgroundColor: `${card.color}15`, color: card.color }}>
+              <span className="feature-card__icon" aria-hidden="true" style={{ backgroundColor: `${card.color}15`, color: card.color }}>
                 {card.icon}
               </span>
               <h3>{card.title}</h3>
@@ -479,80 +440,110 @@ export default function ChartPage() {
             </article>
           ))}
         </div>
+        <h3 className="content-subheading">{content.overview.readingHeading}</h3>
+        <ol className="reading-steps">
+          {chartReadingSteps.map((step) => (
+            <li key={step.title}>
+              <strong>{step.title}</strong>
+              <span>{step.description}</span>
+            </li>
+          ))}
+        </ol>
       </section>
 
-      <section id="bac-phai-ai" className="content-section bac-phai-ai-section">
+      <section id="bac-phai-ai" className="content-section bac-phai-ai-section" aria-labelledby="bac-phai-heading">
         <div className="section-heading section-heading--compact">
-          <p className="eyebrow">✨ USP - Tử Vi Phong Lam</p>
-          <h2>Luận Giải Tử Vi Theo Phương Pháp Bắc Phái</h2>
-          <p>
-            Hệ thống kết hợp dữ liệu lá số với kho tri thức Tử Vi chuyên sâu để phân tích Mệnh - Thân, cung vị, tam
-            hợp, xung chiếu, Tứ Hóa, Phi Hóa và các yếu tố thời vận khi có đủ dữ liệu.
-          </p>
+          <p className="eyebrow">Tử Vi Phong Lam</p>
+          <h2 id="bac-phai-heading">{content.bacPhai.heading}</h2>
+          <p>{content.bacPhai.intro}</p>
         </div>
 
-        <div className="bac-phai-ai-flow" aria-label="Quy trình phân tích lá số">
-          <span className="bac-phai-ai-flow__step">Lá số</span>
-          <span className="bac-phai-ai-flow__arrow" aria-hidden="true">↓</span>
-          <span className="bac-phai-ai-flow__step">Phân tích cấu trúc</span>
-          <span className="bac-phai-ai-flow__arrow" aria-hidden="true">↓</span>
-          <span className="bac-phai-ai-flow__step">Knowledge Base</span>
-          <span className="bac-phai-ai-flow__arrow" aria-hidden="true">↓</span>
-          <span className="bac-phai-ai-flow__step">Tử Vi Bắc phái</span>
-          <span className="bac-phai-ai-flow__arrow" aria-hidden="true">↓</span>
-          <span className="bac-phai-ai-flow__step bac-phai-ai-flow__step--highlight">AI luận giải</span>
-        </div>
+        <ol className="bac-phai-ai-flow" aria-label="Thứ tự phân tích lá số">
+          {content.bacPhai.flow.map((step, index) => (
+            <li key={step} className="bac-phai-ai-flow__item">
+              <span className={`bac-phai-ai-flow__step${index === content.bacPhai.flow.length - 1 ? " bac-phai-ai-flow__step--highlight" : ""}`}>
+                {step}
+              </span>
+              {index < content.bacPhai.flow.length - 1 ? (
+                <span className="bac-phai-ai-flow__arrow" aria-hidden="true">↓</span>
+              ) : null}
+            </li>
+          ))}
+        </ol>
 
+        <p className="bac-phai-ai-note">{content.bacPhai.aiNote}</p>
         <p>
-          Tử Vi Bắc phái đọc lá số theo mạch vận động thay vì xét từng sao độc lập. Tứ Hóa (Hóa Lộc, Hóa Quyền, Hóa
-          Khoa, Hóa Kỵ) phát sinh từ Thiên Can năm sinh; Phi Hóa là khi lấy Thiên Can của một cung bất kỳ để tạo Tứ
-          Hóa mới bay sang cung khác, từ đó thấy được mối quan hệ động giữa các cung với nhau.{" "}
-          <Link to="/bai-viet/tu-vi-bac-phai-la-gi">Tìm hiểu chi tiết về Tử Vi Bắc phái</Link>.
+          {content.bacPhai.matching}{" "}
+          <Link to="/bai-viet/tu-vi-bac-phai-la-gi">Tìm hiểu thêm về Tử Vi Bắc phái</Link>.
         </p>
 
         <button type="button" className="primary-button" onClick={handleHeroInterpretCta}>
-          ✨ Luận giải lá số chuyên sâu
+          Luận giải lá số của tôi
         </button>
       </section>
 
-      <section className="content-section">
+      <section id="12-cung" className="content-section" aria-labelledby="muoi-hai-cung-heading">
         <div className="section-heading section-heading--compact">
-          <p className="eyebrow">Bố cục lá số</p>
-          <h2>Khám Phá 12 Cung Trong Lá Số Tử Vi</h2>
-          <p>Bấm vào một cung để xem mô tả chi tiết hơn.</p>
+          <h2 id="muoi-hai-cung-heading">{content.twelvePalacesSection.heading}</h2>
+          <p>
+            {content.twelvePalacesSection.intro}{" "}
+            <Link to={content.twelvePalacesSection.link.path}>{content.twelvePalacesSection.link.title}</Link>
+          </p>
         </div>
         <div className="seo-copy-grid seo-copy-grid--compact">
-          {twelvePalaces.map((palace) => {
+          {twelvePalaces.map((palace, index) => {
             const isOpen = expandedPalace === palace.name;
+            const detailId = `cung-detail-${index}`;
             return (
-              <article
-                key={palace.name}
-                className={`seo-copy-card seo-copy-card--compact seo-copy-card--clickable${isOpen ? " is-open" : ""}`}
-                role="button"
-                tabIndex={0}
-                aria-expanded={isOpen}
-                onClick={() => setExpandedPalace(isOpen ? null : palace.name)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setExpandedPalace(isOpen ? null : palace.name);
-                  }
-                }}
-              >
-                <h3>{palace.name}</h3>
+              <article key={palace.name} className={`seo-copy-card seo-copy-card--compact${isOpen ? " is-open" : ""}`}>
+                <h3>
+                  <button
+                    type="button"
+                    className="palace-toggle"
+                    aria-expanded={isOpen}
+                    aria-controls={detailId}
+                    onClick={() => setExpandedPalace(isOpen ? null : palace.name)}
+                  >
+                    Cung {palace.name}
+                  </button>
+                </h3>
                 <p>{palace.description}</p>
-                {isOpen && <p className="seo-copy-card__detail">{palace.detail}</p>}
+                <p id={detailId} className="seo-copy-card__detail" hidden={!isOpen}>
+                  {palace.detail}
+                </p>
               </article>
             );
           })}
         </div>
       </section>
 
-      <section className="content-section">
+      <section id="tu-hoa-phi-hoa" className="content-section" aria-labelledby="tu-hoa-heading">
         <div className="section-heading section-heading--compact">
-          <p className="eyebrow">📚 Kiến thức Tử Vi</p>
-          <h2>Khám Phá Kiến Thức Tử Vi</h2>
-          <p>Các chủ đề nền tảng để đọc lá số theo Tử Vi Bắc phái.</p>
+          <h2 id="tu-hoa-heading">{content.tuHoa.heading}</h2>
+          <p>{content.tuHoa.intro}</p>
+        </div>
+        <div className="seo-copy-grid seo-copy-grid--compact tu-hoa-grid">
+          {content.tuHoa.items.map((item) => (
+            <article key={item.title} className="seo-copy-card seo-copy-card--compact">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+        <p>{content.tuHoa.phiHoa}</p>
+        <ul className="knowledge-hub-list">
+          {content.tuHoa.links.map((link) => (
+            <li key={link.path}>
+              <Link to={link.path}>{link.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="content-section" aria-labelledby="kien-thuc-heading">
+        <div className="section-heading section-heading--compact">
+          <h2 id="kien-thuc-heading">{content.knowledgeSection.heading}</h2>
+          <p>{content.knowledgeSection.intro}</p>
         </div>
         <ul className="knowledge-hub-list">
           {knowledgeHubItems.map((item) =>
@@ -571,17 +562,17 @@ export default function ChartPage() {
 
       <FAQSection
         id="lap-la-so-faq"
-        eyebrow="❓ Câu hỏi thường gặp"
-        title="Câu Hỏi Thường Gặp"
-        description="Những thắc mắc phổ biến khi lập lá số và đọc theo Tử Vi Bắc phái."
+        eyebrow="Hỏi đáp"
+        title={content.faqSection.heading}
+        description={content.faqSection.intro}
         faqs={lapLaSoFaqs}
       />
 
-      <section className="content-section bottom-cta-section">
-        <h2>Sẵn sàng khám phá lá số của bạn?</h2>
-        <p>Chỉ mất chưa đến 1 phút để an Mệnh, Thân, 12 cung và Tứ Hóa theo ngày giờ sinh của bạn.</p>
+      <section className="content-section bottom-cta-section" aria-labelledby="cta-heading">
+        <h2 id="cta-heading">{content.bottomCta.heading}</h2>
+        <p>{content.bottomCta.text}</p>
         <button type="button" className="primary-button" onClick={() => scrollToSection("lap-la-so-form")}>
-          ✨ Lập Lá Số Ngay
+          Lập lá số ngay
         </button>
       </section>
     </div>

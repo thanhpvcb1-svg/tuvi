@@ -1,4 +1,95 @@
 {
+  "hero": {
+    "title": "Lập Lá Số Tử Vi Online Miễn Phí",
+    "subtitle": "Lập lá số và khám phá Tử Vi theo phương pháp Bắc phái, kết hợp hệ thống tri thức chuyên sâu và AI hỗ trợ luận giải."
+  },
+  "formSection": {
+    "heading": "Lập lá số tử vi online",
+    "intro": "Nhập ngày, tháng, năm sinh (dương lịch hoặc âm lịch), giờ sinh theo 12 canh giờ và giới tính. Năm xem dùng để hiển thị tiểu vận và lưu niên của năm bạn quan tâm.",
+    "unknownTimeNote": "Nếu không rõ giờ sinh, hãy tick \"Không rõ giờ sinh\" - lá số khi đó chỉ mang tính tham khảo vì giờ sinh quyết định vị trí cung Mệnh, cung Thân và nhiều sao."
+  },
+  "overview": {
+    "heading": "Lá số tử vi của bạn có gì?",
+    "intro": "Sau khi an sao, lá số hiển thị đầy đủ 12 cung với chính tinh, phụ tinh, độ sáng, Tứ Hóa, đại vận và tiểu vận trên cùng một biểu đồ.",
+    "readingHeading": "Nên đọc lá số theo thứ tự nào?",
+    "readingSteps": [
+      {
+        "title": "Kiểm tra dữ liệu nền",
+        "description": "Xem lại ngày sinh, loại lịch, giờ sinh và năm đang xem trước khi đọc kết quả."
+      },
+      {
+        "title": "Đọc Mệnh, Thân và các cung trọng tâm",
+        "description": "Bắt đầu từ Mệnh - Thân, sau đó đi vào Quan Lộc, Tài Bạch, Phu Thê hoặc cung đúng với câu hỏi của bạn."
+      },
+      {
+        "title": "Đặt vận năm vào toàn cục",
+        "description": "Dùng thanh chọn năm để xem tiểu vận, rồi đối chiếu với đại vận và các cung liên quan."
+      }
+    ]
+  },
+  "laSoOverviewCards": [
+    {
+      "icon": "☯",
+      "title": "Mệnh & Thân",
+      "description": "Giúp hiểu cấu trúc bản thân và trọng tâm của lá số.",
+      "color": "#8F3D2F"
+    },
+    {
+      "icon": "▦",
+      "title": "12 cung",
+      "description": "Phân tích các lĩnh vực quan trọng trong đời sống.",
+      "color": "#8B672C"
+    },
+    {
+      "icon": "△",
+      "title": "Mệnh – Tài – Quan",
+      "description": "Phân tích cấu trúc tam phương liên quan đến bản thân, tài chính và sự nghiệp.",
+      "color": "#3b6e8f"
+    },
+    {
+      "icon": "✦",
+      "title": "Tứ Hóa",
+      "description": "Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ theo dữ liệu và phương pháp được hệ thống hỗ trợ.",
+      "color": "#7a4d8f"
+    },
+    {
+      "icon": "⟳",
+      "title": "Đại vận",
+      "description": "Theo dõi các giai đoạn vận hạn 10 năm trên lá số.",
+      "color": "#2f7a5b"
+    },
+    {
+      "icon": "◷",
+      "title": "Tiểu vận / Lưu niên",
+      "description": "Phân tích các tầng thời gian nhỏ hơn theo năm xem bạn chọn.",
+      "color": "#9a5b22"
+    }
+  ],
+  "bacPhai": {
+    "heading": "Luận giải theo Tử Vi Bắc phái",
+    "intro": "Bắc phái đọc lá số theo mạch vận động giữa các cung, không kết luận từ một sao đứng riêng. Luận giải trên Tử Vi Phong Lam đi theo thứ tự:",
+    "flow": [
+      "Lá số",
+      "Mệnh – Thân",
+      "Tam phương tứ chính",
+      "Chính tinh + Phụ tinh",
+      "Tứ Hóa",
+      "Phi Hóa",
+      "Đại vận / Tiểu vận / Lưu niên",
+      "Knowledge Base Bắc phái",
+      "AI tổng hợp luận giải"
+    ],
+    "aiNote": "AI không thay thế phương pháp Tử Vi. AI sử dụng hệ thống tri thức và dữ liệu lá số để tổng hợp, đối chiếu và diễn giải.",
+    "matching": "Mỗi đoạn tri thức chỉ được dùng khi các điều kiện của nó - vị trí cung, sao tọa thủ, độ sáng, tam phương tứ chính, giáp cung, Tứ Hóa hoặc Phi Hóa - khớp với chính lá số của bạn, và luôn kèm nguồn sách hoặc tác giả khi có. Khi dữ liệu không đủ, hệ thống ghi rõ là chưa đủ để kết luận."
+  },
+  "twelvePalacesSection": {
+    "heading": "Khám phá 12 cung Tử Vi",
+    "intro": "Mỗi cung phản ánh một lĩnh vực; khi luận giải luôn xem cùng tam phương tứ chính của cung đó. Bấm vào một cung để xem mô tả chi tiết hơn.",
+    "link": {
+      "title": "Đọc thêm: 12 cung, đối cung và tam phương tứ chính",
+      "path": "/bai-viet/12-cung-trong-la-so-tu-vi"
+    }
+  },
   "twelvePalaces": [
     {
       "name": "Mệnh",
@@ -61,60 +152,67 @@
       "detail": "Phản ánh quan hệ anh chị em, bạn đồng hành và những người ngang vai gần gũi."
     }
   ],
-  "laSoOverviewCards": [
-    {
-      "icon": "👤",
-      "title": "Mệnh - Thân",
-      "description": "Khí chất, tính cách và bản chất con người thể hiện qua cung Mệnh và cung Thân.",
-      "color": "#e74c3c"
-    },
-    {
-      "icon": "💼",
-      "title": "Công Danh - Sự Nghiệp",
-      "description": "Hướng công việc, vai trò xã hội và nhịp phát triển sự nghiệp qua cung Quan Lộc.",
-      "color": "#3498db"
-    },
-    {
-      "icon": "💰",
-      "title": "Tài Bạch",
-      "description": "Dòng tiền, cách kiếm tiền và khả năng tích lũy tài chính.",
-      "color": "#f39c12"
-    },
-    {
-      "icon": "💑",
-      "title": "Phu Thê",
-      "description": "Tình cảm, hôn nhân và cách kết nối với người bạn đời.",
-      "color": "#e91e63"
-    },
-    {
-      "icon": "🏡",
-      "title": "Phúc Đức - Gia Đạo",
-      "description": "Đời sống tinh thần, phúc phần và nền tảng gia đình.",
-      "color": "#16a085"
-    },
-    {
-      "icon": "📅",
-      "title": "Đại Vận - Lưu Niên",
-      "description": "Đặt lá số vào từng giai đoạn 10 năm và từng năm cụ thể đang xem.",
-      "color": "#9b59b6"
-    }
-  ],
+  "tuHoa": {
+    "heading": "Tứ Hóa và Phi Hóa",
+    "intro": "Tứ Hóa sinh niên phát sinh từ Thiên Can năm sinh và gắn vào bốn sao cụ thể trên lá số. Ý nghĩa của mỗi Hóa phụ thuộc vào sao và cung mà nó rơi vào, không đơn giản là tốt hay xấu.",
+    "items": [
+      {
+        "title": "Hóa Lộc",
+        "description": "Xu hướng thuận lợi, tài lộc, cơ hội và sự tăng trưởng."
+      },
+      {
+        "title": "Hóa Quyền",
+        "description": "Xu hướng quyền hành, năng lực kiểm soát và sự chủ động."
+      },
+      {
+        "title": "Hóa Khoa",
+        "description": "Xu hướng danh tiếng, học vấn, quý nhân và sự hóa giải."
+      },
+      {
+        "title": "Hóa Kỵ",
+        "description": "Điểm vướng mắc, chấp niệm và những việc cần lưu tâm."
+      }
+    ],
+    "phiHoa": "Phi Hóa lấy Thiên Can của từng cung để hóa ra Lộc, Quyền, Khoa, Kỵ bay sang cung khác (phi nhập) hoặc hóa ngay tại cung đó (tự hóa), cho thấy cung nào đang tác động tới cung nào. Trên lá số, bạn có thể bật hiển thị Phi Hóa can cung để theo dõi trực tiếp.",
+    "links": [
+      {
+        "title": "Tứ Hóa Phi Tinh là gì?",
+        "path": "/bai-viet/tu-hoa-phi-tinh-la-gi"
+      },
+      {
+        "title": "Lộc - Quyền - Khoa - Kỵ có ý nghĩa gì?",
+        "path": "/bai-viet/loc-quyen-khoa-ky-co-y-nghia-gi"
+      },
+      {
+        "title": "Phi nhập và phi xuất là gì?",
+        "path": "/bai-viet/phi-nhap-va-phi-xuat-la-gi"
+      },
+      {
+        "title": "Tự hóa là gì?",
+        "path": "/bai-viet/tu-hoa-la-gi"
+      }
+    ]
+  },
+  "knowledgeSection": {
+    "heading": "Kiến thức Tử Vi",
+    "intro": "Các bài nền tảng để đọc lá số theo Tử Vi Bắc phái."
+  },
   "knowledgeHubItems": [
     {
       "title": "Tử Vi Bắc phái là gì?",
       "path": "/bai-viet/tu-vi-bac-phai-la-gi"
     },
     {
-      "title": "Mệnh là gì?",
-      "path": null
+      "title": "12 cung trong lá số Tử Vi",
+      "path": "/bai-viet/12-cung-trong-la-so-tu-vi"
     },
     {
-      "title": "Thân cư Mệnh là gì?",
-      "path": null
+      "title": "Cung Mệnh là gì?",
+      "path": "/bai-viet/cung-menh-la-gi"
     },
     {
-      "title": "Tứ Hóa là gì?",
-      "path": "/bai-viet/tu-hoa-la-gi"
+      "title": "Cung Thân và Thân cư là gì?",
+      "path": "/bai-viet/cung-than-la-gi"
     },
     {
       "title": "Tứ Hóa Phi Tinh là gì?",
@@ -127,6 +225,10 @@
     {
       "title": "Phi nhập và phi xuất là gì?",
       "path": "/bai-viet/phi-nhap-va-phi-xuat-la-gi"
+    },
+    {
+      "title": "Tự hóa là gì?",
+      "path": "/bai-viet/tu-hoa-la-gi"
     },
     {
       "title": "Đại vận và lưu niên trong Bắc phái",
@@ -145,30 +247,46 @@
       "path": null
     }
   ],
+  "faqSection": {
+    "heading": "Câu hỏi thường gặp",
+    "intro": "Những thắc mắc phổ biến khi lập lá số và đọc theo Tử Vi Bắc phái."
+  },
   "lapLaSoFaqs": [
     {
-      "question": "Lập lá số tử vi cần những thông tin gì?",
-      "answer": "Bạn cần ngày, tháng, năm sinh, giờ sinh (theo 12 khung giờ Tý - Hợi), giới tính, và năm muốn xem vận hạn. Giờ sinh càng chính xác thì vị trí cung và sao càng sát."
-    },
-    {
-      "question": "Không biết giờ sinh có lập lá số được không?",
-      "answer": "Có. Bạn có thể tick \"Không rõ giờ sinh\" để lập lá số dựa trên các dữ liệu còn lại. Hệ thống sẽ ghi chú rõ rằng kết quả mang tính tham khảo do thiếu giờ sinh chính xác."
-    },
-    {
-      "question": "Mệnh và Thân khác nhau như thế nào?",
-      "answer": "Mệnh phản ánh khí chất và bản chất con người ngay từ đầu đời. Thân thể hiện xu hướng phát triển và cách một người thể hiện ra bên ngoài, thường rõ hơn ở giai đoạn trưởng thành. Hai cung này luôn được xem cùng nhau."
+      "question": "Lá số tử vi là gì?",
+      "answer": "Lá số tử vi là bản đồ 12 cung được an từ ngày, tháng, năm, giờ sinh âm lịch và giới tính. Mỗi cung chứa chính tinh, phụ tinh và Tứ Hóa, dùng để chiêm nghiệm tính cách, xu hướng và các giai đoạn vận hạn. Đây là công cụ tham khảo, không phải lời phán định tuyệt đối."
     },
     {
       "question": "Tử Vi Bắc phái là gì?",
-      "answer": "Là cách đọc lá số theo mạch vận động: Mệnh - Thân, cung vị, chính - phụ tinh, tam hợp - xung chiếu, rồi đến Tứ Hóa và Phi Hóa, thay vì chỉ xét từng sao độc lập."
+      "answer": "Là trường phái Tử Vi Đẩu Số đặt trọng tâm vào Tứ Hóa và Phi Hóa theo Thiên Can của từng cung để thấy mạch vận động giữa các cung, thay vì chỉ luận từng sao đứng riêng."
+    },
+    {
+      "question": "Lá số cần giờ sinh chính xác không?",
+      "answer": "Có. Giờ sinh quyết định vị trí cung Mệnh, cung Thân và nhiều sao, nên lệch một canh giờ có thể cho ra lá số khác hẳn. Nếu không rõ giờ sinh, bạn vẫn có thể tick \"Không rõ giờ sinh\"; khi đó lá số chỉ mang tính tham khảo."
     },
     {
       "question": "Tứ Hóa là gì?",
-      "answer": "Tứ Hóa gồm Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ - phát sinh từ Thiên Can năm sinh, dùng để theo dõi xu hướng tăng trưởng, quyền lực, danh tiếng và các điểm cần lưu ý của lá số."
+      "answer": "Tứ Hóa gồm Hóa Lộc, Hóa Quyền, Hóa Khoa và Hóa Kỵ. Tứ Hóa sinh niên phát sinh từ Thiên Can năm sinh và gắn vào bốn sao cụ thể; ý nghĩa của mỗi Hóa phụ thuộc vào sao và cung mà nó rơi vào."
     },
     {
-      "question": "Luận giải AI dựa trên dữ liệu nào?",
-      "answer": "AI luận giải dựa trên chính dữ liệu lá số của bạn (cung, sao, Tứ Hóa, Phi Hóa) đối chiếu với kho tri thức Tử Vi Bắc phái đã biên soạn sẵn, không tự bịa nội dung. Kết quả vẫn mang tính tham khảo, không thay thế tư vấn chuyên môn."
+      "question": "Phi Hóa là gì?",
+      "answer": "Phi Hóa là khi lấy Thiên Can của một cung để hóa ra Lộc, Quyền, Khoa, Kỵ bay sang cung khác (phi nhập) hoặc hóa ngay tại cung đó (tự hóa). Phi Hóa cho thấy cung nào tác động tới cung nào - công cụ đặc trưng của Bắc phái."
+    },
+    {
+      "question": "AI luận giải Tử Vi hoạt động như thế nào?",
+      "answer": "Hệ thống an lá số trước, sau đó đối chiếu từng cung với kho tri thức: một đoạn tri thức chỉ được chọn khi các điều kiện của nó (vị trí cung, sao, độ sáng, Tứ Hóa, Phi Hóa...) khớp với lá số của bạn. AI chỉ tổng hợp và diễn giải từ dữ liệu lá số cùng các đoạn tri thức đã khớp, phân biệt rõ phần có nguồn, phần phân tích và phần thiếu dữ liệu."
+    },
+    {
+      "question": "AI có thay thế chuyên gia Tử Vi không?",
+      "answer": "Không. AI là công cụ hỗ trợ tra cứu và tổng hợp, không tự tạo quy tắc Tử Vi và không thay thế kinh nghiệm của người luận giải. Với những quyết định quan trọng, bạn nên trao đổi trực tiếp với chuyên gia."
+    },
+    {
+      "question": "Lá số được tính như thế nào?",
+      "answer": "Hệ thống quy đổi ngày sinh sang âm lịch (nếu nhập dương lịch), xác định Can Chi năm, tháng, ngày, giờ, rồi an cung Mệnh, cung Thân, Cục, 14 chính tinh, các phụ tinh, Tứ Hóa sinh niên, đại vận và tiểu vận theo quy tắc Tử Vi Đẩu Số. Việc tính toán thực hiện ngay trên trình duyệt; cùng dữ liệu đầu vào luôn cho cùng một lá số."
     }
-  ]
+  ],
+  "bottomCta": {
+    "heading": "Lập lá số ngay",
+    "text": "Chỉ cần ngày giờ sinh để an Mệnh, Thân, 12 cung và Tứ Hóa theo lá số của riêng bạn."
+  }
 }

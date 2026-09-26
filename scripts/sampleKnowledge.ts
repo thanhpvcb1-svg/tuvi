@@ -6,7 +6,8 @@
 import { createChart } from "../src/lib/iztroEngine";
 import type { NormalizedBirthInput } from "../src/lib/types";
 import { loadKnowledge, queryPalaceKnowledge } from "../src/lib/tuvi/knowledge/lazyKnowledgeService";
-import { checkConditionIndependently, checkTextScopeIndependently } from "./lib/knowledgeIndependentCheck";
+import { checkConditionIndependently, checkPeriodConditionIndependently, checkTextScopeIndependently } from "./lib/knowledgeIndependentCheck";
+import { getActivePalaceIndexes } from "../src/components/VanHanhSelector";
 
 const PALACES = ["Mệnh", "Phụ Mẫu", "Phúc Đức", "Điền Trạch", "Quan Lộc", "Nô Bộc", "Thiên Di", "Tật Ách", "Tài Bạch", "Tử Tức", "Phu Thê", "Huynh Đệ"];
 const KEY_PALACES = ["Mệnh", "Quan Lộc", "Tài Bạch", "Phu Thê"];
@@ -22,7 +23,7 @@ async function main() {
   await loadKnowledge();
   console.log(`Seed ${usedSeed} - ${count} lá số ngẫu nhiên (bật toàn bộ sao lưu, năm xem 2026)\n`);
 
-  const totals = { shown: 0, all: 0, ok: 0, wrong: 0, unchecked: 0, emptyPalaces: 0, scopeWrong: 0 };
+  const totals = { shown: 0, all: 0, ok: 0, wrong: 0, unchecked: 0, emptyPalaces: 0, scopeWrong: 0, period: 0, periodShown: 0 };
   const wrongs: string[] = [];
 
   for (let n = 1; n <= count; n++) {
@@ -36,6 +37,8 @@ async function main() {
     const chart = createChart(input, "tuvichancoCompatible", { luuOptions: LUU_OPTIONS, horoscopeDate: new Date(2026, 5, 15) } as any);
 
     const menh = chart.palaces.find((p) => p.name === "Mệnh")!;
+    const active = getActivePalaceIndexes(chart.palaces, 2026 - year, menh.earthlyBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
+    const years = { yearToView: 2026, birthYear: year };
     const body = chart.palaces.find((p) => p.isBodyPalace);
     console.log(
       `━━ #${n} ${day}/${month}/${year} (${calendarType === "lunar" ? "âm" : "dương"}) giờ ${HOURS[hourIndex]}, ${gender === "male" ? "Nam" : "Nữ"} ` +
@@ -45,15 +48,20 @@ async function main() {
     const row: string[] = [];
     for (const name of PALACES) {
       const palace = chart.palaces.find((p) => p.name === name)!;
-      const all = queryPalaceKnowledge({ chart, palace: palace as any, starsInPalace: [], branch: palace.earthlyBranch, limit: 10000 });
-      const shown = queryPalaceKnowledge({ chart, palace: palace as any, starsInPalace: [], branch: palace.earthlyBranch }); // đúng như UI
+      const all = queryPalaceKnowledge({ chart, palace: palace as any, starsInPalace: [], branch: palace.earthlyBranch, limit: 10000, ...years });
+      const shown = queryPalaceKnowledge({ chart, palace: palace as any, starsInPalace: [], branch: palace.earthlyBranch, ...years }); // đúng như UI
       totals.all += all.length;
       totals.shown += shown.length;
+      totals.periodShown += shown.filter((m) => m.interpretation.type === "period").length;
       if (all.length === 0) totals.emptyPalaces++;
       row.push(`${name} ${shown.length}${all.length > shown.length ? `/${all.length}` : ""}`);
 
       for (const match of all) {
-        const result = checkConditionIndependently(chart, match.interpretation.condition ?? "");
+        const isPeriod = match.interpretation.type === "period";
+        if (isPeriod) totals.period++;
+        const result = isPeriod
+          ? checkPeriodConditionIndependently(chart, match.interpretation.condition ?? "", active)
+          : checkConditionIndependently(chart, match.interpretation.condition ?? "");
         totals[result.status]++;
         const scope = checkTextScopeIndependently(chart, name, match.interpretation.condition ?? "", match.interpretation.text);
         if (scope.status === "wrong") {
@@ -79,6 +87,7 @@ async function main() {
   const checked = totals.ok + totals.wrong;
   console.log("━━ TỔNG KẾT");
   console.log(`Mục khớp: ${totals.all} (TB ${(totals.all / count / 12).toFixed(1)}/cung) → UI hiển thị ${totals.shown} (TB ${(totals.shown / count / 12).toFixed(1)}/cung, chỉ nhóm khớp nhiều điều kiện nhất); cung không có tri thức: ${totals.emptyPalaces}/${count * 12}`);
+  console.log(`Vận hạn năm 2026: khớp ${totals.period}, hiển thị ${totals.periodShown}`);
   console.log(`Phạm vi nội dung (giới tính / năm sinh / vị trí / chính tinh ở câu mở đầu): sai ${totals.scopeWrong}/${totals.all}`);
   console.log(`Kiểm độc lập: ${checked} mục → đúng ${totals.ok}, SAI ${totals.wrong} (${checked ? ((totals.ok / checked) * 100).toFixed(2) : "0"}% đúng); chưa kiểm được ${totals.unchecked}`);
   if (wrongs.length) console.log(`\n❌ Mục sai:\n- ${wrongs.slice(0, 30).join("\n- ")}`);

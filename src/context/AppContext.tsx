@@ -80,7 +80,7 @@ let chartModulesPromise: Promise<{
   buildQuickReadings: typeof import("../lib/chartUi").buildQuickReadings;
 }> | null = null;
 
-const loadChartModules = async () => {
+export const loadChartModules = async () => {
   if (!chartModulesPromise) {
     chartModulesPromise = Promise.all([
       import("../lib/iztroEngine"),
@@ -115,7 +115,7 @@ type NormalizedBirthInput = BirthInput & {
   birthHourIndex: number;
 };
 
-const normalizeBirthInput = (input: BirthInput): NormalizedBirthInput | null => {
+export const normalizeBirthInput = (input: BirthInput): NormalizedBirthInput | null => {
   const year = parseRequiredNumber(input.year, 1900, 2100);
   const month = parseRequiredNumber(input.month, 1, 12);
   const day = parseRequiredNumber(input.day, 1, 31);
