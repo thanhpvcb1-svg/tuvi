@@ -23,6 +23,7 @@ export type BirthInput = {
   calendarType: "solar" | "lunar";
   horoscopeYear: string;
   unknownBirthTime: boolean;
+  hidePersonalInfo: boolean;
 };
 
 export type StarView = DisplayStar;

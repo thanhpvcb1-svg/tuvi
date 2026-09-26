@@ -10,6 +10,7 @@ type Props = {
 };
 
 const SITE_URL = "https://tuviphonglam.com";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 const upsertMeta = (selector: string, attributes: Record<string, string>) => {
   let element = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -23,7 +24,7 @@ const upsertMeta = (selector: string, attributes: Record<string, string>) => {
   });
 };
 
-export default function SEOHead({ title, description, canonicalPath, ogImage = `${SITE_URL}/og-cover.svg`, schema, noindex = false }: Props) {
+export default function SEOHead({ title, description, canonicalPath, ogImage = DEFAULT_OG_IMAGE, schema, noindex = false }: Props) {
   useEffect(() => {
     document.title = title;
 

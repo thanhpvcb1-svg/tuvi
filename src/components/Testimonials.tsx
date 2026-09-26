@@ -4,6 +4,7 @@ export type Testimonial = {
   id: string;
   name: string;
   role?: string;
+  avatar?: string;
   content: string;
   rating: number;
   date?: string;
@@ -14,6 +15,7 @@ const defaultTestimonials: Testimonial[] = [
     id: "1",
     name: "Minh Anh",
     role: "Nhân viên văn phòng",
+    avatar: "👩‍💼",
     content: "Lần đầu xem tử vi online mà thấy rõ ràng và dễ hiểu. Phần luận giải AI giúp mình hiểu được tổng quan lá số mà không cần biết nhiều về tử vi.",
     rating: 5,
     date: "2 tuần trước",
@@ -22,6 +24,7 @@ const defaultTestimonials: Testimonial[] = [
     id: "2",
     name: "Hoàng Nam",
     role: "Chủ doanh nghiệp",
+    avatar: "👨‍💼",
     content: "Gói hỏi 1 câu rất hữu ích khi mình đang phân vân chuyện mở rộng kinh doanh. Câu trả lời đi thẳng vào vấn đề, không lan man.",
     rating: 5,
     date: "1 tháng trước",
@@ -30,6 +33,7 @@ const defaultTestimonials: Testimonial[] = [
     id: "3",
     name: "Thu Hà",
     role: "Giáo viên",
+    avatar: "👩‍🏫",
     content: "Mình thích cách trình bày lá số trực quan, dễ nhìn. Phần đại vận và tiểu vận hiển thị rõ ràng, tiện theo dõi theo từng năm.",
     rating: 5,
     date: "3 tuần trước",
@@ -38,6 +42,7 @@ const defaultTestimonials: Testimonial[] = [
     id: "4",
     name: "Đức Trung",
     role: "Kỹ sư IT",
+    avatar: "👨‍💻",
     content: "Trang web load nhanh, giao diện đẹp. Quan trọng là dữ liệu không lưu trên server nên yên tâm về bảo mật thông tin cá nhân.",
     rating: 4,
     date: "1 tuần trước",
@@ -91,9 +96,12 @@ export default function Testimonials({
               "{item.content}"
             </blockquote>
             <footer className="testimonial-author">
-              <strong>{item.name}</strong>
-              {item.role && <span>{item.role}</span>}
-              {item.date && <time>{item.date}</time>}
+              {item.avatar && <span className="testimonial-avatar">{item.avatar}</span>}
+              <div className="testimonial-author-info">
+                <strong>{item.name}</strong>
+                {item.role && <span>{item.role}</span>}
+                {item.date && <time>{item.date}</time>}
+              </div>
             </footer>
           </article>
         ))}

@@ -19,13 +19,15 @@ import {
   VideoPage,
   TermsPage,
   PrivacyPage,
+  AboutPage,
+  NotFoundPage,
 } from "./pages";
 import type { BirthInput } from "./lib/types";
 
 // ============ TYPES ============
 
-type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "video" | "terms" | "privacy";
-type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he";
+type MainPageId = "home" | "lap-la-so" | "bang-gia" | "la-so-mau" | "blog" | "faq" | "hop-tuoi" | "lien-he" | "video" | "terms" | "privacy" | "about" | "404";
+type HomeSectionId = "la-so-mau" | "kien-thuc" | "faq" | "premium" | "hop-tuoi" | "lien-he" | "gioi-thieu";
 
 const homeSectionRoutes: Record<HomeSectionId, string> = {
   "la-so-mau": "/la-so-mau",
@@ -34,6 +36,7 @@ const homeSectionRoutes: Record<HomeSectionId, string> = {
   faq: "/faq",
   "hop-tuoi": "/hop-tuoi",
   "lien-he": "/lien-he",
+  "gioi-thieu": "/gioi-thieu",
 };
 
 // ============ MAIN APP CONTENT ============
@@ -76,6 +79,10 @@ function AppContent() {
       setActivePage("terms");
     } else if (path === "/chinh-sach-bao-mat" || path === "/privacy") {
       setActivePage("privacy");
+    } else if (path === "/gioi-thieu" || path === "/about" || path === "/ve-chung-toi") {
+      setActivePage("about");
+    } else if (path === "/404") {
+      setActivePage("404");
     } else {
       setActivePage("home");
     }
@@ -139,6 +146,10 @@ function AppContent() {
         return <TermsPage />;
       case "privacy":
         return <PrivacyPage />;
+      case "about":
+        return <AboutPage />;
+      case "404":
+        return <NotFoundPage />;
       default:
         return <HomePage onNavigateChartForm={navigateChartForm} onNavigateSection={navigateHomeSection} />;
     }
@@ -166,10 +177,10 @@ function AppContent() {
             <button type="button" className={getNavLinkClass("/")} onClick={navigateHome}>Trang chủ</button>
             <button type="button" className={getNavLinkClass("/lap-la-so")} onClick={navigateChartForm}>Lập lá số</button>
             <button type="button" className={getNavLinkClass("/la-so-mau")} onClick={() => navigateHomeSection("la-so-mau")}>Lá số mẫu</button>
-            <button type="button" className={getNavLinkClass("/hop-tuoi")} onClick={() => navigateHomeSection("hop-tuoi")}>Hợp tuổi</button>
             <button type="button" className={getNavLinkClass("/bai-viet")} onClick={() => navigateHomeSection("kien-thuc")}>Bài viết</button>
             <button type="button" className={getNavLinkClass("/video")} onClick={() => navigate("/video")}>Video</button>
             <button type="button" className={getNavLinkClass("/bang-gia")} onClick={() => navigateHomeSection("premium")}>Bảng giá</button>
+            <button type="button" className={getNavLinkClass("/ve-chung-toi")} onClick={() => navigate("/ve-chung-toi")}>Về chúng tôi</button>
             <button type="button" className={getNavLinkClass("/lien-he")} onClick={() => navigateHomeSection("lien-he")}>Liên hệ</button>
           </nav>
 
@@ -209,10 +220,10 @@ function AppContent() {
                 <button type="button" className={getNavLinkClass("/")} onClick={navigateHome}>Trang chủ</button>
                 <button type="button" className={getNavLinkClass("/lap-la-so")} onClick={navigateChartForm}>Lập lá số</button>
                 <button type="button" className={getNavLinkClass("/la-so-mau")} onClick={() => navigateHomeSection("la-so-mau")}>Lá số mẫu</button>
-                <button type="button" className={getNavLinkClass("/hop-tuoi")} onClick={() => navigateHomeSection("hop-tuoi")}>Hợp tuổi</button>
                 <button type="button" className={getNavLinkClass("/bai-viet")} onClick={() => navigateHomeSection("kien-thuc")}>Bài viết</button>
                 <button type="button" className={getNavLinkClass("/video")} onClick={() => { closeMobileMenu(); navigate("/video"); }}>Video</button>
                 <button type="button" className={getNavLinkClass("/bang-gia")} onClick={() => navigateHomeSection("premium")}>Bảng giá</button>
+                <button type="button" className={getNavLinkClass("/ve-chung-toi")} onClick={() => { closeMobileMenu(); navigate("/ve-chung-toi"); }}>Về chúng tôi</button>
                 <button type="button" className={getNavLinkClass("/lien-he")} onClick={() => navigateHomeSection("lien-he")}>Liên hệ</button>
               </div>
               <div className="mobile-menu-cta">

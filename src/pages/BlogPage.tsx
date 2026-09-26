@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import BacPhaiArticlePage from "../components/BacPhaiArticlePage";
 import BacPhaiLibraryPage from "../components/BacPhaiLibraryPage";
+import Breadcrumb from "../components/Breadcrumb";
 import SEOHead from "../components/SEOHead";
 import { findKnowledgeArticleByPath, knowledgeArticles } from "../content/bacPhaiLibrary";
 import { organizationSchema, articleListSchema, breadcrumbSchema, articleSchema } from "../schemas/seoSchemas";
@@ -30,6 +31,11 @@ export default function BlogPage() {
             ]),
           ]}
         />
+        <Breadcrumb items={[
+          { label: "Trang chủ", path: "/" },
+          { label: "Bài viết", path: "/bai-viet" },
+          { label: currentArticle.title },
+        ]} />
         <BacPhaiArticlePage article={currentArticle} relatedArticles={relatedArticles} />
       </div>
     );
@@ -47,6 +53,10 @@ export default function BlogPage() {
           breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bài viết", path: "/bai-viet" }]),
         ]}
       />
+      <Breadcrumb items={[
+        { label: "Trang chủ", path: "/" },
+        { label: "Bài viết" },
+      ]} />
       <BacPhaiLibraryPage articles={knowledgeArticles} />
     </div>
   );

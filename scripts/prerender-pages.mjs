@@ -181,6 +181,20 @@ const routes = [
     `,
   },
   {
+    route: "/ve-chung-toi",
+    title: "Về Chúng Tôi - TuViPhongLam | Chuyên Gia Tử Vi Bắc Phái",
+    description:
+      "TuViPhongLam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái chính thống.",
+    body: `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>Về TuViPhongLam</h1>
+          <p>Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái chính thống với hơn 30,000 luận giải tri thức.</p>
+        </section>
+      </main>
+    `,
+  },
+  {
     route: "/hop-tuoi",
     title: "Hợp Tuổi Theo Lá Số - Chuẩn Bị Dữ Liệu So Khớp Quan Hệ",
     description:

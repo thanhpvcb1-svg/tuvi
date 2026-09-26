@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Analytics from "../lib/analytics";
 
 type LeadData = {
   name: string;
@@ -14,9 +15,11 @@ type Props = {
   title?: string;
   description?: string;
   compact?: boolean;
+  formLocation?: string;
 };
 
 const STORAGE_KEY = "lead_capture_submitted";
+const WEBHOOK_URL = import.meta.env.VITE_LEAD_WEBHOOK_URL || "";
 
 const interestOptions = [
   { value: "", label: "Chọn chủ đề quan tâm" },
@@ -34,6 +37,7 @@ export default function LeadCaptureForm({
   title = "Đăng ký nhận hỗ trợ từ chuyên gia",
   description = "Để lại thông tin, chúng tôi sẽ liên hệ tư vấn gói phù hợp với nhu cầu của bạn.",
   compact = false,
+  formLocation = "unknown",
 }: Props) {
   const [formData, setFormData] = useState<LeadData>({
     name: "",
@@ -89,14 +93,34 @@ export default function LeadCaptureForm({
     setIsSubmitting(true);
 
     try {
-      // Lưu vào localStorage để demo
-      const leads = JSON.parse(localStorage.getItem("captured_leads") || "[]");
-      leads.push({
+      const leadPayload = {
         ...formData,
         timestamp: new Date().toISOString(),
         source: window.location.pathname,
-      });
+        formLocation,
+        userAgent: navigator.userAgent,
+      };
+
+      // Lưu vào localStorage như backup
+      const leads = JSON.parse(localStorage.getItem("captured_leads") || "[]");
+      leads.push(leadPayload);
       localStorage.setItem("captured_leads", JSON.stringify(leads));
+
+      // Gửi đến webhook nếu có cấu hình
+      if (WEBHOOK_URL) {
+        try {
+          await fetch(WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(leadPayload),
+          });
+        } catch (webhookError) {
+          console.warn("Webhook failed, lead saved locally:", webhookError);
+        }
+      }
+
+      // Track analytics
+      Analytics.leadFormSubmitted(formLocation, formData.interest);
 
       // Gọi callback nếu có
       onSubmit?.(formData);

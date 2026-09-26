@@ -220,12 +220,29 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
   onRequestGemini?: () => void;
 }) {
   const [showAll, setShowAll] = useState(false);
+  const [showAiResult, setShowAiResult] = useState(false);
   const sortedMatches = useMemo(() => sortKnowledgeByPriority(analysis.knowledgeMatches), [analysis.knowledgeMatches]);
   const displayCount = showAll ? sortedMatches.length : 3;
   const hasMore = sortedMatches.length > 3;
   const knowledgeCount = analysis.knowledgeMatches.length;
-  // API key được cấu hình trên Cloudflare server-side
   const hasGeminiKey = true;
+
+  // Khi có kết quả AI thì tự động show
+  useEffect(() => {
+    if (analysis.geminiAnalysis) setShowAiResult(true);
+  }, [analysis.geminiAnalysis]);
+
+  const handleRequestAi = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (analysis.geminiAnalysis) {
+      // Đã có kết quả -> toggle hiển thị
+      setShowAiResult(!showAiResult);
+    } else {
+      // Chưa có -> gọi API
+      setShowAiResult(true);
+      onRequestGemini?.();
+    }
+  };
 
   return (
     <div className={`analysis-palace-card ${isExpanded ? "is-expanded" : ""}`}>
@@ -257,36 +274,37 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini }: {
         <div className="analysis-palace-content">
           <p className="analysis-palace-meaning">{analysis.meaning}</p>
 
-          {/* Gemini AI Analysis Section */}
+          {/* AI Button - compact */}
           {hasGeminiKey && sortedMatches.length > 0 && (
-            <div className="analysis-gemini">
-              <div className="analysis-gemini-header">
-                <span className="analysis-star-label">🤖 AI Luận giải:</span>
-                {!analysis.geminiAnalysis && !analysis.geminiLoading && (
-                  <button
-                    type="button"
-                    className="analysis-gemini-btn"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onRequestGemini?.();
-                    }}
-                  >
-                    Luận bằng AI
-                  </button>
+            <div className="analysis-ai-compact">
+              <button
+                type="button"
+                className={`analysis-ai-btn ${analysis.geminiAnalysis ? "has-result" : ""} ${analysis.geminiLoading ? "is-loading" : ""}`}
+                onClick={handleRequestAi}
+                disabled={analysis.geminiLoading}
+              >
+                {analysis.geminiLoading ? (
+                  <>⏳ Đang phân tích...</>
+                ) : analysis.geminiAnalysis ? (
+                  <>{showAiResult ? "📖 Ẩn giải nghĩa" : "📖 Xem giải nghĩa chi tiết"}</>
+                ) : (
+                  <>📖 Giải nghĩa chi tiết</>
                 )}
-              </div>
-              {analysis.geminiLoading && (
-                <ExpertThinkingLoader messages={PALACE_THINKING_MESSAGES} variant="inline" />
-              )}
-              {analysis.geminiError && (
-                <div className="analysis-gemini-error">
-                  {analysis.geminiError}
-                </div>
-              )}
-              {analysis.geminiAnalysis && (
-                <div className="analysis-gemini-content">
-                  {analysis.geminiAnalysis}
-                </div>
+              </button>
+              
+              {/* AI Result - chỉ show khi có và được bật */}
+              {showAiResult && (
+                <>
+                  {analysis.geminiLoading && (
+                    <ExpertThinkingLoader messages={PALACE_THINKING_MESSAGES} variant="inline" />
+                  )}
+                  {analysis.geminiError && (
+                    <div className="analysis-gemini-error">{analysis.geminiError}</div>
+                  )}
+                  {analysis.geminiAnalysis && (
+                    <div className="analysis-gemini-content">{analysis.geminiAnalysis}</div>
+                  )}
+                </>
               )}
             </div>
           )}

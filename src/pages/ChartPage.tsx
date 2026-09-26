@@ -253,6 +253,7 @@ export default function ChartPage() {
                   showTieuVanHighlight={!isDownloadingImage}
                   showLocKyNhap={luuOptions.showLocKyNhap}
                   showPhiHoaCanCung={luuOptions.showPhiHoaCanCung}
+                  hidePersonalInfo={submittedInput.hidePersonalInfo}
                   activePalaceIndexes={(() => {
                     const age = horoscopeYear - (parseInt(submittedInput.year, 10) || horoscopeYear);
                     const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;

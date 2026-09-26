@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import SampleChartsSection, { type SampleChartPreset } from "../components/SampleChartsSection";
 import SEOHead from "../components/SEOHead";
@@ -7,59 +7,44 @@ import type { BirthInput } from "../lib/types";
 
 const currentYear = new Date().getFullYear();
 
-const sampleCharts: SampleChartPreset[] = [
-  {
-    id: "sample-1",
-    label: "Lá số mẫu 1",
-    subtitle: "Người sinh năm 1996 · Nam",
+// Random helpers
+const rand = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
+
+const getDaysInMonth = (year: number, month: number) => new Date(year, month, 0).getDate();
+
+function generateRandomSample(id: string, label: string, unknownTime = false): SampleChartPreset {
+  const year = rand(1970, 2010);
+  const month = rand(1, 12);
+  const maxDay = getDaysInMonth(year, month);
+  const day = rand(1, maxDay);
+  const gender = pick(["male", "female"] as const);
+  const hour = unknownTime ? "" : String(rand(0, 23));
+  const minute = unknownTime ? "" : String(rand(0, 59));
+
+  const genderLabel = gender === "male" ? "Nam" : "Nữ";
+  const subtitle = unknownTime
+    ? `Người sinh năm ${year} · Chưa rõ giờ sinh`
+    : `Người sinh năm ${year} · ${genderLabel}`;
+
+  return {
+    id,
+    label,
+    subtitle,
     input: {
-      fullName: "Lá số mẫu 1",
-      year: "1996",
-      month: "8",
-      day: "17",
-      birthHour: "9",
-      birthMinute: "30",
-      gender: "male",
+      fullName: label,
+      year: String(year),
+      month: String(month),
+      day: String(day),
+      birthHour: hour,
+      birthMinute: minute,
+      gender,
       calendarType: "solar",
       horoscopeYear: String(currentYear),
-      unknownBirthTime: false,
+      unknownBirthTime: unknownTime,
     },
-  },
-  {
-    id: "sample-2",
-    label: "Lá số mẫu 2",
-    subtitle: "Người sinh năm 1989 · Nữ",
-    input: {
-      fullName: "Lá số mẫu 2",
-      year: "1989",
-      month: "12",
-      day: "4",
-      birthHour: "15",
-      birthMinute: "0",
-      gender: "female",
-      calendarType: "solar",
-      horoscopeYear: String(currentYear),
-      unknownBirthTime: false,
-    },
-  },
-  {
-    id: "sample-3",
-    label: "Lá số mẫu 3",
-    subtitle: "Người sinh năm 2001 · Chưa rõ giờ sinh",
-    input: {
-      fullName: "Lá số mẫu 3",
-      year: "2001",
-      month: "3",
-      day: "22",
-      birthHour: "",
-      birthMinute: "",
-      gender: "female",
-      calendarType: "solar",
-      horoscopeYear: String(currentYear),
-      unknownBirthTime: true,
-    },
-  },
-];
+  };
+}
 
 type Props = {
   onNavigateChartForm: () => void;
@@ -68,6 +53,13 @@ type Props = {
 
 export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromInput }: Props) {
   const navigate = useNavigate();
+
+  // Generate random samples on each page load
+  const sampleCharts = useMemo(() => [
+    generateRandomSample("sample-1", "Lá số mẫu 1"),
+    generateRandomSample("sample-2", "Lá số mẫu 2"),
+    generateRandomSample("sample-3", "Lá số mẫu 3", true), // Chưa rõ giờ sinh
+  ], []);
 
   return (
     <div className="home-page">

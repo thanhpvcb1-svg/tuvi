@@ -6,6 +6,7 @@ import LeadCaptureForm from "../components/LeadCaptureForm";
 import PremiumPlans, { type PricingPlan } from "../components/PremiumPlans";
 import PrivacyNotice from "../components/PrivacyNotice";
 import SEOHead from "../components/SEOHead";
+import StatsCounter from "../components/StatsCounter";
 import Testimonials from "../components/Testimonials";
 import TrustBadges from "../components/TrustBadges";
 import { homeFaqs } from "../utils/appUtils";
@@ -56,6 +57,8 @@ export default function HomePage({ onNavigateChartForm, onNavigateSection }: Pro
       </section>
 
       <HomeShowcase />
+      
+      <StatsCounter />
       
       <PremiumPlans
         eyebrow="Luận giải theo nhu cầu"

@@ -12,6 +12,7 @@ const footerLinks = [
 ];
 
 const legalLinks = [
+  { label: "Về chúng tôi", href: "/ve-chung-toi" },
   { label: "Chính sách bảo mật", href: "/chinh-sach-bao-mat" },
   { label: "Điều khoản sử dụng", href: "/dieu-khoan-su-dung" },
   { label: "Liên hệ", href: "/lien-he" },

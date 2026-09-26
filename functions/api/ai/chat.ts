@@ -1,10 +1,12 @@
 /**
  * Cloudflare Pages Function - AI Chat Tử Vi
  * Trả lời câu hỏi về lá số dựa trên context
+ * Hỗ trợ: Cloudflare Workers AI (primary) + Google Gemini (fallback)
  */
 
 interface Env {
-  AI: Ai;
+  AI?: Ai;
+  GEMINI_API_KEY?: string;
 }
 
 interface PalaceInfo {
@@ -105,6 +107,33 @@ function buildMessages(body: RequestBody): Array<{ role: string; content: string
   return messages;
 }
 
+async function callGeminiAPI(apiKey: string, messages: Array<{ role: string; content: string }>): Promise<string> {
+  const contents = messages
+    .filter((m) => m.role !== "system")
+    .map((m) => ({
+      role: m.role === "assistant" ? "model" : "user",
+      parts: [{ text: m.content }],
+    }));
+
+  const systemInstruction = messages.find((m) => m.role === "system")?.content || "";
+
+  const response = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents,
+        systemInstruction: { parts: [{ text: systemInstruction }] },
+        generationConfig: { maxOutputTokens: 800, temperature: 0.7 },
+      }),
+    }
+  );
+
+  const data = await response.json() as any;
+  return data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+}
+
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { env, request } = context;
 
@@ -114,9 +143,12 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     "Access-Control-Allow-Headers": "Content-Type",
   };
 
-  if (!env.AI) {
+  const hasAI = !!env.AI;
+  const hasGemini = !!env.GEMINI_API_KEY;
+
+  if (!hasAI && !hasGemini) {
     return new Response(
-      JSON.stringify({ success: false, error: "AI binding chưa được cấu hình" }),
+      JSON.stringify({ success: false, error: "Chưa cấu hình AI service" }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
@@ -139,16 +171,26 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     const messages = buildMessages(body);
+    let text = "";
 
-    const response = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
-      messages,
-      max_tokens: 800,
-      temperature: 0.7,
-    });
-
-    const text = (response as any)?.response
-      || (response as any)?.choices?.[0]?.message?.content
-      || "";
+    // Try Cloudflare AI first, fallback to Gemini
+    if (hasAI) {
+      try {
+        const response = await env.AI!.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+          messages,
+          max_tokens: 800,
+          temperature: 0.7,
+        });
+        text = (response as any)?.response || (response as any)?.choices?.[0]?.message?.content || "";
+      } catch (aiError) {
+        console.error("Cloudflare AI error, trying Gemini:", aiError);
+        if (hasGemini) {
+          text = await callGeminiAPI(env.GEMINI_API_KEY!, messages);
+        }
+      }
+    } else if (hasGemini) {
+      text = await callGeminiAPI(env.GEMINI_API_KEY!, messages);
+    }
 
     if (!text) {
       return new Response(

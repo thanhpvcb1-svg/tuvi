@@ -3,13 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Analytics - Replace GA_MEASUREMENT_ID with your actual ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Google Analytics 4 -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
+      window.GA_MEASUREMENT_ID = '__GA_MEASUREMENT_ID__';
+      if (window.GA_MEASUREMENT_ID && !window.GA_MEASUREMENT_ID.includes('__')) {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+        document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', window.GA_MEASUREMENT_ID, {
+          send_page_view: true,
+          cookie_flags: 'SameSite=None;Secure'
+        });
+      }
     </script>
     <title>Lập Lá Số Tử Vi Online Miễn Phí | TuViPhongLam</title>
     <meta
@@ -20,16 +29,34 @@
     <meta name="theme-color" content="#fffbf4" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://tuviphonglam.com/" />
+    <link rel="alternate" hreflang="vi" href="https://tuviphonglam.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://tuviphonglam.com/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <meta property="og:title" content="Lập Lá Số Tử Vi Online Miễn Phí | TuViPhongLam" />
     <meta property="og:description" content="Lập lá số tử vi miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung. Luận giải từ 50.000đ." />
-    <meta property="og:image" content="https://tuviphonglam.com/og-cover.svg" />
+    <meta property="og:image" content="https://tuviphonglam.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tuviphonglam.com/" />
     <meta property="og:site_name" content="TuViPhongLam" />
@@ -37,7 +64,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lập Lá Số Tử Vi Online Miễn Phí | TuViPhongLam" />
     <meta name="twitter:description" content="Lập lá số tử vi miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung. Luận giải từ 50.000đ." />
-    <meta name="twitter:image" content="https://tuviphonglam.com/og-cover.svg" />
+    <meta name="twitter:image" content="https://tuviphonglam.com/og-image.png" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

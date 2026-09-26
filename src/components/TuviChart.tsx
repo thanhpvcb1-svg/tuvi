@@ -56,6 +56,7 @@ type Props = {
   showLocKyNhap?: boolean;
   showPhiHoaCanCung?: boolean;
   showTieuVanHighlight?: boolean;
+  hidePersonalInfo?: boolean;
 };
 
 function getCellCenter(slotIndex: number) {
@@ -156,6 +157,7 @@ export default function TuviChart({
   showLocKyNhap = false,
   showPhiHoaCanCung = true,
   showTieuVanHighlight = true,
+  hidePersonalInfo = false,
 }: Props) {
   const chartRef = useRef<HTMLElement>(null);
   const [showScrollHint, setShowScrollHint] = useState(false);
@@ -290,7 +292,7 @@ export default function TuviChart({
               if (branch === null) {
                 return index === 5 ? (
                   <div key={index} className="center-slot">
-                    <ChartCenter chart={chart} />
+                    <ChartCenter chart={chart} hidePersonalInfo={hidePersonalInfo} />
                   </div>
                 ) : null;
               }

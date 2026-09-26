@@ -60,6 +60,7 @@ const defaultInput: BirthInput = {
   calendarType: "solar",
   horoscopeYear: String(currentYear),
   unknownBirthTime: false,
+  hidePersonalInfo: false,
 };
 
 const getDefaultLuuOptions = (): LuuDisplayOptions => ({
@@ -144,10 +145,6 @@ const validateBirthInput = (input: BirthInput): FormErrors => {
   const month = parseRequiredNumber(input.month, 1, 12);
   const day = parseRequiredNumber(input.day, 1, 31);
   const horoscopeYear = parseRequiredNumber(input.horoscopeYear, 1900, 2100);
-
-  if (!input.fullName.trim()) {
-    errors.fullName = "Vui lòng nhập tên hiển thị.";
-  }
 
   if (!input.day.trim() || !input.month.trim() || !input.year.trim()) {
     errors.day = "Vui lòng chọn đầy đủ ngày sinh.";

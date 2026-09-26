@@ -12,6 +12,11 @@ dist-old-locktest/
 .claude/
 .repo-git/
 
+# Environment variables (secrets)
+.dev.vars
+.env
+.env.local
+
 # Temporary verification and reports
 .tmp-verify/
 reports/

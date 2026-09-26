@@ -1,4 +1,4 @@
-﻿import type { ChartView } from "../lib/types";
+import type { ChartView } from "../lib/types";
 
 function padDatePart(value: string) {
   return value.padStart(2, "0");
@@ -26,7 +26,19 @@ function formatDisplayDate(value: string | undefined) {
   return text;
 }
 
-export default function ChartCenter({ chart }: { chart: ChartView }) {
+const HIDDEN = "******";
+
+function maskValue(value: string | undefined, hide: boolean) {
+  if (!hide || !value) return value;
+  return HIDDEN;
+}
+
+type Props = {
+  chart: ChartView;
+  hidePersonalInfo?: boolean;
+};
+
+export default function ChartCenter({ chart, hidePersonalInfo = false }: Props) {
   const { profile } = chart;
   const bodyPalace = chart.palaces.find((palace) => palace.isBodyPalace);
   const anThanDisplay = bodyPalace?.name ?? profile.bodyPalaceBranch ?? "";
@@ -36,6 +48,8 @@ export default function ChartCenter({ chart }: { chart: ChartView }) {
   const nguHanhBanMenh = profile.nguHanhBanMenh;
   const nguHanhBanMenhDisplay =
     nguHanhBanMenh?.napAm || nguHanhBanMenh?.hanh || profile.natalElementName || "";
+
+  const hide = hidePersonalInfo;
 
   return (
     <div className="center-main">
@@ -47,27 +61,27 @@ export default function ChartCenter({ chart }: { chart: ChartView }) {
           <tbody>
             <tr>
               <td>Họ tên</td>
-              <td>{profile.fullName || "Chưa nhập"}</td>
+              <td>{maskValue(profile.fullName, hide) || "Chưa nhập"}</td>
             </tr>
             <tr>
               <td>Dương lịch</td>
-              <td>{solarDate}</td>
+              <td>{maskValue(solarDate, hide)}</td>
             </tr>
             <tr>
               <td>Âm lịch</td>
-              <td>{lunarDate}</td>
+              <td>{maskValue(lunarDate, hide)}</td>
             </tr>
             <tr>
               <td>Tứ trụ</td>
-              <td>{profile.chineseDate}</td>
+              <td>{maskValue(profile.chineseDate, hide)}</td>
             </tr>
             <tr>
               <td>Giới tính</td>
-              <td>{profile.yinYangLabel ?? profile.gender}</td>
+              <td>{maskValue(profile.yinYangLabel ?? profile.gender, hide)}</td>
             </tr>
             <tr>
               <td>Giờ sinh</td>
-              <td>{profile.birthTime}</td>
+              <td>{maskValue(profile.birthTime, hide)}</td>
             </tr>
             <tr>
               <td>Mệnh</td>
