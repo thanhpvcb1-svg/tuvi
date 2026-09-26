@@ -4,7 +4,7 @@
  * API Key được cấu hình trên Cloudflare Dashboard
  */
 
-import type { KnowledgeMatch } from "./tuvi/knowledge/knowledgeService";
+import type { KnowledgeMatch } from "./tuvi/knowledge/lazyKnowledgeService";
 
 // ============ TYPES ============
 

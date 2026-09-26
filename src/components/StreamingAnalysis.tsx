@@ -1,13 +1,16 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
 import type { ChartView, PalaceView } from "../lib/types";
+import TuviChatbot from "./TuviChatbot";
 import { findPalace, getPalaceMeaning } from "../lib/chartUi";
 import {
   queryPalaceKnowledge,
   extractStarsFromPalace,
   extractMutagensFromPalace,
   extractPhiHoaFlows,
+  isKnowledgeReady,
+  loadKnowledge,
   type KnowledgeMatch,
-} from "../lib/tuvi/knowledge/knowledgeService";
+} from "../lib/tuvi/knowledge/lazyKnowledgeService";
 import { callGeminiLuanGiai, callGeminiTongHop, type PalaceSummary } from "../lib/geminiService";
 import type { DisplayPalace } from "../lib/tuvi/config/types";
 
@@ -331,14 +334,30 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [geminiStates, setGeminiStates] = useState<Map<string, { loading: boolean; analysis?: string; error?: string }>>(new Map());
   const [tongHopState, setTongHopState] = useState<TongHopState>({ loading: false });
+  const [knowledgeLoaded, setKnowledgeLoaded] = useState(isKnowledgeReady());
   const hasGeminiKey = true; // API key được cấu hình trên Cloudflare server-side
 
+  // Load knowledge khi component active
+  useEffect(() => {
+    if (!isActive) return;
+    if (isKnowledgeReady()) {
+      setKnowledgeLoaded(true);
+      return;
+    }
+    
+    loadKnowledge().then(() => {
+      setKnowledgeLoaded(true);
+    }).catch((err) => {
+      console.error("[StreamingAnalysis] Failed to load knowledge:", err);
+    });
+  }, [isActive]);
+
   const baseAnalyses = useMemo(() => {
-    if (!chart) return [];
+    if (!chart || !knowledgeLoaded) return [];
     return PALACE_CONFIG
       .map((config) => analyzePalace(chart, config))
       .filter((a): a is PalaceAnalysis => a !== null);
-  }, [chart]);
+  }, [chart, knowledgeLoaded]);
 
   // Merge gemini states into analyses
   const analyses = useMemo(() => {
@@ -657,6 +676,13 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
           <div className="analysis-footer">
             <p>💡 Nội dung chỉ mang tính tham khảo. Để được luận giải chuyên sâu, vui lòng liên hệ tư vấn.</p>
           </div>
+
+          {/* Chatbot hỏi đáp */}
+          <TuviChatbot
+            chart={chart}
+            isVisible={true}
+            userContext={userContext}
+          />
         </>
       )}
     </div>

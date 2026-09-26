@@ -2,12 +2,10 @@ import { buildQuickReadings, findPalace, getPalaceMeaning, getTopStars } from ".
 import type { BirthInput, ChartView, PalaceView, StarView } from "./types";
 import {
   queryPalaceKnowledge,
-  extractStarsFromPalace,
-  extractMutagensFromPalace,
   extractPhiHoaFlows,
   hasPalaceKnowledge,
   type PalaceQueryContext,
-} from "./tuvi/knowledge/knowledgeService";
+} from "./tuvi/knowledge/lazyKnowledgeService";
 
 export type AIAnalysisMode = "basic" | "bac-phai";
 

@@ -1,0 +1,11 @@
+export { default as HomePage } from "./HomePage";
+export { default as ChartPage } from "./ChartPage";
+export { default as PricingPage } from "./PricingPage";
+export { default as SampleChartsPage } from "./SampleChartsPage";
+export { default as ContactPage } from "./ContactPage";
+export { default as CompatPage } from "./CompatPage";
+export { default as FAQPage } from "./FAQPage";
+export { default as BlogPage } from "./BlogPage";
+export { default as VideoPage } from "./VideoPage";
+export { default as TermsPage } from "./TermsPage";
+export { default as PrivacyPage } from "./PrivacyPage";
