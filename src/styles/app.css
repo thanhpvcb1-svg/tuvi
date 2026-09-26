@@ -11151,6 +11151,12 @@ h4,
   gap: 10px;
 }
 
+.form-row--4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 .form-row--between {
   justify-content: space-between;
   align-items: center;
@@ -11394,6 +11400,11 @@ h4,
   .form-row--5col .form-field:nth-child(4),
   .form-row--5col .form-field:nth-child(5) {
     grid-column: span 1;
+  }
+
+  .form-row--4col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 
   .form-row--between {
