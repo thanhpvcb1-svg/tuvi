@@ -2116,7 +2116,8 @@ h4,
 .education-card h2,
 .quick-reading-card h3,
 .result-empty-card h2,
-.privacy-notice h2 {
+.privacy-notice h2,
+.privacy-notice h3 {
   margin: 0;
   color: var(--text-main);
 }
@@ -8029,6 +8030,7 @@ h4,
   .quick-reading-card h3,
   .result-empty-card h2,
   .privacy-notice h2,
+  .privacy-notice h3,
   .section-heading h2 {
     color: var(--text-main);
   }
@@ -11636,4 +11638,27 @@ ol.bac-phai-ai-flow {
 .sample-demo-page .demo-table {
   display: block;
   overflow-x: auto;
+}
+
+/* Tiêu đề trang trí giữa bàn lá số (không còn là heading của trang) - giữ hình thức như h2 cũ */
+.center-title {
+  margin: 0.2em 0 0.4em;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Nguồn của từng đoạn tri thức trong luận giải */
+.analysis-knowledge-source {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.library-byline {
+  margin: 20px 0 8px;
+  font-size: 13px;
+  color: var(--muted);
 }

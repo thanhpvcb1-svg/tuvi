@@ -60,7 +60,7 @@ type TongHopState = {
 const EXPERT_THINKING_MESSAGES = [
   "Đang phân tích cấu trúc Mệnh - Thân...",
   "Đang xem xét Tứ Hóa Lộc, Quyền, Khoa, Kỵ...",
-  "Đang truy vấn tri thức Bắc Phái...",
+  "Đang truy vấn kho tri thức...",
   "Đang phân tích Phi Hóa Can Cung...",
   "Đang đối chiếu tam hợp, xung chiếu...",
   "Đang tổng hợp các cung trọng yếu...",
@@ -73,7 +73,7 @@ const EXPERT_THINKING_MESSAGES = [
 const PALACE_THINKING_MESSAGES = [
   "Đang xem xét chính tinh tọa thủ...",
   "Đang phân tích phụ tinh đồng cung...",
-  "Đang tra cứu tri thức cổ điển...",
+  "Đang tra cứu kho tri thức...",
   "Đang đối chiếu Tứ Hóa...",
   "Đang xem xét tam hợp cung...",
   "Đang tổng hợp luận giải...",
@@ -368,7 +368,7 @@ function PalaceCard({ analysis, isExpanded, onToggle, onRequestGemini, yearToVie
 
           {sortedMatches.length > 0 && (
             <div className="analysis-knowledge">
-              <span className="analysis-star-label">📚 Tri thức cổ điển:</span>
+              <span className="analysis-star-label">📚 Tri thức khớp với lá số:</span>
               <div className="analysis-knowledge-list">
                 {sortedMatches.slice(0, displayCount).map((match, i) => (
                   <KnowledgeItem key={match.interpretation.id || i} match={match} />
@@ -517,7 +517,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       }
     } catch (error) {
       console.error("[Gemini] Error:", error);
-      setTongHopState({ loading: false, error: "Không thể kết nối Gemini" });
+      setTongHopState({ loading: false, error: "Không thể kết nối dịch vụ AI" });
     }
   }, [tongHopState, buildTongHopData, userContext, chart.profile]);
 
@@ -566,7 +566,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     } catch (error) {
       setGeminiStates((prev) => {
         const next = new Map(prev);
-        next.set(palaceId, { loading: false, error: "Không thể kết nối Gemini" });
+        next.set(palaceId, { loading: false, error: "Không thể kết nối dịch vụ AI" });
         return next;
       });
     }
@@ -646,7 +646,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
         <div className="analysis-loading">
           <div className="analysis-loading-spinner" />
           <p>Đang phân tích 12 cung trong lá số...</p>
-          <span className="analysis-loading-hint">Tra cứu tri thức từ sách cổ</span>
+          <span className="analysis-loading-hint">Đối chiếu kho tri thức với lá số</span>
           <div className="analysis-progress">
             <div className="analysis-progress-bar" style={{ width: `${loadingProgress}%` }} />
           </div>
@@ -734,7 +734,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
 
               {!tongHopState.analysis && !tongHopState.loading && !tongHopState.error && (
                 <div className="analysis-tonghop-cta">
-                  <p>Gemini sẽ tổng hợp toàn bộ tri thức đã match từ 12 cung, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>.</p>
+                  <p>AI sẽ tổng hợp các đoạn tri thức đã khớp ở 12 cung cùng dữ liệu lá số, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>, và ghi rõ phần thiếu dữ liệu.</p>
                   <button
                     type="button"
                     className="primary-button analysis-tonghop-btn"

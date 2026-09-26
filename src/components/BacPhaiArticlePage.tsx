@@ -12,6 +12,9 @@ const splitParagraphs = (value: string) =>
     .map((paragraph) => paragraph.trim())
     .filter(Boolean);
 
+// Không công khai danh sách tài liệu dẫn / nguồn lấy tri thức. Bật lại = true nếu cần.
+const SHOW_SOURCE_REFS = false;
+
 export default function BacPhaiArticlePage({ article, relatedArticles }: Props) {
   return (
     <section className="content-section">
@@ -47,7 +50,10 @@ export default function BacPhaiArticlePage({ article, relatedArticles }: Props) 
             <p>{article.applicationBox.body}</p>
           </div>
 
-          <div className="library-source-box">
+          <p className="library-byline">Biên soạn: Tử Vi Phong Lam · Nội dung mang tính tham khảo, chưa thay thế ý kiến chuyên gia.</p>
+
+          {/* Tạm ẩn danh sách tài liệu dẫn (không công khai nguồn lấy tri thức); dữ liệu sourceRefs vẫn giữ trong bacPhaiLibrary.ts */}
+          {SHOW_SOURCE_REFS ? <div className="library-source-box">
             <p className="eyebrow">Tài liệu dẫn</p>
             <div className="library-source-list">
               {article.sourceRefs.map((source) => (
@@ -63,7 +69,7 @@ export default function BacPhaiArticlePage({ article, relatedArticles }: Props) 
                 </article>
               ))}
             </div>
-          </div>
+          </div> : null}
 
           <div className="library-cta-box">
             <h3>Muốn đối chiếu lý thuyết với lá số thật?</h3>

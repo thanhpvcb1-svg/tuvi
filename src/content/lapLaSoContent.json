@@ -4,8 +4,8 @@
     "subtitle": "Lập lá số và khám phá Tử Vi theo phương pháp Bắc phái, kết hợp hệ thống tri thức chuyên sâu và AI hỗ trợ luận giải."
   },
   "formSection": {
-    "heading": "Lập lá số tử vi online",
-    "intro": "Nhập ngày, tháng, năm sinh (dương lịch hoặc âm lịch), giờ sinh theo 12 canh giờ và giới tính. Năm xem dùng để hiển thị tiểu vận và lưu niên của năm bạn quan tâm.",
+    "heading": "Nhập thông tin sinh",
+    "intro": "Nhập ngày, tháng, năm sinh (dương lịch hoặc âm lịch), giờ sinh theo 12 canh giờ và giới tính. Năm xem dùng để xác định đại vận, tiểu vận của năm bạn quan tâm và hiển thị các sao lưu trên lá số.",
     "unknownTimeNote": "Nếu không rõ giờ sinh, hãy tick \"Không rõ giờ sinh\" - lá số khi đó chỉ mang tính tham khảo vì giờ sinh quyết định vị trí cung Mệnh, cung Thân và nhiều sao."
   },
   "overview": {
@@ -60,8 +60,8 @@
     },
     {
       "icon": "◷",
-      "title": "Tiểu vận / Lưu niên",
-      "description": "Phân tích các tầng thời gian nhỏ hơn theo năm xem bạn chọn.",
+      "title": "Tiểu vận theo năm xem",
+      "description": "Xác định cung tiểu vận và đại vận của năm bạn chọn để đối chiếu với lá số gốc.",
       "color": "#9a5b22"
     }
   ],
@@ -76,15 +76,19 @@
       "Tứ Hóa",
       "Phi Hóa",
       "Đại vận / Tiểu vận / Lưu niên",
-      "Knowledge Base Bắc phái",
+      "Kho tri thức Tử Vi",
       "AI tổng hợp luận giải"
     ],
     "aiNote": "AI không thay thế phương pháp Tử Vi. AI sử dụng hệ thống tri thức và dữ liệu lá số để tổng hợp, đối chiếu và diễn giải.",
-    "matching": "Mỗi đoạn tri thức chỉ được dùng khi các điều kiện của nó - vị trí cung, sao tọa thủ, độ sáng, tam phương tứ chính, giáp cung, Tứ Hóa hoặc Phi Hóa - khớp với chính lá số của bạn, và luôn kèm nguồn sách hoặc tác giả khi có. Khi dữ liệu không đủ, hệ thống ghi rõ là chưa đủ để kết luận."
+    "matching": "Mỗi đoạn tri thức chỉ được hiển thị khi các điều kiện của nó - vị trí cung, sao tọa thủ, độ sáng, tam phương tứ chính, giáp cung, Tứ Hóa hoặc Phi Hóa - khớp với chính lá số của bạn, kèm lý do khớp. Kho tri thức có thể gồm quan điểm của nhiều trường phái; khi không có dữ liệu phù hợp, hệ thống để trống thay vì suy đoán.",
+    "methodLink": {
+      "title": "Phương pháp luận giải",
+      "path": "/bai-viet/phuong-phap-luan-giai"
+    }
   },
   "twelvePalacesSection": {
     "heading": "Khám phá 12 cung Tử Vi",
-    "intro": "Mỗi cung phản ánh một lĩnh vực; khi luận giải luôn xem cùng tam phương tứ chính của cung đó. Bấm vào một cung để xem mô tả chi tiết hơn.",
+    "intro": "Mỗi cung phản ánh một lĩnh vực và luôn được đọc cùng đối cung, hai cung tam hợp và hai cung giáp. Bấm vào một cung để xem các cung liên quan.",
     "link": {
       "title": "Đọc thêm: 12 cung, đối cung và tam phương tứ chính",
       "path": "/bai-viet/12-cung-trong-la-so-tu-vi"
@@ -94,62 +98,62 @@
     {
       "name": "Mệnh",
       "description": "Bản chất, tính cách và xu hướng phát triển chính của một người.",
-      "detail": "Cung được xem đầu tiên khi đọc lá số - phản ánh khí chất, cách thể hiện bản thân và nền tảng tính cách."
+      "detail": "Đối cung (xung chiếu): Thiên Di. Tam hợp: Quan Lộc và Tài Bạch. Giáp cung: Huynh Đệ và Phụ Mẫu."
     },
     {
       "name": "Phụ Mẫu",
       "description": "Quan hệ với cha mẹ, người trên và cấp trên.",
-      "detail": "Gợi ý về gia đình gốc, mối liên hệ với cha mẹ và hậu thuẫn ban đầu trong cuộc sống."
+      "detail": "Đối cung (xung chiếu): Tật Ách. Tam hợp: Nô Bộc và Tử Tức. Giáp cung: Mệnh và Phúc Đức."
     },
     {
       "name": "Phúc Đức",
       "description": "Tinh thần, phúc phần, đời sống nội tâm và hưởng thụ.",
-      "detail": "Liên quan đến phúc khí, nền tảng tinh thần và sự nâng đỡ lâu dài - thường được xem cùng cung Mệnh."
+      "detail": "Đối cung (xung chiếu): Tài Bạch. Tam hợp: Thiên Di và Phu Thê. Giáp cung: Phụ Mẫu và Điền Trạch."
     },
     {
       "name": "Điền Trạch",
       "description": "Nhà cửa, đất đai, tài sản cố định và môi trường sống.",
-      "detail": "Gợi mở về nhà cửa, tài sản tích lũy và môi trường sống xung quanh một người."
+      "detail": "Đối cung (xung chiếu): Tử Tức. Tam hợp: Tật Ách và Huynh Đệ. Giáp cung: Phúc Đức và Quan Lộc."
     },
     {
       "name": "Quan Lộc",
       "description": "Sự nghiệp, con đường công danh và cách làm việc.",
-      "detail": "Phản ánh xu hướng nghề nghiệp, vai trò xã hội và tham vọng phát triển trong công việc."
+      "detail": "Đối cung (xung chiếu): Phu Thê. Tam hợp: Tài Bạch và Mệnh. Giáp cung: Điền Trạch và Nô Bộc."
     },
     {
       "name": "Nô Bộc",
       "description": "Bạn bè, đồng nghiệp, cấp dưới và các mối quan hệ ngang hàng.",
-      "detail": "Cho thấy mạng lưới cộng sự, bạn bè, người hỗ trợ và cách một người hợp tác với người khác."
+      "detail": "Đối cung (xung chiếu): Huynh Đệ. Tam hợp: Tử Tức và Phụ Mẫu. Giáp cung: Quan Lộc và Thiên Di."
     },
     {
       "name": "Thiên Di",
       "description": "Di chuyển, thay đổi môi trường và các cơ hội bên ngoài.",
-      "detail": "Liên quan đến cơ hội khi ra ngoài, môi trường xã hội rộng hơn và các thay đổi vị trí sống/làm việc."
+      "detail": "Đối cung (xung chiếu): Mệnh. Tam hợp: Phu Thê và Phúc Đức. Giáp cung: Nô Bộc và Tật Ách."
     },
     {
       "name": "Tật Ách",
       "description": "Sức khỏe và các vấn đề thể chất cần lưu ý.",
-      "detail": "Nhắc đến sức khỏe, áp lực tinh thần và những điều cần lưu tâm để giữ gìn thể chất."
+      "detail": "Đối cung (xung chiếu): Phụ Mẫu. Tam hợp: Huynh Đệ và Điền Trạch. Giáp cung: Thiên Di và Tài Bạch."
     },
     {
       "name": "Tài Bạch",
       "description": "Tiền bạc, dòng tiền và khả năng tạo ra của cải.",
-      "detail": "Gợi ý về dòng tiền, cách kiếm tiền và khả năng quản lý tài chính của một người."
+      "detail": "Đối cung (xung chiếu): Phúc Đức. Tam hợp: Mệnh và Quan Lộc. Giáp cung: Tật Ách và Tử Tức."
     },
     {
       "name": "Tử Tức",
       "description": "Con cái và các mối quan hệ với thế hệ sau.",
-      "detail": "Liên quan đến con cái, dự định cá nhân và những thành quả được gây dựng lâu dài."
+      "detail": "Đối cung (xung chiếu): Điền Trạch. Tam hợp: Phụ Mẫu và Nô Bộc. Giáp cung: Tài Bạch và Phu Thê."
     },
     {
       "name": "Phu Thê",
       "description": "Hôn nhân, tình cảm và người bạn đời.",
-      "detail": "Cho biết xu hướng tình cảm, hôn nhân và cách một người kết nối với bạn đời."
+      "detail": "Đối cung (xung chiếu): Quan Lộc. Tam hợp: Phúc Đức và Thiên Di. Giáp cung: Tử Tức và Huynh Đệ."
     },
     {
       "name": "Huynh Đệ",
       "description": "Anh chị em và các mối quan hệ đồng trang lứa gần gũi.",
-      "detail": "Phản ánh quan hệ anh chị em, bạn đồng hành và những người ngang vai gần gũi."
+      "detail": "Đối cung (xung chiếu): Nô Bộc. Tam hợp: Điền Trạch và Tật Ách. Giáp cung: Phu Thê và Mệnh."
     }
   ],
   "tuHoa": {
@@ -215,36 +219,12 @@
       "path": "/bai-viet/cung-than-la-gi"
     },
     {
-      "title": "Tứ Hóa Phi Tinh là gì?",
-      "path": "/bai-viet/tu-hoa-phi-tinh-la-gi"
-    },
-    {
-      "title": "Lộc - Quyền - Khoa - Kỵ có ý nghĩa gì?",
-      "path": "/bai-viet/loc-quyen-khoa-ky-co-y-nghia-gi"
-    },
-    {
-      "title": "Phi nhập và phi xuất là gì?",
-      "path": "/bai-viet/phi-nhap-va-phi-xuat-la-gi"
-    },
-    {
-      "title": "Tự hóa là gì?",
-      "path": "/bai-viet/tu-hoa-la-gi"
-    },
-    {
       "title": "Đại vận và lưu niên trong Bắc phái",
       "path": "/bai-viet/dai-van-va-luu-nien-trong-bac-phai"
     },
     {
-      "title": "Cung Phu Thê",
-      "path": null
-    },
-    {
-      "title": "Cung Tài Bạch",
-      "path": null
-    },
-    {
-      "title": "Cung Quan Lộc",
-      "path": null
+      "title": "Phương pháp luận giải",
+      "path": "/bai-viet/phuong-phap-luan-giai"
     }
   ],
   "faqSection": {
@@ -274,11 +254,11 @@
     },
     {
       "question": "AI luận giải Tử Vi hoạt động như thế nào?",
-      "answer": "Hệ thống an lá số trước, sau đó đối chiếu từng cung với kho tri thức: một đoạn tri thức chỉ được chọn khi các điều kiện của nó (vị trí cung, sao, độ sáng, Tứ Hóa, Phi Hóa...) khớp với lá số của bạn. AI chỉ tổng hợp và diễn giải từ dữ liệu lá số cùng các đoạn tri thức đã khớp, phân biệt rõ phần có nguồn, phần phân tích và phần thiếu dữ liệu."
+      "answer": "Hệ thống an lá số trước, sau đó đối chiếu từng cung với kho tri thức: một đoạn tri thức chỉ được chọn khi các điều kiện của nó (vị trí cung, sao, độ sáng, Tứ Hóa, Phi Hóa...) khớp với lá số của bạn. AI được yêu cầu chỉ tổng hợp từ dữ liệu lá số và các đoạn tri thức đã khớp, và nói rõ phần thiếu dữ liệu. Kết quả AI vẫn có thể sai sót, nên đọc như một bản tham khảo."
     },
     {
       "question": "AI có thay thế chuyên gia Tử Vi không?",
-      "answer": "Không. AI là công cụ hỗ trợ tra cứu và tổng hợp, không tự tạo quy tắc Tử Vi và không thay thế kinh nghiệm của người luận giải. Với những quyết định quan trọng, bạn nên trao đổi trực tiếp với chuyên gia."
+      "answer": "Không. AI là công cụ hỗ trợ tra cứu và tổng hợp, được thiết kế để không tự tạo quy tắc Tử Vi, và không thay thế kinh nghiệm của người luận giải. Với những quyết định quan trọng, bạn nên trao đổi trực tiếp với chuyên gia."
     },
     {
       "question": "Lá số được tính như thế nào?",
@@ -286,7 +266,7 @@
     }
   ],
   "bottomCta": {
-    "heading": "Lập lá số ngay",
+    "heading": "Bắt đầu với lá số của bạn",
     "text": "Chỉ cần ngày giờ sinh để an Mệnh, Thân, 12 cung và Tứ Hóa theo lá số của riêng bạn."
   }
 }

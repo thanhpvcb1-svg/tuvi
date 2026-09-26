@@ -175,7 +175,7 @@ function buildKnowledgeIndex(cache: Record<string, unknown>): KnowledgeIndex {
     const file = cache[fileName] as NormalizedFile | undefined;
     index[id] = (file?.entries ?? []).map((entry) => ({
       entry,
-      source: file!.sources[entry.source] ?? { book: "tuvi.cohoc.net", author: "" },
+      source: file!.sources?.[entry.source] ?? { book: "", author: "" },
       section: entry.section || file!.title,
     }));
   }

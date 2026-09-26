@@ -83,6 +83,17 @@ const cleanText = (text: string) =>
     .replace(/\n{3,}/g, "\n\n")
     .trim();
 
+// Một số mục crawl bị lệch cột: trường "book" chứa nguyên một câu nội dung ("* Chớ có đánh bạc...").
+// Tên nguồn như vậy không được đưa cho AI trích dẫn -> ghi "Không rõ nguồn". Tác giả trùng tên sách thì bỏ.
+const looksLikeSentence = (value: string) => value.length > 80 || /^[\d*•\-]/.test(value) || /[.!?;:]$/.test(value) || /\(.*\)/.test(value);
+function cleanSource(source: Source | undefined): Source {
+  const book = String(source?.book || "tuvi.cohoc.net").trim();
+  if (looksLikeSentence(book)) return { book: "Không rõ nguồn" };
+  const author = String(source?.author || "").trim();
+  const keepAuthor = author && !/^unknown$/i.test(author) && !book.toLowerCase().includes(author.toLowerCase()) && !looksLikeSentence(author);
+  return { book, author: keepAuthor ? author : undefined, translator: source?.translator ?? undefined };
+}
+
 const dedupeKey = (text: string) => text.toLowerCase().replace(/\s+/g, " ");
 
 function classifyDrop(condition: string): string {
@@ -114,7 +125,7 @@ function main() {
       // Nội dung nói về vận hạn chỉ hợp với điều kiện vận hạn (khớp theo năm xem).
       if (!isPeriodCondition(rule) && isPeriodText(text)) return drop("nội dung nói về vận hạn");
 
-      const src: Source = { book: item.source?.book || "tuvi.cohoc.net", author: item.source?.author, translator: item.source?.translator ?? undefined };
+      const src = cleanSource(item.source);
       const srcKey = `${src.book}|${src.author ?? ""}|${src.translator ?? ""}`;
       if (!sourceIndex.has(srcKey)) {
         sourceIndex.set(srcKey, sources.length);
@@ -168,7 +179,9 @@ function main() {
     for (const entry of entries) entry.rules.sort((a, b) => b.specificity - a.specificity);
     totalOut += entries.length;
 
-    const output: NormalizedKnowledgeFile = { schema: "tuvi-knowledge@1", palace: id, title, sources, entries };
+    // Dữ liệu tải về trình duyệt không kèm bảng nguồn (không công khai nguồn lấy tri thức).
+    // Nguồn vẫn còn trong file crawl gốc (cung/*-consolidated.json) nếu cần tra cứu nội bộ.
+    const output: NormalizedKnowledgeFile = { schema: "tuvi-knowledge@1", palace: id, title, sources: [], entries: entries.map(({ source: _source, ...entry }, index) => ({ ...entry, id: `${id}-${index + 1}` }) as Entry) }; // id trung tính, không mang dấu vết nguồn crawl
     const outFile = path.join(OUT_DIR, `${id}.json`);
     fs.writeFileSync(outFile, JSON.stringify(output));
     const rules = entries.reduce((sum, e) => sum + e.rules.length, 0);

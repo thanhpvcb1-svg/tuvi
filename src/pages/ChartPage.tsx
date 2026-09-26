@@ -474,7 +474,8 @@ export default function ChartPage() {
         <p className="bac-phai-ai-note">{content.bacPhai.aiNote}</p>
         <p>
           {content.bacPhai.matching}{" "}
-          <Link to="/bai-viet/tu-vi-bac-phai-la-gi">Tìm hiểu thêm về Tử Vi Bắc phái</Link>.
+          <Link to="/bai-viet/tu-vi-bac-phai-la-gi">Tìm hiểu thêm về Tử Vi Bắc phái</Link> ·{" "}
+          <Link to={content.bacPhai.methodLink.path}>{content.bacPhai.methodLink.title}</Link>.
         </p>
 
         <button type="button" className="primary-button" onClick={handleHeroInterpretCta}>

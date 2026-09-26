@@ -33,6 +33,9 @@ export type KnowledgeArticle = {
 
 export const getKnowledgeArticleHref = (slug: string) => `/bai-viet/${slug}`;
 
+// Bảng tài liệu tham khảo giữ lại để tra cứu nội bộ - KHÔNG gắn vào bài viết (không công khai nguồn lấy tri thức).
+// Không được tham chiếu nên không bị đóng gói vào bundle phát hành.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const sourceRefs = {
   tuViToanThu: {
     title: "Tử Vi Đẩu Số Toàn Thư / 紫微斗數全書",
@@ -75,8 +78,13 @@ const sourceRefs = {
     note: "Dùng để đối chiếu danh sách thiên can sinh Hóa Kỵ và sắc thái tắc trở, vướng mắc, chỗ cần thận trọng.",
   },
   internalPhiHoa: {
-    title: "Tài liệu biên soạn nội bộ: bộ ghi chú Bắc Phái và Phi Hóa của website",
-    note: "Tài liệu biên soạn nội bộ, cần bổ sung nguồn gốc khi xuất bản công khai.",
+    title: "Tử Vi Phong Lam biên soạn",
+    note: "Phần diễn giải về Phi Hóa do Tử Vi Phong Lam biên soạn, đối chiếu với các tài liệu liệt kê ở trên.",
+  },
+  iztro: {
+    title: "iztro - thư viện an sao Tử Vi mã nguồn mở",
+    href: "https://github.com/SylarLong/iztro",
+    note: "Thư viện dùng để an sao, được cấu hình và kiểm thử hồi quy trên nhiều lá số mẫu.",
   },
 };
 
@@ -91,7 +99,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Bài mở cửa cho người mới: Bắc Phái là lối đọc nhấn vào can cung, Tứ Hóa và sự vận động của các cung chứ không chỉ nhìn tĩnh vào bộ sao.",
     curiosityHook: "Nếu cùng một lá số mà có người chỉ nhìn sao, có người lại đi theo đường phi hóa, thì khác biệt ấy bắt đầu từ đâu?",
     tags: ["Bắc Phái", "Nhập môn", "Can cung", "Phi Hóa"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiVi, sourceRefs.wikiZh, sourceRefs.modernOverview],
+    sourceRefs: [],
     content: [
       {
         heading: "Từ khái quát đến trường phái",
@@ -129,7 +137,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Tứ Hóa là bốn trạng thái Lộc, Quyền, Khoa, Kỵ được gắn cho sao theo thiên can, rồi từ đó tạo nên mạch phi hóa giữa các cung.",
     curiosityHook: "Cùng là sao cũ, nhưng khi gặp đúng thiên can, vì sao nó lại đổi vai và kéo cả mệnh bàn chuyển động?",
     tags: ["Tứ Hóa", "Phi Tinh", "Thiên can", "Lộc Quyền Khoa Kỵ"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiZh, sourceRefs.modernOverview, sourceRefs.internalPhiHoa],
+    sourceRefs: [],
     content: [
       {
         heading: "Tứ Hóa là bốn nhãn động của lá số",
@@ -167,7 +175,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Bốn Hóa không nên hiểu đơn giản là tốt ba, xấu một. Mỗi Hóa là một kiểu vận động riêng, mang giá trị lẫn cái giá của nó.",
     curiosityHook: "Nếu Hóa Kỵ không chỉ là điều xấu, và Hóa Lộc cũng chưa chắc luôn dễ chịu, thì nên đọc bốn Hóa theo cách nào?",
     tags: ["Hóa Lộc", "Hóa Quyền", "Hóa Khoa", "Hóa Kỵ"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.hoaLoc, sourceRefs.hoaQuyen, sourceRefs.hoaKhoa, sourceRefs.hoaKy],
+    sourceRefs: [],
     content: [
       {
         heading: "Hóa Lộc: nơi khí bắt đầu lưu thông",
@@ -205,7 +213,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Phi nhập và phi xuất giúp người học nhìn được dòng trao đổi giữa các cung: cung nào phát ý, cung nào lĩnh ý, cung nào tiêu hao lực.",
     curiosityHook: "Có khi nào một cung nhìn rất mạnh, nhưng vì luôn phi xuất nên rốt cuộc lại là nơi hao tâm hao lực?",
     tags: ["Phi nhập", "Phi xuất", "Quan hệ cung", "Bắc Phái"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiZh, sourceRefs.internalPhiHoa],
+    sourceRefs: [],
     content: [
       {
         heading: "Phi nhập: tín hiệu đi vào một cung",
@@ -243,7 +251,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Tự hóa là tình huống một cung phát Hóa rồi lại quay trở lại chính chủ đề của cung ấy, tạo cảm giác tự xoay, tự khởi, tự vướng hoặc tự giải.",
     curiosityHook: "Vì sao có những chủ đề trong đời cứ lặp lại như tự mình châm ngòi cho chính mình?",
     tags: ["Tự hóa", "Phi Hóa", "Cung tự động", "Bắc Phái"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.internalPhiHoa, sourceRefs.modernOverview],
+    sourceRefs: [],
     content: [
       {
         heading: "Tự hóa không chỉ là kỹ thuật, mà là nhịp lặp",
@@ -281,7 +289,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Đại vận cho bối cảnh mười năm, lưu niên cho điểm nhấn từng năm. Trong Bắc Phái, hai lớp này được đọc cùng với Tứ Hóa để thấy chủ đề nào thật sự bị kích hoạt.",
     curiosityHook: "Vì sao cùng một cung trong bản mệnh, có lúc im như chưa hề có chuyện, có lúc lại trở thành trung tâm của cả năm?",
     tags: ["Đại vận", "Lưu niên", "Vận trình", "Tứ Hóa"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiZh, sourceRefs.modernOverview, sourceRefs.internalPhiHoa],
+    sourceRefs: [],
     content: [
       {
         heading: "Đại vận là bối cảnh, lưu niên là điểm gõ",
@@ -319,7 +327,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Mười hai cung là khung của mệnh bàn: mỗi cung ứng với một lĩnh vực đời sống, và các cung luôn được đọc theo cặp đối cung cùng tam phương tứ chính chứ không tách rời.",
     curiosityHook: "Vì sao đọc cung Phu Thê lại phải nhìn sang Quan Lộc, và đọc Tài Bạch lại phải nhìn Phúc Đức?",
     tags: ["12 cung", "Nhập môn", "Tam phương tứ chính", "Đối cung"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiVi, sourceRefs.wikiZh],
+    sourceRefs: [],
     content: [
       {
         heading: "Mười hai cung được an như thế nào",
@@ -362,7 +370,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Cung Mệnh là trục chính của lá số: nơi thể hiện khí chất, cách hành xử và là điểm xuất phát để đọc mọi cung còn lại.",
     curiosityHook: "Hai người có cùng một chính tinh ở cung Mệnh, vì sao đời sống lại khác nhau đến thế?",
     tags: ["Cung Mệnh", "12 cung", "Mệnh Tài Quan", "Can cung"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiVi, sourceRefs.wikiZh],
+    sourceRefs: [],
     content: [
       {
         heading: "Cung Mệnh được an như thế nào",
@@ -405,7 +413,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     summary: "Cung Thân không phải một cung riêng mà luôn đồng cung với một trong sáu cung: Mệnh, Phúc Đức, Quan Lộc, Thiên Di, Tài Bạch hoặc Phu Thê. Vị trí Thân cư cho biết trọng tâm đời sống về sau.",
     curiosityHook: "Nếu Mệnh là nền tảng bẩm sinh, thì Thân cho biết người ta dồn sức vào đâu khi trưởng thành?",
     tags: ["Cung Thân", "Thân cư", "12 cung", "Giờ sinh"],
-    sourceRefs: [sourceRefs.tuViToanThu, sourceRefs.wikiVi, sourceRefs.wikiZh],
+    sourceRefs: [],
     content: [
       {
         heading: "Cung Thân được an như thế nào",
@@ -430,6 +438,54 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     },
     cta: {
       label: "Lập lá số để xem Thân cư cung nào",
+      href: "/lap-la-so",
+    },
+  },
+  {
+    id: "phuong-phap-luan-giai",
+    title: "Phương pháp luận giải của Tử Vi Phong Lam",
+    slug: "phuong-phap-luan-giai",
+    category: "Phương pháp",
+    level: "Tổng quan",
+    readingTime: "6 phút",
+    summary: "Lá số được an như thế nào, một đoạn tri thức được chọn cho lá số của bạn ra sao, AI làm gì và những giới hạn hiện tại của hệ thống.",
+    curiosityHook: "Khi một đoạn luận giải xuất hiện dưới cung Mệnh của bạn, nó đã phải vượt qua những điều kiện nào?",
+    tags: ["Phương pháp", "AI", "Minh bạch"],
+    sourceRefs: [],
+    content: [
+      {
+        heading: "Lá số được an như thế nào",
+        body:
+          "Lá số được an ngay trên trình duyệt của bạn, với cấu hình an sao do Tử Vi Phong Lam kiểm tra: quy đổi âm lịch, Can Chi, cung Mệnh, cung Thân, Cục, 14 chính tinh, phụ tinh, độ sáng, Tứ Hóa sinh niên, Phi Hóa can cung, đại vận và tiểu vận.\n\nCác thay đổi gần đây của hệ thống được kiểm tra bằng cách so sánh kết quả an sao của hàng trăm lá số mẫu với phiên bản đang chạy; cùng một dữ liệu đầu vào luôn cho ra cùng một lá số.",
+      },
+      {
+        heading: "Kho tri thức",
+        body:
+          "Kho luận giải gồm khoảng 22.000 đoạn tri thức Tử Vi, mỗi đoạn gắn với điều kiện áp dụng cụ thể. Kho tri thức có thể gồm quan điểm của nhiều trường phái Tử Vi, không riêng Bắc phái. Trước khi đưa vào sử dụng, dữ liệu đã được biên tập và lọc: bỏ các bản phân tích trích từ lá số của người khác, các điểm số không kiểm chứng được, các câu gắn tuổi hay năm cụ thể của người khác và phần nguyên văn tiếng Trung chưa dịch.",
+      },
+      {
+        heading: "Một đoạn tri thức được chọn cho lá số của bạn ra sao",
+        body:
+          "Mỗi đoạn tri thức có điều kiện áp dụng, ví dụ \"cung Mệnh tại Tuất có Thái Âm\" hay \"cung Quan Lộc phi Hóa Kỵ nhập Tài Bạch\". Hệ thống chỉ hiển thị một đoạn khi mọi điều kiện đó khớp với lá số của bạn: vị trí cung, sao tọa thủ, độ sáng, tam phương tứ chính, giáp cung, Tứ Hóa, Phi Hóa, và với phần vận hạn là đại vận hoặc tiểu vận của năm xem.\n\nNgoài điều kiện, câu mở đầu của nội dung cũng được đối chiếu: nếu đoạn viết cho nam mệnh, cho người sinh năm Giáp hay cho sao ở thế miếu vượng mà lá số của bạn không như vậy, đoạn đó bị loại. Các đoạn khớp nhiều điều kiện hơn được xếp trước; đoạn chung chung bị bỏ khi đã có đoạn khớp sát hơn. Lý do khớp luôn được ghi dưới mỗi đoạn để bạn tự kiểm tra.",
+      },
+      {
+        heading: "AI làm gì và không làm gì",
+        body:
+          "Khi bạn bấm luận giải, một mô hình ngôn ngữ chạy trên Cloudflare Workers AI nhận dữ liệu lá số (sao, độ sáng, Tứ Hóa, tam phương, xung chiếu, giáp cung, đại vận) cùng các đoạn tri thức đã khớp. AI được yêu cầu chỉ tổng hợp từ các dữ liệu này, gắn nhãn phần lấy từ kho tri thức, phần phân tích và phần thiếu dữ liệu, không tự tạo quy tắc.\n\nDù vậy, AI vẫn có thể diễn đạt sai hoặc suy diễn quá mức. Hãy đọc phần luận giải của AI như một bản tổng hợp tham khảo và đối chiếu với lý do khớp của từng đoạn tri thức.",
+      },
+      {
+        heading: "Giới hạn hiện tại",
+        body:
+          "Nội dung kho tri thức chưa được chuyên gia duyệt toàn bộ. Tri thức về lưu niên (các sao lưu theo năm) và một số loại điều kiện đặc thù chưa được sử dụng. Nếu cung nào không có đoạn tri thức khớp, hệ thống để trống thay vì đưa nội dung chung chung.\n\nKết quả luận giải chỉ mang tính tham khảo, chiêm nghiệm; không thay thế tư vấn chuyên môn về y tế, tài chính, pháp lý hay các quyết định quan trọng.",
+      },
+    ],
+    applicationBox: {
+      title: "Cách tự kiểm tra một đoạn luận giải",
+      body:
+        "Dưới mỗi đoạn tri thức có dòng lý do khớp (ví dụ \"Mệnh tại Tuất · Có Thái Âm · Thái Âm độc tọa\"). Đối chiếu dòng này với lá số: nếu đúng vị trí, đúng sao, đúng độ sáng thì đoạn đó áp dụng cho bạn.",
+    },
+    cta: {
+      label: "Lập lá số và xem lý do khớp",
       href: "/lap-la-so",
     },
   },

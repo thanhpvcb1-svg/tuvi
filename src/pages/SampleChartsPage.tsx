@@ -164,7 +164,7 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
               <h2 id="demo-tong-quan">Tổng quan</h2>
               <p>Các thông số nền của lá số mẫu, lấy trực tiếp từ kết quả an sao.</p>
             </div>
-            <ResultSummaryCards items={buildSummaryCards(chart, currentYear, DEMO_BIRTH_YEAR)} />
+            <ResultSummaryCards items={buildSummaryCards(chart, currentYear, DEMO_BIRTH_YEAR)} hideHeading />
           </section>
 
           <section className="content-section" aria-labelledby="demo-menh-than">
@@ -292,8 +292,8 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
               <h2 id="demo-luan-giai">Luận giải mẫu</h2>
               <p>
                 Mỗi cung hiển thị các đoạn tri thức <strong>khớp với chính lá số mẫu</strong> (vị trí cung, sao, độ sáng, Tứ Hóa,
-                Phi Hóa...) kèm lý do khớp. Bấm "Giải nghĩa chi tiết" ở một cung hoặc "Luận tổng hợp Bắc Phái" để xem AI tổng hợp
-                từ dữ liệu này - AI không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu.
+                Phi Hóa...) kèm lý do khớp. Bấm "Giải nghĩa chi tiết" ở một cung hoặc "Luận tổng hợp Bắc Phái" để AI tổng hợp
+                từ dữ liệu này; AI được yêu cầu không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu, nhưng vẫn có thể sai sót.
               </p>
             </div>
             {showReading ? (

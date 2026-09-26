@@ -55,7 +55,8 @@ export default function ChartCenter({ chart, hidePersonalInfo = false }: Props) 
     <div className="center-main">
       <div className="center-content">
         <p className="center-subtitle">Chương trình lập lá số Tử Vi</p>
-        <h2 className="blue">LÁ SỐ TỬ VI</h2>
+        {/* Tiêu đề trang trí của bàn lá số - không phải heading của trang */}
+        <p className="blue center-title">LÁ SỐ TỬ VI</p>
 
         <table className="profile">
           <tbody>

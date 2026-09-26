@@ -7,7 +7,7 @@ export default function AboutPage() {
     <>
       <SEOHead
         title="Về Chúng Tôi - Tử Vi Phong Lam | Nền Tảng Tử Vi Bắc Phái Online"
-        description="Tử Vi Phong Lam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái. Hơn 30,000 luận giải tri thức từ sách cổ."
+        description="Tử Vi Phong Lam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái, đối chiếu hơn 20.000 đoạn tri thức có điều kiện với từng lá số."
         canonicalPath="/ve-chung-toi"
         schema={[
           organizationSchema,
@@ -54,7 +54,7 @@ export default function AboutPage() {
               Tử Vi Phong Lam kết hợp <strong>tri thức cổ điển</strong> với <strong>công nghệ hiện đại</strong>:
             </p>
             <ul>
-              <li>Cơ sở dữ liệu hơn <strong>30,000+ luận giải</strong> từ các sách cổ</li>
+              <li>Kho hơn <strong>20.000 đoạn tri thức</strong> có điều kiện áp dụng, chỉ hiển thị khi khớp lá số (<a href="/bai-viet/phuong-phap-luan-giai">xem phương pháp luận giải</a>)</li>
               <li>Thuật toán matching thông minh để tìm luận giải phù hợp</li>
               <li>AI tổng hợp và diễn giải theo ngữ cảnh cá nhân</li>
             </ul>

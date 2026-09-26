@@ -54,9 +54,6 @@ const renderArticleBody = (post) => {
       </main>
     `;
   }
-  const sources = (article.sourceRefs ?? [])
-    .map((ref) => (ref.href ? `<li><a href="${escapeHtml(ref.href)}" rel="nofollow noopener">${escapeHtml(ref.title)}</a></li>` : `<li>${escapeHtml(ref.title)}</li>`))
-    .join("\n            ");
   return `
       <main class="prerender-shell">
         <article class="prerender-hero">
@@ -65,7 +62,7 @@ const renderArticleBody = (post) => {
           ${(article.content ?? []).map((block) => `<h2>${escapeHtml(block.heading)}</h2>\n          ${paragraphs(block.body)}`).join("\n          ")}
           <h2>${escapeHtml(article.applicationBox?.title ?? "Ứng dụng vào lá số")}</h2>
           ${paragraphs(article.applicationBox?.body)}
-          ${sources ? `<h2>Nguồn tham khảo</h2>\n          <ul>\n            ${sources}\n          </ul>` : ""}
+          <p>Biên soạn: Tử Vi Phong Lam · Nội dung mang tính tham khảo, chưa thay thế ý kiến chuyên gia.</p>
           <div class="prerender-actions">
             <a href="${escapeHtml(article.cta?.href ?? "/lap-la-so")}/">${escapeHtml(article.cta?.label ?? "Lập lá số miễn phí")}</a>
             <a href="/bai-viet/" class="secondary">Các bài viết khác</a>
@@ -120,6 +117,11 @@ const articlePosts = [
     route: "/bai-viet/cung-than-la-gi",
     title: "Cung Thân và Thân cư là gì? | Bài viết",
     description: "Cung Thân luôn đồng cung với một trong sáu cung theo giờ sinh; vị trí Thân cư cho biết trọng tâm đời sống khi trưởng thành.",
+  },
+  {
+    route: "/bai-viet/phuong-phap-luan-giai",
+    title: "Phương pháp luận giải của Tử Vi Phong Lam | Bài viết",
+    description: "Lá số được an như thế nào, một đoạn tri thức được chọn cho lá số của bạn ra sao, AI làm gì và các giới hạn hiện tại.",
   },
 ];
 
@@ -201,7 +203,7 @@ const lapLaSoBody = `
             ${li(c.bacPhai.flow.map((step) => `<li>${escapeHtml(step)}</li>`))}
           </ol>
           <p>${escapeHtml(c.bacPhai.aiNote)}</p>
-          <p>${escapeHtml(c.bacPhai.matching)} <a href="/bai-viet/tu-vi-bac-phai-la-gi/">Tìm hiểu thêm về Tử Vi Bắc phái</a>.</p>
+          <p>${escapeHtml(c.bacPhai.matching)} <a href="/bai-viet/tu-vi-bac-phai-la-gi/">Tìm hiểu thêm về Tử Vi Bắc phái</a> · <a href="${escapeHtml(c.bacPhai.methodLink.path)}/">${escapeHtml(c.bacPhai.methodLink.title)}</a>.</p>
         </section>
         <section id="12-cung" class="prerender-section">
           <h2>${escapeHtml(c.twelvePalacesSection.heading)}</h2>
@@ -308,6 +310,7 @@ const routes = [
         <section class="prerender-section"><h2>Đại vận</h2><p>Bảng 12 đại vận 10 năm và đại vận của năm xem. <a href="/bai-viet/dai-van-va-luu-nien-trong-bac-phai/">Đại vận và lưu niên trong Bắc phái</a></p></section>
         <section id="luan-giai-mau" class="prerender-section"><h2>Luận giải mẫu</h2><p>Mỗi cung hiển thị các đoạn tri thức khớp với chính lá số mẫu kèm lý do khớp; AI tổng hợp từ dữ liệu này, không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu.</p></section>
         <section class="prerender-section"><h2>Lập lá số của tôi</h2><p>Nhập ngày giờ sinh để an Mệnh, Thân, 12 cung, Tứ Hóa và xem luận giải theo đúng lá số của bạn.</p><div class="prerender-actions"><a href="/lap-la-so/">Lập lá số của tôi</a></div></section>
+        <section class="prerender-section"><h2>Xem trước một vài trường hợp mẫu</h2><p>Các lá số mẫu khác (nữ, sinh năm 2000, chưa rõ giờ sinh) để thử nhanh trên trang lập lá số.</p></section>
       </main>
     `,
   },
@@ -380,12 +383,12 @@ const routes = [
     route: "/ve-chung-toi",
     title: "Về Chúng Tôi - Tử Vi Phong Lam | Chuyên Gia Tử Vi Bắc Phái",
     description:
-      "Tử Vi Phong Lam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái chính thống.",
+      "Tử Vi Phong Lam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
           <h1>Về Tử Vi Phong Lam</h1>
-          <p>Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái chính thống với hơn 30,000 luận giải tri thức.</p>
+          <p>Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái, đối chiếu hơn 20.000 đoạn tri thức có điều kiện với từng lá số. <a href="/bai-viet/phuong-phap-luan-giai/">Phương pháp luận giải</a>.</p>
         </section>
       </main>
     `,

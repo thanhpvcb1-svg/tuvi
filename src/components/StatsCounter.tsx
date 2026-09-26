@@ -9,7 +9,7 @@ type StatItem = {
 
 const defaultStats: StatItem[] = [
   { value: 15000, suffix: "+", label: "Lá số đã lập", icon: "📊" },
-  { value: 30000, suffix: "+", label: "Luận giải tri thức", icon: "📚" },
+  { value: 20000, suffix: "+", label: "Đoạn tri thức có điều kiện", icon: "📚" },
   { value: 98, suffix: "%", label: "Hài lòng", icon: "⭐" },
   { value: 24, suffix: "/7", label: "Hỗ trợ", icon: "💬" },
 ];

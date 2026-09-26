@@ -16,7 +16,7 @@ function KnowledgeBlockCard({ item }: { item: KnowledgeItem }) {
       </div>
       <p className="knowledge-block__text">{item.text}</p>
       <div className="knowledge-block__meta">
-        <span className="knowledge-block__source">{item.source}</span>
+
         {item.matchReasons.length > 0 && (
           <span className="knowledge-block__reasons">
             {item.matchReasons.map((reason, i) => (
@@ -51,7 +51,7 @@ export default function InterpretationCards({ items }: Props) {
                   <h3>
                     {item.title}
                     {hasKnowledge && (
-                      <span className="knowledge-badge" title="Có luận giải từ sách cổ">
+                      <span className="knowledge-badge" title="Có tri thức tham khảo khớp với lá số">
                         📚 {item.knowledgeItems!.length}
                       </span>
                     )}
@@ -77,7 +77,7 @@ export default function InterpretationCards({ items }: Props) {
                     <div className="knowledge-section">
                       <h4 className="knowledge-section__title">
                         <span className="knowledge-section__icon">📚</span>
-                        Luận giải từ sách cổ
+                        Tri thức tham khảo
                       </h4>
                       <div className="knowledge-blocks">
                         {item.knowledgeItems!.map((knowledge) => (

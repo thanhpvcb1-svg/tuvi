@@ -33,13 +33,11 @@ export type GeminiLuanGiaiRequest = {
 };
 
 /**
- * Tri thức gửi cho AI kèm nguồn và điều kiện đã khớp để AI trích [NGUỒN] trung thực,
- * không tự gán sách/tác giả.
+ * Tri thức gửi cho AI kèm điều kiện đã khớp. Nhãn [NGUỒN] trong câu trả lời = lấy trực tiếp từ kho tri thức.
  */
 export function formatKnowledgeForAi(match: KnowledgeMatch): string {
-  const { book, author } = match.interpretation.source ?? { book: "", author: "" };
-  const source = [book, author && !/^unknown$/i.test(author) ? author : ""].filter(Boolean).join(" – ") || "Không rõ nguồn";
-  return `[Nguồn: ${source}] [Khớp: ${match.matchReasons.join("; ")}] ${match.interpretation.text}`;
+  // Không gửi tên nguồn (website/sách/tác giả) cho AI để câu trả lời hiển thị không nêu nguồn lấy tri thức.
+  return `[Khớp: ${match.matchReasons.join("; ")}] ${match.interpretation.text}`;
 }
 
 export type GeminiLuanGiaiResponse = {

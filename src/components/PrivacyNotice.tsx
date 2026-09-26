@@ -10,7 +10,7 @@ export default function PrivacyNotice({ showClearAction = false, onClear }: Prop
     <section className="privacy-notice" id="privacy" aria-label="Quyền riêng tư">
       <div>
         <p className="eyebrow">Quyền riêng tư</p>
-        <h2>Thông tin của bạn được dùng như thế nào?</h2>
+        <h3>Thông tin của bạn được dùng như thế nào?</h3>
       </div>
       <ul className="privacy-list">
         <li>Thông tin bạn nhập được dùng để an lá số và hiển thị kết quả trên trình duyệt.</li>
