@@ -147,9 +147,18 @@ export default function BirthForm({
                 value={value.birthMinute}
                 onChange={(e) => update({ birthMinute: clampNumberInput(e.target.value, 2, 59) })}
                 disabled={value.unknownBirthTime}
+                aria-invalid={fieldErrors.birthMinute ? "true" : "false"}
+                aria-describedby={fieldErrors.birthMinute ? getErrorId("birthMinute") : undefined}
               />
+              {fieldErrors.birthMinute && <p id={getErrorId("birthMinute")} className="form-field__error">{fieldErrors.birthMinute}</p>}
             </div>
           </div>
+
+          {!value.unknownBirthTime && (
+            <p className="form-hint">
+              Không nhớ chính xác giờ sinh? Hãy chọn giờ gần đúng nhất hoặc tick "Không rõ giờ sinh" bên dưới.
+            </p>
+          )}
 
           {/* Row 3: Unknown time checkbox + Hide info + Horoscope year */}
           <div className="form-row form-row--between">
@@ -200,7 +209,7 @@ export default function BirthForm({
           {/* Actions */}
           <div className="form-actions">
             <button type="button" className="btn-primary" onClick={onSubmit} aria-busy={isSubmitting}>
-              {isSubmitting ? "Đang lập..." : canPrint ? "Lập lại" : "Lập lá số"}
+              {isSubmitting ? "Đang lập..." : canPrint ? "Lập lại" : "LẬP LÁ SỐ NGAY"}
             </button>
             <button type="button" className="btn-ghost" onClick={() => window.print()} disabled={!canPrint}>
               In

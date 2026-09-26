@@ -13,7 +13,7 @@ const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "TuViPhongLam",
+  name: "Tử Vi Phong Lam",
   url: siteUrl,
   inLanguage: "vi-VN",
   description: "Lập lá số tử vi online miễn phí theo ngày giờ sinh",
@@ -22,7 +22,7 @@ export const websiteSchema = {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "TuViPhongLam",
+  name: "Tử Vi Phong Lam",
   url: siteUrl,
   logo: `${siteUrl}/favicon.svg`,
   description: "Nền tảng lập lá số tử vi online và luận giải theo Bắc Phái.",
@@ -57,7 +57,7 @@ export const softwareAppSchema = {
   url: `${siteUrl}/lap-la-so`,
   provider: {
     "@type": "Organization",
-    name: "TuViPhongLam",
+    name: "Tử Vi Phong Lam",
     url: siteUrl,
   },
 };
@@ -69,7 +69,7 @@ export const compatibilityGuideSchema = {
   description: "So khớp hợp tuổi tình cảm, hôn nhân, hợp tác theo lá số tử vi. Đối chiếu Mệnh, Thân, cung Phu Thê.",
   provider: {
     "@type": "Organization",
-    name: "TuViPhongLam",
+    name: "Tử Vi Phong Lam",
     url: siteUrl,
   },
   serviceType: "Tư vấn hợp tuổi tử vi",
@@ -112,7 +112,7 @@ export const pricingServiceSchemas = primaryPlans
     description: plan.description,
     provider: {
       "@type": "Organization",
-      name: "LaSoTuVi",
+      name: "Tử Vi Phong Lam",
       url: siteUrl,
     },
     offers: {
@@ -131,7 +131,7 @@ export const productSchemas = primaryPlans.map((plan) => ({
   description: plan.description,
   brand: {
     "@type": "Brand",
-    name: "TuViPhongLam",
+    name: "Tử Vi Phong Lam",
   },
   offers: {
     "@type": "Offer",
@@ -141,7 +141,7 @@ export const productSchemas = primaryPlans.map((plan) => ({
     url: `${siteUrl}/bang-gia`,
     seller: {
       "@type": "Organization",
-      name: "TuViPhongLam",
+      name: "Tử Vi Phong Lam",
     },
   },
 }));
@@ -182,11 +182,11 @@ export const articleSchema = (article: { title: string; summary: string; slug: s
   mainEntityOfPage: `${siteUrl}/bai-viet/${article.slug}`,
   author: {
     "@type": "Organization",
-    name: "LaSoTuVi",
+    name: "Tử Vi Phong Lam",
   },
   publisher: {
     "@type": "Organization",
-    name: "LaSoTuVi",
+    name: "Tử Vi Phong Lam",
     logo: {
       "@type": "ImageObject",
       url: `${siteUrl}/favicon.svg`,

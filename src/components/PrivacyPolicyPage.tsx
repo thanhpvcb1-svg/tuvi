@@ -55,13 +55,21 @@ export default function PrivacyPolicyPage() {
           
           <h3>4.1. Dữ liệu lập lá số miễn phí</h3>
           <p>
-            <strong>Quan trọng:</strong> Khi sử dụng công cụ lập lá số miễn phí, thông tin sinh 
-            của bạn được xử lý hoàn toàn trên trình duyệt (client-side) và <strong>không được 
-            gửi lên hoặc lưu trữ trên máy chủ của chúng tôi</strong>.
+            Việc <strong>lập lá số</strong> (tính toán Mệnh, Thân, các cung và vị trí sao) được
+            xử lý hoàn toàn trên trình duyệt (client-side) và <strong>không được gửi lên hoặc
+            lưu trữ trên máy chủ của chúng tôi</strong>.
           </p>
           <p>
-            Dữ liệu có thể được lưu tạm trong localStorage của trình duyệt để tiện sử dụng lại, 
+            Dữ liệu có thể được lưu tạm trong localStorage của trình duyệt để tiện sử dụng lại,
             và bạn có thể xóa bất cứ lúc nào bằng cách xóa dữ liệu trình duyệt.
+          </p>
+          <p>
+            <strong>Khi bạn sử dụng tính năng luận giải AI hoặc chatbot hỏi đáp</strong>, một
+            bản tóm tắt lá số (cung, sao, Ngũ Hành, giới tính - <strong>không bao gồm họ tên hoặc
+            ngày giờ sinh cụ thể</strong>) cùng câu hỏi của bạn được gửi tới máy chủ của chúng tôi
+            để xử lý bởi dịch vụ AI (Cloudflare Workers AI, hoặc Google Gemini khi cần dự phòng)
+            và tạo nội dung luận giải. Dữ liệu này chỉ dùng để tạo phản hồi cho yêu cầu đó, không
+            được lưu trữ lâu dài trên máy chủ của chúng tôi.
           </p>
 
           <h3>4.2. Dữ liệu dịch vụ có phí</h3>

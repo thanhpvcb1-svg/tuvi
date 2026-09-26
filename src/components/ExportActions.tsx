@@ -24,19 +24,22 @@ export default function ExportActions({
       <div className="section-heading section-heading--compact">
         <p className="eyebrow">🚀 Bước tiếp theo</p>
         <h2>Luận giải và lưu lá số</h2>
+        <p className="result-note">
+          Luận giải dựa trên dữ liệu lá số và kho tri thức Tử Vi Bắc phái của Tử Vi Phong Lam.
+        </p>
       </div>
 
       <div className="export-actions export-actions--enhanced">
-        <button 
-          type="button" 
-          className="primary-button export-btn export-btn--primary" 
-          onClick={onInterpret} 
+        <button
+          type="button"
+          className="primary-button export-btn export-btn--primary"
+          onClick={onInterpret}
           disabled={isInterpreting}
           aria-busy={isInterpreting}
         >
-          <span className="export-btn__icon">🔮</span>
+          <span className="export-btn__icon">✨</span>
           <span className="export-btn__text">
-            {isInterpreting ? "Đang phân tích..." : isReadingOpen ? "Ẩn luận giải" : "Luận giải lá số"}
+            {isInterpreting ? "Đang phân tích..." : isReadingOpen ? "Ẩn luận giải" : "Luận Giải Lá Số Chuyên Sâu"}
           </span>
         </button>
         <button 

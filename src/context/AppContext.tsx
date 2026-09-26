@@ -229,18 +229,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     let cancelled = false;
 
     const refreshChart = async () => {
-      const { createChart, buildQuickReadings } = await loadChartModules();
-      if (cancelled) return;
+      try {
+        const { createChart, buildQuickReadings } = await loadChartModules();
+        if (cancelled) return;
 
-      const nextChart = createChart(normalizedInput, "tuvichancoCompatible", { 
-        luuOptions, 
-        horoscopeDate: new Date(horoscopeYear, 5, 15) 
-      });
-      if (cancelled) return;
+        const nextChart = createChart(normalizedInput, "tuvichancoCompatible", {
+          luuOptions,
+          horoscopeDate: new Date(horoscopeYear, 5, 15)
+        });
+        if (cancelled) return;
 
-      setChart(nextChart);
-      setQuickReadings(buildQuickReadings(nextChart));
-      setShowReading(false);
+        setChart(nextChart);
+        setQuickReadings(buildQuickReadings(nextChart));
+        setShowReading(false);
+      } catch (error) {
+        if (cancelled) return;
+        console.error("Không thể cập nhật lá số:", error);
+        setFieldErrors({ form: "Có lỗi xảy ra khi cập nhật lá số. Vui lòng thử lại." });
+      }
     };
 
     refreshChart();
@@ -292,35 +298,41 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     navigate("/lap-la-so");
 
     window.setTimeout(async () => {
-      const normalizedInput = normalizeBirthInput(nextInput);
+      try {
+        const normalizedInput = normalizeBirthInput(nextInput);
 
-      if (!normalizedInput) {
-        setFieldErrors({ form: "Không thể lập lá số từ dữ liệu hiện tại. Vui lòng kiểm tra lại thông tin sinh." });
+        if (!normalizedInput) {
+          setFieldErrors({ form: "Không thể lập lá số từ dữ liệu hiện tại. Vui lòng kiểm tra lại thông tin sinh." });
+          setIsGenerating(false);
+          return;
+        }
+
+        const { createChart, buildQuickReadings } = await loadChartModules();
+        const nextYear = getHoroscopeYear(nextInput);
+        const nextChart = createChart(normalizedInput, "tuvichancoCompatible", {
+          luuOptions,
+          horoscopeDate: new Date(nextYear, 5, 15)
+        });
+
+        setHoroscopeYear(nextYear);
+        setSubmittedInput(nextInput);
+        setChart(nextChart);
+        setQuickReadings(buildQuickReadings(nextChart));
+        setHasRequestedChart(true);
+        setShowReading(false);
+        setLastSubmittedSignature(buildInputSignature(nextInput));
+        navigate("/lap-la-so", { replace: true });
+        showToast("Lập lá số thành công");
+
+        window.requestAnimationFrame(() => {
+          resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      } catch (error) {
+        console.error("Không thể lập lá số:", error);
+        setFieldErrors({ form: "Có lỗi xảy ra khi lập lá số. Vui lòng kiểm tra lại thông tin sinh hoặc thử lại sau." });
+      } finally {
         setIsGenerating(false);
-        return;
       }
-
-      const { createChart, buildQuickReadings } = await loadChartModules();
-      const nextYear = getHoroscopeYear(nextInput);
-      const nextChart = createChart(normalizedInput, "tuvichancoCompatible", { 
-        luuOptions, 
-        horoscopeDate: new Date(nextYear, 5, 15) 
-      });
-      
-      setHoroscopeYear(nextYear);
-      setSubmittedInput(nextInput);
-      setChart(nextChart);
-      setQuickReadings(buildQuickReadings(nextChart));
-      setHasRequestedChart(true);
-      setShowReading(false);
-      setLastSubmittedSignature(buildInputSignature(nextInput));
-      navigate("/lap-la-so", { replace: true });
-      setIsGenerating(false);
-      showToast("Lập lá số thành công");
-
-      window.requestAnimationFrame(() => {
-        resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
     }, 40);
   }, [navigate, luuOptions, showToast]);
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { Suspense, useEffect, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FloatingContactLinks from "./components/FloatingContactLinks";
 import MobileStickyCTA from "./components/MobileStickyCTA";
@@ -7,21 +7,22 @@ import SocialProofPopup from "./components/SocialProofPopup";
 import ThemeToggle from "./components/ThemeToggle";
 import { AppProvider, useAppContext } from "./context/AppContext";
 import { scheduleKnowledgePreload } from "./lib/tuvi/knowledge/lazyKnowledgeLoader";
-import {
-  HomePage,
-  ChartPage,
-  PricingPage,
-  SampleChartsPage,
-  ContactPage,
-  CompatPage,
-  FAQPage,
-  BlogPage,
-  VideoPage,
-  TermsPage,
-  PrivacyPage,
-  AboutPage,
-  NotFoundPage,
-} from "./pages";
+// HomePage tải eager (trang vào phổ biến nhất, tránh flash loading ở lần vào đầu).
+// Các trang còn lại tải lazy theo route để trang chủ/blog/... không phải kéo theo
+// chart engine (iztro, tuvi-lib) và các lib chỉ /lap-la-so mới cần (leaflet, html-to-image).
+import HomePage from "./pages/HomePage";
+const ChartPage = React.lazy(() => import("./pages/ChartPage"));
+const PricingPage = React.lazy(() => import("./pages/PricingPage"));
+const SampleChartsPage = React.lazy(() => import("./pages/SampleChartsPage"));
+const ContactPage = React.lazy(() => import("./pages/ContactPage"));
+const CompatPage = React.lazy(() => import("./pages/CompatPage"));
+const FAQPage = React.lazy(() => import("./pages/FAQPage"));
+const BlogPage = React.lazy(() => import("./pages/BlogPage"));
+const VideoPage = React.lazy(() => import("./pages/VideoPage"));
+const TermsPage = React.lazy(() => import("./pages/TermsPage"));
+const PrivacyPage = React.lazy(() => import("./pages/PrivacyPage"));
+const AboutPage = React.lazy(() => import("./pages/AboutPage"));
+const NotFoundPage = React.lazy(() => import("./pages/NotFoundPage"));
 import type { BirthInput } from "./lib/types";
 
 // ============ TYPES ============
@@ -49,10 +50,14 @@ function AppContent() {
   const [activePage, setActivePage] = useState<MainPageId>("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Schedule lazy load knowledge after 15s
+  // Preload Knowledge Base (~34MB) chỉ khi đang ở trang lập lá số - nơi duy nhất
+  // có thể dẫn tới "Luận giải". Trước đây gọi vô điều kiện nên mọi trang (Blog, FAQ,
+  // Trang chủ...) đều âm thầm tải hết Knowledge Base sau 15s dù không liên quan.
+  // StreamingAnalysis vẫn tự load ngay khi cần nếu preload này chưa kịp chạy.
   useEffect(() => {
+    if (activePage !== "lap-la-so") return;
     scheduleKnowledgePreload(15000);
-  }, []);
+  }, [activePage]);
 
   // Route to page mapping
   useEffect(() => {
@@ -165,9 +170,9 @@ function AppContent() {
       <header className="site-header">
         <div className="site-header-inner">
           <button type="button" className="site-brand" onClick={navigateHome}>
-            <span className="site-brand-mark">L</span>
+            <span className="site-brand-mark">T</span>
             <span className="site-brand-copy">
-              <strong>LaSoTuVi</strong>
+              <strong>Tử Vi Phong Lam</strong>
               <small>Luận Giải Vận Mệnh</small>
             </span>
           </button>
@@ -236,7 +241,9 @@ function AppContent() {
 
       {/* Main Content */}
       <main id="main-content" className="site-main">
-        {renderPage()}
+        <Suspense fallback={<div className="page-loading-fallback" aria-busy="true" />}>
+          {renderPage()}
+        </Suspense>
       </main>
 
       {/* Footer & Floating Elements */}

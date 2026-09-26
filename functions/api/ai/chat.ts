@@ -4,7 +4,10 @@
  * Hỗ trợ: Cloudflare Workers AI (primary) + Google Gemini (fallback)
  */
 
-interface Env {
+import { buildCorsHeaders } from "./_shared/cors";
+import { checkRateLimit, rateLimitResponse, type RateLimitEnv } from "./_shared/rateLimit";
+
+interface Env extends RateLimitEnv {
   AI?: Ai;
   GEMINI_API_KEY?: string;
 }
@@ -54,18 +57,48 @@ const SYSTEM_PROMPT = `Bạn là chuyên gia Tử Vi Đẩu Số, trả lời c�
 - Không dự đoán chính xác ngày tháng.
 - Khuyến khích tham khảo chuyên gia nếu cần tư vấn sâu.`;
 
-function buildChartContext(chart: RequestBody["chart"]): string {
-  const profile = chart.profile || {};
-  const palaces = chart.palaces || [];
+// Chỉ những field không định danh cá nhân mới được đưa vào prompt gửi cho AI.
+// Loại trừ fullName/birthTime/solarDate/lunarDate để tránh gửi PII ra ngoài (Gemini fallback).
+const SAFE_PROFILE_FIELDS = [
+  "gender",
+  "yearStem",
+  "yearBranch",
+  "fiveElementsClass",
+  "natalElementName",
+  "yinYangLabel",
+  "zodiac",
+  "menhChu",
+  "thanChu",
+  "soul",
+  "body",
+  "cucElement",
+] as const;
+
+function buildSafeProfile(
+  profile: RequestBody["chart"]["profile"],
+  userContext?: RequestBody["userContext"],
+): Record<string, unknown> {
+  const safe: Record<string, unknown> = {};
+  for (const field of SAFE_PROFILE_FIELDS) {
+    const value = (profile as Record<string, unknown>)?.[field];
+    if (value != null) safe[field] = value;
+  }
+  if (userContext?.gender) safe.gender = safe.gender ?? userContext.gender;
+  if (userContext?.yearToView) safe.yearToView = userContext.yearToView;
+  return safe;
+}
+
+function buildChartContext(chart: RequestBody["chart"], userContext?: RequestBody["userContext"]): string {
+  const profile = buildSafeProfile(chart.profile, userContext);
+  const palaces = (chart.palaces || []).slice(0, 20);
 
   const profileStr = Object.entries(profile)
-    .filter(([_, v]) => v != null)
     .map(([k, v]) => `${k}: ${v}`)
     .join(", ");
 
   const palaceStr = palaces
     .map((p) => {
-      const stars = p.majorStars?.join(", ") || "Không có chính tinh";
+      const stars = p.majorStars?.slice(0, 10).join(", ") || "Không có chính tinh";
       const body = p.isBodyPalace ? " (Thân cư)" : "";
       return `- ${p.name}${body}: ${p.heavenlyStem || ""} ${p.earthlyBranch} | ${stars}`;
     })
@@ -78,13 +111,33 @@ CÁC CUNG:
 ${palaceStr}`;
 }
 
+const MAX_HISTORY_MESSAGES = 8;
+const MAX_MESSAGE_LENGTH = 2000;
+
+// body.history đến từ client (JSON) nên `role` chỉ là type ở compile-time, không được
+// đảm bảo ở runtime - lọc kỹ để một request thủ công không thể chèn role "system" giả
+// nhằm ghi đè SYSTEM_PROMPT (prompt injection).
+function sanitizeHistory(history: RequestBody["history"]): Array<{ role: "user" | "assistant"; content: string }> {
+  if (!Array.isArray(history)) return [];
+  return history
+    .filter(
+      (msg): msg is Message =>
+        !!msg &&
+        (msg.role === "user" || msg.role === "assistant") &&
+        typeof msg.content === "string" &&
+        msg.content.trim().length > 0,
+    )
+    .slice(-MAX_HISTORY_MESSAGES)
+    .map((msg) => ({ role: msg.role, content: msg.content.slice(0, MAX_MESSAGE_LENGTH) }));
+}
+
 function buildMessages(body: RequestBody): Array<{ role: string; content: string }> {
   const messages: Array<{ role: string; content: string }> = [
     { role: "system", content: SYSTEM_PROMPT },
   ];
 
   // Add chart context
-  const chartContext = buildChartContext(body.chart);
+  const chartContext = buildChartContext(body.chart, body.userContext);
   messages.push({
     role: "user",
     content: `DỮ LIỆU LÁ SỐ:\n${chartContext}\n\n---\nHãy ghi nhớ dữ liệu này để trả lời các câu hỏi.`,
@@ -94,15 +147,13 @@ function buildMessages(body: RequestBody): Array<{ role: string; content: string
     content: "Tôi đã ghi nhận dữ liệu lá số. Bạn có thể hỏi bất kỳ điều gì về lá số này.",
   });
 
-  // Add history
-  if (body.history && body.history.length > 0) {
-    for (const msg of body.history) {
-      messages.push({ role: msg.role, content: msg.content });
-    }
+  // Add history (đã được sanitize để chỉ còn role user/assistant)
+  for (const msg of sanitizeHistory(body.history)) {
+    messages.push({ role: msg.role, content: msg.content });
   }
 
   // Add current question
-  messages.push({ role: "user", content: body.question });
+  messages.push({ role: "user", content: body.question.slice(0, MAX_MESSAGE_LENGTH) });
 
   return messages;
 }
@@ -137,11 +188,7 @@ async function callGeminiAPI(apiKey: string, messages: Array<{ role: string; con
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { env, request } = context;
 
-  const corsHeaders = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-  };
+  const corsHeaders = buildCorsHeaders(request);
 
   const hasAI = !!env.AI;
   const hasGemini = !!env.GEMINI_API_KEY;
@@ -153,12 +200,24 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     );
   }
 
+  const rateLimit = await checkRateLimit(env, request, { keyPrefix: "chat", limit: 30, windowSeconds: 3600 });
+  if (!rateLimit.allowed) {
+    return rateLimitResponse(corsHeaders);
+  }
+
   try {
     const body: RequestBody = await request.json();
 
-    if (!body.question || typeof body.question !== "string") {
+    if (!body.question || typeof body.question !== "string" || !body.question.trim()) {
       return new Response(
         JSON.stringify({ success: false, error: "Thiếu câu hỏi" }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    if (body.question.length > 2000) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Câu hỏi quá dài" }),
         { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
@@ -213,12 +272,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   }
 };
 
-export const onRequestOptions: PagesFunction = async () => {
-  return new Response(null, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    },
-  });
+export const onRequestOptions: PagesFunction = async (context) => {
+  return new Response(null, { headers: buildCorsHeaders(context.request) });
 };

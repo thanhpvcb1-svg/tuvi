@@ -1,7 +1,5 @@
 import type { BrightnessRule } from "../config/types";
 
-const ALL_BRANCHES = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"];
-
 export const MAIN_STAR_BRIGHTNESS_RULES: BrightnessRule[] = [
   { star: "Tử Vi", branches: ["Tỵ", "Ngọ", "Dần", "Thân", "Thìn", "Tuất"], brightness: "V", brightnessFull: "Miếu/Vượng", priority: 100, source: "school" },
   { star: "Tử Vi", branches: ["Sửu", "Mùi", "Hợi", "Tý"], brightness: "Đ", brightnessFull: "Đắc", priority: 100, source: "school" },
@@ -83,14 +81,19 @@ export const AUXILIARY_BRIGHTNESS_RULES: BrightnessRule[] = [
   { star: "Thiên Diêu", branches: ["Thìn"], brightness: "H", brightnessFull: "Hãm", priority: 100, source: "school" },
   { star: "Văn Xương", branches: ["Mão"], brightness: "Đ", brightnessFull: "Đắc", priority: 100, source: "school" },
   { star: "Tiểu Hao", branches: ["Thân"], brightness: "Đ", brightnessFull: "Đắc", priority: 100, source: "school" },
-  { star: "Hỏa Tinh", branches: ALL_BRANCHES, brightness: "H", brightnessFull: "Hãm", priority: 100, source: "school" },
   { star: "Đại Hao", branches: ["Dần"], brightness: "Đ", brightnessFull: "Đắc", priority: 100, source: "school" },
-  { star: "Linh Tinh", branches: ALL_BRANCHES, brightness: "H", brightnessFull: "Hãm", priority: 80, source: "school" },
-  { star: "Hóa Lộc", branches: ALL_BRANCHES, brightness: "H", brightnessFull: "Hãm", priority: 50, source: "school" },
-  { star: "Hóa Quyền", branches: ALL_BRANCHES, brightness: "H", brightnessFull: "Hãm", priority: 50, source: "school" },
-  { star: "Hóa Khoa", branches: ALL_BRANCHES, brightness: "H", brightnessFull: "Hãm", priority: 50, source: "school" },
-  { star: "Hóa Kỵ", branches: ALL_BRANCHES, brightness: "H", brightnessFull: "Hãm", priority: 50, source: "school" },
 ];
+
+// Hỏa Tinh/Linh Tinh trước đây có rule ALL_BRANCHES => Hãm (priority 100/80) ở đây, khiến
+// resolveBrightness() (starBrightnessResolver.ts) luôn override và bỏ qua độ sáng thật do
+// iztro tính theo từng cung (bảng huoxingMin/lingxingMin trong node_modules/iztro/lib/data/stars.js
+// vốn đã đúng và biến thiên theo cung: Miếu/Lợi/Hãm/Đắc xoay vòng theo tam hợp). Đã bỏ 2 rule
+// đó để mọi lá số dùng đúng độ sáng theo cung thay vì luôn hiển thị "Hãm".
+//
+// Hóa Lộc/Quyền/Khoa/Kỵ cũng từng có rule ALL_BRANCHES => Hãm ở đây (priority 50) nhưng không có
+// code path nào tạo star với tên đúng "Hóa Lộc"/... để match rule này (mutagen được gắn qua field
+// `.mutagen` trên sao gốc, không phải một star riêng) - đã bỏ luôn vì là rule chết, tránh bẫy cho
+// lần refactor sau.
 
 export const BRIGHTNESS_RULES: BrightnessRule[] = [...MAIN_STAR_BRIGHTNESS_RULES, ...AUXILIARY_BRIGHTNESS_RULES];
 

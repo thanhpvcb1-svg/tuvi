@@ -903,6 +903,22 @@ h4,
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.feature-overview-grid--six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .feature-overview-grid--six {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .feature-overview-grid--six {
+    grid-template-columns: 1fr;
+  }
+}
+
 .process-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -983,6 +999,188 @@ h4,
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
+}
+
+.content-section a {
+  color: var(--gold-dark, #8b672c);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content-section a:hover {
+  color: var(--gold, #d4a017);
+}
+
+.seo-info-list {
+  margin: 10px 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.seo-info-list li {
+  margin-bottom: 4px;
+}
+
+.seo-copy-grid--compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.seo-copy-card--compact {
+  padding: 14px 16px;
+}
+
+.seo-copy-card--compact h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.seo-copy-card--compact p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .seo-copy-grid--compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .seo-copy-grid--compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Clickable 12-cung cards ("Khám Phá 12 Cung") */
+.seo-copy-card--clickable {
+  cursor: pointer;
+  text-align: left;
+}
+
+.seo-copy-card--clickable:focus-visible {
+  outline: 3px solid rgba(212, 160, 23, 0.5);
+  outline-offset: 2px;
+}
+
+.seo-copy-card--clickable.is-open {
+  border-color: var(--gold);
+  background: var(--gold-soft, rgba(212, 160, 23, 0.08));
+}
+
+.seo-copy-card__detail {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Tử Vi Bắc Phái + AI flow diagram */
+.bac-phai-ai-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bac-phai-ai-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--gold-soft, rgba(212, 160, 23, 0.06));
+}
+
+.bac-phai-ai-flow__step {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.bac-phai-ai-flow__step--highlight {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.bac-phai-ai-flow__arrow {
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .bac-phai-ai-flow {
+    flex-direction: column;
+  }
+
+  .bac-phai-ai-flow__arrow {
+    transform: none;
+  }
+}
+
+/* Knowledge Hub list */
+.knowledge-hub-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.knowledge-hub-list__soon {
+  color: var(--text-subtle, #9a9186);
+}
+
+.knowledge-hub-list__soon span {
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gold-dark);
+}
+
+@media (max-width: 760px) {
+  .knowledge-hub-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bottom closing CTA */
+.bottom-cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 32px 16px;
+}
+
+.bottom-cta-section h2 {
+  margin: 0;
+}
+
+.bottom-cta-section p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+.bottom-cta-section .primary-button {
+  margin-top: 8px;
+  min-width: 220px;
 }
 
 /* Enhanced process cards */
@@ -2110,6 +2308,48 @@ h4,
   align-items: center;
   gap: 28px;
   padding: 22px 12px 48px;
+}
+
+.page-intro {
+  width: min(100%, 1040px);
+  margin: 0 0 4px;
+}
+
+.page-intro h1 {
+  font-size: 28px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  color: var(--text-main);
+}
+
+.page-intro p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-subtle, #6b6560);
+  max-width: 760px;
+}
+
+.page-intro-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+@media (max-width: 760px) {
+  .page-intro h1 {
+    font-size: 22px;
+  }
+
+  .page-intro-cta {
+    flex-direction: column;
+  }
+
+  .page-intro-cta .primary-button,
+  .page-intro-cta .ghost-button {
+    width: 100%;
+  }
 }
 
 .top-hero-row {
@@ -3323,6 +3563,22 @@ h4,
   display: grid;
   gap: 10px;
   margin-bottom: 20px;
+}
+
+.page-loading-fallback {
+  min-height: 40vh;
+  margin: 24px auto;
+  width: min(100%, 1040px);
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 160, 23, 0.06) 0%,
+    rgba(212, 160, 23, 0.14) 20%,
+    rgba(212, 160, 23, 0.06) 40%,
+    rgba(212, 160, 23, 0.06) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
 }
 
 .skeleton-line {

@@ -3,7 +3,10 @@
  * Sử dụng Cloudflare Workers AI (Llama 3.3)
  */
 
-interface Env {
+import { buildCorsHeaders } from "./_shared/cors";
+import { checkRateLimit, rateLimitResponse, type RateLimitEnv } from "./_shared/rateLimit";
+
+interface Env extends RateLimitEnv {
   AI: Ai;
 }
 
@@ -82,15 +85,20 @@ function buildChartData(profile: RequestBody["profile"]): string {
   }, null, 2);
 }
 
+// Giới hạn số lượng phần tử trong các mảng lồng nhau để tránh 1 request cố ý gửi
+// mảng khổng lồ (chinhTinh/catTinh/hungTinh/knowledgeTexts) làm phình prompt/token cost.
+const MAX_STARS_PER_PALACE = 15;
+const MAX_KNOWLEDGE_TEXTS_PER_PALACE = 10;
+
 function buildContextData(palaces: PalaceSummary[]): string {
   const palaceContexts = palaces.map((p) => ({
     cung: p.name,
     viTri: `${p.stem} ${p.branch}`,
     isBodyPalace: p.isBodyPalace || undefined,
-    chinhTinh: p.majorStars.length > 0 ? p.majorStars : undefined,
-    catTinh: p.goodStars && p.goodStars.length > 0 ? p.goodStars : undefined,
-    hungTinh: p.badStars && p.badStars.length > 0 ? p.badStars : undefined,
-    phiHoa: p.phiHoaFlows.length > 0 ? p.phiHoaFlows : undefined,
+    chinhTinh: p.majorStars.length > 0 ? p.majorStars.slice(0, MAX_STARS_PER_PALACE) : undefined,
+    catTinh: p.goodStars && p.goodStars.length > 0 ? p.goodStars.slice(0, MAX_STARS_PER_PALACE) : undefined,
+    hungTinh: p.badStars && p.badStars.length > 0 ? p.badStars.slice(0, MAX_STARS_PER_PALACE) : undefined,
+    phiHoa: p.phiHoaFlows.length > 0 ? p.phiHoaFlows.slice(0, MAX_STARS_PER_PALACE) : undefined,
   }));
 
   const allPhiHoa = palaces.flatMap((p) => 
@@ -117,7 +125,7 @@ function buildKnowledgeData(palaces: PalaceSummary[]): string {
     .filter((p) => p.knowledgeTexts.length > 0)
     .map((p) => ({
       cung: p.name,
-      triThuc: p.knowledgeTexts,
+      triThuc: p.knowledgeTexts.slice(0, MAX_KNOWLEDGE_TEXTS_PER_PALACE),
     }));
 
   if (knowledgeByPalace.length === 0) {
@@ -166,11 +174,7 @@ ${knowledge}`;
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { env, request } = context;
 
-  const corsHeaders = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-  };
+  const corsHeaders = buildCorsHeaders(request);
 
   if (!env.AI) {
     return new Response(
@@ -179,12 +183,24 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     );
   }
 
+  const rateLimit = await checkRateLimit(env, request, { keyPrefix: "tonghop", limit: 10, windowSeconds: 3600 });
+  if (!rateLimit.allowed) {
+    return rateLimitResponse(corsHeaders);
+  }
+
   try {
     const body: RequestBody = await request.json();
 
     if (!body.palaces || !Array.isArray(body.palaces)) {
       return new Response(
         JSON.stringify({ success: false, error: "Thiếu dữ liệu palaces" }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    if (body.palaces.length > 20) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Dữ liệu palaces không hợp lệ" }),
         { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
@@ -226,12 +242,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   }
 };
 
-export const onRequestOptions: PagesFunction = async () => {
-  return new Response(null, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    },
-  });
+export const onRequestOptions: PagesFunction = async (context) => {
+  return new Response(null, { headers: buildCorsHeaders(context.request) });
 };

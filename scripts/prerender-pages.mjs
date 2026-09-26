@@ -48,7 +48,7 @@ const buildWebPageSchema = (page) => ({
   inLanguage: "vi-VN",
   publisher: {
     "@type": "Organization",
-    name: "LaSoTuVi",
+    name: "Tử Vi Phong Lam",
     url: siteUrl,
   },
 });
@@ -75,14 +75,14 @@ const routes = [
   },
   {
     route: "/lap-la-so",
-    title: "Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh",
+    title: "Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh | Tử Vi Phong Lam",
     description:
-      "Công cụ lập lá số tử vi online miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.",
+      "Lập lá số tử vi online theo ngày tháng năm giờ sinh. An Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận, hỗ trợ luận giải theo Tử Vi Bắc phái.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Lập lá số tử vi online miễn phí theo ngày giờ sinh</h1>
-          <p>Nhập ngày sinh, giờ sinh, giới tính và năm muốn xem để hệ thống an lá số, xác định Mệnh, Thân, 12 cung, chính tinh, phụ tinh, đại vận và tiểu vận.</p>
+          <h1>Lập Lá Số Tử Vi Online Miễn Phí</h1>
+          <p>Nhập ngày, tháng, năm, giờ sinh và giới tính để lập lá số tử vi theo Tử Vi Bắc phái: an Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận - miễn phí, ngay trên trình duyệt.</p>
         </section>
       </main>
     `,

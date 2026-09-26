@@ -2,7 +2,7 @@
  * App utilities and constants
  */
 
-import type { ChartView, PalaceView, StarView } from "../lib/types";
+import type { BirthInput, ChartView, PalaceView, StarView } from "../lib/types";
 
 // ============ CONSTANTS ============
 
@@ -108,6 +108,159 @@ export const chartReadingSteps = [
   {
     title: "3. Đặt vận năm vào toàn cục",
     description: "Dùng thanh chọn năm để xem tiểu vận, rồi đối chiếu với đại vận và các cung liên quan.",
+  },
+];
+
+export const twelvePalaces = [
+  {
+    name: "Mệnh",
+    description: "Bản chất, tính cách và xu hướng phát triển chính của một người.",
+    detail: "Cung được xem đầu tiên khi đọc lá số - phản ánh khí chất, cách thể hiện bản thân và nền tảng tính cách.",
+  },
+  {
+    name: "Phụ Mẫu",
+    description: "Quan hệ với cha mẹ, người trên và cấp trên.",
+    detail: "Gợi ý về gia đình gốc, mối liên hệ với cha mẹ và hậu thuẫn ban đầu trong cuộc sống.",
+  },
+  {
+    name: "Phúc Đức",
+    description: "Tinh thần, phúc phần, đời sống nội tâm và hưởng thụ.",
+    detail: "Liên quan đến phúc khí, nền tảng tinh thần và sự nâng đỡ lâu dài - thường được xem cùng cung Mệnh.",
+  },
+  {
+    name: "Điền Trạch",
+    description: "Nhà cửa, đất đai, tài sản cố định và môi trường sống.",
+    detail: "Gợi mở về nhà cửa, tài sản tích lũy và môi trường sống xung quanh một người.",
+  },
+  {
+    name: "Quan Lộc",
+    description: "Sự nghiệp, con đường công danh và cách làm việc.",
+    detail: "Phản ánh xu hướng nghề nghiệp, vai trò xã hội và tham vọng phát triển trong công việc.",
+  },
+  {
+    name: "Nô Bộc",
+    description: "Bạn bè, đồng nghiệp, cấp dưới và các mối quan hệ ngang hàng.",
+    detail: "Cho thấy mạng lưới cộng sự, bạn bè, người hỗ trợ và cách một người hợp tác với người khác.",
+  },
+  {
+    name: "Thiên Di",
+    description: "Di chuyển, thay đổi môi trường và các cơ hội bên ngoài.",
+    detail: "Liên quan đến cơ hội khi ra ngoài, môi trường xã hội rộng hơn và các thay đổi vị trí sống/làm việc.",
+  },
+  {
+    name: "Tật Ách",
+    description: "Sức khỏe và các vấn đề thể chất cần lưu ý.",
+    detail: "Nhắc đến sức khỏe, áp lực tinh thần và những điều cần lưu tâm để giữ gìn thể chất.",
+  },
+  {
+    name: "Tài Bạch",
+    description: "Tiền bạc, dòng tiền và khả năng tạo ra của cải.",
+    detail: "Gợi ý về dòng tiền, cách kiếm tiền và khả năng quản lý tài chính của một người.",
+  },
+  {
+    name: "Tử Tức",
+    description: "Con cái và các mối quan hệ với thế hệ sau.",
+    detail: "Liên quan đến con cái, dự định cá nhân và những thành quả được gây dựng lâu dài.",
+  },
+  {
+    name: "Phu Thê",
+    description: "Hôn nhân, tình cảm và người bạn đời.",
+    detail: "Cho biết xu hướng tình cảm, hôn nhân và cách một người kết nối với bạn đời.",
+  },
+  {
+    name: "Huynh Đệ",
+    description: "Anh chị em và các mối quan hệ đồng trang lứa gần gũi.",
+    detail: "Phản ánh quan hệ anh chị em, bạn đồng hành và những người ngang vai gần gũi.",
+  },
+];
+
+// 6 nhóm nội dung nổi bật của lá số - dùng cho section "Lá số của bạn có gì?"
+export const laSoOverviewCards = [
+  {
+    icon: "👤",
+    title: "Mệnh - Thân",
+    description: "Khí chất, tính cách và bản chất con người thể hiện qua cung Mệnh và cung Thân.",
+    color: "#e74c3c",
+  },
+  {
+    icon: "💼",
+    title: "Công Danh - Sự Nghiệp",
+    description: "Hướng công việc, vai trò xã hội và nhịp phát triển sự nghiệp qua cung Quan Lộc.",
+    color: "#3498db",
+  },
+  {
+    icon: "💰",
+    title: "Tài Bạch",
+    description: "Dòng tiền, cách kiếm tiền và khả năng tích lũy tài chính.",
+    color: "#f39c12",
+  },
+  {
+    icon: "💑",
+    title: "Phu Thê",
+    description: "Tình cảm, hôn nhân và cách kết nối với người bạn đời.",
+    color: "#e91e63",
+  },
+  {
+    icon: "🏡",
+    title: "Phúc Đức - Gia Đạo",
+    description: "Đời sống tinh thần, phúc phần và nền tảng gia đình.",
+    color: "#16a085",
+  },
+  {
+    icon: "📅",
+    title: "Đại Vận - Lưu Niên",
+    description: "Đặt lá số vào từng giai đoạn 10 năm và từng năm cụ thể đang xem.",
+    color: "#9b59b6",
+  },
+];
+
+// Chủ đề kiến thức Tử Vi liên quan đến trang lập lá số. `path` chỉ được gán khi
+// route/bài viết đó CÓ THẬT (đã xác minh trong src/content/bacPhaiLibrary.ts) -
+// các mục chưa có bài viết để path = undefined và hiển thị như "Sắp ra mắt".
+export const knowledgeHubItems = [
+  { title: "Tử Vi Bắc phái là gì?", path: "/bai-viet/tu-vi-bac-phai-la-gi" },
+  { title: "Mệnh là gì?", path: undefined },
+  { title: "Thân cư Mệnh là gì?", path: undefined },
+  { title: "Tứ Hóa là gì?", path: "/bai-viet/tu-hoa-la-gi" },
+  { title: "Tứ Hóa Phi Tinh là gì?", path: "/bai-viet/tu-hoa-phi-tinh-la-gi" },
+  { title: "Lộc - Quyền - Khoa - Kỵ có ý nghĩa gì?", path: "/bai-viet/loc-quyen-khoa-ky-co-y-nghia-gi" },
+  { title: "Phi nhập và phi xuất là gì?", path: "/bai-viet/phi-nhap-va-phi-xuat-la-gi" },
+  { title: "Đại vận và lưu niên trong Bắc phái", path: "/bai-viet/dai-van-va-luu-nien-trong-bac-phai" },
+  { title: "Cung Phu Thê", path: undefined },
+  { title: "Cung Tài Bạch", path: undefined },
+  { title: "Cung Quan Lộc", path: undefined },
+];
+
+export const lapLaSoFaqs = [
+  {
+    question: "Lập lá số tử vi cần những thông tin gì?",
+    answer:
+      "Bạn cần ngày, tháng, năm sinh, giờ sinh (và phút nếu có), giới tính, và năm muốn xem vận hạn. Giờ sinh càng chính xác thì vị trí cung và sao càng sát.",
+  },
+  {
+    question: "Không biết giờ sinh có lập lá số được không?",
+    answer:
+      "Có. Bạn có thể tick \"Không rõ giờ sinh\" để lập lá số dựa trên các dữ liệu còn lại. Hệ thống sẽ ghi chú rõ rằng kết quả mang tính tham khảo do thiếu giờ sinh chính xác.",
+  },
+  {
+    question: "Mệnh và Thân khác nhau như thế nào?",
+    answer:
+      "Mệnh phản ánh khí chất và bản chất con người ngay từ đầu đời. Thân thể hiện xu hướng phát triển và cách một người thể hiện ra bên ngoài, thường rõ hơn ở giai đoạn trưởng thành. Hai cung này luôn được xem cùng nhau.",
+  },
+  {
+    question: "Tử Vi Bắc phái là gì?",
+    answer:
+      "Là cách đọc lá số theo mạch vận động: Mệnh - Thân, cung vị, chính - phụ tinh, tam hợp - xung chiếu, rồi đến Tứ Hóa và Phi Hóa, thay vì chỉ xét từng sao độc lập.",
+  },
+  {
+    question: "Tứ Hóa là gì?",
+    answer:
+      "Tứ Hóa gồm Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ - phát sinh từ Thiên Can năm sinh, dùng để theo dõi xu hướng tăng trưởng, quyền lực, danh tiếng và các điểm cần lưu ý của lá số.",
+  },
+  {
+    question: "Luận giải AI dựa trên dữ liệu nào?",
+    answer:
+      "AI luận giải dựa trên chính dữ liệu lá số của bạn (cung, sao, Tứ Hóa, Phi Hóa) đối chiếu với kho tri thức Tử Vi Bắc phái đã biên soạn sẵn, không tự bịa nội dung. Kết quả vẫn mang tính tham khảo, không thay thế tư vấn chuyên môn.",
   },
 ];
 
@@ -274,12 +427,53 @@ export const buildConsultationBrief = (chart: ChartView, input: any, horoscopeYe
   ].join("\n");
 };
 
-export const serializeInputToSearch = (input: any) => {
+// Field nào KHÔNG được đưa vào link chia sẻ khi "Ẩn thông tin cá nhân" đang bật -
+// tránh việc bật toggle ẩn trên giao diện nhưng link copy ra vẫn lộ họ tên thật.
+const PERSONAL_FIELDS: Array<keyof BirthInput> = ["fullName"];
+
+export const serializeInputToSearch = (input: BirthInput) => {
   const params = new URLSearchParams();
+  const shouldHidePersonal = Boolean(input.hidePersonalInfo);
   Object.entries(input).forEach(([key, value]) => {
+    if (shouldHidePersonal && PERSONAL_FIELDS.includes(key as keyof BirthInput)) return;
     params.set(key, String(value));
   });
   return params.toString();
+};
+
+const BIRTH_INPUT_STRING_FIELDS = [
+  "fullName",
+  "year",
+  "month",
+  "day",
+  "birthHour",
+  "birthMinute",
+  "horoscopeYear",
+] as const satisfies ReadonlyArray<keyof BirthInput>;
+
+// Đọc lại 1 lá số đã chia sẻ qua "Copy link" (serializeInputToSearch ở trên).
+// Trả về null nếu query string không chứa đủ dữ liệu sinh tối thiểu (year/month/day),
+// để tránh cố generate 1 lá số rỗng/không hợp lệ khi người dùng chỉ mở link gốc không có query.
+export const deserializeInputFromSearch = (search: string, defaults: BirthInput): BirthInput | null => {
+  const params = new URLSearchParams(search);
+  if (!params.get("year") || !params.get("month") || !params.get("day")) return null;
+
+  const result: BirthInput = { ...defaults };
+  for (const field of BIRTH_INPUT_STRING_FIELDS) {
+    const value = params.get(field);
+    if (value != null) result[field] = value;
+  }
+
+  const gender = params.get("gender");
+  if (gender === "male" || gender === "female") result.gender = gender;
+
+  const calendarType = params.get("calendarType");
+  if (calendarType === "solar" || calendarType === "lunar") result.calendarType = calendarType;
+
+  result.unknownBirthTime = params.get("unknownBirthTime") === "true";
+  result.hidePersonalInfo = params.get("hidePersonalInfo") === "true";
+
+  return result;
 };
 
 // ============ IMAGE EXPORT ============
