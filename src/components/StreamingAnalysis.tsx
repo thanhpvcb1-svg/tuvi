@@ -488,24 +488,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     return () => clearTimeout(timer);
   }, [isLoading, visibleCount, analyses.length, isActive, onComplete]);
 
-  // Auto-trigger Gemini tổng hợp khi streaming hoàn tất
-  useEffect(() => {
-    const isStreaming = visibleCount < analyses.length;
-    const isProduction = !window.location.hostname.includes("localhost") && !window.location.hostname.includes("127.0.0.1");
-    
-    console.log("[StreamingAnalysis] State:", {
-      visibleCount,
-      analysesLength: analyses.length,
-      isStreaming,
-      isProduction,
-      tongHopState,
-    });
-    
-    if (isProduction && !isStreaming && visibleCount > 0 && !tongHopState.loading && !tongHopState.analysis && !tongHopState.error) {
-      console.log("[StreamingAnalysis] Auto-triggering Gemini...");
-      requestTongHopBacPhai();
-    }
-  }, [visibleCount, analyses.length, tongHopState, requestTongHopBacPhai]);
+  // Removed auto-trigger - chỉ luận khi user bấm nút
 
   const toggleExpand = (id: string) => {
     setExpandedIds((prev) => {
