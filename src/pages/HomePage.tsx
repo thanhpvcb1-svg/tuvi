@@ -31,7 +31,7 @@ export default function HomePage({ onNavigateChartForm, onNavigateSection }: Pro
   return (
     <div className="home-page">
       <SEOHead
-        title="Lập Lá Số Tử Vi Online Miễn Phí - Xem Mệnh Thân 12 Cung | TuViPhongLam"
+        title="Lập Lá Số Tử Vi Online Miễn Phí - Xem Mệnh Thân 12 Cung | Tử Vi Phong Lam"
         description="Lập lá số tử vi miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, đại vận, tiểu vận. Luận giải Bắc Phái từ 50.000đ."
         canonicalPath="/"
         schema={[websiteSchema, organizationSchema, faqSchema(homeFaqs)]}
@@ -39,7 +39,7 @@ export default function HomePage({ onNavigateChartForm, onNavigateSection }: Pro
       
       <section className="home-hero home-hero--focused">
         <div className="home-hero-copy">
-          <p className="eyebrow">☆ LaSoTuVi</p>
+          <p className="eyebrow">☆ Tử Vi Phong Lam</p>
           <h1>Lập lá số tử vi online theo ngày giờ sinh</h1>
           <p>
             Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và biết nên đọc tiếp phần nào theo câu hỏi của bạn.

@@ -49,7 +49,7 @@ export default function ContactPage({ onNavigateChartForm }: Props) {
   return (
     <div className="home-page">
       <SEOHead
-        title="Liên Hệ Tư Vấn Luận Giải Tử Vi | TuViPhongLam"
+        title="Liên Hệ Tư Vấn Luận Giải Tử Vi | Tử Vi Phong Lam"
         description="Liên hệ đặt lịch tư vấn tử vi trực tiếp, hỏi 1 câu theo lá số hoặc nhận hướng dẫn chọn gói phù hợp."
         canonicalPath="/lien-he"
         schema={[

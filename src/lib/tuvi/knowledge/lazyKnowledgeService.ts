@@ -3,7 +3,19 @@
  * Phiên bản lazy load của knowledgeService - chỉ query khi knowledge đã được load
  */
 
+import type { ChartView } from "../../types";
 import type { DisplayPalace, DisplayStar } from "../config/types";
+import {
+  buildChartFacts,
+  checkTextRequirements,
+  conditionPalaceKeys,
+  evaluateCondition,
+  isAnchoredCondition,
+  palaceKey,
+  type ChartFacts,
+  type Clause,
+  type TextRequirements,
+} from "./conditionMatcher";
 import {
   getKnowledgeCache,
   isKnowledgeReady,
@@ -32,6 +44,8 @@ export type InterpretationConditions = {
 export type KnowledgeInterpretation = {
   id: string;
   type: string;
+  /** Điều kiện gốc dạng chuỗi (file consolidated) - đã được đối chiếu với lá số. */
+  condition?: string;
   conditions?: InterpretationConditions;
   required_stars?: string[];
   same_palace?: boolean;
@@ -65,6 +79,8 @@ export type KnowledgeFile = {
 export type KnowledgeMatch = {
   interpretation: KnowledgeInterpretation;
   section: string;
+  /** Số điều kiện đã kiểm chứng trên lá số (vị trí, sao, Tứ Hóa, phi hóa, phạm vi nội dung...). */
+  matchedConditions: number;
   matchScore: number;
   matchReasons: string[];
 };
@@ -79,6 +95,10 @@ export type PhiHoaFlow = {
 };
 
 export type PalaceQueryContext = {
+  /** Lá số đầy đủ - bắt buộc để đối chiếu điều kiện (vị trí, tam phương, phi hóa...). */
+  chart?: ChartView;
+  /** Chỉ dùng cho kiểm thử: bỏ lọc theo nhóm, trả về mọi mục khớp (tối đa limit). */
+  limit?: number;
   palace: DisplayPalace;
   starsInPalace: string[];
   branch: string;
@@ -93,481 +113,199 @@ function normalizeKey(value: string): string {
   return value
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[̀-ͯ]/g, "")
     .replace(/đ/g, "d")
-    .replace(/\s+/g, "_")
+    .replace(/s+/g, "_")
     .trim();
 }
 
-function normalizePalaceId(name: string): string {
-  const key = normalizeKey(name);
-  const mapping: Record<string, string> = {
-    menh: "menh",
-    phu_mau: "phu_mau",
-    phuc_duc: "phuc_duc",
-    dien_trach: "dien_trach",
-    quan_loc: "quan_loc",
-    no_boc: "no_boc",
-    thien_di: "thien_di",
-    tat_ach: "tat_ach",
-    tai_bach: "tai_bach",
-    tu_tuc: "tu_tuc",
-    tu_nu: "tu_tuc",
-    phu_the: "phu_the",
-    huynh_de: "huynh_de",
-    than: "than",
-    giao_huu: "no_boc",
-  };
-  return mapping[key] || key;
-}
+// ============ KNOWLEDGE INDEX ============
+//
+// Knowledge Base đã làm mịn (cung/normalized/*.json, sinh bởi scripts/normalizeKnowledge.ts):
+// mỗi entry có sẵn các rule (điều kiện đã parse), runtime chỉ còn đánh giá rule trên lá số.
 
-function normalizeBranch(branch: string): string {
-  const key = normalizeKey(branch);
-  const mapping: Record<string, string> = {
-    ty: "ty", ti: "ty", suu: "suu", dan: "dan", mao: "mao",
-    thin: "thin", ty_: "ti", ngo: "ngo", mui: "mui",
-    than: "than", dau: "dau", tuat: "tuat", hoi: "hoi",
-  };
-  return mapping[key] || key;
-}
+type NormalizedRule = { condition: string; specificity: number; clauses: Clause[] };
+type NormalizedEntry = {
+  id: string;
+  section?: string;
+  text: string;
+  source: number;
+  accuracy: number;
+  rules: NormalizedRule[];
+  /** Phạm vi nội dung trích từ câu mở đầu - phải khớp lá số thì mới hiển thị. */
+  requires?: TextRequirements;
+};
+type NormalizedFile = { palace: string; title: string; sources: KnowledgeSource[]; entries: NormalizedEntry[] };
 
-function normalizeStarId(starName: string): string {
-  return normalizeKey(starName);
-}
+type IndexedEntry = { entry: NormalizedEntry; source: KnowledgeSource; section: string };
+type KnowledgeIndex = Record<string, IndexedEntry[]>;
 
-function normalizeStem(stem: string): string {
-  const key = normalizeKey(stem);
-  const mapping: Record<string, string> = {
-    giap: "giap", at: "at", binh: "binh", dinh: "dinh",
-    mau: "mau", ky: "ky", canh: "canh", tan: "tan",
-    nham: "nham", quy: "quy",
-  };
-  return mapping[key] || key;
-}
+// id cung trong UI -> file đã làm mịn
+const PALACE_FILES: Record<string, string> = {
+  menh: "menh",
+  phu_mau: "phu-mau",
+  phuc_duc: "phuc-duc",
+  dien_trach: "dien-trach",
+  quan_loc: "quan-loc",
+  no_boc: "no-boc",
+  thien_di: "thien-di",
+  tat_ach: "tat-ach",
+  tai_bach: "tai-bach",
+  tu_tuc: "tu-tuc",
+  phu_the: "phu-the",
+  huynh_de: "huynh-de",
+  // Thân: hiển thị ở cung có Thân cư; Tổng quan lá số: hiển thị ở cung Mệnh.
+  than: "than",
+  tong_quan: "tong-quan",
+};
 
-// ============ BUILD PALACE KNOWLEDGE (từ cache) ============
+let indexSource: Record<string, unknown> | null = null;
+let knowledgeIndex: KnowledgeIndex | null = null;
 
-function buildPalaceKnowledge(cache: Record<string, unknown>): Record<string, KnowledgeFile[]> {
-  const starCombinations = cache.starCombinationsData as unknown as KnowledgeFile;
+function buildKnowledgeIndex(cache: Record<string, unknown>): KnowledgeIndex {
+  if (knowledgeIndex && indexSource === cache) return knowledgeIndex;
 
-  return {
-    menh: [
-      starCombinations,
-      cache.menhConsolidated as unknown as KnowledgeFile,
-      cache.menhData as unknown as KnowledgeFile,
-      cache.menhChinhTinhData as unknown as KnowledgeFile,
-      cache.menhPhiHoaData as unknown as KnowledgeFile,
-      cache.menhPhuTinhData as unknown as KnowledgeFile,
-      cache.menhMCodeData as unknown as KnowledgeFile,
-    ],
-    phu_mau: [
-      starCombinations,
-      cache.phuMauConsolidated as unknown as KnowledgeFile,
-    ],
-    phu_the: [
-      starCombinations,
-      cache.phuTheConsolidated as unknown as KnowledgeFile,
-      cache.phuTheData as unknown as KnowledgeFile,
-    ],
-    phuc_duc: [
-      starCombinations,
-      cache.phucDucConsolidated as unknown as KnowledgeFile,
-      cache.phucDucData as unknown as KnowledgeFile,
-    ],
-    dien_trach: [
-      starCombinations,
-      cache.dienTrachConsolidated as unknown as KnowledgeFile,
-      cache.dienTrachData as unknown as KnowledgeFile,
-    ],
-    quan_loc: [
-      starCombinations,
-      cache.quanLocConsolidated as unknown as KnowledgeFile,
-      cache.quanLocCobanData as unknown as KnowledgeFile,
-      cache.quanLocChinhTinhData as unknown as KnowledgeFile,
-      cache.quanLocPhiHoaData as unknown as KnowledgeFile,
-    ],
-    no_boc: [
-      starCombinations,
-      cache.noBocConsolidated as unknown as KnowledgeFile,
-    ],
-    thien_di: [
-      starCombinations,
-      cache.thienDiConsolidated as unknown as KnowledgeFile,
-      cache.thienDiData as unknown as KnowledgeFile,
-    ],
-    tat_ach: [
-      starCombinations,
-      cache.tatAchConsolidated as unknown as KnowledgeFile,
-    ],
-    tai_bach: [
-      starCombinations,
-      cache.taiBachConsolidated as unknown as KnowledgeFile,
-      cache.taiBachData as unknown as KnowledgeFile,
-    ],
-    tu_tuc: [
-      starCombinations,
-      cache.tuTucConsolidated as unknown as KnowledgeFile,
-      cache.tuTucData as unknown as KnowledgeFile,
-    ],
-    huynh_de: [
-      starCombinations,
-      cache.huynhDeConsolidated as unknown as KnowledgeFile,
-    ],
-  };
-}
-
-// ============ MATCHERS ============
-
-function matchStarInPalace(
-  interp: KnowledgeInterpretation,
-  context: PalaceQueryContext
-): { score: number; reasons: string[] } | null {
-  const conditions = interp.conditions || {};
-  const requiredStars = conditions.required_stars || interp.required_stars || [];
-  
-  if (requiredStars.length === 0) return null;
-
-  const starsInPalace = context.starsInPalace.map(normalizeStarId);
-  const normalizedRequired = requiredStars.map(normalizeStarId);
-  
-  const hasAllRequired = normalizedRequired.every((s) => starsInPalace.includes(s));
-  if (!hasAllRequired) return null;
-
-  const basePriority = (interp as any).priority || 0;
-  const starCountBonus = requiredStars.length >= 2 ? requiredStars.length * 10 : 0;
-  const isSamePalace = interp.same_palace || (conditions as any).same_palace;
-  const samePalaceBonus = isSamePalace ? 15 : 0;
-  
-  let score = 10 + requiredStars.length * 2 + basePriority + starCountBonus + samePalaceBonus;
-  const reasons: string[] = requiredStars.length >= 2
-    ? [`Tổ hợp ${requiredStars.join(" - ")} đồng cung`]
-    : [`Có ${requiredStars.join(", ")} tại cung`];
-
-  const positions = conditions.position || interp.branches || [];
-  if (positions.length > 0) {
-    const normalizedPositions = positions.map(normalizeBranch);
-    const branch = normalizeBranch(context.branch);
-    if (normalizedPositions.includes(branch)) {
-      score += 5;
-      reasons.push(`Cung an tại ${context.branch}`);
-    } else {
-      score -= 3;
-    }
+  const index: KnowledgeIndex = {};
+  for (const [id, fileName] of Object.entries(PALACE_FILES)) {
+    const file = cache[fileName] as NormalizedFile | undefined;
+    index[id] = (file?.entries ?? []).map((entry) => ({
+      entry,
+      source: file!.sources[entry.source] ?? { book: "tuvi.cohoc.net", author: "" },
+      section: entry.section || file!.title,
+    }));
   }
 
-  const excludedStars = interp.excluded_stars || [];
-  if (excludedStars.length > 0) {
-    const normalizedExcluded = excludedStars.map(normalizeStarId);
-    const hasExcluded = normalizedExcluded.some((s) => starsInPalace.includes(s));
-    if (hasExcluded) {
-      score -= 5;
-      if (interp.warning) {
-        reasons.push(interp.warning);
-      }
-    }
+  indexSource = cache;
+  knowledgeIndex = index;
+  return index;
+}
+
+const chartFactsCache = new WeakMap<ChartView, ChartFacts>();
+
+function getChartFacts(chart: ChartView): ChartFacts {
+  let facts = chartFactsCache.get(chart);
+  if (!facts) {
+    facts = buildChartFacts(chart);
+    chartFactsCache.set(chart, facts);
   }
-
-  return score > 0 ? { score, reasons } : null;
+  return facts;
 }
 
-function matchMeetingStars(
-  interp: KnowledgeInterpretation,
-  context: PalaceQueryContext
-): { score: number; reasons: string[] } | null {
-  const conditions = interp.conditions || {};
-  const meetingStars = conditions.meeting_stars || [];
-  
-  if (meetingStars.length === 0) return null;
+const PALACE_IDS: Record<string, string> = {
+  "mệnh": "menh",
+  "phụ mẫu": "phu_mau",
+  "phúc đức": "phuc_duc",
+  "điền trạch": "dien_trach",
+  "quan lộc": "quan_loc",
+  "nô bộc": "no_boc",
+  "thiên di": "thien_di",
+  "tật ách": "tat_ach",
+  "tài bạch": "tai_bach",
+  "tử tức": "tu_tuc",
+  "phu thê": "phu_the",
+  "huynh đệ": "huynh_de",
+};
 
-  const starsInPalace = context.starsInPalace.map(normalizeStarId);
-  const normalizedMeeting = meetingStars.map(normalizeStarId);
-  
-  const matchedCount = normalizedMeeting.filter((s) => starsInPalace.includes(s)).length;
-  
-  if (matchedCount === 0) return null;
-  
-  const basePriority = (interp as any).priority || 0;
-  const score = matchedCount === normalizedMeeting.length 
-    ? 12 + basePriority + (meetingStars.length * 5)
-    : 6 + Math.floor(basePriority / 2);
-  const reasons = matchedCount === normalizedMeeting.length
-    ? [`Hội đủ ${meetingStars.join(", ")}`]
-    : [`Hội một phần ${meetingStars.join(", ")}`];
 
-  return { score, reasons };
-}
-
-function matchHeavenlyStem(
-  interp: KnowledgeInterpretation,
-  context: PalaceQueryContext
-): { score: number; reasons: string[] } | null {
-  const conditions = interp.conditions || {};
-  const requiredStem = conditions.heavenly_stem;
-  
-  if (!requiredStem || !context.heavenlyStem) return null;
-
-  const normalizedRequired = normalizeStem(requiredStem.toLowerCase());
-  const normalizedContext = normalizeStem(context.heavenlyStem.toLowerCase());
-  
-  if (normalizedRequired === normalizedContext) {
-    return {
-      score: 8,
-      reasons: [`Cung có can ${context.heavenlyStem}`],
-    };
-  }
-
-  return null;
-}
-
-function matchMutagenInPalace(
-  interp: KnowledgeInterpretation,
-  context: PalaceQueryContext
-): { score: number; reasons: string[] } | null {
-  const conditions = interp.conditions || {};
-  let requiredMutagens = conditions.mutagen_in_palace;
-  
-  if (!requiredMutagens || !context.mutagensInPalace?.length) return null;
-
-  if (!Array.isArray(requiredMutagens)) {
-    requiredMutagens = [requiredMutagens];
-  }
-
-  const normalizedMutagens = context.mutagensInPalace.map(normalizeKey);
-  const normalizedRequired = requiredMutagens.map(normalizeKey);
-  
-  const matchedCount = normalizedRequired.filter((m) => normalizedMutagens.includes(m)).length;
-  
-  if (matchedCount === 0) return null;
-
-  const mutagenLabels: Record<string, string> = {
-    loc: "Hóa Lộc",
-    quyen: "Hóa Quyền",
-    khoa: "Hóa Khoa",
-    ky: "Hóa Kỵ",
-  };
-
-  const labels = requiredMutagens.map((m) => mutagenLabels[m] || m);
-  
-  return {
-    score: matchedCount === normalizedRequired.length ? 15 : 8,
-    reasons: [`Có ${labels.join(", ")} tọa thủ`],
-  };
-}
-
-function matchPhiHoa(
-  interp: KnowledgeInterpretation,
-  context: PalaceQueryContext
-): { score: number; reasons: string[] } | null {
-  const conditions = interp.conditions || {};
-  const transformation = conditions.transformation;
-  const sourcePalace = conditions.source_palace || interp.source_palace;
-  const targetPalace = conditions.target_palace || interp.target_palace;
-  
-  if (!transformation || !sourcePalace || !targetPalace) return null;
-  if (!context.phiHoaFlows?.length) return null;
-
-  for (const flow of context.phiHoaFlows) {
-    const sourceMatch = normalizeKey(flow.sourcePalace) === normalizeKey(sourcePalace);
-    const targetMatch = normalizeKey(flow.targetPalaceName || flow.targetPalace) === normalizeKey(targetPalace);
-    const typeMatch = normalizeKey(flow.type) === normalizeKey(transformation);
-
-    if (sourceMatch && targetMatch && typeMatch) {
-      const typeLabels: Record<string, string> = {
-        loc: "Lộc", quyen: "Quyền", khoa: "Khoa", ky: "Kỵ",
-      };
-      return {
-        score: 20,
-        reasons: [`${flow.sourcePalace} Hóa ${typeLabels[flow.type] || flow.type} nhập ${flow.targetPalaceName || flow.targetPalace}`],
-      };
-    }
-  }
-
-  return null;
-}
+const MIN_RELATIVE_SCORE = 0.5;
+// Cùng một tập điều kiện chỉ giữ tối đa N nội dung (thường là nhiều bài viết cùng mô tả một sao).
+const MAX_TEXTS_PER_CONDITION = 2;
 
 // ============ MAIN QUERY ============
 
-function convertToInterpretation(item: any): KnowledgeInterpretation {
-  if (item.id && item.text) {
-    return item as KnowledgeInterpretation;
-  }
-  
-  const conditions: InterpretationConditions = {};
-  
-  if (item.conditions) {
-    if (item.conditions.position) {
-      conditions.position = Array.isArray(item.conditions.position) 
-        ? item.conditions.position 
-        : [item.conditions.position];
-    }
-    if (item.conditions.heavenly_stem) {
-      conditions.heavenly_stem = item.conditions.heavenly_stem;
-    }
-    if (item.conditions.required_stars?.length) {
-      conditions.required_stars = item.conditions.required_stars;
-    }
-    if (item.conditions.transformations?.length) {
-      conditions.transformation = item.conditions.transformations[0];
-    }
-    if (item.conditions.transformation_target?.length) {
-      conditions.target_palace = item.conditions.transformation_target[0];
-      conditions.source_palace = item.conditions.palace?.toLowerCase();
-    }
-  }
-  
-  return {
-    id: item.block_id || item.id || `cohoc_${Date.now()}`,
-    type: determineInterpType(item),
-    conditions: Object.keys(conditions).length > 0 ? conditions : undefined,
-    required_stars: item.conditions?.required_stars,
-    text: item.raw_text || item.text || item.content || "",
-    source: item.source || { book: "tuvi.cohoc.net", author: "Unknown" },
-  };
-}
-
-function determineInterpType(item: any): string {
-  if (item.type) return item.type;
-  
-  const conditions = item.conditions || {};
-  
-  if (conditions.transformations?.length) {
-    const type = conditions.transformations[0]?.toLowerCase();
-    if (type === "loc") return "phi_loc";
-    if (type === "quyen") return "phi_quyen";
-    if (type === "khoa") return "phi_khoa";
-    if (type === "ky") return "phi_ky";
-    return "phi_hoa";
-  }
-  if (conditions.required_stars?.length) return "star_in_palace";
-  if (conditions.heavenly_stem) return "heavenly_stem";
-  if (conditions.position) return "position";
-  
-  return "general";
-}
-
-function getAllInterpretations(files: KnowledgeFile[]): Array<{ interp: KnowledgeInterpretation; section: string }> {
-  const results: Array<{ interp: KnowledgeInterpretation; section: string }> = [];
-
-  for (const file of files) {
-    if (!file) continue;
-    
-    if (file.sections) {
-      for (const section of file.sections) {
-        const items = section.interpretations || (section as any).blocks || [];
-        for (const item of items) {
-          const interp = convertToInterpretation(item);
-          results.push({ interp, section: section.title });
-        }
-      }
-    }
-    if (file.interpretations) {
-      const sectionTitle = file.title || file.section_id || "Luận giải";
-      for (const interp of file.interpretations) {
-        results.push({ interp, section: sectionTitle });
-      }
-    }
-    if ((file as any).blocks) {
-      const sectionTitle = file.title || (file as any).palace_name || "Luận giải CoHoc";
-      for (const block of (file as any).blocks) {
-        const interp = convertToInterpretation(block);
-        results.push({ interp, section: sectionTitle });
-      }
-    }
-  }
-
-  return results;
-}
-
 /**
  * Query knowledge cho một cung - LAZY VERSION
- * Trả về mảng rỗng nếu knowledge chưa được load
+ * Trả về mảng rỗng nếu knowledge chưa được load hoặc không có lá số để đối chiếu.
  */
 export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatch[] {
   const cache = getKnowledgeCache();
-  if (!cache) return []; // Knowledge chưa load
+  if (!cache || !context.chart) return [];
 
-  const palaceKnowledge = buildPalaceKnowledge(cache);
-  const palaceId = normalizePalaceId(context.palace.name);
-  const files = palaceKnowledge[palaceId];
+  const key = palaceKey(context.palace.name);
+  const palaceId = key ? PALACE_IDS[key] : undefined;
+  if (!palaceId) return [];
 
-  if (!files || files.length === 0) return [];
+  const index = buildKnowledgeIndex(cache);
+  const facts = getChartFacts(context.chart);
+  const candidates = [...(index[palaceId] ?? [])];
+  if (context.palace.isBodyPalace) candidates.push(...(index.than ?? []));
+  // Tổng quan lá số (bảng 12 cung, nạp âm...) không phải tri thức của riêng cung nào -> không đưa vào thẻ cung.
 
-  const allInterpretations = getAllInterpretations(files);
   const results: KnowledgeMatch[] = [];
-
-  for (const { interp, section } of allInterpretations) {
-    let match: { score: number; reasons: string[] } | null = null;
-
-    switch (interp.type) {
-      case "star_in_palace":
-        match = matchStarInPalace(interp, context);
-        break;
-      case "star_combination":
-        match = matchMeetingStars(interp, context);
-        break;
-      case "heavenly_stem":
-        match = matchHeavenlyStem(interp, context);
-        break;
-      case "mutagen_in_palace":
-      case "mutagen_combination":
-        match = matchMutagenInPalace(interp, context);
-        break;
-      case "phi_hoa":
-      case "phi_loc":
-      case "phi_quyen":
-      case "phi_khoa":
-      case "phi_ky":
-        match = matchPhiHoa(interp, context);
-        break;
-      default:
-        match = matchStarInPalace(interp, context);
-        if (!match) match = matchMeetingStars(interp, context);
-        if (!match) match = matchHeavenlyStem(interp, context);
-        if (!match) match = matchMutagenInPalace(interp, context);
-        if (!match) match = matchPhiHoa(interp, context);
+  // Lý do khớp thuộc ĐIỀU KIỆN (không gồm phạm vi nội dung) - dùng để xét mục nào bị mục khác bao hàm.
+  const conditionReasons = new Map<KnowledgeMatch, string[]>();
+  for (const { entry, source, section } of candidates) {
+    // Một nội dung có thể có nhiều rule (điều kiện gốc khác nhau) -> lấy rule khớp nhiều điều kiện nhất.
+    let best: KnowledgeMatch | null = null;
+    for (const rule of entry.rules) {
+      if (!isAnchoredCondition(rule)) continue; // chỉ vị trí / Can Chi / Nạp âm / sao phụ hội chiếu -> chung chung
+      const reasons = evaluateCondition(rule, facts);
+      if (!reasons) continue;
+      const scope = checkTextRequirements(entry.requires, facts, [key!, ...conditionPalaceKeys(rule)]);
+      if (!scope) continue; // điều kiện khớp nhưng nội dung nói về vị trí/sao/giới/năm sinh/độ sáng khác
+      const matchReasons = [...new Set([...reasons, ...scope])];
+      const matchedConditions = matchReasons.length;
+      // Điểm khớp có trọng số: chính tinh tọa thủ > sao khác tọa thủ > vị trí/Tứ Hóa/phi hóa > sao hội chiếu;
+      // mỗi phạm vi nội dung khớp (giới tính, năm sinh, độ sáng...) +2.
+      const conditionScore = rule.specificity + scope.length * 2;
+      const matchScore = conditionScore * 10 + entry.accuracy;
+      if (!best || matchScore > best.matchScore) {
+        best = {
+          interpretation: { id: entry.id, type: "condition", condition: rule.condition, text: entry.text, source },
+          section,
+          matchedConditions,
+          matchScore,
+          matchReasons,
+        };
+        conditionReasons.set(best, reasons);
+      }
     }
-
-    if (match && match.score > 0) {
-      results.push({
-        interpretation: interp,
-        section,
-        matchScore: match.score,
-        matchReasons: match.reasons,
-      });
-    }
+    if (best) results.push(best);
   }
 
-  // Sort by priority
-  const getTypePriority = (type: string, score: number): number => {
-    if (type === "star_combination" && score >= 50) return 0;
-    if ((type === "star_in_palace" || type === "star_combination") && score >= 30) return 1;
-    if (type === "position" || type === "heavenly_stem") return 2;
-    if (type === "star_in_palace" || type === "star_combination" || type === "cach_cuc") return 3;
-    if (type === "mutagen_in_palace" || type === "mutagen_combination") return 4;
-    if (type.startsWith("phi_")) return 5;
-    return 6;
-  };
+  // Khớp nhiều điều kiện nhất lên trước; cùng điểm thì nội dung đầy đủ hơn lên trước.
+  results.sort((a, b) => b.matchScore - a.matchScore || b.interpretation.text.length - a.interpretation.text.length);
 
-  const sorted = results.sort((a, b) => {
-    const priorityA = getTypePriority(a.interpretation.type, a.matchScore);
-    const priorityB = getTypePriority(b.interpretation.type, b.matchScore);
-    if (priorityA !== priorityB) return priorityA - priorityB;
-    return b.matchScore - a.matchScore;
-  });
-
-  // Dedupe
   const seen = new Set<string>();
   const deduped: KnowledgeMatch[] = [];
-
-  for (const item of sorted) {
+  for (const item of results) {
     const textKey = item.interpretation.text.slice(0, 100);
-    if (!seen.has(textKey)) {
-      seen.add(textKey);
-      deduped.push(item);
-    }
+    if (seen.has(textKey)) continue;
+    seen.add(textKey);
+    deduped.push(item);
   }
 
-  return deduped.slice(0, 10);
+  if (context.limit) return deduped.slice(0, context.limit);
+  return selectMostSpecific(deduped, conditionReasons);
+}
+
+/**
+ * Chỉ giữ tri thức khớp sát nhất - không chốt số lượng:
+ * 1. Bỏ mục bị bao hàm: tập điều kiện của nó nằm gọn trong tập điều kiện của một mục khác đã khớp
+ *    (vd "Mệnh tại Mão có Thiên Lương" khi đã có "Mệnh tại Mão có Thái Dương, Thiên Lương").
+ * 2. Cùng một tập điều kiện chỉ giữ MAX_TEXTS_PER_CONDITION nội dung đầy đủ nhất.
+ * 3. Chỉ giữ mục đạt >= MIN_RELATIVE_SCORE điểm của mục khớp sát nhất trong cung.
+ */
+function selectMostSpecific(items: KnowledgeMatch[], conditionReasons: Map<KnowledgeMatch, string[]>): KnowledgeMatch[] {
+  // "X độc tọa" chỉ là hệ quả của "Có X" khi cung có một chính tinh - không tính là điều kiện riêng khi so bao hàm.
+  const keyOf = (item: KnowledgeMatch) => new Set((conditionReasons.get(item) ?? item.matchReasons).filter((r) => !/ độc tọa$/.test(r)));
+  const keys = new Map(items.map((item) => [item, keyOf(item)]));
+  const isStrictSubset = (a: Set<string>, b: Set<string>) => a.size < b.size && [...a].every((r) => b.has(r));
+
+  const notSubsumed = items.filter((item) => !items.some((other) => other !== item && isStrictSubset(keys.get(item)!, keys.get(other)!)));
+
+  const perCondition = new Map<string, number>();
+  const diverse = notSubsumed.filter((item) => {
+    const scopeReasons = item.matchReasons.filter((r) => !keys.get(item)!.has(r) && !/ độc tọa$/.test(r));
+    const groupKey = [...keys.get(item)!].sort().join("|") + "#" + scopeReasons.sort().join("|");
+    const used = perCondition.get(groupKey) ?? 0;
+    if (used >= MAX_TEXTS_PER_CONDITION) return false;
+    perCondition.set(groupKey, used + 1);
+    return true;
+  });
+
+  const top = diverse[0]?.matchScore ?? 0;
+  return diverse.filter((item) => item.matchScore >= top * MIN_RELATIVE_SCORE);
 }
 
 // ============ HELPERS FOR COMPONENTS ============
@@ -650,18 +388,13 @@ export function formatKnowledgeSource(source: KnowledgeSource): string {
 
 export function hasPalaceKnowledge(palaceName: string): boolean {
   if (!isKnowledgeReady()) return false;
-  const cache = getKnowledgeCache();
-  if (!cache) return false;
-  const palaceKnowledge = buildPalaceKnowledge(cache);
-  return normalizePalaceId(palaceName) in palaceKnowledge;
+  const key = palaceKey(palaceName);
+  return Boolean(key && PALACE_IDS[key]);
 }
 
 export function getAvailablePalaces(): string[] {
   if (!isKnowledgeReady()) return [];
-  const cache = getKnowledgeCache();
-  if (!cache) return [];
-  const palaceKnowledge = buildPalaceKnowledge(cache);
-  return Object.keys(palaceKnowledge);
+  return Object.values(PALACE_IDS);
 }
 
 // Re-export từ loader

@@ -7,8 +7,8 @@ export default function PrivacyPage() {
   return (
     <>
       <SEOHead
-        title="Chính Sách Bảo Mật Thông Tin | TuViPhongLam"
-        description="Chính sách bảo mật và cách TuViPhongLam bảo vệ thông tin cá nhân của bạn."
+        title="Chính Sách Bảo Mật Thông Tin | Tử Vi Phong Lam"
+        description="Chính sách bảo mật và cách Tử Vi Phong Lam bảo vệ thông tin cá nhân của bạn."
         canonicalPath="/chinh-sach-bao-mat"
         schema={[
           organizationSchema,

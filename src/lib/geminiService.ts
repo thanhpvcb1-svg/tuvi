@@ -134,7 +134,8 @@ export async function callGeminiLuanGiai(
       goodStars: request.palaceInfo.goodStars,
       badStars: request.palaceInfo.badStars,
       isBodyPalace: request.palaceInfo.isBodyPalace,
-      knowledgeTexts: request.knowledgeMatches.map((m) => m.interpretation.text),
+      // Server chỉ dùng 10 mục đầu (đã xếp theo độ cụ thể) - không gửi thừa.
+      knowledgeTexts: request.knowledgeMatches.slice(0, 10).map((m) => m.interpretation.text),
       phiHoaFlows: [],
     }],
     profile: {

@@ -13,7 +13,7 @@ export default function TermsPage() {
         <section className="legal-section">
           <h2>1. Giới thiệu</h2>
           <p>
-            Chào mừng bạn đến với LaSoTuVi. Khi sử dụng website và các dịch vụ của chúng tôi, 
+            Chào mừng bạn đến với Tử Vi Phong Lam. Khi sử dụng website và các dịch vụ của chúng tôi, 
             bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu dưới đây.
           </p>
           <p>
@@ -24,7 +24,7 @@ export default function TermsPage() {
 
         <section className="legal-section">
           <h2>2. Mô tả dịch vụ</h2>
-          <p>LaSoTuVi cung cấp các dịch vụ sau:</p>
+          <p>Tử Vi Phong Lam cung cấp các dịch vụ sau:</p>
           <ul>
             <li>Công cụ lập lá số tử vi online miễn phí</li>
             <li>Luận giải tự động bằng AI</li>
@@ -37,7 +37,7 @@ export default function TermsPage() {
         <section className="legal-section">
           <h2>3. Tính chất tham khảo</h2>
           <p>
-            <strong>Quan trọng:</strong> Tất cả nội dung luận giải tử vi trên LaSoTuVi chỉ mang 
+            <strong>Quan trọng:</strong> Tất cả nội dung luận giải tử vi trên Tử Vi Phong Lam chỉ mang 
             tính chất tham khảo, chiêm nghiệm và giải trí.
           </p>
           <p>Nội dung không thay thế cho:</p>
@@ -99,8 +99,8 @@ export default function TermsPage() {
         <section className="legal-section">
           <h2>7. Sở hữu trí tuệ</h2>
           <p>
-            Tất cả nội dung trên LaSoTuVi bao gồm nhưng không giới hạn: văn bản, hình ảnh, 
-            thiết kế, logo, mã nguồn đều thuộc quyền sở hữu của LaSoTuVi hoặc các bên cấp phép.
+            Tất cả nội dung trên Tử Vi Phong Lam bao gồm nhưng không giới hạn: văn bản, hình ảnh, 
+            thiết kế, logo, mã nguồn đều thuộc quyền sở hữu của Tử Vi Phong Lam hoặc các bên cấp phép.
           </p>
           <p>
             Người dùng không được sao chép, phân phối, sửa đổi hoặc sử dụng cho mục đích 
@@ -111,7 +111,7 @@ export default function TermsPage() {
         <section className="legal-section">
           <h2>8. Giới hạn trách nhiệm</h2>
           <p>
-            LaSoTuVi không chịu trách nhiệm về bất kỳ thiệt hại trực tiếp, gián tiếp, 
+            Tử Vi Phong Lam không chịu trách nhiệm về bất kỳ thiệt hại trực tiếp, gián tiếp, 
             ngẫu nhiên hoặc hậu quả nào phát sinh từ việc sử dụng hoặc không thể sử dụng dịch vụ.
           </p>
           <p>

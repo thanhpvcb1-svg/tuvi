@@ -15,7 +15,7 @@ export default function CompatPage({ onNavigateChartForm }: Props) {
   return (
     <div className="home-page">
       <SEOHead
-        title="Xem Hợp Tuổi Vợ Chồng Theo Lá Số Tử Vi | TuViPhongLam"
+        title="Xem Hợp Tuổi Vợ Chồng Theo Lá Số Tử Vi | Tử Vi Phong Lam"
         description="So khớp hợp tuổi tình cảm, hôn nhân, hợp tác theo lá số tử vi. Đối chiếu Mệnh, Thân, cung Phu Thê chính xác."
         canonicalPath="/hop-tuoi"
         schema={[

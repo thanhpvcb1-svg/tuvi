@@ -89,6 +89,7 @@ function buildChartData(profile: RequestBody["profile"]): string {
 // mảng khổng lồ (chinhTinh/catTinh/hungTinh/knowledgeTexts) làm phình prompt/token cost.
 const MAX_STARS_PER_PALACE = 15;
 const MAX_KNOWLEDGE_TEXTS_PER_PALACE = 10;
+const MAX_KNOWLEDGE_TEXT_LENGTH = 1200;
 
 function buildContextData(palaces: PalaceSummary[]): string {
   const palaceContexts = palaces.map((p) => ({
@@ -125,7 +126,7 @@ function buildKnowledgeData(palaces: PalaceSummary[]): string {
     .filter((p) => p.knowledgeTexts.length > 0)
     .map((p) => ({
       cung: p.name,
-      triThuc: p.knowledgeTexts.slice(0, MAX_KNOWLEDGE_TEXTS_PER_PALACE),
+      triThuc: p.knowledgeTexts.slice(0, MAX_KNOWLEDGE_TEXTS_PER_PALACE).map((text) => String(text).slice(0, MAX_KNOWLEDGE_TEXT_LENGTH)),
     }));
 
   if (knowledgeByPalace.length === 0) {

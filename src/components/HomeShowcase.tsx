@@ -128,7 +128,7 @@ export default function HomeShowcase() {
           <p className="eyebrow">🏗️ Cách trang này được thiết kế</p>
           <h2>Ưu tiên rõ dữ liệu, rõ giới hạn và rõ bước tiếp theo</h2>
           <p>
-            LaSoTuVi không cố thay thế một buổi tư vấn đầy đủ. Mục tiêu là giúp bạn xem phần nền của lá số trước, hiểu mình
+            Tử Vi Phong Lam không cố thay thế một buổi tư vấn đầy đủ. Mục tiêu là giúp bạn xem phần nền của lá số trước, hiểu mình
             đang cần đọc gì, rồi mới quyết định có nên hỏi sâu hơn hay không.
           </p>
         </div>

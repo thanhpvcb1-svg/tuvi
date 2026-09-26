@@ -73,7 +73,7 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
 export default function Testimonials({
   testimonials = defaultTestimonials,
   eyebrow = "Đánh giá",
-  title = "Người dùng nói gì về LaSoTuVi",
+  title = "Người dùng nói gì về Tử Vi Phong Lam",
   description = "Những phản hồi thực tế từ người đã sử dụng dịch vụ lập lá số và luận giải.",
 }: Props) {
   return (

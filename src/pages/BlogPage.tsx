@@ -18,7 +18,7 @@ export default function BlogPage() {
     return (
       <div className="home-page">
         <SEOHead
-          title={`${currentArticle.title} | Kiến Thức Tử Vi | TuViPhongLam`}
+          title={`${currentArticle.title} | Kiến Thức Tử Vi | Tử Vi Phong Lam`}
           description={currentArticle.summary}
           canonicalPath={`/bai-viet/${currentArticle.slug}`}
           schema={[
@@ -44,7 +44,7 @@ export default function BlogPage() {
   return (
     <div className="home-page">
       <SEOHead
-        title="Kiến Thức Tử Vi Bắc Phái - Tứ Hóa Phi Tinh | TuViPhongLam"
+        title="Kiến Thức Tử Vi Bắc Phái - Tứ Hóa Phi Tinh | Tử Vi Phong Lam"
         description="Tổng hợp bài viết chuyên sâu về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc Mệnh Thân, đại vận lưu niên."
         canonicalPath="/bai-viet"
         schema={[

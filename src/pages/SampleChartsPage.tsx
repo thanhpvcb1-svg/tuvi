@@ -64,7 +64,7 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
   return (
     <div className="home-page">
       <SEOHead
-        title="Lá Số Tử Vi Mẫu | Xem Demo 12 Cung Trước Khi Lập | TuViPhongLam"
+        title="Lá Số Tử Vi Mẫu | Xem Demo 12 Cung Trước Khi Lập | Tử Vi Phong Lam"
         description="Xem lá số tử vi mẫu miễn phí. Hiểu cách hiển thị Mệnh, Thân, 12 cung, đại vận trước khi lập lá số của bạn."
         canonicalPath="/la-so-mau"
         schema={[

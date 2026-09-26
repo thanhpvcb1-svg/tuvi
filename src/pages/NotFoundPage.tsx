@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   return (
     <>
       <SEOHead
-        title="Không tìm thấy trang | TuViPhongLam"
+        title="Không tìm thấy trang | Tử Vi Phong Lam"
         description="Trang bạn tìm kiếm không tồn tại. Quay lại trang chủ để lập lá số tử vi miễn phí."
         noindex
       />

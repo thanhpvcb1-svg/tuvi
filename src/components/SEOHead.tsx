@@ -12,6 +12,10 @@ type Props = {
 const SITE_URL = "https://tuviphonglam.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
+// Cloudflare Pages 308-redirect "/x" -> "/x/" cho route đã prerender (dist/x/index.html),
+// nên canonical/og:url luôn dùng dạng có "/" cuối để trùng URL thật trả về 200.
+const toCanonicalUrl = (path: string) => `${SITE_URL}${path.endsWith("/") ? path : `${path}/`}`;
+
 const upsertMeta = (selector: string, attributes: Record<string, string>) => {
   let element = document.head.querySelector(selector) as HTMLMetaElement | null;
   if (!element) {
@@ -33,7 +37,7 @@ export default function SEOHead({ title, description, canonicalPath, ogImage = D
     upsertMeta('meta[property="og:title"]', { property: "og:title", content: title });
     upsertMeta('meta[property="og:description"]', { property: "og:description", content: description });
     upsertMeta('meta[property="og:type"]', { property: "og:type", content: "website" });
-    upsertMeta('meta[property="og:url"]', { property: "og:url", content: `${SITE_URL}${canonicalPath}` });
+    upsertMeta('meta[property="og:url"]', { property: "og:url", content: toCanonicalUrl(canonicalPath) });
     upsertMeta('meta[property="og:image"]', { property: "og:image", content: ogImage });
     upsertMeta('meta[property="og:site_name"]', { property: "og:site_name", content: "Tử Vi Phong Lam" });
     upsertMeta('meta[property="og:locale"]', { property: "og:locale", content: "vi_VN" });
@@ -48,7 +52,10 @@ export default function SEOHead({ title, description, canonicalPath, ogImage = D
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = `${SITE_URL}${canonicalPath}`;
+    canonical.href = toCanonicalUrl(canonicalPath);
+    document.head.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]').forEach((link) => {
+      link.href = toCanonicalUrl(canonicalPath);
+    });
 
     const schemaId = "route-structured-data";
     const existing = document.getElementById(schemaId);

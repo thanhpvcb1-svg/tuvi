@@ -15,7 +15,10 @@
     "check:luu-stars": "tsc -p tsconfig.verify.json && node .tmp-verify/scripts/checkLuuStars.js",
     "check:mutagens": "tsc -p tsconfig.verify.json && node .tmp-verify/scripts/checkMutagens.js",
     "compare:tuvichanco": "tsc -p tsconfig.verify.json && node .tmp-verify/scripts/compare-with-tuvichanco.js --reference-file=tests/fixtures/tuvichanco/2026-06-10-1330.json --local-file=tests/fixtures/local/2026-06-10-1330.json --assert-thresholds=true",
-    "compare:tuvichanco:natal": "tsc -p tsconfig.verify.json && node .tmp-verify/scripts/compare-with-tuvichanco.js --reference-file=tests/fixtures/tuvichanco/2026-06-10-1330.json --local-file=tests/fixtures/local/2026-06-10-1330.json --mode=natal"
+    "compare:tuvichanco:natal": "tsc -p tsconfig.verify.json && node .tmp-verify/scripts/compare-with-tuvichanco.js --reference-file=tests/fixtures/tuvichanco/2026-06-10-1330.json --local-file=tests/fixtures/local/2026-06-10-1330.json --mode=natal",
+    "verify:knowledge": "esbuild scripts/verifyKnowledgeMatching.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/verifyKnowledgeMatching.js && node --max-old-space-size=4096 .tmp-verify/verifyKnowledgeMatching.js",
+    "knowledge:normalize": "esbuild scripts/normalizeKnowledge.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/normalizeKnowledge.js && node --max-old-space-size=4096 .tmp-verify/normalizeKnowledge.js",
+    "sample:knowledge": "esbuild scripts/sampleKnowledge.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/sampleKnowledge.js && node --max-old-space-size=4096 .tmp-verify/sampleKnowledge.js"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.21",

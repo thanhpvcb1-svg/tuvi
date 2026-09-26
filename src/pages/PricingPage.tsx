@@ -24,7 +24,7 @@ export default function PricingPage({ onNavigateChartForm }: Props) {
   return (
     <div className="home-page">
       <SEOHead
-        title="Bảng Giá Luận Giải Tử Vi 2024 | Hỏi 1 Câu 50K | TuViPhongLam"
+        title="Bảng Giá Luận Giải Tử Vi 2024 | Hỏi 1 Câu 50K | Tử Vi Phong Lam"
         description="Lập lá số miễn phí, hỏi 1 câu 50.000đ, tư vấn trực tiếp 999.000đ. Luận giải tử vi Bắc Phái chuyên sâu."
         canonicalPath="/bang-gia"
         schema={[

@@ -6,8 +6,8 @@ export default function AboutPage() {
   return (
     <>
       <SEOHead
-        title="Về Chúng Tôi - TuViPhongLam | Nền Tảng Tử Vi Bắc Phái Online"
-        description="TuViPhongLam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái. Hơn 30,000 luận giải tri thức từ sách cổ."
+        title="Về Chúng Tôi - Tử Vi Phong Lam | Nền Tảng Tử Vi Bắc Phái Online"
+        description="Tử Vi Phong Lam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái. Hơn 30,000 luận giải tri thức từ sách cổ."
         canonicalPath="/ve-chung-toi"
         schema={[
           organizationSchema,
@@ -21,12 +21,12 @@ export default function AboutPage() {
         ]} />
         
         <article className="about-content">
-          <h1>Về TuViPhongLam</h1>
+          <h1>Về Tử Vi Phong Lam</h1>
           
           <section className="about-section">
             <h2>🎯 Sứ mệnh</h2>
             <p>
-              TuViPhongLam ra đời với mục tiêu mang kiến thức Tử Vi Đẩu Số - đặc biệt là 
+              Tử Vi Phong Lam ra đời với mục tiêu mang kiến thức Tử Vi Đẩu Số - đặc biệt là 
               <strong> phương pháp Bắc Phái</strong> - đến gần hơn với mọi người. Chúng tôi tin rằng 
               hiểu biết về vận mệnh giúp mỗi người đưa ra quyết định sáng suốt hơn trong cuộc sống.
             </p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <section className="about-section">
             <h2>💡 Công nghệ &amp; Tri thức</h2>
             <p>
-              TuViPhongLam kết hợp <strong>tri thức cổ điển</strong> với <strong>công nghệ hiện đại</strong>:
+              Tử Vi Phong Lam kết hợp <strong>tri thức cổ điển</strong> với <strong>công nghệ hiện đại</strong>:
             </p>
             <ul>
               <li>Cơ sở dữ liệu hơn <strong>30,000+ luận giải</strong> từ các sách cổ</li>

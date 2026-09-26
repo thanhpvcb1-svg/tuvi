@@ -7,7 +7,7 @@ export default function VideoPage() {
   return (
     <>
       <SEOHead
-        title="Video Học Tử Vi Bắc Phái - Tứ Hóa Phi Tinh | TuViPhongLam"
+        title="Video Học Tử Vi Bắc Phái - Tứ Hóa Phi Tinh | Tử Vi Phong Lam"
         description="Tổng hợp video ngắn hướng dẫn Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc lá số dễ hiểu cho người mới."
         canonicalPath="/video"
         schema={[

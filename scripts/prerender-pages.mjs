@@ -4,6 +4,17 @@ import path from "node:path";
 const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
 const siteUrl = "https://tuviphonglam.com";
+const organizationId = `${siteUrl}/#organization`;
+
+// Cloudflare Pages 308-redirect "/x" -> "/x/" cho route có dist/x/index.html,
+// nên canonical/og:url/hreflang dùng dạng có "/" cuối (khớp SEOHead.tsx).
+const pageUrl = (route) => `${siteUrl}${route.endsWith("/") ? route : `${route}/`}`;
+
+const escapeHtml = (value) =>
+  String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// Cùng nguồn dữ liệu với src/utils/appUtils.ts -> ChartPage, để HTML tĩnh không lệch với bản React.
+const lapLaSoContent = JSON.parse(fs.readFileSync(path.resolve("src/content/lapLaSoContent.json"), "utf8"));
 
 const articlePosts = [
   {
@@ -44,30 +55,123 @@ const buildWebPageSchema = (page) => ({
   name: page.title,
   headline: page.route.startsWith("/bai-viet/") ? page.title.replace(" | Bài viết", "") : undefined,
   description: page.description,
-  url: `${siteUrl}${page.route}`,
+  url: pageUrl(page.route),
   inLanguage: "vi-VN",
-  publisher: {
-    "@type": "Organization",
-    name: "Tử Vi Phong Lam",
-    url: siteUrl,
-  },
+  isPartOf: { "@id": `${siteUrl}/#website` },
+  publisher: { "@id": organizationId },
 });
+
+const lapLaSoSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Công Cụ Lập Lá Số Tử Vi Online",
+    applicationCategory: "LifestyleApplication",
+    operatingSystem: "Web Browser",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "VND" },
+    description: "Công cụ lập lá số tử vi online miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, đại vận, tiểu vận.",
+    url: pageUrl("/lap-la-so"),
+    provider: { "@id": organizationId },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Trang chủ", item: pageUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Lập lá số", item: pageUrl("/lap-la-so") },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: lapLaSoContent.lapLaSoFaqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  },
+];
+
+const lapLaSoBody = `
+      <main class="prerender-shell">
+        <section class="prerender-hero">
+          <h1>Lập Lá Số Tử Vi Online Miễn Phí</h1>
+          <p>Nhập ngày giờ sinh để an lá số và khám phá Mệnh, Thân, 12 cung, Tứ Hóa và các yếu tố Tử Vi Bắc phái.</p>
+          <div class="prerender-actions">
+            <a href="#lap-la-so-form">Lập Lá Số Ngay</a>
+            <a href="#bac-phai-ai" class="secondary">Tìm hiểu Tử Vi Bắc phái</a>
+          </div>
+        </section>
+        <section id="lap-la-so-form" class="prerender-section">
+          <p>Đang tải biểu mẫu lập lá số: họ tên, giới tính, loại lịch (dương/âm), ngày - tháng - năm sinh, giờ sinh theo 12 khung giờ và năm xem vận.</p>
+        </section>
+        <section class="prerender-section">
+          <h2>Lá Số Tử Vi Là Gì?</h2>
+          <p>Lá số tử vi là bản đồ tổng hợp theo ngày giờ sinh, trình bày trên 12 cung để thể hiện tính cách, xu hướng phát triển và các giai đoạn vận hành nổi bật trong cuộc đời một người. Đây là công cụ chiêm nghiệm truyền thống, không phải một dự đoán khẳng định tuyệt đối.</p>
+        </section>
+        <section class="prerender-section">
+          <h2>Lập Lá Số Tử Vi Cần Những Thông Tin Gì?</h2>
+          <ul>
+            <li>Ngày, tháng, năm sinh (dương lịch hoặc âm lịch)</li>
+            <li>Giờ sinh theo 12 khung giờ (Tý - Hợi) - càng chính xác, vị trí cung và sao càng sát</li>
+            <li>Giới tính</li>
+            <li>Năm muốn xem vận hạn (mặc định là năm hiện tại)</li>
+          </ul>
+          <p>Nếu không nhớ chính xác giờ sinh, bạn vẫn có thể lập lá số bằng cách tick "Không rõ giờ sinh" - kết quả khi đó mang tính tham khảo.</p>
+        </section>
+        <section class="prerender-section">
+          <h2>Lá Số Của Bạn Có Gì?</h2>
+          <p>Sau khi nhập dữ liệu sinh, hệ thống an lá số và hiển thị đầy đủ cung Mệnh - Thân, 12 cung, chính - phụ tinh, Tứ Hóa, đại vận và tiểu vận trên cùng một biểu đồ trực quan.</p>
+          <ul>
+            ${lapLaSoContent.laSoOverviewCards.map((card) => `<li><strong>${escapeHtml(card.title)}</strong>: ${escapeHtml(card.description)}</li>`).join("\n            ")}
+          </ul>
+        </section>
+        <section id="bac-phai-ai" class="prerender-section">
+          <h2>Luận Giải Tử Vi Theo Phương Pháp Bắc Phái</h2>
+          <p>Hệ thống kết hợp dữ liệu lá số với kho tri thức Tử Vi chuyên sâu để phân tích Mệnh - Thân, cung vị, tam hợp, xung chiếu, Tứ Hóa, Phi Hóa và các yếu tố thời vận khi có đủ dữ liệu.</p>
+          <p>Tử Vi Bắc phái đọc lá số theo mạch vận động thay vì xét từng sao độc lập. Tứ Hóa (Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ) phát sinh từ Thiên Can năm sinh; Phi Hóa là khi lấy Thiên Can của một cung bất kỳ để tạo Tứ Hóa mới bay sang cung khác. <a href="/bai-viet/tu-vi-bac-phai-la-gi/">Tìm hiểu chi tiết về Tử Vi Bắc phái</a>.</p>
+        </section>
+        <section class="prerender-section">
+          <h2>Khám Phá 12 Cung Trong Lá Số Tử Vi</h2>
+          <ul>
+            ${lapLaSoContent.twelvePalaces.map((palace) => `<li><strong>Cung ${escapeHtml(palace.name)}</strong>: ${escapeHtml(palace.description)}</li>`).join("\n            ")}
+          </ul>
+        </section>
+        <section class="prerender-section">
+          <h2>Khám Phá Kiến Thức Tử Vi</h2>
+          <ul>
+            ${lapLaSoContent.knowledgeHubItems.filter((item) => item.path).map((item) => `<li><a href="${escapeHtml(item.path)}/">${escapeHtml(item.title)}</a></li>`).join("\n            ")}
+          </ul>
+        </section>
+        <section class="prerender-section">
+          <h2>Câu Hỏi Thường Gặp</h2>
+          ${lapLaSoContent.lapLaSoFaqs.map((faq) => `<h3>${escapeHtml(faq.question)}</h3>\n          <p>${escapeHtml(faq.answer)}</p>`).join("\n          ")}
+        </section>
+        <section class="prerender-section">
+          <h2>Sẵn sàng khám phá lá số của bạn?</h2>
+          <p>Chỉ mất chưa đến 1 phút để an Mệnh, Thân, 12 cung và Tứ Hóa theo ngày giờ sinh của bạn.</p>
+          <div class="prerender-actions">
+            <a href="#lap-la-so-form">Lập Lá Số Ngay</a>
+          </div>
+        </section>
+      </main>
+    `;
 
 const routes = [
   {
     route: "/",
-    title: "LaSoTuVi - Lập Lá Số Tử Vi Online & Luận Giải Theo Lá Số",
+    title: "Tử Vi Phong Lam - Lập Lá Số Tử Vi Online & Luận Giải Theo Lá Số",
     description:
       "Lập lá số tử vi online miễn phí, xem Mệnh, Thân, 12 cung, đại vận, tiểu vận và hỏi thêm theo lá số về sự nghiệp, tài lộc, tình duyên.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <p class="prerender-kicker">LaSoTuVi</p>
+          <p class="prerender-kicker">Tử Vi Phong Lam</p>
           <h1>Lập lá số tử vi online theo ngày giờ sinh</h1>
           <p>Tạo lá số miễn phí, xem nhanh Mệnh, Thân, 12 cung, đại vận, tiểu vận và biết nên đọc tiếp phần nào theo câu hỏi của bạn.</p>
           <div class="prerender-actions">
-            <a href="/lap-la-so">Lập lá số miễn phí</a>
-            <a href="/la-so-mau" class="secondary">Xem lá số mẫu</a>
+            <a href="/lap-la-so/">Lập lá số miễn phí</a>
+            <a href="/la-so-mau/" class="secondary">Xem lá số mẫu</a>
           </div>
         </section>
       </main>
@@ -78,14 +182,8 @@ const routes = [
     title: "Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh | Tử Vi Phong Lam",
     description:
       "Lập lá số tử vi online theo ngày tháng năm giờ sinh. An Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận, hỗ trợ luận giải theo Tử Vi Bắc phái.",
-    body: `
-      <main class="prerender-shell">
-        <section class="prerender-hero">
-          <h1>Lập Lá Số Tử Vi Online Miễn Phí</h1>
-          <p>Nhập ngày, tháng, năm, giờ sinh và giới tính để lập lá số tử vi theo Tử Vi Bắc phái: an Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận - miễn phí, ngay trên trình duyệt.</p>
-        </section>
-      </main>
-    `,
+    body: lapLaSoBody,
+    extraSchemas: lapLaSoSchemas,
   },
   {
     route: "/bang-gia",
@@ -110,7 +208,7 @@ const routes = [
       <main class="prerender-shell">
         <section class="prerender-hero">
           <h1>Lá số tử vi mẫu</h1>
-          <p>Xem trước cách LaSoTuVi trình bày Mệnh, Thân, 12 cung, đại vận, tiểu vận và các phần luận giải trước khi lập lá số của riêng bạn.</p>
+          <p>Xem trước cách Tử Vi Phong Lam trình bày Mệnh, Thân, 12 cung, đại vận, tiểu vận và các phần luận giải trước khi lập lá số của riêng bạn.</p>
         </section>
       </main>
     `,
@@ -127,8 +225,8 @@ const routes = [
           <h1>Bài viết</h1>
           <p>Những bài đọc nền tảng về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, can cung, đại vận và lưu niên.</p>
           <div class="prerender-actions">
-            <a href="/bai-viet">Mở danh sách bài viết</a>
-            <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
+            <a href="/bai-viet/">Mở danh sách bài viết</a>
+            <a href="/lap-la-so/" class="secondary">Lập lá số miễn phí</a>
           </div>
         </section>
       </main>
@@ -145,8 +243,8 @@ const routes = [
           <h1>Video học Tử Vi Bắc Phái</h1>
           <p>Các video ngắn được gom theo nền tảng để bạn học nhanh một khái niệm, rồi quay lại đối chiếu trên lá số của mình.</p>
           <div class="prerender-actions">
-            <a href="/video">Xem danh sách video</a>
-            <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
+            <a href="/video/">Xem danh sách video</a>
+            <a href="/lap-la-so/" class="secondary">Lập lá số miễn phí</a>
           </div>
         </section>
       </main>
@@ -182,13 +280,13 @@ const routes = [
   },
   {
     route: "/ve-chung-toi",
-    title: "Về Chúng Tôi - TuViPhongLam | Chuyên Gia Tử Vi Bắc Phái",
+    title: "Về Chúng Tôi - Tử Vi Phong Lam | Chuyên Gia Tử Vi Bắc Phái",
     description:
-      "TuViPhongLam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái chính thống.",
+      "Tử Vi Phong Lam - Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái chính thống.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
-          <h1>Về TuViPhongLam</h1>
+          <h1>Về Tử Vi Phong Lam</h1>
           <p>Nền tảng lập lá số tử vi online và luận giải theo phương pháp Bắc Phái chính thống với hơn 30,000 luận giải tri thức.</p>
         </section>
       </main>
@@ -218,8 +316,8 @@ const routes = [
           <h1>${post.title.replace(" | Bài viết", "")}</h1>
           <p>${post.description}</p>
           <div class="prerender-actions">
-            <a href="/bai-viet">Vào bài viết</a>
-            <a href="/lap-la-so" class="secondary">Lập lá số miễn phí</a>
+            <a href="/bai-viet/">Vào bài viết</a>
+            <a href="/lap-la-so/" class="secondary">Lập lá số miễn phí</a>
           </div>
         </section>
       </main>
@@ -236,6 +334,7 @@ const prerenderStyles = `
   .prerender-hero h1{font-size:48px;line-height:1.05;margin:0 0 12px}
   .prerender-hero p,.prerender-section p,.prerender-section li{font-size:18px;line-height:1.7;color:#6F6254}
   .prerender-section ul{padding-left:20px}
+  .prerender-section h3{font-size:20px;margin:18px 0 6px}
   .prerender-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
   .prerender-actions a{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;background:#8F3D2F;color:#FFFDF8;text-decoration:none;font-weight:600}
   .prerender-actions a.secondary{background:#FFFDF8;color:#8F3D2F;border:1px solid #E8D9C1}
@@ -259,13 +358,15 @@ for (const page of routes) {
   html = replaceTag(html, /<meta\s+name="robots"[\s\S]*?\/>/, `<meta name="robots" content="${page.noindex ? "noindex,nofollow" : "index,follow"}" />`);
   html = replaceTag(html, /<meta\s+property="og:title"[\s\S]*?\/>/, `<meta property="og:title" content="${page.title}" />`);
   html = replaceTag(html, /<meta\s+property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${page.description}" />`);
-  html = replaceTag(html, /<meta\s+property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${siteUrl}${page.route}" />`);
+  html = replaceTag(html, /<meta\s+property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${pageUrl(page.route)}" />`);
   html = replaceTag(html, /<meta\s+name="twitter:title"[\s\S]*?\/>/, `<meta name="twitter:title" content="${page.title}" />`);
   html = replaceTag(html, /<meta\s+name="twitter:description"[\s\S]*?\/>/, `<meta name="twitter:description" content="${page.description}" />`);
-  html = replaceTag(html, /<link\s+rel="canonical"[\s\S]*?>/, `<link rel="canonical" href="${siteUrl}${page.route}" />`);
+  html = replaceTag(html, /<link\s+rel="canonical"[\s\S]*?>/, `<link rel="canonical" href="${pageUrl(page.route)}" />`);
+  html = html.replace(/(<link\s+rel="alternate"\s+hreflang="[^"]+"\s+href=")[^"]*(")/g, `$1${pageUrl(page.route)}$2`);
+  const routeSchemas = [buildWebPageSchema(page), ...(page.extraSchemas ?? [])];
   html = html.replace(
     "</head>",
-    `<script id="route-structured-data" type="application/ld+json">${JSON.stringify(buildWebPageSchema(page))}</script></head>`,
+    `<script id="route-structured-data" type="application/ld+json">${JSON.stringify(routeSchemas).replace(/</g, "\\u003c")}</script></head>`,
   );
   html = html.replace("</head>", `${prerenderStyles}</head>`);
   html = html.replace('<div id="root"></div>', `<div id="root">${page.body}</div>`);

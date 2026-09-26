@@ -6,6 +6,10 @@ import { knowledgeArticles } from "../content/bacPhaiLibrary";
 import { primaryPlans } from "../components/PremiumPlans";
 
 const siteUrl = "https://tuviphonglam.com";
+// URL trang luôn có "/" cuối để khớp canonical (xem SEOHead.tsx).
+const pageUrl = (path: string) => `${siteUrl}${path.endsWith("/") ? path : `${path}/`}`;
+// @id chung để Google gộp Organization/WebSite khai báo ở index.html và ở từng trang thành một thực thể.
+const organizationId = `${siteUrl}/#organization`;
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
 
 // ============ BASE SCHEMAS ============
@@ -13,6 +17,7 @@ const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
   name: "Tử Vi Phong Lam",
   url: siteUrl,
   inLanguage: "vi-VN",
@@ -22,6 +27,7 @@ export const websiteSchema = {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": organizationId,
   name: "Tử Vi Phong Lam",
   url: siteUrl,
   logo: `${siteUrl}/favicon.svg`,
@@ -35,7 +41,7 @@ export const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Liên hệ luận giải lá số",
-  url: `${siteUrl}/lien-he`,
+  url: pageUrl(`/lien-he`),
   about: {
     "@type": "Service",
     name: "Hỗ trợ luận giải lá số tử vi",
@@ -54,7 +60,7 @@ export const softwareAppSchema = {
     priceCurrency: "VND",
   },
   description: "Công cụ lập lá số tử vi online miễn phí theo ngày giờ sinh. Xem Mệnh, Thân, 12 cung, đại vận, tiểu vận.",
-  url: `${siteUrl}/lap-la-so`,
+  url: pageUrl(`/lap-la-so`),
   provider: {
     "@type": "Organization",
     name: "Tử Vi Phong Lam",
@@ -81,13 +87,13 @@ export const articleListSchema = {
   "@type": "CollectionPage",
   name: "Kiến Thức Tử Vi Bắc Phái - Tứ Hóa Phi Tinh",
   description: "Tổng hợp bài viết chuyên sâu về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc Mệnh Thân, đại vận lưu niên.",
-  url: `${siteUrl}/bai-viet`,
+  url: pageUrl(`/bai-viet`),
   mainEntity: {
     "@type": "ItemList",
     itemListElement: knowledgeArticles.slice(0, 10).map((article, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      url: `${siteUrl}/bai-viet/${article.slug}`,
+      url: pageUrl(`/bai-viet/${article.slug}`),
       name: article.title,
     })),
   },
@@ -98,7 +104,7 @@ export const videoGallerySchema = {
   "@type": "CollectionPage",
   name: "Video Học Tử Vi Bắc Phái - Tứ Hóa Phi Tinh",
   description: "Tổng hợp video ngắn hướng dẫn Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc lá số dễ hiểu cho người mới.",
-  url: `${siteUrl}/video`,
+  url: pageUrl(`/video`),
 };
 
 // ============ DYNAMIC SCHEMAS ============
@@ -120,7 +126,7 @@ export const pricingServiceSchemas = primaryPlans
       priceCurrency: "VND",
       price: plan.price.replace(/[^\d]/g, ""),
       availability: "https://schema.org/InStock",
-      url: `${siteUrl}/bang-gia`,
+      url: pageUrl(`/bang-gia`),
     },
   }));
 
@@ -138,7 +144,7 @@ export const productSchemas = primaryPlans.map((plan) => ({
     price: plan.price.replace(/[^\d]/g, "") || "0",
     priceCurrency: "VND",
     availability: "https://schema.org/InStock",
-    url: `${siteUrl}/bang-gia`,
+    url: pageUrl(`/bang-gia`),
     seller: {
       "@type": "Organization",
       name: "Tử Vi Phong Lam",
@@ -170,7 +176,7 @@ export const breadcrumbSchema = (items: Array<{ name: string; path: string }>) =
     "@type": "ListItem",
     position: index + 1,
     name: item.name,
-    item: `${siteUrl}${item.path}`,
+    item: pageUrl(item.path),
   })),
 });
 
@@ -179,7 +185,7 @@ export const articleSchema = (article: { title: string; summary: string; slug: s
   "@type": "Article",
   headline: article.title,
   description: article.summary,
-  mainEntityOfPage: `${siteUrl}/bai-viet/${article.slug}`,
+  mainEntityOfPage: pageUrl(`/bai-viet/${article.slug}`),
   author: {
     "@type": "Organization",
     name: "Tử Vi Phong Lam",

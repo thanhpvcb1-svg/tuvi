@@ -247,6 +247,7 @@ const queryKnowledgeForPalace = (chart: ChartView, palaceName: string): string[]
   }
 
   const context: PalaceQueryContext = {
+    chart,
     palace: palace as any,
     starsInPalace: [...new Set(starsInPalace)],
     branch: palace.earthlyBranch || "",

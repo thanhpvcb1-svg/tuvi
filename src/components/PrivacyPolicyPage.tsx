@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
         <section className="legal-section">
           <h2>1. Giới thiệu</h2>
           <p>
-            LaSoTuVi cam kết bảo vệ quyền riêng tư của bạn. Chính sách bảo mật này giải thích 
+            Tử Vi Phong Lam cam kết bảo vệ quyền riêng tư của bạn. Chính sách bảo mật này giải thích 
             cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi sử dụng dịch vụ.
           </p>
         </section>

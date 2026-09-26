@@ -449,7 +449,7 @@ export default function ChartPage() {
         <p>Để an lá số chính xác, bạn cần chuẩn bị:</p>
         <ul className="seo-info-list">
           <li>Ngày, tháng, năm sinh (dương lịch hoặc âm lịch)</li>
-          <li>Giờ và phút sinh - càng chính xác, vị trí cung và sao càng sát</li>
+          <li>Giờ sinh theo 12 khung giờ (Tý - Hợi) - càng chính xác, vị trí cung và sao càng sát</li>
           <li>Giới tính</li>
           <li>Năm muốn xem vận hạn (mặc định là năm hiện tại)</li>
         </ul>

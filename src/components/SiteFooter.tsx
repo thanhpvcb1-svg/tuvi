@@ -25,7 +25,7 @@ export default function SiteFooter() {
         <div className="site-footer__brand">
           <div className="site-footer__logo">
             <span className="site-footer__logo-mark">☆</span>
-            <strong>LaSoTuVi</strong>
+            <strong>Tử Vi Phong Lam</strong>
           </div>
           <p className="site-footer__tagline">
             Nền tảng lập lá số tử vi online giúp bạn xem phần nền của lá số trước, rồi mới quyết định có cần hỏi sâu hơn.
@@ -58,7 +58,7 @@ export default function SiteFooter() {
 
         <div className="site-footer__bottom">
           <p className="site-footer__copyright">
-            © {currentYear} LaSoTuVi. Tất cả quyền được bảo lưu.
+            © {currentYear} Tử Vi Phong Lam. Tất cả quyền được bảo lưu.
           </p>
           <p className="site-footer__disclaimer">
             Nội dung tử vi trên trang mang tính tham khảo và chiêm nghiệm. Kết quả không thay thế tư vấn chuyên môn về y tế,

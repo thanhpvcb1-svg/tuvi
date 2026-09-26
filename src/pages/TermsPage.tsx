@@ -7,8 +7,8 @@ export default function TermsPage() {
   return (
     <>
       <SEOHead
-        title="Điều Khoản Sử Dụng Dịch Vụ | TuViPhongLam"
-        description="Điều khoản và điều kiện sử dụng dịch vụ lập lá số tử vi online trên TuViPhongLam."
+        title="Điều Khoản Sử Dụng Dịch Vụ | Tử Vi Phong Lam"
+        description="Điều khoản và điều kiện sử dụng dịch vụ lập lá số tử vi online trên Tử Vi Phong Lam."
         canonicalPath="/dieu-khoan-su-dung"
         schema={[
           organizationSchema,

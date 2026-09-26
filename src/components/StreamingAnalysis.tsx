@@ -136,12 +136,15 @@ function getPhiHoaFlows(palace: PalaceView): string[] {
     for (const flow of phiTuHoa.flows) {
       if (flow.targetPalaceName) {
         const label = flow.typeLabel || flow.type;
-        results.push(`${label} → ${flow.targetPalaceName}`);
+        results.push(flow.relation === "tu_hoa" ? `Tự ${label}` : `${label} → ${flow.targetPalaceName}`);
       }
     }
   }
   return results;
 }
+
+// Luận giải nguyên cục: chỉ lấy sao gốc, không lẫn sao lưu niên/đại vận đang bật trên lá số.
+const isNatalStar = (star: { scope?: string }) => !star.scope || star.scope === "origin";
 
 function analyzePalace(chart: ChartView, config: { id: string; name: string; icon: string }): PalaceAnalysis | null {
   const palace = findPalace(chart, config.name);
@@ -152,12 +155,15 @@ function analyzePalace(chart: ChartView, config: { id: string; name: string; ico
   const starsInPalace = extractStarsFromPalace(displayPalace);
   const mutagensInPalace = extractMutagensFromPalace(displayPalace);
   const phiHoaFlows = extractPhiHoaFlows(displayPalace);
+  // heavenlyStem của palace là chữ viết tắt ("M", "K"...); palaceStemMap giữ tên Can đầy đủ.
+  const stem = (palace.earthlyBranch && (chart as any).palaceStemMap?.[palace.earthlyBranch]) || (palace as any).heavenlyStem || "";
 
   const knowledgeMatches = queryPalaceKnowledge({
+    chart,
     palace: displayPalace,
     starsInPalace,
     branch: palace.earthlyBranch || "",
-    heavenlyStem: (palace as any).heavenlyStem,
+    heavenlyStem: stem,
     mutagensInPalace,
     phiHoaFlows,
   });
@@ -167,10 +173,10 @@ function analyzePalace(chart: ChartView, config: { id: string; name: string; ico
     name: config.name,
     icon: config.icon,
     branch: palace.earthlyBranch || "",
-    stem: (palace as any).heavenlyStem || "",
-    majorStars: palace.majorStars?.map(getStarDisplay).filter(Boolean) || [],
-    goodStars: palace.goodStars?.slice(0, 4).map(getStarDisplay).filter(Boolean) || [],
-    badStars: palace.badStars?.slice(0, 3).map(getStarDisplay).filter(Boolean) || [],
+    stem,
+    majorStars: palace.majorStars?.filter(isNatalStar).map(getStarDisplay).filter(Boolean) || [],
+    goodStars: palace.goodStars?.filter(isNatalStar).slice(0, 4).map(getStarDisplay).filter(Boolean) || [],
+    badStars: palace.badStars?.filter(isNatalStar).slice(0, 3).map(getStarDisplay).filter(Boolean) || [],
     meaning: getPalaceMeaning(config.name),
     phiHoa: getPhiHoaFlows(palace),
     isBodyPalace: palace.isBodyPalace || false,
@@ -390,7 +396,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     });
   }, [baseAnalyses, geminiStates]);
 
-  // Build data cho tổng hợp Bắc Phái - lấy TẤT CẢ tri thức
+  // Build data cho tổng hợp Bắc Phái
   const buildTongHopData = useCallback((): PalaceSummary[] => {
     return baseAnalyses.map((a) => ({
       name: a.name,
@@ -400,7 +406,8 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       goodStars: a.goodStars,
       badStars: a.badStars,
       isBodyPalace: a.isBodyPalace,
-      knowledgeTexts: a.knowledgeMatches.map((m) => m.interpretation.text),
+      // Server chỉ dùng 10 mục đầu mỗi cung (đã xếp theo độ cụ thể) - không gửi thừa.
+      knowledgeTexts: a.knowledgeMatches.slice(0, 10).map((m) => m.interpretation.text),
       phiHoaFlows: a.phiHoa,
     }));
   }, [baseAnalyses]);

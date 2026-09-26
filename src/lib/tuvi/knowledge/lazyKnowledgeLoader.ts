@@ -1,7 +1,7 @@
 /**
  * Lazy Knowledge Loader
  * Load tri thức sau 15 giây khi UI đã render xong
- * OPTIMIZED: Chỉ load consolidated files (~40MB → giảm từ ~95MB)
+ * Dùng bản đã làm mịn (~18MB, điều kiện parse sẵn) thay cho dữ liệu crawl gốc (~34MB).
  */
 
 type KnowledgeData = Record<string, unknown>;
@@ -15,68 +15,32 @@ const listeners: Array<() => void> = [];
 const LAZY_LOAD_DELAY = 15000; // 15 giây
 
 /**
- * Dynamic import consolidated knowledge files only
+ * Dynamic import Knowledge Base đã làm mịn (cung/normalized/*.json - sinh bởi `npm run knowledge:normalize`).
+ * Mỗi file: điều kiện đã parse sẵn, đã bỏ mục không dùng được và gộp nội dung trùng.
  */
-async function loadAllKnowledge(): Promise<KnowledgeData> {
-  const [
-    // 12 Consolidated files (main data source)
-    menhConsolidated,
-    phuMauConsolidated,
-    phucDucConsolidated,
-    dienTrachConsolidated,
-    quanLocConsolidated,
-    noBocConsolidated,
-    thienDiConsolidated,
-    tatAchConsolidated,
-    taiBachConsolidated,
-    tuTucConsolidated,
-    phuTheConsolidated,
-    huynhDeConsolidated,
-    // Thân + Tổng quan
-    thanConsolidated,
-    tongQuanConsolidated,
-    // Star combinations (essential)
-    starCombinationsData,
-  ] = await Promise.all([
-    // Consolidated files
-    import("./cung/menh-consolidated.json"),
-    import("./cung/phu-mau-consolidated.json"),
-    import("./cung/phuc-duc-consolidated.json"),
-    import("./cung/dien-trach-consolidated.json"),
-    import("./cung/quan-loc-consolidated.json"),
-    import("./cung/no-boc-consolidated.json"),
-    import("./cung/thien-di-consolidated.json"),
-    import("./cung/tat-ach-consolidated.json"),
-    import("./cung/tai-bach-consolidated.json"),
-    import("./cung/tu-tuc-consolidated.json"),
-    import("./cung/phu-the-consolidated.json"),
-    import("./cung/huynh-de-consolidated.json"),
-    // Thân + Tổng quan
-    import("./cung/than-consolidated.json"),
-    import("./cung/tong-quan-consolidated.json"),
-    // Star combinations
-    import("./cung/star-combinations.json"),
-  ]);
+const NORMALIZED_FILES = [
+  "menh", "phu-mau", "phuc-duc", "dien-trach", "quan-loc", "no-boc", "thien-di",
+  "tat-ach", "tai-bach", "tu-tuc", "phu-the", "huynh-de", "than", "tong-quan",
+] as const;
 
-  return {
-    // Consolidated (main data)
-    menhConsolidated: menhConsolidated.default,
-    phuMauConsolidated: phuMauConsolidated.default,
-    phucDucConsolidated: phucDucConsolidated.default,
-    dienTrachConsolidated: dienTrachConsolidated.default,
-    quanLocConsolidated: quanLocConsolidated.default,
-    noBocConsolidated: noBocConsolidated.default,
-    thienDiConsolidated: thienDiConsolidated.default,
-    tatAchConsolidated: tatAchConsolidated.default,
-    taiBachConsolidated: taiBachConsolidated.default,
-    tuTucConsolidated: tuTucConsolidated.default,
-    phuTheConsolidated: phuTheConsolidated.default,
-    huynhDeConsolidated: huynhDeConsolidated.default,
-    thanConsolidated: thanConsolidated.default,
-    tongQuanConsolidated: tongQuanConsolidated.default,
-    // Star combinations
-    starCombinationsData: starCombinationsData.default,
-  };
+async function loadAllKnowledge(): Promise<KnowledgeData> {
+  const modules = await Promise.all([
+    import("./cung/normalized/menh.json"),
+    import("./cung/normalized/phu-mau.json"),
+    import("./cung/normalized/phuc-duc.json"),
+    import("./cung/normalized/dien-trach.json"),
+    import("./cung/normalized/quan-loc.json"),
+    import("./cung/normalized/no-boc.json"),
+    import("./cung/normalized/thien-di.json"),
+    import("./cung/normalized/tat-ach.json"),
+    import("./cung/normalized/tai-bach.json"),
+    import("./cung/normalized/tu-tuc.json"),
+    import("./cung/normalized/phu-the.json"),
+    import("./cung/normalized/huynh-de.json"),
+    import("./cung/normalized/than.json"),
+    import("./cung/normalized/tong-quan.json"),
+  ]);
+  return Object.fromEntries(NORMALIZED_FILES.map((name, i) => [name, modules[i].default]));
 }
 
 /**
