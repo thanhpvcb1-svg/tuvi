@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Tử Vi Phong Lam",
     "title": "Lập Lá Số Tử Vi Online – Luận Giải Theo Tử Vi Bắc Phái",
-    "subtitle": "An lá số từ ngày giờ sinh, xem Mệnh, Thân, 12 cung, Tứ Hóa, Phi Hóa và đại vận, rồi đối chiếu với kho tri thức Tử Vi có điều kiện - AI chỉ tổng hợp từ những gì khớp với lá số của bạn."
+    "subtitle": "An lá số từ ngày giờ sinh, xem Mệnh, Thân, 12 cung, Tứ Hóa, Phi Hóa và đại vận, rồi đối chiếu với kho tri thức Tử Vi có điều kiện - phần luận giải chỉ tổng hợp từ những gì khớp với lá số của bạn."
   },
   "difference": {
     "heading": "Tử Vi Phong Lam có gì khác?",
@@ -19,10 +19,10 @@
     ]
   },
   "aiFlow": {
-    "heading": "AI và kho tri thức Tử Vi",
+    "heading": "Luận giải dựa trên kho tri thức Tử Vi",
     "intro": "Phần luận giải không phải văn mẫu. Mỗi bước đều dựa trên dữ liệu lá số của bạn:",
-    "steps": ["Lá số", "Xác định các cấu trúc cần luận", "Truy xuất tri thức phù hợp", "Đối chiếu dữ liệu lá số", "AI tổng hợp luận giải"],
-    "note": "AI được thiết kế để không tự tạo quy tắc Tử Vi: khi kho tri thức không có đoạn nào khớp, hệ thống để trống hoặc ghi rõ là thiếu dữ liệu thay vì suy đoán. Luận giải vẫn chỉ mang tính tham khảo.",
+    "steps": ["Lá số", "Xác định các cấu trúc cần luận", "Truy xuất tri thức phù hợp", "Đối chiếu dữ liệu lá số", "Tổng hợp luận giải"],
+    "note": "Hệ thống được thiết kế để không tự tạo quy tắc Tử Vi: khi kho tri thức không có đoạn nào khớp, phần đó để trống hoặc ghi rõ là thiếu dữ liệu thay vì suy đoán. Phần tổng hợp được tạo tự động nên vẫn có thể sai sót và chỉ mang tính tham khảo.",
     "link": { "title": "Xem phương pháp luận giải", "path": "/bai-viet/phuong-phap-luan-giai" }
   },
   "chartContents": {

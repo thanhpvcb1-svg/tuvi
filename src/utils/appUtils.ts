@@ -77,7 +77,7 @@ export const faqPageGroups = [
     id: "faq-la-so",
     eyebrow: "Lá số",
     title: "Lá số và Tử Vi Bắc phái",
-    description: "Lá số được an ra sao, Bắc phái đọc lá số thế nào và AI tham gia ở bước nào.",
+    description: "Lá số được an ra sao, Bắc phái đọc lá số thế nào và phần luận giải được tổng hợp ra sao.",
     faqs: lapLaSoContent.lapLaSoFaqs.filter((item) => item.question !== "Lá số cần giờ sinh chính xác không?"),
   },
   {

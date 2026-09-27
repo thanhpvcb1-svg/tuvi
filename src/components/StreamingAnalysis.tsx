@@ -241,6 +241,7 @@ function analyzePalace(
 
 // Sắp xếp knowledge: vị trí cung > sao đồng cung > tứ hóa > phi hóa
 function sortKnowledgeByPriority(matches: KnowledgeMatch[]): KnowledgeMatch[] {
+  const rank = new Map(matches.map((match, index) => [match, index]));
   return [...matches].sort((a, b) => {
     const getTypePriority = (type: string) => {
       // Ưu tiên 1: Vị trí cung, can cung
@@ -257,14 +258,31 @@ function sortKnowledgeByPriority(matches: KnowledgeMatch[]): KnowledgeMatch[] {
     const priorityA = getTypePriority(a.interpretation.type);
     const priorityB = getTypePriority(b.interpretation.type);
     if (priorityA !== priorityB) return priorityA - priorityB;
-    return b.matchScore - a.matchScore; // Cùng loại thì theo score
+    // Cùng loại: giữ thứ tự xếp hạng của dịch vụ tri thức (đã tính độ phủ, câu phán ngắn / văn phong đại chúng xếp sau).
+    return rank.get(a)! - rank.get(b)!;
   });
 }
 
+// Đoạn dài (bài luận nhiều ý) chỉ hiện phần đầu, cắt ở ranh giới câu, kèm nút "Xem thêm".
+const KNOWLEDGE_PREVIEW_CHARS = 600;
+function previewOf(text: string): string | null {
+  if (text.length <= KNOWLEDGE_PREVIEW_CHARS + 150) return null;
+  const cut = text.slice(0, KNOWLEDGE_PREVIEW_CHARS);
+  const end = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(".\n"), cut.lastIndexOf("\n"));
+  return (end > KNOWLEDGE_PREVIEW_CHARS * 0.5 ? cut.slice(0, end + 1) : cut).trimEnd() + " …";
+}
+
 function KnowledgeItem({ match }: { match: KnowledgeMatch }) {
+  const [expanded, setExpanded] = useState(false);
+  const preview = previewOf(match.interpretation.text);
   return (
     <div className="analysis-knowledge-item">
-      <p className="analysis-knowledge-text">{match.interpretation.text}</p>
+      <p className="analysis-knowledge-text">{preview && !expanded ? preview : match.interpretation.text}</p>
+      {preview ? (
+        <button type="button" className="analysis-knowledge-more" aria-expanded={expanded} onClick={() => setExpanded((v) => !v)}>
+          {expanded ? "Thu gọn" : "Xem thêm"}
+        </button>
+      ) : null}
       <div className="analysis-knowledge-meta">
         <span className="analysis-knowledge-reasons">
           {match.matchReasons.join(" · ")}
@@ -530,7 +548,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
       }
     } catch (error) {
       console.error("[Gemini] Error:", error);
-      setTongHopState({ loading: false, error: "Không thể kết nối dịch vụ AI" });
+      setTongHopState({ loading: false, error: "Chưa kết nối được dịch vụ luận giải. Vui lòng thử lại." });
     }
   }, [tongHopState, buildTongHopData, userContext, chart.profile]);
 
@@ -579,7 +597,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
     } catch (error) {
       setGeminiStates((prev) => {
         const next = new Map(prev);
-        next.set(palaceId, { loading: false, error: "Không thể kết nối dịch vụ AI" });
+        next.set(palaceId, { loading: false, error: "Chưa kết nối được dịch vụ luận giải. Vui lòng thử lại." });
         return next;
       });
     }
@@ -747,7 +765,7 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
 
               {!tongHopState.analysis && !tongHopState.loading && !tongHopState.error && (
                 <div className="analysis-tonghop-cta">
-                  <p>AI sẽ tổng hợp các đoạn tri thức đã khớp ở 12 cung cùng dữ liệu lá số, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>, và ghi rõ phần thiếu dữ liệu.</p>
+                  <p>Hệ thống sẽ tổng hợp các đoạn tri thức đã khớp ở 12 cung cùng dữ liệu lá số, luận theo <strong>Bắc Phái</strong> với trọng tâm <strong>Phi Hóa Can Cung</strong>, và ghi rõ phần thiếu dữ liệu.</p>
                   <button
                     type="button"
                     className="primary-button analysis-tonghop-btn"

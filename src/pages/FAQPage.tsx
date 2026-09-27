@@ -10,7 +10,7 @@ export default function FAQPage() {
     <div className="home-page">
       <SEOHead
         title="Câu Hỏi Thường Gặp Về Lập Lá Số Tử Vi Online | Tử Vi Phong Lam"
-        description="Giải đáp thắc mắc về lập lá số tử vi online, giờ sinh, Tứ Hóa, Phi Hóa, cách AI luận giải và các gói hỏi theo lá số."
+        description="Giải đáp thắc mắc về lập lá số tử vi online, giờ sinh, Tứ Hóa, Phi Hóa, cách tổng hợp luận giải và các gói hỏi theo lá số."
         canonicalPath="/faq"
         schema={[
           faqSchema(faqPageItems),

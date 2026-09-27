@@ -397,11 +397,11 @@ const buildDemoBody = () => {
         </section>
         <section id="luan-giai-mau" class="prerender-section">
           <h2>Luận giải mẫu</h2>
-          <p>Mỗi cung hiển thị các đoạn tri thức khớp với chính lá số mẫu kèm lý do khớp; AI tổng hợp từ dữ liệu này, được yêu cầu không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu.</p>
+          <p>Mỗi cung hiển thị các đoạn tri thức khớp với chính lá số mẫu kèm lý do khớp; phần luận giải được tổng hợp tự động từ dữ liệu này, không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu.</p>
         </section>
         <section class="prerender-section">
           <h2>Cơ sở tri thức</h2>
-          <p>Các đoạn tri thức đã khớp với lá số mẫu ở từng cung và lý do khớp - cũng là dữ liệu mà AI nhận được khi luận giải.</p>
+          <p>Các đoạn tri thức đã khớp với lá số mẫu ở từng cung và lý do khớp - cũng là dữ liệu dùng để tổng hợp phần luận giải.</p>
         </section>
         <section class="prerender-section">
           <h2>Lập lá số của tôi</h2>
@@ -542,7 +542,7 @@ const routes = [
     ],
     title: "Câu Hỏi Thường Gặp Về Lập Lá Số Tử Vi Online | Tử Vi Phong Lam",
     description:
-      "Giải đáp thắc mắc về lập lá số tử vi online, giờ sinh, Tứ Hóa, Phi Hóa, cách AI luận giải và các gói hỏi theo lá số.",
+      "Giải đáp thắc mắc về lập lá số tử vi online, giờ sinh, Tứ Hóa, Phi Hóa, cách tổng hợp luận giải và các gói hỏi theo lá số.",
     body: `
       <main class="prerender-shell">
         <section class="prerender-hero">
@@ -586,7 +586,7 @@ const routes = [
     route: "/ve-chung-toi",
     title: "Về Tử Vi Phong Lam – Lập Lá Số và Luận Giải Tử Vi Bắc Phái",
     description:
-      "Tử Vi Phong Lam lập lá số tử vi online và luận giải theo Bắc phái: đối chiếu hơn 20.000 đoạn tri thức có điều kiện, AI chỉ tổng hợp từ phần khớp với lá số.",
+      "Tử Vi Phong Lam lập lá số tử vi online và luận giải theo Bắc phái: đối chiếu hơn 20.000 đoạn tri thức có điều kiện, chỉ tổng hợp từ phần khớp với lá số.",
     extraSchemas: [breadcrumb([["Trang chủ", "/"], ["Về chúng tôi", "/ve-chung-toi"]])],
     body: `
       <main class="prerender-shell">
@@ -601,11 +601,11 @@ const routes = [
             <li>Đại vận, tiểu vận để xem chủ đề nào được kích hoạt theo từng giai đoạn.</li>
           </ul>
           <p>Tử Vi là công cụ tham khảo về xu hướng, không phải lời phán định chắc chắn về tương lai. <a href="/bai-viet/tu-vi-bac-phai-la-gi/">Tử Vi Bắc phái là gì?</a></p>
-          <h2>Kho tri thức và AI</h2>
+          <h2>Kho tri thức và cách luận giải</h2>
           <ul>
             <li>Lá số được an ngay trên trình duyệt của bạn; cùng ngày giờ sinh luôn cho cùng một lá số.</li>
             <li>Kho hơn 20.000 đoạn tri thức, mỗi đoạn gắn điều kiện áp dụng và chỉ hiển thị khi khớp với lá số của bạn, kèm lý do khớp.</li>
-            <li>AI chỉ tổng hợp từ các đoạn đã khớp, được yêu cầu không tự tạo quy tắc và ghi rõ phần chưa đủ dữ liệu - nhưng vẫn có thể sai sót.</li>
+            <li>Phần tổng hợp được tạo tự động, chỉ từ các đoạn đã khớp, không tự tạo quy tắc và ghi rõ phần chưa đủ dữ liệu - nhưng vẫn có thể sai sót.</li>
           </ul>
           <p><a href="/bai-viet/phuong-phap-luan-giai/">Phương pháp luận giải</a> · <a href="/la-so-mau/">Xem một lá số mẫu</a></p>
           <div class="prerender-actions"><a href="/lap-la-so/">Lập lá số miễn phí</a></div>

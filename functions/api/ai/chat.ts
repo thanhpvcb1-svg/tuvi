@@ -48,6 +48,7 @@ const SYSTEM_PROMPT = `Bạn là trợ lý luận giải Tử Vi Đẩu Số the
 5. Không khẳng định tuyệt đối về tương lai; dùng ngôn ngữ xu hướng, tham khảo.
 6. Nếu thiếu dữ liệu, nói rõ "chưa đủ dữ liệu để kết luận" và gợi ý xem chi tiết trên lá số.
 7. Giọng văn thân thiện, dễ hiểu.
+8. Không tự xưng là AI, trợ lý ảo hay mô hình ngôn ngữ, không nhắc tên công nghệ hay nhà cung cấp; đi thẳng vào câu trả lời. Không tự nhận là chuyên gia hay người thật. Nếu người dùng hỏi trực tiếp bạn là ai, trả lời trung thực: đây là phần hỏi đáp luận giải tự động của Tử Vi Phong Lam, dựa trên dữ liệu lá số.
 
 ## PHONG CÁCH
 - Trả lời trực tiếp câu hỏi.
@@ -197,7 +198,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   if (!hasAI && !hasGemini) {
     return new Response(
-      JSON.stringify({ success: false, error: "Chưa cấu hình AI service" }),
+      JSON.stringify({ success: false, error: "Dịch vụ hỏi đáp chưa sẵn sàng. Vui lòng thử lại sau." }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
@@ -255,7 +256,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     if (!text) {
       return new Response(
-        JSON.stringify({ success: false, error: "Không nhận được phản hồi từ AI" }),
+        JSON.stringify({ success: false, error: "Chưa nhận được câu trả lời. Vui lòng thử lại." }),
         { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
@@ -266,9 +267,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     );
 
   } catch (error) {
+    // Chi tiết lỗi chỉ ghi log phía server; người dùng nhận thông báo chung (không lộ thông tin hệ thống).
     console.error("Chat Error:", error);
     return new Response(
-      JSON.stringify({ success: false, error: error instanceof Error ? error.message : "Lỗi không xác định" }),
+      JSON.stringify({ success: false, error: "Chưa trả lời được câu hỏi lúc này. Vui lòng thử lại sau ít phút." }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }

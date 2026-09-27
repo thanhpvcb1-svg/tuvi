@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Lập Lá Số Tử Vi Online Miễn Phí",
-    "subtitle": "Lập lá số và khám phá Tử Vi theo phương pháp Bắc phái, kết hợp hệ thống tri thức chuyên sâu và AI hỗ trợ luận giải."
+    "subtitle": "Lập lá số và khám phá Tử Vi theo phương pháp Bắc phái, đối chiếu hệ thống tri thức chuyên sâu với chính lá số của bạn."
   },
   "formSection": {
     "heading": "Nhập thông tin sinh",
@@ -77,9 +77,9 @@
       "Phi Hóa",
       "Đại vận / Tiểu vận / Lưu niên",
       "Kho tri thức Tử Vi",
-      "AI tổng hợp luận giải"
+      "Tổng hợp luận giải"
     ],
-    "aiNote": "AI không thay thế phương pháp Tử Vi. AI sử dụng hệ thống tri thức và dữ liệu lá số để tổng hợp, đối chiếu và diễn giải.",
+    "aiNote": "Phần tổng hợp không thay thế phương pháp Tử Vi: hệ thống dùng kho tri thức và dữ liệu lá số để tổng hợp, đối chiếu và diễn giải.",
     "matching": "Mỗi đoạn tri thức chỉ được hiển thị khi các điều kiện của nó - vị trí cung, sao tọa thủ, độ sáng, tam phương tứ chính, giáp cung, Tứ Hóa hoặc Phi Hóa - khớp với chính lá số của bạn, kèm lý do khớp. Kho tri thức có thể gồm quan điểm của nhiều trường phái; khi không có dữ liệu phù hợp, hệ thống để trống thay vì suy đoán.",
     "methodLink": {
       "title": "Phương pháp luận giải",
@@ -253,12 +253,12 @@
       "answer": "Phi Hóa là khi lấy Thiên Can của một cung để hóa ra Lộc, Quyền, Khoa, Kỵ bay sang cung khác (phi nhập) hoặc hóa ngay tại cung đó (tự hóa). Phi Hóa cho thấy cung nào tác động tới cung nào - công cụ đặc trưng của Bắc phái."
     },
     {
-      "question": "AI luận giải Tử Vi hoạt động như thế nào?",
-      "answer": "Hệ thống an lá số trước, sau đó đối chiếu từng cung với kho tri thức: một đoạn tri thức chỉ được chọn khi các điều kiện của nó (vị trí cung, sao, độ sáng, Tứ Hóa, Phi Hóa...) khớp với lá số của bạn. AI được yêu cầu chỉ tổng hợp từ dữ liệu lá số và các đoạn tri thức đã khớp, và nói rõ phần thiếu dữ liệu. Kết quả AI vẫn có thể sai sót, nên đọc như một bản tham khảo."
+      "question": "Phần luận giải trên Tử Vi Phong Lam được tạo ra như thế nào?",
+      "answer": "Hệ thống an lá số trước, sau đó đối chiếu từng cung với kho tri thức: một đoạn tri thức chỉ được chọn khi các điều kiện của nó (vị trí cung, sao, độ sáng, Tứ Hóa, Phi Hóa...) khớp với lá số của bạn. Phần tổng hợp được tạo tự động, chỉ từ dữ liệu lá số và các đoạn tri thức đã khớp, và nói rõ phần thiếu dữ liệu. Kết quả vẫn có thể sai sót, nên đọc như một bản tham khảo."
     },
     {
-      "question": "AI có thay thế chuyên gia Tử Vi không?",
-      "answer": "Không. AI là công cụ hỗ trợ tra cứu và tổng hợp, được thiết kế để không tự tạo quy tắc Tử Vi, và không thay thế kinh nghiệm của người luận giải. Với những quyết định quan trọng, bạn nên trao đổi trực tiếp với chuyên gia."
+      "question": "Luận giải tự động có thay thế chuyên gia Tử Vi không?",
+      "answer": "Không. Đây là công cụ hỗ trợ tra cứu và tổng hợp, được thiết kế để không tự tạo quy tắc Tử Vi, và không thay thế kinh nghiệm của người luận giải. Với những quyết định quan trọng, bạn nên trao đổi trực tiếp với chuyên gia."
     },
     {
       "question": "Lá số được tính như thế nào?",

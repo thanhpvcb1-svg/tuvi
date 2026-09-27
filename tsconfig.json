@@ -17,5 +17,23 @@
     "paths": {}
   },
   "include": ["src", "functions", "vite.config.ts", "index.html"],
+  "exclude": [
+    "src/lib/tuvi/knowledge/*-consolidated.json",
+    "src/lib/tuvi/knowledge/*-full.json",
+    "src/lib/tuvi/knowledge/*.json",
+    "src/lib/tuvi/knowledge/cung/*.json",
+    "src/lib/tuvi/knowledge/crawler",
+    "src/lib/tuvi/knowledge/normalized",
+    "src/lib/tuvi/knowledge/unclassified",
+    "src/lib/tuvi/knowledge/cung/normalized/*.json",
+    "src/lib/tuvi/knowledge/__tests__",
+    "src/**/*.test.ts",
+    "src/lib/tuvi/knowledge/cohocLoader.ts",
+    "src/lib/tuvi/knowledge/knowledgeMapper.ts",
+    "src/lib/tuvi/knowledge/improvedMatcher.ts",
+    "node_modules",
+    "dist",
+    ".tmp-verify"
+  ],
   "references": []
 }

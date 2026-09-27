@@ -169,10 +169,12 @@ export default function TuviChatbot({ chart, isVisible, userContext }: Props) {
 
       setMessages((prev) => [...prev, assistantMessage]);
 
-      // Update quota
-      const newCount = quota.count + 1;
-      setQuota(newCount);
-      setQuotaState({ date: getToday(), count: newCount });
+      // Chỉ trừ lượt hỏi miễn phí khi thực sự có câu trả lời
+      if (data.success) {
+        const newCount = quota.count + 1;
+        setQuota(newCount);
+        setQuotaState({ date: getToday(), count: newCount });
+      }
     } catch (error) {
       const errorMessage: Message = {
         id: `error-${Date.now()}`,

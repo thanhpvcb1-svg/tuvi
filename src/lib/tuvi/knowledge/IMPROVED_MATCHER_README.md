@@ -10,7 +10,6 @@ Module cải thiện logic matching cho tính năng luận giải Tử Vi.
 |------|-------|
 | `improvedMatcher.ts` | Core matching logic |
 | `improvedKnowledgeService.ts` | Integration layer |
-| `__tests__/improvedMatcher.test.ts` | Unit tests |
 | `COMPARISON.ts` | So sánh logic cũ vs mới |
 
 ## Cải thiện chính

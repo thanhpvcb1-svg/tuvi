@@ -11768,3 +11768,16 @@ a.secondary-button {
   text-decoration: none;
 }
 
+
+/* "Xem thêm / Thu gọn" cho đoạn tri thức dài */
+.analysis-knowledge-more {
+  margin: 2px 0 4px;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: var(--accent, #8f3d2f);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}

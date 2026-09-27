@@ -12,6 +12,7 @@
 import { createChart } from "../src/lib/iztroEngine";
 import type { NormalizedBirthInput } from "../src/lib/types";
 import { loadKnowledge, queryPalaceKnowledge } from "../src/lib/tuvi/knowledge/lazyKnowledgeService";
+import { isSevereClaim } from "../src/lib/tuvi/knowledge/conditionMatcher";
 
 const fs = require("fs");
 const PALACES = ["Mệnh", "Phụ Mẫu", "Phúc Đức", "Điền Trạch", "Quan Lộc", "Nô Bộc", "Thiên Di", "Tật Ách", "Tài Bạch", "Tử Tức", "Phu Thê", "Huynh Đệ"];
@@ -23,13 +24,14 @@ const random = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 214748
 export const LEAK_PATTERNS: Array<[string, RegExp]> = [
   ["tên tác giả / sách", /Vương Đ[iìĩ]nh [Cc]h[iì]|Trung Châu|Đẩu [Ss]ố [Tt]oàn [Tt]hư|Đẩu [Ss]ố [Tt]oàn [Tt]ập|Tử Vân|B[âỉ]nh? Triệu|Thái Thứ Lang|Nguyễn Phát Lộc|(?<![\p{L}])Hi Di(?![\p{L}])|Trần Đoàn|cohoc|tuvi\.vn/u],
   ["lời của trang nguồn", /bài viết này|chương này|trang web|website|của chúng tôi|chúng tôi sử dụng|tôi xin trình bày|được phục vụ/iu],
+  ["nhắc 'AI'", /(^|[^\p{L}\d_])AI([^\p{L}\d_]|$)/u],
   ["xưng 'ngươi'", /(^|[^\p{L}])[Nn]gươi([^\p{L}]|$)/u],
   ["năm ứng kỳ của lá số khác", /Xảy ra vào một trong các năm|^\s*Ứng kỳ/im],
 ];
 
 async function main() {
   await loadKnowledge();
-  const stats = { shown: 0, trimmedItems: 0, trimmedSentences: 0, chars: 0, leaks: {} as Record<string, number> };
+  const stats = { shown: 0, trimmedItems: 0, trimmedSentences: 0, chars: 0, severe: 0, leaks: {} as Record<string, number> };
   const reasons: Record<string, number> = {};
   const samples: Array<{ chart: string; palace: string; condition?: string; sentence: string; reason: string; stars: string }> = [];
   const keptSamples: Array<{ chart: string; palace: string; condition?: string; text: string; allPalaces: string }> = [];
@@ -55,6 +57,7 @@ async function main() {
           stats.trimmedSentences += m.trimmedSentences;
         }
         for (const [label, re] of LEAK_PATTERNS) if (re.test(m.interpretation.text)) stats.leaks[label] = (stats.leaks[label] ?? 0) + 1;
+        if (isSevereClaim(m.interpretation.text)) stats.severe++;
       }
       // Mẫu đoạn đang hiển thị (sau khi lọc) để rà soát câu không áp dụng còn sót.
       if (keptSamples.length < 90 && shown.length && random() < 0.2) {
@@ -96,6 +99,8 @@ async function main() {
 
   console.log(`${count} lá số, ${count * 12} cung - mục hiển thị: ${stats.shown} (TB ${(stats.shown / count / 12).toFixed(1)}/cung), độ dài TB ${Math.round(stats.chars / Math.max(stats.shown, 1))} ký tự`);
   console.log(`Mục được lược câu không áp dụng: ${stats.trimmedItems} (${((stats.trimmedItems / Math.max(stats.shown, 1)) * 100).toFixed(1)}%), tổng ${stats.trimmedSentences} câu`);
+  // Câu phán nặng chỉ còn khi chính câu nêu điều kiện và điều kiện đúng trên lá số - theo dõi để không tăng dần.
+  console.log(`Mục còn câu phán nặng (điều kiện đã kiểm chứng): ${stats.severe} (${((stats.severe / Math.max(stats.shown, 1)) * 100).toFixed(1)}%)`);
   console.log(`Lý do lược (mẫu): ${Object.entries(reasons).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(" | ") || "-"}`);
   const leakText = Object.entries(stats.leaks).map(([k, v]) => `${k}: ${v}`).join(", ");
   console.log(leakText ? `❌ Nội dung lọt: ${leakText}` : "✅ Không lọt tên nguồn / 'ngươi' / năm ứng kỳ của lá số khác");

@@ -2,13 +2,13 @@
   "palace": "THAN",
   "palace_name": "Thân",
   "source": "tuvi.cohoc.net + existing",
-  "consolidated_at": "2026-09-27T11:58:32.239Z",
-  "total_interpretations": 1835,
+  "consolidated_at": "2026-09-27T13:44:30.305Z",
+  "total_interpretations": 1872,
   "stats": {
     "from_existing": 400,
     "from_crawled": 2769,
     "duplicates_removed": 2778,
-    "from_random_crawl": 50,
+    "from_random_crawl": 87,
     "from_master_merge": 1394
   },
   "interpretations": [
@@ -18770,6 +18770,375 @@
       "id": "cohoc_466103_1835",
       "condition": "Cung Thân an tại Sửu có Vũ khúc,Hóa kỵ",
       "text": "Việc làm không thuận, vận tiền bạc không tốt.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_257893_1836",
+      "condition": "Cung Thân an tại Dậu có Hóa quyền",
+      "text": "Chủ về quyền thế, mừng gặp Cự Môn, Thất Sát, Hoa Quyền, chủ về công danh hiển hách. Thủ cung mệnh ở Dần Mão Tý Hợi là miếu địa.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_257893_1837",
+      "condition": "Cung Thân an tại Dậu có Hữu bật",
+      "text": "Tướng mạo đôn hậu, cốt cách thanh tú, tính tình bộc trực, rộng lượng Khoan dung, có cơ mưu, hay giúp người và giỏi chữ nghĩa.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_257893_1838",
+      "condition": "Cung Thân an tại Dậu có Vũ khúc",
+      "text": "Hình dáng nhỏ. Là người thanh cao và rộng lượng, tính tình cương trực ngay thẳng và quyết đoán nhưng không mưu hại bất cứ ai.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_417380_1839",
+      "condition": "Cung Thân an tại Thân có Lộc tồn",
+      "text": "Tướng mạo đôn hậu, xinh đẹp. Là người thông minh lỗi lạc, lòng dạ hiền từ nhưng rất sáng suốt và nhạy bén, có mưu trí, cơ biến, hay giúp đỡ người.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_417380_1840",
+      "condition": "Cung Thân an tại Thân có Thiên hư",
+      "text": "Tọa thủ hai đất Thân, Mệnh thành cách \"Mộc, Bệnh, Từ, Tuyệt chi hương\" chủ về gặp nhiều hình thương, phiền não trong cục đời.\nKhốc Hư tọa thủ đất Tý Ngọ là nhập miếu, nếu thêm cát tinh hoặc gặp Lộc Ton, Hóa Lộc tất sẽ được sống đây đủ sung túc.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_273622_1841",
+      "condition": "Cung Thân an tại Mão có Linh tinh",
+      "text": "Tướng mạo khác người, có cốt cách phá tướng, mắt lớn, tâm địa lang độc, tính tình thâm trầm, nhiều khi thành lãnh đạm, nhưng gan to mật lớn khác thưởng.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_273622_1842",
+      "condition": "Cung Thân an tại Mão có Thiên tướng",
+      "text": "Tướng mạo đôn hậu, tính tình thanh bạch, thận trọng, ôn hòa, nói năng hoạt bát, không làm chuyện sai trái, không thích phù phiếm giả trá. Là người có lòng trắc ẩn, thích thù tạc với bạn bè, bình sinh không biến đổi chí hướng, ghét sự thay đổi.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_85993_1843",
+      "condition": "Cung Thân an tại Mùi có Hỏa tinh",
+      "text": "Mắt lớn lộ vẻ hung hãn, tâm địa lang độc, cương cường. Lông trong người mọc khác lạ, môi răng và chân tay có nhiều vết tích.\nHỏa Tinh nhập miếu, nữ mệnh chủ về hiền lành trong trắng; nếu hãm địa thì ngược lại, ưa tà dâm, hình phu khắc tử, nhiều thị phi.\nHỏa Tinh tọa thủ ở Dần, Mão, Tị Ngọ rất hợp cho người vùng Đông Nam, được hưởng phúc nhỏ.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_87600_1844",
+      "condition": "Cung Thân an tại Mùi có Cự môn",
+      "text": "Cự Môn thủ mệnh Thân cung, bất luận miếu hãm, một đời rước chuyện thị phi khẩu thiệt.",
+      "source": {
+        "book": "Đẩu số cung vị",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_87600_1845",
+      "condition": "Cung Thân an tại Mùi có Cự môn",
+      "text": "Cự Môn nhập miếu, vóc người lưng dài và mông dầy. Là người học rộng, tài cao, mặt mày thanh tú, tính tình hiền lành, đôn hậu. Nếu rơi vào hãm cung, là người tướng ngũ đoản, môi thâm, gầy nhỏ, tính tình đa nghi, khó hợp với người khác. Tuy học nhiều nhưng kém tinh anh, thích dấn thân vào chuyện thị phỉ, khiến vận số phải bôn ba lao lực. Chỉ có sao Lộc Tồn mới hóa giải được tính hung ác của Cự Môn hãm địa.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_87600_1846",
+      "condition": "Cung Thân an tại Mùi có Thiên đồng",
+      "text": "Tướng mạo đầy đặn, mi thanh mục tú. Là người nhân từ, chính trực, khiêm cung, ôn hòa; giỏi văn chương. Tuy là người có chí khí nhưng không tỏ ra cao ngạo và khích bác kẻ khác.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_204363_1847",
+      "condition": "Cung Thân an tại Thìn có Thiên cơ",
+      "text": "Thân thể tay chân không dài hoặc ngắn quá. Là người thông minh, xinh đẹp, tính tình nóng vội nhưng chân thành, thích làm việc thiện, hành sự rất quyền biến cơ mưu, khả năng thích ứng cao.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_374827_1848",
+      "condition": "Cung Thân an tại Dậu có Thiên đồng",
+      "text": "Tướng mạo đầy đặn, mi thanh mục tú. Là người nhân từ, chính trực, khiêm cung, ôn hòa; giỏi văn chương. Tuy là người có chí khí nhưng không tỏ ra cao ngạo và khích bác kẻ khác.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_374827_1849",
+      "condition": "Cung Thân an tại Dậu có Thiên hư",
+      "text": "Tọa thủ hai đất Thân, Mệnh thành cách \"Mộc, Bệnh, Từ, Tuyệt chi hương\" chủ về gặp nhiều hình thương, phiền não trong cục đời.\nKhốc Hư tọa thủ đất Tý Ngọ là nhập miếu, nếu thêm cát tinh hoặc gặp Lộc Ton, Hóa Lộc tất sẽ được sống đây đủ sung túc.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_495199_1850",
+      "condition": "Cung Thân an tại Thìn có Linh tinh",
+      "text": "Tướng mạo khác người, có cốt cách phá tướng, mắt lớn, tâm địa lang độc, tính tình thâm trầm, nhiều khi thành lãnh đạm, nhưng gan to mật lớn khác thưởng.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_495199_1851",
+      "condition": "Cung Thân an tại Thìn có Phá quân",
+      "text": "Tướng ngũ đoản, lưng dầy, mày thưa. Cơ thể không cân đối nên đi đứng nằm ngồi ngả nghiêng. Tính tình xảo trá, bất nhân, thích làm những chuyện mạo hiểm, trợ ác, nên ít hợp với người, nếu không theo tổ nghiệp thì thành công.\nChỉ có sao bại là chế hóa được tính ác của Phá Quân; Phá Quân nhập miếu lại thêm cát tinh thì chủ về hiển đạt võ nghiệp.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_495199_1852",
+      "condition": "Cung Thân an tại Thìn có Văn xương",
+      "text": "Mi thanh mục tú, thông minh cơ xảo. Là người học rộng tài cao, cơ biến khác thưởng, tính tình nho nhã nên thích nhàn hạ, ghét náo nhiệt.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_295245_1853",
+      "condition": "Cung Thân an tại Thìn có Tham lang",
+      "text": "Tham Lang nhập miếu địa là người lưng dài, mông dầy. Tính tình cương cường, có uy dũng có cơ mưu, nhiều thủ đoạn, người ngoài khó biết họ ghét hay yêu ai, hành sự nóng vội, không lúc nào chịu ngồi yên.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_190006_1854",
+      "condition": "Tử vi ở cung Thân, cung Mệnh ở Tị",
+      "text": "Cần khảo sát kỹ tinh hệ Thái dương Tị Hợi: tích cực hay tiêu cực khi luận giải lá số.",
+      "source": {
+        "book": "Tử vi tinh quyết"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_458812_1855",
+      "condition": "Cung Thân an tại Thân có Hỏa tinh",
+      "text": "Mắt lớn lộ vẻ hung hãn, tâm địa lang độc, cương cường. Lông trong người mọc khác lạ, môi răng và chân tay có nhiều vết tích.\nHỏa Tinh nhập miếu, nữ mệnh chủ về hiền lành trong trắng; nếu hãm địa thì ngược lại, ưa tà dâm, hình phu khắc tử, nhiều thị phi.\nHỏa Tinh tọa thủ ở Dần, Mão, Tị Ngọ rất hợp cho người vùng Đông Nam, được hưởng phúc nhỏ.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_458812_1856",
+      "condition": "Cung Thân an tại Thân có Liêm trinh",
+      "text": "Thân người dài, cường tráng, mắt lộ quan, lông mày thưa lộ cốt, miệng rộng, giỏi nói năng. Là người cỏ tâm tính cuồng độc, thô bạo, không thích bị gò bó, hay oán giận và ưa tranh cạnh, thích sống phong lưu và có máu mê cờ bạc. Chỉ có sao Thiên Tướng và sao Lộc Tồn mới chế hóa được tính ác của sao Liêm Trình, để mang lại phú quý và khiến mệnh chủ giữ kỉ cương, lễ nghĩa.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_184684_1857",
+      "condition": "Cung Thân an tại Mùi có Tả phù,Hữu bật",
+      "text": "二十五、左右同宫格\n左辅右弼同宫在丑、未宫守身者合此格, 若在命宫两侧来夹, 吉力远逊, 此命格之人, 念书阶段即有相当名声, 文采不错, 并因此有特殊际遇而成功。\n为人聪明, 反应机灵, 有煞星会照, 亦小有名声也有可能是壤名声, 要看煞星的组合和主星的力量。\nTả Hữu đồng cung cách:\nTả Phụ Hữu Bật đồng cung thủ cung thân tại Sửu Mùi là hợp cách này, nếu Phụ Bật tới kẹp mệnh thì cát lực thua xa. Người mang cách này, từ lúc học hành đã có thanh danh, văn thái không tệ, cũng vì vậy mà gặt hái thành công.\nLà người thông minh, phản ứng linh hoạt, nếu có sát tinh hội chiếu, danh tiếng nhỏ hay to, phải xem tổ hợp sát tinh hội cùng chủ tinh mà luận.",
+      "source": {
+        "book": "Tử vi đẩu số mệnh vận phân tích",
+        "author": "Từ Tăng Sinh"
+      },
+      "accuracy": 6
+    },
+    {
+      "id": "cohoc_184684_1858",
+      "condition": "Cung Thân an tại Mùi có Hữu bật",
+      "text": "Tướng mạo đôn hậu, cốt cách thanh tú, tính tình bộc trực, rộng lượng Khoan dung, có cơ mưu, hay giúp người và giỏi chữ nghĩa.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_483529_1859",
+      "condition": "Cung Thân an tại Tị có Thiên hỉ",
+      "text": "Sao Thiên Hỷ, chủ về mừng vui, là người có dung mạo tuấn mỹ. Gặp Thiên Hý là sớm thành gia thất, thủ cung mệnh thì miệng cười cổ duyên.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_10137_1860",
+      "condition": "Cung Thân an tại Dậu có Hóa kỵ",
+      "text": "Hóa Kỵ cư mệnh thân, di, độ hung cực lớn, chủ một đời không thuận, hay gặp trắc trở thất bại, tuy nhiên người này cũng không phải không có tài năng.",
+      "source": {
+        "book": "Đẩu số cung vị",
+        "author": "Trần Bỉnh Húc"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_10137_1861",
+      "condition": "Cung Thân an tại Dậu có Hóa kỵ",
+      "text": "Việc gì cũng không thuận.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_10137_1862",
+      "condition": "Cung Thân an tại Dậu có Hóa kỵ",
+      "text": "Chủ về thị phi, đóng ở mệnh, Thân suốt đời không được vừa ý, toại tâm. Nếu Hóa Kỵ ở cung quan lộc chủ về dù có phát đạt công danh cũng không bền vững.\nSao Hóa Kỵ cùng cát tinh đóng ở miếu địa, biến đổi được tính xấu của nó.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_10137_1863",
+      "condition": "Cung Thân an tại Dậu có Thái dương",
+      "text": "Tướng mạo oai hùng, mặt dài. Là người thông minh, nhân từ, độ lượng với người dưới, rất ghét những chuyện thị phi đặt điều. Gặp Kình Dương Đà La chủ về bị ác tật; gặp Hóa Ky chủ về bị tật ở mắt, mắt kém.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_10137_1864",
+      "condition": "Cung Thân an tại Dậu có Thái dương,Hóa kỵ",
+      "text": "Ắt phải trải qua một thời phấn đấu gắng sức, gian khổ mới có thành tựu.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_10137_1865",
+      "condition": "Cung Thân an tại Dậu có Thiên hỉ",
+      "text": "Sao Thiên Hỷ, chủ về mừng vui, là người có dung mạo tuấn mỹ. Gặp Thiên Hý là sớm thành gia thất, thủ cung mệnh thì miệng cười cổ duyên.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_10137_1866",
+      "condition": "Cung Thân an tại Dậu có Thiên lương",
+      "text": "Tướng mạo đầy đặn, mi thanh mục tú, sống thọ. Tính tình ôn hòa, cẩn trọng, rộng lượng, hay làm việc thiện giúp người; là người thông minh, lỗi lạc, những khi lâm sự rất quyết đoán.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_142793_1867",
+      "condition": "Cung Thân an tại Tuất có Vũ khúc",
+      "text": "Hình dáng nhỏ. Là người thanh cao và rộng lượng, tính tình cương trực ngay thẳng và quyết đoán nhưng không mưu hại bất cứ ai.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_135262_1868",
+      "condition": "Cung Thân an tại Tí có Linh tinh",
+      "text": "Tướng mạo khác người, có cốt cách phá tướng, mắt lớn, tâm địa lang độc, tính tình thâm trầm, nhiều khi thành lãnh đạm, nhưng gan to mật lớn khác thưởng.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_135262_1869",
+      "condition": "Cung Thân an tại Tí có Văn xương",
+      "text": "Mi thanh mục tú, thông minh cơ xảo. Là người học rộng tài cao, cơ biến khác thưởng, tính tình nho nhã nên thích nhàn hạ, ghét náo nhiệt.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_441528_1870",
+      "condition": "Cung Thân an tại Mùi có Hóa khoa",
+      "text": "Hóa Khoa chủ về thanh danh, văn chương thi cử. Tọa thủ Thân, cung mệnh, là người thông minh hiếm có, nếu hội họp với Thiên Cơ, Thiên Khôi là thành cách tuyệt hảo.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_463243_1871",
+      "condition": "Cung Thân an tại Mão có Hỏa tinh",
+      "text": "Mắt lớn lộ vẻ hung hãn, tâm địa lang độc, cương cường. Lông trong người mọc khác lạ, môi răng và chân tay có nhiều vết tích.\nHỏa Tinh nhập miếu, nữ mệnh chủ về hiền lành trong trắng; nếu hãm địa thì ngược lại, ưa tà dâm, hình phu khắc tử, nhiều thị phi.\nHỏa Tinh tọa thủ ở Dần, Mão, Tị Ngọ rất hợp cho người vùng Đông Nam, được hưởng phúc nhỏ.",
+      "source": {
+        "book": "Phi tinh Trần Đoàn",
+        "author": "Hồng Khánh"
+      },
+      "accuracy": 5
+    },
+    {
+      "id": "cohoc_463243_1872",
+      "condition": "Cung Thân an tại Mão có Thái dương",
+      "text": "Tướng mạo oai hùng, mặt dài. Là người thông minh, nhân từ, độ lượng với người dưới, rất ghét những chuyện thị phi đặt điều. Gặp Kình Dương Đà La chủ về bị ác tật; gặp Hóa Ky chủ về bị tật ở mắt, mắt kém.",
       "source": {
         "book": "Phi tinh Trần Đoàn",
         "author": "Hồng Khánh"

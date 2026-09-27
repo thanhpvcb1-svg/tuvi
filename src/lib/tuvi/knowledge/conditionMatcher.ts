@@ -17,6 +17,7 @@
 
 import type { ChartView, PalaceView, StarView } from "../../types";
 import { starDescriptions } from "../../../content/starDescriptions";
+import { AITUVI_VISIBLE_STAR_POLICY } from "../rules/visibleStarPolicy";
 
 // ============ NORMALIZE ============
 
@@ -93,6 +94,10 @@ const MAIN_STARS = new Set(
 
 // Tên sao hợp lệ = mọi sao lá số có thể hiển thị (xem content/starDescriptions.ts).
 const KNOWN_STARS = new Set(Object.keys(starDescriptions).map(starKey));
+
+// Sao bị ẩn khỏi lá số hiển thị (Chỉ Bối, Quán Tác...): người xem không thấy trên lá số nên không dùng để
+// chọn tri thức; câu tri thức đòi các sao này coi như lá số không có.
+const HIDDEN_STARS = new Set(AITUVI_VISIBLE_STAR_POLICY.hiddenFromVisible.map(starKey));
 
 type HoaType = "loc" | "quyen" | "khoa" | "ky";
 const HOA_TYPES: Record<string, HoaType> = { "lộc": "loc", "quyền": "quyen", "khoa": "khoa", "kỵ": "ky", "kị": "ky" };
@@ -203,7 +208,7 @@ const isNatalStar = (star: StarView) => !star.scope || star.scope === "origin";
 
 function collectStars(palace: PalaceView): StarView[] {
   const lists = [palace.majorStars, palace.minorStars, palace.adjectiveStars, palace.visibleStars, palace.analysisStars, palace.centerStars, palace.leftStars, palace.rightStars] as Array<StarView[] | undefined>;
-  return lists.flatMap((list) => list ?? []).filter(isNatalStar);
+  return lists.flatMap((list) => list ?? []).filter((star) => isNatalStar(star) && !HIDDEN_STARS.has(starKey(star.name)));
 }
 
 export function buildChartFacts(chart: ChartView): ChartFacts {
@@ -680,7 +685,8 @@ export function parseCondition(raw: string): ParsedCondition | null {
 // Nội dung crawl từ lá số cụ thể của người khác (tuổi đại vận, "phi phục Tam điểm tại <chi>"...)
 // không áp dụng được cho lá số hiện tại dù điều kiện khớp.
 export function isChartSpecificText(text: string): boolean {
-  return /phi phục Tam điểm tại|\d+\s*-\s*\d+\s*tuổi|\(\d+ tuổi\)|Thông tin chung|^\s*(Cung khí số vị )?đại vận/i.test(text);
+  // "Điểm mạnh nhất / yếu nhất của lá số ..." là nhận xét tổng hợp của site cho riêng lá số đã crawl.
+  return /phi phục Tam điểm tại|\d+\s*-\s*\d+\s*tuổi|\(\d+ tuổi\)|Thông tin chung|^\s*(Cung khí số vị )?đại vận|^\s*Điểm (mạnh|yếu) nhất của lá số/i.test(text);
 }
 
 /**
@@ -728,6 +734,8 @@ export type TextRequirements = {
   yearStems?: string[];
   /** "Thái Âm nhập miếu..." / "... hãm địa" - độ sáng của chính tinh được nhắc phải khớp. */
   brightness?: { star: string; level: "good" | "bad" };
+  /** "Sao Long Trì, Phượng Các ở tại cung..." - mọi sao được nêu phải cùng ở cung đang xét. */
+  seatStars?: string[];
 };
 
 const BRANCH_WORD = "(?:Tý|Tí|Sửu|Dần|Mão|Thìn|Tỵ|Tị|Ngọ|Mùi|Thân|Dậu|Tuất|Hợi)";
@@ -815,6 +823,20 @@ export function extractTextRequirements(text: string, conditionStars?: string[])
   const brightnessStar = stars.length === 1 ? stars[0] : stars.length === 0 && conditionStars?.length === 1 ? conditionStars[0] : null;
   if (level && brightnessStar) req.brightness = { star: brightnessStar, level };
 
+  // Tiêu đề nêu một cặp / nhóm sao cùng ở cung: "Sao Long Trì, Phụng Các ở tại cung tài vận",
+  // "SAO THIÊN CƠ, THÁI ÂM TỌA TẠI CUNG THÂN", "Người nam có sao Thái Âm và sao Thiên Cơ cùng tọa..." -> cả bài nói về
+  // tổ hợp đó, nên mọi sao được nêu phải có ở cung (điều kiện gốc thường chỉ đòi một sao).
+  // Xét tiêu đề và dòng đầu nội dung ("SAO LONG TRÌ, PHỤNG CÁC LUẬN TÀI VẬN: ..." rồi "Sao Long Trì, Phụng Các ở tại ...").
+  for (const line of String(text || "").split("\n").map((l) => l.trim()).filter(Boolean).slice(0, 2)) {
+    const seat = line.match(/^(?:người (?:nam|nữ)\s+)?(?:có\s+)?(?:sao\s+)?([^:;.]{3,60}?)\s+(?:song tinh\s+)?(?:ở tại|ở|tại|cùng tọa|cùng ở|đồng cung|tọa|nhập|thủ|an|luận)\s/iu);
+    if (!seat || !/,|\svà\s/iu.test(seat[1])) continue;
+    const pair = findStarsIn(seat[1], seat[0], true).filter((s) => !s.startsWith("hoa:"));
+    if (pair.length >= 2) {
+      req.seatStars = pair;
+      break;
+    }
+  }
+
   return Object.keys(req).length ? req : undefined;
 }
 
@@ -855,6 +877,14 @@ export function checkTextRequirements(req: TextRequirements | undefined, facts: 
     const ok = level === "good" ? /^(M|V|Đ)$/.test(code) : code === "H";
     if (!ok) return null;
     extra.push(`${label(star)} ${level === "good" ? "miếu/vượng/đắc" : "hãm"}`);
+  }
+  if (req.seatStars) {
+    // Cung vô chính diệu: tính cả sao mượn từ đối cung.
+    const together = palaces.some((p) => {
+      const holders = [p, p.mainStars.size ? null : palaceAt(facts, relatedBranches(p.branch, "opposite")[0])].filter((h): h is PalaceFacts => Boolean(h));
+      return req.seatStars!.every((star) => holders.some((h) => h.stars.has(star)));
+    });
+    if (!together) return null;
   }
   return extra;
 }
@@ -1058,6 +1088,20 @@ export function conditionPalaceStars(parsed: Pick<ParsedCondition, "clauses">): 
   return [...stars];
 }
 
+/**
+ * Chủ đề của điều kiện - để gom các đoạn cùng nói về một sao: chính tinh tọa thủ / mượn đối cung / kèm Hóa (ưu tiên),
+ * nếu không có thì các sao khác tại cung, rồi các sao hội chiếu. Điều kiện không nêu sao (Tứ Hóa sinh niên, phi hóa,
+ * giáp cung, vận hạn...) -> null.
+ */
+export function conditionSubject(parsed: Pick<ParsedCondition, "clauses">): string | null {
+  const stars = conditionPalaceStars(parsed);
+  const main = stars.filter((s) => MAIN_STARS.has(s));
+  if (main.length) return `main:${main.sort().join("+")}`;
+  if (stars.length) return `star:${[...stars].sort().join("+")}`;
+  const meeting = parsed.clauses.flatMap((c) => c.predicates).flatMap((p) => (p.kind === "star" && p.scope === "tpt" ? [p.star] : []));
+  return meeting.length ? `tpt:${[...new Set(meeting)].sort().join("+")}` : null;
+}
+
 // Dấu thanh kiểu cũ ("Hoả", "hoá", "Thuỷ") -> kiểu mới, để so tên sao / chữ Hóa.
 const TONE_OLD: Record<string, string> = { "oà": "òa", "oá": "óa", "oả": "ỏa", "oã": "õa", "oạ": "ọa", "oè": "òe", "oé": "óe", "oẻ": "ỏe", "uỳ": "ùy", "uý": "úy", "uỷ": "ủy", "uỹ": "ũy", "uỵ": "ụy" };
 // Tên gọi khác / lỗi chính tả thường gặp trong tri thức -> tên sao chuẩn
@@ -1070,6 +1114,14 @@ const TEXT_STAR_ALIASES: Array<[RegExp, string]> = [
   [/vẫn khúc/g, "văn khúc"],
   [/đa la/g, "đà la"],
   [/hòa lỉnh|hòa linh/g, "hỏa linh"],
+  [/phụng các/g, "phượng các"],
+  [/phỉ liêm/g, "phi liêm"],
+  [/thiên hỷ/g, "thiên hỉ"],
+  [/hỉ thần/g, "hỷ thần"],
+  [/bác sỹ/g, "bác sĩ"],
+  [/lực sỹ/g, "lực sĩ"],
+  [/đài phụ/g, "thai phụ"],
+  [/thiên quí/g, "thiên quý"],
   // "tính đào hoa", "duyên đào hoa"... là đặc tính, không phải sao Đào Hoa
   [/(tính|duyên|vận|chuyện|kiểu|mang|nét|vẻ) đào hoa/g, "$1 _"],
 ];
@@ -1177,6 +1229,31 @@ function starListHead(unit: string): string {
 
 const starBranches = (facts: ChartFacts, star: string) => [...facts.byBranch.values()].filter((p) => p.stars.has(star)).map((p) => p.branch);
 
+const PALACE_WORDS = "mệnh|phụ mẫu|phúc đức|điền trạch|quan lộc|sự nghiệp|nô bộc|giao hữu|thiên di|tật ách|tài bạch|tử tức|tử nữ|phu thê|huynh đệ";
+// "<sao> tọa/thủ/cư/nhập [cung] <cung>[/Thân]" - "Thân" đứng riêng là chi Thân nên chỉ nhận khi viết "cung Thân" hoặc "Mệnh/Thân".
+const SEAT_RE = new RegExp(
+  `(?:sao\\s+)?(${STAR_NAMES_DESC.join("|")}|xương khúc|tả hữu|khôi việt|kình đà|hỏa linh|không kiếp)\\s+(?:độc\\s+)?(?:tọa|thủ|cư|nằm|nhập|đóng)(?:\\s+giữ)?\\s+(?:ở\\s+|tại\\s+)?` +
+    `(?:cung\\s+(${PALACE_WORDS}|thân)|(${PALACE_WORDS}))(?:\\s*(?:\\/|,|hoặc|hay|và)\\s*(?:cung\\s+)?(${PALACE_WORDS}|thân))?(?![\\p{L}])`,
+  "u",
+);
+const SOLO_RE = new RegExp(`^(?:sao\\s+)?(${STAR_NAMES_DESC.join("|")})?\\s*(?:một mình|độc tọa|độc thủ|đơn thủ)(?![\\p{L}])`, "u");
+
+const NEGATION_RE = /(^|[^\p{L}])(không|chẳng|chưa|trừ khi|dù|bất kể|bất luận|kể cả)([^\p{L}]|$)/u;
+const withoutKhongStars = (s: string) => s.replace(/địa không|thiên không|tuần không|triệt không|tiệt không|không kiếp|không vong/g, " ");
+
+// Giới tính ngầm của CHỦ lá số: từ chỉ dùng cho một giới ("cô gái", "hồng nhan", "lấy chồng" / "lấy vợ", "khắc vợ").
+// Chỉ xét ở cung nói về bản thân / hôn nhân - ở cung Tử Tức, Phụ Mẫu, Huynh Đệ, Nô Bộc các từ này nói về người khác.
+const SELF_PALACES = new Set(["mệnh", "thân", "phu thê", "phúc đức", "tật ách", "quan lộc", "tài bạch", "thiên di", "điền trạch"]);
+const FEMALE_CUE = /(^|[^\p{L}])(cô gái|hồng nhan|trinh tiết|mất trinh|nữ trung hào kiệt|vượng phu|ích tử|sát phu|khắc chồng|hình chồng|hại chồng|giúp chồng|phù chồng|lấy chồng|theo chồng|bỏ chồng|chồng con|làm lẽ|làm vợ lẽ|làm vợ bé|bị đàn ông|được đàn ông|đàn ông theo đuổi)([^\p{L}]|$)/u;
+const MALE_CUE = /(^|[^\p{L}])(lấy vợ|cưới vợ|khắc vợ|hình vợ|hại vợ|sợ vợ|nhờ vợ|được vợ|bỏ vợ|vợ con|có vợ lẽ|lấy vợ lẽ|năm thê bảy thiếp|thê thiếp|đa thê|nàng hầu|bị phụ nữ|được phụ nữ|phụ nữ theo đuổi|con gái theo đuổi)([^\p{L}]|$)/u;
+// ("vợ" / "chồng" đứng riêng thì không suy ra được: "chồng nên là con trưởng" có thể nói về chính chủ lá số nam.)
+function impliedGender(lowU: string, palaceKeyName: string | undefined): "male" | "female" | null {
+  if (!palaceKeyName || !SELF_PALACES.has(palaceKeyName)) return null;
+  const female = FEMALE_CUE.test(lowU);
+  const male = MALE_CUE.test(lowU.replace(/làm vợ (lẽ|bé)/g, " "));
+  return female === male ? null : female ? "female" : "male";
+}
+
 function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx: RefineContext): { drop?: string; applied?: string } {
   // Phần trong ngoặc là chú thích phụ - không dùng để quyết định bỏ câu.
   const u = stripBullet(unit).replace(/\([^)]*\)|\[[^\]]*\]/g, " ").replace(/\s+/g, " ").trim();
@@ -1184,8 +1261,24 @@ function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx:
   const lowU = scanText(u);
   const head = conditionHead(u);
   const lowHead = scanText(head);
+
+  // 0) Vận hạn: "phi Hóa Kỵ nhập ĐV Tài bạch (Phụ mẫu bản mệnh)" - cung đang xét phải thật sự phi Hóa đó vào
+  //    cung bản mệnh được nêu (Can cung không đổi giữa lá số gốc và đại vận).
+  // (đọc câu gốc: cung bản mệnh nằm trong ngoặc)
+  const flowClaim = scanText(unit).match(/phi hóa (lộc|quyền|khoa|kỵ|kị) (?:nhập|vào) (?:cung )?đv\.? ?[^()]{2,24}\((?:cung )?([^()]+?) bản mệnh\)/u);
+  if (flowClaim && palaces[0]) {
+    const type = hoaType(flowClaim[1]);
+    const target = palaceKey(flowClaim[2]);
+    if (type && target && !palaces[0].flowsOut.some((f) => f.type === type && f.target === target)) {
+      return { drop: `${palaces[0].label} không phi ${HOA_LABELS[type]} vào ${label(target)}` };
+    }
+  }
+
   // Câu phủ định / nhượng bộ ở vế điều kiện: không suy ra được điều kiện rõ ràng -> giữ nguyên.
-  if (/(^|[^\p{L}])(không|chẳng|chưa|trừ khi|dù|bất kể|bất luận|kể cả)([^\p{L}]|$)/u.test(lowHead)) return {};
+  // Chỉ xét phần điều kiện (trước "cho thấy / chủ về / thì..."): "Kình Dương hãm địa cho thấy ... không tốt" vẫn là
+  // câu có điều kiện. Tên sao có chữ "không" (Địa Không, Thiên Không...) không phải phủ định.
+  const negationScope = lowHead.split(/\s(?:cho thấy|chủ về|chủ|là|thì|nên|sẽ|dễ|được|bị|có thể|thường)\s/)[0];
+  if (NEGATION_RE.test(withoutKhongStars(negationScope))) return {};
   // Câu hai vế / có vế ngược lại: một vế không khớp chưa chắc cả câu không áp dụng.
   const rest = lowU.slice(lowHead.length);
   const multiBranch = /(nếu không|bằng không|trái lại|ngược lại|còn nếu|,\s*nếu|;\s*nếu|,\s*gặp|,\s*còn gặp|,\s*thêm)/.test(rest) || (lowU.match(/\sthì\s/g) ?? []).length >= 2;
@@ -1197,6 +1290,10 @@ function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx:
   const both = /nam nữ|nữ nam/.test(lowU) || (/(nam mệnh|mệnh nam|nam giới|nam nhân|đàn ông)/.test(lowU) && /(nữ mệnh|mệnh nữ|nữ giới|nữ nhân|phụ nữ|đàn bà)/.test(lowU));
   if ((male || female) && !both && facts.gender) {
     if (facts.gender !== (male ? "male" : "female")) return { drop: `nói về ${male ? "nam" : "nữ"} mệnh` };
+  }
+  if (!male && !female && !both && facts.gender) {
+    const implied = impliedGender(lowU, ctx.palaceKeys[0]);
+    if (implied && implied !== facts.gender) return { drop: `nói về ${implied === "male" ? "nam" : "nữ"} mệnh (theo cách xưng hô)` };
   }
 
   // 2) Năm sinh: "Người sinh năm Canh, ..." - lấy mọi can được nêu trong câu, chỉ cần một can khớp.
@@ -1233,7 +1330,7 @@ function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx:
     if (index > 90) break;
     const branches = (match[1].match(new RegExp(BRANCH_WORD, "gu")) ?? []).map(branchKey);
     const before = locRegion.slice(Math.max(prevEnd, index - 60), index);
-    if (/(không|chẳng|chưa|trừ)\s*$/.test(scanText(before).slice(-12))) {
+    if (/(không|chẳng|chưa|trừ)\s*$/.test(withoutKhongStars(scanText(before)).slice(-12))) {
       prevEnd = index + match[0].length;
       continue; // "không ở cung Sửu Mùi" - điều kiện phủ định, không kiểm theo nghĩa khẳng định
     }
@@ -1310,6 +1407,11 @@ function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx:
   const concessive = /(miếu|vượng|đắc|hãm)[\p{L}\s]{0,12}\s(cũng|vẫn)\s/u.test(brightHead);
   // "hãm địa hay hội sát tinh", "nhập miếu hóa cát tinh hoặc hội chiếu cát tinh": độ sáng chỉ là một vế của OR.
   const brightOr = /\s(hay|hoặc)\s/.test(lowHead);
+  // Sao phụ được nêu độ sáng ở đầu câu ("Kình Dương hãm địa cho thấy...") mà không ở cung này -> câu tả lá số khác.
+  if (namedBright && !MAIN_STARS.has(namedBright) && !located && !/hội|chiếu|đối cung|tam phương|tam hợp|giáp/.test(lowU)) {
+    const here = palaces.some((p) => p.stars.has(namedBright) || (!p.mainStars.size && palaceAt(facts, relatedBranches(p.branch, "opposite")[0])?.stars.has(namedBright)));
+    if (!here && [...facts.palaces.values()].some((p) => p.stars.has(namedBright))) return { drop: `${label(namedBright)} không ở cung này` };
+  }
   if ((startsBright || namedBright) && !located && !multiBranch && !concessive && !brightOr && brightnessClaim(lowU) !== null) {
     const level = brightnessClaim(brightHead.replace(/hãm vị/, "hãm địa"));
     const star = namedBright ?? (ctx.conditionStars.length === 1 ? ctx.conditionStars[0] : null);
@@ -1323,14 +1425,45 @@ function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx:
       }
     }
   }
-  if (located) return { applied: "Đúng vị trí trên lá số" };
+  // Câu đúng vị trí vẫn phải qua các kiểm tra sao đi kèm bên dưới ("Thêm Kình Dương, Đà La: tại cung Dần, Ngọ...").
 
-  // 6a) "Người có sao Thái Dương tọa cung Phúc Đức..." - sao phải thật sự ở cung được nêu.
-  const seatMatch = lowU.slice(0, 120).match(new RegExp(`(?:sao\\s+)?(${STAR_NAMES_DESC.join("|")})\\s+(?:độc\\s+)?(?:tọa|thủ|cư|nằm)\\s+(?:ở\\s+|tại\\s+)?cung\\s+(mệnh|phụ mẫu|phúc đức|điền trạch|quan lộc|sự nghiệp|nô bộc|giao hữu|thiên di|tật ách|tài bạch|tử tức|tử nữ|phu thê|huynh đệ)(?![\\p{L}])`, "u"));
+  // 6a) "Người có sao Thái Dương tọa cung Phúc Đức...", "Liêm Trinh thủ Mệnh...", "Xương Khúc tọa Mệnh/Thân" - sao phải
+  //     thật sự ở cung được nêu (một trong các cung nếu nêu "Mệnh/Thân"; cung vô chính diệu mượn được sao đối cung).
+  const seatMatch = lowU.slice(0, 120).match(SEAT_RE);
   if (seatMatch && !multiBranch) {
-    const seatPalace = facts.palaces.get(palaceKey(seatMatch[2]) ?? "");
-    if (seatPalace && [...facts.palaces.values()].some((p) => p.stars.has(seatMatch[1])) && !seatPalace.stars.has(seatMatch[1])) {
-      return { drop: `${label(seatMatch[1])} không ở cung ${seatPalace.label}` };
+    const subject = seatMatch[1];
+    const refs = STAR_GROUPS.find(([re]) => re.test(subject))?.[1].filter((s) => !s.startsWith("hoa:")) ?? [subject];
+    const seats = [seatMatch[2] ?? seatMatch[3], seatMatch[4]].filter(Boolean).map((name) => resolvePalace(facts, palaceKey(name) ?? "")).filter((p): p is PalaceFacts => Boolean(p));
+    const holds = (p: PalaceFacts, ref: string) => p.stars.has(ref) || (!p.mainStars.size && Boolean(palaceAt(facts, relatedBranches(p.branch, "opposite")[0])?.stars.has(ref)));
+    const onChart = refs.filter((ref) => [...facts.palaces.values()].some((p) => p.stars.has(ref)));
+    if (seats.length && onChart.length && !seats.some((p) => onChart.some((ref) => holds(p, ref)))) {
+      return { drop: `${label(subject)} không ở cung ${seats.map((p) => p.label).join("/")}` };
+    }
+  }
+
+  // 6c) "Một mình thủ cung", "X độc tọa", "đơn thủ" ở đầu câu: chính tinh phải là chính tinh duy nhất của cung;
+  //     sao phụ "một mình" nghĩa là cung không có chính tinh.
+  const solo = lowU.slice(0, 80).match(SOLO_RE);
+  if (solo && !multiBranch && palaces[0]) {
+    const subject = solo[1] ?? (ctx.conditionStars.length === 1 ? ctx.conditionStars[0] : null);
+    const home = palaces[0];
+    const seat = subject && !home.stars.has(subject) && !home.mainStars.size ? palaceAt(facts, relatedBranches(home.branch, "opposite")[0]) : home;
+    if (subject && seat?.stars.has(subject)) {
+      const alone = MAIN_STARS.has(subject) ? seat.mainStars.size === 1 : home.mainStars.size === 0;
+      if (!alone) return { drop: `${label(subject)} không độc tọa` };
+    }
+  }
+
+  // 6d) Cặp sao trong ngoặc kép ở đầu câu ("Liêm Trinh, Thiên Tướng" được..., “Tử Vi, Phá Quân” ...) là tổ hợp đồng cung.
+  const quoted = u.match(/^["“]([^"”]{3,60})["”]/);
+  if (quoted && !located) {
+    const refs = findStarsIn(quoted[1], quoted[1], true).filter((ref) => !ref.startsWith("hoa:"));
+    if (refs.length >= 2 && refs.every((ref) => [...facts.palaces.values()].some((p) => p.stars.has(ref)))) {
+      const together = palaces.some((p) => {
+        const holders = [p, p.mainStars.size ? null : palaceAt(facts, relatedBranches(p.branch, "opposite")[0])].filter((h): h is PalaceFacts => Boolean(h));
+        return refs.every((ref) => holders.some((h) => h.stars.has(ref)));
+      });
+      if (!together) return { drop: `không có ${refs.map(label).join(", ")} đồng cung` };
     }
   }
 
@@ -1360,11 +1493,17 @@ function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx:
     const startsWithStar = findStarsIn(firstWords, listHead).length > 0 || /^(sao|các sao|hóa)\s/.test(afterVerb);
     // Hóa bay theo can cung không kiểm bằng Tứ Hóa sinh niên -> bỏ khỏi danh sách cần có.
     // Sao lá số không an (không có ở cung nào, vd Thiên Nguyệt) là "không rõ", không phải "không có".
-    const computed = (ref: string) => ref.startsWith("hoa:") || [...facts.palaces.values()].some((p) => p.stars.has(ref));
-    const refs = (weakVerb && !startsWithStar ? [] : findStarsIn(listHead, listHead, true)).filter((ref) => !(flyingHoa && ref.startsWith("hoa:")) && computed(ref));
+    // Sao ẩn khỏi lá số hiển thị coi như đã an nhưng không có ở cung nào.
+    const computed = (ref: string) => ref.startsWith("hoa:") || HIDDEN_STARS.has(ref) || [...facts.palaces.values()].some((p) => p.stars.has(ref));
+    // Vế phủ định trong danh sách ("Thêm sát, không có cát tinh, ...") là điều kiện VẮNG MẶT, không phải cần có.
+    const listParts = listHead.split(",");
+    const negated = (part: string) => /^\s*(không|chẳng|vô)\s/.test(scanText(part));
+    const positiveHead = listParts.filter((part) => !negated(part)).join(",");
+    const absentRefs = listParts.filter(negated).flatMap((part) => findStarsIn(part, part, true)).filter((ref) => !(flyingHoa && ref.startsWith("hoa:")) && computed(ref));
+    const refs = (weakVerb && !startsWithStar ? [] : findStarsIn(positiveHead, positiveHead, true)).filter((ref) => !(flyingHoa && ref.startsWith("hoa:")) && computed(ref));
     // Danh sách mở ("..., v.v.", "…") hoặc có vế "hoặc" chỉ sang cung khác: không đủ chắc để bỏ.
     const openList = /\.\.\.|…|v\.v|vân vân/.test(lowU.slice(0, listHead.length + 12)) || /hoặc\s+(cung\s+)?(mệnh|thân)\s+có/.test(lowU);
-    if (refs.length && !/giáp/.test(lowList) && !openList) {
+    if ((refs.length || absentRefs.length) && !/giáp/.test(lowList) && !openList) {
       const samePalaceOnly = /đồng cung|đồng độ|cùng cung|tọa thủ/.test(lowList) && !/hội|chiếu|tam phương|tam hợp/.test(lowList);
       const scope = new Set(palaces.flatMap((p) => (samePalaceOnly ? [p.branch] : relatedBranches(p.branch, "tpt"))));
       const inScope = (ref: string) =>
@@ -1373,13 +1512,59 @@ function checkUnit(unit: string, facts: ChartFacts, palaces: PalaceFacts[], ctx:
           if (!p) return false;
           return ref.startsWith("hoa:") ? p.mutagens.has(ref.slice(4) as HoaType) : p.stars.has(ref);
         });
-      const present = refs.filter(inScope);
       const name = (ref: string) => (ref.startsWith("hoa:") ? HOA_LABELS[ref.slice(4) as HoaType] : label(ref));
-      if (!present.length) return { drop: `không có ${refs.map(name).join(", ")} ${samePalaceOnly ? "đồng cung" : "trong tam phương tứ chính"}` };
-      return { applied: `Có ${present.map(name).join(", ")}` };
+      const presentAbsent = absentRefs.filter(inScope);
+      if (presentAbsent.length) return { drop: `có ${presentAbsent.map(name).join(", ")} (câu nói trường hợp không có)` };
+      if (refs.length) {
+        const present = refs.filter(inScope);
+        if (!present.length) return { drop: `không có ${refs.map(name).join(", ")} ${samePalaceOnly ? "đồng cung" : "trong tam phương tứ chính"}` };
+        return { applied: `Có ${present.map(name).join(", ")}` };
+      }
     }
   }
-  return {};
+  return located ? { applied: LOCATED } : {};
+}
+
+const LOCATED = "Đúng vị trí trên lá số";
+
+// Câu / dòng nối tiếp ý câu trước ("Đồng thời...", "Nhưng...", bắt đầu bằng chữ thường do crawl ngắt dòng giữa câu):
+// câu trước bị lược thì câu này không còn chỗ dựa.
+const CONTINUATION_RE = /^(đồng thời|hơn nữa|thêm vào đó|lại còn|ngoài ra|nhưng|tuy nhiên|tuy vậy|song|mà|nên|cho nên|vì vậy|vì thế|do đó|như vậy|cũng|càng|hoặc|tức là|nghĩa là|lúc này|khi đó|người sinh năm này|năm này)(?![\p{L}])/u;
+const isContinuation = (s: string) => {
+  const t = stripBullet(s);
+  return /^\p{Ll}/u.test(t) || CONTINUATION_RE.test(scanText(t));
+};
+// Nhãn phạm vi đầu dòng ("Người sinh năm Giáp: ...", "Nữ mệnh: ...") áp cho cả dòng.
+const SCOPE_LABEL = /^(người sinh năm|sinh năm|tuổi|người sinh giờ|sinh giờ|nam mệnh|nữ mệnh|mệnh nam|mệnh nữ)[^:]{0,40}:/u;
+
+// Câu phán nặng (chết, yểu, sảy thai, dâm đãng, tù tội...) chỉ giữ khi chính câu nêu điều kiện riêng và điều kiện
+// đó đúng trên lá số - không suy từ một sao đứng riêng.
+const SEVERE_CLAIM = /(^|[^\p{L}])(chết|tử vong|yểu(?! điệu)|đoản thọ|khó sống lâu|sảy thai|hư thai|tuyệt tự|dâm đãng|dâm loạn|dâm tiện|lưu manh|đê tiện|thấp hèn|hạ tiện|trụy lạc|tàn tật|tù tội|lao tù|tù ngục|ngồi tù)([^\p{L}]|$)/u;
+const SEVERE_IDIOM = /sợ chết|mệt chết|chết khiếp|chết mê|chết mệt|chết đi sống lại|không (?:chủ về |phải |đến nỗi |bị |gây )?(?:chết|tù)/u;
+export function isSevereClaim(text: string): boolean {
+  const low = scanText(text);
+  return SEVERE_CLAIM.test(low) && !SEVERE_IDIOM.test(low);
+}
+
+// Câu có vế riêng cho từng giới: "Nam thì phong lưu, nữ thì ...", "trai lấy vợ ..., gái lấy chồng ..." -> giữ vế đúng giới.
+const CLAUSE_GENDER = /^(?:nếu là |nếu |còn |với |đối với |riêng )?(nam mệnh|mệnh nam|nam giới|nam nhân|đàn ông|người nam|nữ mệnh|mệnh nữ|nữ giới|nữ nhân|đàn bà|phụ nữ|người nữ|(?:nam|nữ|trai|gái)(?=\s+(?:thì|lấy|gặp|chủ|nên|dễ|hay|tất|ắt|mà|là|được|bị|có)(?![\p{L}])))(?![\p{L}])/u;
+function splitGenderClauses(sentence: string, gender: ChartFacts["gender"], palaceKeyName?: string): { text: string; removed: string[] } {
+  if (!gender || !palaceKeyName || !SELF_PALACES.has(palaceKeyName)) return { text: sentence, removed: [] };
+  const parts = sentence.split(/(?<=[,;])\s+/);
+  if (parts.length < 2) return { text: sentence, removed: [] };
+  const labels = parts.map((part) => {
+    const m = scanText(stripBullet(part)).match(CLAUSE_GENDER);
+    return m ? (/^(nam|mệnh nam|đàn ông|người nam|trai)/.test(m[1]) ? "male" : "female") : null;
+  });
+  if (!labels.includes("male") || !labels.includes("female")) return { text: sentence, removed: [] };
+  let current: ChartFacts["gender"] = null;
+  const kept: string[] = [];
+  const removed: string[] = [];
+  parts.forEach((part, i) => {
+    current = labels[i] ?? current;
+    (current === null || current === gender ? kept : removed).push(part);
+  });
+  return { text: kept.length ? kept.join(" ").replace(/[,;]\s*$/, ".") : "", removed };
 }
 
 export function refineTextForChart(text: string, facts: ChartFacts, ctx: RefineContext): RefineResult | null {
@@ -1387,9 +1572,24 @@ export function refineTextForChart(text: string, facts: ChartFacts, ctx: RefineC
   const applied = new Set<string>();
   const dropped: RefineResult["dropped"] = [];
   const outLines: string[] = [];
+  // Câu cuối vừa xét bị lược (để bỏ câu / dòng nối tiếp nó); mục có tiêu đề "...:" bị lược (bỏ các dòng thuộc mục).
+  let lastDropped = false;
+  let sectionDropped = false;
   for (const line of String(text || "").split("\n")) {
-    if (!line.trim()) {
+    const trimmed = line.trim();
+    if (!trimmed) {
       outLines.push(line);
+      sectionDropped = false;
+      continue;
+    }
+    const heading = /:\s*$/.test(trimmed) && trimmed.length <= 120;
+    if (sectionDropped && !heading) {
+      dropped.push({ sentence: trimmed, reason: "thuộc mục đã lược" });
+      continue;
+    }
+    sectionDropped = false;
+    if (lastDropped && isContinuation(trimmed)) {
+      dropped.push({ sentence: trimmed, reason: "tiếp nối đoạn đã lược" });
       continue;
     }
     // Tách câu ở ". " / "; " nhưng không cắt bên trong ngoặc.
@@ -1398,16 +1598,37 @@ export function refineTextForChart(text: string, facts: ChartFacts, ctx: RefineC
       .replace(/([\p{Ll}\d)"”])\.(?=\p{Lu})/gu, "$1. ")
       .split(/(?<=[.!?])\s+(?=[\p{Lu}\d"“(*\-•★])|(?<=;)\s+(?![^(]*\))/u);
     const kept: string[] = [];
-    for (const sentence of sentences) {
-      const result = checkUnit(sentence, facts, palaces, ctx);
-      if (result.drop) {
-        dropped.push({ sentence, reason: result.drop });
-        continue;
+    let labelDropped = false;
+    sentences.forEach((raw, index) => {
+      if (labelDropped) {
+        dropped.push({ sentence: raw, reason: "thuộc nhãn đầu dòng đã lược" });
+        return;
       }
-      if (result.applied && result.applied !== "Đúng vị trí trên lá số") applied.add(result.applied);
+      if (index > 0 && lastDropped && isContinuation(raw)) {
+        dropped.push({ sentence: raw, reason: "tiếp nối câu đã lược" });
+        return;
+      }
+      const split = splitGenderClauses(raw, facts.gender, ctx.palaceKeys[0]);
+      for (const part of split.removed) dropped.push({ sentence: part, reason: `vế nói về ${facts.gender === "male" ? "nữ" : "nam"} mệnh` });
+      const sentence = split.text;
+      if (!sentence) {
+        lastDropped = true;
+        return;
+      }
+      const result = checkUnit(sentence, facts, palaces, ctx);
+      const drop = result.drop ?? (isSevereClaim(sentence) && !(result.applied && result.applied !== LOCATED) ? "câu phán nặng không kèm điều kiện đúng với lá số" : undefined);
+      if (drop) {
+        dropped.push({ sentence, reason: drop });
+        lastDropped = true;
+        if (index === 0 && SCOPE_LABEL.test(scanText(stripBullet(sentence)))) labelDropped = true;
+        return;
+      }
+      lastDropped = false;
+      if (result.applied && result.applied !== LOCATED) applied.add(result.applied);
       kept.push(sentence);
-    }
+    });
     if (kept.length) outLines.push(kept.join(" ").replace(/;\s*$/, "."));
+    else if (heading) sectionDropped = true;
   }
   // Dòng tiêu đề (kết thúc bằng ":") không còn nội dung phía sau -> bỏ.
   const cleaned = outLines.filter((line, i) => !(/:\s*$/.test(line) && (i === outLines.length - 1 || !outLines[i + 1]?.trim())));

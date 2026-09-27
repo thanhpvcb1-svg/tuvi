@@ -64,10 +64,10 @@ export default function PrivacyPolicyPage() {
             và bạn có thể xóa bất cứ lúc nào bằng cách xóa dữ liệu trình duyệt.
           </p>
           <p>
-            <strong>Khi bạn sử dụng tính năng luận giải AI hoặc chatbot hỏi đáp</strong>, một
+            <strong>Khi bạn dùng tính năng giải nghĩa chi tiết, luận tổng hợp hoặc hỏi đáp theo lá số</strong>, một
             bản tóm tắt lá số (cung, sao, Ngũ Hành, giới tính - <strong>không bao gồm họ tên hoặc
             ngày giờ sinh cụ thể</strong>) cùng câu hỏi của bạn được gửi tới máy chủ của chúng tôi
-            để xử lý bởi dịch vụ AI (Cloudflare Workers AI, hoặc Google Gemini khi cần dự phòng)
+            để xử lý bởi dịch vụ tổng hợp ngôn ngữ tự động của bên thứ ba (Cloudflare Workers AI, hoặc Google Gemini khi cần dự phòng)
             và tạo nội dung luận giải. Dữ liệu này chỉ dùng để tạo phản hồi cho yêu cầu đó, không
             được lưu trữ lâu dài trên máy chủ của chúng tôi.
           </p>

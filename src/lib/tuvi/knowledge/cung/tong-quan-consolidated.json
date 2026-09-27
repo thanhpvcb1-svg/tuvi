@@ -2,13 +2,13 @@
   "palace": null,
   "palace_name": "Tổng Quan",
   "source": "tuvi.cohoc.net + existing",
-  "consolidated_at": "2026-09-27T11:58:33.086Z",
-  "total_interpretations": 1227,
+  "consolidated_at": "2026-09-27T13:55:29.038Z",
+  "total_interpretations": 1255,
   "stats": {
     "from_existing": 315,
     "from_crawled": 848,
     "duplicates_removed": 968,
-    "from_random_crawl": 43,
+    "from_random_crawl": 71,
     "from_master_merge": 1192,
     "chart_specific_removed": 178
   },
@@ -12305,6 +12305,286 @@
       "id": "cohoc_466103_1227",
       "condition": "Mệnh chủ Vũ khúc, cục số Thổ ngũ cục, sinh tháng 2",
       "text": "Thổ của tháng Hai: Khí Thổ của tháng Hai, Hỏa khí Mộc Dục, Mộc khí Đế Vượng, Kim khí vào Tử, nên Thổ của tháng Hai khí thế vẫn cô hư, vô dụng, Hỉ Hỏa sinh phù, gặp Thổ tỷ trợ là tốt, gặp Mộc nhiều thì Hỉ Kim chế Mộc.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_257893_1228",
+      "condition": "Mệnh chủ Văn khúc, chính tinh Vũ khúc, sinh tháng 2",
+      "text": "Hành Kim của tháng Hai: Khí Kim của tháng Hai, Mộc khí Đế Vượng, Hỏa khí Mộc Dục, Kim khí vào Thai, Thủy khí đã Bệnh, nên Kim của tháng Hai vẫn suy nhược, Kỵ Thổ lấp Kim không thể sinh Kim, vẫn Hỉ Hỏa để cướp khí của Mộc và được Kim phù trợ.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_273622_1229",
+      "condition": "Mệnh chủ Văn khúc, chính tinh Thiên tướng, sinh tháng 2",
+      "text": "Hành Thủy của tháng Hai: Khí của tháng Hai, Mộc khí Đế Vượng, Thủy khí đã Tử, nên Thủy của tháng Hai, rất Hỉ gặp Kim để sinh Thủy và khắc chế Mộc, nếu Thủy vượng nên có Thổ để ngăn Thủy.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_223478_1230",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Thất sát, sinh tháng 8",
+      "text": "Hành Kim của tháng Tám: Khí của tháng Tám, Kim khí Đế Vượng, Thủy khí Mộc Dục, Hỏa Khí đã Tử, nên Kim của tháng Tám đương lệnh cực vượng, Kỵ Kim tỷ trợ, Hỉ Thủy tiết khí Kim, Hỏa lại luyện Kim, Mộc lại trợ Hỏa cũng nên.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_85993_1231",
+      "condition": "Mệnh chủ Cự môn, cục số Kim tứ cục, sinh tháng 8",
+      "text": "Hành Kim của tháng Tám: Khí của tháng Tám, Kim khí Đế Vượng, Thủy khí Mộc Dục, Hỏa Khí đã Tử, nên Kim của tháng Tám đương lệnh cực vượng, Kỵ Kim tỷ trợ, Hỉ Thủy tiết khí Kim, Hỏa lại luyện Kim, Mộc lại trợ Hỏa cũng nên.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_64934_1232",
+      "condition": "Mệnh chủ Văn khúc, chính tinh Thiên phủ, sinh tháng 8",
+      "text": "Thổ của tháng Tám: Khí của tháng Tám, Kim khí Đế Vượng, Thủy khí Mộc Dục, Hỏa khí vào Tử, vẫn là Thổ Suy, Kim vượng, nếu hàn (lạnh) khí trở thịnh lại càng Hỉ Hóa chế Kim và sinh Thổ, Hỉ Thổ tỷ trợ. (hỷ thủy nhuận thổ, kỵ hỏa táo nhiệt)",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_374827_1233",
+      "condition": "Mệnh chủ Cự môn, cục số Kim tứ cục, sinh tháng 3",
+      "text": "Hành Kim của tháng Ba: Khí của tháng Ba, Quý Thổ đang nắm lệnh (vượng), Hỏa khí Quan Đới, Mộc khí đã Bệnh, Kim khí vào Dưỡng, nên Kim khí của tháng Ba cũng Kỵ Thổ quá trọng vì có thể lấp mất Kim, nên Hỉ dùng Mộc để chế Thổ, và Hỏa để sưởi ấm Kim.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_495199_1234",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Phá quân, sinh tháng 9",
+      "text": "Hành Thủy của tháng Chín: Khí của tháng Chín, Thổ lệnh đương quyền, Kim khí vào Suy, Thủy khí Quan Đới, nên Thủy của tháng Chín tuy Quan Đới nhưng, quý Thu Thổ vượng ngăn Thủy, nên Hỉ Mộc tiết Thổ, Kim lại sinh Thủy.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_279332_1235",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Thất sát, sinh tháng 3",
+      "text": "Hành Kim của tháng Ba: Khí của tháng Ba, Quý Thổ đang nắm lệnh (vượng), Hỏa khí Quan Đới, Mộc khí đã Bệnh, Kim khí vào Dưỡng, nên Kim khí của tháng Ba cũng Kỵ Thổ quá trọng vì có thể lấp mất Kim, nên Hỉ dùng Mộc để chế Thổ, và Hỏa để sưởi ấm Kim.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_295245_1236",
+      "condition": "Mệnh chủ Lộc tồn, chính tinh Vũ khúc, sinh tháng 6",
+      "text": "Hành Kim của tháng Sáu: Khí của tháng Sáu, Hỏa khí vào Suy, Kim khí Quan Đới, Mộc khí nhập Mộ, quý Thổ đang nắm lệnh, nên Kim của tháng Sáu Kỵ Thổ táo, nhiệt, Hỉ Thủy nhuận Thổ để sinh Kim, bất Hỉ Thổ táo sinh Kim vì Thổ trọng sẽ lấp mất Kim, cũng Hỉ Kim tỷ trợ để sinh Thủy.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_66475_1237",
+      "condition": "Mệnh chủ Vũ khúc, cục số Thủy nhị cục, sinh tháng 10",
+      "text": "Hành Thủy của tháng Mười: Khí của tháng Mười, Thủy khí Lâm Quan, Kim khí vào Bệnh, khí hậu biến hàn (lạnh), nên Thủy của tháng Mười thế Thủy cực thịnh, Hỉ Hỏa để sưởi ấm, Mộc tiết kỳ thế, nếu Thủy vượng thì nhờ Thổ để ngăn Thủy.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_190006_1238",
+      "condition": "Mệnh chủ Vũ khúc, cục số Kim tứ cục, sinh tháng 7",
+      "text": "Hành Kim của tháng Bảy: Khí của tháng Bảy, Hỏa khí đã Bệnh, Kim khí Lâm Quan, Mộc khí đã Tuyệt, nên Kim của tháng Bảy khí vượng mà lại cứng, bén, cần Hỏa trui rèn để thành khí cụ, nếu không Hỏa mà có Thủy thì Kim thanh Thủy tú (tối Hỉ), còn được nhiều Thổ tu bôi thì Kim bị vẩn đục, không tốt, nếu gặp Kim trợ thì trở thành quá cương sẽ gãy.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_458812_1239",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Liêm trinh, sinh tháng 1",
+      "text": "Hỏa của tháng Giêng: Khí của tháng Giêng, Mộc khí Lâm Quan, Hỏa khí Tràng Sinh, Thủy khí đã Bệnh, Hỏa rất mừng (HỈ) gặp Thủy, Mộc rất mừng (HỈ) gặp Kim để tiết khí. Hỉ (mừng) Mộc gặp Thủy trợ giúp nhưng không được quá vượng.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_184684_1240",
+      "condition": "Mệnh chủ Văn khúc, chính tinh Thiên lương, sinh tháng 4",
+      "text": "Thổ của tháng Tư: Khí Thổ của tháng Tư, Hỏa khí Lâm Quan, Kim khí Tràng Sinh, nên Thổ của Nhật, Nguyệt, tối Kỵ Thổ táo (khô), được Thủy nhuận tưới là tốt (Hỉ Thủy), Mộc trợ Hỏa thì viêm (quá nóng) dù Thủy khắc cũng vô hiệu, nên lấy Kim để sinh Thủy chế Mộc là tốt.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_130368_1241",
+      "condition": "Mệnh chủ Tham lang, cục số Thủy nhị cục, sinh tháng 6",
+      "text": "Hành Thủy của tháng Sáu: Khí của tháng Sáu, Thổ lệnh đương quyền, Hỏa khí đã Suy, Kim khí Quan Đới, Thủy khí nhập Thai, nên Thủy của tháng Sáu Kỵ Thổ trọng ngăn Thủy, và Hỏa trợ Thổ táo, nhiệt, Hỉ Thủy tỷ trợ và Kim là nguồn sinh, Mộc đến tiết Thổ.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_350646_1242",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Thất sát, sinh tháng 7",
+      "text": "Hành Kim của tháng Bảy: Khí của tháng Bảy, Hỏa khí đã Bệnh, Kim khí Lâm Quan, Mộc khí đã Tuyệt, nên Kim của tháng Bảy khí vượng mà lại cứng, bén, cần Hỏa trui rèn để thành khí cụ, nếu không Hỏa mà có Thủy thì Kim thanh Thủy tú (tối Hỉ), còn được nhiều Thổ tu bôi thì Kim bị vẩn đục, không tốt, nếu gặp Kim trợ thì trở thành quá cương sẽ gãy.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_454731_1243",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Phá quân, sinh tháng 11",
+      "text": "Hành Thủy của tháng Mười Một: Khí của tháng Mười Một, Thủy khí Đế Vượng, Kim khí đã Tử, khí hậu cực hàn, nên Thủy của tháng Mười Một Thủy khí cường hàn (lạnh), Hỉ Hỏa sưởi ấm Thủy, Mộc tiết kỳ thế.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_483529_1244",
+      "condition": "Mệnh chủ Văn khúc, chính tinh Thiên lương, sinh tháng 9",
+      "text": "Thổ của tháng Chín: Khí của tháng Chín, Kim khí vào Suy, Thủy khí Quan Đới, Hỏa khí nhập Mộ nhưng Thổ vượng đắc Lệnh, Kỵ gặp Hỏa để sinh Thổ, phải lấy Giáp Mộc để tiết khí Thổ, lại Hỉ Thủy tưới nhuận Thổ.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_43001_1245",
+      "condition": "Mệnh chủ Cự môn, cục số Mộc tam cục, sinh tháng 8",
+      "text": "Mộc của tháng Tám: Khí của tháng Tám, Âm Kim cực vượng, Hỏa khí đã chết, Kim vượng thì Mộc đã Suy, Hỉ Hỏa lại gặp Mộc, vì khí hậu bắt đầu hàn (lạnh) tối quý có Hỏa điều thân (Mộc); nếu Mộc mà gặp Thủy sinh thì thành cường vượng (vì Kim sinh Thủy để Thủy sinh Mộc), Thủy, Mộc nhiều thì Hỉ Kim (mừng gặp Kim để chế bớt Mộc).",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_43148_1246",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Thất sát, sinh tháng 5",
+      "text": "Hành Kim của tháng Năm: Khí của tháng Năm, Hỏa khí Đế Vượng, Kim khí Mộc Dục, Mộc khí đã Tử, nên Kim của tháng Năm tính chất vẫn còn mềm, Kỵ Hỏa quá mạnh, Hỉ Thủy chế Hỏa để bảo tồn thân (Kim), tối Kỵ Thổ chế Thủy, Hỉ Kim tỷ trợ.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_210557_1247",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Thiên tướng, sinh tháng 4",
+      "text": "Hành Thủy của tháng Tư: Khí của tháng Tư, Hỏa khí Lâm Quan, Thủy khí đã Tuyệt, Kim khí Tràng Sinh, nên Thủy của tháng Tư đã gần Tuyệt, Hỉ Thủy tỷ trợ, và Kim lại trợ Thủy.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_142793_1248",
+      "condition": "Mệnh chủ Tham lang, cục số Thổ ngũ cục, sinh tháng 4",
+      "text": "Thổ của tháng Tư: Khí Thổ của tháng Tư, Hỏa khí Lâm Quan, Kim khí Tràng Sinh, nên Thổ của Nhật, Nguyệt, tối Kỵ Thổ táo (khô), được Thủy nhuận tưới là tốt (Hỉ Thủy), Mộc trợ Hỏa thì viêm (quá nóng) dù Thủy khắc cũng vô hiệu, nên lấy Kim để sinh Thủy chế Mộc là tốt.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_135262_1249",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Tham lang, sinh tháng 1",
+      "text": "Hành Mộc của tháng Giêng: Khí của tháng Giêng, mùa Xuân mới bắt đầu nên khí hàn lạnh vẫn còn, phải dùng Hỏa (lửa) để sưởi ấm khí Thủy (nước), để dưỡng căn cơ của Mộc non; có thể dùng Thổ nhưng không được quá nhiều, Kỵ nhất bị Kim làm tổn thường mầm non của Mộc.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_463243_1250",
+      "condition": "Mệnh chủ Cự môn, cục số Mộc tam cục, sinh tháng 1",
+      "text": "Hành Mộc của tháng Giêng: Khí của tháng Giêng, mùa Xuân mới bắt đầu nên khí hàn lạnh vẫn còn, phải dùng Hỏa (lửa) để sưởi ấm khí Thủy (nước), để dưỡng căn cơ của Mộc non; có thể dùng Thổ nhưng không được quá nhiều, Kỵ nhất bị Kim làm tổn thường mầm non của Mộc.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_417791_1251",
+      "condition": "Mệnh chủ Liêm trinh, chính tinh Thất sát, sinh tháng 2",
+      "text": "Hành Kim của tháng Hai: Khí Kim của tháng Hai, Mộc khí Đế Vượng, Hỏa khí Mộc Dục, Kim khí vào Thai, Thủy khí đã Bệnh, nên Kim của tháng Hai vẫn suy nhược, Kỵ Thổ lấp Kim không thể sinh Kim, vẫn Hỉ Hỏa để cướp khí của Mộc và được Kim phù trợ.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_463576_1252",
+      "condition": "Mệnh chủ Cự môn, cục số Kim tứ cục, sinh tháng 1",
+      "text": "Hành Kim của tháng Giêng: Khí Kim của tháng Giêng, Mộc khí Lâm Quan, Hỏa khí Tràng Sinh, Kim khí đã Tuyệt, nên Kim của tháng Giêng tánh nhu mà thể nhược (yếu), khí hàn (lạnh) chưa hết, nên lấy Hỏa sưởi ấm Kim là thượng sách, nhưng sợ Thổ nhiều sẽ vùi lấp Kim, Thủy thịnh tất tăng hàn (lạnh) và lại đoạt mất khí Kim, còn Mộc vượng thì Kim bị tổn khí, Kim bị mẽ, gãy. Nếu được Kim tỷ trợ phụ giúp là tốt.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_247473_1253",
+      "condition": "Mệnh chủ Vũ khúc, cục số Thủy nhị cục, sinh tháng 1",
+      "text": "Hành Thủy của tháng giêng: Khí Thủy của tháng Giêng, Mộc khí Lâm Quan, Thủy khí đã Bệnh, khí hàn lạnh vẫn còn, chưa hết, nên Thủy của tháng Giêng Hỉ Kim sinh phù, nhưng không thích Kim nhiều quá, nếu Thủy vượng thì cần Mộc mới huy nạp được thế, và cũng cần Hỏa để sưởi ấm Thủy, Hỉ Thổ chế Thủy vượng.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_173333_1254",
+      "condition": "Mệnh chủ Văn khúc, chính tinh Thái dương, sinh tháng 10",
+      "text": "Hỏa của tháng Mười: Khí của tháng Mười, Thủy khí Lâm Quan, Hỏa khí đã Tuyệt, Kim khí thì Bệnh, Mộc khí đã Tràng Sinh, Hỏa khí của tháng Mười đã tuyệt tích, Hỉ Mộc Sinh vì được cứu, Kỵ gặp Thủy khắc là tai ương, gặp Hỏa thì lợi, hoặc gặp Thổ chế Thủy thì vinh.",
+      "source": {
+        "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
+        "author": "Sở Hoàng"
+      },
+      "accuracy": 8
+    },
+    {
+      "id": "cohoc_440402_1255",
+      "condition": "Mệnh chủ Phá quân, chính tinh Thiên tướng, sinh tháng 1",
+      "text": "Hành Thủy của tháng giêng: Khí Thủy của tháng Giêng, Mộc khí Lâm Quan, Thủy khí đã Bệnh, khí hàn lạnh vẫn còn, chưa hết, nên Thủy của tháng Giêng Hỉ Kim sinh phù, nhưng không thích Kim nhiều quá, nếu Thủy vượng thì cần Mộc mới huy nạp được thế, và cũng cần Hỏa để sưởi ấm Thủy, Hỉ Thổ chế Thủy vượng.",
       "source": {
         "book": "Tử vi đẩu số hỷ kỵ thần đại đột phá",
         "author": "Sở Hoàng"

@@ -626,13 +626,13 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     slug: "phuong-phap-luan-giai",
     seoTitle: "Phương pháp luận giải lá số Tử Vi",
     publishedAt: "2026-09-26",
-    updatedAt: "2026-09-26",
+    updatedAt: "2026-09-27",
     category: "Phương pháp",
     level: "Tổng quan",
     readingTime: "6 phút",
-    summary: "Lá số được an như thế nào, một đoạn tri thức được chọn cho lá số của bạn ra sao, AI làm gì và những giới hạn hiện tại của hệ thống.",
+    summary: "Lá số được an như thế nào, một đoạn tri thức được chọn cho lá số của bạn ra sao, phần luận giải được tổng hợp thế nào và những giới hạn hiện tại của hệ thống.",
     curiosityHook: "Khi một đoạn luận giải xuất hiện dưới cung Mệnh của bạn, nó đã phải vượt qua những điều kiện nào?",
-    tags: ["Phương pháp", "AI", "Minh bạch"],
+    tags: ["Phương pháp", "Luận giải", "Minh bạch"],
     sourceRefs: [],
     content: [
       {
@@ -643,7 +643,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       {
         heading: "Kho tri thức",
         body:
-          "Kho luận giải gồm khoảng 22.000 đoạn tri thức Tử Vi, mỗi đoạn gắn với điều kiện áp dụng cụ thể. Kho tri thức có thể gồm quan điểm của nhiều trường phái Tử Vi, không riêng Bắc phái. Trước khi đưa vào sử dụng, dữ liệu đã được biên tập và lọc: bỏ các bản phân tích trích từ lá số của người khác, các điểm số không kiểm chứng được, các câu gắn tuổi hay năm cụ thể của người khác và phần nguyên văn tiếng Trung chưa dịch.",
+          "Kho luận giải gồm hơn 24.000 đoạn tri thức Tử Vi, mỗi đoạn gắn với điều kiện áp dụng cụ thể. Kho tri thức có thể gồm quan điểm của nhiều trường phái Tử Vi, không riêng Bắc phái. Trước khi đưa vào sử dụng, dữ liệu đã được biên tập và lọc: bỏ các bản phân tích trích từ lá số của người khác, các điểm số không kiểm chứng được, các câu gắn tuổi hay năm cụ thể của người khác, phần nguyên văn tiếng Trung chưa dịch, và gộp các đoạn trùng lặp giữa nhiều nguồn.",
       },
       {
         heading: "Một đoạn tri thức được chọn cho lá số của bạn ra sao",
@@ -651,9 +651,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
           "Mỗi đoạn tri thức có điều kiện áp dụng, ví dụ \"cung Mệnh tại Tuất có Thái Âm\" hay \"cung Quan Lộc phi Hóa Kỵ nhập Tài Bạch\". Hệ thống chỉ hiển thị một đoạn khi mọi điều kiện đó khớp với lá số của bạn: vị trí cung, sao tọa thủ, độ sáng, tam phương tứ chính, giáp cung, Tứ Hóa, Phi Hóa, và với phần vận hạn là đại vận hoặc tiểu vận của năm xem.\n\nNgoài điều kiện, câu mở đầu của nội dung cũng được đối chiếu: nếu đoạn viết cho nam mệnh, cho người sinh năm Giáp hay cho sao ở thế miếu vượng mà lá số của bạn không như vậy, đoạn đó bị loại. Các đoạn khớp nhiều điều kiện hơn được xếp trước; đoạn chung chung bị bỏ khi đã có đoạn khớp sát hơn. Lý do khớp luôn được ghi dưới mỗi đoạn để bạn tự kiểm tra.",
       },
       {
-        heading: "AI làm gì và không làm gì",
+        heading: "Phần luận giải tổng hợp làm gì và không làm gì",
         body:
-          "Khi bạn bấm luận giải, một mô hình ngôn ngữ chạy trên Cloudflare Workers AI nhận dữ liệu lá số (sao, độ sáng, Tứ Hóa, tam phương, xung chiếu, giáp cung, đại vận) cùng các đoạn tri thức đã khớp. AI được yêu cầu chỉ tổng hợp từ các dữ liệu này, gắn nhãn phần lấy từ kho tri thức, phần phân tích và phần thiếu dữ liệu, không tự tạo quy tắc.\n\nDù vậy, AI vẫn có thể diễn đạt sai hoặc suy diễn quá mức. Hãy đọc phần luận giải của AI như một bản tổng hợp tham khảo và đối chiếu với lý do khớp của từng đoạn tri thức.",
+          "Khi bạn bấm \"Giải nghĩa chi tiết\" hoặc \"Luận tổng hợp Bắc Phái\", hệ thống tổng hợp tự động nhận dữ liệu lá số (sao, độ sáng, Tứ Hóa, tam phương, xung chiếu, giáp cung, đại vận) cùng các đoạn tri thức đã khớp. Phần tổng hợp chỉ được dựng từ các dữ liệu này, gắn nhãn phần lấy từ kho tri thức, phần phân tích và phần thiếu dữ liệu, không tự tạo quy tắc.\n\nDù vậy, phần tổng hợp tự động vẫn có thể diễn đạt sai hoặc suy diễn quá mức. Hãy đọc nó như một bản tham khảo và đối chiếu với lý do khớp của từng đoạn tri thức.",
       },
       {
         heading: "Giới hạn hiện tại",

@@ -60,8 +60,8 @@ let seed = option("seed", Date.now() % 2147483647);
 const random = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 const randInt = (min, max) => min + Math.floor(random() * (max - min + 1));
 
-const MAX_LIMIT_HITS = 4; // số lần bị giới hạn liên tiếp trước khi dừng hẳn
-const COOLDOWN_MINUTES = [5, 10, 20, 30];
+const MAX_LIMIT_HITS = 7; // số lần bị giới hạn liên tiếp trước khi dừng hẳn (~3.5 giờ nghỉ dồn)
+const COOLDOWN_MINUTES = [5, 10, 20, 30, 60, 60, 60];
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const log = (tag, msg) => console.log(`${new Date().toLocaleTimeString("vi-VN")} [${tag}] ${msg}`);
@@ -245,6 +245,7 @@ async function main() {
 
   const totals = { charts: 0, blocks: 0, newEntries: 0, newTexts: 0, newConditionsForKnownText: 0, duplicates: 0, skippedNoPalace: 0, perPalace: {} };
   let limitHits = 0;
+  let normalizePending = false; // master đã có mục mới nhưng kho web chưa sinh lại thành công
 
   for (let n = 0; n < COUNT; ) {
     const birth = randomBirth(seenBirths);
@@ -310,7 +311,7 @@ async function main() {
       saveProgress(progress);
       if (stats.newEntries) {
         log("KB", `đã nạp ${stats.newEntries} mục vào master (${Object.entries(stats.perPalace).map(([id, a]) => `${id} +${a}`).join(", ")})`);
-        if (RUN_NORMALIZE) runNormalize();
+        if (RUN_NORMALIZE) normalizePending = !runNormalize();
       }
     }
 
@@ -322,6 +323,7 @@ async function main() {
     }
   }
   await browser.close();
+  if (normalizePending) runNormalize();
 
   console.log("\n━━ TỔNG KẾT");
   console.log(`Lá số crawl mới: ${totals.charts}, khối luận giải: ${totals.blocks}`);
@@ -382,8 +384,15 @@ function mergeIntoMaster(blocks, idPrefix, { write = true, source = "from_master
 
 function runNormalize() {
   log("NORMALIZE", "sinh lại kho tri thức web (npm run knowledge:normalize)");
-  const r = spawnSync("npm", ["run", "knowledge:normalize"], { cwd: ROOT, stdio: ["ignore", "ignore", "inherit"], shell: true });
-  if (r.status !== 0) log("ERROR", "knowledge:normalize lỗi - master đã cập nhật, chạy lại normalize sau khi sửa");
+  // File normalized có thể đang bị tiến trình khác giữ (dev server, antivirus) -> thử lại vài lần.
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const r = spawnSync("npm", ["run", "knowledge:normalize"], { cwd: ROOT, stdio: ["ignore", "ignore", "inherit"], shell: true });
+    if (r.status === 0) return true;
+    log("WARN", `knowledge:normalize lỗi (lần ${attempt}/3)${attempt < 3 ? " - thử lại sau 5s" : ""}`);
+    if (attempt < 3) spawnSync(process.execPath, ["-e", "setTimeout(() => {}, 5000)"]);
+  }
+  log("ERROR", "knowledge:normalize lỗi - master đã cập nhật, lá số sau sẽ sinh lại kho web");
+  return false;
 }
 
 // ============ LOCK ============

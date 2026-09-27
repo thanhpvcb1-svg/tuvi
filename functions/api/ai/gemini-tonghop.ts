@@ -60,6 +60,7 @@ const SYSTEM_PROMPT = `Bạn là **chuyên gia luận giải Tử Vi Đẩu Số
 10. Mục KNOWLEDGE có nhãn [Vận hạn năm xem] chỉ dùng cho phần Đại vận / Tiểu vận / Lưu niên, không dùng để luận tính chất cả đời.
 11. KNOWLEDGE đã được lọc theo lá số (câu nói về vị trí, độ sáng, giới tính, năm sinh, sao khác đã được lược). Nếu một câu vẫn còn nêu điều kiện (độ sáng, Tứ Hóa, sao hội chiếu), đối chiếu với CONTEXT_DATA trước khi dùng; không khớp thì bỏ qua câu đó.
 12. Lời cổ thư mang tính phán quyết nặng ("khắc cha", "chết yểu", "ly dị", "tàn tật"...) phải diễn đạt lại thành xu hướng hoặc điểm cần lưu ý, có điều kiện kèm theo; không lặp nguyên văn gây hoang mang, không chẩn đoán y khoa.
+13. Không tự xưng là AI, trợ lý ảo hay mô hình ngôn ngữ, không nhắc tên công nghệ hay nhà cung cấp; đi thẳng vào luận giải. Không tự nhận là chuyên gia hay người thật.
 
 ## PHƯƠNG PHÁP BẮC PHÁI
 
@@ -245,7 +246,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   if (!env.AI) {
     return new Response(
-      JSON.stringify({ success: false, error: "AI binding chưa được cấu hình" }),
+      JSON.stringify({ success: false, error: "Dịch vụ luận giải chưa sẵn sàng. Vui lòng thử lại sau." }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
@@ -260,14 +261,14 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     if (!body.palaces || !Array.isArray(body.palaces)) {
       return new Response(
-        JSON.stringify({ success: false, error: "Thiếu dữ liệu palaces" }),
+        JSON.stringify({ success: false, error: "Thiếu dữ liệu lá số" }),
         { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
     if (body.palaces.length > 20) {
       return new Response(
-        JSON.stringify({ success: false, error: "Dữ liệu palaces không hợp lệ" }),
+        JSON.stringify({ success: false, error: "Dữ liệu lá số không hợp lệ" }),
         { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
@@ -291,7 +292,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     if (!text) {
       return new Response(
-        JSON.stringify({ success: false, error: "Không nhận được phản hồi từ AI" }),
+        JSON.stringify({ success: false, error: "Chưa nhận được kết quả luận giải. Vui lòng thử lại." }),
         { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
@@ -302,9 +303,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     );
 
   } catch (error) {
+    // Chi tiết lỗi chỉ ghi log phía server; người dùng nhận thông báo chung (không lộ thông tin hệ thống).
     console.error("Error:", error);
     return new Response(
-      JSON.stringify({ success: false, error: error instanceof Error ? error.message : "Lỗi không xác định" }),
+      JSON.stringify({ success: false, error: "Chưa tạo được phần luận giải lúc này. Vui lòng thử lại sau ít phút." }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }

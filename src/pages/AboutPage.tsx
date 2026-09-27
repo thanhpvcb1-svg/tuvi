@@ -10,7 +10,7 @@ export default function AboutPage() {
     <>
       <SEOHead
         title="Về Tử Vi Phong Lam – Lập Lá Số và Luận Giải Tử Vi Bắc Phái"
-        description="Tử Vi Phong Lam lập lá số tử vi online và luận giải theo Bắc phái: đối chiếu hơn 20.000 đoạn tri thức có điều kiện, AI chỉ tổng hợp từ phần khớp với lá số."
+        description="Tử Vi Phong Lam lập lá số tử vi online và luận giải theo Bắc phái: đối chiếu hơn 20.000 đoạn tri thức có điều kiện, chỉ tổng hợp từ phần khớp với lá số."
         canonicalPath="/ve-chung-toi"
         schema={[
           organizationSchema,
@@ -50,14 +50,14 @@ export default function AboutPage() {
           </section>
 
           <section className="about-section">
-            <h2>Kho tri thức và AI</h2>
+            <h2>Kho tri thức và cách luận giải</h2>
             <ul>
               <li>Lá số được an ngay trên trình duyệt của bạn; cùng ngày giờ sinh luôn cho cùng một lá số.</li>
               <li>
                 Kho hơn <strong>20.000 đoạn tri thức</strong>, mỗi đoạn gắn điều kiện áp dụng (cung, sao, độ sáng, Tứ Hóa…) và chỉ
                 hiển thị khi khớp với lá số của bạn, kèm lý do khớp.
               </li>
-              <li>AI chỉ tổng hợp từ các đoạn đã khớp, được yêu cầu không tự tạo quy tắc và ghi rõ phần chưa đủ dữ liệu - nhưng vẫn có thể sai sót.</li>
+              <li>Phần tổng hợp được tạo tự động, chỉ từ các đoạn đã khớp, không tự tạo quy tắc và ghi rõ phần chưa đủ dữ liệu - nhưng vẫn có thể sai sót.</li>
             </ul>
             <p>
               Chi tiết và giới hạn hiện tại: <Link to="/bai-viet/phuong-phap-luan-giai">Phương pháp luận giải</Link> ·{" "}
@@ -69,7 +69,7 @@ export default function AboutPage() {
             <h2>Điều chúng tôi giữ</h2>
             <ul>
               <li>Lập lá số cơ bản <strong>miễn phí</strong>.</li>
-              <li>Không gửi họ tên hay ngày giờ sinh đầy đủ cho dịch vụ AI - chỉ gửi bản tóm tắt lá số. <Link to="/chinh-sach-bao-mat">Chính sách bảo mật</Link></li>
+              <li>Không gửi họ tên hay ngày giờ sinh đầy đủ cho dịch vụ tổng hợp luận giải - chỉ gửi bản tóm tắt lá số. <Link to="/chinh-sach-bao-mat">Chính sách bảo mật</Link></li>
               <li>Tính năng nào chưa hoàn thiện được ghi rõ là đang bổ sung.</li>
             </ul>
           </section>

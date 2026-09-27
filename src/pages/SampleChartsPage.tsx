@@ -302,8 +302,8 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
               <h2 id="demo-luan-giai">Luận giải mẫu</h2>
               <p>
                 Mỗi cung hiển thị các đoạn tri thức <strong>khớp với chính lá số mẫu</strong> (vị trí cung, sao, độ sáng, Tứ Hóa,
-                Phi Hóa...) kèm lý do khớp. Bấm "Giải nghĩa chi tiết" ở một cung hoặc "Luận tổng hợp Bắc Phái" để AI tổng hợp
-                từ dữ liệu này; AI được yêu cầu không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu, nhưng vẫn có thể sai sót.
+                Phi Hóa...) kèm lý do khớp. Bấm "Giải nghĩa chi tiết" ở một cung hoặc "Luận tổng hợp Bắc Phái" để hệ thống tổng hợp
+                tự động từ dữ liệu này; phần tổng hợp không tự tạo quy tắc và ghi rõ phần thiếu dữ liệu, nhưng vẫn có thể sai sót.
               </p>
             </div>
             {showReading ? (
@@ -323,8 +323,8 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
             <div className="section-heading section-heading--compact">
               <h2 id="demo-evidence">Cơ sở tri thức</h2>
               <p>
-                Các đoạn tri thức đã khớp với lá số mẫu ở từng cung và lý do khớp - bấm vào một cung để xem. Đây cũng là dữ liệu mà
-                AI nhận được khi luận giải.
+                Các đoạn tri thức đã khớp với lá số mẫu ở từng cung và lý do khớp - bấm vào một cung để xem. Đây cũng là dữ liệu dùng để
+                tổng hợp phần luận giải.
               </p>
             </div>
             {showEvidence ? (

@@ -27,7 +27,7 @@ export default function TermsPage() {
           <p>Tử Vi Phong Lam cung cấp các dịch vụ sau:</p>
           <ul>
             <li>Công cụ lập lá số tử vi online miễn phí</li>
-            <li>Luận giải tự động bằng AI</li>
+            <li>Luận giải tổng hợp tự động dựa trên kho tri thức Tử Vi</li>
             <li>Dịch vụ hỏi 1 câu theo lá số (có phí)</li>
             <li>Dịch vụ tư vấn trực tiếp (có phí)</li>
             <li>Nội dung kiến thức về tử vi</li>
