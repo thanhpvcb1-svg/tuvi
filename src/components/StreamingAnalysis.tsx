@@ -269,11 +269,6 @@ function KnowledgeItem({ match }: { match: KnowledgeMatch }) {
         <span className="analysis-knowledge-reasons">
           {match.matchReasons.join(" · ")}
         </span>
-        {match.trimmedSentences ? (
-          <span className="analysis-knowledge-trimmed">
-            Đã lược {match.trimmedSentences} câu nói về trường hợp khác (vị trí, độ sáng, giới tính, năm sinh, sao đi kèm) không áp dụng cho lá số này.
-          </span>
-        ) : null}
       </div>
     </div>
   );

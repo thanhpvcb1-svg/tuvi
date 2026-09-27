@@ -80,7 +80,6 @@ export default function EvidencePanel({ chart, yearToView, birthYear }: Props) {
                     </p>
                     <p className="evidence-list__reason">
                       <strong>Lý do khớp:</strong> {match.matchReasons.join(" · ")}
-                      {match.trimmedSentences ? ` · Đã lược ${match.trimmedSentences} câu không áp dụng cho lá số này` : ""}
                     </p>
                   </li>
                 );

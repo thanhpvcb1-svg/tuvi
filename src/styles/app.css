@@ -11768,11 +11768,3 @@ a.secondary-button {
   text-decoration: none;
 }
 
-/* Ghi chú: đoạn tri thức đã được lược các câu không áp dụng cho lá số */
-.analysis-knowledge-trimmed {
-  display: block;
-  margin-top: 4px;
-  color: var(--text-subtle);
-  font-size: 12px;
-  font-style: italic;
-}

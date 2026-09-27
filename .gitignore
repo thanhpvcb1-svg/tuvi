@@ -33,3 +33,6 @@ local-server.log
 # Local temp files
 tmp-local-*.json
 local-url.txt
+
+# khoá chống chạy 2 crawler cùng lúc
+tuvi_crawler/crawl.lock
