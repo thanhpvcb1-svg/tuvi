@@ -34,7 +34,7 @@ export default function SiteFooter() {
 
         <div className="site-footer__nav">
           <div className="site-footer__nav-group">
-            <h4>Khám phá</h4>
+            <h2>Khám phá</h2>
             <ul>
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -45,7 +45,7 @@ export default function SiteFooter() {
           </div>
 
           <div className="site-footer__nav-group">
-            <h4>Thông tin</h4>
+            <h2>Thông tin</h2>
             <ul>
               {legalLinks.map((link) => (
                 <li key={link.href}>

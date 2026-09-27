@@ -133,9 +133,22 @@ const PALACE_CONFIG: Array<{ id: string; name: string; icon: string }> = [
 ];
 
 // Tên sao kèm độ sáng và Tứ Hóa sinh niên, vd "Thiên Đồng(V) hóa Kỵ".
-function getStarDisplay(star: { name: string; display?: string; mutagen?: string }) {
+// Kèm độ sáng (miếu/vượng/đắc/bình/hãm) - AI cần để không luận sai chiều một chính tinh.
+function getStarDisplay(star: { name: string; display?: string; mutagen?: string; brightnessFull?: string }) {
   const label = star.display || star.name;
-  return star.mutagen ? `${label} hóa ${star.mutagen}` : label;
+  const brightness = star.brightnessFull ? ` (${star.brightnessFull.toLowerCase()})` : "";
+  return `${label}${brightness}${star.mutagen ? ` hóa ${star.mutagen}` : ""}`;
+}
+
+// Sao phụ quan trọng khi luận hội chiếu (lục cát, lục sát, Lộc Tồn, Thiên Mã).
+const KEY_MINOR_STARS = new Set(["Tả Phù", "Hữu Bật", "Văn Xương", "Văn Khúc", "Thiên Khôi", "Thiên Việt", "Lộc Tồn", "Thiên Mã", "Kình Dương", "Đà La", "Hỏa Tinh", "Linh Tinh", "Địa Không", "Địa Kiếp"]);
+
+/** "Tài Bạch (Ngọ): Thiên Cơ (đắc); Thiên Khôi, Địa Kiếp" - cho AI biết sao ở cung hội chiếu / xung chiếu / giáp. */
+function describePalaceForAi(palace: PalaceView | undefined): string {
+  if (!palace) return "";
+  const major = (palace.majorStars ?? []).filter(isNatalStar).map(getStarDisplay);
+  const minor = (palace.minorStars ?? []).filter((s) => isNatalStar(s) && (KEY_MINOR_STARS.has(s.name) || s.mutagen)).map(getStarDisplay);
+  return `${palace.name} (${palace.earthlyBranch}): ${major.join(", ") || "vô chính diệu"}${minor.length ? `; ${minor.join(", ")}` : ""}`;
 }
 
 const BRANCHES = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"];
@@ -149,7 +162,7 @@ function formatDaiVan(decadalRange: unknown): string {
 // Tam phương tứ chính, xung chiếu, giáp cung theo địa chi - chỉ đọc lá số, không tính lại sao.
 function getPalaceStructure(chart: ChartView, palace: PalaceView) {
   const index = BRANCHES.indexOf(palace.earthlyBranch ?? "");
-  const at = (offset: number) => chart.palaces.find((p) => p.earthlyBranch === BRANCHES[(index + offset + 12) % 12])?.name ?? "";
+  const at = (offset: number) => describePalaceForAi(chart.palaces.find((p) => p.earthlyBranch === BRANCHES[(index + offset + 12) % 12]));
   return {
     tamPhuong: [at(4), at(8)].filter(Boolean),
     xungChieu: at(6),
@@ -256,6 +269,11 @@ function KnowledgeItem({ match }: { match: KnowledgeMatch }) {
         <span className="analysis-knowledge-reasons">
           {match.matchReasons.join(" · ")}
         </span>
+        {match.trimmedSentences ? (
+          <span className="analysis-knowledge-trimmed">
+            Đã lược {match.trimmedSentences} câu nói về trường hợp khác (vị trí, độ sáng, giới tính, năm sinh, sao đi kèm) không áp dụng cho lá số này.
+          </span>
+        ) : null}
       </div>
     </div>
   );

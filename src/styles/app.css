@@ -3861,6 +3861,7 @@ h4,
   gap: 48px;
 }
 
+.site-footer__nav-group h2,
 .site-footer__nav-group h4 {
   margin: 0 0 16px;
   color: var(--text-main);
@@ -4153,8 +4154,10 @@ h4,
   letter-spacing: 0.14em;
 }
 
-.solar-noon-panel--compact h3 {
+.solar-noon-panel--compact h3,
+.solar-noon-panel--compact .solar-noon-location-name {
   margin: 0;
+  font-weight: 700;
   color: #252934;
   font-size: 16px;
   line-height: 1.3;
@@ -4407,7 +4410,8 @@ h4,
     padding: 12px 14px;
   }
 
-  .solar-noon-panel--compact h3 {
+  .solar-noon-panel--compact h3,
+  .solar-noon-panel--compact .solar-noon-location-name {
     font-size: 15px;
   }
 
@@ -5524,7 +5528,8 @@ h4,
 
 .plan-feature-list {
   margin: 0 0 18px;
-  padding-left: 18px;
+  padding-left: 0;
+  list-style: none;
   display: grid;
   gap: 8px;
   flex: 1;
@@ -5557,6 +5562,23 @@ h4,
 .plan-button {
   width: 100%;
   margin-top: auto;
+}
+
+/* CTA gói là <a> (link thật) - căn giống nút */
+a.plan-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.plan-note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: center;
 }
 
 .pricing-funnel-note {
@@ -6133,7 +6155,8 @@ h4,
     border-radius: 16px;
   }
 
-  .solar-noon-panel--compact h3 {
+  .solar-noon-panel--compact h3,
+  .solar-noon-panel--compact .solar-noon-location-name {
     font-size: 16px;
   }
 
@@ -10784,7 +10807,7 @@ h4,
   text-align: center;
 }
 
-.not-found-content h1 {
+.not-found-content .not-found-code {
   font-size: 6rem;
   font-weight: 700;
   color: var(--accent-gold);
@@ -10792,7 +10815,7 @@ h4,
   line-height: 1;
 }
 
-.not-found-content h2 {
+.not-found-content h1 {
   font-size: 1.5rem;
   margin: 0.5rem 0 1rem;
   color: var(--text-primary);
@@ -11661,4 +11684,95 @@ ol.bac-phai-ai-flow {
   margin: 20px 0 8px;
   font-size: 13px;
   color: var(--muted);
+}
+
+/* Nhãn mức hỗ trợ ("Đang bổ sung", "Vận hạn 2026"...) */
+.support-chip {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--muted);
+  background: var(--surface);
+  vertical-align: middle;
+}
+
+/* ===== /la-so-mau: Cơ sở tri thức (Evidence) ===== */
+.evidence-panel {
+  display: grid;
+  gap: 8px;
+}
+
+.evidence-palace {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.evidence-palace > summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  min-height: 44px;
+  align-items: center;
+}
+
+.evidence-palace__name {
+  font-weight: 600;
+}
+
+.evidence-palace__count {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.evidence-palace > .demo-note,
+.evidence-list {
+  margin: 0;
+  padding: 0 14px 12px 34px;
+}
+
+.evidence-list {
+  display: grid;
+  gap: 10px;
+}
+
+.evidence-list__text {
+  margin: 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.evidence-list__reason {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+/* Link điều hướng mang kiểu nút (<a class="primary-button">…) - căn như <button>, không gạch chân */
+a.primary-button,
+a.ghost-button,
+a.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Ghi chú: đoạn tri thức đã được lược các câu không áp dụng cho lá số */
+.analysis-knowledge-trimmed {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-subtle);
+  font-size: 12px;
+  font-style: italic;
 }

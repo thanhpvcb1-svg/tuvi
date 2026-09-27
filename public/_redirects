@@ -1,7 +1,11 @@
 /api/*   /api/:splat   200
-/blog/*   /bai-viet   301
-/blog   /bai-viet   301
+/blog/*   /bai-viet/   301
+/blog   /bai-viet/   301
 /kien-thuc/*   /bai-viet/:splat   301
-/kien-thuc   /bai-viet   301
-/bai-hoc-ngan   /video   301
-/*    /index.html   200
+/kien-thuc   /bai-viet/   301
+/bai-hoc-ngan   /video/   301
+/premium   /bang-gia/   301
+/terms   /dieu-khoan-su-dung/   301
+/privacy   /chinh-sach-bao-mat/   301
+/gioi-thieu   /ve-chung-toi/   301
+/about   /ve-chung-toi/   301

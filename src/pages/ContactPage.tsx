@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FAQSection from "../components/FAQSection";
 import SEOHead from "../components/SEOHead";
 import { useAppContext } from "../context/AppContext";
@@ -9,18 +9,18 @@ import {
   contactFacebookUrl, 
   contactEmail, 
   contactSmsNumber,
+  hasDirectContactChannel,
   buildConsultationBrief,
   buildCopyableChartJson,
   getRuntimeProfile,
 } from "../utils/appUtils";
-import { organizationSchema, contactPageSchema, faqSchema, breadcrumbSchema, pricingServiceSchemas } from "../schemas/seoSchemas";
+import { organizationSchema, contactPageSchema, faqSchema, breadcrumbSchema } from "../schemas/seoSchemas";
 
 type Props = {
   onNavigateChartForm: () => void;
 };
 
 export default function ContactPage({ onNavigateChartForm }: Props) {
-  const navigate = useNavigate();
   const { chart, submittedInput, luuOptions, horoscopeYear, showToast, setShareMessage } = useAppContext();
 
   const handleCopyConsultationBrief = async () => {
@@ -50,13 +50,12 @@ export default function ContactPage({ onNavigateChartForm }: Props) {
     <div className="home-page">
       <SEOHead
         title="Liên Hệ Tư Vấn Luận Giải Tử Vi | Tử Vi Phong Lam"
-        description="Liên hệ đặt lịch tư vấn tử vi trực tiếp, hỏi 1 câu theo lá số hoặc nhận hướng dẫn chọn gói phù hợp."
+        description="Liên hệ để hỏi 1 câu theo lá số, đặt lịch tư vấn trực tiếp hoặc nhận hướng dẫn chọn gói luận giải phù hợp."
         canonicalPath="/lien-he"
         schema={[
           organizationSchema,
           contactPageSchema,
           faqSchema(contactFaqs),
-          ...pricingServiceSchemas,
           breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Liên hệ", path: "/lien-he" }]),
         ]}
       />
@@ -68,6 +67,7 @@ export default function ContactPage({ onNavigateChartForm }: Props) {
           <p>Trang này dành cho người đã có lá số và muốn được hướng dẫn bước tiếp theo: hỏi 1 câu, đặt lịch tư vấn hoặc chuẩn bị thông tin trước khi trao đổi.</p>
         </div>
 
+        <h2 className="sr-only">Trước khi liên hệ</h2>
         <div className="seo-copy-grid">
           <article className="seo-copy-card">
             <h3>Khi nào nên liên hệ?</h3>
@@ -138,18 +138,28 @@ export default function ContactPage({ onNavigateChartForm }: Props) {
           <article className="seo-copy-card contact-channel-card">
             <h3>Xem bảng giá trước</h3>
             <p>Phù hợp nếu bạn muốn so sánh nhanh các mức hỗ trợ trước khi gửi câu hỏi.</p>
-            <button type="button" className="ghost-button" onClick={() => navigate("/bang-gia")}>Mở bảng giá</button>
+            <Link className="ghost-button" to="/bang-gia">Mở bảng giá</Link>
           </article>
-          <article className="seo-copy-card contact-channel-card">
-            <h3>Nhắn Zalo</h3>
-            <p>Kênh nhanh để gửi brief đã copy và nhận hướng dẫn bước tiếp theo.</p>
-            <a className="ghost-button contact-channel-link" href={contactZaloUrl} target="_blank" rel="noreferrer">Mở Zalo</a>
-          </article>
-          <article className="seo-copy-card contact-channel-card">
-            <h3>Nhắn Facebook</h3>
-            <p>Phù hợp nếu bạn đã quen trao đổi qua fanpage hoặc Messenger.</p>
-            <a className="ghost-button contact-channel-link" href={contactFacebookUrl} target="_blank" rel="noreferrer">Mở Facebook</a>
-          </article>
+          {contactZaloUrl ? (
+            <article className="seo-copy-card contact-channel-card">
+              <h3>Nhắn Zalo</h3>
+              <p>Kênh nhanh để gửi brief đã copy và nhận hướng dẫn bước tiếp theo.</p>
+              <a className="ghost-button contact-channel-link" href={contactZaloUrl} target="_blank" rel="noreferrer">Mở Zalo</a>
+            </article>
+          ) : null}
+          {contactFacebookUrl ? (
+            <article className="seo-copy-card contact-channel-card">
+              <h3>Nhắn Facebook</h3>
+              <p>Phù hợp nếu bạn đã quen trao đổi qua fanpage hoặc Messenger.</p>
+              <a className="ghost-button contact-channel-link" href={contactFacebookUrl} target="_blank" rel="noreferrer">Mở Facebook</a>
+            </article>
+          ) : null}
+          {!hasDirectContactChannel ? (
+            <article className="seo-copy-card contact-channel-card">
+              <h3>Kênh liên hệ trực tiếp</h3>
+              <p>Kênh liên hệ trực tiếp (Zalo, email, điện thoại) đang được cập nhật. Trong lúc chờ, bạn vẫn có thể lập lá số và xem luận giải miễn phí.</p>
+            </article>
+          ) : null}
           {contactEmail ? (
             <article className="seo-copy-card contact-channel-card">
               <h3>Gửi email</h3>
@@ -170,8 +180,17 @@ export default function ContactPage({ onNavigateChartForm }: Props) {
           <h2>Bạn muốn đi theo hướng nào?</h2>
           <p>Chọn bước phù hợp với tình huống hiện tại để tiếp tục hành trình một cách rõ ràng hơn.</p>
           <div className="home-hero-actions">
-            <button type="button" className="primary-button" onClick={() => navigate("/bang-gia")}>Xem bảng giá</button>
-            <button type="button" className="ghost-button" onClick={onNavigateChartForm}>Lập lá số miễn phí</button>
+            <Link className="primary-button" to="/bang-gia">Xem bảng giá</Link>
+            <a
+              className="ghost-button"
+              href="/lap-la-so/"
+              onClick={(event) => {
+                event.preventDefault();
+                onNavigateChartForm();
+              }}
+            >
+              Lập lá số miễn phí
+            </a>
           </div>
         </div>
 

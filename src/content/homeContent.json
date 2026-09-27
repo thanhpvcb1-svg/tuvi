@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "eyebrow": "Tử Vi Phong Lam",
+    "title": "Lập Lá Số Tử Vi Online – Luận Giải Theo Tử Vi Bắc Phái",
+    "subtitle": "An lá số từ ngày giờ sinh, xem Mệnh, Thân, 12 cung, Tứ Hóa, Phi Hóa và đại vận, rồi đối chiếu với kho tri thức Tử Vi có điều kiện - AI chỉ tổng hợp từ những gì khớp với lá số của bạn."
+  },
+  "difference": {
+    "heading": "Tử Vi Phong Lam có gì khác?",
+    "intro": "Lá số được đọc theo mạch vận động của Bắc phái chứ không kết luận từ một sao đứng riêng. Mỗi yếu tố dưới đây đều có trên lá số và được dùng khi đối chiếu tri thức.",
+    "items": [
+      { "title": "Mệnh – Thân", "description": "Cung Mệnh và cung Thân cư được đọc cùng nhau như hai trục chính của lá số.", "status": "full" },
+      { "title": "Tam phương tứ chính", "description": "Mỗi cung luôn xét cùng đối cung và hai cung tam hợp.", "status": "full" },
+      { "title": "Giáp cung", "description": "Sao ở hai cung kẹp hai bên được tính khi đối chiếu tri thức.", "status": "full" },
+      { "title": "Chính tinh, phụ tinh, độ sáng", "description": "Hơn 100 sao cùng độ sáng miếu, vượng, đắc, bình, hãm của chính tinh.", "status": "full" },
+      { "title": "Tứ Hóa sinh niên", "description": "Hóa Lộc, Quyền, Khoa, Kỵ theo can năm sinh, gắn đúng sao và cung.", "status": "full" },
+      { "title": "Phi Hóa can cung", "description": "Lộc, Quyền, Khoa, Kỵ từ can của từng cung bay sang cung khác và tự hóa.", "status": "full" },
+      { "title": "Đại vận, tiểu vận", "description": "Xác định cung đại vận và tiểu vận của năm xem, kèm tri thức vận hạn khớp.", "status": "full" },
+      { "title": "Lưu niên", "description": "Hiển thị sao lưu theo năm xem trên lá số; tri thức riêng cho lưu niên đang được bổ sung.", "status": "partial" }
+    ]
+  },
+  "aiFlow": {
+    "heading": "AI và kho tri thức Tử Vi",
+    "intro": "Phần luận giải không phải văn mẫu. Mỗi bước đều dựa trên dữ liệu lá số của bạn:",
+    "steps": ["Lá số", "Xác định các cấu trúc cần luận", "Truy xuất tri thức phù hợp", "Đối chiếu dữ liệu lá số", "AI tổng hợp luận giải"],
+    "note": "AI được thiết kế để không tự tạo quy tắc Tử Vi: khi kho tri thức không có đoạn nào khớp, hệ thống để trống hoặc ghi rõ là thiếu dữ liệu thay vì suy đoán. Luận giải vẫn chỉ mang tính tham khảo.",
+    "link": { "title": "Xem phương pháp luận giải", "path": "/bai-viet/phuong-phap-luan-giai" }
+  },
+  "chartContents": {
+    "heading": "Lá số của bạn có gì?",
+    "intro": "Một lá số trên Tử Vi Phong Lam hiển thị đầy đủ các lớp thông tin sau.",
+    "items": [
+      { "title": "Mệnh và Thân", "description": "Vị trí cung Mệnh, cung Thân cư, Cục, Mệnh chủ, Thân chủ." },
+      { "title": "12 cung", "description": "Mỗi cung với can chi, chính tinh, phụ tinh và vòng Tràng Sinh." },
+      { "title": "Tam phương tứ chính", "description": "Đối cung, tam hợp và giáp cung của từng cung." },
+      { "title": "Tứ Hóa", "description": "Tứ Hóa sinh niên và Phi Hóa can cung giữa các cung." },
+      { "title": "Đại vận", "description": "12 đại vận 10 năm và đại vận của năm đang xem." },
+      { "title": "Tiểu vận và lưu niên", "description": "Cung tiểu vận của năm xem và các sao lưu hiển thị trên lá số." }
+    ]
+  },
+  "sample": {
+    "heading": "Xem một lá số mẫu được luận giải",
+    "text": "Trang lá số mẫu trình bày trọn một lá số minh họa theo thứ tự Bắc phái: Mệnh – Thân, tam phương tứ chính, 12 cung, Tứ Hóa, Phi Hóa, đại vận và các đoạn tri thức khớp kèm lý do khớp.",
+    "cta": "Xem lá số mẫu"
+  },
+  "knowledge": {
+    "heading": "Kiến thức Tử Vi Bắc phái",
+    "intro": "Các bài nền tảng để tự đọc lá số của mình."
+  },
+  "faqHeading": "Câu hỏi thường gặp"
+}

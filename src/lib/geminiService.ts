@@ -37,7 +37,9 @@ export type GeminiLuanGiaiRequest = {
  */
 export function formatKnowledgeForAi(match: KnowledgeMatch): string {
   // Không gửi tên nguồn (website/sách/tác giả) cho AI để câu trả lời hiển thị không nêu nguồn lấy tri thức.
-  return `[Khớp: ${match.matchReasons.join("; ")}] ${match.interpretation.text}`;
+  // Tri thức vận hạn (đại vận / tiểu vận năm xem) được gắn nhãn riêng để AI không đem luận cho cả đời.
+  const scope = match.interpretation.type === "period" ? "[Vận hạn năm xem] " : "";
+  return `${scope}[Khớp: ${match.matchReasons.join("; ")}] ${match.interpretation.text}`;
 }
 
 export type GeminiLuanGiaiResponse = {

@@ -230,7 +230,7 @@ export default function ChartPage() {
     <div className="app workspace-page">
       <SEOHead
         title="Lập Lá Số Tử Vi Online Miễn Phí Theo Ngày Giờ Sinh | Tử Vi Phong Lam"
-        description="Lập lá số tử vi online miễn phí theo ngày tháng năm giờ sinh. An Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận và tiểu vận. Khám phá luận giải Tử Vi theo phương pháp Bắc phái."
+        description="Lập lá số tử vi online miễn phí theo ngày giờ sinh: Mệnh, Thân, 12 cung, chính tinh, phụ tinh, Tứ Hóa, đại vận. Luận giải theo Tử Vi Bắc phái."
         canonicalPath="/lap-la-so"
         schema={[
           organizationSchema,

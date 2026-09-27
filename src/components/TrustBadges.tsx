@@ -20,6 +20,8 @@ export function incrementChartCount(): void {
   } catch {}
 }
 
+const SHOW_CHART_COUNTER = false;
+
 const badges = [
   { icon: "✨", text: "Lập lá số miễn phí" },
   { icon: "🔒", text: "Không cần đăng ký" },
@@ -38,7 +40,8 @@ export default function TrustBadges() {
 
   return (
     <div className="trust-badges-wrapper">
-      {chartCount > 0 && (
+      {/* Bộ đếm cũ dùng số gán cứng (12847) + localStorage của chính người xem -> không phải số liệu thật, không hiển thị. */}
+      {SHOW_CHART_COUNTER && chartCount > 0 && (
         <div className="trust-counter" aria-label="Số lá số đã lập">
           <span className="trust-counter__number">{formattedCount}+</span>
           <span className="trust-counter__label">lá số đã được lập</span>

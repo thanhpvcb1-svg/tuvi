@@ -13,6 +13,13 @@ export type KnowledgeArticle = {
   id: string;
   title: string;
   slug: string;
+  /** Tiêu đề cho thẻ <title> (không kèm tên thương hiệu); mặc định dùng title */
+  seoTitle?: string;
+  /** Meta description khi summary dài quá ~160 ký tự; mặc định dùng summary */
+  seoDescription?: string;
+  /** Ngày đăng / cập nhật nội dung (YYYY-MM-DD, theo lịch sử git) */
+  publishedAt: string;
+  updatedAt: string;
   category: string;
   level: string;
   readingTime: string;
@@ -32,6 +39,11 @@ export type KnowledgeArticle = {
 };
 
 export const getKnowledgeArticleHref = (slug: string) => `/bai-viet/${slug}`;
+
+/** Title / description của trang bài viết - dùng chung cho React (BlogPage) và prerender */
+export const articlePageTitle = (article: Pick<KnowledgeArticle, "title" | "seoTitle">) => `${article.seoTitle ?? article.title} | Tử Vi Phong Lam`;
+export const articleMetaDescription = (article: Pick<KnowledgeArticle, "summary" | "seoDescription">) => article.seoDescription ?? article.summary;
+export const formatArticleDate = (value: string) => value.split("-").reverse().join("/");
 
 // Bảng tài liệu tham khảo giữ lại để tra cứu nội bộ - KHÔNG gắn vào bài viết (không công khai nguồn lấy tri thức).
 // Không được tham chiếu nên không bị đóng gói vào bundle phát hành.
@@ -93,6 +105,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "bac-phai-overview",
     title: "Tử Vi Bắc Phái là gì?",
     slug: "tu-vi-bac-phai-la-gi",
+    seoTitle: "Tử Vi Bắc Phái là gì? Can cung, Tứ Hóa và Phi Hóa",
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-09-26",
     category: "Nhập môn",
     level: "Sơ nhập",
     readingTime: "7 phút",
@@ -131,6 +146,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "tu-hoa-phi-tinh",
     title: "Tứ Hóa Phi Tinh là gì?",
     slug: "tu-hoa-phi-tinh-la-gi",
+    seoTitle: "Tứ Hóa Phi Tinh là gì? Cách đọc Hóa theo can cung",
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-09-26",
     category: "Tứ Hóa Phi Tinh",
     level: "Căn bản",
     readingTime: "8 phút",
@@ -169,6 +187,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "loc-quyen-khoa-ky",
     title: "Lộc – Quyền – Khoa – Kỵ có ý nghĩa gì?",
     slug: "loc-quyen-khoa-ky-co-y-nghia-gi",
+    seoTitle: "Lộc, Quyền, Khoa, Kỵ là gì? Ý nghĩa bốn Hóa",
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-09-26",
     category: "Tứ Hóa Phi Tinh",
     level: "Căn bản",
     readingTime: "9 phút",
@@ -207,6 +228,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "phi-nhap-phi-xuat",
     title: "Phi nhập và phi xuất là gì?",
     slug: "phi-nhap-va-phi-xuat-la-gi",
+    seoTitle: "Phi nhập, phi xuất là gì? Cách đọc dòng Phi Hóa",
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-09-26",
     category: "Phi Hóa",
     level: "Trung cấp",
     readingTime: "8 phút",
@@ -245,6 +269,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "tu-hoa",
     title: "Tự hóa là gì?",
     slug: "tu-hoa-la-gi",
+    seoTitle: "Tự hóa là gì? Tự hóa Lộc, Quyền, Khoa, Kỵ",
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-09-26",
     category: "Phi Hóa",
     level: "Trung cấp",
     readingTime: "7 phút",
@@ -283,6 +310,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "dai-van-luu-nien-bac-phai",
     title: "Đại vận và lưu niên trong Bắc Phái",
     slug: "dai-van-va-luu-nien-trong-bac-phai",
+    seoTitle: "Đại vận và lưu niên là gì? Cách xem vận hạn Bắc phái",
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-09-26",
     category: "Vận trình",
     level: "Căn bản",
     readingTime: "8 phút",
@@ -321,6 +351,10 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "muoi-hai-cung",
     title: "12 cung trong lá số Tử Vi",
     slug: "12-cung-trong-la-so-tu-vi",
+    seoTitle: "12 cung trong lá số Tử Vi: ý nghĩa và cách đọc",
+    seoDescription: "Mười hai cung là khung của lá số Tử Vi: mỗi cung ứng với một lĩnh vực đời sống và luôn được đọc cùng đối cung, tam phương tứ chính.",
+    publishedAt: "2026-09-26",
+    updatedAt: "2026-09-26",
     category: "Nhập môn",
     level: "Sơ nhập",
     readingTime: "8 phút",
@@ -364,6 +398,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "cung-menh",
     title: "Cung Mệnh là gì?",
     slug: "cung-menh-la-gi",
+    seoTitle: "Cung Mệnh là gì? Cách an và ý nghĩa cung Mệnh",
+    publishedAt: "2026-09-26",
+    updatedAt: "2026-09-26",
     category: "12 cung",
     level: "Sơ nhập",
     readingTime: "6 phút",
@@ -407,6 +444,10 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     id: "cung-than",
     title: "Cung Thân và Thân cư là gì?",
     slug: "cung-than-la-gi",
+    seoTitle: "Cung Thân và Thân cư là gì? Sáu vị trí Thân cư",
+    seoDescription: "Cung Thân luôn đồng cung với Mệnh, Phúc Đức, Quan Lộc, Thiên Di, Tài Bạch hoặc Phu Thê. Vị trí Thân cư cho biết trọng tâm đời sống về sau.",
+    publishedAt: "2026-09-26",
+    updatedAt: "2026-09-26",
     category: "12 cung",
     level: "Sơ nhập",
     readingTime: "5 phút",
@@ -442,9 +483,150 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     },
   },
   {
+    id: "cung-tai-bach",
+    title: "Cung Tài Bạch là gì?",
+    slug: "cung-tai-bach-la-gi",
+    seoTitle: "Cung Tài Bạch là gì? Xem tiền bạc trên lá số",
+    publishedAt: "2026-09-27",
+    updatedAt: "2026-09-27",
+    category: "12 cung",
+    level: "Căn bản",
+    readingTime: "6 phút",
+    summary: "Cung Tài Bạch cho biết cách bạn kiếm tiền, giữ tiền và dùng tiền - và luôn được đọc cùng Mệnh, Quan Lộc, Phúc Đức chứ không đứng riêng.",
+    curiosityHook: "Cùng kiếm được như nhau, vì sao có người giữ được tiền còn có người tiền vào rồi lại ra rất nhanh?",
+    tags: ["Tài Bạch","12 cung","Mệnh Tài Quan","Tứ Hóa"],
+    sourceRefs: [],
+    content: [
+      {
+        heading: "Vị trí của cung Tài Bạch",
+        body:
+          "Theo thứ tự an cung, Tài Bạch là một trong hai cung tam hợp của Mệnh (cung còn lại là Quan Lộc) và nằm trên trục đối với Phúc Đức. Vì vậy tam phương tứ chính của Tài Bạch gồm chính nó, Mệnh, Quan Lộc và Phúc Đức.\n\nVị trí này nói lên một ý rất thực tế: tiền bạc không tách khỏi con người (Mệnh), cách làm việc (Quan Lộc) và nhu cầu hưởng thụ, đời sống tinh thần (Phúc Đức).",
+      },
+      {
+        heading: "Tài Bạch nói gì - và không nói gì",
+        body:
+          "Tài Bạch thiên về dòng tiền: cách bạn tạo ra thu nhập, nhịp tiền vào ra, thái độ với tiền và kiểu chi tiêu. Nó không phải cung duy nhất về của cải. Tài sản tích lũy lâu dài như nhà đất, của để dành thường được xem ở cung Điền Trạch; khả năng tạo ra tiền từ công việc gắn chặt với Quan Lộc.\n\nDo đó khi đọc chuyện tiền bạc nên tách ba câu hỏi: kiếm tiền bằng cách nào, tiền có lưu thông đều không, và có giữ lại được thành tài sản không. Mỗi câu hỏi nhìn vào một nhóm cung khác nhau.",
+      },
+      {
+        heading: "Chính tinh, độ sáng và Tứ Hóa tại Tài Bạch",
+        body:
+          "Chính tinh tọa thủ ở Tài Bạch cho biết phong cách với tiền: có sao thiên về tích lũy ổn định, có sao thiên về xoay vòng, mạo hiểm hoặc dựa vào quan hệ. Độ sáng (miếu, vượng, đắc, bình, hãm) cho biết sao phát huy thuận hay nghịch ở vị trí đó.\n\nTứ Hóa làm cung này động lên: Hóa Lộc thường được đọc là dòng tiền dễ mở, Hóa Quyền là sự chủ động nắm quyền quyết định về tiền, Hóa Khoa là tiền đi cùng uy tín, còn Hóa Kỵ là chỗ dễ vướng, dễ lo hoặc phải trả giá. Không có Hóa nào tự nó là kết luận - cần xem cùng tam phương tứ chính và đại vận.",
+      },
+      {
+        heading: "Góc nhìn Bắc phái: dòng Phi Hóa vào Tài Bạch",
+        body:
+          "Bắc phái chú ý cung nào phát Hóa vào Tài Bạch và Tài Bạch phát Hóa đi đâu. Ví dụ, khi can cung Mệnh hóa vào Tài Bạch, người đọc thường hiểu là bản thân dồn sức vào chuyện tiền bạc; khi Tài Bạch hóa Kỵ ra cung khác, đó là gợi ý về nơi tiền dễ chảy đi. Đây là cách đặt câu hỏi để đối chiếu với đời sống, không phải phán định chắc chắn.",
+      },
+    ],
+    applicationBox: {
+      title: "Ứng dụng vào lá số",
+      body:
+        "Mở lá số, xem Tài Bạch có chính tinh nào, độ sáng ra sao, có Tứ Hóa sinh niên không; rồi nhìn sang Quan Lộc, Mệnh và Phúc Đức. Cuối cùng đối chiếu với đại vận hiện tại để biết giai đoạn này chủ đề tiền bạc có đang được kích hoạt hay không.",
+    },
+    cta: {
+      label: "Lập lá số để xem cung Tài Bạch",
+      href: "/lap-la-so",
+    },
+  },
+  {
+    id: "cung-quan-loc",
+    title: "Cung Quan Lộc là gì?",
+    slug: "cung-quan-loc-la-gi",
+    seoTitle: "Cung Quan Lộc là gì? Xem sự nghiệp trên lá số",
+    publishedAt: "2026-09-27",
+    updatedAt: "2026-09-27",
+    category: "12 cung",
+    level: "Căn bản",
+    readingTime: "6 phút",
+    summary: "Cung Quan Lộc nói về công việc, sự nghiệp và cách bạn làm việc; nó là một góc của bộ Mệnh - Tài - Quan và nằm trên trục đối với Phu Thê.",
+    curiosityHook: "Vì sao muốn hiểu chuyện nghề nghiệp của một người, người xem Tử Vi lại nhìn cả sang cung Phu Thê?",
+    tags: ["Quan Lộc","12 cung","Sự nghiệp","Mệnh Tài Quan"],
+    sourceRefs: [],
+    content: [
+      {
+        heading: "Vị trí của cung Quan Lộc",
+        body:
+          "Quan Lộc là cung tam hợp thứ hai của Mệnh (cùng với Tài Bạch) và đối diện cung Phu Thê. Tam phương tứ chính của Quan Lộc vì thế gồm Quan Lộc, Mệnh, Tài Bạch và Phu Thê.\n\nBộ Mệnh - Tài - Quan là khung lớn nhất của lá số: con người, tiền bạc và sự nghiệp luôn được đọc cùng nhau. Trục Quan Lộc - Phu Thê thì cho thấy công việc và đời sống lứa đôi có ảnh hưởng qua lại, nhất là về thời gian, áp lực và sự hậu thuẫn.",
+      },
+      {
+        heading: "Quan Lộc nói gì",
+        body:
+          "Quan Lộc cho biết cách làm việc, môi trường nghề nghiệp phù hợp, kiểu thành tựu và cách bạn đối diện với trách nhiệm. Có người hợp làm trong tổ chức có quy củ, có người hợp tự làm, có người hợp công việc cần giao tiếp hoặc chuyên môn sâu - những xu hướng này thường được đọc từ chính tinh tại Quan Lộc cùng các cung tam phương.\n\nQuan Lộc không phải bản mô tả chức danh cụ thể. Nó gợi ý phong cách và điều kiện thuận lợi; ngành nghề cụ thể còn tùy học vấn, hoàn cảnh và lựa chọn của mỗi người.",
+      },
+      {
+        heading: "Chính tinh, độ sáng và Tứ Hóa tại Quan Lộc",
+        body:
+          "Chính tinh và độ sáng tại Quan Lộc cho thấy lực làm việc phát huy thuận hay gặp trở ngại. Tứ Hóa tại đây thường được đọc theo hướng: Hóa Lộc là công việc mở cơ hội, Hóa Quyền là vai trò chủ động, dẫn dắt, Hóa Khoa là danh tiếng và sự công nhận, Hóa Kỵ là nơi dễ vướng mắc hoặc phải dồn nhiều tâm sức.\n\nNếu Quan Lộc vô chính diệu, người đọc thường mượn chính tinh của cung đối diện (Phu Thê) để luận, nhưng xem là yếu hơn so với tọa thủ trực tiếp.",
+      },
+      {
+        heading: "Quan Lộc theo đại vận",
+        body:
+          "Một lá số có Quan Lộc tốt không có nghĩa là lúc nào sự nghiệp cũng thuận. Bắc phái đọc thêm đại vận: khi đại vận đi qua cung nào, can của cung đại vận phát Tứ Hóa vào đâu, chủ đề công việc có được kích hoạt hay không. Cách đọc này giúp chuẩn bị cho từng giai đoạn thay vì kết luận một lần cho cả đời.",
+      },
+    ],
+    applicationBox: {
+      title: "Ứng dụng vào lá số",
+      body:
+        "Xem Quan Lộc cùng Mệnh và Tài Bạch trước, rồi nhìn sang Phu Thê ở cung đối diện. Sau đó xem đại vận hiện tại nằm ở cung nào và có Tứ Hóa nào chạm vào Quan Lộc - đó là bối cảnh công việc của giai đoạn này.",
+    },
+    cta: {
+      label: "Lập lá số để xem cung Quan Lộc",
+      href: "/lap-la-so",
+    },
+  },
+  {
+    id: "cung-phu-the",
+    title: "Cung Phu Thê là gì?",
+    slug: "cung-phu-the-la-gi",
+    seoTitle: "Cung Phu Thê là gì? Xem hôn nhân trên lá số",
+    publishedAt: "2026-09-27",
+    updatedAt: "2026-09-27",
+    category: "12 cung",
+    level: "Căn bản",
+    readingTime: "6 phút",
+    summary: "Cung Phu Thê nói về hôn nhân, người phối ngẫu và cách bạn gắn bó trong quan hệ; nó được đọc cùng Thiên Di, Phúc Đức và cung đối diện Quan Lộc.",
+    curiosityHook: "Cung Phu Thê có sao xấu thì hôn nhân có chắc chắn trắc trở không?",
+    tags: ["Phu Thê","12 cung","Hôn nhân","Tứ Hóa"],
+    sourceRefs: [],
+    content: [
+      {
+        heading: "Vị trí của cung Phu Thê",
+        body:
+          "Phu Thê nằm trên trục đối với Quan Lộc và tam hợp với Thiên Di, Phúc Đức. Tam phương tứ chính của Phu Thê vì thế gồm Phu Thê, Thiên Di, Phúc Đức và Quan Lộc.\n\nCách sắp xếp này gợi ý rằng đời sống lứa đôi gắn với cách ta ra ngoài và gặp gỡ (Thiên Di), đời sống tinh thần (Phúc Đức) và nhịp công việc (Quan Lộc).",
+      },
+      {
+        heading: "Phu Thê nói gì",
+        body:
+          "Phu Thê cho biết kiểu người phối ngẫu bạn dễ gặp hoặc dễ bị cuốn hút, cách hai người tương tác, điều cần dung hòa trong hôn nhân và thời điểm chủ đề tình cảm được kích hoạt. Nó mô tả xu hướng của mối quan hệ nhìn từ lá số của bạn, không phải bản mô tả chính xác về một người cụ thể.\n\nMột cung Phu Thê có sao khó không đồng nghĩa với hôn nhân chắc chắn trắc trở; nó thường chỉ ra điểm cần hiểu nhau và cần vun đắp nhiều hơn.",
+      },
+      {
+        heading: "Chính tinh, độ sáng và Tứ Hóa tại Phu Thê",
+        body:
+          "Chính tinh tại Phu Thê cho biết tính chất của mối quan hệ: có sao thiên về ổn định, có sao thiên về cảm xúc mạnh, có sao cần khoảng riêng. Độ sáng cho biết sao phát huy thuận hay nghịch. Tứ Hóa tại đây thường được đọc là: Hóa Lộc - duyên dễ mở, Hóa Quyền - trong quan hệ có người giữ vai trò chủ động, Hóa Khoa - quan hệ được tôn trọng, Hóa Kỵ - điểm dễ vướng, cần nhiều thấu hiểu.\n\nLuôn đọc cùng cung đối diện Quan Lộc và các cung tam hợp trước khi kết luận.",
+      },
+      {
+        heading: "Góc nhìn Bắc phái: Phi Hóa giữa Mệnh và Phu Thê",
+        body:
+          "Bắc phái xem dòng Phi Hóa giữa Mệnh và Phu Thê: bản thân dồn Hóa vào Phu Thê hay Phu Thê phát Hóa vào Mệnh, và có Hóa Kỵ đi qua trục Phu Thê - Quan Lộc không. Khi xem hợp tuổi, người đọc còn đối chiếu lá số hai người với nhau. Đây là công cụ để hiểu và điều chỉnh cách đối xử, không phải để quyết định thay cho hai người.",
+      },
+    ],
+    applicationBox: {
+      title: "Ứng dụng vào lá số",
+      body:
+        "Xem chính tinh và Tứ Hóa tại Phu Thê, rồi nhìn sang Quan Lộc, Thiên Di và Phúc Đức. Kiểm tra thêm đại vận hiện tại có chạm vào Phu Thê không để biết giai đoạn này chủ đề tình cảm có nổi lên hay không.",
+    },
+    cta: {
+      label: "Lập lá số để xem cung Phu Thê",
+      href: "/lap-la-so",
+    },
+  },
+  {
     id: "phuong-phap-luan-giai",
     title: "Phương pháp luận giải của Tử Vi Phong Lam",
     slug: "phuong-phap-luan-giai",
+    seoTitle: "Phương pháp luận giải lá số Tử Vi",
+    publishedAt: "2026-09-26",
+    updatedAt: "2026-09-26",
     category: "Phương pháp",
     level: "Tổng quan",
     readingTime: "6 phút",
@@ -493,6 +675,12 @@ export const knowledgeArticles: KnowledgeArticle[] = [
 
 export const knowledgeCategories = Array.from(new Set(knowledgeArticles.map((article) => article.category)));
 export const knowledgeLevels = Array.from(new Set(knowledgeArticles.map((article) => article.level)));
+
+/** Bài đọc tiếp: ưu tiên cùng chuyên mục, sau đó các bài còn lại theo thứ tự thư viện */
+export const getRelatedArticles = (article: KnowledgeArticle, count = 3) => {
+  const others = knowledgeArticles.filter((item) => item.id !== article.id);
+  return [...others.filter((item) => item.category === article.category), ...others.filter((item) => item.category !== article.category)].slice(0, count);
+};
 
 export const findKnowledgeArticleByPath = (pathname: string) => {
   const path = pathname.replace(/\/+$/, ""); // chấp nhận cả /bai-viet/slug/ (URL prerender)

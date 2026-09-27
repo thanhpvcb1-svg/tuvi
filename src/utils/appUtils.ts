@@ -10,8 +10,14 @@ import lapLaSoContent from "../content/lapLaSoContent.json";
 export const siteUrl = "https://tuviphonglam.com";
 export const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
 export const contactSmsNumber = import.meta.env.VITE_CONTACT_SMS_NUMBER?.trim() || "";
-export const contactZaloUrl = import.meta.env.VITE_CONTACT_ZALO_URL?.trim() || "https://zalo.me/";
-export const contactFacebookUrl = import.meta.env.VITE_CONTACT_FACEBOOK_URL?.trim() || "https://www.facebook.com/";
+// Chỉ nhận URL trỏ tới tài khoản cụ thể; "https://zalo.me/" hay "https://www.facebook.com/" (trang chủ) coi như chưa cấu hình.
+const specificUrl = (value: string | undefined, genericPattern: RegExp) => {
+  const url = value?.trim() || "";
+  return url && !genericPattern.test(url) ? url : "";
+};
+export const contactZaloUrl = specificUrl(import.meta.env.VITE_CONTACT_ZALO_URL, /^https?:\/\/(www\.)?zalo\.me\/?$/i);
+export const contactFacebookUrl = specificUrl(import.meta.env.VITE_CONTACT_FACEBOOK_URL, /^https?:\/\/(www\.)?(facebook|fb)\.com\/?$/i);
+export const hasDirectContactChannel = Boolean(contactEmail || contactSmsNumber || contactZaloUrl || contactFacebookUrl);
 
 // ============ FAQ DATA ============
 
@@ -64,6 +70,32 @@ export const pricingFaqs = [
     answer: "Nên lập lá số trước để câu hỏi bám đúng dữ liệu cá nhân và giúp phần trả lời tập trung hơn vào trường hợp của bạn.",
   },
 ];
+
+/** /faq: gom các câu hỏi thật đang dùng ở trang chủ, /lap-la-so và /bang-gia (bỏ câu trùng ý) */
+export const faqPageGroups = [
+  {
+    id: "faq-la-so",
+    eyebrow: "Lá số",
+    title: "Lá số và Tử Vi Bắc phái",
+    description: "Lá số được an ra sao, Bắc phái đọc lá số thế nào và AI tham gia ở bước nào.",
+    faqs: lapLaSoContent.lapLaSoFaqs.filter((item) => item.question !== "Lá số cần giờ sinh chính xác không?"),
+  },
+  {
+    id: "faq-du-lieu",
+    eyebrow: "Ngày giờ sinh",
+    title: "Ngày giờ sinh và dữ liệu",
+    description: "Cần nhập gì, thiếu giờ sinh thì sao và dữ liệu được dùng vào việc gì.",
+    faqs: homeFaqs.slice(0, 4),
+  },
+  {
+    id: "faq-goi",
+    eyebrow: "Gói luận giải",
+    title: "Gói hỏi theo lá số và tư vấn",
+    description: "Khác nhau giữa các gói và cách chuẩn bị câu hỏi.",
+    faqs: [...homeFaqs.slice(4), ...pricingFaqs.slice(1)],
+  },
+];
+export const faqPageItems = faqPageGroups.flatMap((group) => group.faqs);
 
 export const compatFaqs = [
   {

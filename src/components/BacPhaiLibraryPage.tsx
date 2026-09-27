@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   getKnowledgeArticleHref,
   knowledgeCategories,
@@ -16,14 +17,17 @@ const learningPaths = [
   {
     title: "Người mới bắt đầu",
     description: "Đọc các bài nhập môn để hiểu Mệnh, Thân, 12 cung và cách đặt câu hỏi khi xem lá số.",
+    start: { label: "Bắt đầu: 12 cung trong lá số", href: "/bai-viet/12-cung-trong-la-so-tu-vi" },
   },
   {
     title: "Muốn đọc vận hạn",
     description: "Ưu tiên các bài về đại vận, lưu niên, Tứ Hóa và cách đặt năm đang xem vào bối cảnh toàn cục.",
+    start: { label: "Bắt đầu: Đại vận và lưu niên", href: "/bai-viet/dai-van-va-luu-nien-trong-bac-phai" },
   },
   {
     title: "Tìm hiểu Bắc Phái",
-    description: "Đi sâu vào can cung, Phi Hóa, Lai Nhân Cung và các quy tắc cần đọc cùng nhau.",
+    description: "Đi sâu vào can cung, Tứ Hóa, Phi Hóa, tự hóa và các quy tắc cần đọc cùng nhau.",
+    start: { label: "Bắt đầu: Tứ Hóa Phi Tinh", href: "/bai-viet/tu-hoa-phi-tinh-la-gi" },
   },
 ];
 
@@ -61,7 +65,7 @@ export default function BacPhaiLibraryPage({ articles }: Props) {
     <section className="content-section">
       <div className="library-hero">
         <p className="eyebrow">Bài viết</p>
-        <h1>Thư viện bài viết</h1>
+        <h1>Kiến thức Tử Vi Bắc phái</h1>
         <p>Những bài đọc nền tảng về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, can cung, đại vận và lưu niên.</p>
       </div>
 
@@ -70,6 +74,9 @@ export default function BacPhaiLibraryPage({ articles }: Props) {
           <article key={path.title} className="seo-copy-card">
             <h2>{path.title}</h2>
             <p>{path.description}</p>
+            <p>
+              <Link to={path.start.href}>{path.start.label}</Link>
+            </p>
           </article>
         ))}
       </div>

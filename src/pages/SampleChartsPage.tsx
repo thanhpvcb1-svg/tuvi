@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import EvidencePanel from "../components/EvidencePanel";
 import ResultSummaryCards from "../components/ResultSummaryCards";
 import SampleChartsSection, { type SampleChartPreset } from "../components/SampleChartsSection";
 import SEOHead from "../components/SEOHead";
@@ -8,7 +9,8 @@ import TuviChart from "../components/TuviChart";
 import { getActivePalaceIndexes } from "../components/VanHanhSelector";
 import { currentYear, getDefaultLuuOptions, loadChartModules, normalizeBirthInput } from "../context/AppContext";
 import { buildSummaryCards } from "../lib/chartUi";
-import type { BirthInput, ChartView, PalaceView, StarView } from "../lib/types";
+import type { BirthInput, ChartView } from "../lib/types";
+import { DEMO_BIRTH_YEAR, DEMO_HOUR_LABEL, DEMO_LABEL, demoInput, deriveDemoData } from "../content/demoChart";
 import { breadcrumbSchema, organizationSchema } from "../schemas/seoSchemas";
 
 /**
@@ -17,22 +19,7 @@ import { breadcrumbSchema, organizationSchema } from "../schemas/seoSchemas";
  * phần luận giải dùng lại StreamingAnalysis (tri thức đã khớp + AI) - không có nội dung dựng sẵn.
  */
 
-// Lá số minh họa, không phải người thật.
-const DEMO_INPUT: BirthInput = {
-  fullName: "Lá số mẫu",
-  year: "1990",
-  month: "5",
-  day: "12",
-  birthHour: "13",
-  birthMinute: "0",
-  gender: "male",
-  calendarType: "solar",
-  horoscopeYear: String(currentYear),
-  unknownBirthTime: false,
-  hidePersonalInfo: false,
-};
-const DEMO_BIRTH_YEAR = Number(DEMO_INPUT.year);
-const DEMO_LABEL = "Nam, sinh ngày 12/5/1990 (dương lịch), giờ Mùi";
+const DEMO_INPUT: BirthInput = demoInput(currentYear);
 
 // Các lá số mẫu khác để thử nhanh trên trang lập lá số (cố định, không ngẫu nhiên mỗi lần tải).
 const OTHER_PRESETS: SampleChartPreset[] = [
@@ -56,22 +43,6 @@ const OTHER_PRESETS: SampleChartPreset[] = [
   },
 ];
 
-const PALACE_ORDER = ["Mệnh", "Phụ Mẫu", "Phúc Đức", "Điền Trạch", "Quan Lộc", "Nô Bộc", "Thiên Di", "Tật Ách", "Tài Bạch", "Tử Tức", "Phu Thê", "Huynh Đệ"];
-
-const isNatal = (star: StarView) => !star.scope || star.scope === "origin";
-
-function describeMainStars(palace: PalaceView | undefined): string {
-  const stars = (palace?.majorStars ?? []).filter(isNatal);
-  if (!stars.length) return "vô chính diệu";
-  return stars
-    .map((s) => `${s.name}${s.brightnessFull ? ` (${s.brightnessFull.toLowerCase()})` : ""}${s.mutagen ? ` hóa ${s.mutagen}` : ""}`)
-    .join(", ");
-}
-
-function findPalaceByName(chart: ChartView, name: string) {
-  return chart.palaces.find((p) => p.name === name);
-}
-
 type Props = {
   onNavigateChartForm: () => void;
   onGenerateFromInput: (input: BirthInput) => void;
@@ -81,6 +52,8 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
   const [chart, setChart] = useState<ChartView | null>(null);
   const [chartError, setChartError] = useState(false);
   const [showReading, setShowReading] = useState(false);
+  // Tải kho tri thức chỉ khi người xem yêu cầu (không nằm trong initial load)
+  const [showEvidence, setShowEvidence] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -102,39 +75,28 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
     };
   }, []);
 
-  const derived = useMemo(() => {
-    if (!chart) return null;
-    const menh = findPalaceByName(chart, "Mệnh");
-    const than = chart.palaces.find((p) => p.isBodyPalace);
-    const age = currentYear - DEMO_BIRTH_YEAR;
-    const active = getActivePalaceIndexes(chart.palaces, age, menh?.earthlyBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
-
-    const tuHoa = chart.palaces
-      .flatMap((palace) => (palace.majorStars ?? []).concat(palace.minorStars ?? []).filter((s) => isNatal(s) && s.mutagen).map((s) => ({ star: s, palace })))
-      .sort((a, b) => ["Lộc", "Quyền", "Khoa", "Kỵ"].indexOf(a.star.mutagen!) - ["Lộc", "Quyền", "Khoa", "Kỵ"].indexOf(b.star.mutagen!));
-
-    const daiVan = chart.palaces
-      .map((palace) => ({ palace, start: Number(palace.decadalRange) }))
-      .filter((d) => Number.isFinite(d.start) && d.start > 0)
-      .sort((a, b) => a.start - b.start);
-
-    return { menh, than, active, tuHoa, daiVan, age };
+  const demo = useMemo(() => (chart ? deriveDemoData(chart, currentYear) : null), [chart]);
+  // Chỉ dùng cho tô sáng cung đại vận / tiểu vận trên bàn lá số (cùng hàm với trang lập lá số)
+  const active = useMemo(() => {
+    if (!chart) return {};
+    const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
+    return getActivePalaceIndexes(chart.palaces, currentYear - DEMO_BIRTH_YEAR, menhBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
   }, [chart]);
 
   return (
     <div className="app workspace-page sample-demo-page">
       <SEOHead
-        title="Demo Luận Giải Tử Vi Bắc Phái Trên Lá Số Mẫu | Tử Vi Phong Lam"
-        description="Xem cách Tử Vi Phong Lam đọc một lá số mẫu theo Bắc phái: Mệnh – Thân, Mệnh Tài Quan, 12 cung, Tứ Hóa, đại vận và luận giải dựa trên tri thức đã khớp."
+        title="Lá Số Tử Vi Mẫu – Demo Luận Giải Tử Vi Bắc Phái | Tử Vi Phong Lam"
+        description="Demo luận giải một lá số mẫu theo Tử Vi Bắc phái: Mệnh – Thân, tam phương tứ chính, 12 cung, Tứ Hóa, Phi Hóa, đại vận và tri thức khớp kèm lý do."
         canonicalPath="/la-so-mau"
         schema={[organizationSchema, breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Lá số mẫu", path: "/la-so-mau" }])]}
       />
 
       <section className="page-intro">
-        <h1>Demo luận giải Tử Vi Bắc phái</h1>
+        <h1>Lá Số Tử Vi Mẫu – Demo Luận Giải Tử Vi Bắc Phái</h1>
         <p>
           Một lá số mẫu được an bằng đúng công cụ lập lá số của Tử Vi Phong Lam, rồi đọc theo thứ tự Bắc phái: Mệnh – Thân,
-          Mệnh – Tài – Quan, 12 cung, Tứ Hóa, đại vận và luận giải dựa trên tri thức khớp với chính lá số này.
+          tam phương tứ chính, 12 cung, Tứ Hóa, Phi Hóa, đại vận và luận giải dựa trên tri thức khớp với chính lá số này.
         </p>
         <p className="sample-demo__label">Lá số minh họa (không phải người thật): {DEMO_LABEL}. Năm xem {currentYear}.</p>
         <div className="page-intro-cta">
@@ -153,12 +115,29 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
         </section>
       ) : null}
 
-      {!chart || !derived ? (
+      {!chart || !demo ? (
         <section className="content-section" aria-busy="true">
           <p>Đang an lá số mẫu…</p>
         </section>
       ) : (
         <>
+          <section className="content-section" aria-labelledby="demo-thong-tin">
+            <div className="section-heading section-heading--compact">
+              <h2 id="demo-thong-tin">Thông tin lá số</h2>
+              <p>Dữ liệu đầu vào của lá số minh họa và kết quả quy đổi lịch.</p>
+            </div>
+            <table className="demo-table">
+              <tbody>
+                <tr><th scope="row">Giới tính</th><td>{chart.profile.gender}</td></tr>
+                <tr><th scope="row">Ngày sinh dương lịch</th><td>{chart.profile.solarDate}</td></tr>
+                <tr><th scope="row">Ngày sinh âm lịch</th><td>{chart.profile.lunarDate}</td></tr>
+                <tr><th scope="row">Giờ sinh</th><td>{DEMO_HOUR_LABEL}</td></tr>
+                <tr><th scope="row">Can Chi (năm - tháng - ngày - giờ)</th><td>{chart.profile.chineseDate}</td></tr>
+                <tr><th scope="row">Năm xem</th><td>{currentYear}</td></tr>
+              </tbody>
+            </table>
+          </section>
+
           <section className="content-section" aria-labelledby="demo-tong-quan">
             <div className="section-heading section-heading--compact">
               <h2 id="demo-tong-quan">Tổng quan</h2>
@@ -173,10 +152,10 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
             </div>
             <ul className="demo-facts">
               <li>
-                <strong>Cung Mệnh</strong> an tại {derived.menh?.earthlyBranch}, chính tinh: {describeMainStars(derived.menh)}.
+                <strong>Cung Mệnh</strong> an tại {demo.menh.branch}, chính tinh: {demo.menh.stars}.
               </li>
               <li>
-                <strong>Thân cư {derived.than?.name}</strong> tại {derived.than?.earthlyBranch}, chính tinh: {describeMainStars(derived.than)}.
+                <strong>Thân cư {demo.than.name}</strong> tại {demo.than.branch}, chính tinh: {demo.than.stars}.
               </li>
               <li>
                 <strong>Cục:</strong> {chart.profile.fiveElementsClass} · <strong>Mệnh chủ:</strong> {chart.profile.soul} · <strong>Thân chủ:</strong> {chart.profile.body}
@@ -190,21 +169,21 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
 
           <section className="content-section" aria-labelledby="demo-menh-tai-quan">
             <div className="section-heading section-heading--compact">
-              <h2 id="demo-menh-tai-quan">Mệnh – Tài – Quan</h2>
-              <p>Tam phương tứ chính của cung Mệnh: bản thân, tiền bạc, sự nghiệp và cung xung chiếu Thiên Di.</p>
+              <h2 id="demo-menh-tai-quan">Tam phương tứ chính</h2>
+              <p>
+                Tam phương tứ chính của cung Mệnh: Mệnh, Tài Bạch, Quan Lộc và cung xung chiếu Thiên Di - khung lớn của bản thân,
+                tiền bạc và sự nghiệp.
+              </p>
             </div>
             <div className="seo-copy-grid seo-copy-grid--compact">
-              {["Mệnh", "Tài Bạch", "Quan Lộc", "Thiên Di"].map((name) => {
-                const palace = findPalaceByName(chart, name);
-                return (
-                  <article key={name} className="seo-copy-card seo-copy-card--compact">
-                    <h3>
-                      {name} · {palace?.earthlyBranch}
-                    </h3>
-                    <p>{describeMainStars(palace)}</p>
-                  </article>
-                );
-              })}
+              {demo.tamPhuong.map((row) => (
+                <article key={row.name} className="seo-copy-card seo-copy-card--compact">
+                  <h3>
+                    {row.name} · {row.branch}
+                  </h3>
+                  <p>{row.stars}</p>
+                </article>
+              ))}
             </div>
           </section>
 
@@ -216,7 +195,7 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
                 <Link to="/bai-viet/12-cung-trong-la-so-tu-vi">Cách đọc 12 cung</Link>
               </p>
             </div>
-            <TuviChart chart={chart} hasRequestedChart activePalaceIndexes={derived.active} showPhiHoaCanCung />
+            <TuviChart chart={chart} hasRequestedChart activePalaceIndexes={active} showPhiHoaCanCung />
           </section>
 
           <section className="content-section" aria-labelledby="demo-tu-hoa">
@@ -233,12 +212,12 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
                 </tr>
               </thead>
               <tbody>
-                {derived.tuHoa.map(({ star, palace }) => (
-                  <tr key={`${star.mutagen}-${star.name}`}>
-                    <td>Hóa {star.mutagen}</td>
-                    <td>{star.name}</td>
+                {demo.tuHoa.map((row) => (
+                  <tr key={`${row.hoa}-${row.star}`}>
+                    <td>Hóa {row.hoa}</td>
+                    <td>{row.star}</td>
                     <td>
-                      {palace.name} ({palace.earthlyBranch})
+                      {row.palace} ({row.branch})
                     </td>
                   </tr>
                 ))}
@@ -249,12 +228,46 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
             </p>
           </section>
 
+          <section className="content-section" aria-labelledby="demo-phi-hoa">
+            <div className="section-heading section-heading--compact">
+              <h2 id="demo-phi-hoa">Phi Hóa can cung</h2>
+              <p>Can của mỗi cung hóa ra Lộc, Quyền, Khoa, Kỵ bay sang cung khác (phi nhập) hoặc hóa ngay tại cung (tự hóa).</p>
+            </div>
+            <table className="demo-table">
+              <thead>
+                <tr>
+                  <th scope="col">Cung (can)</th>
+                  <th scope="col">Hóa Lộc</th>
+                  <th scope="col">Hóa Quyền</th>
+                  <th scope="col">Hóa Khoa</th>
+                  <th scope="col">Hóa Kỵ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {demo.phiHoa.map((row) => (
+                  <tr key={row.name}>
+                    <th scope="row">
+                      {row.name} ({row.stem})
+                    </th>
+                    {(["loc", "quyen", "khoa", "ky"] as const).map((type) => (
+                      <td key={type}>{row.targets[type] || "–"}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="demo-note">
+              <Link to="/bai-viet/phi-nhap-va-phi-xuat-la-gi">Phi nhập và phi xuất là gì?</Link> ·{" "}
+              <Link to="/bai-viet/tu-hoa-la-gi">Tự hóa là gì?</Link>
+            </p>
+          </section>
+
           <section className="content-section" aria-labelledby="demo-dai-van">
             <div className="section-heading section-heading--compact">
               <h2 id="demo-dai-van">Đại vận</h2>
               <p>
-                Mỗi đại vận 10 năm đi qua một cung. Năm {currentYear} lá số mẫu {derived.age} tuổi
-                {derived.active.daiVanLabel ? `, đang ở đại vận ${derived.active.daiVanLabel}` : ""}.
+                Mỗi đại vận 10 năm đi qua một cung. Năm {currentYear} lá số mẫu {demo.age} tuổi
+                {demo.activeDaiVan ? `, đang ở đại vận ${demo.activeDaiVan}` : ""}.
               </p>
             </div>
             <table className="demo-table">
@@ -266,20 +279,17 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
                 </tr>
               </thead>
               <tbody>
-                {derived.daiVan.map(({ palace, start }) => {
-                  const isActive = derived.active.daiVan === palace.index;
-                  return (
-                    <tr key={palace.name} className={isActive ? "is-active" : undefined} aria-current={isActive ? "true" : undefined}>
-                      <td>
-                        {start}-{start + 9}
-                      </td>
-                      <td>
-                        {palace.name} ({palace.earthlyBranch})
-                      </td>
-                      <td>{describeMainStars(palace)}</td>
-                    </tr>
-                  );
-                })}
+                {demo.daiVan.map((row) => (
+                  <tr key={row.palace} className={row.active ? "is-active" : undefined} aria-current={row.active ? "true" : undefined}>
+                    <td>
+                      {row.start}-{row.end}
+                    </td>
+                    <td>
+                      {row.palace} ({row.branch})
+                    </td>
+                    <td>{row.stars}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
             <p className="demo-note">
@@ -305,6 +315,23 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
             ) : (
               <button type="button" className="primary-button" onClick={() => setShowReading(true)}>
                 Xem luận giải mẫu
+              </button>
+            )}
+          </section>
+
+          <section id="co-so-tri-thuc" className="content-section" aria-labelledby="demo-evidence">
+            <div className="section-heading section-heading--compact">
+              <h2 id="demo-evidence">Cơ sở tri thức</h2>
+              <p>
+                Các đoạn tri thức đã khớp với lá số mẫu ở từng cung và lý do khớp - bấm vào một cung để xem. Đây cũng là dữ liệu mà
+                AI nhận được khi luận giải.
+              </p>
+            </div>
+            {showEvidence ? (
+              <EvidencePanel chart={chart} yearToView={currentYear} birthYear={DEMO_BIRTH_YEAR} />
+            ) : (
+              <button type="button" className="ghost-button" onClick={() => setShowEvidence(true)}>
+                Xem cơ sở tri thức
               </button>
             )}
           </section>

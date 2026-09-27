@@ -76,8 +76,73 @@ const stripChinese = (text: string) =>
 // "Ứng kỳ này có thể sẽ vào một trong các năm Sửu, Mùi, Tí..." được suy từ lá số gốc của người khác -> bỏ dòng đó.
 const stripUngKy = (text: string) => text.split("\n").filter((line) => !/^\s*Ứng kỳ/i.test(line)).join("\n");
 
+// "Xảy ra vào một trong các năm Tuất, Thìn, Dậu." - năm ứng kỳ tính từ lá số mẫu lúc crawl, không phải lá số hiện tại.
+const stripOtherChartYears = (text: string) => text.replace(/\s*Xảy ra vào (một trong )?các năm [^.\n]*\.?/g, "");
+
+// Không công khai nguồn lấy tri thức: bỏ tên tác giả / sách / trường phái gắn với nguồn trong nội dung,
+// giữ nguyên ý. Câu kể chuyện riêng của tác giả ("X kể, ông từng gặp...") thì bỏ hẳn.
+const AUTHOR = "(?:(?:[Cc]ụ |[Ôô]ng |[Tt]hầy )?(?:Vương Đ[iìĩ]nh [Cc]h[iì]|Trình Tử Vân|Tử Vân|(?:Lục )?B[âỉ]nh? Triệu|Lục Bân Triệu))";
+const SCHOOL = "(?:[Pp]hái Trung Châu|Trung Châu phái|Tứ Hóa phái)";
+const BOOK = "(?:Tử [Vv]i Đẩu [Ss]ố [Tt]oàn [Tt]hư|Đẩu [Ss]ố [Tt]oàn [Tt]hư|Tử [Vv]i Đẩu [Ss]ố [Tt]oàn [Tt]ập)";
+// Lời của trang / sách nguồn nói về chính nó ("trong bài viết này", "luận giải này của chúng tôi",
+// "tìm đến trang web này để được phục vụ") - không phải tri thức, còn lộ nguồn.
+const SELF_REFERENCE_SENTENCE = /[^.!?\n]*(?:bài viết này|chương này|trang web|website|của chúng tôi|chúng tôi sử dụng|tôi xin trình bày|được phục vụ)[^.!?\n]*[.!?]?/giu;
+const SOURCE_SENTENCE_DROP = new RegExp(
+  `[^.!?\\n]*(?:${AUTHOR}\\s+(?:kể|là người nêu ra|sau khi so sánh|phân tích cách cục này như sau|không biết lí do|trong bài này)|Khái niệm này ${AUTHOR}|Trình Tử Vân:)[^.!?\\n]*[.!?]?`,
+  "g",
+);
+// Ví dụ lá số của người thật (diễn viên, doanh nhân...) - không phải tri thức áp dụng cho người xem.
+const CELEBRITY_SENTENCE = /[^.!?\n]*(?:(?:Diễn viên|Ca sĩ|Ông|Bà|Nhà văn|Tổng thống)\s+[A-ZĐ]\p{L}+(?:\s+[A-ZĐ]\p{L}+){1,3}(?:\s*\([^)]*\))?\s+là người có|Lưu Đức Hoa|Tôn Trung Sơn)[^.!?\n]*[.!?]?/gu;
+// Viết hoa đúng vị trí: đầu câu thì "Có ý kiến", giữa câu thì "có ý kiến".
+const casedAt = (whole: string, offset: number, phrase: string) =>
+  offset === 0 || /[.!?\n]\s*$/.test(whole.slice(Math.max(0, offset - 3), offset)) ? phrase[0].toUpperCase() + phrase.slice(1) : phrase;
+const scrubSources = (text: string) =>
+  text
+    .replace(SOURCE_SENTENCE_DROP, "")
+    .replace(CELEBRITY_SENTENCE, "")
+    .replace(SELF_REFERENCE_SENTENCE, "")
+    .replace(/Theo sự truyền dạy của sư phụ,\s*/g, "")
+    .replace(/truyền thừa (?:phái Trung Châu|Trung Châu phái)/g, "truyền thống")
+    // "(Vương Đình Chi chú: ...)" -> "(chú: ...)"; "(theo Vương Đình Chi, ...)" -> "(...)"
+    .replace(new RegExp(`\\(\\s*${AUTHOR}\\s+chú:\\s*`, "g"), "(chú: ")
+    .replace(new RegExp(`\\(\\s*theo ${AUTHOR},\\s*`, "gi"), "(")
+    .replace(new RegExp(`\\(\\s*${AUTHOR}\\s*\\):?\\s*`, "g"), "")
+    // "Theo (kinh nghiệm|lí giải|ý kiến|bí truyền...) (của) (phái Trung Châu) Vương Đình Chi, X" -> "X"
+    .replace(new RegExp(`(^|[.!?;]\\s+|\\n)Theo (?:(?:kinh nghiệm|lí giải|lý giải|ý kiến|bí truyền|sự truyền dạy của sư phụ)\\s+(?:của\\s+)?)?(?:${SCHOOL}\\s+)?(?:${AUTHOR}|${SCHOOL}|${BOOK})\\s*[,:]\\s*(\\p{L})`, "gu"), (_m, pre, first) => `${pre}${first.toUpperCase()}`)
+    .replace(new RegExp(`,?\\s*theo (?:kinh nghiệm |lí giải |ý kiến |bí truyền )?(?:của\\s+)?(?:${SCHOOL}\\s+)?${AUTHOR}\\s*,`, "gi"), ",")
+    // Chủ ngữ là tác giả: "Vương Đình Chi cho rằng, X" -> "Có ý kiến cho rằng, X"
+    .replace(new RegExp(`${AUTHOR}\\s+(cho rằng|đề nghị|nói|xem trọng)`, "g"), (_m, verb, offset, whole) =>
+      casedAt(whole, offset, verb === "đề nghị" ? "nên" : `có ý kiến ${verb}`),
+    )
+    .replace(new RegExp(`(?:của\\s+)?${SCHOOL}\\s+${AUTHOR}`, "g"), "một số trường phái")
+    .replace(new RegExp(`kiến giải của ${AUTHOR}`, "g"), "kiến giải này")
+    .replace(new RegExp(`${BOOK}`, "g"), "cổ thư")
+    .replace(/"cổ thư" của phái Bắc, hay "cổ thư" của phái Nam,\s*/g, "")
+    .replace(/,\s*dù là\s*đều/g, " đều")
+    .replace(new RegExp(SCHOOL, "g"), (_m, offset, whole) => casedAt(whole, offset, "một số trường phái"))
+    .replace(new RegExp(AUTHOR, "g"), (_m, offset, whole) => casedAt(whole, offset, "người nghiên cứu"));
+
+// Lỗi chính tả tên sao chắc chắn (không trùng từ có nghĩa khác) - sửa để người đọc và bộ lọc câu nhận đúng sao.
+const STAR_TYPOS: Array<[RegExp, string]> = [
+  [/Hửu Bật/g, "Hữu Bật"],
+  [/Vẫn Khúc/g, "Văn Khúc"],
+  [/Liêm Trình/g, "Liêm Trinh"],
+  [/Phá Quần/g, "Phá Quân"],
+  [/Kinh Dương/g, "Kình Dương"],
+  [/Linh Tính/g, "Linh Tinh"],
+  [/Cư Môn/g, "Cự Môn"],
+  [/Thiên Lượng/g, "Thiên Lương"],
+  [/Thiên Đông(?![\p{L}])/gu, "Thiên Đồng"],
+  [/Đa La(?![\p{L}])/gu, "Đà La"],
+  [/Hòa Tinh/g, "Hỏa Tinh"],
+];
+const fixStarTypos = (text: string) => STAR_TYPOS.reduce((acc, [re, to]) => acc.replace(re, to), text);
+
+// Một nhóm tri thức xưng "ngươi" (văn phong trò chơi) -> "bạn".
+const modernizePronoun = (text: string) => text.replace(/(^|[^\p{L}])(N|n)gươi(?![\p{L}])/gu, (_m, pre, n) => `${pre}${n === "N" ? "Bạn" : "bạn"}`);
+
 const cleanText = (text: string) =>
-  stripChinese(stripUngKy(String(text || "").normalize("NFC").replace(/\r\n?/g, "\n")))
+  fixStarTypos(modernizePronoun(scrubSources(stripOtherChartYears(stripChinese(stripUngKy(String(text || "").normalize("NFC").replace(/\r\n?/g, "\n")))))))
     .replace(/[ \t ]+/g, " ")
     .replace(/ *\n */g, "\n")
     .replace(/\n{3,}/g, "\n\n")

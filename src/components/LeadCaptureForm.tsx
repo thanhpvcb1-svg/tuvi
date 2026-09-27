@@ -20,6 +20,8 @@ type Props = {
 
 const STORAGE_KEY = "lead_capture_submitted";
 const WEBHOOK_URL = import.meta.env.VITE_LEAD_WEBHOOK_URL || "";
+/** Form chỉ có ý nghĩa khi thông tin thực sự được gửi tới đội ngũ (VITE_LEAD_WEBHOOK_URL). */
+export const isLeadCaptureConfigured = Boolean(WEBHOOK_URL);
 
 const interestOptions = [
   { value: "", label: "Chọn chủ đề quan tâm" },

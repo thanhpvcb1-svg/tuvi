@@ -1,8 +1,9 @@
 import React from "react";
+import { contactFacebookUrl, contactSmsNumber, contactZaloUrl } from "../utils/appUtils";
 
-const smsNumber = import.meta.env.VITE_CONTACT_SMS_NUMBER?.trim();
-const zaloUrl = import.meta.env.VITE_CONTACT_ZALO_URL?.trim() || "https://zalo.me/";
-const facebookUrl = import.meta.env.VITE_CONTACT_FACEBOOK_URL?.trim() || "https://www.facebook.com/";
+const smsNumber = contactSmsNumber;
+const zaloUrl = contactZaloUrl;
+const facebookUrl = contactFacebookUrl;
 
 const smsMessage = encodeURIComponent("Chào bạn, mình cần hỗ trợ về lá số tử vi.");
 const smsHref = smsNumber ? `sms:${smsNumber}?body=${smsMessage}` : `sms:?body=${smsMessage}`;
@@ -54,10 +55,16 @@ const contactLinks = [
   },
 ] as const;
 
+// Chỉ hiện kênh đã cấu hình thật; không có kênh nào thì ẩn cả khối.
+const configuredLinks = contactLinks.filter((link) =>
+  link.id === "sms" ? Boolean(smsNumber) : link.id === "zalo" ? Boolean(zaloUrl) : Boolean(facebookUrl),
+);
+
 export default function FloatingContactLinks() {
+  if (configuredLinks.length === 0) return null;
   return (
     <aside className="floating-contact-links" aria-label="Liên hệ nhanh">
-      {contactLinks.map((link) => (
+      {configuredLinks.map((link) => (
         <a
           key={link.id}
           className={link.className}

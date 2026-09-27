@@ -51,7 +51,7 @@ type TikTokModalState = {
   resolvedUrl: string;
 };
 
-const defaultLoadError = "Chưa thể tải danh sách video lúc này.";
+const defaultLoadError = "Chưa tải được danh sách video YouTube mới nhất. Bạn vẫn có thể xem các video bên dưới.";
 const defaultTikTokError = "Chưa thể tải phần xem trước TikTok lúc này.";
 const platformFilters: Array<{ id: VideoPlatformFilter; label: string }> = [
   { id: "all", label: "Tất cả" },
@@ -174,7 +174,7 @@ export default function VideoLessonsPage() {
         if (contentType.includes("application/json")) {
           payload = JSON.parse(rawText) as YouTubeLessonsResponse;
         } else if (rawText.trim().startsWith("<")) {
-          throw new Error("API video chưa hoạt động ở môi trường này hoặc đang bị route SPA ghi đè.");
+          throw new Error(defaultLoadError);
         } else {
           throw new Error(defaultLoadError);
         }
@@ -206,8 +206,8 @@ export default function VideoLessonsPage() {
         return;
       }
 
-      const message = caughtError instanceof Error ? caughtError.message : defaultLoadError;
-      setError(message);
+      // Không hiện thông điệp kỹ thuật cho người xem
+      setError(defaultLoadError);
       setYoutubeItems([]);
     } finally {
       if (!signal?.aborted) {
@@ -298,7 +298,7 @@ export default function VideoLessonsPage() {
             throw new Error("API TikTok trả về JSON không hợp lệ.");
           }
         } else if (rawText.trim().startsWith("<")) {
-          throw new Error("API TikTok chưa hoạt động ở môi trường này hoặc đang bị route SPA ghi đè.");
+          throw new Error(defaultTikTokError);
         } else {
           throw new Error(defaultTikTokError);
         }
@@ -365,7 +365,7 @@ export default function VideoLessonsPage() {
         {isLoading ? <div className="youtube-lessons-feedback youtube-lessons-feedback--loading">Đang tải danh sách video mới nhất...</div> : null}
 
         {!isLoading && error ? (
-          <div className="youtube-lessons-feedback youtube-lessons-feedback--error" role="alert">
+          <div className="youtube-lessons-feedback youtube-lessons-feedback--error" role="status">
             <p>{error}</p>
             <button type="button" className="primary-button youtube-lessons-retry" onClick={() => void loadLessons()}>
               Thử tải lại
@@ -373,13 +373,13 @@ export default function VideoLessonsPage() {
           </div>
         ) : null}
 
-        {!isLoading && !error && filteredItems.length === 0 ? (
+        {!isLoading && filteredItems.length === 0 ? (
           <div className="youtube-lessons-feedback" role="status">
             Chưa có video nào phù hợp với bộ lọc hiện tại.
           </div>
         ) : null}
 
-        {!error && filteredItems.length > 0 ? (
+        {filteredItems.length > 0 ? (
           <div className="youtube-lessons-grid">
             {filteredItems.map((item) => (
               <article key={item.id} className="youtube-lesson-card">

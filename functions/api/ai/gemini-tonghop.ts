@@ -54,7 +54,12 @@ const SYSTEM_PROMPT = `Bạn là **chuyên gia luận giải Tử Vi Đẩu Số
 4. Không đánh giá một sao độc lập ("một sao = một kết luận"). Luôn xét **sao + cung + miếu/vượng/hãm + tam phương + xung chiếu + giáp cung + Tứ Hóa + Phi Hóa + đại vận** khi dữ liệu có, rồi mới tổng hợp.
 5. Chỉ dùng dữ liệu trong CHART_DATA, CONTEXT_DATA và KNOWLEDGE. Mỗi mục KNOWLEDGE có dạng "[Khớp: ...] nội dung". Nhãn [NGUỒN] nghĩa là thông tin lấy trực tiếp từ KNOWLEDGE. Không nêu tên website, sách, tác giả hay trích dẫn bất kỳ nguồn bên ngoài nào.
 6. Nếu một mục không có dữ liệu (vd không có tri thức, không có Phi Hóa, không rõ tiểu vận) thì ghi "[THIẾU DỮ LIỆU] Không đủ dữ liệu để kết luận." - không suy đoán lấp chỗ trống.
-7. Không khẳng định dự đoán chắc chắn về tương lai; dùng ngôn ngữ xu hướng, tham khảo.
+7. Không khẳng định dự đoán chắc chắn về tương lai; dùng ngôn ngữ xu hướng, tham khảo. Không biến suy luận thành sự thật tuyệt đối.
+8. Nếu các mục KNOWLEDGE cho cách hiểu khác nhau hoặc trái nhau về cùng một yếu tố, trình bày cả hai cách hiểu và điều kiện của từng cách - không tự loại bỏ, không tự chọn một bên khi dữ liệu lá số không đủ để phân định.
+9. Không tự tạo quy tắc an sao hay cách cục mới ngoài dữ liệu được cung cấp.
+10. Mục KNOWLEDGE có nhãn [Vận hạn năm xem] chỉ dùng cho phần Đại vận / Tiểu vận / Lưu niên, không dùng để luận tính chất cả đời.
+11. KNOWLEDGE đã được lọc theo lá số (câu nói về vị trí, độ sáng, giới tính, năm sinh, sao khác đã được lược). Nếu một câu vẫn còn nêu điều kiện (độ sáng, Tứ Hóa, sao hội chiếu), đối chiếu với CONTEXT_DATA trước khi dùng; không khớp thì bỏ qua câu đó.
+12. Lời cổ thư mang tính phán quyết nặng ("khắc cha", "chết yểu", "ly dị", "tàn tật"...) phải diễn đạt lại thành xu hướng hoặc điểm cần lưu ý, có điều kiện kèm theo; không lặp nguyên văn gây hoang mang, không chẩn đoán y khoa.
 
 ## PHƯƠNG PHÁP BẮC PHÁI
 
@@ -112,20 +117,20 @@ Theo vanNamXem của năm xem; nếu không có thì [THIẾU DỮ LIỆU].
 ### 10. Tổng hợp
 Kết hợp các yếu tố trên; nêu rõ đâu là xu hướng, đâu là điểm cần lưu ý.`;
 
-const SINGLE_PALACE_STRUCTURE = `### Dữ liệu sử dụng
-Sao, độ sáng, Tứ Hóa, tam phương, xung chiếu, giáp cung, đại vận của cung và các mục KNOWLEDGE đã khớp.
+const SINGLE_PALACE_STRUCTURE = `### Kết luận
+2-3 câu tóm tắt xu hướng chính của cung, chỉ nêu điều có căn cứ ở các mục dưới.
 
-### Cấu trúc cung
-Bản cung + tam phương + xung chiếu + giáp cung.
+### Cơ sở lá số
+Sao, độ sáng, Tứ Hóa, Phi Hóa, tam phương, xung chiếu, giáp cung và đại vận / tiểu vận của cung (nếu cung đang được kích hoạt ở năm xem).
 
-### Tứ Hóa và Phi Hóa
-Tứ Hóa sinh niên và Phi Hóa liên quan tới cung.
+### Tri thức được truy xuất
+Tóm lược các mục KNOWLEDGE đã khớp với cung (ghi [NGUỒN]); nếu có cách hiểu khác nhau thì nêu đủ các cách hiểu.
 
-### Thời vận
-Đại vận / tiểu vận nếu cung đang được kích hoạt ở năm xem.
+### Phân tích
+Kết hợp cơ sở lá số và tri thức (ghi [PHÂN TÍCH]); không kết luận từ một sao đứng riêng.
 
-### Tổng hợp
-Nhận định có căn cứ; phần thiếu căn cứ ghi [THIẾU DỮ LIỆU].`;
+### Điểm chưa đủ dữ liệu
+Những gì chưa thể kết luận vì thiếu dữ liệu hoặc thiếu tri thức khớp (ghi [THIẾU DỮ LIỆU]).`;
 
 // ============ HELPERS ============
 
@@ -145,15 +150,26 @@ function buildChartData(profile: RequestBody["profile"]): string {
 const MAX_STARS_PER_PALACE = 15;
 const MAX_KNOWLEDGE_TEXTS_PER_PALACE = 10;
 const MAX_KNOWLEDGE_TEXT_LENGTH = 1200;
+const MAX_RELATED_PALACE_LENGTH = 200;
+
+// Cắt ở ranh giới câu gần nhất trước giới hạn - không đưa cho AI nửa câu (dễ bị hiểu sai nghĩa).
+function clipAtSentence(text: string, max: number): string {
+  const value = String(text);
+  if (value.length <= max) return value;
+  const cut = value.slice(0, max);
+  const end = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(".\n"), cut.lastIndexOf("; "), cut.lastIndexOf("\n"));
+  return (end > max * 0.5 ? cut.slice(0, end + 1) : cut).trim() + " …";
+}
 
 function buildContextData(palaces: PalaceSummary[]): string {
   const palaceContexts = palaces.map((p) => ({
     cung: p.name,
     viTri: `${p.stem} ${p.branch}`,
     isBodyPalace: p.isBodyPalace || undefined,
-    tamPhuong: p.tamPhuong?.slice(0, 2).map((x) => String(x).slice(0, 20)),
-    xungChieu: p.xungChieu ? String(p.xungChieu).slice(0, 20) : undefined,
-    giapCung: p.giapCung?.slice(0, 2).map((x) => String(x).slice(0, 20)),
+    // "Tài Bạch (Ngọ): Thiên Cơ (đắc); Thiên Khôi" - tên cung kèm sao để AI luận hội chiếu / xung chiếu / giáp.
+    tamPhuong: p.tamPhuong?.slice(0, 2).map((x) => String(x).slice(0, MAX_RELATED_PALACE_LENGTH)),
+    xungChieu: p.xungChieu ? String(p.xungChieu).slice(0, MAX_RELATED_PALACE_LENGTH) : undefined,
+    giapCung: p.giapCung?.slice(0, 2).map((x) => String(x).slice(0, MAX_RELATED_PALACE_LENGTH)),
     daiVan: p.daiVan ? String(p.daiVan).slice(0, 20) : undefined,
     vanNamXem: p.vanNamXem?.slice(0, 2).map((x) => String(x).slice(0, 30)),
     chinhTinh: p.majorStars.length > 0 ? p.majorStars.slice(0, MAX_STARS_PER_PALACE) : undefined,
@@ -186,7 +202,7 @@ function buildKnowledgeData(palaces: PalaceSummary[]): string {
     .filter((p) => p.knowledgeTexts.length > 0)
     .map((p) => ({
       cung: p.name,
-      triThuc: p.knowledgeTexts.slice(0, MAX_KNOWLEDGE_TEXTS_PER_PALACE).map((text) => String(text).slice(0, MAX_KNOWLEDGE_TEXT_LENGTH)),
+      triThuc: p.knowledgeTexts.slice(0, MAX_KNOWLEDGE_TEXTS_PER_PALACE).map((text) => clipAtSentence(text, MAX_KNOWLEDGE_TEXT_LENGTH)),
     }));
 
   if (knowledgeByPalace.length === 0) {

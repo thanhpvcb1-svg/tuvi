@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import FloatingContactLinks from "./components/FloatingContactLinks";
 import MobileStickyCTA from "./components/MobileStickyCTA";
 import SiteFooter from "./components/SiteFooter";
-import SocialProofPopup from "./components/SocialProofPopup";
 import ThemeToggle from "./components/ThemeToggle";
 import { AppProvider, useAppContext } from "./context/AppContext";
 import { scheduleKnowledgePreload } from "./lib/tuvi/knowledge/lazyKnowledgeLoader";
@@ -90,10 +89,11 @@ function AppContent() {
       setActivePage("privacy");
     } else if (path === "/gioi-thieu" || path === "/about" || path === "/ve-chung-toi") {
       setActivePage("about");
-    } else if (path === "/404") {
-      setActivePage("404");
-    } else {
+    } else if (path === "/") {
       setActivePage("home");
+    } else {
+      // URL không tồn tại -> trang 404 (Cloudflare trả dist/404.html với status 404)
+      setActivePage("404");
     }
   }, [location.pathname]);
 
@@ -257,7 +257,6 @@ function AppContent() {
         onSecondaryClick={() => navigate("/bang-gia")}
       />
       <FloatingContactLinks />
-      <SocialProofPopup />
       <SiteFooter />
     </div>
   );

@@ -4,7 +4,7 @@ import FAQSection from "../components/FAQSection";
 import PremiumPlans, { type PricingPlan } from "../components/PremiumPlans";
 import SEOHead from "../components/SEOHead";
 import { pricingFaqs, pricingGuides, goodQuestionExamples, weakQuestionExamples } from "../utils/appUtils";
-import { organizationSchema, faqSchema, breadcrumbSchema, productSchemas } from "../schemas/seoSchemas";
+import { organizationSchema, faqSchema, breadcrumbSchema, pricingServiceSchema } from "../schemas/seoSchemas";
 
 type Props = {
   onNavigateChartForm: () => void;
@@ -24,14 +24,14 @@ export default function PricingPage({ onNavigateChartForm }: Props) {
   return (
     <div className="home-page">
       <SEOHead
-        title="Bảng Giá Luận Giải Tử Vi 2024 | Hỏi 1 Câu 50K | Tử Vi Phong Lam"
-        description="Lập lá số miễn phí, hỏi 1 câu 50.000đ, tư vấn trực tiếp 999.000đ. Luận giải tử vi Bắc Phái chuyên sâu."
+        title="Bảng Giá Luận Giải Tử Vi | Hỏi 1 Câu 50K | Tử Vi Phong Lam"
+        description="Lập lá số miễn phí, hỏi 1 câu theo lá số 50.000đ, tư vấn trực tiếp 999.000đ. Luận giải tử vi theo phương pháp Bắc phái."
         canonicalPath="/bang-gia"
         schema={[
           organizationSchema,
           faqSchema(pricingFaqs),
           breadcrumbSchema([{ name: "Trang chủ", path: "/" }, { name: "Bảng giá", path: "/bang-gia" }]),
-          ...productSchemas,
+          pricingServiceSchema,
         ]}
       />
 

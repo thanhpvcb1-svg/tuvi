@@ -3,7 +3,8 @@ import { useEffect } from "react";
 type Props = {
   title: string;
   description: string;
-  canonicalPath: string;
+  /** Bỏ trống cho trang không được index (vd 404): không đặt canonical / og:url */
+  canonicalPath?: string;
   ogImage?: string;
   schema?: Record<string, unknown> | Array<Record<string, unknown>>;
   noindex?: boolean;
@@ -37,7 +38,6 @@ export default function SEOHead({ title, description, canonicalPath, ogImage = D
     upsertMeta('meta[property="og:title"]', { property: "og:title", content: title });
     upsertMeta('meta[property="og:description"]', { property: "og:description", content: description });
     upsertMeta('meta[property="og:type"]', { property: "og:type", content: "website" });
-    upsertMeta('meta[property="og:url"]', { property: "og:url", content: toCanonicalUrl(canonicalPath) });
     upsertMeta('meta[property="og:image"]', { property: "og:image", content: ogImage });
     upsertMeta('meta[property="og:site_name"]', { property: "og:site_name", content: "Tử Vi Phong Lam" });
     upsertMeta('meta[property="og:locale"]', { property: "og:locale", content: "vi_VN" });
@@ -47,15 +47,23 @@ export default function SEOHead({ title, description, canonicalPath, ogImage = D
     upsertMeta('meta[name="twitter:image"]', { name: "twitter:image", content: ogImage });
 
     let canonical = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
+    if (canonicalPath) {
+      const url = toCanonicalUrl(canonicalPath);
+      upsertMeta('meta[property="og:url"]', { property: "og:url", content: url });
+      if (!canonical) {
+        canonical = document.createElement("link");
+        canonical.rel = "canonical";
+        document.head.appendChild(canonical);
+      }
+      canonical.href = url;
+      document.head.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]').forEach((link) => {
+        link.href = url;
+      });
+    } else {
+      // Trang 404: không giữ canonical của trang trước (khi điều hướng trong SPA)
+      canonical?.remove();
+      document.head.querySelector('meta[property="og:url"]')?.remove();
     }
-    canonical.href = toCanonicalUrl(canonicalPath);
-    document.head.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]').forEach((link) => {
-      link.href = toCanonicalUrl(canonicalPath);
-    });
 
     const schemaId = "route-structured-data";
     const existing = document.getElementById(schemaId);

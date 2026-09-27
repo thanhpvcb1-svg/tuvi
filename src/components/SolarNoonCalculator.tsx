@@ -215,7 +215,7 @@ export default function SolarNoonCalculator() {
       <div className="solar-noon-card-head">
         <div className="solar-noon-card-copy">
           <p className="solar-noon-card-kicker">VỊ TRÍ TÍNH TOÁN</p>
-          <h3>{currentLocation.displayName}</h3>
+          <p className="solar-noon-location-name">{currentLocation.displayName}</p>
         </div>
         <button type="button" className="ghost-button solar-noon-compact-button" onClick={handleOpenModal}>
           Đổi
@@ -238,6 +238,7 @@ export default function SolarNoonCalculator() {
           id="solar-noon-date"
           className="solar-noon-inline-date"
           type="date"
+          aria-label="Ngày tính giờ chính ngọ"
           value={selectedDate}
           onChange={(event) => setSelectedDate(event.target.value)}
         />

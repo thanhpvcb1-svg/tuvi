@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FAQSection from "../components/FAQSection";
 import SEOHead from "../components/SEOHead";
 import { compatFaqs, compatibilityBriefItems } from "../utils/appUtils";
@@ -10,13 +10,11 @@ type Props = {
 };
 
 export default function CompatPage({ onNavigateChartForm }: Props) {
-  const navigate = useNavigate();
-
   return (
     <div className="home-page">
       <SEOHead
-        title="Xem Hợp Tuổi Vợ Chồng Theo Lá Số Tử Vi | Tử Vi Phong Lam"
-        description="So khớp hợp tuổi tình cảm, hôn nhân, hợp tác theo lá số tử vi. Đối chiếu Mệnh, Thân, cung Phu Thê chính xác."
+        title="So Khớp Hai Lá Số Tử Vi – Chuẩn Bị Xem Hợp Tuổi | Tử Vi Phong Lam"
+        description="Tính năng so khớp hai lá số đang được hoàn thiện. Hướng dẫn chuẩn bị ngày giờ sinh hai người và câu hỏi chính để đối chiếu Mệnh, Thân, cung Phu Thê."
         canonicalPath="/hop-tuoi"
         schema={[
           organizationSchema,
@@ -33,6 +31,7 @@ export default function CompatPage({ onNavigateChartForm }: Props) {
           <p>Chuẩn bị dữ liệu cho hai người và xác định câu hỏi chính trước khi đối chiếu: tình cảm, hôn nhân, hợp tác, tài chính hay nhịp sống.</p>
         </div>
 
+        <h2 className="sr-only">Tổng quan so khớp hai lá số</h2>
         <div className="seo-copy-grid">
           <article className="seo-copy-card">
             <h3>Dữ liệu nên có trước</h3>
@@ -69,8 +68,17 @@ export default function CompatPage({ onNavigateChartForm }: Props) {
           <h2>Bạn có thể chuẩn bị dữ liệu từ bây giờ</h2>
           <p>Lập lá số của mình trước, sau đó ghi rõ trường hợp muốn đối chiếu hoặc copy brief liên hệ. Cách này giúp việc so khớp sau đó đi nhanh hơn và ít mơ hồ hơn.</p>
           <div className="home-hero-actions">
-            <button type="button" className="primary-button" onClick={onNavigateChartForm}>Lập lá số miễn phí</button>
-            <button type="button" className="ghost-button" onClick={() => navigate("/lien-he")}>Chuẩn bị brief liên hệ</button>
+            <a
+              className="primary-button"
+              href="/lap-la-so/"
+              onClick={(event) => {
+                event.preventDefault();
+                onNavigateChartForm();
+              }}
+            >
+              Lập lá số miễn phí
+            </a>
+            <Link className="ghost-button" to="/lien-he">Chuẩn bị brief liên hệ</Link>
           </div>
         </div>
 

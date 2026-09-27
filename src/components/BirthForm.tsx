@@ -209,7 +209,7 @@ export default function BirthForm({
           {/* Actions */}
           <div className="form-actions">
             <button type="button" className="btn-primary" onClick={onSubmit} aria-busy={isSubmitting}>
-              {isSubmitting ? "Đang lập..." : canPrint ? "Lập lại" : "LẬP LÁ SỐ NGAY"}
+              {isSubmitting ? "Đang lập..." : canPrint ? "Lập lại" : "Lập lá số ngay"}
             </button>
             <button type="button" className="btn-ghost" onClick={() => window.print()} disabled={!canPrint}>
               In

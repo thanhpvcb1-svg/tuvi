@@ -30,7 +30,7 @@ export const organizationSchema = {
   "@id": organizationId,
   name: "Tử Vi Phong Lam",
   url: siteUrl,
-  logo: `${siteUrl}/favicon.svg`,
+  logo: `${siteUrl}/logo.png`,
   description: "Nền tảng lập lá số tử vi online và luận giải theo Bắc Phái.",
   ...(contactEmail ? { email: contactEmail } : {}),
 };
@@ -90,7 +90,7 @@ export const articleListSchema = {
   url: pageUrl(`/bai-viet`),
   mainEntity: {
     "@type": "ItemList",
-    itemListElement: knowledgeArticles.slice(0, 10).map((article, index) => ({
+    itemListElement: knowledgeArticles.map((article, index) => ({
       "@type": "ListItem",
       position: index + 1,
       url: pageUrl(`/bai-viet/${article.slug}`),
@@ -109,48 +109,26 @@ export const videoGallerySchema = {
 
 // ============ DYNAMIC SCHEMAS ============
 
-export const pricingServiceSchemas = primaryPlans
-  .filter((plan) => plan.price !== "0đ")
-  .map((plan) => ({
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: plan.name,
-    description: plan.description,
-    provider: {
-      "@type": "Organization",
-      name: "Tử Vi Phong Lam",
-      url: siteUrl,
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "VND",
-      price: plan.price.replace(/[^\d]/g, ""),
-      availability: "https://schema.org/InStock",
-      url: pageUrl(`/bang-gia`),
-    },
-  }));
-
-export const productSchemas = primaryPlans.map((plan) => ({
+// Một Service với bảng giá - khớp JSON-LD prerender của /bang-gia (scripts/prerender-pages.mjs).
+// Không dùng Product/availability: dịch vụ chưa bán online và không có đánh giá thật.
+export const pricingServiceSchema = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  name: plan.name,
-  description: plan.description,
-  brand: {
-    "@type": "Brand",
-    name: "Tử Vi Phong Lam",
+  "@type": "Service",
+  name: "Luận giải tử vi theo lá số",
+  description: "Lập lá số tử vi miễn phí theo ngày giờ sinh; hỏi một câu theo lá số hoặc tư vấn trực tiếp.",
+  provider: { "@id": `${siteUrl}/#organization` },
+  areaServed: "VN",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Dịch vụ luận giải tử vi",
+    itemListElement: primaryPlans.map((plan) => ({
+      "@type": "Offer",
+      name: plan.name,
+      price: plan.price.replace(/[^\d]/g, "") || "0",
+      priceCurrency: "VND",
+    })),
   },
-  offers: {
-    "@type": "Offer",
-    price: plan.price.replace(/[^\d]/g, "") || "0",
-    priceCurrency: "VND",
-    availability: "https://schema.org/InStock",
-    url: pageUrl(`/bang-gia`),
-    seller: {
-      "@type": "Organization",
-      name: "Tử Vi Phong Lam",
-    },
-  },
-}));
+};
 
 // ============ HELPER FUNCTIONS ============
 
@@ -180,22 +158,21 @@ export const breadcrumbSchema = (items: Array<{ name: string; path: string }>) =
   })),
 });
 
-export const articleSchema = (article: { title: string; summary: string; slug: string }) => ({
+export const articleSchema = (article: { title: string; summary: string; slug: string; publishedAt: string; updatedAt: string }) => ({
   "@context": "https://schema.org",
   "@type": "Article",
   headline: article.title,
   description: article.summary,
+  url: pageUrl(`/bai-viet/${article.slug}`),
   mainEntityOfPage: pageUrl(`/bai-viet/${article.slug}`),
-  author: {
-    "@type": "Organization",
-    name: "Tử Vi Phong Lam",
-  },
+  inLanguage: "vi-VN",
+  datePublished: article.publishedAt,
+  dateModified: article.updatedAt,
+  image: `${siteUrl}/og-image.png`,
+  author: { "@type": "Organization", name: "Tử Vi Phong Lam", url: siteUrl },
   publisher: {
     "@type": "Organization",
     name: "Tử Vi Phong Lam",
-    logo: {
-      "@type": "ImageObject",
-      url: `${siteUrl}/favicon.svg`,
-    },
+    logo: { "@type": "ImageObject", url: `${siteUrl}/logo.png` },
   },
 });

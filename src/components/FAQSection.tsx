@@ -11,6 +11,8 @@ type Props = {
   description?: string;
   faqs: FAQItem[];
   id?: string;
+  /** "h1" khi FAQ là nội dung chính của trang (/faq) */
+  titleAs?: "h1" | "h2";
 };
 
 export default function FAQSection({
@@ -19,6 +21,7 @@ export default function FAQSection({
   description = "Những câu hỏi phổ biến trước khi lập lá số hoặc chọn gói hỗ trợ.",
   faqs,
   id = "faq",
+  titleAs: TitleTag = "h2",
 }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -26,7 +29,7 @@ export default function FAQSection({
     <section className="content-section" id={id}>
       <div className="section-heading">
         <p className="eyebrow">{eyebrow}</p>
-        <h2>{title}</h2>
+        <TitleTag>{title}</TitleTag>
         <p>{description}</p>
       </div>
 

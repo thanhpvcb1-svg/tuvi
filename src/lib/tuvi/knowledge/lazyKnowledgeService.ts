@@ -10,7 +10,9 @@ import {
   checkTextRequirements,
   computePeriod,
   conditionPalaceKeys,
+  conditionPalaceStars,
   isPeriodCondition,
+  refineTextForChart,
   evaluateCondition,
   isAnchoredCondition,
   palaceKey,
@@ -85,6 +87,10 @@ export type KnowledgeMatch = {
   matchedConditions: number;
   matchScore: number;
   matchReasons: string[];
+  /** Số câu đã lược vì nêu điều kiện riêng không khớp lá số (độ sáng, vị trí, giới tính...). */
+  trimmedSentences?: number;
+  /** Câu đã lược kèm lý do (kiểm thử / rà soát). */
+  trimmedDetails?: Array<{ sentence: string; reason: string }>;
 };
 
 export type PhiHoaFlow = {
@@ -213,6 +219,16 @@ const PALACE_IDS: Record<string, string> = {
 
 
 const MIN_RELATIVE_SCORE = 0.5;
+// Tỉ lệ từ chung (so với đoạn ngắn hơn) từ mức này trở lên coi là cùng một nội dung.
+const NEAR_DUPLICATE = 0.8;
+const wordSet = (text: string) => new Set(text.toLowerCase().split(/[^\p{L}\d]+/u).filter((w) => w.length >= 2));
+const overlap = (a: Set<string>, b: Set<string>) => {
+  const [small, large] = a.size <= b.size ? [a, b] : [b, a];
+  if (small.size < 8) return 0; // đoạn quá ngắn: so theo 100 ký tự đầu là đủ
+  let shared = 0;
+  for (const w of small) if (large.has(w)) shared++;
+  return shared / small.size;
+};
 // Cùng một tập điều kiện chỉ giữ tối đa N nội dung (thường là nhiều bài viết cùng mô tả một sao).
 const MAX_TEXTS_PER_CONDITION = 2;
 
@@ -244,6 +260,7 @@ export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatc
   for (const { entry, source, section } of candidates) {
     // Một nội dung có thể có nhiều rule (điều kiện gốc khác nhau) -> lấy rule khớp nhiều điều kiện nhất.
     let best: KnowledgeMatch | null = null;
+    let bestRule: NormalizedRule | null = null;
     for (const rule of entry.rules) {
       if (!isAnchoredCondition(rule)) continue; // chỉ vị trí / Can Chi / Nạp âm / sao phụ hội chiếu -> chung chung
       const reasons = evaluateCondition(rule, facts);
@@ -265,21 +282,50 @@ export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatc
           matchScore,
           matchReasons,
         };
+        bestRule = rule;
         conditionReasons.set(best, reasons);
       }
     }
-    if (best) results.push(best);
+    if (!best || !bestRule) continue;
+    // Lọc từng câu: bỏ câu có điều kiện riêng không khớp lá số; câu điều kiện đã kiểm chứng đúng
+    // được cộng vào lý do khớp. Cả đoạn không còn câu nào áp dụng được -> không hiển thị.
+    const refined = refineTextForChart(entry.text, facts, {
+      palaceKeys: [key!, ...conditionPalaceKeys(bestRule)],
+      conditionStars: conditionPalaceStars(bestRule),
+    });
+    if (!refined) {
+      conditionReasons.delete(best);
+      continue;
+    }
+    best.interpretation.text = refined.text;
+    if (refined.removed) {
+      best.trimmedSentences = refined.removed;
+      best.trimmedDetails = refined.dropped;
+    }
+    if (refined.applied.length) {
+      best.matchReasons = [...new Set([...best.matchReasons, ...refined.applied])];
+      best.matchedConditions = best.matchReasons.length;
+      // Có điều kiện riêng đã kiểm chứng: cụ thể hơn một bậc (không cộng dồn để không đẩy ngưỡng lọc
+      // tương đối lên cao, làm rơi các mục khớp đúng khác).
+      best.matchScore += 10;
+    }
+    results.push(best);
   }
 
   // Khớp nhiều điều kiện nhất lên trước; cùng điểm thì nội dung đầy đủ hơn lên trước.
   results.sort((a, b) => b.matchScore - a.matchScore || b.interpretation.text.length - a.interpretation.text.length);
 
+  // Trùng lặp: cùng 100 ký tự đầu, hoặc gần như cùng nội dung (nhiều nguồn chép lại nhau) -> giữ bản xếp trước.
   const seen = new Set<string>();
   const deduped: KnowledgeMatch[] = [];
+  const keptWords: Array<Set<string>> = [];
   for (const item of results) {
     const textKey = item.interpretation.text.slice(0, 100);
     if (seen.has(textKey)) continue;
+    const words = wordSet(item.interpretation.text);
+    if (keptWords.some((other) => overlap(words, other) >= NEAR_DUPLICATE)) continue;
     seen.add(textKey);
+    keptWords.push(words);
     deduped.push(item);
   }
 

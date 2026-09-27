@@ -4,22 +4,26 @@ import BacPhaiArticlePage from "../components/BacPhaiArticlePage";
 import BacPhaiLibraryPage from "../components/BacPhaiLibraryPage";
 import Breadcrumb from "../components/Breadcrumb";
 import SEOHead from "../components/SEOHead";
-import { findKnowledgeArticleByPath, knowledgeArticles } from "../content/bacPhaiLibrary";
+import NotFoundPage from "./NotFoundPage";
+import { articleMetaDescription, articlePageTitle, findKnowledgeArticleByPath, getRelatedArticles, knowledgeArticles } from "../content/bacPhaiLibrary";
 import { organizationSchema, articleListSchema, breadcrumbSchema, articleSchema } from "../schemas/seoSchemas";
 
 export default function BlogPage() {
   const location = useLocation();
   const currentArticle = findKnowledgeArticleByPath(location.pathname);
-  const relatedArticles = currentArticle
-    ? knowledgeArticles.filter((article) => article.id !== currentArticle.id).slice(0, 3)
-    : [];
+  const relatedArticles = currentArticle ? getRelatedArticles(currentArticle) : [];
+
+  const isArticlePath = /^\/(bai-viet|blog|kien-thuc)\/[^/]+/.test(location.pathname);
+  if (!currentArticle && isArticlePath) {
+    return <NotFoundPage />;
+  }
 
   if (currentArticle) {
     return (
       <div className="home-page">
         <SEOHead
-          title={`${currentArticle.title} | Kiến Thức Tử Vi | Tử Vi Phong Lam`}
-          description={currentArticle.summary}
+          title={articlePageTitle(currentArticle)}
+          description={articleMetaDescription(currentArticle)}
           canonicalPath={`/bai-viet/${currentArticle.slug}`}
           schema={[
             organizationSchema,
@@ -45,7 +49,7 @@ export default function BlogPage() {
     <div className="home-page">
       <SEOHead
         title="Kiến Thức Tử Vi Bắc Phái - Tứ Hóa Phi Tinh | Tử Vi Phong Lam"
-        description="Tổng hợp bài viết chuyên sâu về Tử Vi Bắc Phái, Tứ Hóa Phi Tinh, cách đọc Mệnh Thân, đại vận lưu niên."
+        description="Bài viết nền tảng về Tử Vi Bắc Phái: 12 cung, cung Mệnh, cung Thân, Tứ Hóa Phi Tinh, tự hóa, đại vận và lưu niên."
         canonicalPath="/bai-viet"
         schema={[
           organizationSchema,

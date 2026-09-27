@@ -1,5 +1,5 @@
 import React from "react";
-import { getKnowledgeArticleHref, type KnowledgeArticle } from "../content/bacPhaiLibrary";
+import { formatArticleDate, getKnowledgeArticleHref, type KnowledgeArticle } from "../content/bacPhaiLibrary";
 
 type Props = {
   article: KnowledgeArticle;
@@ -50,7 +50,15 @@ export default function BacPhaiArticlePage({ article, relatedArticles }: Props) 
             <p>{article.applicationBox.body}</p>
           </div>
 
-          <p className="library-byline">Biên soạn: Tử Vi Phong Lam · Nội dung mang tính tham khảo, chưa thay thế ý kiến chuyên gia.</p>
+          <p className="library-byline">
+            Biên soạn: Tử Vi Phong Lam · Đăng <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt)}</time>
+            {article.updatedAt !== article.publishedAt ? (
+              <>
+                {" "}· Cập nhật <time dateTime={article.updatedAt}>{formatArticleDate(article.updatedAt)}</time>
+              </>
+            ) : null}{" "}
+            · Nội dung mang tính tham khảo, chưa thay thế ý kiến chuyên gia.
+          </p>
 
           {/* Tạm ẩn danh sách tài liệu dẫn (không công khai nguồn lấy tri thức); dữ liệu sourceRefs vẫn giữ trong bacPhaiLibrary.ts */}
           {SHOW_SOURCE_REFS ? <div className="library-source-box">

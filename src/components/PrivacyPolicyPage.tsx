@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
       <div className="legal-hero">
         <p className="eyebrow">Pháp lý</p>
         <h1>Chính sách bảo mật</h1>
-        <p>Cập nhật lần cuối: Tháng 12, 2024</p>
+        <p>Cập nhật lần cuối: Tháng 9, 2026</p>
       </div>
 
       <div className="legal-content">
@@ -93,11 +93,10 @@ export default function PrivacyPolicyPage() {
 
         <section className="legal-section">
           <h2>6. Cookies và công nghệ theo dõi</h2>
-          <p>Chúng tôi sử dụng:</p>
+          <p>Hiện tại website:</p>
           <ul>
-            <li><strong>Cookies cần thiết:</strong> Để website hoạt động bình thường</li>
-            <li><strong>Cookies phân tích:</strong> Google Analytics để hiểu cách người dùng sử dụng website</li>
-            <li><strong>LocalStorage:</strong> Lưu tạm dữ liệu lá số và cài đặt người dùng</li>
+            <li><strong>Không dùng cookie quảng cáo hay cookie phân tích.</strong> Nếu sau này bật công cụ đo lường (ví dụ Google Analytics), chính sách này sẽ được cập nhật và bạn sẽ được hỏi ý kiến trước.</li>
+            <li><strong>LocalStorage:</strong> lưu tạm dữ liệu lá số và cài đặt (giao diện sáng/tối) ngay trên trình duyệt của bạn.</li>
           </ul>
           <p>
             Bạn có thể tắt cookies trong cài đặt trình duyệt, tuy nhiên một số tính năng 
