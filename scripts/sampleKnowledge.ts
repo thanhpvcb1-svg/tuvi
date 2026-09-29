@@ -8,6 +8,7 @@ import type { NormalizedBirthInput } from "../src/lib/types";
 import { loadKnowledge, queryPalaceKnowledge } from "../src/lib/tuvi/knowledge/lazyKnowledgeService";
 import { checkConditionIndependently, checkPeriodConditionIndependently, checkTextScopeIndependently } from "./lib/knowledgeIndependentCheck";
 import { getActivePalaceIndexes } from "../src/components/VanHanhSelector";
+import { nominalAge } from "../src/lib/tuvi/nominalAge";
 
 const PALACES = ["Mệnh", "Phụ Mẫu", "Phúc Đức", "Điền Trạch", "Quan Lộc", "Nô Bộc", "Thiên Di", "Tật Ách", "Tài Bạch", "Tử Tức", "Phu Thê", "Huynh Đệ"];
 const KEY_PALACES = ["Mệnh", "Quan Lộc", "Tài Bạch", "Phu Thê"];
@@ -37,7 +38,7 @@ async function main() {
     const chart = createChart(input, "tuvichancoCompatible", { luuOptions: LUU_OPTIONS, horoscopeDate: new Date(2026, 5, 15) } as any);
 
     const menh = chart.palaces.find((p) => p.name === "Mệnh")!;
-    const active = getActivePalaceIndexes(chart.palaces, 2026 - year, menh.earthlyBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
+    const active = getActivePalaceIndexes(chart.palaces, nominalAge(chart, 2026, year) ?? 2026 - year + 1, menh.earthlyBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
     const years = { yearToView: 2026, birthYear: year };
     const body = chart.palaces.find((p) => p.isBodyPalace);
     console.log(

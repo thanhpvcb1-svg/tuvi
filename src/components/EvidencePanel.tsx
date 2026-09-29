@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import type { ChartView } from "../lib/types";
-import { isKnowledgeReady, loadKnowledge, queryPalaceKnowledge } from "../lib/tuvi/knowledge/lazyKnowledgeService";
+import { ensureChartKnowledge, isChartKnowledgeReady, queryPalaceKnowledge } from "../lib/tuvi/knowledge/lazyKnowledgeService";
 
 /**
  * "Cơ sở tri thức" - liệt kê các đoạn tri thức đã khớp với lá số theo từng cung, kèm lý do khớp.
@@ -18,18 +18,22 @@ type Props = {
 };
 
 export default function EvidencePanel({ chart, yearToView, birthYear }: Props) {
-  const [ready, setReady] = useState(isKnowledgeReady());
+  const [ready, setReady] = useState(() => isChartKnowledgeReady(chart, { yearToView, birthYear }));
 
   useEffect(() => {
-    if (ready) return;
+    if (isChartKnowledgeReady(chart, { yearToView, birthYear })) {
+      setReady(true);
+      return;
+    }
     let cancelled = false;
-    loadKnowledge()
-      .then(() => !cancelled && setReady(true))
-      .catch(() => undefined);
+    setReady(false);
+    ensureChartKnowledge(chart, { yearToView, birthYear })
+      .catch(() => undefined)
+      .finally(() => !cancelled && setReady(true));
     return () => {
       cancelled = true;
     };
-  }, [ready]);
+  }, [chart, yearToView, birthYear]);
 
   const rows = useMemo(() => {
     if (!ready) return [];

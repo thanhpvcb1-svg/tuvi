@@ -5,23 +5,10 @@
 
 import type { ChartView } from "../../types";
 import type { DisplayPalace, DisplayStar } from "../config/types";
-import {
-  buildChartFacts,
-  checkTextRequirements,
-  computePeriod,
-  conditionPalaceKeys,
-  conditionPalaceStars,
-  conditionSubject,
-  isPeriodCondition,
-  isSevereClaim,
-  refineTextForChart,
-  evaluateCondition,
-  isAnchoredCondition,
-  palaceKey,
-  type ChartFacts,
-  type Clause,
-  type TextRequirements,
-} from "./conditionMatcher";
+import { buildChartFacts, computePeriod, palaceKey, type ChartFacts } from "./conditionMatcher";
+import { PALACE_IDS, queryCandidates, resolveFile, type IndexedEntry, type NormalizedFile } from "./knowledgeQueryCore";
+import { KNOWLEDGE_MODE } from "./knowledgeMode";
+import { getRemoteMatches, isRemoteReady, prefetchChartKnowledge } from "./remoteKnowledge";
 import {
   getKnowledgeCache,
   isKnowledgeReady,
@@ -64,6 +51,8 @@ export type KnowledgeInterpretation = {
   relation_code?: string;
   text: string;
   warning?: string;
+  /** Trường phái có bằng chứng (vd "BAC_PHAI") - dùng làm evidence; không có = chưa xác định. */
+  school?: string;
   source: KnowledgeSource;
 };
 
@@ -137,34 +126,8 @@ function normalizeKey(value: string): string {
 // Knowledge Base đã làm mịn (cung/normalized/*.json, sinh bởi scripts/normalizeKnowledge.ts):
 // mỗi entry có sẵn các rule (điều kiện đã parse), runtime chỉ còn đánh giá rule trên lá số.
 
-type NormalizedRule = { condition: string; specificity: number; clauses: Clause[] };
-type NormalizedEntry = {
-  id: string;
-  section?: string;
-  text: string;
-  source: number;
-  accuracy: number;
-  rules: NormalizedRule[];
-  /** Phạm vi nội dung trích từ câu mở đầu - phải khớp lá số thì mới hiển thị. */
-  requires?: TextRequirements;
-  /** "pop": đoạn văn phong đại chúng xưng "bạn" (khen chung chung, khẩu hiệu) - tối đa 1 đoạn mỗi cung, xếp cuối. */
-  style?: "pop";
-};
-/**
- * File đã làm mịn. tuvi-knowledge@2: điều kiện lưu một lần trong `conditions`, entry.rules là chỉ số vào bảng đó.
- * (Bản @1 cũ lưu thẳng object rule trong từng entry - vẫn đọc được.)
- */
-type NormalizedFile = {
-  schema?: string;
-  palace: string;
-  title: string;
-  sources: KnowledgeSource[];
-  conditions?: NormalizedRule[];
-  entries: Array<Omit<NormalizedEntry, "rules"> & { rules: Array<NormalizedRule | number> }>;
-};
-
-type IndexedEntry = { entry: NormalizedEntry; source: KnowledgeSource; section: string };
 type KnowledgeIndex = Record<string, IndexedEntry[]>;
+export type { IndexedEntry, NormalizedEntry, NormalizedFile, NormalizedRule } from "./knowledgeQueryCore";
 
 // id cung trong UI -> file đã làm mịn
 const PALACE_FILES: Record<string, string> = {
@@ -193,17 +156,7 @@ function buildKnowledgeIndex(cache: Record<string, unknown>): KnowledgeIndex {
 
   const index: KnowledgeIndex = {};
   for (const [id, fileName] of Object.entries(PALACE_FILES)) {
-    const file = cache[fileName] as NormalizedFile | undefined;
-    const conditions = file?.conditions ?? [];
-    index[id] = (file?.entries ?? []).map((raw) => {
-      // Chỉ số -> object điều kiện dùng chung (cùng tham chiếu cho mọi entry trỏ tới cùng điều kiện).
-      const entry: NormalizedEntry = { ...raw, rules: raw.rules.map((r) => (typeof r === "number" ? conditions[r] : r)).filter(Boolean) };
-      return {
-        entry,
-        source: file!.sources?.[entry.source] ?? { book: "", author: "" },
-        section: entry.section || file!.title,
-      };
-    });
+    index[id] = resolveFile(cache[fileName] as NormalizedFile | undefined);
   }
 
   indexSource = cache;
@@ -222,67 +175,6 @@ function getChartFacts(chart: ChartView): ChartFacts {
   return facts;
 }
 
-const PALACE_IDS: Record<string, string> = {
-  "mệnh": "menh",
-  "phụ mẫu": "phu_mau",
-  "phúc đức": "phuc_duc",
-  "điền trạch": "dien_trach",
-  "quan lộc": "quan_loc",
-  "nô bộc": "no_boc",
-  "thiên di": "thien_di",
-  "tật ách": "tat_ach",
-  "tài bạch": "tai_bach",
-  "tử tức": "tu_tuc",
-  "phu thê": "phu_the",
-  "huynh đệ": "huynh_de",
-};
-
-
-const MIN_RELATIVE_SCORE = 0.5;
-// Số đoạn tối đa mỗi cung (lá số gốc / vận hạn năm xem) - đủ ý mà không ngợp; phần tổng hợp nhận tối đa 10 đoạn đầu.
-const MAX_NATAL_ITEMS = 8;
-const MAX_PERIOD_ITEMS = 3;
-// Câu phán một dòng ("Công danh sớm đạt", "phú quý song toàn") ít thông tin: xếp sau đoạn có nội dung, không đứng đầu.
-const SHORT_TEXT = 80;
-// Đoạn mở đầu cung nên là đoạn luận đầy đủ, không phải câu phán chung ("Luôn luôn là khuynh hướng hình khắc chia ly").
-const LEAD_TEXT = 200;
-// Tỉ lệ từ chung (so với đoạn ngắn hơn) từ mức này trở lên coi là cùng một nội dung.
-const NEAR_DUPLICATE = 0.8;
-// Phần lớn câu của đoạn (tính theo độ dài) đã có nguyên văn trong đoạn xếp trước -> đoạn lặp (nguồn chép lại nhau).
-const SENTENCE_CONTAINED = 0.6;
-const wordSet = (text: string) => new Set(text.toLowerCase().split(/[^\p{L}\d]+/u).filter((w) => w.length >= 2));
-const overlap = (a: Set<string>, b: Set<string>) => {
-  const [small, large] = a.size <= b.size ? [a, b] : [b, a];
-  if (small.size < 8) return 0; // đoạn quá ngắn: so theo 100 ký tự đầu là đủ
-  let shared = 0;
-  for (const w of small) if (large.has(w)) shared++;
-  return shared / small.size;
-};
-const sentenceKeys = (text: string) =>
-  text
-    .split(/(?<=[.!?;])\s+|\n/)
-    .map((s) => s.toLowerCase().replace(/[^\p{L}\d]+/gu, " ").trim())
-    .filter((s) => s.length >= 25);
-// Cùng một chủ đề (cùng chính tinh / sao của điều kiện) chỉ giữ tối đa N đoạn: nhiều nguồn cùng tả một sao thường lặp ý
-// nhau ("Có Thiên Tướng", "Thiên Tướng độc tọa", "Thiên Tướng gặp Không Kiếp"...).
-const MAX_TEXTS_PER_SUBJECT = 2;
-// Lời khen tuyệt đối trong câu phán ngắn - không hiển thị khi chính cung có sát tinh / Hóa Kỵ.
-const ABSOLUTE_PRAISE = /phú quý|giàu có|đại phú|đại quý|song toàn|hiển đạt|phát đạt|vinh hiển|sớm đạt|kiêm toàn|lúc nào cũng có tiền|dồi dào|quyền cao chức trọng|làm quan lớn/iu;
-const SAT_STARS = ["kình dương", "đà la", "hỏa tinh", "linh tinh", "địa không", "địa kiếp"];
-
-/** Thông tin xếp hạng của một đoạn đã khớp. */
-type MatchMeta = {
-  /** Lý do khớp thuộc ĐIỀU KIỆN (không gồm phạm vi nội dung) - để xét mục nào bị mục khác bao hàm. */
-  reasons: string[];
-  /** Chủ đề (sao) của điều kiện - các đoạn cùng chủ đề bị giới hạn số lượng. */
-  subject: string;
-  pop: boolean;
-  /** Còn câu phán nặng (đã kiểm chứng điều kiện) - không xếp đầu cung. */
-  alarm: boolean;
-  /** Bị lược quá nửa nội dung - phần còn lại thường rời rạc, xếp sau. */
-  heavyTrim: boolean;
-};
-
 // ============ MAIN QUERY ============
 
 /**
@@ -290,6 +182,11 @@ type MatchMeta = {
  * Trả về mảng rỗng nếu knowledge chưa được load hoặc không có lá số để đối chiếu.
  */
 export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatch[] {
+  // Chế độ server: kết quả đã nạp sẵn theo lá số (ensureChartKnowledge) - cùng thuật toán, khớp trên server.
+  if (KNOWLEDGE_MODE === "server") {
+    if (!context.chart) return [];
+    return getRemoteMatches(context.chart, context, context.palace.name);
+  }
   const cache = getKnowledgeCache();
   if (!cache || !context.chart) return [];
 
@@ -305,179 +202,7 @@ export function queryPalaceKnowledge(context: PalaceQueryContext): KnowledgeMatc
   if (context.palace.isBodyPalace) candidates.push(...(index.than ?? []));
   // Tổng quan lá số (bảng 12 cung, nạp âm...) không phải tri thức của riêng cung nào -> không đưa vào thẻ cung.
 
-  const results: KnowledgeMatch[] = [];
-  const meta = new Map<KnowledgeMatch, MatchMeta>();
-  const home = facts.palaces.get(key!);
-  const homeHasSat = Boolean(home && (SAT_STARS.some((s) => home.stars.has(s)) || home.mutagens.has("ky")));
-  for (const { entry, source, section } of candidates) {
-    // Một nội dung có thể có nhiều rule (điều kiện gốc khác nhau) -> lấy rule khớp nhiều điều kiện nhất.
-    let best: KnowledgeMatch | null = null;
-    let bestRule: NormalizedRule | null = null;
-    let bestReasons: string[] = [];
-    for (const rule of entry.rules) {
-      if (!isAnchoredCondition(rule)) continue; // chỉ vị trí / Can Chi / Nạp âm / sao phụ hội chiếu -> chung chung
-      const reasons = evaluateCondition(rule, facts);
-      if (!reasons) continue;
-      const scope = checkTextRequirements(entry.requires, facts, [key!, ...conditionPalaceKeys(rule)]);
-      if (!scope) continue; // điều kiện khớp nhưng nội dung nói về vị trí/sao/giới/năm sinh/độ sáng khác
-      const matchReasons = [...new Set([...reasons, ...scope])];
-      const matchedConditions = matchReasons.length;
-      // Điểm khớp có trọng số: chính tinh tọa thủ > sao khác tọa thủ > vị trí/Tứ Hóa/phi hóa > sao hội chiếu;
-      // mỗi phạm vi nội dung khớp (giới tính, năm sinh, độ sáng...) +2.
-      const conditionScore = rule.specificity + scope.length * 2;
-      const matchScore = conditionScore * 10 + entry.accuracy;
-      if (!best || matchScore > best.matchScore) {
-        best = {
-          // type "period": tri thức vận hạn của năm xem - UI hiển thị thành nhóm riêng.
-          interpretation: { id: entry.id, type: isPeriodCondition(rule) ? "period" : "condition", condition: rule.condition, text: entry.text, source },
-          section,
-          matchedConditions,
-          matchScore,
-          matchReasons,
-        };
-        bestRule = rule;
-        bestReasons = reasons;
-      }
-    }
-    if (!best || !bestRule) continue;
-    // Lọc từng câu: bỏ câu có điều kiện riêng không khớp lá số; câu điều kiện đã kiểm chứng đúng
-    // được cộng vào lý do khớp. Cả đoạn không còn câu nào áp dụng được -> không hiển thị.
-    const refined = refineTextForChart(entry.text, facts, {
-      palaceKeys: [key!, ...conditionPalaceKeys(bestRule)],
-      conditionStars: conditionPalaceStars(bestRule),
-    });
-    if (!refined) continue;
-    // Câu phán ngắn khen tuyệt đối ("phú quý song toàn") trong khi chính cung có sát tinh / Hóa Kỵ -> dễ gây hiểu sai.
-    if (refined.text.length < SHORT_TEXT && homeHasSat && ABSOLUTE_PRAISE.test(refined.text)) continue;
-    meta.set(best, {
-      reasons: bestReasons,
-      subject: conditionSubject(bestRule) ?? `cond:${[...bestReasons].sort().join("|")}`,
-      pop: entry.style === "pop",
-      alarm: isSevereClaim(refined.text),
-      heavyTrim: refined.text.length < entry.text.length * 0.5,
-    });
-    best.interpretation.text = refined.text;
-    if (refined.removed) {
-      best.trimmedSentences = refined.removed;
-      best.trimmedDetails = refined.dropped;
-    }
-    if (refined.applied.length) {
-      best.matchReasons = [...new Set([...best.matchReasons, ...refined.applied])];
-      best.matchedConditions = best.matchReasons.length;
-      // Có điều kiện riêng đã kiểm chứng: cụ thể hơn một bậc (không cộng dồn để không đẩy ngưỡng lọc
-      // tương đối lên cao, làm rơi các mục khớp đúng khác).
-      best.matchScore += 10;
-    }
-    results.push(best);
-  }
-
-  // Khớp nhiều điều kiện nhất lên trước; cùng điểm thì nội dung đầy đủ hơn lên trước.
-  results.sort((a, b) => b.matchScore - a.matchScore || b.interpretation.text.length - a.interpretation.text.length);
-
-  // Trùng lặp: cùng 100 ký tự đầu, gần như cùng bộ từ, hoặc phần lớn câu đã có nguyên văn trong đoạn xếp trước
-  // (nhiều nguồn chép lại nhau) -> giữ bản xếp trước.
-  const seen = new Set<string>();
-  const deduped: KnowledgeMatch[] = [];
-  const keptWords: Array<Set<string>> = [];
-  const keptSentences = new Set<string>();
-  for (const item of results) {
-    const textKey = item.interpretation.text.slice(0, 100);
-    if (seen.has(textKey)) continue;
-    const words = wordSet(item.interpretation.text);
-    if (keptWords.some((other) => overlap(words, other) >= NEAR_DUPLICATE)) continue;
-    const sentences = sentenceKeys(item.interpretation.text);
-    const total = sentences.reduce((sum, s) => sum + s.length, 0);
-    const repeated = sentences.reduce((sum, s) => sum + (keptSentences.has(s) ? s.length : 0), 0);
-    if (total && repeated / total >= SENTENCE_CONTAINED) continue;
-    seen.add(textKey);
-    keptWords.push(words);
-    for (const s of sentences) keptSentences.add(s);
-    deduped.push(item);
-  }
-
-  if (context.limit) return deduped.slice(0, context.limit);
-  // Lá số gốc và vận hạn năm xem được chọn lọc riêng để không chèn ép nhau.
-  const natal = deduped.filter((item) => item.interpretation.type !== "period");
-  const periodItems = deduped.filter((item) => item.interpretation.type === "period");
-  return [
-    ...pickDiverse(selectMostSpecific(natal, meta), meta, MAX_NATAL_ITEMS),
-    ...pickDiverse(selectMostSpecific(periodItems, meta), meta, MAX_PERIOD_ITEMS),
-  ];
-}
-
-/**
- * Chọn và xếp thứ tự đoạn hiển thị mỗi cung:
- * - Điểm xếp hạng = điểm khớp, trừ bớt với câu phán ngắn (< SHORT_TEXT ký tự), đoạn bị lược quá nửa, đoạn còn câu phán nặng.
- * - Ưu tiên độ phủ: lượt 1 lấy đoạn tốt nhất của TỪNG chủ đề (sao), lượt 2 mới thêm đoạn thứ hai của cùng chủ đề -
- *   để các đoạn nói về các yếu tố khác nhau của cung thay vì cùng tả một sao.
- * - Đoạn đứng đầu phải là đoạn có nội dung (không phải câu phán ngắn / câu phán nặng).
- * - Đoạn văn phong đại chúng ("bạn...!") chỉ lấp chỗ trống: tối đa 1 đoạn, đứng cuối.
- */
-function rankScore(item: KnowledgeMatch, meta: Map<KnowledgeMatch, MatchMeta>): number {
-  const m = meta.get(item);
-  // Câu phán ngắn chỉ thắng đoạn đầy đủ khi khớp cụ thể hơn hẳn (hơn 2 bậc điều kiện).
-  return item.matchScore - (item.interpretation.text.length < SHORT_TEXT ? 20 : 0) - (m?.heavyTrim ? 8 : 0) - (m?.alarm ? 5 : 0);
-}
-const byRank = (meta: Map<KnowledgeMatch, MatchMeta>) => (a: KnowledgeMatch, b: KnowledgeMatch) =>
-  rankScore(b, meta) - rankScore(a, meta) || b.interpretation.text.length - a.interpretation.text.length;
-
-function pickDiverse(items: KnowledgeMatch[], meta: Map<KnowledgeMatch, MatchMeta>, max: number): KnowledgeMatch[] {
-  const ranked = [...items].sort(byRank(meta));
-  const core = ranked.filter((item) => !meta.get(item)?.pop);
-  const pop = ranked.find((item) => meta.get(item)?.pop);
-
-  const seenSubjects = new Set<string>();
-  const first: KnowledgeMatch[] = [];
-  const second: KnowledgeMatch[] = [];
-  for (const item of core) {
-    const subject = meta.get(item)?.subject ?? "";
-    if (seenSubjects.has(subject)) second.push(item);
-    else {
-      seenSubjects.add(subject);
-      first.push(item);
-    }
-  }
-  const picked = new Set([...first, ...second].slice(0, max));
-  const ordered = core.filter((item) => picked.has(item)); // giữ thứ tự xếp hạng
-  // Đoạn đứng đầu: ưu tiên đoạn đầy đủ về chính tinh của cung, rồi mới tới đoạn đầy đủ khác, cuối cùng là đoạn không quá ngắn.
-  const leadable = (item: KnowledgeMatch, minLength: number) => item.interpretation.text.length >= minLength && !meta.get(item)?.alarm;
-  let leadIndex = ordered.findIndex((item) => leadable(item, LEAD_TEXT) && meta.get(item)?.subject.startsWith("main:"));
-  if (leadIndex < 0) leadIndex = ordered.findIndex((item) => leadable(item, LEAD_TEXT));
-  if (leadIndex < 0) leadIndex = ordered.findIndex((item) => leadable(item, SHORT_TEXT));
-  if (leadIndex > 0) ordered.unshift(...ordered.splice(leadIndex, 1));
-  if (pop && ordered.length < max) ordered.push(pop);
-  return ordered;
-}
-
-/**
- * Chỉ giữ tri thức khớp sát nhất - không chốt số lượng:
- * 1. Bỏ mục bị bao hàm: tập điều kiện của nó nằm gọn trong tập điều kiện của một mục khác đã khớp
- *    (vd "Mệnh tại Mão có Thiên Lương" khi đã có "Mệnh tại Mão có Thái Dương, Thiên Lương").
- * 2. Cùng một chủ đề (sao của điều kiện) chỉ giữ MAX_TEXTS_PER_SUBJECT đoạn khớp sát nhất.
- * 3. Chỉ giữ mục đạt >= MIN_RELATIVE_SCORE điểm của mục khớp sát nhất trong cung.
- */
-function selectMostSpecific(items: KnowledgeMatch[], meta: Map<KnowledgeMatch, MatchMeta>): KnowledgeMatch[] {
-  // "X độc tọa" chỉ là hệ quả của "Có X" khi cung có một chính tinh - không tính là điều kiện riêng khi so bao hàm.
-  const keyOf = (item: KnowledgeMatch) => new Set((meta.get(item)?.reasons ?? item.matchReasons).filter((r) => !/ độc tọa$/.test(r)));
-  const keys = new Map(items.map((item) => [item, keyOf(item)]));
-  const isStrictSubset = (a: Set<string>, b: Set<string>) => a.size < b.size && [...a].every((r) => b.has(r));
-
-  const notSubsumed = items.filter((item) => !items.some((other) => other !== item && isStrictSubset(keys.get(item)!, keys.get(other)!)));
-
-  // Suất của mỗi chủ đề dành cho đoạn xếp hạng cao (câu phán ngắn không chiếm suất của đoạn đầy đủ).
-  const perSubject = new Map<string, number>();
-  const allowed = new Set<KnowledgeMatch>();
-  for (const item of [...notSubsumed].sort(byRank(meta))) {
-    const subject = meta.get(item)?.subject ?? "";
-    const used = perSubject.get(subject) ?? 0;
-    if (used >= MAX_TEXTS_PER_SUBJECT) continue;
-    perSubject.set(subject, used + 1);
-    allowed.add(item);
-  }
-  const diverse = notSubsumed.filter((item) => allowed.has(item));
-
-  const top = diverse[0]?.matchScore ?? 0;
-  return diverse.filter((item) => item.matchScore >= top * MIN_RELATIVE_SCORE);
+  return queryCandidates(candidates, facts, key!, context.limit);
 }
 
 // ============ HELPERS FOR COMPONENTS ============
@@ -571,3 +296,16 @@ export function getAvailablePalaces(): string[] {
 
 // Re-export từ loader
 export { isKnowledgeReady, loadKnowledge, scheduleKnowledgePreload } from "./lazyKnowledgeLoader";
+
+/**
+ * Chuẩn bị tri thức cho một lá số trước khi gọi queryPalaceKnowledge (đồng bộ):
+ * chế độ trình duyệt -> tải kho; chế độ server -> hỏi /api/knowledge/query một lần cho cả 12 cung.
+ */
+export function ensureChartKnowledge(chart: ChartView, years: { yearToView?: number; birthYear?: number }): Promise<void> {
+  if (KNOWLEDGE_MODE === "server") return prefetchChartKnowledge(chart, years).then(() => undefined);
+  return loadKnowledge().then(() => undefined);
+}
+
+export function isChartKnowledgeReady(chart: ChartView, years: { yearToView?: number; birthYear?: number }): boolean {
+  return KNOWLEDGE_MODE === "server" ? isRemoteReady(chart, years) : isKnowledgeReady();
+}

@@ -7,12 +7,13 @@ import {
   extractStarsFromPalace,
   extractMutagensFromPalace,
   extractPhiHoaFlows,
-  isKnowledgeReady,
-  loadKnowledge,
+  ensureChartKnowledge,
+  isChartKnowledgeReady,
   type KnowledgeMatch,
 } from "../lib/tuvi/knowledge/lazyKnowledgeService";
 import { callGeminiLuanGiai, callGeminiTongHop, formatKnowledgeForAi, type PalaceSummary } from "../lib/geminiService";
 import { getActivePalaceIndexes } from "./VanHanhSelector";
+import { nominalAge } from "../lib/tuvi/nominalAge";
 import type { DisplayPalace } from "../lib/tuvi/config/types";
 
 type PalaceAnalysis = {
@@ -454,28 +455,34 @@ export default function StreamingAnalysis({ chart, isActive, onComplete, userCon
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [geminiStates, setGeminiStates] = useState<Map<string, { loading: boolean; analysis?: string; error?: string }>>(new Map());
   const [tongHopState, setTongHopState] = useState<TongHopState>({ loading: false });
-  const [knowledgeLoaded, setKnowledgeLoaded] = useState(isKnowledgeReady());
   const hasGeminiKey = true; // API key được cấu hình trên Cloudflare server-side
 
-  // Load knowledge khi component active
+  // Chuẩn bị tri thức cho lá số khi component active: tải kho (chế độ trình duyệt) hoặc hỏi server một lần cho 12 cung.
+  // Lỗi tải -> vẫn hiển thị thẻ cung (không có đoạn tri thức) thay vì chờ mãi.
+  const knowledgeYears = useMemo(
+    () => ({ yearToView: userContext?.yearToView, birthYear: userContext?.birthYear }),
+    [userContext?.yearToView, userContext?.birthYear],
+  );
+  const [knowledgeSettled, setKnowledgeSettled] = useState<{ chart: ChartView; years: typeof knowledgeYears } | null>(null);
+  const knowledgeLoaded =
+    Boolean(chart) && (isChartKnowledgeReady(chart, knowledgeYears) || (knowledgeSettled?.chart === chart && knowledgeSettled.years === knowledgeYears));
   useEffect(() => {
-    if (!isActive) return;
-    if (isKnowledgeReady()) {
-      setKnowledgeLoaded(true);
-      return;
-    }
-    
-    loadKnowledge().then(() => {
-      setKnowledgeLoaded(true);
-    }).catch((err) => {
-      console.error("[StreamingAnalysis] Failed to load knowledge:", err);
-    });
-  }, [isActive]);
+    if (!isActive || !chart || isChartKnowledgeReady(chart, knowledgeYears)) return;
+    let cancelled = false;
+    ensureChartKnowledge(chart, knowledgeYears)
+      .catch((err) => console.error("[StreamingAnalysis] Failed to load knowledge:", err))
+      .finally(() => {
+        if (!cancelled) setKnowledgeSettled({ chart, years: knowledgeYears });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [isActive, chart, knowledgeYears]);
 
   const baseAnalyses = useMemo(() => {
     if (!chart || !knowledgeLoaded) return [];
     // Cung đại vận / tiểu vận của năm xem (cùng hàm với thanh chọn năm trên lá số).
-    const age = userContext?.yearToView && userContext?.birthYear ? userContext.yearToView - userContext.birthYear : undefined;
+    const age = nominalAge(chart, userContext?.yearToView, userContext?.birthYear);
     const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
     const active = age !== undefined
       ? getActivePalaceIndexes(chart.palaces, age, menhBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel)

@@ -5,6 +5,7 @@
  */
 import type { BirthInput, ChartView, NormalizedBirthInput, PalaceView, StarView } from "../lib/types";
 import { branchKey, computePeriod } from "../lib/tuvi/knowledge/conditionMatcher";
+import { nominalAge } from "../lib/tuvi/nominalAge";
 
 // Lá số minh họa, không phải người thật.
 export const DEMO_BIRTH_YEAR = 1990;
@@ -97,7 +98,7 @@ export function deriveDemoData(chart: ChartView, yearToView: number) {
 
   return {
     profile: chart.profile,
-    age: yearToView - DEMO_BIRTH_YEAR,
+    age: nominalAge(chart, yearToView, DEMO_BIRTH_YEAR) ?? yearToView - DEMO_BIRTH_YEAR + 1,
     menh: { branch: menh?.earthlyBranch ?? "", stars: describeMainStars(menh) },
     than: { name: than?.name ?? "", branch: than?.earthlyBranch ?? "", stars: describeMainStars(than) },
     tamPhuong,

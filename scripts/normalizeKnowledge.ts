@@ -16,19 +16,32 @@ import {
   conditionMainStars,
   extractTextRequirements,
   isChartSpecificText,
+  isDanglingFragment,
   isPeriodCondition,
   isPeriodText,
   isUnverifiableConditional,
+  palaceKey,
   parseCondition,
   parseStarCombination,
   type Clause,
   type TextRequirements,
 } from "../src/lib/tuvi/knowledge/conditionMatcher";
+import { kbKey } from "./kb/lib/normalize";
 
 const fs = require("fs");
 const path = require("path");
 
 const CUNG_DIR = path.resolve(process.cwd(), "src/lib/tuvi/knowledge/cung");
+// Metadata có bằng chứng (trường phái...) từ pipeline crawl / đối chiếu - khóa theo nội dung đoạn (kbKey).
+const METADATA_FILE = path.resolve(process.cwd(), "data/kb/kb-metadata.jsonl");
+const kbMetadata = new Map<string, { school: string; method: string | null }>(
+  fs.existsSync(METADATA_FILE)
+    ? fs.readFileSync(METADATA_FILE, "utf8").split("\n").filter(Boolean).map((line: string) => {
+        const row = JSON.parse(line);
+        return [row.kb_key, { school: row.school, method: row.method }];
+      })
+    : [],
+);
 const OUT_DIR = path.join(CUNG_DIR, "normalized");
 const MIN_TEXT_LENGTH = 8;
 
@@ -51,7 +64,7 @@ const FILES: Array<{ id: string; file: string; title: string }> = [
 
 type Source = { book: string; author?: string; translator?: string | null };
 type Rule = { condition: string; specificity: number; clauses: Clause[] };
-type Entry = { id: string; section?: string; text: string; source: number; accuracy: number; rules: Rule[]; requires?: TextRequirements; style?: "pop" };
+type Entry = { id: string; section?: string; text: string; source: number; accuracy: number; rules: Rule[]; requires?: TextRequirements; style?: "pop" | "layout" };
 
 /**
  * tuvi-knowledge@2: mỗi điều kiện chỉ lưu MỘT lần trong `conditions` (111 nghìn rule nhưng chỉ ~33 nghìn điều kiện
@@ -64,7 +77,8 @@ export type NormalizedKnowledgeFile = {
   title: string;
   sources: Source[];
   conditions: Rule[];
-  entries: Array<Omit<Entry, "rules" | "source"> & { rules: number[] }>;
+  /** school / method chỉ có khi có bằng chứng (kb-metadata); không có = chưa xác định (UNKNOWN). */
+  entries: Array<Omit<Entry, "rules" | "source"> & { rules: number[]; school?: string; method?: string }>;
 };
 
 // ============ GỘP MỤC GẦN TRÙNG ============
@@ -172,7 +186,8 @@ function mergeNearDuplicates(entries: Entry[]): { entries: Entry[]; merged: numb
     const keep = { ...entries[keepIndex], rules: [...entries[keepIndex].rules] };
     // Chỉ gộp mục TỰ nó gần trùng với đoạn giữ lại (không gộp theo chuỗi A~C~B); mục còn lại giữ riêng.
     for (const other of members.slice(1)) {
-      if (!isNearDuplicateOf(other, keepIndex)) {
+      // Phạm vi khác nhau (mục tách kế thừa phạm vi bài khác nhau) -> giữ riêng để mỗi rule đi đúng phạm vi của nó.
+      if (!isNearDuplicateOf(other, keepIndex) || JSON.stringify(entries[other].requires ?? null) !== JSON.stringify(keep.requires ?? null)) {
         out.push(entries[other]);
         continue;
       }
@@ -221,8 +236,15 @@ const CELEBRITY_SENTENCE = /[^.!?\n]*(?:(?:Diễn viên|Ca sĩ|Ông|Bà|Nhà vă
 // Viết hoa đúng vị trí: đầu câu thì "Có ý kiến", giữa câu thì "có ý kiến".
 const casedAt = (whole: string, offset: number, phrase: string) =>
   offset === 0 || /[.!?\n]\s*$/.test(whole.slice(Math.max(0, offset - 3), offset)) ? phrase[0].toUpperCase() + phrase.slice(1) : phrase;
+// Dẫn chiếu cấu trúc sách / bài gốc ("Xin xem thêm mục liên quan trong chương 6", "xin tham khảo chương 'Luận về sáu mươi
+// tinh hệ'") - lộ nguồn và người xem không có chương đó để đọc -> bỏ (ngoặc chứa dẫn chiếu, hoặc cả câu dẫn chiếu).
+const BOOK_REF = "(?:xin |hãy |có thể )?(?:tham khảo|xem|đọc)(?: thêm)?(?: lại)? (?:ở )?(?:các |những )?(?:mục [^.()\\n]{0,40}?(?:trong |ở )?)?(?:chương|phần|mục|tiết|quyển|cuốn)(?![\\p{L}])";
+const BOOK_REF_PAREN = new RegExp(`\\s*\\([^()]*${BOOK_REF}[^()]*\\)`, "giu");
+const BOOK_REF_SENTENCE = new RegExp(`[^.!?\\n]*${BOOK_REF}[^.!?\\n]*[.!?]?`, "giu");
 const scrubSources = (text: string) =>
   text
+    .replace(BOOK_REF_PAREN, "")
+    .replace(BOOK_REF_SENTENCE, "")
     .replace(SOURCE_SENTENCE_DROP, "")
     .replace(CELEBRITY_SENTENCE, "")
     .replace(SELF_REFERENCE_SENTENCE, "")
@@ -251,6 +273,7 @@ const scrubSources = (text: string) =>
 
 // Lỗi chính tả tên sao chắc chắn (không trùng từ có nghĩa khác) - sửa để người đọc và bộ lọc câu nhận đúng sao.
 const STAR_TYPOS: Array<[RegExp, string]> = [
+  [/Conc ái/g, "Con cái"],
   [/Hửu Bật/g, "Hữu Bật"],
   [/Vẫn Khúc/g, "Văn Khúc"],
   [/Liêm Trình/g, "Liêm Trinh"],
@@ -315,16 +338,22 @@ const TUVI_TERMS = new RegExp(
 const isPopStyle = (text: string) => text.length < 700 && SECOND_PERSON.test(text) && (!TUVI_TERMS.test(text) || text.includes("!"));
 
 // Mẫu vận hạn chỉ nêu thuật ngữ ("Lộc Thể nhập Dụng, là cát tượng, cần nghiệm lý thêm...") - không có nội dung luận.
-const JARGON_TEMPLATE = /^(Lộc|Quyền|Khoa) Thể (nhập|chiếu) Dụng,? là cát tượng,? cần nghiệm lý thêm/u;
-// Mảnh chỉ trỏ về đoạn đã bị tách ("... thì lại càng như vậy.", "Đây là tượng ...") - không đứng riêng được.
-const DANGLING_FRAGMENT = /^(?=[^\n]{0,200}$)[^\n]*(?:(?:lại càng|càng|cũng) như (?:vậy|thế)|như trên)\.?$|^Đây là(?=[^\n]{0,45}$)/u;
+// + "Tự Hóa là không tốt, phi Hóa Kỵ nhập ĐV..." và mẫu "Từ ngã cung / tha cung phi Hóa..." (ví dụ cung khác, không luận lá số).
+// (kể cả "Lộc Thể chiếu Dụng là cát tượng về Mệnh", "Cung Phu thê là cung khí số vị cung Thiên di...", lời dặn người luận
+// "Cần khảo sát kỹ tinh hệ ... khi luận giải lá số" - không phải nội dung luận cho người xem)
+const JARGON_TEMPLATE =
+  /^(Lộc|Quyền|Khoa|K[ỵị]) Thể (nhập|chiếu) Dụng|^Tự Hóa là không tốt|^Từ "(ngã|tha) cung"|^Đây là trường hợp "Thuận thủy K[ỵị]"|^Đây là cách Củ triều k[ỵị]|^Cung \S+(?: \S+)? là cung khí số vị|^Cần khảo sát kỹ tinh hệ/u;
 
 const cleanText = (text: string) =>
   stripArticleGlue(fixStarTypos(modernizePronoun(scrubSources(stripOtherChartYears(stripChinese(stripUngKy(joinBrokenLabels(String(text || "").normalize("NFC").replace(/\r\n?/g, "\n")))))))))
     .replace(/[ \t ]+/g, " ")
     .replace(/ *\n */g, "\n")
+    // Mục liệt kê rỗng ("4." không có nội dung) của mẫu nguồn bị hỏng.
+    .replace(/^(?:\d{1,2}[.)]|[a-zđ][.)])\s*$/gmu, "")
     .replace(/\n{3,}/g, "\n\n")
-    .trim();
+    .trim()
+    // Đoạn mở bằng số thứ tự mục của bài gốc ("2. Môi trường làm việc ngoại tại:") -> bỏ số thứ tự.
+    .replace(/^(?:[2-9]|1\d)[.)]\s+(?=\S)/u, "");
 
 // Một số mục crawl bị lệch cột: trường "book" chứa nguyên một câu nội dung ("* Chớ có đánh bạc...").
 // Tên nguồn như vậy không được đưa cho AI trích dẫn -> ghi "Không rõ nguồn". Tác giả trùng tên sách thì bỏ.
@@ -347,26 +376,210 @@ function classifyDrop(condition: string): string {
   return "điều kiện chưa hỗ trợ";
 }
 
+// ============ TÁCH BÀI TỔNG HỢP THÀNH TỪNG MỤC ============
+// Bài dài gom nhiều trường hợp (tiêu đề viết hoa, "...:" , "★ ...", "Người sinh năm Giáp: ...") -> mỗi mục là một đoạn riêng,
+// kế thừa điều kiện của bài và có phạm vi riêng (trích từ tiêu đề / câu đầu của mục). Mục chỉ đúng với dữ liệu lá số KHÔNG
+// có (tháng sinh, giờ sinh, sinh ngày / đêm, phương sinh) -> bỏ. Mục của bài cung Mệnh nói về khía cạnh cung khác
+// ("NĂNG LỰC SỰ NGHIỆP", "hôn nhân"...) -> chuyển sang cung đó (vẫn giữ điều kiện của cung Mệnh).
+const SPLIT_MIN_LENGTH = 900;
+const SECTION_MIN_LENGTH = 80;
+const isUpperHeading = (line: string) => {
+  const letters = line.replace(/[^\p{L}]/gu, "");
+  return letters.length >= 6 && [...letters].filter((c) => c === c.toUpperCase() && c !== c.toLowerCase()).length / letters.length >= 0.7;
+};
+const LABEL_LINE = /^(?:người sinh năm|sinh năm|người sinh giờ|sinh giờ|nam mệnh|nữ mệnh|mệnh nam|mệnh nữ)[^:\n]{0,40}:/iu;
+const isSectionStart = (line: string) =>
+  (line.length <= 100 && (/:\s*$/.test(line) || isUpperHeading(line) || /^[★■●◆▪❖]/u.test(line))) || LABEL_LINE.test(line) || /^["“][^"”]{3,40}["”]/u.test(line);
+// Phạm vi lá số không có dữ liệu để kiểm.
+const UNVERIFIABLE_SCOPE = /(sinh|người sinh)\s+(vào\s+)?(tháng|mùa|giờ|ban ngày|ban đêm|ngày|đêm)|giờ sinh|tháng (giêng|chạp|\d+|một|hai|ba|tư|năm|sáu|bảy|tám|chín|mười)|phương (đông|tây|nam|bắc)/iu;
+const ROUTE_BY_TOPIC: Array<[RegExp, string]> = [
+  [/sự nghiệp|công danh|quan lộc/iu, "quan-loc"],
+  [/tài vận|tài bạch|tiền bạc|tài lộc/iu, "tai-bach"],
+  [/hôn nhân|phu thê|phối ngẫu|tình duyên|tình cảm/iu, "phu-the"],
+  [/sức khỏe|tật ách|bệnh tật/iu, "tat-ach"],
+  [/con cái|tử tức|tử nữ/iu, "tu-tuc"],
+  [/anh em|huynh đệ/iu, "huynh-de"],
+  [/cha mẹ|phụ mẫu/iu, "phu-mau"],
+  [/bạn bè|nô bộc|giao hữu/iu, "no-boc"],
+  [/nhà cửa|điền trạch|điền sản/iu, "dien-trach"],
+  [/phúc đức/iu, "phuc-duc"],
+  [/thiên di|xuất ngoại/iu, "thien-di"],
+];
+
+// Tiêu đề chú giải ("Bình chú:", "Chú thích:") bàn tiếp mục ngay trước -> không tách riêng.
+const ANNOTATION_HEADING = /^(bình chú|lời bình|lời bàn|chú thích|chú giải|ghi chú|giải thích|nhận xét)\s*:?\s*$/iu;
+
+/**
+ * Mục tách từ bài tổng hợp kế thừa phạm vi của bài (câu mở đầu / tiêu đề: cặp sao, độ sáng, vị trí, giới tính, năm sinh) -
+ * "TỔNG LUẬN TÀI VẬN" của bài "SAO THIÊN KHÔI, THIÊN VIỆT LUẬN TÀI VẬN" vẫn đòi đủ hai sao. Phạm vi riêng của mục thắng
+ * khi cùng loại ("Thái Âm hãm địa:" trong bài mở bằng "Thái Âm nhập miếu"), chính tinh thì gộp.
+ */
+function inheritScope(own: TextRequirements | undefined, parent: TextRequirements | undefined): TextRequirements | undefined {
+  if (!parent) return own;
+  const merged: TextRequirements = { ...parent, ...own };
+  if (parent.mainStars && own?.mainStars) merged.mainStars = [...new Set([...parent.mainStars, ...own.mainStars])];
+  return merged;
+}
+
+// Bài bố cục cả lá số theo vị trí Tử Vi + cung Mệnh ("Lá số có Tử vi tại Dần,Cung Mệnh tại Mão": "- Tại Tí là cung Tử nữ: Phá
+// Quân ..."): hai vị trí đó định ra chính tinh của cả 12 cung, nên mỗi khối "Tại <chi> là cung <X>: ..." là tri thức đúng của
+// cung X -> chuyển sang file cung X (đọc cùng ngữ cảnh cung X, không lẫn vào thẻ cung Mệnh).
+const LAYOUT_RULE = /^(Lá số có Tử vi tại|Tử vi ở cung|Tinh hệ cung Mệnh ở)/i;
+const LAYOUT_BLOCK = /^[-•*+]?\s*Tại (?:Tý|Tí|Sửu|Dần|Mão|Thìn|Tỵ|Tị|Ngọ|Mùi|Thân|Dậu|Tuất|Hợi) là cung ([^:]{2,20}):/iu;
+const FILE_BY_PALACE: Record<string, string> = {
+  "mệnh": "menh", "phụ mẫu": "phu-mau", "phúc đức": "phuc-duc", "điền trạch": "dien-trach", "quan lộc": "quan-loc", "nô bộc": "no-boc",
+  "thiên di": "thien-di", "tật ách": "tat-ach", "tài bạch": "tai-bach", "tử tức": "tu-tuc", "phu thê": "phu-the", "huynh đệ": "huynh-de",
+};
+// Danh sách "Thái Âm tại cung Quan Lộc: ...", "(1) Tử Vi tại cung Thiên Di: ..." - mỗi khối nói về một cung; câu mở khối là lời
+// khẳng định sao ở cung đó, được kiểm lại với lá số lúc hiển thị (không đúng thì cả khối bị lược).
+const MAIN_NAMES = "Tử Vi|Thiên Cơ|Thái Dương|Vũ Khúc|Thiên Đồng|Liêm Trinh|Thiên Phủ|Thái Âm|Tham Lang|Cự Môn|Thiên Tướng|Thiên Lương|Thất Sát|Phá Quân";
+const STAR_BLOCK = new RegExp(`^(?:(?:\\(\\d+\\)|\\d+[.)])\\s*)?(?:Sao\\s+)?(?:${MAIN_NAMES})(?:(?:,\\s*|\\s+và\\s+)(?:${MAIN_NAMES}))*\\s+tại cung ([^:]{2,20}):`, "iu");
+export function splitLayoutBlocks(text: string, branchBlocks: boolean): Array<{ fileId: string; text: string }> | null {
+  const intro: string[] = [];
+  const blocks: Array<{ fileId: string; lines: string[] }> = [];
+  for (const line of text.split("\n").map((l) => l.trim()).filter(Boolean)) {
+    const m = (branchBlocks ? line.match(LAYOUT_BLOCK) : null) ?? line.match(STAR_BLOCK);
+    if (m) {
+      const key = palaceKey(m[1].trim());
+      const fileId = key ? FILE_BY_PALACE[key] : undefined;
+      if (!fileId) return null;
+      blocks.push({ fileId, lines: [line.replace(/^(?:[-•*+]|\(\d+\)|\d+[.)])\s*/, "")] });
+    } else if (blocks.length) blocks[blocks.length - 1].lines.push(line);
+    else intro.push(line);
+  }
+  if (blocks.length < 3) return null;
+  // Phần mở đầu (tên cách cục) đi cùng khối cung Mệnh.
+  return blocks.map((b) => ({ fileId: b.fileId, text: (b.fileId === "menh" ? [...intro, ...b.lines] : b.lines).join("\n") }));
+}
+
+type Section = { heading: string; text: string };
+export function splitSections(text: string): Section[] {
+  const sections: Section[] = [];
+  let current: Section | null = null;
+  for (const line of text.split("\n").map((l) => l.trim()).filter(Boolean)) {
+    if ((isSectionStart(line) && !ANNOTATION_HEADING.test(line)) || !current) {
+      // Tiêu đề trống ngay trước tiêu đề khác ("VẬN MỆNH NĂM SINH KHÁC NHAU" -> "Người sinh năm Giáp: ...") gộp làm một.
+      if (current && current.text === current.heading && isSectionStart(line) && current.text.length <= 100) {
+        current.text = `${current.text}\n${line}`;
+        current.heading = line;
+        continue;
+      }
+      current = { heading: line, text: line };
+      sections.push(current);
+    } else {
+      current.text = `${current.text}\n${line}`;
+    }
+  }
+  // Mục quá ngắn gộp vào mục trước.
+  const merged: Section[] = [];
+  for (const s of sections) {
+    const prev = merged[merged.length - 1];
+    if (prev && s.text.length < SECTION_MIN_LENGTH && !LABEL_LINE.test(s.heading)) prev.text = `${prev.text}\n${s.text}`;
+    else merged.push({ ...s });
+  }
+  return merged;
+}
+
 function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const report: string[] = [];
   let totalIn = 0;
   let totalOut = 0;
 
-  for (const { id, file, title } of FILES) {
+  // Lượt 1: làm sạch + tách mục + chuyển mục sang đúng cung, cho mọi file (mục chuyển sang file xử lý trước vẫn không bị sót).
+  type Planned = { item: { id: string; text: string; source?: Source; accuracy?: number; section?: string }; rule: Rule; text: string; inherit?: TextRequirements; layout?: boolean };
+  const plan = new Map<string, Planned[]>(FILES.map((f) => [f.id, []]));
+  const planDrops = new Map<string, Record<string, number>>(FILES.map((f) => [f.id, {}]));
+  const planDrop = (fileId: string, reason: string) => {
+    const d = planDrops.get(fileId)!;
+    d[reason] = (d[reason] ?? 0) + 1;
+  };
+  const planItem = (fileId: string, item: Planned["item"], rule: Rule) => {
+    const text = stripForeignLayout(cleanText(item.text), conditionMainStars(rule));
+    const layout = fileId === "tong-quan" ? null : splitLayoutBlocks(text, LAYOUT_RULE.test(rule.condition));
+    if (layout) {
+      planDrop(fileId, "bài bố cục cả lá số đã tách về từng cung");
+      for (const block of layout) plan.get(block.fileId)!.push({ item: { ...item, text: block.text }, rule, text: block.text, layout: true });
+      return;
+    }
+    // Điều kiện hai cung ("Cung Mệnh ... vô chính diệu ... và cung Điền trạch có sao Thiên phủ tọa thủ") mà nội dung nói về cung kia
+    // ("Thiên Phủ tại cung Điền Trạch: ...") -> chuyển sang file cung đó.
+    if (rule.clauses.length === 2) {
+      const other = rule.clauses[1].palace;
+      const lead = text.split("\n")[0].match(/^(?:\(\d+\)\s*)?(?:Sao\s+)?[\p{L} ]{3,25}? tại cung ([\p{L} ]{3,15}?)\s*:/u);
+      const target = FILE_BY_PALACE[other];
+      if (lead && target && target !== fileId && palaceKey(lead[1]) === other) {
+        plan.get(target)!.push({ item, rule, text, layout: true });
+        return;
+      }
+    }
+    const sections = fileId === "tong-quan" || text.length < SPLIT_MIN_LENGTH ? [] : splitSections(text);
+    if (sections.length < 2) {
+      plan.get(fileId)!.push({ item, rule, text });
+      return;
+    }
+    planDrop(fileId, "bài tổng hợp đã tách thành từng mục");
+    // Phạm vi cả bài = phạm vi câu mở đầu, trừ khi dòng đầu đã là nhãn riêng của mục đầu ("Người sinh năm Giáp: ...").
+    const firstLine = text.split("\n")[0].trim();
+    const parentScope = LABEL_LINE.test(firstLine) || UNVERIFIABLE_SCOPE.test(firstLine) ? undefined : extractTextRequirements(text, conditionMainStars(rule));
+    for (const section of sections) {
+      if (UNVERIFIABLE_SCOPE.test(section.heading)) {
+        planDrop(fileId, "mục theo tháng / giờ / phương sinh (lá số không có dữ liệu kiểm)");
+        continue;
+      }
+      // Chỉ chuyển theo TIÊU ĐỀ mục thật (viết hoa / "...:" ngắn), không theo dòng nhãn "Người sinh năm Ất: Cung Quan Lộc...".
+      const isTopicHeading = !LABEL_LINE.test(section.heading) && section.heading.length <= 100 && (isUpperHeading(section.heading) || /:\s*$/.test(section.heading));
+      const topic = fileId === "menh" && isTopicHeading && section.heading !== sections[0].heading ? ROUTE_BY_TOPIC.find(([re]) => re.test(section.heading))?.[1] : undefined;
+      const target = topic && plan.has(topic) ? topic : fileId;
+      plan.get(target)!.push({ item: { ...item, text: section.text }, rule, text: section.text, inherit: section === sections[0] ? undefined : parentScope });
+    }
+  };
+  const rawCounts = new Map<string, number>();
+  for (const { id, file } of FILES) {
     const raw = JSON.parse(fs.readFileSync(path.join(CUNG_DIR, file), "utf8"));
+    rawCounts.set(id, raw.interpretations?.length ?? 0);
+    for (const item of raw.interpretations ?? []) {
+      totalIn++;
+      const condition = String(item.condition || "").normalize("NFC").trim();
+      const parsed = parseCondition(condition);
+      if (!parsed) {
+        planDrop(id, classifyDrop(condition));
+        continue;
+      }
+      planItem(id, item, { condition, specificity: parsed.specificity, clauses: parsed.clauses });
+    }
+    if (id === "menh") {
+      const combos = JSON.parse(fs.readFileSync(path.join(CUNG_DIR, "star-combinations.json"), "utf8"));
+      for (const section of combos.sections ?? []) {
+        for (const item of section.interpretations ?? []) {
+          totalIn++;
+          const result = parseStarCombination(item);
+          if (!result) {
+            planDrop(id, "điều kiện chưa hỗ trợ");
+            continue;
+          }
+          // priority (80-100) -> cùng thang accuracy của dữ liệu consolidated (~7) để mục chung
+          // không lấn át các mục gắn chặt vị trí/sao của lá số.
+          const accuracy = Math.round((Number(item.priority) || 70) / 10);
+          planItem(id, { ...item, accuracy, section: section.title }, { condition: result.condition, specificity: result.parsed.specificity, clauses: result.parsed.clauses });
+        }
+      }
+    }
+  }
+
+  // Lượt 2: dựng file đã làm mịn cho từng cung.
+  for (const { id, file, title } of FILES) {
     const sources: Source[] = [];
     const sourceIndex = new Map<string, number>();
     const byText = new Map<string, Entry>();
-    const dropped: Record<string, number> = {};
+    const dropped: Record<string, number> = { ...planDrops.get(id)! };
     const drop = (reason: string) => (dropped[reason] = (dropped[reason] ?? 0) + 1);
 
-    const addEntry = (item: { id: string; text: string; source?: Source; accuracy?: number; section?: string }, rule: Rule) => {
-      const text = stripForeignLayout(cleanText(item.text), conditionMainStars(rule));
+    const addEntry = (item: Planned["item"], rule: Rule, text: string, inherit?: TextRequirements, layout?: boolean) => {
       if (text.length < MIN_TEXT_LENGTH) return drop("nội dung quá ngắn");
       if (isChartSpecificText(text)) return drop("nội dung gắn lá số khác");
       // Đoạn bắt đầu giữa câu (chữ thường) là mảnh bị tách khỏi đoạn trước khi crawl.
-      if (/^\p{Ll}/u.test(text) || DANGLING_FRAGMENT.test(text)) return drop("mảnh câu bị tách");
+      if (/^\p{Ll}/u.test(text) || isDanglingFragment(text)) return drop("mảnh câu bị tách");
       if (JARGON_TEMPLATE.test(text)) return drop("mẫu thuật ngữ vận hạn");
       // Nội dung nói về vận hạn chỉ hợp với điều kiện vận hạn (khớp theo năm xem).
       if (!isPeriodCondition(rule) && isPeriodText(text)) return drop("nội dung nói về vận hạn");
@@ -378,17 +591,19 @@ function main() {
         sources.push(src);
       }
 
-      const key = dedupeKey(text);
+      // Phạm vi nội dung (vị trí / chính tinh / giới tính / năm sinh ở câu mở đầu) + phạm vi kế thừa từ bài gốc khi là mục tách.
+      // Tổng quan lá số là bảng liệt kê 12 cung nên không trích.
+      const own = id === "tong-quan" ? undefined : extractTextRequirements(text, conditionMainStars(rule));
+      const requires = inheritScope(own, inherit);
+      // Cùng nội dung nhưng khác phạm vi (vd độ sáng gán cho chính tinh khác nhau của điều kiện) -> mục riêng.
+      const key = `${dedupeKey(text)}|${JSON.stringify(requires ?? null)}`;
       const existing = byText.get(key);
       if (existing) {
         if (!existing.rules.some((r) => r.condition === rule.condition)) existing.rules.push(rule);
         existing.accuracy = Math.max(existing.accuracy, Number(item.accuracy) || 0);
         return drop("trùng nội dung (đã gộp rule)");
       }
-      // Phạm vi nội dung (vị trí / chính tinh / giới tính / năm sinh ở câu mở đầu). Tổng quan lá số là
-      // bảng liệt kê 12 cung nên không trích.
-      const requires = id === "tong-quan" ? undefined : extractTextRequirements(text, conditionMainStars(rule));
-      if (isUnverifiableConditional(text, requires)) return drop("vế 'Nếu...' không kiểm chứng được");
+      if (isUnverifiableConditional(text, own)) return drop("vế 'Nếu...' không kiểm chứng được");
       byText.set(key, {
         id: item.id,
         section: item.section,
@@ -397,38 +612,12 @@ function main() {
         accuracy: Number(item.accuracy) || 0,
         rules: [rule],
         ...(requires ? { requires } : {}),
-        ...(isPopStyle(text) ? { style: "pop" as const } : {}),
+        // "layout": khối tóm tắt từng cung của bài bố cục cả lá số ("Tại Tị là cung Sự nghiệp: Cự Môn / Gặp cát tinh...") - chỉ lấp chỗ.
+        ...(isPopStyle(text) ? { style: "pop" as const } : layout ? { style: "layout" as const } : {}),
       });
     };
 
-    for (const item of raw.interpretations ?? []) {
-      totalIn++;
-      const condition = String(item.condition || "").normalize("NFC").trim();
-      const parsed = parseCondition(condition);
-      if (!parsed) {
-        drop(classifyDrop(condition));
-        continue;
-      }
-      addEntry(item, { condition, specificity: parsed.specificity, clauses: parsed.clauses });
-    }
-
-    if (id === "menh") {
-      const combos = JSON.parse(fs.readFileSync(path.join(CUNG_DIR, "star-combinations.json"), "utf8"));
-      for (const section of combos.sections ?? []) {
-        for (const item of section.interpretations ?? []) {
-          totalIn++;
-          const result = parseStarCombination(item);
-          if (!result) {
-            drop("điều kiện chưa hỗ trợ");
-            continue;
-          }
-          // priority (80-100) -> cùng thang accuracy của dữ liệu consolidated (~7) để mục chung
-          // không lấn át các mục gắn chặt vị trí/sao của lá số.
-          const accuracy = Math.round((Number(item.priority) || 70) / 10);
-          addEntry({ ...item, accuracy, section: section.title }, { condition: result.condition, specificity: result.parsed.specificity, clauses: result.parsed.clauses });
-        }
-      }
-    }
+    for (const { item, rule, text, inherit, layout } of plan.get(id)!) addEntry(item, rule, text, inherit, layout);
 
     const { entries, merged } = mergeNearDuplicates([...byText.values()]);
     if (merged) dropped["gần trùng (đã gộp rule vào đoạn đầy đủ nhất)"] = merged;
@@ -448,6 +637,7 @@ function main() {
       return index;
     };
 
+    const usedIds = new Set<string>();
     // Dữ liệu tải về trình duyệt không kèm bảng nguồn (không công khai nguồn lấy tri thức).
     // Nguồn vẫn còn trong file crawl gốc (cung/*-consolidated.json) nếu cần tra cứu nội bộ.
     const output: NormalizedKnowledgeFile = {
@@ -456,14 +646,27 @@ function main() {
       title,
       sources: [],
       conditions,
-      // id trung tính, không mang dấu vết nguồn crawl
-      entries: entries.map(({ source: _source, rules, ...entry }, index) => ({ ...entry, id: `${id}-${index + 1}`, rules: rules.map(ruleRef) })),
+      // id trung tính (không mang dấu vết nguồn crawl) và ỔN ĐỊNH theo nội dung - truy vết được qua các lần chạy lại.
+      // school / method: chỉ khi có bằng chứng (data/kb/kb-metadata.jsonl, sinh bởi kb:apply); nguồn không đưa vào đây.
+      entries: entries.map(({ source: _source, rules, ...entry }) => {
+        const key = kbKey(entry.text);
+        let stableId = `${id}-${key.slice(4, 14)}`;
+        for (let n = 2; usedIds.has(stableId); n++) stableId = `${id}-${key.slice(4, 14)}-${n}`;
+        usedIds.add(stableId);
+        const meta = kbMetadata.get(key);
+        return {
+          ...entry,
+          id: stableId,
+          ...(meta && meta.school !== "UNKNOWN" ? { school: meta.school, ...(meta.method ? { method: meta.method } : {}) } : {}),
+          rules: rules.map(ruleRef),
+        };
+      }),
     };
     const outFile = path.join(OUT_DIR, `${id}.json`);
     fs.writeFileSync(outFile, JSON.stringify(output));
     const rules = entries.reduce((sum, e) => sum + e.rules.length, 0);
     report.push(
-      `${id.padEnd(10)} ${String(raw.interpretations?.length ?? 0).padStart(5)} → ${String(entries.length).padStart(5)} mục (${rules} rule, ${conditions.length} điều kiện), ` +
+      `${id.padEnd(10)} ${String(rawCounts.get(id) ?? 0).padStart(5)} → ${String(entries.length).padStart(5)} mục (${rules} rule, ${conditions.length} điều kiện), ` +
         `${(fs.statSync(path.join(CUNG_DIR, file)).size / 1e6).toFixed(1)}MB → ${(fs.statSync(outFile).size / 1e6).toFixed(1)}MB | bỏ: ` +
         Object.entries(dropped).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(", "),
     );

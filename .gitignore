@@ -35,5 +35,14 @@ tmp-local-*.json
 local-url.txt
 
 # khoá chống chạy 2 crawler cùng lúc
+# Crawler V1: bản chép trang cục bộ (chỉ để trích xuất), checkpoint, log - không commit
+data/kb/raw/
+data/kb/state/
+data/kb/logs/
+data/kb/crawl.lock
+# Kho block đầy đủ (lớn, sinh lại được bằng npm run kb:extract) - chỉ commit sources.json, report.md, kb-metadata.jsonl
+data/kb/blocks.jsonl
+data/kb/bac-phai-map.json
+data/kb/review-queue.jsonl
 tuvi_crawler/crawl.lock
 tuvi_crawler/crawl.log

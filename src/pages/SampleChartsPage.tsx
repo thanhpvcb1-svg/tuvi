@@ -9,6 +9,7 @@ import TuviChart from "../components/TuviChart";
 import { getActivePalaceIndexes } from "../components/VanHanhSelector";
 import { currentYear, getDefaultLuuOptions, loadChartModules, normalizeBirthInput } from "../context/AppContext";
 import { buildSummaryCards } from "../lib/chartUi";
+import { nominalAge } from "../lib/tuvi/nominalAge";
 import type { BirthInput, ChartView } from "../lib/types";
 import { DEMO_BIRTH_YEAR, DEMO_HOUR_LABEL, DEMO_LABEL, demoInput, deriveDemoData } from "../content/demoChart";
 import { breadcrumbSchema, organizationSchema } from "../schemas/seoSchemas";
@@ -80,7 +81,7 @@ export default function SampleChartsPage({ onNavigateChartForm, onGenerateFromIn
   const active = useMemo(() => {
     if (!chart) return {};
     const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
-    return getActivePalaceIndexes(chart.palaces, currentYear - DEMO_BIRTH_YEAR, menhBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
+    return getActivePalaceIndexes(chart.palaces, nominalAge(chart, currentYear, DEMO_BIRTH_YEAR) ?? currentYear - DEMO_BIRTH_YEAR + 1, menhBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
   }, [chart]);
 
   return (

@@ -65,6 +65,21 @@ YOUTUBE_LESSONS_CHANNEL_ID=your_youtube_channel_id
 
 - Frontend khong duoc dung `VITE_GEMINI_API_KEY`
 
+## Tri thuc luan giai tren server (tuy chon)
+
+Mac dinh (`VITE_KNOWLEDGE_MODE` khong dat) kho tri thuc duoc tai ve trinh duyet (cac file `assets/k-*.js`, ~24 MB).
+Che do server: trinh duyet chi gui du kien la so (~8 KB, khong co ho ten / ngay gio sinh) toi `/api/knowledge/query`,
+kho khong nam trong bundle.
+
+1. Can goi **Workers Paid** (gioi han 10 ms CPU cua goi Free khong du: moi la so ~0,6-1 s CPU).
+2. Dat bien moi truong build tren Cloudflare Pages (Production + Preview): `VITE_KNOWLEDGE_MODE=server`, roi deploy lai.
+3. `npm run build` luon sinh `dist/_kb/*` (cac manh kho theo dia chi); `functions/_kb/[[path]].ts` chan truy cap cong khai,
+   chi Function doc qua `env.ASSETS`.
+4. Kiem tra truoc khi bat: `npm run build && npm run test-knowledge-server` (ket qua server phai giong het trinh duyet).
+5. Nen bind `RATE_LIMIT_KV` (xem `functions/api/ai/_shared/rateLimit.ts`) - endpoint gioi han 240 request/gio/IP.
+
+Tat che do server: xoa bien `VITE_KNOWLEDGE_MODE` va deploy lai.
+
 ## Chay local voi Pages Function
 
 1. Tao file `.dev.vars` o root project:

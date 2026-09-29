@@ -1,5 +1,6 @@
 import React from "react";
 import type { ChartView, PalaceView } from "../lib/types";
+import { nominalAge } from "../lib/tuvi/nominalAge";
 
 // ── Đại vận engine ──────────────────────────────────────────────
 
@@ -97,7 +98,7 @@ type Props = {
 };
 
 export default function VanHanhSelector({ year, birthYear, chart, onChange }: Props) {
-  const age = year - birthYear;
+  const age = nominalAge(chart, year, birthYear) ?? year - birthYear + 1;
   const palaces = chart.palaces;
   const menhBranch = palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
   const cucName = chart.profile.fiveElementsClass;

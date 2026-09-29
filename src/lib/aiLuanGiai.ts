@@ -1,5 +1,6 @@
 import { buildQuickReadings, findPalace, getPalaceMeaning, getTopStars } from "./chartUi";
 import type { BirthInput, ChartView, PalaceView, StarView } from "./types";
+import { nominalAge } from "./tuvi/nominalAge";
 import {
   queryPalaceKnowledge,
   extractPhiHoaFlows,
@@ -389,7 +390,7 @@ const parseAgeRange = (value?: string) => {
 };
 
 const getActivePeriodPalaces = (chart: ChartView, yearToView: number, birthYear: number) => {
-  const age = yearToView - birthYear;
+  const age = nominalAge(chart, yearToView, birthYear) ?? yearToView - birthYear + 1;
   const daiVanPalace = chart.palaces.find((palace) => {
     const range = parseAgeRange(palace.decadalRange);
     return range ? age >= range.fromAge && age <= range.toAge : false;

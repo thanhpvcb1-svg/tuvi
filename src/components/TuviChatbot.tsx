@@ -335,11 +335,12 @@ export default function TuviChatbot({ chart, isVisible, userContext }: Props) {
       {/* Quota Exceeded CTA */}
       {isQuotaExceeded && (
         <div className="chatbot-upsell">
-          <p>🔒 Bạn đã hết lượt hỏi miễn phí hôm nay</p>
-          <a href="#pricing" className="upsell-btn">
-            Mua thêm lượt hỏi - 50.000đ/câu
+          <p>🔒 Bạn đã dùng hết lượt hỏi đáp tự động miễn phí hôm nay</p>
+          {/* Gói trả phí là dịch vụ riêng (đặt qua trang Liên hệ), không phải mua thêm lượt cho phần hỏi đáp tự động này. */}
+          <a href="/bang-gia/" className="upsell-btn">
+            Xem gói Hỏi 1 câu theo lá số (50.000đ)
           </a>
-          <span className="upsell-hint">Hoặc quay lại vào ngày mai</span>
+          <span className="upsell-hint">Lượt hỏi đáp tự động được làm mới vào ngày mai</span>
         </div>
       )}
 

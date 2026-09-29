@@ -24,6 +24,8 @@ const NORMALIZED_FILES = [
 ] as const;
 
 async function loadAllKnowledge(): Promise<KnowledgeData> {
+  // Chế độ server: không có kho trong bundle (điều kiện là hằng lúc build -> các import() bên dưới bị loại khỏi bản build).
+  if (typeof __KNOWLEDGE_MODE__ !== "undefined" && __KNOWLEDGE_MODE__ === "server") return {};
   const modules = await Promise.all([
     import("./cung/normalized/menh.json"),
     import("./cung/normalized/phu-mau.json"),
@@ -48,6 +50,7 @@ async function loadAllKnowledge(): Promise<KnowledgeData> {
  */
 export function scheduleKnowledgePreload(delayMs = LAZY_LOAD_DELAY): void {
   if (loadStatus !== "idle") return;
+  if (typeof __KNOWLEDGE_MODE__ !== "undefined" && __KNOWLEDGE_MODE__ === "server") return; // server: không tải kho
 
   setTimeout(() => {
     if (loadStatus === "idle") {

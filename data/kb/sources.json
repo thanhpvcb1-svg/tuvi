@@ -1,0 +1,107 @@
+{
+  "$comment": "SOURCE_REGISTRY - crawler chỉ truy cập các nguồn khai báo ở đây. school: trường phái MÀ NGUỒN TỰ KHAI (không suy đoán); 'PER_PAGE' = xác định theo từng trang (tiêu đề / đoạn mở đầu nêu rõ), không có thì UNKNOWN. rights: 'excerpt-only' = chỉ lưu metadata + trích ngắn (bài viết còn bản quyền, chưa có phép dùng nguyên văn).",
+  "userAgent": "TuViPhongLamKB/1.0 (+https://tuviphonglam.com; nghien cuu tri thuc, tuan thu robots.txt)",
+  "sources": [
+    {
+      "id": "khamthientuhoa",
+      "name": "Khâm Thiên Tứ Hóa (khamthientuhoa.com)",
+      "baseUrl": "https://khamthientuhoa.com",
+      "type": "ARTICLE",
+      "school": "BAC_PHAI",
+      "school_evidence": "Site tự mô tả nội dung là Khâm Thiên Tứ Hóa, chuyên mục 'Tứ Hóa Bắc Phái'",
+      "method": "KHAM_THIEN_TU_HOA",
+      "author": "Thầy Chiến Nguyễn",
+      "allowed": true,
+      "rights": "excerpt-only",
+      "reliability": 0.7,
+      "crawlDelaySec": 8,
+      "discovery": {
+        "sitemaps": ["https://khamthientuhoa.com/post-sitemap.xml", "https://khamthientuhoa.com/post-sitemap2.xml"],
+        "include": "tu-hoa|phi-hoa|phi-tinh|hoa-ky|hoa-loc|hoa-quyen|hoa-khoa|ly-tam|huong-tam|chuyen-hoa|nga-cung|tha-cung|lai-nhan|thai-tue|ung-ky|ky-|loc-|bac-phai|kham-thien",
+        "exclude": "pdf|tai-lieu|khoa-hoc|dang-ky|lien-he",
+        "priority": "khai-niem|phan-biet|co-ban|gioi-thieu|tong-quan|ly-tam|huong-tam|chuyen-hoa|loc-tuy|nga-cung|tha-cung|lai-nhan|nhap-quai|ung-ky|song-ky|troc|thuan-thuy|nghich-thuy|the-dung|y-nghia"
+      },
+      "contentSelector": ".entry-content, article .post-content, article"
+    },
+    {
+      "id": "thayungkhiem",
+      "name": "Thầy Ưng Khiêm (thayungkhiem.vn)",
+      "baseUrl": "https://thayungkhiem.vn",
+      "type": "ARTICLE",
+      "school": "PER_PAGE",
+      "method": null,
+      "author": "Thầy Ưng Khiêm",
+      "allowed": true,
+      "rights": "excerpt-only",
+      "reliability": 0.6,
+      "crawlDelaySec": 8,
+      "discovery": {
+        "sitemaps": ["https://thayungkhiem.vn/sitemap-tu-vi.xml"],
+        "include": "bac-phai|tu-hoa|phi-tinh|phi-hoa|phi-cung|phep-tu-hoa|tu-van-phai|thai-tue|nam-bac-phai"
+      },
+      "contentSelector": "article, main"
+    },
+    {
+      "id": "tuvivietnam",
+      "name": "Tử Vi Việt Nam (tuvivietnam.vn)",
+      "baseUrl": "https://tuvivietnam.vn",
+      "type": "ARTICLE",
+      "school": "PER_PAGE",
+      "method": null,
+      "author": null,
+      "allowed": true,
+      "rights": "excerpt-only",
+      "reliability": 0.5,
+      "crawlDelaySec": 8,
+      "discovery": {
+        "sitemaps": ["https://tuvivietnam.vn/post-sitemap.xml"],
+        "include": "bac-phai|tu-hoa|phi-hoa|phi-tinh|truong-phai"
+      },
+      "contentSelector": ".td-post-content, .entry-content, article"
+    },
+    {
+      "id": "kabala",
+      "name": "Kabala Huyền Học (hoc.kabala.vn)",
+      "baseUrl": "https://hoc.kabala.vn",
+      "type": "ARTICLE",
+      "school": "PER_PAGE",
+      "method": null,
+      "author": null,
+      "allowed": true,
+      "rights": "excerpt-only",
+      "reliability": 0.4,
+      "crawlDelaySec": 8,
+      "discovery": {
+        "sitemaps": [
+          "https://hoc.kabala.vn/post-sitemap1.xml",
+          "https://hoc.kabala.vn/post-sitemap2.xml",
+          "https://hoc.kabala.vn/post-sitemap3.xml",
+          "https://hoc.kabala.vn/post-sitemap4.xml",
+          "https://hoc.kabala.vn/post-sitemap5.xml"
+        ],
+        "include": "tu-hoa|phi-tinh|phi-hoa|kham-thien|bac-phai|ly-tam|huong-tam|thai-tue"
+      },
+      "contentSelector": ".entry-content, article"
+    },
+    {
+      "id": "lyso",
+      "name": "Diễn đàn Lý số Việt Nam (lyso.vn)",
+      "baseUrl": "https://lyso.vn",
+      "type": "FORUM",
+      "school": "PER_PAGE",
+      "method": null,
+      "author": null,
+      "allowed": true,
+      "rights": "excerpt-only",
+      "reliability": 0.3,
+      "crawlDelaySec": 10,
+      "discovery": {
+        "seeds": [
+          "https://lyso.vn/xem-tu-vi/tu-vi-dau-so-tu-hoa-phai-bac-phai-t54416/",
+          "https://lyso.vn/xem-tu-vi/tu-hoa-phi-tinh-t114622/"
+        ]
+      },
+      "contentSelector": ".postbody .content, .post .content"
+    }
+  ]
+}

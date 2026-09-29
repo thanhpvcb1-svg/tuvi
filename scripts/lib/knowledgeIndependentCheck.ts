@@ -49,7 +49,10 @@ function starNames(p: PalaceView): Set<string> {
 }
 const mainStars = (p: PalaceView) => [...new Set(natal(p).map((s) => starNorm(s.name)).filter((name) => MAIN.includes(name)))];
 const mutagensIn = (p: PalaceView) => new Set(natal(p).map((s) => lower(s.mutagen ?? "")).filter(Boolean).map((m) => HOA[m.replace(/^hóa /, "")]));
-const flows = (p: PalaceView) => ((p as any).phiTuHoa?.flows ?? []) as Array<{ type: string; relation?: string; targetPalaceName?: string }>;
+const flows = (p: PalaceView) => ((p as any).phiTuHoa?.flows ?? []) as Array<{ type: string; relation?: string; targetPalaceName?: string; targetStar?: string }>;
+/** Can cung p phi Hóa `type` (loc/quyen/khoa/ky) nhập cung q (so theo tên cung thật của q). */
+const fliesInto = (p: PalaceView, type: string, q: PalaceView | undefined) =>
+  Boolean(q) && flows(p).some((f) => f.relation !== "tu_hoa" && f.type === type && palaceNorm(f.targetPalaceName ?? "") === lower(q!.name));
 
 function findPalace(chart: ChartView, name: string): PalaceView | undefined {
   const key = palaceNorm(name);
@@ -72,6 +75,16 @@ function checkToken(chart: ChartView, p: PalaceView, token: string, scope: Palac
   }
   if ((m = t.match(/^tự (lộc|quyền|khoa|kỵ|kị)$/))) {
     return flows(p).some((f) => f.relation === "tu_hoa" && f.type === HOA[m![1]]) ? OK : wrong(`không có tự Hóa ${m[1]}`);
+  }
+  // "Thiên lương Hóa lộc nhập Điền trạch": Can cung p hóa Lộc đúng sao đó, sao đó ở cung Điền Trạch.
+  if ((m = t.match(/^(.+?) hóa (lộc|quyền|khoa|kỵ|kị) (?:nhập|vào) (?:cung )?(.+)$/)) && !/ phi$/.test(m[1])) {
+    const hit = flows(p).some((f) => f.relation !== "tu_hoa" && f.type === HOA[m![2]] && palaceNorm(f.targetPalaceName ?? "") === palaceNorm(m![3]) && starNorm(f.targetStar ?? "") === starNorm(m![1]));
+    return hit ? OK : wrong(`${p.name} không phi ${m[1]} Hóa ${m[2]} nhập ${m[3]}`);
+  }
+  // "sao Thiên mã phi Hóa kỵ nhập cung Mệnh": cung p có sao đó và Can cung p phi Hóa Kỵ nhập Mệnh.
+  if ((m = t.match(/^(.+?) phi hóa (lộc|quyền|khoa|kỵ|kị) (?:nhập|vào) (?:cung )?(.+)$/))) {
+    if (!starNames(p).has(starNorm(m[1]))) return wrong(`không có sao gốc "${m[1]}" tại ${p.name}`);
+    return fliesInto(p, HOA[m[2]], findPalace(chart, m[3])) ? OK : wrong(`${p.name} không phi Hóa ${m[2]} nhập ${m[3]}`);
   }
   if ((m = t.match(/^(lộc|quyền|khoa|kỵ|kị) (\S+)$/)) && ABBR[m[2]]) {
     const hit = flows(p).some((f) => f.relation !== "tu_hoa" && f.type === HOA[m![1]] && palaceNorm(f.targetPalaceName ?? "") === ABBR[m![2]]);
@@ -121,9 +134,132 @@ function checkFlowClauses(chart: ChartView, text: string): CheckResult {
   return OK;
 }
 
+/** Các cách Tứ Hóa có tên - kiểm thẳng trên phiTuHoa.flows, đối cung tính theo CHI (không theo vai cung như bộ so khớp). */
+function checkNamedHoaPattern(chart: ChartView, condition: string): CheckResult | null {
+  const body = lower(condition.includes(":") ? condition.slice(condition.indexOf(":") + 1) : condition).replace(/kị/g, "kỵ");
+  const P = (name: string) => findPalace(chart, name);
+  const opp = (p: PalaceView | undefined) => (p ? atOffset(chart, p, 6) : undefined);
+  const natalHoa = (p: PalaceView | undefined, type: string) => Boolean(p) && mutagensIn(p!).has(type);
+  const selfHoa = (p: PalaceView | undefined, type?: string) => Boolean(p) && flows(p!).some((f) => f.relation === "tu_hoa" && (!type || f.type === type));
+  const all = (checks: Array<[boolean, string]>): CheckResult => {
+    const failed = checks.find(([ok]) => !ok);
+    return failed ? wrong(failed[1]) : OK;
+  };
+  let m: RegExpMatchArray | null;
+
+  if ((m = body.match(/^cung (.+?) phi hóa kỵ xung cung (.+)$/))) {
+    const a = P(m[1]), b = P(m[2]);
+    if (!a || !b) return wrong("không tìm thấy cung");
+    return all([[fliesInto(a, "ky", opp(b)), `${a.name} không phi Kỵ xung ${b.name}`]]);
+  }
+  if ((m = body.match(/^cung (.+?) phi hóa kỵ sang cung (.+?) xung cung (.+?), cung (.+?) phi kỵ xung cung (.+)$/))) {
+    const a = P(m[1]), b = P(m[2]), c = P(m[3]);
+    if (!a || !b || !c) return wrong("không tìm thấy cung");
+    return all([[fliesInto(a, "ky", b), `${a.name} không phi Kỵ nhập ${b.name}`], [opp(c) === b, `${b.name} không đối ${c.name}`], [fliesInto(c, "ky", opp(a)), `${c.name} không phi Kỵ xung ${a.name}`]]);
+  }
+  if ((m = body.match(/^cung (.+?) phi hóa (kỵ|lộc) sang cung (.+?), cung (.+?) phi (kỵ|lộc) sang cung (.+)$/))) {
+    const a = P(m[1]), b = P(m[3]);
+    if (!a || !b) return wrong("không tìm thấy cung");
+    return all([[fliesInto(a, HOA[m[2]], b), `${a.name} không phi ${m[2]} nhập ${b.name}`], [fliesInto(b, HOA[m[5]], a), `${b.name} không phi ${m[5]} nhập ${a.name}`]]);
+  }
+  if ((m = body.match(/^cung (.+?) phi hóa lộc đến đối cung là cung (.+)$/))) {
+    const a = P(m[1]), b = P(m[2]);
+    return all([[Boolean(a && b && opp(a) === b), "không phải đối cung"], [Boolean(a && fliesInto(a, "loc", b)), `${m[1]} không phi Lộc nhập ${m[2]}`]]);
+  }
+  if ((m = body.match(/^cung (.+?) hóa lộc phi nhập đối cung là cung (.+?), mà (?:cung (.+?) có lộc năm sinh tọa thủ|thiên can cung (.+?) tự hóa lộc)$/))) {
+    const a = P(m[1]), b = P(m[2]);
+    return all([
+      [Boolean(a && b && opp(a) === b), "không phải đối cung"],
+      [Boolean(a && fliesInto(a, "loc", b)), `${m[1]} không phi Lộc nhập ${m[2]}`],
+      [m[3] ? natalHoa(b, "loc") : selfHoa(b, "loc"), m[3] ? `${m[2]} không có Lộc sinh niên` : `${m[2]} không tự hóa Lộc`],
+    ]);
+  }
+  if ((m = body.match(/^cung (.+?) có lộc năm sinh tọa thủ, mà thiên can cung (.+?) lại hóa lộc đến đối cung (?:cung )?(.+)$/))) {
+    const a = P(m[1]), b = P(m[3]);
+    return all([[natalHoa(a, "loc"), `${m[1]} không có Lộc sinh niên`], [Boolean(a && b && opp(a) === b), "không phải đối cung"], [Boolean(a && fliesInto(a, "loc", b)), `${m[1]} không phi Lộc nhập ${m[3]}`]]);
+  }
+  if ((m = body.match(/^cung (.+?) hóa lộc phi nhập đối cung của cung (.+?), mà đối cung của cung (.+?) có hóa lộc \[năm sinh\]/))) {
+    const a = P(m[1]), o = opp(P(m[2]));
+    return all([[Boolean(a && fliesInto(a, "loc", o)), `${m[1]} không phi Lộc nhập đối cung ${m[2]}`], [natalHoa(o, "loc"), `đối cung ${m[2]} không có Lộc sinh niên`]]);
+  }
+  if ((m = body.match(/^cung (.+?) hóa lộc phi nhập đối cung của cung (.+?), mà cung (.+?) có hóa kỵ \[năm sinh\]/))) {
+    const a = P(m[1]), b = P(m[2]);
+    return all([[Boolean(a && fliesInto(a, "loc", opp(b))), `${m[1]} không phi Lộc nhập đối cung ${m[2]}`], [natalHoa(b, "ky"), `${m[2]} không có Kỵ sinh niên`]]);
+  }
+  if ((m = body.match(/^cung (.+?) ở "?tứ mộ khố"? có hóa kỵ \[năm sinh\] và không có tự hóa$/))) {
+    const a = P(m[1]);
+    return all([[Boolean(a && ["thìn", "tuất", "sửu", "mùi"].includes(branchNorm(a.earthlyBranch))), "không ở Tứ Mộ"], [natalHoa(a, "ky"), "không có Kỵ sinh niên"], [!selfHoa(a), "có tự hóa"]]);
+  }
+  if ((m = body.match(/^cung (.+?) rơi vào đất tứ mã có hóa kỵ \[năm sinh\]$/))) {
+    const a = P(m[1]);
+    return all([[Boolean(a && ["dần", "thân", "tỵ", "hợi"].includes(branchNorm(a.earthlyBranch))), "không ở Tứ Mã"], [natalHoa(a, "ky"), "không có Kỵ sinh niên"]]);
+  }
+  return null;
+}
+
+/** Kiểm phần "có ..." trên cung p: "A tọa thủ và B hội hợp / xung chiếu" hoặc danh sách token. */
+function checkTailIndependently(chart: ChartView, p: PalaceView, rawTail: string): CheckResult {
+  const compound = rawTail.match(/^(.+?) tọa thủ và (.+?) (hội hợp|xung chiếu)$/i);
+  if (compound) {
+    const first = checkTailIndependently(chart, p, compound[1]);
+    if (first.status !== "ok") return first;
+    const scope = lower(compound[3]) === "xung chiếu" ? [atOffset(chart, p, 6)!] : tamPhuong(chart, p);
+    for (const token of compound[2].replace(/^(các )?sao /i, "").split(",")) {
+      const r = checkToken(chart, scope[0], token.trim(), scope);
+      if (r.status !== "ok") return r;
+    }
+    return OK;
+  }
+  let tail = rawTail.replace(/^(các )?sao /i, "");
+  const tpt = / hội hợp$/i.test(tail);
+  const single = / (đơn thủ|độc tọa)$/i.test(tail);
+  tail = tail.replace(/ hội hợp$| đơn thủ$| độc tọa$/i, "");
+  for (let token of tail.split(",")) {
+    token = token.trim();
+    if (/ và không tự hóa$/i.test(token)) {
+      if (flows(p).some((f) => f.relation === "tu_hoa")) return wrong("cung có tự hóa");
+      token = token.replace(/ và không tự hóa$/i, "");
+    }
+    const r = checkToken(chart, p, token, tpt ? tamPhuong(chart, p) : [p]);
+    if (r.status !== "ok") return r;
+  }
+  if (single && mainStars(p).length !== 1) return wrong(`cung có ${mainStars(p).length} chính tinh, không phải đơn thủ`);
+  return OK;
+}
+
 export function checkConditionIndependently(chart: ChartView, condition: string): CheckResult {
   const c = String(condition || "").normalize("NFC").trim();
   let m: RegExpMatchArray | null;
+
+  const named = checkNamedHoaPattern(chart, c);
+  if (named) return named;
+
+  // Bố cục theo vị trí Tử Vi + cung Mệnh
+  let layout: [string, string] | null = null;
+  if ((m = c.match(/^Tử vi ở cung (\S+), cung Mệnh ở (\S+)$/i)) || (m = c.match(/^Lá số có Tử vi tại ([^,\s]+),\s*Cung Mệnh tại (\S+)$/i))) layout = [m[1], m[2]];
+  else if ((m = c.match(/^Tinh hệ cung Mệnh ở (\S+), sao Tử vi ở cung (\S+)$/i))) layout = [m[2], m[1]];
+  if (layout) {
+    const tuVi = chart.palaces.find((x) => starNames(x).has("tử vi"));
+    const menh = findPalace(chart, "Mệnh");
+    if (!tuVi || branchNorm(tuVi.earthlyBranch) !== branchNorm(layout[0])) return wrong(`Tử Vi ở ${tuVi?.earthlyBranch}, điều kiện đòi ${layout[0]}`);
+    return menh && branchNorm(menh.earthlyBranch) === branchNorm(layout[1]) ? OK : wrong(`Mệnh ở ${menh?.earthlyBranch}, điều kiện đòi ${layout[1]}`);
+  }
+
+  // Hai cung: "Cung A an tại B có <...> tọa thủ và cung C có <...>"
+  if ((m = c.match(/^Cung (.+?) an tại (\S+) có (.+?) tọa thủ và cung (.+?) có (.+?)(?: tọa thủ)?$/))) {
+    const p = findPalace(chart, m[1]);
+    const q = findPalace(chart, m[4]);
+    if (p && q) {
+      if (branchNorm(p.earthlyBranch) !== branchNorm(m[2])) return wrong(`cung ${p.name} ở ${p.earthlyBranch}, điều kiện đòi ${m[2]}`);
+      const first = checkTailIndependently(chart, p, m[3]);
+      return first.status !== "ok" ? first : checkTailIndependently(chart, q, m[5]);
+    }
+  }
+
+  if ((m = c.match(/^Thân cư (?:cung )?(.+)$/i))) {
+    const body = chart.palaces.find((p) => p.isBodyPalace);
+    return body && lower(body.name) === palaceNorm(m[1]) ? OK : wrong(`Thân cư ${body?.name}`);
+  }
 
   // Cung P [VCD ...] an tại B có ...
   if ((m = c.match(/^(Tam hợp )?[Cc]ung (.+?) an tại (\S+) có (.+)$/))) {
@@ -131,7 +267,7 @@ export function checkConditionIndependently(chart: ChartView, condition: string)
     if (!p) return wrong(`không tìm thấy cung ${m[2]}`);
     if (branchNorm(p.earthlyBranch) !== branchNorm(m[3])) return wrong(`cung ${p.name} ở ${p.earthlyBranch}, điều kiện đòi ${m[3]}`);
 
-    let tail = m[4];
+    const tail = m[4];
     const vcd = tail.match(/^sao Vô chính diệu tọa thủ và các sao (.+) xung chiếu$/);
     if (vcd) {
       if (mainStars(p).length) return wrong(`cung có chính tinh ${mainStars(p).join(", ")}`);
@@ -142,26 +278,7 @@ export function checkConditionIndependently(chart: ChartView, condition: string)
       }
       return OK;
     }
-    tail = tail.replace(/^(các )?sao /i, "");
-    const tpt = / hội hợp$/i.test(tail);
-    const single = / (đơn thủ|độc tọa)$/i.test(tail);
-    tail = tail.replace(/ hội hợp$| đơn thủ$| độc tọa$/i, "");
-    const scope = tpt ? tamPhuong(chart, p) : [p];
-
-    for (let token of tail.split(",")) {
-      token = token.trim();
-      if (/ và không tự hóa$/i.test(token)) {
-        if (flows(p).some((f) => f.relation === "tu_hoa")) return wrong("cung có tự hóa");
-        token = token.replace(/ và không tự hóa$/i, "");
-      }
-      const r = checkToken(chart, p, token, scope);
-      if (r.status !== "ok") return r;
-    }
-    if (single) {
-      const mains = mainStars(p);
-      if (mains.length !== 1) return wrong(`cung có ${mains.length} chính tinh, không phải đơn thủ`);
-    }
-    return OK;
+    return checkTailIndependently(chart, p, tail);
   }
 
   // Cung P an tại B giáp X và Y

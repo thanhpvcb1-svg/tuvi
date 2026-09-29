@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender-pages.mjs",
+    "build": "vite build && node scripts/prerender-pages.mjs && node scripts/buildKnowledgeShards.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "build:standalone": "npm run build && node make-standalone.mjs",
     "standalone": "node make-standalone.mjs",
@@ -19,7 +19,14 @@
     "verify:knowledge": "esbuild scripts/verifyKnowledgeMatching.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/verifyKnowledgeMatching.js && node --max-old-space-size=4096 .tmp-verify/verifyKnowledgeMatching.js",
     "knowledge:normalize": "esbuild scripts/normalizeKnowledge.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/normalizeKnowledge.js && node --max-old-space-size=4096 .tmp-verify/normalizeKnowledge.js",
     "sample:knowledge": "esbuild scripts/sampleKnowledge.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/sampleKnowledge.js && node --max-old-space-size=4096 .tmp-verify/sampleKnowledge.js",
-    "quality:knowledge": "esbuild scripts/knowledgeQuality.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/knowledgeQuality.js && node --max-old-space-size=4096 .tmp-verify/knowledgeQuality.js"
+    "quality:knowledge": "esbuild scripts/knowledgeQuality.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/knowledgeQuality.js && node --max-old-space-size=4096 .tmp-verify/knowledgeQuality.js",
+    "crawl": "esbuild scripts/kb/crawl.ts --bundle --platform=node --packages=external --log-level=warning --outfile=.tmp-verify/kb-crawl.js && node .tmp-verify/kb-crawl.js",
+    "kb:extract": "esbuild scripts/kb/extract.ts --bundle --platform=node --packages=external --log-level=warning --outfile=.tmp-verify/kb-extract.js && node .tmp-verify/kb-extract.js",
+    "kb:map": "esbuild scripts/kb/map.ts --bundle --platform=node --packages=external --log-level=warning --outfile=.tmp-verify/kb-map.js && node --max-old-space-size=4096 .tmp-verify/kb-map.js",
+    "kb:apply": "esbuild scripts/kb/apply.ts --bundle --platform=node --packages=external --log-level=warning --outfile=.tmp-verify/kb-apply.js && node .tmp-verify/kb-apply.js",
+    "validate-knowledge": "esbuild scripts/kb/validate.ts --bundle --platform=node --packages=external --log-level=warning --outfile=.tmp-verify/kb-validate.js && node .tmp-verify/kb-validate.js",
+    "test-knowledge-server": "esbuild scripts/kb/serverParity.ts --bundle --platform=node --log-level=warning --outfile=.tmp-verify/kb-server-parity.js && node --max-old-space-size=4096 .tmp-verify/kb-server-parity.js",
+    "test-kb": "esbuild scripts/kb/kb.test.ts --bundle --platform=node --packages=external --log-level=warning --outfile=.tmp-verify/kb.test.js && node --test .tmp-verify/kb.test.js"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.21",

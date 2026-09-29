@@ -16,6 +16,7 @@ import TuviChart from "../components/TuviChart";
 import VanHanhSelector, { getActivePalaceIndexes } from "../components/VanHanhSelector";
 import { useAppContext } from "../context/AppContext";
 import { buildSummaryCards } from "../lib/chartUi";
+import { nominalAge } from "../lib/tuvi/nominalAge";
 import { organizationSchema, softwareAppSchema, breadcrumbSchema, faqSchema } from "../schemas/seoSchemas";
 import {
   buildCopyableChartJson,
@@ -316,7 +317,7 @@ export default function ChartPage() {
                   showPhiHoaCanCung={luuOptions.showPhiHoaCanCung}
                   hidePersonalInfo={submittedInput.hidePersonalInfo}
                   activePalaceIndexes={(() => {
-                    const age = horoscopeYear - (parseInt(submittedInput.year, 10) || horoscopeYear);
+                    const age = nominalAge(chart, horoscopeYear, parseInt(submittedInput.year, 10) || horoscopeYear) ?? 1;
                     const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
                     return getActivePalaceIndexes(
                       chart.palaces,

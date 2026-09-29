@@ -1,4 +1,5 @@
 import type { ChartView, PalaceView, StarView, Gender } from "./types";
+import { nominalAge } from "./tuvi/nominalAge";
 import {
   queryKnowledgeBlocks,
   getAllStarsInPalace,
@@ -82,7 +83,7 @@ export function getPalaceMeaning(name: string) {
 
 export function buildSummaryCards(chart: ChartView, horoscopeYear: number, birthYear: number): SummaryCard[] {
   const bodyPalace = chart.palaces.find((palace) => palace.isBodyPalace);
-  const age = horoscopeYear - birthYear;
+  const age = nominalAge(chart, horoscopeYear, birthYear) ?? horoscopeYear - birthYear + 1;
 
   return [
     { label: "Mệnh", value: chart.profile.natalElementName || "Đang cập nhật" },
@@ -91,7 +92,7 @@ export function buildSummaryCards(chart: ChartView, horoscopeYear: number, birth
     { label: "Âm dương", value: chart.profile.yinYangLabel || "Đang cập nhật" },
     { label: "Ngũ hành", value: chart.profile.elementalStatus || "Đang cập nhật" },
     { label: "Năm xem hạn", value: String(horoscopeYear), hint: "Có thể đổi trực tiếp ở thanh vận hạn." },
-    { label: "Tuổi âm tham khảo", value: age >= 0 ? String(age + 1) : "Chưa xác định" },
+    { label: "Tuổi âm (tuổi mụ)", value: age >= 1 ? String(age) : "Chưa xác định" },
   ];
 }
 

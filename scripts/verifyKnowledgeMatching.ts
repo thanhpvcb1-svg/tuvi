@@ -14,6 +14,7 @@ import { loadKnowledge, queryPalaceKnowledge } from "../src/lib/tuvi/knowledge/l
 import { isChartSpecificText, parseCondition } from "../src/lib/tuvi/knowledge/conditionMatcher";
 import { checkConditionIndependently, checkPeriodConditionIndependently, checkTextScopeIndependently } from "./lib/knowledgeIndependentCheck";
 import { getActivePalaceIndexes } from "../src/components/VanHanhSelector";
+import { nominalAge } from "../src/lib/tuvi/nominalAge";
 
 const PALACES = ["Mệnh", "Phụ Mẫu", "Phúc Đức", "Điền Trạch", "Quan Lộc", "Nô Bộc", "Thiên Di", "Tật Ách", "Tài Bạch", "Tử Tức", "Phu Thê", "Huynh Đệ"];
 const LUU_OPTIONS = { showLuuTuHoa: true, showPhiHoaCanCung: true, showLuuTuDuc: true, showLuuDaiVan: true, showLuuOtherStars: true, showLocKyNhap: true, showLuuTuanTriet: true };
@@ -39,6 +40,16 @@ async function main() {
     ["Đại vận ở cung Điền trạch: Hóa Lộc nhập cung Nô bộc (đại vận Phúc đức) và Hóa Kị nhập cung Điền trạch (đại vận Mệnh)", false],
     ["Lưu niên tới cung Điền trạch, Tiểu vận tới cung Tật ách", false],
     ["Cung Mệnh Địa bàn an tại Thân có Liêm trinh", false],
+    // Dạng kiểm được trên lá số: cặp tọa thủ + hội hợp, phi hóa theo sao, cách Tứ Hóa có tên, bố cục Tử Vi + Mệnh
+    ["Cung Mệnh an tại Mùi có sao Thiên phủ tọa thủ và các sao Địa không,Địa kiếp hội hợp", true],
+    ["Cung Mệnh an tại Tí có Thiên lương Hóa lộc nhập Điền trạch", true],
+    ["Tuần Hoàn Kỵ (循环忌): cung Phụ mẫu phi hóa kỵ sang cung Mệnh, cung Mệnh phi kị sang cung Phụ mẫu", true],
+    ["Thị phi lộc (是非禄): cung Tật ách hóa Lộc phi nhập đối cung của cung Mệnh, mà cung Mệnh có Hóa kỵ [năm sinh] năm sinh", true],
+    ["Lá số có Tử vi tại Dần,Cung Mệnh tại Mão", true],
+    ["Thân cư cung Quan Lộc", true],
+    // Không có dữ liệu lá số để kiểm (ký hiệu riêng của nguồn / không nói rõ Hóa gì) -> bỏ
+    ["Cung Mệnh an tại Tí có M chất", false],
+    ["Tứ Mã Kỵ (拆马忌): cung Mệnh rơi vào đất Tứ Mã có Tự hóa", false],
   ];
   for (const [condition, expected] of unit) {
     if (Boolean(parseCondition(condition)) !== expected) fail(`parseCondition("${condition}") phải ${expected ? "parse được" : "bị bỏ qua"}`);
@@ -59,7 +70,7 @@ async function main() {
           const chart = createChart(input, "tuvichancoCompatible", { luuOptions: LUU_OPTIONS, horoscopeDate: new Date(2026, 5, 15) } as any);
           charts++;
           const menhBranch = chart.palaces.find((p) => p.name === "Mệnh")?.earthlyBranch;
-          const active = getActivePalaceIndexes(chart.palaces, 2026 - year, menhBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
+          const active = getActivePalaceIndexes(chart.palaces, nominalAge(chart, 2026, year) ?? 2026 - year + 1, menhBranch, chart.profile.fiveElementsClass, chart.profile.yinYangLabel);
           for (const name of PALACES) {
             const palace = chart.palaces.find((p) => p.name === name);
             if (!palace) {

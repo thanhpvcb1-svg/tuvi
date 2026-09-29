@@ -27,6 +27,7 @@ export const LEAK_PATTERNS: Array<[string, RegExp]> = [
   ["nhắc 'AI'", /(^|[^\p{L}\d_])AI([^\p{L}\d_]|$)/u],
   ["xưng 'ngươi'", /(^|[^\p{L}])[Nn]gươi([^\p{L}]|$)/u],
   ["năm ứng kỳ của lá số khác", /Xảy ra vào một trong các năm|^\s*Ứng kỳ/im],
+  ["dẫn chiếu chương / mục của sách", /(?:tham khảo|xem|đọc)(?: thêm)?(?: lại)? (?:ở )?(?:các |những )?(?:mục [^.()\n]{0,40}?(?:trong |ở )?)?(?:chương|quyển|cuốn)(?![\p{L}])/iu],
 ];
 
 async function main() {
